@@ -73,72 +73,84 @@
   <header class="top">
     <h1>AI Daily <span class="accent">Digest</span></h1>
     <div class="date">Friday, June 5, 2026</div>
-    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 22 items</div>
   </header>
 
   <section class="hero">
     <h2>⭐ Top 5 Today</h2>
     <ol>
-      <li><a href="#">Self-Improving Agents via Verifier-Guided Search<span class="src">paper</span></a>
-        <span class="why">New RL-from-verifier method beats prior agent baselines on SWE-bench by 11pts — relevant to harness design.</span></li>
-      <li><a href="#">openharness — composable scaffolding for tool-using agents<span class="src">repo</span></a>
-        <span class="why">2.1k stars in a day; clean abstraction for retries, context windows, and eval hooks.</span></li>
-      <li><a href="#">Anthropic: lessons from building long-horizon coding agents<span class="src">blog</span></a>
-        <span class="why">Practitioner write-up on context engineering and eval loops you can apply directly.</span></li>
-      <li><a href="#">World-model pretraining from raw video at scale<span class="src">paper</span></a>
-        <span class="why">Pushes video world models toward planning; strong qualitative rollouts.</span></li>
-      <li><a href="#">HN: "Show HN: local-first agent runtime"<span class="src">discussion</span></a>
-        <span class="why">300+ comments debating sandboxing and harness tradeoffs.</span></li>
+      <li><a href="https://arxiv.org/abs/2606.05922">Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts<span class="src">paper</span></a>
+        <span class="why">Self-supervised harness tuning over past rollouts lifts SWE-Bench Pro from 59% to 78% with no external grader — directly relevant to harness design.</span></li>
+      <li><a href="https://github.com/chopratejas/headroom">headroom — context compression for LLM agents<span class="src">repo</span></a>
+        <span class="why">+2,503 stars in a day; compresses tool outputs/logs/RAG by 60–95% as a library, proxy, or MCP server with reversible compression.</span></li>
+      <li><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack">Anthropic: what we learned mapping a year of AI-enabled cyber threats<span class="src">blog</span></a>
+        <span class="why">Analysis of 832 banned malicious accounts shows AI lets low-skill actors run sophisticated post-compromise operations — frontier-lab safety signal.</span></li>
+      <li><a href="https://www.digitalapplied.com/blog/openrouter-new-models-june-2026-roundup-pricing-rankings">NVIDIA Nemotron 3 Ultra — open-weight, agentic, 1M context<span class="src">discussion</span></a>
+        <span class="why">550B/55B-active Mamba-2 + Transformer + MoE hybrid released June 4 with an explicit agentic training focus and sovereign-deployment positioning.</span></li>
+      <li><a href="https://www.latent.space/p/andon">Reality: The Final Eval — Andon Labs on long-horizon agent benchmarks<span class="src">discussion</span></a>
+        <span class="why">Andon Labs founders on Vending-Bench 2 and real-world agent testing — long-horizon coherence is still the hard eval frontier.</span></li>
     </ol>
   </section>
 
   <nav class="tabs" id="tabs">
-    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
-    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
     <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">4</span></button>
-    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
-    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">4</span></button>
-    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">3</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
   </nav>
 
   <!-- PAPERS -->
   <div class="panel active" data-panel="papers">
     <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
     <div class="card">
-      <h3><a href="#">Self-Improving Agents via Verifier-Guided Search</a></h3>
-      <p class="summary">Proposes training agents against a learned verifier and using it to guide search at inference, yielding large gains on coding and tool-use benchmarks.</p>
-      <p class="why"><b>Why it matters:</b> Directly applicable to agent harness design and eval-driven improvement.</p>
-      <div class="row"><span class="chip">cs.AI</span><span class="chip hot">🔥 142 HF upvotes</span><a class="src-link" href="#">arXiv ↗</a></div>
+      <h3><a href="https://arxiv.org/abs/2606.05922">Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts</a></h3>
+      <p class="summary">Introduces RHO, which re-analyzes an agent's prior trajectories and uses self-preference selection to improve its skills, tools, and workflow without any external labels.</p>
+      <p class="why"><b>Why it matters:</b> Pushes SWE-Bench Pro from 59% to 78% with no external grading — a label-free recipe straight at harness engineering.</p>
+      <div class="row"><span class="chip">cs.AI</span><a class="src-link" href="https://arxiv.org/abs/2606.05922">arXiv ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">World-Model Pretraining from Raw Video at Scale</a></h3>
-      <p class="summary">A latent world model trained on web-scale video shows emergent planning and physical consistency in rollouts.</p>
-      <p class="why"><b>Why it matters:</b> Core to the world-models thread; hints at scalable planning substrates.</p>
-      <div class="row"><span class="chip">cs.CV</span><span class="chip hot">🔥 98 HF upvotes</span><a class="src-link" href="#">HF Papers ↗</a></div>
+      <h3><a href="https://huggingface.co/papers/2606.05622">AdaPlanBench: Evaluating Adaptive Planning in LLM Agents under World and User Constraints</a></h3>
+      <p class="summary">An interactive benchmark of 307 household tasks where constraints are revealed progressively; the best of ten leading LLMs reaches only 67.75% accuracy.</p>
+      <p class="why"><b>Why it matters:</b> Adaptive replanning under shifting constraints is exactly where current agents fall down — a concrete eval target.</p>
+      <div class="row"><span class="chip">cs.AI</span><span class="chip hot">🔥 26 HF upvotes</span><a class="src-link" href="https://huggingface.co/papers/2606.05622">HF Papers ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">Efficient RL Fine-Tuning with Asynchronous Rollouts</a></h3>
-      <p class="summary">Decouples rollout generation from policy updates to cut RL fine-tuning wall-clock by ~3x.</p>
-      <p class="why"><b>Why it matters:</b> Practical RL infra win for anyone post-training models.</p>
-      <div class="row"><span class="chip">cs.LG</span><a class="src-link" href="#">arXiv ↗</a></div>
+      <h3><a href="https://arxiv.org/abs/2606.05976">The Self-Correction Illusion: LLMs Correct Others but Not Themselves</a></h3>
+      <p class="summary">Shows models readily fix identical errors in "external" sources but not in their own reasoning, and traces the gap to how chat templates label the information source rather than to a cognitive deficit.</p>
+      <p class="why"><b>Why it matters:</b> Reframes self-correction failures as a fixable chat-template artifact — actionable for prompt/harness design.</p>
+      <div class="row"><span class="chip">cs.CL</span><a class="src-link" href="https://arxiv.org/abs/2606.05976">arXiv ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">Compact Vision Encoders Matching ViT-L at 1/4 Cost</a></h3>
-      <p class="summary">Distillation recipe producing small vision encoders with near-parity accuracy.</p>
-      <p class="why"><b>Why it matters:</b> Cheaper multimodal stacks for agents that see.</p>
-      <div class="row"><span class="chip">cs.CV</span><a class="src-link" href="#">arXiv ↗</a></div>
+      <h3><a href="https://huggingface.co/papers/2606.04703">Rethinking Continual Experience Internalization for Self-Evolving LLM Agents</a></h3>
+      <p class="summary">Finds principle-level experience is more durable than instance-level, step-wise injection beats global patterns for tool use, and off-policy context-distillation trains more stably than on-policy.</p>
+      <p class="why"><b>Why it matters:</b> A simple, robust recipe for agents that keep learning across iterations without capability collapse.</p>
+      <div class="row"><span class="chip">cs.AI</span><span class="chip hot">🔥 15 HF upvotes</span><a class="src-link" href="https://huggingface.co/papers/2606.04703">HF Papers ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">Multi-Agent Debate Improves Factuality Without Extra Training</a></h3>
-      <p class="summary">Structured debate among model instances reduces hallucination on long-form QA.</p>
-      <p class="why"><b>Why it matters:</b> Cheap inference-time reliability lever for agent systems.</p>
-      <div class="row"><span class="chip">cs.MA</span><a class="src-link" href="#">arXiv ↗</a></div>
+      <h3><a href="https://huggingface.co/papers/2606.05553">ArcANE: Do Role-Playing Language Agents Stay in Character at the Right Time?</a></h3>
+      <p class="summary">A benchmark for whether role-playing agents stay psychologically consistent as characters evolve; conditioning on the character arc beats every other context strategy across models.</p>
+      <p class="why"><b>Why it matters:</b> Top HF paper today; a clean lesson in how context structure—not raw recall—drives agent consistency.</p>
+      <div class="row"><span class="chip">cs.CL</span><span class="chip hot">🔥 38 HF upvotes</span><a class="src-link" href="https://huggingface.co/papers/2606.05553">HF Papers ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">A Statistical View of In-Context Learning Stability</a></h3>
-      <p class="summary">Theory linking ICL variance to prompt structure with practical prompting guidance.</p>
-      <p class="why"><b>Why it matters:</b> Grounds prompt/harness choices in something measurable.</p>
-      <div class="row"><span class="chip">stat.ML</span><a class="src-link" href="#">arXiv ↗</a></div>
+      <h3><a href="https://huggingface.co/papers/2606.04743">TIDE: Proactive Multi-Problem Discovery via Template-Guided Iteration</a></h3>
+      <p class="summary">A framework that lets agents proactively surface multiple hidden problems in a user's context through iterative rounds conditioned on prior findings and reusable thought templates.</p>
+      <p class="why"><b>Why it matters:</b> Moves agents from reactive answering toward proactive problem-finding — useful for assistant/harness loops.</p>
+      <div class="row"><span class="chip">cs.AI</span><span class="chip hot">🔥 33 HF upvotes</span><a class="src-link" href="https://huggingface.co/papers/2606.04743">HF Papers ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.05390">Ahoy: LLMs Enacting Multiagent Interaction Protocols</a></h3>
+      <p class="summary">Studies how well language models can faithfully enact explicit multi-agent interaction protocols, treating the protocol as a first-class artifact agents must follow.</p>
+      <p class="why"><b>Why it matters:</b> Protocol adherence is foundational for reliable multi-agent systems beyond ad-hoc prompting.</p>
+      <div class="row"><span class="chip">cs.MA</span><a class="src-link" href="https://arxiv.org/abs/2606.05390">arXiv ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.04032">Do Transformers Need Three Projections? Systematic Study of QKV Variants</a></h3>
+      <p class="summary">Systematically tests attention variants that share Query/Key/Value projections instead of keeping them separate, finding reduced schemes can match standard transformers while cutting inference memory. <em>(catch-up: submitted Jun 1, hit HN front page today.)</em></p>
+      <p class="why"><b>Why it matters:</b> Practical architecture lever for cheaper long-context inference; widely discussed on HN today.</p>
+      <div class="row"><span class="chip">cs.LG</span><span class="chip">catch-up</span><a class="src-link" href="https://arxiv.org/abs/2606.04032">arXiv ↗</a></div>
     </div>
   </div>
 
@@ -146,34 +158,28 @@
   <div class="panel" data-panel="repos">
     <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
     <div class="card">
-      <h3><a href="#">openharness</a></h3>
-      <p class="summary">Composable scaffolding for tool-using agents: retries, context budgeting, and pluggable eval hooks.</p>
-      <p class="why"><b>Why it matters:</b> Exactly the harness-engineering primitives you care about, MIT-licensed.</p>
-      <div class="row"><span class="chip stars">★ +2,108 today</span><span class="chip">Python</span><a class="src-link" href="#">GitHub ↗</a></div>
+      <h3><a href="https://github.com/chopratejas/headroom">headroom</a></h3>
+      <p class="summary">Compresses tool outputs, logs, files, and RAG chunks before they reach the LLM — 60–95% fewer tokens — usable as a library, proxy, or MCP server, with reversible compression and cross-agent memory sharing.</p>
+      <p class="why"><b>Why it matters:</b> Context-budgeting primitive aimed squarely at harness/context engineering; today's top AI trender.</p>
+      <div class="row"><span class="chip stars">★ +2,503 today</span><span class="chip">Python / Rust</span><a class="src-link" href="https://github.com/chopratejas/headroom">GitHub ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">vlm-lab</a></h3>
-      <p class="summary">Minimal, hackable training loop for vision-language models with reproducible configs.</p>
-      <p class="why"><b>Why it matters:</b> Clean reference for the vision-model thread.</p>
-      <div class="row"><span class="chip stars">★ +870 today</span><span class="chip">Python</span><a class="src-link" href="#">GitHub ↗</a></div>
+      <h3><a href="https://github.com/anthropics/defending-code-reference-harness">anthropics/defending-code-reference-harness</a></h3>
+      <p class="summary">Anthropic's open reference implementation for autonomous vulnerability discovery and remediation with Claude: a recon→find→verify→report→patch loop plus Claude Code skills for threat modeling and triage.</p>
+      <p class="why"><b>Why it matters:</b> A concrete, readable example of a production security agent harness from a frontier lab; #3 on HN today.</p>
+      <div class="row"><span class="chip">Python</span><span class="chip hot">💬 127 comments</span><a class="src-link" href="https://github.com/anthropics/defending-code-reference-harness">GitHub ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">rl-rollouts</a></h3>
-      <p class="summary">High-throughput async rollout server for RL fine-tuning pipelines.</p>
-      <p class="why"><b>Why it matters:</b> Pairs with today's async-RL paper; usable infra.</p>
-      <div class="row"><span class="chip stars">★ +540 today</span><span class="chip">Rust</span><a class="src-link" href="#">GitHub ↗</a></div>
+      <h3><a href="https://github.com/NousResearch/hermes-agent">NousResearch/hermes-agent</a></h3>
+      <p class="summary">"The agent that grows with you" — an open agent framework from Nous Research that trended with ~1,821 stars today.</p>
+      <p class="why"><b>Why it matters:</b> A fresh open agent stack from a well-known open-model lab, worth watching for memory/personalization patterns.</p>
+      <div class="row"><span class="chip stars">★ +1,821 today</span><span class="chip">Python</span><a class="src-link" href="https://github.com/NousResearch/hermes-agent">GitHub ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">contextkit</a></h3>
-      <p class="summary">Utilities for context-window packing, chunking, and token accounting across providers.</p>
-      <p class="why"><b>Why it matters:</b> Small but practical for context engineering.</p>
-      <div class="row"><span class="chip stars">★ +410 today</span><span class="chip">TypeScript</span><a class="src-link" href="#">GitHub ↗</a></div>
-    </div>
-    <div class="card">
-      <h3><a href="#">worldsim</a></h3>
-      <p class="summary">Open implementation of a video world model with pretrained checkpoints.</p>
-      <p class="why"><b>Why it matters:</b> Reproduces a hot research direction you can actually run.</p>
-      <div class="row"><span class="chip stars">★ +330 today</span><span class="chip">Python</span><a class="src-link" href="#">GitHub ↗</a></div>
+      <h3><a href="https://github.com/zdk/lowfat">lowfat</a></h3>
+      <p class="summary">A pluggable CLI filter that the author reports saved 91.8% of their LLM tokens by trimming what gets sent to the model.</p>
+      <p class="why"><b>Why it matters:</b> Pairs with the day's compression theme; a lightweight, drop-in token-reduction tool (Show HN, 23 pts).</p>
+      <div class="row"><span class="chip stars">Show HN</span><a class="src-link" href="https://news.ycombinator.com/item?id=48409955">Thread ↗</a></div>
     </div>
   </div>
 
@@ -181,28 +187,28 @@
   <div class="panel" data-panel="agents">
     <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
     <div class="card">
-      <h3><a href="#">Building long-horizon coding agents: what actually worked</a></h3>
-      <p class="summary">Engineering write-up on eval loops, context compaction, and failure recovery in production agents.</p>
-      <p class="why"><b>Why it matters:</b> Concrete, applicable harness patterns from a frontier lab.</p>
-      <div class="row"><span class="chip">Anthropic</span><a class="src-link" href="#">Read ↗</a></div>
+      <h3><a href="https://arxiv.org/abs/2606.05922">Retrospective Harness Optimization (paper, see Papers tab)</a></h3>
+      <p class="summary">Cross-listed: self-preference over an agent's own trajectory rollouts to optimize the harness with no external labels.</p>
+      <p class="why"><b>Why it matters:</b> The day's most directly applicable harness-engineering result.</p>
+      <div class="row"><span class="chip">cs.AI</span><a class="src-link" href="https://arxiv.org/abs/2606.05922">arXiv ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">A taxonomy of agent failure modes</a></h3>
-      <p class="summary">Catalogs common breakdowns (loop traps, context rot, tool misfires) with mitigations.</p>
-      <p class="why"><b>Why it matters:</b> Useful checklist when designing robust harnesses.</p>
-      <div class="row"><span class="chip">blog</span><a class="src-link" href="#">Read ↗</a></div>
+      <h3><a href="https://github.com/chopratejas/headroom">headroom (repo, see Repos tab)</a></h3>
+      <p class="summary">Cross-listed: context compression that drops tool-output/RAG tokens 60–95% before they hit the model.</p>
+      <p class="why"><b>Why it matters:</b> Practical context-budgeting primitive for any agent harness.</p>
+      <div class="row"><span class="chip stars">★ +2,503</span><a class="src-link" href="https://github.com/chopratejas/headroom">GitHub ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">Verifier-guided search for agents (paper, see Papers tab)</a></h3>
-      <p class="summary">Cross-listed: strong agent result worth tracking.</p>
-      <p class="why"><b>Why it matters:</b> Method generalizes beyond coding.</p>
-      <div class="row"><span class="chip">cs.AI</span><a class="src-link" href="#">arXiv ↗</a></div>
+      <h3><a href="https://arxiv.org/abs/2606.05390">Ahoy: LLMs Enacting Multiagent Interaction Protocols (see Papers tab)</a></h3>
+      <p class="summary">Cross-listed: how reliably models can follow explicit interaction protocols in multi-agent settings.</p>
+      <p class="why"><b>Why it matters:</b> Protocols are the missing structure for dependable multi-agent coordination.</p>
+      <div class="row"><span class="chip">cs.MA</span><a class="src-link" href="https://arxiv.org/abs/2606.05390">arXiv ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">openharness (repo, see Repos tab)</a></h3>
-      <p class="summary">Cross-listed: the day's most relevant agent-infra release.</p>
-      <p class="why"><b>Why it matters:</b> Directly usable scaffolding.</p>
-      <div class="row"><span class="chip stars">★ +2,108</span><a class="src-link" href="#">GitHub ↗</a></div>
+      <h3><a href="https://news.ycombinator.com/item?id=48407998">Show HN: Lessons learned from running Claude Code swarms at scale</a></h3>
+      <p class="summary">Practitioner write-up on orchestrating many parallel coding agents — coordination, failure recovery, and what breaks at scale.</p>
+      <p class="why"><b>Why it matters:</b> Field-tested multi-agent harness lessons rather than theory.</p>
+      <div class="row"><span class="chip">Hacker News</span><a class="src-link" href="https://news.ycombinator.com/item?id=48407998">Thread ↗</a></div>
     </div>
   </div>
 
@@ -210,22 +216,10 @@
   <div class="panel" data-panel="workflows">
     <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
     <div class="card">
-      <h3><a href="#">Lecture: Context engineering for reliable agents</a></h3>
-      <p class="summary">Talk walking through prompt structure, retrieval, and eval design for agentic systems.</p>
-      <p class="why"><b>Why it matters:</b> The kind of Anthropic-style lecture you flagged as high value.</p>
-      <div class="row"><span class="chip">YouTube</span><a class="src-link" href="#">Watch ↗</a></div>
-    </div>
-    <div class="card">
-      <h3><a href="#">A workflow for shipping evals before features</a></h3>
-      <p class="summary">Argues for eval-first development of LLM features with a concrete template.</p>
-      <p class="why"><b>Why it matters:</b> Practical process upgrade for AI-assisted building.</p>
-      <div class="row"><span class="chip">newsletter</span><a class="src-link" href="#">Read ↗</a></div>
-    </div>
-    <div class="card">
-      <h3><a href="#">Tips: getting more out of coding agents</a></h3>
-      <p class="summary">Field notes on prompts, repo structure, and review loops that improve agent output.</p>
-      <p class="why"><b>Why it matters:</b> Direct workflow improvements.</p>
-      <div class="row"><span class="chip">blog</span><a class="src-link" href="#">Read ↗</a></div>
+      <h3><a href="https://passo.uno/fine-tuning-docs-llm/">Fine-tuning an LLM to write docs like it's 1995</a></h3>
+      <p class="summary">A hands-on walkthrough of fine-tuning a model to match a specific documentation style, with the dataset and workflow choices that mattered.</p>
+      <p class="why"><b>Why it matters:</b> A concrete, reproducible fine-tuning-for-style workflow; on the HN front page today.</p>
+      <div class="row"><span class="chip">blog · HN</span><a class="src-link" href="https://news.ycombinator.com/item?id=48408442">Thread ↗</a></div>
     </div>
   </div>
 
@@ -233,28 +227,22 @@
   <div class="panel" data-panel="discussion">
     <p class="section-note">Hacker News (Algolia API + front page) and notable Reddit threads (via web search, since Reddit blocks direct fetch).</p>
     <div class="card">
-      <h3><a href="#">Show HN: local-first agent runtime</a></h3>
-      <p class="summary">Launch of a sandboxed runtime for running agents locally; lively debate on isolation and harness tradeoffs.</p>
-      <p class="why"><b>Why it matters:</b> Community signal on where agent tooling is heading.</p>
-      <div class="row"><span class="chip hot">💬 312 comments</span><span class="chip">Hacker News</span><a class="src-link" href="#">Thread ↗</a></div>
+      <h3><a href="https://news.ycombinator.com/item?id=48406358">Open Code Review — an AI-powered code review CLI tool (Alibaba)</a></h3>
+      <p class="summary">Alibaba open-sourced a CLI that runs AI code review locally; lively HN thread on where automated review fits in real workflows.</p>
+      <p class="why"><b>Why it matters:</b> Signals continued momentum for agentic dev-tooling beyond US labs (215 pts).</p>
+      <div class="row"><span class="chip hot">💬 62 comments</span><span class="chip">Hacker News</span><a class="src-link" href="https://news.ycombinator.com/item?id=48406358">Thread ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">r/MachineLearning: [D] What's actually working for RL fine-tuning in 2026</a></h3>
-      <p class="summary">Practitioner thread comparing recipes, infra, and pitfalls.</p>
-      <p class="why"><b>Why it matters:</b> Grounded, current practitioner consensus.</p>
-      <div class="row"><span class="chip">Reddit · via search</span><a class="src-link" href="#">Thread ↗</a></div>
+      <h3><a href="https://news.ycombinator.com/item?id=48411510">Programmers will document for Claude, but not for each other</a></h3>
+      <p class="summary">A blog post, surfaced on HN, arguing that the prospect of an AI reader is finally getting engineers to write the docs they always skipped.</p>
+      <p class="why"><b>Why it matters:</b> Captures a real behavioral shift in how AI tooling is changing dev practice.</p>
+      <div class="row"><span class="chip">Hacker News</span><a class="src-link" href="https://news.ycombinator.com/item?id=48411510">Thread ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">r/LocalLLaMA: new open model drops, benchmarks inside</a></h3>
-      <p class="summary">Early hands-on impressions and benchmark numbers for a fresh open-weights release.</p>
-      <p class="why"><b>Why it matters:</b> Fast read on new open models.</p>
-      <div class="row"><span class="chip">Reddit · via search</span><a class="src-link" href="#">Thread ↗</a></div>
-    </div>
-    <div class="card">
-      <h3><a href="#">HN: "AI outperforms ... " (front page)</a></h3>
-      <p class="summary">Widely-discussed story with substantive comment section.</p>
-      <p class="why"><b>Why it matters:</b> Captures broader tech conversation.</p>
-      <div class="row"><span class="chip">Hacker News</span><a class="src-link" href="#">Thread ↗</a></div>
+      <h3><a href="https://news.ycombinator.com/item?id=48405264">Show HN: Formally verified polygon intersection — Opus 4.8 oneshots, prev failed</a></h3>
+      <p class="summary">A Lean-verified polygon-intersection implementation the author says Claude Opus 4.8 one-shot after earlier models failed.</p>
+      <p class="why"><b>Why it matters:</b> A small but striking data point on frontier models doing real formal-verification work.</p>
+      <div class="row"><span class="chip">Hacker News</span><a class="src-link" href="https://news.ycombinator.com/item?id=48405264">Thread ↗</a></div>
     </div>
   </div>
 
@@ -262,33 +250,22 @@
   <div class="panel" data-panel="blogs">
     <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
     <div class="card">
-      <h3><a href="#">Lil'Log: A deep dive on test-time compute</a></h3>
-      <p class="summary">Comprehensive survey of inference-time scaling methods with intuition and references.</p>
-      <p class="why"><b>Why it matters:</b> Definitive reference on a fast-moving topic.</p>
-      <div class="row"><span class="chip">lilianweng.github.io</span><a class="src-link" href="#">Read ↗</a></div>
+      <h3><a href="https://www.latent.space/p/andon">Latent Space: Reality, The Final Eval — Lukas Petersson &amp; Axel Backlund (Andon Labs)</a></h3>
+      <p class="summary">Podcast with the Andon Labs founders on Vending-Bench 2 and real-world agent testing — running a simulated business for a year exposes long-horizon coherence failures even in frontier models.</p>
+      <p class="why"><b>Why it matters:</b> Grounds the eval conversation in long-horizon, real-world agent reliability rather than static benchmarks.</p>
+      <div class="row"><span class="chip">latent.space</span><a class="src-link" href="https://www.latent.space/p/andon">Listen ↗</a></div>
     </div>
     <div class="card">
-      <h3><a href="#">Simon Willison: notes on the new open model + tools</a></h3>
-      <p class="summary">Hands-on impressions and links to demos worth trying.</p>
-      <p class="why"><b>Why it matters:</b> Reliable practitioner filter for what's worth attention.</p>
-      <div class="row"><span class="chip">simonwillison.net</span><a class="src-link" href="#">Read ↗</a></div>
-    </div>
-    <div class="card">
-      <h3><a href="#">Interconnects: reading the latest frontier-lab release</a></h3>
-      <p class="summary">Analysis of what a new model launch signals about research direction.</p>
-      <p class="why"><b>Why it matters:</b> Good proxy for the AI-Twitter conversation.</p>
-      <div class="row"><span class="chip">interconnects.ai</span><a class="src-link" href="#">Read ↗</a></div>
-    </div>
-    <div class="card">
-      <h3><a href="#">Ahead of AI: weekly research roundup</a></h3>
-      <p class="summary">Curated summaries of notable recent papers and trends.</p>
-      <p class="why"><b>Why it matters:</b> Efficient catch-up on research you might have missed.</p>
-      <div class="row"><span class="chip">Sebastian Raschka</span><a class="src-link" href="#">Read ↗</a></div>
+      <h3><a href="https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything">Simon Willison: AI enthusiasts race against time, skeptics race against entropy</a></h3>
+      <p class="summary">Notes on Charity Majors' framing of the org tension between teams pushing AI adoption and those worried about reliability, with "no natural feedback loop" connecting the two.</p>
+      <p class="why"><b>Why it matters:</b> A sharp lens on the org dynamics shaping how AI tooling actually gets adopted.</p>
+      <div class="row"><span class="chip">simonwillison.net</span><a class="src-link" href="https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything">Read ↗</a></div>
     </div>
   </div>
 
   <footer>
-    Generated automatically · sources fetched at run time · last-24h window<br>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-05 13:26 UTC<br>
+    Source issues: HF Daily Papers page lists upvotes for top items only; Lilian Weng, Eugene Yan, and Sebastian Raschka RSS feeds had no posts inside the 24h window (latest entries predate it).<br>
     AI Daily Digest
   </footer>
 </div>
