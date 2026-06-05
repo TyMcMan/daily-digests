@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest</title>
+<style>
+  :root{
+    --bg:#0d1117; --bar:#12161f; --border:#2a313c; --text:#e6edf3;
+    --muted:#9aa6b2; --accent:#7c9cff; --chip:#21262d;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .topbar{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    height:58px;border-bottom:1px solid var(--border);
+    background:var(--bar);position:sticky;top:0;z-index:10;padding:0 16px}
+  .nav-btn{
+    background:var(--chip);border:1px solid var(--border);color:var(--text);
+    width:38px;height:38px;border-radius:10px;font-size:18px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:.15s;line-height:1}
+  .nav-btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+  .nav-btn:disabled{opacity:.3;cursor:default}
+  .date-block{min-width:230px;text-align:center}
+  .date-block .d{font-size:16px;font-weight:600;letter-spacing:-0.2px}
+  .date-block .sub{font-size:11.5px;color:var(--muted);margin-top:1px}
+  .latest{
+    background:none;border:1px solid var(--border);color:var(--muted);
+    font-size:12px;padding:6px 11px;border-radius:8px;cursor:pointer;transition:.15s}
+  .latest:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+  .latest:disabled{opacity:.35;cursor:default}
+  .frame-wrap{position:absolute;top:58px;left:0;right:0;bottom:0}
+  iframe{width:100%;height:100%;border:none;background:var(--bg)}
+  .empty{display:flex;height:100%;align-items:center;justify-content:center;
+    color:var(--muted);font-size:14px;padding:24px;text-align:center}
+  /* brand on far left */
+  .brand{position:absolute;left:18px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.2px}
+  .brand .accent{color:var(--accent)}
+  @media (max-width:560px){.brand{display:none}.date-block{min-width:160px}}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">AI Daily <span class="accent">Digest</span></div>
+    <button class="nav-btn" id="prev" title="Previous day (←)">‹</button>
+    <div class="date-block">
+      <div class="d" id="date-label">—</div>
+      <div class="sub" id="date-sub"></div>
+    </div>
+    <button class="nav-btn" id="next" title="Next day (→)">›</button>
+    <button class="latest" id="latest" title="Jump to most recent">Latest</button>
+  </div>
+  <div class="frame-wrap">
+    <iframe id="frame" title="Daily digest"></iframe>
+    <div class="empty" id="empty" style="display:none">No digests yet. The first one will appear after the next scheduled run.</div>
+  </div>
+
+<script src="days.js"></script>
+<script>
+  // DIGEST_DAYS is a sorted-ascending array of "YYYY-MM-DD" strings (from days.js).
+  var days = (window.DIGEST_DAYS || []).slice().sort();
+  var idx = days.length - 1; // start on the most recent
+
+  var frame = document.getElementById('frame');
+  var emptyEl = document.getElementById('empty');
+  var dateLabel = document.getElementById('date-label');
+  var dateSub = document.getElementById('date-sub');
+  var prevBtn = document.getElementById('prev');
+  var nextBtn = document.getElementById('next');
+  var latestBtn = document.getElementById('latest');
+
+  function fmt(iso){
+    var p = iso.split('-');
+    var dt = new Date(Date.UTC(+p[0], +p[1]-1, +p[2]));
+    return dt.toLocaleDateString('en-US',
+      {weekday:'long', year:'numeric', month:'long', day:'numeric', timeZone:'UTC'});
+  }
+
+  function render(){
+    if(!days.length){
+      frame.style.display='none'; emptyEl.style.display='flex';
+      dateLabel.textContent='No digests'; dateSub.textContent='';
+      prevBtn.disabled=nextBtn.disabled=latestBtn.disabled=true;
+      return;
+    }
+    var day = days[idx];
+    frame.src = 'digests/' + day + '.html';
+    dateLabel.textContent = fmt(day);
+    dateSub.textContent = (idx+1) + ' of ' + days.length +
+      (idx === days.length-1 ? ' · latest' : '');
+    prevBtn.disabled = (idx <= 0);
+    nextBtn.disabled = (idx >= days.length-1);
+    latestBtn.disabled = (idx >= days.length-1);
+  }
+
+  prevBtn.addEventListener('click', function(){ if(idx>0){idx--; render();} });
+  nextBtn.addEventListener('click', function(){ if(idx<days.length-1){idx++; render();} });
+  latestBtn.addEventListener('click', function(){ idx=days.length-1; render(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowLeft'){ prevBtn.click(); }
+    else if(e.key==='ArrowRight'){ nextBtn.click(); }
+  });
+
+  render();
+</script>
+</body>
+</html>

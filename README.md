@@ -1,48 +1,20 @@
-# Photonics Daily
+# Daily Digests
 
-A static digest site generated nightly by a scheduled Claude Code agent. Open
-`index.html` (or the GitHub Pages URL) — it redirects to the newest digest.
-Navigate between days with the ← → arrows in the header.
-
-## How it works
+Umbrella site for nightly research digests, served via GitHub Pages:
+**https://tymcman.github.io/daily-digests/**
 
 ```
-index.html        redirects to the newest date in manifest.js — never edited
-manifest.js       window.DIGEST_DATES = ["YYYY-MM-DD", ...] — one line appended per run
-template.html     canonical page design — copied, never redesigned
-YYYY-MM-DD.html   one self-contained digest per day — written once, never edited
-seen-links.log    every URL ever reported, one per line — dedup store
-photonics-sources.md   the vetted source list the agent monitors
+index.html    landing page — pick a digest (status lamps show freshness)
+photonics/    Photonics Daily — generated nightly at 3 AM by a scheduled
+              Claude Code routine; rules and structure in photonics/README.md
+ai/           AI Daily Digest — iframe viewer (index.html) + digests/ pages,
+              manifest in days.js (window.DIGEST_DAYS)
 ```
 
-Navigation is computed **at view time** from `manifest.js`, so yesterday's page
-gains a working → arrow the moment today's date is appended — no old file is
-ever touched.
+Each section is self-contained and keeps its own manifest. The landing page
+reads both manifests (`photonics/manifest.js`, `ai/days.js`) at view time —
+generators only ever **add** files inside their own section; nothing at the
+root needs editing.
 
-## Rules for the generating agent
-
-1. Copy `template.html`, replace the `{{TOKENS}}`, save as `YYYY-MM-DD.html`.
-2. Append the date to `DIGEST_DATES` in `manifest.js` (keep ascending order).
-3. Append all reported URLs to `seen-links.log`.
-4. Never edit any existing `*.html` page, `index.html`, or `template.html`.
-5. Commit and push: `digest: YYYY-MM-DD (<n> items)`.
-
-### Item markup
-
-```html
-<article class="item">
-  <h3><a href="https://...">Title</a><span class="badge">update</span></h3>
-  <p>Two–three sentence summary. <em>Why it matters:</em> one clause.</p>
-  <div class="meta">source &middot; YYYY-MM-DD</div>
-</article>
-```
-
-- Badge element only for `update` / `catch-up` items; omit it otherwise.
-- Empty section body: `<p class="empty">Nothing new today.</p>`
-- TL;DR entries: `<li><a href="#section-id">one line</a></li>`
-
-## Recovery
-
-- **manifest.js corrupted:** rebuild from disk —
-  `ls 20*.html | sed 's/\.html//' | sort` and re-wrap as the array. Or `git revert`.
-- **Anything else:** every run is one commit; `git log` is the audit trail.
+**Rule for generating agents:** stay inside your own subdirectory. Never touch
+`index.html` at the root or anything in the other section.

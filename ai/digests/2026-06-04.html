@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — 2026-06-04</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Thursday, June 4, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="#">Scaling Laws for Tool-Use Agents<span class="src">paper</span></a>
+        <span class="why">New RL-from-verifier method beats prior agent baselines on SWE-bench by 11pts — relevant to harness design.</span></li>
+      <li><a href="#">openharness — composable scaffolding for tool-using agents<span class="src">repo</span></a>
+        <span class="why">2.1k stars in a day; clean abstraction for retries, context windows, and eval hooks.</span></li>
+      <li><a href="#">Anthropic: lessons from building long-horizon coding agents<span class="src">blog</span></a>
+        <span class="why">Practitioner write-up on context engineering and eval loops you can apply directly.</span></li>
+      <li><a href="#">World-model pretraining from raw video at scale<span class="src">paper</span></a>
+        <span class="why">Pushes video world models toward planning; strong qualitative rollouts.</span></li>
+      <li><a href="#">HN: "Show HN: local-first agent runtime"<span class="src">discussion</span></a>
+        <span class="why">300+ comments debating sandboxing and harness tradeoffs.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">4</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">4</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="#">Scaling Laws for Tool-Use Agents</a></h3>
+      <p class="summary">Proposes training agents against a learned verifier and using it to guide search at inference, yielding large gains on coding and tool-use benchmarks.</p>
+      <p class="why"><b>Why it matters:</b> Directly applicable to agent harness design and eval-driven improvement.</p>
+      <div class="row"><span class="chip">cs.AI</span><span class="chip hot">🔥 142 HF upvotes</span><a class="src-link" href="#">arXiv ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">World-Model Pretraining from Raw Video at Scale</a></h3>
+      <p class="summary">A latent world model trained on web-scale video shows emergent planning and physical consistency in rollouts.</p>
+      <p class="why"><b>Why it matters:</b> Core to the world-models thread; hints at scalable planning substrates.</p>
+      <div class="row"><span class="chip">cs.CV</span><span class="chip hot">🔥 98 HF upvotes</span><a class="src-link" href="#">HF Papers ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Efficient RL Fine-Tuning with Asynchronous Rollouts</a></h3>
+      <p class="summary">Decouples rollout generation from policy updates to cut RL fine-tuning wall-clock by ~3x.</p>
+      <p class="why"><b>Why it matters:</b> Practical RL infra win for anyone post-training models.</p>
+      <div class="row"><span class="chip">cs.LG</span><a class="src-link" href="#">arXiv ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Compact Vision Encoders Matching ViT-L at 1/4 Cost</a></h3>
+      <p class="summary">Distillation recipe producing small vision encoders with near-parity accuracy.</p>
+      <p class="why"><b>Why it matters:</b> Cheaper multimodal stacks for agents that see.</p>
+      <div class="row"><span class="chip">cs.CV</span><a class="src-link" href="#">arXiv ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Multi-Agent Debate Improves Factuality Without Extra Training</a></h3>
+      <p class="summary">Structured debate among model instances reduces hallucination on long-form QA.</p>
+      <p class="why"><b>Why it matters:</b> Cheap inference-time reliability lever for agent systems.</p>
+      <div class="row"><span class="chip">cs.MA</span><a class="src-link" href="#">arXiv ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">A Statistical View of In-Context Learning Stability</a></h3>
+      <p class="summary">Theory linking ICL variance to prompt structure with practical prompting guidance.</p>
+      <p class="why"><b>Why it matters:</b> Grounds prompt/harness choices in something measurable.</p>
+      <div class="row"><span class="chip">stat.ML</span><a class="src-link" href="#">arXiv ↗</a></div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <div class="card">
+      <h3><a href="#">openharness</a></h3>
+      <p class="summary">Composable scaffolding for tool-using agents: retries, context budgeting, and pluggable eval hooks.</p>
+      <p class="why"><b>Why it matters:</b> Exactly the harness-engineering primitives you care about, MIT-licensed.</p>
+      <div class="row"><span class="chip stars">★ +2,108 today</span><span class="chip">Python</span><a class="src-link" href="#">GitHub ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">vlm-lab</a></h3>
+      <p class="summary">Minimal, hackable training loop for vision-language models with reproducible configs.</p>
+      <p class="why"><b>Why it matters:</b> Clean reference for the vision-model thread.</p>
+      <div class="row"><span class="chip stars">★ +870 today</span><span class="chip">Python</span><a class="src-link" href="#">GitHub ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">rl-rollouts</a></h3>
+      <p class="summary">High-throughput async rollout server for RL fine-tuning pipelines.</p>
+      <p class="why"><b>Why it matters:</b> Pairs with today's async-RL paper; usable infra.</p>
+      <div class="row"><span class="chip stars">★ +540 today</span><span class="chip">Rust</span><a class="src-link" href="#">GitHub ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">contextkit</a></h3>
+      <p class="summary">Utilities for context-window packing, chunking, and token accounting across providers.</p>
+      <p class="why"><b>Why it matters:</b> Small but practical for context engineering.</p>
+      <div class="row"><span class="chip stars">★ +410 today</span><span class="chip">TypeScript</span><a class="src-link" href="#">GitHub ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">worldsim</a></h3>
+      <p class="summary">Open implementation of a video world model with pretrained checkpoints.</p>
+      <p class="why"><b>Why it matters:</b> Reproduces a hot research direction you can actually run.</p>
+      <div class="row"><span class="chip stars">★ +330 today</span><span class="chip">Python</span><a class="src-link" href="#">GitHub ↗</a></div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+    <div class="card">
+      <h3><a href="#">Building long-horizon coding agents: what actually worked</a></h3>
+      <p class="summary">Engineering write-up on eval loops, context compaction, and failure recovery in production agents.</p>
+      <p class="why"><b>Why it matters:</b> Concrete, applicable harness patterns from a frontier lab.</p>
+      <div class="row"><span class="chip">Anthropic</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">A taxonomy of agent failure modes</a></h3>
+      <p class="summary">Catalogs common breakdowns (loop traps, context rot, tool misfires) with mitigations.</p>
+      <p class="why"><b>Why it matters:</b> Useful checklist when designing robust harnesses.</p>
+      <div class="row"><span class="chip">blog</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Verifier-guided search for agents (paper, see Papers tab)</a></h3>
+      <p class="summary">Cross-listed: strong agent result worth tracking.</p>
+      <p class="why"><b>Why it matters:</b> Method generalizes beyond coding.</p>
+      <div class="row"><span class="chip">cs.AI</span><a class="src-link" href="#">arXiv ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">openharness (repo, see Repos tab)</a></h3>
+      <p class="summary">Cross-listed: the day's most relevant agent-infra release.</p>
+      <p class="why"><b>Why it matters:</b> Directly usable scaffolding.</p>
+      <div class="row"><span class="chip stars">★ +2,108</span><a class="src-link" href="#">GitHub ↗</a></div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <h3><a href="#">Lecture: Context engineering for reliable agents</a></h3>
+      <p class="summary">Talk walking through prompt structure, retrieval, and eval design for agentic systems.</p>
+      <p class="why"><b>Why it matters:</b> The kind of Anthropic-style lecture you flagged as high value.</p>
+      <div class="row"><span class="chip">YouTube</span><a class="src-link" href="#">Watch ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">A workflow for shipping evals before features</a></h3>
+      <p class="summary">Argues for eval-first development of LLM features with a concrete template.</p>
+      <p class="why"><b>Why it matters:</b> Practical process upgrade for AI-assisted building.</p>
+      <div class="row"><span class="chip">newsletter</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Tips: getting more out of coding agents</a></h3>
+      <p class="summary">Field notes on prompts, repo structure, and review loops that improve agent output.</p>
+      <p class="why"><b>Why it matters:</b> Direct workflow improvements.</p>
+      <div class="row"><span class="chip">blog</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News (Algolia API + front page) and notable Reddit threads (via web search, since Reddit blocks direct fetch).</p>
+    <div class="card">
+      <h3><a href="#">Show HN: local-first agent runtime</a></h3>
+      <p class="summary">Launch of a sandboxed runtime for running agents locally; lively debate on isolation and harness tradeoffs.</p>
+      <p class="why"><b>Why it matters:</b> Community signal on where agent tooling is heading.</p>
+      <div class="row"><span class="chip hot">💬 312 comments</span><span class="chip">Hacker News</span><a class="src-link" href="#">Thread ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">r/MachineLearning: [D] What's actually working for RL fine-tuning in 2026</a></h3>
+      <p class="summary">Practitioner thread comparing recipes, infra, and pitfalls.</p>
+      <p class="why"><b>Why it matters:</b> Grounded, current practitioner consensus.</p>
+      <div class="row"><span class="chip">Reddit · via search</span><a class="src-link" href="#">Thread ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">r/LocalLLaMA: new open model drops, benchmarks inside</a></h3>
+      <p class="summary">Early hands-on impressions and benchmark numbers for a fresh open-weights release.</p>
+      <p class="why"><b>Why it matters:</b> Fast read on new open models.</p>
+      <div class="row"><span class="chip">Reddit · via search</span><a class="src-link" href="#">Thread ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">HN: "AI outperforms ... " (front page)</a></h3>
+      <p class="summary">Widely-discussed story with substantive comment section.</p>
+      <p class="why"><b>Why it matters:</b> Captures broader tech conversation.</p>
+      <div class="row"><span class="chip">Hacker News</span><a class="src-link" href="#">Thread ↗</a></div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3><a href="#">Lil'Log: A deep dive on test-time compute</a></h3>
+      <p class="summary">Comprehensive survey of inference-time scaling methods with intuition and references.</p>
+      <p class="why"><b>Why it matters:</b> Definitive reference on a fast-moving topic.</p>
+      <div class="row"><span class="chip">lilianweng.github.io</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Simon Willison: notes on the new open model + tools</a></h3>
+      <p class="summary">Hands-on impressions and links to demos worth trying.</p>
+      <p class="why"><b>Why it matters:</b> Reliable practitioner filter for what's worth attention.</p>
+      <div class="row"><span class="chip">simonwillison.net</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Interconnects: reading the latest frontier-lab release</a></h3>
+      <p class="summary">Analysis of what a new model launch signals about research direction.</p>
+      <p class="why"><b>Why it matters:</b> Good proxy for the AI-Twitter conversation.</p>
+      <div class="row"><span class="chip">interconnects.ai</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="#">Ahead of AI: weekly research roundup</a></h3>
+      <p class="summary">Curated summaries of notable recent papers and trends.</p>
+      <p class="why"><b>Why it matters:</b> Efficient catch-up on research you might have missed.</p>
+      <div class="row"><span class="chip">Sebastian Raschka</span><a class="src-link" href="#">Read ↗</a></div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>

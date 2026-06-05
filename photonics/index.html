@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Photonics Daily</title>
+<style>body{background:#0c1016;color:#8294a8;font:16px -apple-system,sans-serif;display:grid;place-items:center;height:100vh;margin:0}</style>
+</head>
+<body>
+<div id="msg">No digests yet.</div>
+<script src="manifest.js"></script>
+<script>
+  // Always lands on the newest digest — never needs editing.
+  var ds = (window.DIGEST_DATES || []).slice().sort();
+  if (ds.length) location.replace(ds[ds.length - 1] + '.html');
+</script>
+</body>
+</html>
