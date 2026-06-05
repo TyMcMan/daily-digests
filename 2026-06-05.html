@@ -1,0 +1,169 @@
+<!doctype html>
+<!--
+  Generated digest page for 2026-06-05. Created from template.html; do not edit.
+  Markup conventions: README.md.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-05</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, June 5, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Nature Photonics: non-volatile barium-titanate field-programmable photonic gate array with sub-100 ns switching</a></li>
+      <li><a href="#compute">OAM-multiplexed diffractive optical neural network classifies 100 categories</a></li>
+      <li><a href="#research">Quant-ph preprint: ML surrogate cuts Gaussian boson sampling circuit screening for GKP-state generation by ~90%</a></li>
+      <li><a href="#research">EPFL puts a Mamyshev ultrafast laser oscillator on an erbium-doped SiN photonic chip</a></li>
+      <li><a href="#europe">EPIC interview on growing a young photonics company in an uncertain market</a></li>
+    </ul>
+    <p style="color:var(--dim);font-size:.9rem;margin:.6rem 0 0;">Quiet-to-moderate day: 6 items. PIC/EDA, funding and adjacent feeds had nothing new in the 24h window; Reddit RSS was unreachable (see source issues).</p>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41566-026-01934-y">High-speed non-volatile barium titanate field-programmable photonic gate array</a></h3>
+      <p>Nature Photonics reports a programmable photonic array built from BaTiO3 phase shifters in a hexagonal waveguide mesh, with non-volatile state retention and sub-100-nanosecond reconfiguration. <em>Why it matters:</em> a fast, non-volatile, mesh-based FPPGA is a core building block for reconfigurable optical compute and signal processing — directly relevant to programmable PIC architectures.</p>
+      <div class="meta">Nature Photonics &middot; 2026-06-04</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41566-026-01930-2">Orbital angular momentum multiplexing diffractive neural networks for high-capacity optical inference</a></h3>
+      <p>A deep diffractive neural network uses OAM multiplexing to perform multitask recognition across 100 object categories at 72.7% average accuracy, raising the channel capacity of free-space optical inference. <em>Why it matters:</em> OAM multiplexing is a path to scaling the throughput of passive optical neural networks without added electronic overhead.</p>
+      <div class="meta">Nature Photonics &middot; 2026-06-04</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.05992">Rapid Gaussian Boson Sampling Circuit Screening for GKP State Creation via a Two-Stage Machine Learning Surrogate</a></h3>
+      <p>The authors train a two-stage histogram gradient-boosting surrogate that predicts which Gaussian boson sampling circuits will yield GKP states, hitting 90% detection accuracy on held-out data and cutting screening cost by roughly 90%. <em>Why it matters:</em> GKP states are a key resource for fault-tolerant photonic quantum computing, and cheap circuit screening accelerates the all-photonic route to generating them.</p>
+      <div class="meta">arXiv quant-ph &middot; 2026-06-04</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://optics.org/news/epfl-builds-photonic-chip-that-rivals-much-larger-laboratory-lasers">EPFL builds photonic chip that rivals much larger laboratory lasers</a></h3>
+      <p>EPFL compressed a 42-cm Mamyshev-oscillator laser cavity onto an erbium-doped silicon-nitride chip, delivering 1.05 nJ pulses as short as 147 fs from a matchhead-sized device. <em>Why it matters:</em> integrated ultrafast sources on a CMOS-compatible SiN platform are enabling building blocks for on-chip frequency combs, optical clocks and PIC-based metrology.</p>
+      <div class="meta">optics.org &middot; 2026-06-04</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/newsroom/2026/june/electrically_tuning_second-harmonic_generation/">Electrically tuning second-harmonic generation</a></h3>
+      <p>An Emory University team built a few-nanometer plasmonic tunnel junction (gold electrodes, epitaxial lutetium-oxide barrier) whose second-harmonic output can be electrically modulated by ~500%. <em>Why it matters:</em> compact, electrically tunable nonlinear light sources are candidate elements for integrated optical modulators and on-chip frequency conversion.</p>
+      <div class="meta">Optics &amp; Photonics News &middot; 2026-06-04</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://epic-photonics.com/news-media/growing-a-young-company-in-a-competitive-and-uncertain-world/">Growing a Young Company in a Competitive and Uncertain World</a></h3>
+      <p>EPIC published an interview with Michal Nejbauer, CEO of Fluence Technology, giving direct answers on capital needs and scaling a young photonics venture amid market uncertainty. <em>Why it matters:</em> practical operating guidance from an EU photonics founder is useful signal for early-stage integrated-photonics companies navigating the same fundraising and growth questions.</p>
+      <div class="meta">EPIC &middot; 2026-06-04</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Reddit RSS endpoints (r/Optics, r/Semiconductors, r/photonics, r/hardware) returned unreachable on fetch and yielded no results via search-engine fallback this run — community signal not assessed, not reported as quiet.</div>
+  <div>6 items &middot; generated 2026-06-05 09:58 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
