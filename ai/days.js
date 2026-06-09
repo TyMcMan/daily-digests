@@ -1,1 +1,1 @@
-window.DIGEST_DAYS = ["2026-06-05"];
+window.DIGEST_DAYS = ["2026-06-05","2026-06-09"];

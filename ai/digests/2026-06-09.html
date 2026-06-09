@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — 2026-06-09</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Monday, June 9, 2026</div>
+    <div class="meta">Covering Jun 6–9 (catch-up: last digest Jun 5) · arXiv · GitHub Trending · Hacker News · RSS blogs · web search · 19 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://github.com/mvanhorn/last30days-skill">last30days-skill</a><span class="src">GitHub</span>
+        <span class="why">+3,558 stars today — AI agent skill that fans out across Reddit, X, YouTube, HN &amp; the web to synthesize a grounded topic brief</span>
+      </li>
+      <li>
+        <a href="https://github.com/RyanCodrai/turbovec">turbovec</a><span class="src">GitHub</span>
+        <span class="why">+1,729 stars — Rust vector index on Google's TurboQuant compresses 10 M vectors from 31 GB to 4 GB, beating FAISS by 12–20% on ARM</span>
+      </li>
+      <li>
+        <a href="https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/">Apple WWDC 2026 keynote</a><span class="src">Engadget</span>
+        <span class="why">Tim Cook's farewell keynote (Jun 8): Gemini-powered Siri, iOS 27 Beta 1, multi-AI Extensions opening iPhone to third-party LLMs</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.06475v1">RREDCoT</a><span class="src">arXiv</span>
+        <span class="why">Segment-level reward redistribution lifts AIME accuracy from 85% to 90.8% — no extra model, no extra generation steps</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.06058">MDP-GRPO</a><span class="src">arXiv</span>
+        <span class="why">Stabilizes GRPO for multi-constraint instruction following via multi-temperature sampling, prospect-theoretic shaping, and asymmetric KL</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">2</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.06475v1">RREDCoT: Segment-Level Reward Redistribution for Reasoning Models</a></h3>
+      <p class="summary">GRPO-based RL fine-tuning assigns reward only at the end of a full Chain-of-Thought trace, creating high-variance Monte Carlo training. RREDCoT adapts RUDDER-style reward redistribution to the CoT MDP, using the generating LM itself plus a Bayesian-inspired value estimator to assign credit to important trace segments — no auxiliary model needed. Evaluated on AIME, it raises pass rate from 85% to 90.8%.</p>
+      <p class="why"><b>Why it matters:</b> A zero-overhead technique for making RL reasoning training more stable and data-efficient without adding inference cost.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">RL · reasoning</span>
+        <span class="chip">2026-06-09</span>
+        <a href="https://arxiv.org/abs/2606.06475v1" class="src-link">arXiv 2606.06475</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.06058">MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following</a></h3>
+      <p class="summary">Standard GRPO breaks down on discrete, low-dispersion rewards from multi-constraint tasks: whole groups get identical scores, gradients vanish. MDP-GRPO fixes this via (1) multi-temperature sampling to spread reward, (2) dual-anchor advantages for homogeneous groups, (3) prospect-theoretic shaping, and (4) asymmetric KL regularization. Outperforms GRPO on FollowBench and IFEval with better strict constraint satisfaction.</p>
+      <p class="why"><b>Why it matters:</b> Makes GRPO practical for the increasingly common use-case of instruction-following with multiple simultaneous format and content constraints.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">RL · instruction-following</span>
+        <span class="chip">2026-06-08</span>
+        <a href="https://arxiv.org/abs/2606.06058" class="src-link">arXiv 2606.06058</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.05263">Policy-Conditioned Counterfactual Credit for Verifiable RL of Long-Horizon Language Agents</a></h3>
+      <p class="summary">Long-horizon language agents trained with verifiable rewards still learn unsupported inference chains and shortcut actions that satisfy terminal checks. CVT-RL proposes a constrained policy-gradient algorithm with dense verifiable rewards, intervention-validity gating, and a policy-conditioned counterfactual contribution (PCCC) estimator that attributes credit correctly across long trajectories.</p>
+      <p class="why"><b>Why it matters:</b> Directly attacks the credit-assignment problem for agents that must take many sequential tool calls before any verifiable reward signal arrives.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">agents · RL</span>
+        <span class="chip">2026-06-07</span>
+        <a href="https://arxiv.org/abs/2606.05263" class="src-link">arXiv 2606.05263</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.04889">GRAIL: Gradient-Reweighted Advantages for Reinforcement Learning with Verifiable Rewards</a></h3>
+      <p class="summary">GRPO with verifiable rewards is now a standard recipe for mathematical reasoning, but advantage estimates are noisy when groups of rollouts contain many correct or many incorrect answers. GRAIL reweights gradient contributions based on group composition, reducing variance and improving training efficiency on math benchmarks without architectural changes.</p>
+      <p class="why"><b>Why it matters:</b> A simple GRPO improvement that can be dropped into existing RLVR pipelines for free gain.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">RL · math reasoning</span>
+        <span class="chip">2026-06-06</span>
+        <a href="https://arxiv.org/abs/2606.04889" class="src-link">arXiv 2606.04889</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.00133">World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications</a></h3>
+      <p class="summary">Accepted to IEEE Access (May 2026), this 25-author survey organises world-model research along four axes: architecture (representation, dynamics, modality, learning paradigm), methodological family (SSM/recurrent, transformer, diffusion, physics-informed, language-augmented), reasoning strategy, and downstream application domain from robotics to video generation to planning.</p>
+      <p class="why"><b>Why it matters:</b> A timely reference as world models become central to long-horizon agent architectures and embodied AI pipelines.</p>
+      <div class="row">
+        <span class="chip catch-up" style="color:#e3b341;border-color:#4a3f1c">catch-up</span>
+        <span class="chip">cs.LG · survey</span>
+        <span class="chip">accepted IEEE Access</span>
+        <a href="https://arxiv.org/abs/2606.00133" class="src-link">arXiv 2606.00133</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/mvanhorn/last30days-skill">mvanhorn/last30days-skill</a></h3>
+      <p class="summary">An AI agent skill that fans out across Reddit, X, YouTube, Hacker News, Polymarket, and the web, then synthesizes a grounded summary of any topic over the last 30 days. Designed as a plug-in skill for Claude Code's agent harness — one call returns a cited briefing.</p>
+      <p class="why"><b>Why it matters:</b> Shows the "research agent as skill" pattern reaching mainstream adoption; biggest trending repo today by far.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +3,558 ⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">agent skill</span>
+        <a href="https://github.com/mvanhorn/last30days-skill" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/RyanCodrai/turbovec">RyanCodrai/turbovec</a></h3>
+      <p class="summary">A Rust vector index built on Google Research's TurboQuant algorithm — a data-oblivious quantizer that requires no codebook training. Compresses 10 M float32 vectors from 31 GB to 4 GB, beats FAISS IndexPQFastScan by 12–20% on ARM (Apple Silicon) and matches it on x86, with no separate train phase for online ingest.</p>
+      <p class="why"><b>Why it matters:</b> Best-in-class memory efficiency + speed for RAG pipelines, with Python bindings for easy adoption.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +1,729 ⭐ today</span>
+        <span class="chip">Rust · Python</span>
+        <span class="chip">vector search</span>
+        <a href="https://github.com/RyanCodrai/turbovec" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/magenta/magenta-realtime">magenta/magenta-realtime — Magenta RealTime 2</a></h3>
+      <p class="summary">Google's open-weights (CC-BY-4.0) 2.4B-parameter model for continuous real-time music generation. Runs on Apple Silicon MacBooks with ~200 ms latency via MIDI, text, or audio controls; ships a Python JAX/MLX library and a C++ streaming audio inference engine. The only open-weights model capable of live on-device music synthesis.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates production-quality generative audio inference on consumer hardware; architecture patterns (streaming, on-device) translate to other real-time generative tasks.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 1,125+</span>
+        <span class="chip">Python · C++</span>
+        <span class="chip">generative audio</span>
+        <a href="https://github.com/magenta/magenta-realtime" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/MemPalace/mempalace">MemPalace/mempalace</a></h3>
+      <p class="summary">Open-source AI memory system claiming the highest published score in the zero-API-cost category on LongMemEval (96.6% R@5). Uses a hierarchical structure (wings → halls → rooms) backed by SQLite and ChromaDB, ships an MIT licence, and includes a 30x AAAK compression dialect for loading months of conversation context into limited windows.</p>
+      <p class="why"><b>Why it matters:</b> A freely usable, benchmark-leading memory backend for agent systems — though benchmark methodology is contested (see Discussion).</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip">agent memory</span>
+        <span class="chip">LongMemEval 96.6%</span>
+        <a href="https://github.com/MemPalace/mempalace" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Panniantong/Agent-Reach">Panniantong/Agent-Reach</a></h3>
+      <p class="summary">A CLI tool giving AI agents authenticated read access to Twitter/X, Reddit, YouTube, GitHub, Bilibili, and XiaoHongShu — zero API fees, one interface. Trending with +679 stars today. Designed to be called as a sub-agent tool from orchestration frameworks.</p>
+      <p class="why"><b>Why it matters:</b> Fills the gap between agent frameworks and the social/content platforms that agents need to read but can't scrape directly.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +679 ⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">agent · web access</span>
+        <a href="https://github.com/Panniantong/Agent-Reach" class="src-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/langchain-ai/deepagents">langchain-ai/deepagents</a></h3>
+      <p class="summary">LangChain's "batteries-included agent harness" — a higher-level framework sitting above LangGraph that pre-wires tool registration, memory, sandboxed code execution, and observability. Trending on GitHub with 96 new stars today. Targets developers who want production-ready agent infrastructure without assembling primitives.</p>
+      <p class="why"><b>Why it matters:</b> LangChain is converging on an opinionated harness layer above its lower-level graph primitives, a significant architectural bet on standardisation.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip">agent harness</span>
+        <span class="chip">LangChain</span>
+        <a href="https://github.com/langchain-ai/deepagents" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/xerrors/Yuxi">xerrors/Yuxi</a></h3>
+      <p class="summary">A multi-tenant agent harness platform with integrated knowledge-graph support. Allows multiple user-facing agents to share a persistent graph of entities and relations, with per-tenant isolation. Trending Python repo gaining traction in the Chinese open-source community.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the knowledge-persistence layer that most single-session harnesses lack, relevant for enterprise deployments needing cross-session continuity.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip">multi-tenant</span>
+        <span class="chip">knowledge graph</span>
+        <a href="https://github.com/xerrors/Yuxi" class="src-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/">Apple WWDC 2026: Everything Announced at Tim Cook's Farewell Keynote (Jun 8)</a></h3>
+      <p class="summary">Tim Cook presented his last keynote before handing the CEO role to John Ternus (September 1). Highlights: Gemini-powered Siri with conversation history and a dedicated app, iOS 27 Beta 1, a new multi-AI Extensions system that lets third-party LLMs plug into iPhone's OS surfaces, and Dynamic Island integration. Apple and Google's deep collaboration was publicly acknowledged.</p>
+      <p class="why"><b>Why it matters:</b> The multi-AI Extensions architecture opens iOS to competing models and establishes a platform-level harness pattern — directly relevant to how LLMs will reach consumers at scale.</p>
+      <div class="row">
+        <span class="chip">industry · Apple</span>
+        <span class="chip">2026-06-08</span>
+        <a href="https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/" class="src-link">Engadget</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/luongnv89/claude-howto">luongnv89/claude-howto — Visual Guide to Claude Code</a></h3>
+      <p class="summary">A community-built, example-driven guide to Claude Code covering all features — slash commands, CLAUDE.md templates, hooks, MCP configs, subagent definitions, and full skill bundles — with Mermaid diagrams, copy-paste configs, and a /self-assessment skill that generates a personalised learning path. +312 stars trending, MIT licensed.</p>
+      <p class="why"><b>Why it matters:</b> A rare high-quality practitioner reference that covers advanced harness patterns (multi-agent, custom skills) with runnable examples.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +312 ⭐ today</span>
+        <span class="chip">Claude Code</span>
+        <span class="chip">workflow guide</span>
+        <a href="https://github.com/luongnv89/claude-howto" class="src-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News (Algolia API + front page) and notable Reddit threads (via web search, since Reddit blocks direct fetch).</p>
+
+    <div class="card">
+      <h3><a href="https://cybernews.com/ai-news/milla-jovovich-mempalace-memory-tool/">MemPalace Benchmark Controversy: "devs aren't buying it"</a></h3>
+      <p class="summary">MemPalace (see Repos) launched with a claimed 100% LongMemEval score that was quickly revised to 96.6% after community scrutiny of methodology. The project's association with actress Milla Jovovich drew further scepticism about technical authorship. The 96.6% R@5 score in the zero-API-cost category is nonetheless the highest publicly reported result, per OSS Insight's 2026 agent-memory race analysis.</p>
+      <p class="why"><b>Why it matters:</b> Illustrates ongoing benchmark credibility issues in the agent memory space and the need for reproducible evaluation frameworks.</p>
+      <div class="row">
+        <span class="chip">discussion</span>
+        <span class="chip">agent memory · benchmarks</span>
+        <a href="https://cybernews.com/ai-news/milla-jovovich-mempalace-memory-tool/" class="src-link">CyberNews</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://blog.mean.ceo/hacker-news-trends-june-2026/">HN Trends June 2026: Security, Trust, and the "Boring Infrastructure" Shift</a></h3>
+      <p class="summary">A trend analysis of Hacker News discussion this month finds that AI hype has given way to a focus on trust layers, security, and controlled workflows. Hiring threads confirm demand for coding-agent and LLM-product engineers, but the conversation is now dominated by AI-assisted attacks, supply-chain risk from AI-generated packages, and whether AI-generated code creates more technical debt than it saves.</p>
+      <p class="why"><b>Why it matters:</b> A useful temperature-check on practitioner sentiment: the market is maturing from demo-land toward reliability and security engineering.</p>
+      <div class="row">
+        <span class="chip">HN · discussion</span>
+        <span class="chip">2026-06-09</span>
+        <a href="https://blog.mean.ceo/hacker-news-trends-june-2026/" class="src-link">Mean CEO Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/7/datasette-agent-edit/">Release: datasette-agent-edit 0.1a0</a></h3>
+      <p class="summary">Simon Willison released datasette-agent-edit, a Datasette Agent plugin that allows the LLM to write back to a SQLite database — not just query it. Paired with the micropython-wasm sandbox (see below), this closes the read/write loop for the Datasette Agent project: agents can now safely generate code, execute it in WASM, and commit results.</p>
+      <p class="why"><b>Why it matters:</b> A practical example of the "agentic CRUD over structured data" pattern, with safety enforced by WASM sandboxing rather than prompts.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-06-07</span>
+        <a href="https://simonwillison.net/2026/Jun/7/datasette-agent-edit/" class="src-link">simonwillison.net</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/">Running Python Code in a Sandbox with MicroPython and WASM</a></h3>
+      <p class="summary">Simon Willison details his approach to building a safe code-execution sandbox for Datasette Agent using a custom WASM build of MicroPython and wasmtime. The hardest part was persistent interpreter state across multiple execution calls; he solved it with a novel entry-point design. GPT-5.5 has failed to break out of the sandbox in testing.</p>
+      <p class="why"><b>Why it matters:</b> A detailed, reproducible solution to agentic code execution safety that avoids Docker or subprocess isolation overhead.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-06-06</span>
+        <a href="https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/" class="src-link">simonwillison.net</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/">Anthropic Scales Claude Mythos to 150 Organisations in 15 Countries via Project Glasswing</a></h3>
+      <p class="summary">Anthropic expanded access to Claude Mythos — its restricted cybersecurity model capable of finding and exploiting zero-day vulnerabilities — to 150 partner organisations across 15 countries under Project Glasswing. The model is not publicly available; partners use it to find and fix vulnerabilities in critical infrastructure. Mythos Preview was first disclosed in April 2026.</p>
+      <p class="why"><b>Why it matters:</b> Marks a new category of "sovereign/restricted capability" model deployment, raising questions about governance models for powerful dual-use AI.</p>
+      <div class="row">
+        <span class="chip catch-up" style="color:#e3b341;border-color:#4a3f1c">catch-up</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">2026-06-02</span>
+        <a href="https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/" class="src-link">TechCrunch</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · Jun 6–9 catch-up window · 2026-06-09 10:20 UTC<br>
+    Source issues: HuggingFace /papers — HTTP 403; arXiv /list/* — HTTP 403; HN Algolia API — HTTP 403; simonwillison.net direct fetch — HTTP 403; all coverage via WebSearch fallback.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
