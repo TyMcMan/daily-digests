@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-09</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Monday, June 9, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#europe">EU Chips Act 2.0 (June 3) explicitly designates integrated photonics as a strategic technology — PIC pilot-line funding now formally anchored in EU law</a></li>
+      <li><a href="#research">QuiX Quantum installs Feed-Forward Control Unit with 150 ns latency — key milestone for measurement-based universal photonic QC</a></li>
+      <li><a href="#research">Heriot-Watt FreeForm Photonics spin-out commercialises laser-based passive alignment, targeting &gt;50% reduction in photonics assembly cost</a></li>
+      <li><a href="#pic-eda">PhotonDelta Global Photonics Engineering Contest: submissions open until June 19, prize up to €2M investment</a></li>
+      <li><a href="#compute">CPO 2026 state-of-play: NVIDIA Spectrum-X Photonics enters H2 ramp, TSMC COUPE platform adopted by both NVIDIA and Broadcom</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.edn.com/where-co-packaged-optics-cpo-technology-stands-in-2026/">Where Co-Packaged Optics (CPO) Technology Stands in 2026</a><span class="badge">catch-up</span></h3>
+      <p>A detailed industry overview of CPO adoption confirms that NVIDIA and Broadcom are both shipping volume products built on TSMC's COUPE silicon-photonics CPO platform, with NVIDIA's Spectrum-X Ethernet Photonics switches (409.6 Tb/s, 3.5× lower power vs pluggable) targeting H2 2026 ramp. The piece reviews the Optical Compute Interconnect (OCI) MSA formed by AMD, Broadcom, Meta, Microsoft, NVIDIA, and OpenAI for an open optical interconnect spec (Gen1: 200 Gbps/lane) — a standards layer directly relevant to heterogeneous optical accelerator integration. <em>Why it matters:</em> confirms the CPO transition is execution-phase, not roadmap, with the two dominant silicon-photonics platforms now in production.</p>
+      <div class="meta">EDN &middot; 2026</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://picmagazine.net/article/121449/X-FAB_SMART_Photonics_and_Epiphany_Design_partner_on_InP-on-silicon_design">X-FAB, SMART Photonics &amp; Epiphany Design: InP-on-Silicon Design Flow at OFC</a><span class="badge">catch-up</span></h3>
+      <p>The three-way collaboration demonstrated a complete InP-on-SOI heterogeneous design flow at OFC 2026, using Micro-Transfer-Printing to co-integrate InP chiplets with X-FAB's SOI silicon photonics wafers. A unified EDA flow through Epiphany Design covers both the SOI and InP domains. Industrial-prototype access opened Q1 2026; production ramp is targeted for 2027. <em>Why it matters:</em> This is the cleanest path to combining InP's active gain with silicon photonics' dense passive integration — directly relevant to optical compute interconnect transceivers needing on-chip laser sources.</p>
+      <div class="meta">PIC Magazine &middot; OFC 2026</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.photondelta.com/news/global-photonics-engineering-contest-2026/">PhotonDelta Global Photonics Engineering Contest — Deadline June 19</a></h3>
+      <p>The second annual Global Photonics Engineering Contest closes submissions on June 19, 2026. Open to startups, established firms, researchers and students; focus areas are photonic chip-based applications in communication &amp; computing, imaging, and sensing. Grand prize: up to €100K in fabrication/design services plus consideration for up to €2M investment from PhotonDelta, and a main-stage slot at PIC Summit Europe 2026. <em>Why it matters:</em> A structured path to access EU InP/SiN pilot-line runs and ecosystem capital — relevant for anyone building photonic compute demonstrators.</p>
+      <div class="meta">PhotonDelta &middot; 2026-01-19 (deadline 2026-06-19)</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/03/quix-quantum-installs-real-time-control-component-for-universal-photonic-quantum-computer/">QuiX Quantum Installs Feed-Forward Control Unit for Universal Photonic QC</a></h3>
+      <p>QuiX Quantum has installed its Feed-Forward Control Unit (FFCU), enabling real-time adaptive operations within its photonic quantum computing stack at a deterministic 150 ns latency. The FFCU combines a dual-FPGA processing bus with a 32×32 input/output routing matrix, converting single-photon detector signals into phase corrections before the target photon can travel 30 m. This closes the measurement-based feedback loop required for universal MBQC and bridges QuiX's photonic stack to classical HPC networks. <em>Why it matters:</em> Feed-forward is the hard real-time control problem that has held back photonic QC universality — this is a concrete demonstration of the solution stack at the component level.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-03</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/heriot-watt-team-aims-to-commercialize-passive-alignment-approach">Heriot-Watt FreeForm Photonics Spin-Out Targets 50%+ Reduction in Assembly Cost</a></h3>
+      <p>FreeForm Photonics, a Heriot-Watt University spin-out backed by Scottish Enterprise's High Growth Spinout Programme, is commercialising a laser-based process that writes passive alignment features directly into optical glass components during manufacturing, eliminating post-production manual calibration — currently &gt;50% of photonics production cost. Tolerances reach sub-micron, matching active-alignment precision. Target application domains: fibre-optic sensing, quantum computing systems, and optical communications infrastructure. <em>Why it matters:</em> Assembly cost is the primary bottleneck to affordable photonic packaging at volume; a laser-direct passive-alignment process could transform the economics of PIC module manufacturing.</p>
+      <div class="meta">optics.org &middot; 2026-06-03</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://pradeepstechpoints.wordpress.com/2026/06/08/eu-chips-act-2-0-and-integrated-photonics-industry/">EU Chips Act 2.0 and the Integrated Photonics Industry</a></h3>
+      <p>The European Commission adopted the Chips Act 2.0 proposal on June 3, 2026. For the photonics industry, the key change is explicit inclusion of photonic integrated circuit technologies as a named strategic pillar within the Chips for Europe Initiative 2.0, alongside six funding channels: PIXEurope (€380M), APECS advanced packaging (€726M), and Quantum pilots including P4Q (€52M). The analysis notes approved projects including Ephos IT (€40M, glass-based PICs) and CamGraPhIC (€211M, optical transceivers). <em>Why it matters:</em> Formal statutory status in the Chips Act anchors multi-year R&amp;D and pilot-line funding for EU PIC manufacturing — directly supporting the supply chain that EU photonic compute startups (including in the Akhetonics ecosystem) depend on.</p>
+      <div class="meta">Pradeep's TechPoints &middot; 2026-06-08</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/02/european-photonics-firms-target-advance-in-quantum-networking/">European Photonics Firms Target Advance in Quantum Networking</a></h3>
+      <p>A coalition of European photonics companies is pursuing industrialisation of quantum networking components under the P4Q (Photonics for Quantum) pilot, a 29-partner consortium supported by €25M EU funding (matched nationally across 12 countries). The programme targets TRL-8/MRL-8 readiness across multiple photonic quantum platforms including linear optical, silicon-photonic, and InP-based components for QKD and quantum repeaters. <em>Why it matters:</em> Quantum networking drives demand for single-photon sources, photon-number-resolving detectors, and low-loss PIC platforms — the same component ecosystem underpinning photonic compute.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-02</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: arXiv physics.optics / cs.ET — HTTP 403 (no direct fetch); Nature Photonics / Light S&amp;A RSS — HTTP 403; Lightmatter, Ayar Labs, The Next Platform, PhotonDelta, EPIC, SMART Photonics, LioniX — HTTP 403; Reddit r/Optics, r/Semiconductors, r/photonics, r/hardware — RSS 403, web search returned no June 6–9 results (not assessed); SPIE TV YouTube RSS — not fetched, no recent photonics videos surfaced via search.</div>
+  <div>7 items &middot; generated 2026-06-09 10:20 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
