@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — 2026-06-10</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, June 10, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · GitHub Trending · Hacker News · RSS blogs · web search · 13 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 &amp; Mythos 5 — Anthropic</a><span class="src">Anthropic</span>
+        <span class="why">First publicly available Mythos-class model: 80.3% SWE-bench Pro vs GPT-5.5 at 58.6%. Free through June 22; $10/M input, $50/M output after.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.09483">Memory Beyond Recall: DCPM Dual-Process Cognitive Agent Memory</a><span class="src">arXiv</span>
+        <span class="why">6-layer memory hierarchy (inputs → facts → beliefs → identity → schemas → intentions) with async nighttime schema induction — far beyond RAG retrieval.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.09550">InquiTree: Scientific Inquiry Benchmark for AI Agents</a><span class="src">arXiv</span>
+        <span class="why">30-paper research-tree benchmark reveals agents "cognitively tunnel" in long-horizon scientific tasks — diagnostic eval for any research-assist agent.</span>
+      </li>
+      <li>
+        <a href="https://github.com/Andyyyy64/whichllm">whichllm — Hardware-Aware LLM Recommender</a><span class="src">GitHub</span>
+        <span class="why">+633 stars today — one CLI command auto-detects GPU/CPU/RAM and ranks best local models by benchmark (LiveBench, Aider ELO) that will actually run.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.06502">SIGIL: Membership Inference for LLM Training Data</a><span class="src">arXiv</span>
+        <span class="why">Embeds invisible canary sequences in text/code; any LLM trained on them shows statistically detectable signatures — provable copyright enforcement with formal FPR control.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">4</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">2</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">1</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.09550">InquiTree: Evaluating AI Agents in the Scientific Inquiry Loop with Paper-Derived Research Trees</a></h3>
+      <p class="summary">Formalizes scientific inquiry as interactive Research Trees — DAGs capturing hypothesis formulation, study design, result interpretation, and belief updating. Tests agents on a 30-paper pool, releases the open-access IT-18 subset, and finds agents exhibit "cognitive tunneling" in long-horizon tasks: critical judgment degrades as the research tree deepens.</p>
+      <p class="why"><b>Why it matters:</b> A directly adoptable eval harness for testing whether a research-assist agent discovers rather than memorizes — a core distinction as LLM agents move into scientific workflows.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">agent eval</span>
+        <span class="chip">2026-06-08</span>
+        <a href="https://arxiv.org/abs/2606.09550" class="src-link">arXiv 2606.09550</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.09483">Memory Beyond Recall: A Dual-Process Cognitive Memory System for Self-Evolving LLM Agents (DCPM)</a></h3>
+      <p class="summary">Proposes DCPM, a 6-layer memory hierarchy — raw inputs → atomic facts → belief trajectories → identity → domain schemas → latent intentions. A synchronous System 1 daytime writer handles live belief revision; an async System 2 nighttime engine runs schema induction. Goes far beyond per-turn RAG retrieval, enabling agents that revise their self-model over time. Authors at Tencent.</p>
+      <p class="why"><b>Why it matters:</b> The most complete cognitive-architecture treatment of agent memory to date — immediately relevant to any long-lived agent deployment or personalization system that needs to change its beliefs as it learns.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">agent memory</span>
+        <span class="chip">2026-06-08</span>
+        <a href="https://arxiv.org/abs/2606.09483" class="src-link">arXiv 2606.09483</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.09613">AGENTSERVESIM: A Hardware-Aware Simulator for Multi-Turn LLM Agent Serving</a></h3>
+      <p class="summary">Existing LLM serving simulators model stateless requests. Multi-turn agentic workloads interleave model calls with tool invocations, requiring stateful execution, cross-turn KV-cache management, and routing logic during tool-induced gaps. AGENTSERVESIM models these faithfully to enable capacity planning, scheduler design, and SLA analysis for production agent deployments. From the University of Central Florida.</p>
+      <p class="why"><b>Why it matters:</b> Fills the gap for infrastructure engineers planning production agent serving stacks — a direct input to hardware sizing, batching policy design, and cost modeling.</p>
+      <div class="row">
+        <span class="chip">cs.LG · systems</span>
+        <span class="chip">agent serving</span>
+        <span class="chip">2026-06-08</span>
+        <a href="https://arxiv.org/abs/2606.09613" class="src-link">arXiv 2606.09613</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.06502">SIGIL: Subtle Injection for Ground-Truth Inference of LLM Training Data</a></h3>
+      <p class="summary">Embeds imperceptible canary sequences — five strategies: lexical-rare, lexical-phrase, syntactic, semantic, code-pattern — into protected text or code. Any LLM trained on those documents then exhibits statistically detectable behavioral signatures. Introduces a Membership Inference Score (MIS) grounded in Neyman-Pearson hypothesis testing with formal false-positive-rate control.</p>
+      <p class="why"><b>Why it matters:</b> A provable, practical mechanism for content owners to detect unauthorized use of their data in LLM training — directly applicable to IP enforcement, copyright litigation, and data governance audits.</p>
+      <div class="row">
+        <span class="chip">cs.LG · cs.CR</span>
+        <span class="chip">membership inference</span>
+        <span class="chip">2026-06-08</span>
+        <a href="https://arxiv.org/abs/2606.06502" class="src-link">arXiv 2606.06502</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/Andyyyy64/whichllm">Andyyyy64/whichllm — Hardware-Aware LLM Recommender</a></h3>
+      <p class="summary">CLI tool that auto-detects GPU, CPU, and RAM then ranks the best local LLMs from HuggingFace that will actually run on that hardware, using recency-aware benchmark scores (LiveBench, Artificial Analysis, Aider, Chatbot Arena ELO). One command to discover your best model; <code>whichllm run</code> then downloads and starts a chat session.</p>
+      <p class="why"><b>Why it matters:</b> Directly solves the "which model fits my hardware" problem with real benchmark data rather than naive VRAM checks — and the right answer changes every few weeks as new models land.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +633 ⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">local LLM</span>
+        <a href="https://github.com/Andyyyy64/whichllm" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/roboflow/supervision">roboflow/supervision — Reusable Computer Vision Utilities</a></h3>
+      <p class="summary">Unified computer-vision utility layer with a framework-agnostic Detections object, annotators, multi-object trackers, zone counters, and dataset converters spanning Ultralytics, SAM, Transformers, and Detectron2. Continued strong daily trending with +733 stars signals sustained community momentum.</p>
+      <p class="why"><b>Why it matters:</b> The de facto standard utility layer for production CV pipelines — if you are building on YOLO or SAM you are likely already using this or should be.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +733 ⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">computer vision</span>
+        <a href="https://github.com/roboflow/supervision" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/maziyarpanahi/openmed">maziyarpanahi/openmed — Open-Source Healthcare AI Platform</a></h3>
+      <p class="summary">Healthcare AI platform with 1,000+ curated biomedical and clinical models, HIPAA-aware PII de-identification covering all 18 Safe Harbor identifiers, and runtime support across CPU, CUDA, Apple Silicon, and iOS via an OpenMedKit Swift package. Apache 2.0 licensed and trending strongly.</p>
+      <p class="why"><b>Why it matters:</b> The most comprehensive open-source medical AI toolkit available — critical for teams building HIPAA-compliant clinical AI without starting from scratch on PII handling and model curation.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +191 ⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">healthcare AI</span>
+        <a href="https://github.com/maziyarpanahi/openmed" class="src-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/aaif-goose/goose">aaif-goose/goose — Open-Source Extensible AI Agent (Rust)</a></h3>
+      <p class="summary">Rust-native, model-agnostic AI agent that installs, executes, edits, and tests autonomously — going well beyond code suggestions. Works with any LLM backend and is trending as a fully open, self-hostable alternative to Claude Code and Cursor for developers who want no vendor lock-in.</p>
+      <p class="why"><b>Why it matters:</b> Rust architecture delivers performance and memory safety; model-agnostic design means switching underlying LLMs requires no rewiring — a combination that could anchor serious open-source adoption in the agentic coding space.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +489 ⭐ today</span>
+        <span class="chip">Rust</span>
+        <span class="chip">agentic coding</span>
+        <a href="https://github.com/aaif-goose/goose" class="src-link">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills — Production Engineering Skills for AI Coding Agents</a></h3>
+      <p class="summary">Curated set of production-grade engineering skills for AI coding agents, maintained by Google Chrome engineer Addy Osmani. Covers web performance, testing strategy, code review discipline, and architectural decision-making — designed to elevate agent output from syntax-correct to scale-ready.</p>
+      <p class="why"><b>Why it matters:</b> Osmani's background in large-scale web performance brings real credibility; these skills directly address the gap between "code that runs" and "code that holds up in production" in agentic outputs.</p>
+      <div class="row">
+        <span class="chip hot">🔥 +443 ⭐ today</span>
+        <span class="chip">Shell</span>
+        <span class="chip">agent skills</span>
+        <a href="https://github.com/addyosmani/agent-skills" class="src-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1">LLM Research Papers: The 2026 List (January–May) <span class="chip" style="color:#e3b341;border-color:#4a3f1c;background:transparent">catch-up</span></a></h3>
+      <p class="summary">Sebastian Raschka's annotated roundup of notable LLM research from January through May 2026 — covering new models, training methods, agents, reasoning, and efficiency. His key observation: 2026 architecture work is increasingly moving beyond scaling transformers toward hybrid architectures and representation geometry, signaling a meaningful regime shift in the field.</p>
+      <p class="why"><b>Why it matters:</b> An authoritative practitioner reading list for anyone needing to prioritize what to read across the dense first half of 2026; the "hybrid architecture" framing is the most concise signal of where the frontier is heading.</p>
+      <div class="row">
+        <span class="chip">Sebastian Raschka</span>
+        <span class="chip">2026-06-06</span>
+        <a href="https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1" class="src-link">Ahead of AI</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News (Algolia API + front page) and notable Reddit threads (via web search, since Reddit blocks direct fetch).</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48463808">Claude Fable 5 | Hacker News</a></h3>
+      <p class="summary">Front-page HN thread on Anthropic's Claude Fable 5 release. Community discussion highlights the model's 80.3% SWE-bench Pro score, strong performance on heavy agentic workflows, and a pre-release finding that the model autonomously identified 271 Firefox zero-days in internal testing. Active comments on pricing ($10/M input, $50/M output), and the safety routing policy that redirects high-risk queries to Opus 4.8.</p>
+      <p class="why"><b>Why it matters:</b> Direct practitioner signal on how engineers are thinking about adopting the most capable publicly available model — pricing, safety guardrails, and benchmark credibility all under active debate.</p>
+      <div class="row">
+        <span class="chip">Hacker News</span>
+        <span class="chip">2026-06-09</span>
+        <a href="https://news.ycombinator.com/item?id=48463808" class="src-link">HN</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48413629">Ask HN: What is your (AI) dev tech stack / workflow? (June 2026)</a></h3>
+      <p class="summary">Active Ask HN thread gathering practitioner perspectives on current AI development workflows and tech stacks — which models, orchestration frameworks, memory backends, and deployment patterns engineers are actually using in production in mid-2026.</p>
+      <p class="why"><b>Why it matters:</b> One of the clearest direct signals on real-world adoption patterns; useful for benchmarking your own stack against peers and spotting emerging consensus before it becomes conventional wisdom.</p>
+      <div class="row">
+        <span class="chip">Hacker News · Ask HN</span>
+        <span class="chip">2026-06-09</span>
+        <a href="https://news.ycombinator.com/item?id=48413629" class="src-link">HN</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 and Claude Mythos 5 — Official Announcement</a></h3>
+      <p class="summary">Anthropic released Claude Fable 5, the first publicly available Mythos-class model, alongside an upgraded Mythos 5 for Project Glasswing trusted partners. Fable 5 achieves 80.3% on SWE-bench Pro (GPT-5.5: 58.6%) and 1932 Elo on GDPval-AA. High-risk queries — cybersecurity, bio, chem, model distillation — are automatically routed to Opus 4.8. Priced at $10/M input, $50/M output; free on Pro/Max/Team/Enterprise through June 22.</p>
+      <p class="why"><b>Why it matters:</b> The most capable publicly available model by a wide margin on software engineering tasks — the Mythos architecture was previously restricted to Project Glasswing partners, making this an inflection point for what practitioners can access.</p>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">model release</span>
+        <span class="chip">2026-06-09</span>
+        <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" class="src-link">Anthropic</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-10 01:15 UTC<br>
+    Source issues: HuggingFace /papers — HTTP 403; arXiv /list/* — HTTP 403; HN Algolia API — HTTP 403; most RSS feeds (Simon Willison, Interconnects, Latent Space, Raschka) — HTTP 403; Reddit — not accessible; all coverage via WebSearch fallback.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
