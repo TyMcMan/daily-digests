@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-10</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Tuesday, June 10, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#pic-eda">Wave Photonics launches cloud PDK Management Platform; CORNERSTONE is first foundry user</a></li>
+      <li><a href="#europe">Photonics21 hands its new SRIA to European Commission at Annual Meeting in Brussels (today)</a></li>
+      <li><a href="#compute">Lightmatter joins NVIDIA NVLink Fusion — CPO and NPO products targeting 114 Tbps per chip</a></li>
+      <li><a href="#pic-eda">Keysight adds GlobalFoundries SiPh PDK to ADS Photonic Designer for EOE co-simulation</a></li>
+      <li><a href="#research">LLM-agent autonomous design loops demonstrated end-to-end for four PIC component classes</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://lightmatter.co/press-release/lightmatter-joins-nvidia-nvlink-fusion/">Lightmatter Joins NVIDIA NVLink Fusion for CPO and NPO</a><span class="badge">catch-up</span></h3>
+      <p>Lightmatter announced integration into the NVIDIA NVLink Fusion ecosystem to deliver co-packaged optics (CPO) and near-packaged optics (NPO) products compatible with NVIDIA's optical and SerDes technologies. The collaboration reduces fiber and connector count by 50% and targets unified semi-custom AI factory deployments, with the L200X reaching 64 Tbps and M1000 reaching 114 Tbps total optical bandwidth per chip. <em>Why it matters:</em> validates CPO at the NVIDIA system level — the supply-chain event that converts CPO from a roadmap item into a required capability for AI datacenter builds.</p>
+      <div class="meta">lightmatter.co &middot; 2026-06-03</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.prnewswire.com/news-releases/sivers--globalfoundries-advance-ai-data-center-optical-solutions-302788035.html">Sivers &amp; GlobalFoundries Advance AI Datacenter Optical Solutions</a><span class="badge">catch-up</span></h3>
+      <p>Sivers Semiconductors and GlobalFoundries announced a strategic collaboration to integrate Sivers III-V laser arrays into reference designs on GF's silicon photonics platform (SCALE), supporting CPO, linear pluggable optics, and other datacenter interconnect architectures — targeting a $25B pluggable optics market by 2030. <em>Why it matters:</em> directly addresses the laser integration bottleneck for SiPh-based CPO; III-V laser sources moving into GF's volume foundry flow is a foundational supply-chain step for photonic AI compute at scale.</p>
+      <div class="meta">prnewswire.com &middot; 2026-06-02</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <article class="item">
+      <h3><a href="https://optics.org/press/6163">Wave Photonics Launches PDK Management Platform — CORNERSTONE First Foundry User</a></h3>
+      <p>Wave Photonics launched a cloud-based PDK Management Platform that automates S-parameter generation, documentation, and packaging of PDKs into major EDA tools (Luceda/IPKISS, Cadence Virtuoso, Siemens L-Edit, GDSFactory). CORNERSTONE is the first foundry customer; the platform also includes a Test Design Kit (TDK) for wafer-scale PIC testing. <em>Why it matters:</em> lowers the barrier for foundries to publish and maintain interoperable PDKs across tools, reducing the friction that forces PIC designers to rebuild component models when switching EDA platforms.</p>
+      <div class="meta">optics.org &middot; 2026-06-09</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.keysight.com/us/en/about/newsroom/news-releases/2026/0603_pr26-075-keysight-expands-photonics-design-ecosystem-with-globalfoundries-pdk.html">Keysight Adds GlobalFoundries SiPh CLO PDK to ADS Photonic Designer</a><span class="badge">catch-up</span></h3>
+      <p>Keysight expanded its Advanced Design System (ADS) Photonic Designer by adding GlobalFoundries' silicon photonics CLO PDK, enabling full electro-optical-electrical (EOE) co-simulation — including TDECQ eye-diagram analysis — in a single environment before tapeout. Designers can now validate GF-platform signal integrity metrics without tool-switching. <em>Why it matters:</em> for PIC engineers doing design-for-test on GF's SiPh node, this closes the EOE simulation loop in the most widely used commercial EDA platform and reduces pre-tapeout validation cycles.</p>
+      <div class="meta">keysight.com &middot; 2026-06-03</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.aimphotonics.com/news/aim-photonics-introduces-assembly-design-kit-to-streamline-photonic-packaging-design">AIM Photonics Releases Assembly Design Kit (ADK) for Photonic Packaging</a><span class="badge">catch-up</span></h3>
+      <p>AIM Photonics released the first Assembly Design Kit (ADK) for photonic packaging — analogous to a process PDK but for the assembly layer. It embeds packaging constraints and standardized templates directly into the photonics design workflow, enabling chip-package co-design earlier and reducing late-stage re-spins caused by packaging incompatibilities discovered after layout. <em>Why it matters:</em> packaging assembly is one of the dominant cost and schedule risk factors for PICs; an ADK that surfaces constraints at design time could meaningfully shorten tape-out cycles for teams using AIM's platform.</p>
+      <div class="meta">aimphotonics.com &middot; 2026-05-29</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.00915">Autonomous Agentic PIC Design: LLM Agents Close the Simulate-Evaluate-Iterate Loop</a><span class="badge">catch-up</span></h3>
+      <p>Authors deploy LLM-based agents in fully autonomous design loops — propose, simulate, evaluate, iterate — across four canonical PIC component classes (waveguide bends, splitters, crossings, microring modulators), integrating layout, charge transport, optical mode, and RF electrode design without human-in-the-loop steps. The system achieves state-of-the-art performance on each component class. <em>Why it matters:</em> foreshadows AI-driven PIC design automation that could compress component development from weeks to hours — directly applicable to Akhetonics' design workflows and a major shift in how EDA tooling will be used in the next few years.</p>
+      <div class="meta">arXiv:2606.00915 &middot; 2026-06-02</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41566-026-01916-0">On-Chip Programmable Valley Optoelectronic Nanocircuit (Nature Photonics)</a><span class="badge">catch-up</span></h3>
+      <p>Monash University researchers integrated chirality-selective meta-waveguide photodetectors with a WSe₂ monolayer to build a chip that generates, routes, and detects valley-polarized chiral photons — encoding information in light's valley degree of freedom (valleytronics). Demonstrated simultaneous encoding and processing of two images with polarization selectivity of 0.97. <em>Why it matters:</em> a long-range signal for ultra-low-energy information encoding beyond conventional intensity/phase modulation; valley-photonic approaches may offer a path to new optical compute primitives that bypass current energy-per-operation limits.</p>
+      <div class="meta">Nature Photonics &middot; 2026-05-30</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://photonhub.eu/event/photonics-partnership-annual-meeting-on-9-and-10-june-2026/">Photonics21 Presents New SRIA to European Commission at Annual Meeting</a></h3>
+      <p>The Photonics Partnership Annual Meeting (June 9–10, Brussels) saw Photonics21 present its updated Strategic Research and Innovation Agenda to European Commission VP Henna Virkkunen, setting priorities for the next EU Framework Programme (FP10). The agenda covers integrated photonics, CPO, LiDAR, quantum photonics, and photonic AI — and the Photonics21 Innovation Award ceremony was held alongside. <em>Why it matters:</em> the SRIA submission directly shapes which photonics technologies receive Horizon funding in the next multi-year cycle; understanding its framing helps EU-based startups and research groups align proposals with funded priorities.</p>
+      <div class="meta">photonhub.eu / Photonics21 &middot; 2026-06-09</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://pixeurope.eu/">PIXEurope Pilot Line Holds Industry Ecosystem Building Day in Barcelona</a><span class="badge">catch-up</span></h3>
+      <p>PIXEurope — the €400M EU Chips Act pilot line for advanced PICs covering silicon, SiN, InP, and LiNbO₃ across 20 institutions in 11 countries — hosted an Industry Ecosystem Building Day in Barcelona in June 2026 to onboard industrial users ahead of full pilot-line operation. A 6-inch InP wafer fabrication facility is planned to open at Eindhoven High Tech Campus in 2027. <em>Why it matters:</em> PIXEurope represents the EU's most concrete manufacturing-capacity-building move for photonics; the ecosystem day is the practical on-ramp for companies seeking access to the pilot line, including InP, which is directly relevant for optical compute and telecom PICs.</p>
+      <div class="meta">pixeurope.eu &middot; 2026-06</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <article class="item">
+      <h3><a href="https://www.laserfocusworld.com/optics/article/55373416/any-wavelength-lasers-for-pics">Any-Wavelength On-Chip Lasers for PICs via Ta₂O₅ Nonlinear Optics</a></h3>
+      <p>NIST researchers, in collaboration with Octave Photonics, demonstrated tantalum pentoxide (Ta₂O₅) nonlinear optics that generate laser output at arbitrary on-chip wavelengths — removing the fixed-wavelength constraint that has forced PIC designers to design around available laser lines. The process is compatible with existing CMOS-adjacent wafer flows. <em>Why it matters:</em> wavelength flexibility on-chip could simplify WDM PIC design and resonance-matched modulator architectures where specific wavelength channels are currently a hard constraint, reducing design iteration cycles.</p>
+      <div class="meta">Laser Focus World &middot; 2026-06</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Most direct fetches returned HTTP 403 (Lightmatter, Ayar Labs, The Next Platform, optics.org, OPN RSS, Flexcompute, PIC Magazine, arXiv listings, Nature RSS, PhotonDelta, EPIC, Laser Focus World, Cignal AI); Reddit r/Optics and r/Semiconductors RSS — blocked, web search fallback returned no usable posts. All content sourced via WebSearch; individual article pages fetched where accessible.</div>
+  <div>10 items &middot; generated 2026-06-10 01:15 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
