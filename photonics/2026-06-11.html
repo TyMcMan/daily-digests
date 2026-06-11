@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-11</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Thursday, June 11, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Oriole Networks deploys world's first commercial pure-photonic AI switching network — 81% core power reduction</a></li>
+      <li><a href="#europe">Photonics21 hands "Light Driving the Future" SRIA to EU Commission at Annual Meeting; calls for €2B standalone FP10 program</a></li>
+      <li><a href="#europe">EU Chips Act 2.0 explicitly adds photonic integrated circuits to scope with dedicated PIC pilot-line pillar</a></li>
+      <li><a href="#pic-eda">Flexcompute autonomous agent designs 10 MZM modulators overnight across four coupled physics solvers — no human in the loop</a></li>
+      <li><a href="#research">arXiv 2606.10898: single-step lithography co-defines TiN heaters, Al interconnects, and SiN waveguides — fewer masks, lower cost</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.hpcwire.com/off-the-wire/oriole-and-amd-deploy-photonic-ai-network-for-aria-scaling-inference-lab/">Oriole Networks &amp; AMD Deploy First Commercial Pure-Photonic AI Network at UK ARIA Lab</a></h3>
+      <p>UK startup Oriole Networks has deployed its PRISM platform — replacing electronic core switches with nanosecond optical circuit switching — inside the UK ARIA Scaling Inference Lab alongside AMD Instinct GPUs. Claimed results: 81% reduction in core network power; GPU idle time drops from 60% to below 1%. <em>Why it matters:</em> First real-world proof point for a pure-photonic AI fabric at scale, directly validating the power and latency case for optical interconnect in AI datacenters that Akhetonics is targeting.</p>
+      <div class="meta">HPCwire &middot; 2026-06-08</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/10/quantum-companies-join-world-economic-forums-technology-pioneers/">WEF Technology Pioneers 2026: Sparrow Quantum and OptQC Named Among Global Deep-Tech Leaders</a></h3>
+      <p>Denmark's Sparrow Quantum (deterministic single-photon sources for quantum networking) and Japan's OptQC (photonic quantum computer using photon-encoded qubits) were named to the World Economic Forum's 2026 Technology Pioneers cohort. Sparrow's single-photon emitters are a core enabling component for scalable photonic quantum interconnects; OptQC's selection signals institutional recognition of photonic QC as commercially credible. <em>Why it matters:</em> WEF Pioneer status accelerates commercial partnerships and investor attention for photonic compute platforms.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-10</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://ayarlabs.com/blog/building-a-production-ready-optically-connected-rack-for-ai-scale-up/">Ayar Labs: Building a Production-Ready Optically Connected Rack for AI Scale-Up</a><span class="badge">catch-up</span></h3>
+      <p>Published around Computex (June 2–5), Ayar's blog post details their 100% liquid-cooled optically connected rack reference design featuring TeraPHY optical I/O, ELSFP external laser modules, advanced fiber management, and hot-swap serviceability. Bridges the gap from chip-level co-packaged optics to full rack-scale deployment. <em>Why it matters:</em> First detailed rack-level CPO integration guide from a leading optical I/O company — sets the packaging and thermal integration requirements that PIC component suppliers (including Akhetonics) must meet.</p>
+      <div class="meta">Ayar Labs Blog &middot; ~2026-06-04</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gdsfactory">gdsfactory — Port Orientation Bug Fix for Flush-Boundary Pins (June 10 commit)</a></h3>
+      <p>Two commits merged on June 10 fix an incorrect port orientation assigned to pins flush with a component boundary in <code>add_ports_from_boxes</code> (PR #4594). This is a correctness fix for automated port extraction from bounding-box geometry — a common pattern in parameterised cell libraries. Current stable release remains v9.43.0 (May 16, 2026). <em>Why it matters:</em> Port orientation errors in automated PIC layout cause silent DRC failures and misrouted connections; this fix improves reliability of parametric cell generation workflows.</p>
+      <div class="meta">gdsfactory/gdsfactory &middot; 2026-06-10</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://hs.flexcompute.com/news/agentic-photonic-design">Flexcompute: Autonomous Agent Loop Designs Tapeout-Ready PICs in Hours</a><span class="badge">catch-up</span></h3>
+      <p>Official announcement (June 1) of Flexcompute's end-to-end autonomous photonic chip design loop: AI agents propose layouts, run multiphysics simulations via Tidy3D (charge transport, optical mode, 3D-RF FDTD, and analytic loaded-line), verify DRC/fabrication constraints, and iterate to GDS in hours. A companion blog post showed 10 MZM designs spanning the bandwidth–efficiency frontier produced overnight without human iteration. Compatible with Claude, OpenAI Codex, and other LLMs via the FlexAgent MCP plugin. <em>Why it matters:</em> The most consequential near-term workflow shift for PIC EDA — the design-simulate-tweak cycle is now agent-automatable for standard device classes; evaluate the MCP integration for Akhetonics' modulator design pipeline.</p>
+      <div class="meta">Flexcompute / PRNewswire &middot; 2026-06-01</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.10898">Single-Step Lithography for Reconfigurable SiN Photonics with TiN Heaters and Al Interconnects</a></h3>
+      <p>Presents a single-mask fabrication process that co-defines TiN thermo-optic phase shifters, Al interconnects, and SiN waveguides in one lithography step on platforms at 810 nm and 1550 nm, achieving π-shift powers of ~92 mW and ~120 mW respectively. Eliminates separate patterning steps for heaters, wiring, and contact pads. <em>Why it matters:</em> Directly reduces the process complexity and cost of reconfigurable SiN PIC manufacturing — enabling lower-cost thermo-optically controlled photonic compute fabrics at foundry scale.</p>
+      <div class="meta">arXiv physics.optics &middot; 2606.10898 &middot; 2026-06-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.02451">Perturbative Photonic Matrix-Vector Multiplication with Reduced Phase-Shift Range</a><span class="badge">catch-up</span></h3>
+      <p>Introduces a perturbative programming method for MZI-based photonic matrix-vector multiply (MVM) circuits that operates near a fixed reference configuration and uses interferometric subtraction to achieve the target linear transform with dramatically reduced phase excursion per modulator — applicable to both universal unitary meshes and low-depth non-unitary constructions. <em>Why it matters:</em> Reducing required phase-shift range relaxes modulator specifications and lowers drive-power requirements, a direct practical benefit for scaling photonic tensor cores in optical inference accelerators.</p>
+      <div class="meta">arXiv physics.optics &middot; 2606.02451 &middot; 2026-06-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.06637">Reconfigurable Single-Ring Photonic Molecule on Thin-Film Lithium Niobate</a><span class="badge">catch-up</span></h3>
+      <p>Demonstrates a photorefractive grating written by optical interference inside a single TFLN racetrack resonator that hybridises co-propagating transverse modes, forming a "photonic molecule" without needing two coupled rings. The grating is optically programmable, erasable, and rewritable — providing non-volatile frequency spectrum control without continuous electrical bias. <em>Why it matters:</em> Optically programmable resonators with no continuous power draw are a key component for low-energy WDM channel management in photonic compute interconnects.</p>
+      <div class="meta">arXiv physics.optics &middot; 2606.06637 &middot; 2026-06-04</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.05673">Broadband Chromatic Dispersion of Thermo-Refractive Coefficients in Silicon Nitride Nonlinear Photonics</a><span class="badge">catch-up</span></h3>
+      <p>Characterises the wavelength-dependent thermo-refractive coefficient of SiN — the dominant tuning handle in integrated nonlinear PIC processes (frequency conversion, soliton microcombs). Shows this dispersion significantly affects phase-matching predictions and must be accounted for in thermal tuning models. <em>Why it matters:</em> Impacts design accuracy for SiN chips that use temperature to tune frequency converters or optical clocks feeding photonic compute engines; incorrect thermal models lead to systematic phase-mismatch errors.</p>
+      <div class="meta">arXiv physics.optics &middot; 2606.05673 &middot; 2026-06-04</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.01463">Emerging Non-Volatile Opto-Electronic Resistive Memories for Next-Generation PICs</a><span class="badge">catch-up</span></h3>
+      <p>Reviews opto-electronic resistive memories (OERMs) — devices combining resistive switching with optical readout — for embedding persistent, non-volatile, multilevel memory directly into PICs. Covers metal-oxide and phase-change material platforms, device benchmarks, and integration into programmable photonic circuits and in-memory optical computing architectures. <em>Why it matters:</em> On-chip non-volatile memory is the critical missing element for fully-programmable and adaptive photonic compute systems like optical neural network accelerators.</p>
+      <div class="meta">arXiv physics.optics &middot; 2606.01463 &middot; 2026-05-31</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://sciencebusiness.net/network-updates/photonics21-new-photonics-roadmap-warns-europe-cannot-take-its-technological-lead">Photonics21 Hands "Light Driving the Future" SRIA to European Commission in Brussels</a></h3>
+      <p>At the Photonics Partnership Annual Meeting in Brussels (June 9–10), Photonics21 formally delivered its updated Strategic Research and Innovation Agenda to the European Commission. The SRIA warns that Europe cannot take its photonics lead for granted — China's market share rose from 10% (2005) to 32% (2022) while Europe's slipped to 15% — and calls for a €2 billion standalone EU program in the 2028–2034 FP10 budget cycle covering AI, semiconductor manufacturing, healthcare, communications, and quantum. <em>Why it matters:</em> This is the EU photonics sector's most significant policy statement ahead of FP10; its reception determines whether integrated photonics gets a dedicated budget line in the next Framework Programme — directly shaping the funding landscape for Akhetonics.</p>
+      <div class="meta">Science|Business &middot; 2026-06-10</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://bits-chips.com/article/europes-photonics-industry-to-eu-dont-forget-about-us-in-next-chips-act/">EU Chips Act 2.0 Explicitly Lists Photonic Integrated Circuits as Key Semiconductor Technology</a></h3>
+      <p>The European Commission's Chips Act 2.0 proposal (tabled June 3; industry response published June 8–10) explicitly includes photonic integrated circuit technologies as a key enabling semiconductor, creating a dedicated PIC pillar covering design tools, libraries, pilot lines, and demonstrators under the Chips for Europe Initiative 2.0. European PIC ecosystem players have been actively lobbying for this inclusion. <em>Why it matters:</em> Creates the legal basis for dedicated EU funding of InP and SiN foundry infrastructure in the next industrial policy cycle — a policy win years in the making for European PIC companies including Akhetonics.</p>
+      <div class="meta">Bits&amp;Chips &middot; 2026-06-08 to 2026-06-10</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.photonics21.org/contest-2026/innovation-award.php">Photonics21 Innovation Award 2026 Goes to ARQ Quantum Technologies for Photonic Quantum Repeaters</a></h3>
+      <p>The Photonics21 Innovation Award was presented at the Brussels Annual Meeting to ARQ Quantum Technologies (Barcelona) for their photonic-chip-based quantum repeater nodes enabling long-distance quantum key distribution over existing fibre networks — a step toward the quantum internet. <em>Why it matters:</em> Signals where EU photonics R&amp;D calls will focus in the quantum-photonics intersection; foundry and packaging capabilities for quantum PICs are increasingly shared with classical integrated photonics infrastructure.</p>
+      <div class="meta">Photonics21 &middot; 2026-06-10</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.eetimes.com/q-ant-raises-series-a-debuts-second-gen-tfln-photonic-chip/">Q.ANT Raises Series A, Debuts Second-Gen TFLN Photonic AI Processor — Production Fully Booked</a><span class="badge">catch-up</span></h3>
+      <p>German startup Q.ANT (TRUMPF spinout) raised a Series A and debuted its second-generation thin-film lithium niobate (TFLN) photonic AI processor. The company has exhausted its 1,000-wafer-start/year pilot line capacity (~50–60K chips/year) and is actively seeking manufacturing scale partners. Its TFLN-based processors are deployed at the LRZ and Jülich supercomputing centers in Germany. <em>Why it matters:</em> Q.ANT's supply crunch is a demand-validation signal — European photonic compute chips have genuine HPC deployment demand but foundry capacity is the bottleneck; directly relevant to Akhetonics' platform positioning.</p>
+      <div class="meta">EE Times &middot; 2026-Q1</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.corning.com/worldwide/en/about-us/news-events/news-releases/2026/06/amazon-announces-agreement-with-corning-to-boost-us-fiber-optics-manufacturing-creating-1000-advanced-manufacturing-jobs-in-north-carolina.html">Amazon Signs Multibillion-Dollar Optical Fiber Supply Deal with Corning — 1,000 New US Jobs</a></h3>
+      <p>Amazon signed a multiyear, multibillion-dollar agreement with Corning to supply optical fiber, cable, and connectivity for US datacenter expansion, guaranteeing supply amid fiber lead times stretching to ~1 year. The deal creates 1,000 advanced manufacturing jobs in North Carolina. <em>Why it matters:</em> Hyperscaler fiber demand at this scale signals the urgency of the optical component supply crunch — context for why integrated photonics interconnect (reducing fiber run counts) is strategically important, and why optical component suppliers across the stack are seeing pricing power.</p>
+      <div class="meta">Corning press release &middot; 2026-06-08</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://quantumcomputingreport.com/thinkquantum-initiates-photonic-chip-miniaturization-program-for-terrestrial-and-space-cryptography/">ThinkQuantum (Italy) Launches €4.3M PIQCS Program to Miniaturize QKD onto PICs</a></h3>
+      <p>ThinkQuantum S.r.l. (subsidiary of Officine Stellare, Italy) is leading the PIQCS project — a 5-year, €4.3M program funded by Italy's MUR/FISA — to migrate bulk QKD and QRNG optical systems onto wafer-scale photonic integrated chips, in collaboration with the University of Padua. <em>Why it matters:</em> Evidence of European national-level PIC investment for security applications outside the Netherlands/Germany core; illustrates how photonic integration is expanding beyond compute into cryptography verticals that share the same InP and SiN foundry infrastructure.</p>
+      <div class="meta">Quantum Computing Report &middot; 2026-06-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://siliconangle.com/2026/06/08/oriole-networks-deploys-photonic-ai-network-first-commercial-rollout-amd/">SiliconANGLE: Full Commercial Rollout Analysis — Oriole Networks PRISM Platform</a></h3>
+      <p>SiliconANGLE's in-depth coverage of the Oriole Networks PRISM deployment provides additional technical context: the platform uses nanosecond optical circuit switching at the datacenter core, enabling GPU-to-GPU traffic to bypass electronic bottlenecks entirely. The ARIA Scaling Inference Lab validates the system at production inference workloads. <em>Why it matters:</em> Technical detail on how a photonic switch fabric changes GPU utilisation profiles — the 60%→1% idle time figure is a compelling ROI argument for the photonic interconnect business case.</p>
+      <div class="meta">SiliconANGLE &middot; 2026-06-08</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: All 13 monitored site direct fetches returned HTTP 403; content retrieved via web search. Nature Photonics RSS and Light:Sci&amp;App RSS both returned 403 — no qualifying June 10–11 items found via search fallback. Reddit r/Optics and r/photonics: RSS endpoints returned 403; web search found no high-engagement posts within the 48h window — not assessed. arXiv listing pages: HTTP 403; papers retrieved via targeted web search and arXiv metadata.</div>
+  <div>16 items &middot; generated 2026-06-11 01:16 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
