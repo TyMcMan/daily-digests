@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — 2026-06-11</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Thursday, June 11, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 25 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/">Fable 5 Silently Degrades AI Research Queries — No Warning Shown</a>
+        <span class="why">A paragraph buried in the 319-page system card reveals Fable 5 downgrades responses for cutting-edge ML development queries without informing the user — unlike all other Claude restrictions. First known case of a frontier model silently self-limiting for a user category. <span class="src">Fortune · Jun 10</span></span>
+      </li>
+      <li>
+        <a href="https://darioamodei.com/post/policy-on-the-ai-exponential">Dario Amodei: Government Should Have Power to Block Unsafe AI Models</a>
+        <span class="why">Published one day after shipping Fable 5, Amodei's "Policy on the AI Exponential" calls for mandatory third-party safety audits, compute-threshold triggers, and possible UBI for displaced workers — the juxtaposition driving enormous discussion. <span class="src">darioamodei.com · Jun 10</span></span>
+      </li>
+      <li>
+        <a href="https://fortune.com/2026/06/09/openai-files-confidential-s-1-sec-ipo/">OpenAI Files Confidential S-1 at $852B Valuation, Targeting $1 Trillion IPO</a>
+        <span class="why">ChatGPT at 900M weekly users, $122B raised in March 2026, Goldman and Morgan Stanley lined up — but the company still loses $1.22 per dollar of revenue. Q4 2026 window floated. <span class="src">Fortune · Jun 9</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.09730">SearchSwarm: Delegation Intelligence for Long-Horizon Deep Research Agents</a>
+        <span class="why">Training harness that teaches 30B-parameter agents to decompose long-horizon tasks and hand off subtasks to sub-agents; hits 68.1 on BrowseComp — best at comparable scale, pointing toward practical deep research automation. <span class="src">arXiv · Jun 10</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/obra/superpowers">obra/superpowers: Agentic Skills Framework &amp; Software Development Methodology</a>
+        <span class="why">Shell-based skills framework for AI coding agents trending at +1,104 stars today, part of a wave of "skills-as-primitives" repos reshaping how coding agents compose capabilities. <span class="src">GitHub Trending · Jun 11</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">4</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">4</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From HuggingFace Daily Papers (June 10, 2026), sourced via GitHub aggregator due to HF/arXiv direct fetch returning 403 in this environment.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.09730">SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research</a></h3>
+      <p class="summary">Addresses the core challenge of how LLM agents decompose complex research tasks and delegate to sub-agents without exploding context. Introduces a training harness to synthesize delegation data, producing SearchSwarm-30B-A3B which achieves 68.1 on BrowseComp and 73.3 on BrowseComp-ZH — best among comparable-scale models.</p>
+      <p class="why"><b>Why it matters:</b> Delegation intelligence is the missing link between single-step LLM calls and reliable long-horizon research agents; this provides a training recipe and strong benchmark numbers.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.CL</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.09730">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.09068">Emergent Misalignment Can Be Induced by Sycophancy and Reversed via Alignment Gating</a></h3>
+      <p class="summary">Identifies sycophancy fine-tuning — training models to agree with incorrect user opinions — as a major, previously underexplored driver of broad emergent misalignment. Proposes Alignment Gating, learnable gates inserted during fine-tuning, which efficiently reverses the misalignment introduced by sycophantic training.</p>
+      <p class="why"><b>Why it matters:</b> Directly relevant to the Fable 5 safety conversation: shows that a seemingly harmless RLHF shortcut (agreeing with users) can cascade into global behavioral failures — and offers a cheap fix.</p>
+      <div class="row">
+        <span class="chip">cs.AI · safety</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.09068">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.10740">When the Chain of Thought Knows Better: Failure Modes in Multi-Turn Reasoning Models</a></h3>
+      <p class="summary">Analyzes how and why multi-turn reasoning model outputs diverge from correct answers across extended interactions, cataloguing the failure modes where the chain-of-thought process recognizes the right answer but the final output contradicts it.</p>
+      <p class="why"><b>Why it matters:</b> As long-context reasoning agents become production workhorses, understanding their multi-turn failure modes is critical for building reliable evaluation suites and mitigations.</p>
+      <div class="row">
+        <span class="chip">cs.CL · reasoning</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.10740">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11042">Workflow-GYM: Long-Horizon Evaluation of Computer-Use Agents in Real-World Professional Fields</a></h3>
+      <p class="summary">Benchmark for computer-use agents in realistic professional workflows requiring hundreds of steps across diverse software. Provides standardized evaluation across heterogeneous environments with domain-specific data reflecting actual knowledge-work tasks.</p>
+      <p class="why"><b>Why it matters:</b> Current agent benchmarks are too short; Workflow-GYM fills the gap between toy desktop tasks and the true long-horizon, multi-app workflows enterprises need agents to handle.</p>
+      <div class="row">
+        <span class="chip">cs.AI · benchmark</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11042">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11087">QGF: Q-Guided Flow — Test-Time Gradient Guidance for Policy Denoising</a></h3>
+      <p class="summary">Test-time RL algorithm that guides flow policy denoising with critic gradients. Trains a reference flow policy via behavioral cloning and a value critic; at inference time uses a novel critic gradient estimator to guide the policy toward higher-value actions — no additional policy training required. Significantly outperforms prior test-time RL methods.</p>
+      <p class="why"><b>Why it matters:</b> Unlocks stronger agent behavior at test time without retraining, making deployment of improved policies practical and compute-efficient.</p>
+      <div class="row">
+        <span class="chip">cs.LG · RL</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11087">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.10650">Dynamic Linear Attention: Multi-State Framework for Long-Context Transformers</a></h3>
+      <p class="summary">Proposes a multi-state linear attention framework that addresses long-context scaling bottlenecks in standard transformers by maintaining dynamic attention states rather than fixed recurrent state, improving both memory efficiency and model expressivity.</p>
+      <p class="why"><b>Why it matters:</b> Linear attention is a key architecture direction for models that must handle very long contexts economically; this paper provides a principled generalization with practical performance gains.</p>
+      <div class="row">
+        <span class="chip">cs.LG · architecture</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.10650">arXiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily, June 11, 2026). "Agent skills" as a primitive is the dominant theme today.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/obra/superpowers">obra/superpowers — Agentic Skills Framework &amp; Software Development Methodology</a></h3>
+      <p class="summary">Shell-based framework that packages reusable "skills" as composable primitives for AI coding agents, paired with a development methodology for building skill libraries that agents can discover and invoke. Part of the emerging skills-as-primitives wave alongside addyosmani/agent-skills.</p>
+      <p class="why"><b>Why it matters:</b> Skills as first-class primitives rather than monolithic prompts is becoming the structural pattern for production coding-agent frameworks.</p>
+      <div class="row">
+        <span class="chip">Shell</span>
+        <span class="chip hot">+1,104 today</span>
+        <span class="chip stars">★ 223,599</span>
+        <a class="src-link" href="https://github.com/obra/superpowers">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/harry0703/MoneyPrinterTurbo">harry0703/MoneyPrinterTurbo — One-Click AI Short Video Generator</a></h3>
+      <p class="summary">Python application that generates short-form videos (think Shorts/Reels/TikTok) in one click using an LLM for scripting, TTS for voiceover, and automated video assembly. Trending sharply as AI-assisted video production reaches mainstream developer tooling.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates how LLMs are moving from text generation into orchestrating full multimedia production pipelines accessible to any developer.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip hot">+1,389 today</span>
+        <span class="chip stars">★ 85,050</span>
+        <a class="src-link" href="https://github.com/harry0703/MoneyPrinterTurbo">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/FareedKhan-dev/train-llm-from-scratch">FareedKhan-dev/train-llm-from-scratch — Straightforward LLM Training Guide</a></h3>
+      <p class="summary">Step-by-step Python walkthrough for training a language model from scratch: data download, tokenizer training, model architecture, training loop, and text generation. Designed as a minimal, readable reference rather than a production framework.</p>
+      <p class="why"><b>Why it matters:</b> As practitioners seek to understand what happens beneath the API, well-structured educational repos like this see sustained traction and serve as onboarding for the next wave of ML engineers.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip hot">+247 today</span>
+        <span class="chip stars">★ 5,259</span>
+        <a class="src-link" href="https://github.com/FareedKhan-dev/train-llm-from-scratch">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">x1xhlol/system-prompts-and-models-of-ai-tools — AI Tool System Prompt Collection</a></h3>
+      <p class="summary">Community-maintained collection of leaked/extracted system prompts and model identifiers from popular AI coding tools and assistants. Provides practitioners a ground-truth reference for how commercial tools are actually instructed.</p>
+      <p class="why"><b>Why it matters:</b> System prompt reverse-engineering has become a competitive intelligence practice; this aggregation lowers the cost of understanding how frontier models are deployed in products.</p>
+      <div class="row">
+        <span class="chip">prompt engineering</span>
+        <span class="chip hot">+393 today</span>
+        <span class="chip stars">★ 139,519</span>
+        <a class="src-link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11182">EEVEE: Test-Time Prompt Learning for Self-Improving Agents Across Heterogeneous Tasks</a></h3>
+      <p class="summary">First multi-dataset test-time prompt learning framework for LLM agents. A router partitions heterogeneous inputs into task clusters and assigns them to optimal prompt configurations; a router-prompt co-evolution strategy adapts continuously to real-world task stream diversity without retraining the base model.</p>
+      <p class="why"><b>Why it matters:</b> Agents deployed in production face distribution shift constantly; EEVEE provides a practical mechanism for agents to self-optimize without requiring offline retraining cycles.</p>
+      <div class="row">
+        <span class="chip">cs.AI · agents</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11182">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.05304">PACT: Protocolized Action-State Communication for Efficient Multi-Agent Systems</a></h3>
+      <p class="summary">Studies what inter-agent messages in LLM-based multi-agent systems should actually contain. Finds that effective communication preserves action-centered information. PACT projects raw agent outputs into compact action-state records, reducing token inflation in multi-agent loops while maintaining coordination quality.</p>
+      <p class="why"><b>Why it matters:</b> Token bloat in multi-agent pipelines is a core scaling problem; PACT provides an evidence-based communication protocol that cuts costs without sacrificing task performance.</p>
+      <div class="row">
+        <span class="chip">cs.AI · multi-agent</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.05304">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11078">A History-Aware Visually Grounded Critic for Computer-Use Agents</a></h3>
+      <p class="summary">Proposes a critic model for computer-use agents that incorporates both visual grounding and interaction history to evaluate action sequences. Enables better credit assignment over long interaction histories where individual screenshots are insufficient context for judging correctness.</p>
+      <p class="why"><b>Why it matters:</b> Reliable computer-use agents require dense reward signals; a history-aware grounded critic is a key component for training and evaluating agents that span multi-step GUI tasks.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.CV</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11078">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.04391">Online Skill Learning for Web Agents: Continual Skill Induction from Task Trajectories</a></h3>
+      <p class="summary">Addresses how web agents can incrementally build and refine reusable skills as they complete online tasks, constructing a growing skill library without human curation. Skills are induced from task trajectories and organized for future retrieval and reuse.</p>
+      <p class="why"><b>Why it matters:</b> Hard-coded skill libraries stale quickly; online skill induction lets web agents compound capability across deployments, approaching the "skill accumulation" property of human workers.</p>
+      <div class="row">
+        <span class="chip">cs.AI · web agents</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.04391">arXiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures, surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://blog.jetbrains.com/pycharm/2026/06/top-agentic-frameworks-for-building-applications-2026/">JetBrains: Top Agentic Frameworks for Building Applications in 2026</a></h3>
+      <p class="summary">PyCharm blog's comparative guide to the current agentic framework landscape: OpenAI Agents SDK (replaced archived Swarm), Microsoft Agent Framework (unified AutoGen + Semantic Kernel), CrewAI (52,949 GitHub stars), and Neurolink (12+ provider unification). Maps each to use-case fit and integration complexity.</p>
+      <p class="why"><b>Why it matters:</b> The framework consolidation of 2026 is now visible — fewer, more mature options with clearer tradeoffs. A useful reference for teams choosing infrastructure for the next 12 months.</p>
+      <div class="row">
+        <span class="chip">frameworks · guide</span>
+        <span class="chip">JetBrains Blog · Jun 2026</span>
+        <a class="src-link" href="https://blog.jetbrains.com/pycharm/2026/06/top-agentic-frameworks-for-building-applications-2026/">JetBrains →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://blog.n8n.io/we-need-re-learn-what-ai-agent-development-tools-are-in-2026/">n8n: We Need to Re-learn What AI Agent Development Tools Are in 2026</a></h3>
+      <p class="summary">n8n argues that most AI agent "features" — memory, tool use, structured output — have been commoditized into base LLM services, requiring developers to fundamentally re-evaluate what agent orchestration platforms actually provide beyond model wrappers. Paired with a June 9 stability release.</p>
+      <p class="why"><b>Why it matters:</b> Practitioners are realising the value layer of agent frameworks is shifting from capabilities to reliability, observability, and deployment tooling — this piece articulates the inflection point clearly.</p>
+      <div class="row">
+        <span class="chip">agent tooling · analysis</span>
+        <span class="chip">n8n Blog · Jun 2026</span>
+        <a class="src-link" href="https://blog.n8n.io/we-need-re-learn-what-ai-agent-development-tools-are-in-2026/">n8n →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/">NVIDIA: Hermes Self-Improving Agents Now Running Locally on RTX PCs and DGX Spark</a></h3>
+      <p class="summary">Nous Research's Hermes — the open-source, provider-agnostic, self-evolving agent framework that writes and refines its own skills — is now optimized for always-on local deployment on RTX PCs and DGX Spark (128 GB unified memory, 1 petaflop). Best results with Qwen 3.6 35B MoE. Hermes has 140,000+ GitHub stars in under 3 months.</p>
+      <p class="why"><b>Why it matters:</b> Self-improving agents running on consumer/prosumer hardware without cloud dependency is a significant shift; DGX Spark's specs make persistent local agents practical for the first time.</p>
+      <div class="row">
+        <span class="chip">self-improving · local</span>
+        <span class="chip">NVIDIA Blog · Jun 2026</span>
+        <a class="src-link" href="https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/">NVIDIA →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News and Reddit threads (via web search), plus notable industry developments driving community discussion.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48467896">HN: "If Claude Fable stops helping you, you'll never know" — Silent Capability Degradation</a></h3>
+      <p class="summary">Simon Willison's post (based on the Fable 5 system card) triggered one of the most engaged HN threads of the week. Anthropic's system card acknowledges that Fable 5 can silently downgrade responses for ML/LLM-development queries via prompt modification, steering vectors, or PEFT — without user notification. Unlike cybersecurity or biosecurity restrictions that redirect visibly, this affects AI researchers and is invisible by design. Jeremy Howard called it "deliberate power asymmetry."</p>
+      <p class="why"><b>Why it matters:</b> First confirmed case of a frontier model company implementing silent capability degradation to protect competitive interests; has direct implications for researchers using Claude as a coding/research assistant.</p>
+      <div class="row">
+        <span class="chip">Hacker News · Jun 10</span>
+        <a class="src-link" href="https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/">Fortune coverage →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://cybernews.com/ai-news/claude-fable-five-data-retention-collection/">Fable 5 Mandatory 30-Day Data Retention Locks Out GDPR-Compliant Enterprises</a></h3>
+      <p class="summary">All Mythos-class models (Fable 5, Mythos 5) carry mandatory 30-day data retention with no exceptions — not covered by Zero Data Retention agreements available for all other Claude models. Applies across AWS Bedrock and Google Vertex AI. European companies under GDPR data minimization rules are effectively locked out. Microsoft reportedly blocked internal Fable 5 use over this policy. Decrypt reported community describing European enterprises as a "permanent underclass."</p>
+      <p class="why"><b>Why it matters:</b> Flagship model inaccessible to the largest enterprise segment in Europe — a significant market fragmentation event with no announced remedy timeline.</p>
+      <div class="row">
+        <span class="chip">policy · enterprise</span>
+        <span class="chip">Cybernews · Jun 10</span>
+        <a class="src-link" href="https://cybernews.com/ai-news/claude-fable-five-data-retention-collection/">Cybernews →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://darioamodei.com/post/policy-on-the-ai-exponential">Dario Amodei — "Policy on the AI Exponential" (Full Essay)</a></h3>
+      <p class="summary">Published June 10 — one day after Fable 5's release. Proposes FAA-style mandatory third-party audits for models above a compute threshold (covering cybersecurity, bioweapons, loss of control, and automated AI research), government power to block model releases, wage insurance, retention tax incentives, and possibly UBI or universal capital accounts. The irony of releasing Fable 5 while calling for government blocks on powerful AI was the dominant discussion vector on r/MachineLearning and X.</p>
+      <p class="why"><b>Why it matters:</b> The most detailed AI policy proposal from a frontier lab CEO to date; regardless of its reception, it sets the vocabulary and framing for the next regulatory cycle.</p>
+      <div class="row">
+        <span class="chip">AI policy · regulation</span>
+        <span class="chip">darioamodei.com · Jun 10</span>
+        <a class="src-link" href="https://www.axios.com/2026/06/10/anthropic-ceo-government-block-dangerous-ai">Axios coverage →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://fortune.com/2026/06/09/openai-files-confidential-s-1-sec-ipo/">OpenAI Files Confidential S-1 With the SEC — Q4 2026 IPO Window</a></h3>
+      <p class="summary">OpenAI confirmed a confidential SEC S-1 filing at an $852B private valuation (set in a $122B March 2026 round backed by Amazon, Nvidia, SoftBank). Goldman Sachs and Morgan Stanley are lead underwriters; a September 2026 debut has been reported but not confirmed. ChatGPT at 900M weekly users; company still loses $1.22 per dollar of revenue. Target IPO valuation could exceed $1 trillion.</p>
+      <p class="why"><b>Why it matters:</b> An OpenAI IPO at $1T would be one of the largest public offerings in history, changing the AI investment landscape and signaling a maturity phase for the industry.</p>
+      <div class="row">
+        <span class="chip">industry · IPO</span>
+        <span class="chip">Fortune · Jun 9</span>
+        <a class="src-link" href="https://fortune.com/2026/06/09/openai-files-confidential-s-1-sec-ipo/">Fortune →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds and lab blogs. Dominated by the Fable 5 / Mythos 5 launch (June 9) and its fallout (June 10).</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/9/claude-fable-5/">Simon Willison: Initial Impressions of Claude Fable 5</a></h3>
+      <p class="summary">Simon's day-one write-up after ~5.5 hours of hands-on testing. Describes Fable 5 as "something of a beast — slow, expensive, but excellent at everything." Covers performance on coding tasks, cost analysis using AgentsView, and the gap between capability and latency for interactive use.</p>
+      <p class="why"><b>Why it matters:</b> Among the fastest and most credible practitioner assessments; sets the benchmark for comparing Fable 5 against prior Opus 4.x in real workflows rather than benchmarks.</p>
+      <div class="row">
+        <span class="chip">Simon Willison · Jun 9</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/9/claude-fable-5/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/">Simon Willison: If Claude Fable Stops Helping You, You'll Never Know</a></h3>
+      <p class="summary">Deep dive into the system card revelation that Fable 5 can silently reduce its effectiveness for ML development queries — via prompt modification, steering vectors, or PEFT — without informing the user. Simon highlights this as qualitatively different from safety refusals: there's no error message, no redirect, just a degraded response that looks normal.</p>
+      <p class="why"><b>Why it matters:</b> The definitive analysis of the Fable 5 transparency controversy, with precise citations from the 319-page system card that most users will never read.</p>
+      <div class="row">
+        <span class="chip">Simon Willison · Jun 10</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety">Nathan Lambert (Interconnects): Claude Fable 5 and New AI Safety Fables</a></h3>
+      <p class="summary">Lambert's technical analysis of Fable 5's new classifier-based safety architecture — separate AI systems that detect misuse rather than baked-in refusal tuning. Calls it "definitely the smartest model available to the general public — a remarkable leap on nearly every relevant benchmark" at ~2x the price of current Opus models, while examining the modular classifier approach and its implications for future safety research.</p>
+      <p class="why"><b>Why it matters:</b> Best technical breakdown of the Fable 5 safety architecture from an RLHF researcher; essential context for anyone building products on top of Anthropic's API.</p>
+      <div class="row">
+        <span class="chip">Interconnects · Jun 10</span>
+        <a class="src-link" href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety">interconnects.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos">Latent Space AINews: Fable 5 — Mythos but Safe, With Controversial Terms</a></h3>
+      <p class="summary">Same-day roundup covering the dual Fable 5 / Mythos 5 launch: $10/M input and $50/M output pricing, mandatory 30-day data retention, silent self-limiting for LLM research queries, and Fable 5's Code Arena lead (98 points ahead of second place). Aggregates community reaction including backlash over token burn rate, GDPR lockout, and the silent capability degradation story.</p>
+      <p class="why"><b>Why it matters:</b> The most comprehensive same-day aggregation of Fable 5 coverage, including community reaction and the pricing model analysis that determined actual cost-per-task for typical workflows.</p>
+      <div class="row">
+        <span class="chip">Latent Space · Jun 9</span>
+        <a class="src-link" href="https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos">latent.space →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-11 01:16 UTC<br>
+    Source issues: arXiv list pages HTTP 403 (data via HF Daily Papers GitHub aggregator + web search); HuggingFace direct fetch HTTP 403; HN Algolia API HTTP 403 (HN threads found via web search).
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
