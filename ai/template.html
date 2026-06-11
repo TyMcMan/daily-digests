@@ -90,6 +90,7 @@
     <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">{{COUNT_AGENTS}}</span></button>
     <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">{{COUNT_WORKFLOWS}}</span></button>
     <button class="tab" data-tab="discussion">💬 Discussion <span class="count">{{COUNT_DISCUSSION}}</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">{{COUNT_REDDIT}}</span></button>
     <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">{{COUNT_BLOGS}}</span></button>
   </nav>
 
@@ -119,8 +120,14 @@
 
   <!-- DISCUSSION -->
   <div class="panel" data-panel="discussion">
-    <p class="section-note">Hacker News (Algolia API + front page) and notable Reddit threads (via web search, since Reddit blocks direct fetch).</p>
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
 {{ITEMS_DISCUSSION}}
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+{{ITEMS_REDDIT}}
   </div>
 
   <!-- BLOGS -->
