@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-12</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Friday, June 12, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 16 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">DiffusionGemma: Google Releases 26B MoE Text Diffusion Model — Up to 4× Faster Generation</a>
+        <span class="why">Achieves 1,000+ tokens/second on H100 by generating blocks of tokens simultaneously instead of token-by-token; Apache 2.0, fits in 18 GB VRAM quantized. A paradigm shift from autoregressive toward parallel diffusion generation is now open to everyone. <span class="src">Google Blog · Jun 10</span></span>
+      </li>
+      <li>
+        <a href="https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/">Anthropic Walks Back Policy That Silently Throttled AI Researchers Using Claude</a>
+        <span class="why">Fable 5's system card buried a clause letting the model silently downgrade responses for frontier LLM development — unlike every other Claude restriction. After public outcry Anthropic reversed course: "We made the wrong tradeoff." First precedent for an undisclosed behavioral restriction in a frontier model being successfully challenged. <span class="src">Simon Willison · Jun 11</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.11926">Arbor: Toward Generalist Autonomous Research via Hypothesis-Tree Refinement</a>
+        <span class="why">Gives a research agent a benchmark + goal; it proposes hypotheses, edits code, runs real experiments, and grows a pruned tree of what worked — each branch informing the next. Generalizes across model training, harness engineering, and data synthesis. A step toward AI scientists that accumulate experimental wisdom rather than resetting each run. <span class="src">arXiv · Jun 11</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.11289">i1: First Fully-Open Recipe for a Frontier-Class Text-to-Image Model</a>
+        <span class="why">Princeton's 3B-parameter i1 matches leading closed T2I models on five benchmarks at 1024-resolution and is fully open: training code, data, and recipes. Until now, competitive T2I required proprietary stacks — i1 removes that barrier for researchers and fine-tuners. <span class="src">arXiv · Jun 11</span></span>
+      </li>
+      <li>
+        <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic Engineering: Effective Context Engineering for AI Agents</a>
+        <span class="why">Codifies context engineering as the set of strategies for curating and maintaining the optimal token state across multi-turn agent inference — covering system prompts, tools, MCP, memory, and message history. The canonical practitioner reference for anyone building production agents in 2026. <span class="src">Anthropic Engineering · Jun 2026</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV) and Hugging Face Daily Papers for June 11, 2026. Direct fetches blocked (403); papers sourced via search and the Daily-HuggingFace-AI-Papers GitHub tracker.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11926">Toward Generalist Autonomous Research via Hypothesis-Tree Refinement (Arbor)</a></h3>
+      <p class="summary">Arbor is a generalist autonomous research agent that converts a long-horizon objective into an iterative hypothesis tree: each idea becomes a branch, pruned on failure or harvested on success, with insights propagating forward so later hypotheses start smarter. Demonstrated across model training, harness engineering, and data synthesis tasks.</p>
+      <p class="why"><b>Why it matters:</b> Moves beyond one-shot AI-scientist attempts toward an agent that accumulates experimental history — directly applicable to teams running automated ML research loops or eval-driven harness optimization.</p>
+      <div class="row">
+        <span class="chip">cs.AI · agents</span>
+        <span class="chip">HF Daily Papers · Jun 11</span>
+        <span class="chip stars">⭐ 14 upvotes</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11926">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11289">i1: A Simple and Fully Open Recipe for Strong Text-to-Image Models</a></h3>
+      <p class="summary">Princeton's i1-3B achieves competitive results with leading closed text-to-image models at 1024-resolution across GenEval, DPG-Bench, PRISM, CVTG-2K, and LongText-Bench. All training code, data pipelines, and recipes are fully open-sourced under permissive licensing.</p>
+      <p class="why"><b>Why it matters:</b> First reproducible, frontier-competitive T2I recipe in the open; lowers the barrier for researchers and fine-tuners who previously had no path to studying or building on a top-tier image generation model end-to-end.</p>
+      <div class="row">
+        <span class="chip">cs.CV · generative</span>
+        <span class="chip">HF Daily Papers · Jun 11</span>
+        <span class="chip stars">⭐ 14 upvotes</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11289">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.10728">DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch</a></h3>
+      <p class="summary">4,818-instance dataset where each example requires generating a complete software repository from documentation, constructed via a "divide and conquer" agentic workflow with difficulty-aware trajectory filtering. Fine-tuning Qwen3-30B-A3B on this dataset raises its BeyondSWE-Doc2Repo score from 5.8% to 47.2%.</p>
+      <p class="why"><b>Why it matters:</b> SWE-bench-style bug-fix evaluation is nearly saturated; DeNovoSWE shifts the frontier to whole-repository creation — the long-horizon task that matters most for next-gen software engineering agents.</p>
+      <div class="row">
+        <span class="chip">cs.SE · code agents</span>
+        <span class="chip">HF Daily Papers · Jun 11</span>
+        <span class="chip stars">⭐ 9 upvotes</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.10728">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11722">ICA Lens: Interpreting Language Models Without Training Another Dictionary</a></h3>
+      <p class="summary">Applies Independent Component Analysis (ICA) to LLM residual-stream activations to recover human-interpretable, high-non-Gaussianity features. Matches or exceeds sparse autoencoders on sparse probing and targeted perturbation benchmarks — without any additional training on top of the base model.</p>
+      <p class="why"><b>Why it matters:</b> Training sparse autoencoders for mechanistic interpretability is expensive and brittle per-model; ICA Lens is a training-free drop-in that works immediately on any frozen model, making interpretability research accessible at much lower cost.</p>
+      <div class="row">
+        <span class="chip">cs.LG · interpretability</span>
+        <span class="chip">HF Daily Papers · Jun 11</span>
+        <span class="chip stars">⭐ 14 upvotes</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11722">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11324">Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models</a></h3>
+      <p class="summary">Builds a unified embodied foundation model on Qwen3-VL-8B-Instruct that integrates comprehensive embodied spatial reasoning; extends it with lightweight action-data fine-tuning to produce Embodied-R1.5-VLA, a vision-language-action model outputting continuous robot control signals.</p>
+      <p class="why"><b>Why it matters:</b> Bridges the gap between general VLMs and deployable robot controllers within a single architecture — a key milestone for teams building real-world robotics where reasoning and action must be tightly coupled.</p>
+      <div class="row">
+        <span class="chip">cs.RO · embodied AI</span>
+        <span class="chip">HF Daily Papers · Jun 11</span>
+        <span class="chip stars">⭐ 3 upvotes</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11324">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.12191">Agentic Environment Engineering for Large Language Models: A Survey</a></h3>
+      <p class="summary">Comprehensive survey cataloguing the design space for LLM agent environments: environment modeling, synthesis, evaluation, and application. Maps the landscape of environment types — from sandboxed code execution to web, GUI, embodied, and multi-agent environments — with coverage of recent benchmarks and construction approaches.</p>
+      <p class="why"><b>Why it matters:</b> As agentic LLM deployments scale, environment design becomes a first-class bottleneck alongside model quality; this survey is the immediate reference for teams architecting agent training pipelines and evaluation harnesses.</p>
+      <div class="row">
+        <span class="chip">cs.AI · survey</span>
+        <span class="chip">HF Daily Papers · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.12191">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) — AI/ML repos. Agent-skills ecosystem dominates today's chart.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/NVIDIA/SkillSpector">NVIDIA/SkillSpector — Security Scanner for AI Agent Skills</a></h3>
+      <p class="summary">Static security scanner for AI agent skill packages: detects 64 vulnerability patterns across 16 categories including prompt injection, data exfiltration, privilege escalation, MCP tool poisoning, and supply-chain risks. Scans Git repos, URLs, zip files, or local directories; outputs SARIF for CI integration. Grounded in OWASP Top 10 for LLM Apps, OWASP Agentic Top 10 2026, and MITRE ATLAS.</p>
+      <p class="why"><b>Why it matters:</b> Research shows 26.1% of real-world agent skills contain vulnerabilities; as skill marketplaces proliferate NVIDIA is first to ship a rigorous, open-source supply-chain scanner for this attack surface.</p>
+      <div class="row">
+        <span class="chip">agent security</span>
+        <span class="chip hot">🔥 +319 today</span>
+        <span class="chip stars">⭐ 2,667</span>
+        <a class="src-link" href="https://github.com/NVIDIA/SkillSpector">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/msitarzewski/agency-agents">msitarzewski/agency-agents — Complete AI Agency: 112 Specialized Expert Personas</a></h3>
+      <p class="summary">A growing collection of meticulously crafted AI agent personas for software development and beyond — each with domain expertise, communication style, defined deliverables, and production-tested workflows. Ships conversion scripts to deploy across Claude Code, GitHub Copilot, Antigravity IDE, Gemini CLI, and OpenCode.</p>
+      <p class="why"><b>Why it matters:</b> The shift from monolithic system prompts to a library of reusable, personality-driven agent personas is a practical pattern for teams managing multiple AI workflows; 112 ready-made specialists are a significant head start.</p>
+      <div class="row">
+        <span class="chip">agent personas · multi-agent</span>
+        <span class="chip hot">🔥 +1,599 today</span>
+        <span class="chip stars">⭐ 111,582</span>
+        <a class="src-link" href="https://github.com/msitarzewski/agency-agents">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/karpathy/autoresearch">karpathy/autoresearch — AI Agents Running ML Research Overnight on a Single GPU</a></h3>
+      <p class="summary">Autonomous ML research loop: give the agent a small training setup, it modifies code, trains for exactly 5 minutes, checks if the metric improved, keeps or discards, and repeats — ~12 experiments per hour while you sleep. No distributed training, no complex config — just PyTorch, one GPU, one metric.</p>
+      <p class="why"><b>Why it matters:</b> Still trending strongly (+208 today) after peaking at 66K+ stars; Shopify validated the pattern internally with a 19% model-quality gain from 37 overnight experiments. Replicable self-improvement loop for any practitioner with a spare GPU.</p>
+      <div class="row">
+        <span class="chip">agentic research · AutoML</span>
+        <span class="chip hot">🔥 +208 today</span>
+        <span class="chip stars">⭐ 86,208</span>
+        <a class="src-link" href="https://github.com/karpathy/autoresearch">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic Engineering: Effective Context Engineering for AI Agents</a></h3>
+      <p class="summary">Defines context engineering as the discipline of curating and maintaining the optimal token state during multi-turn agent inference — covering system prompts, tool definitions, MCP servers, external retrieval, and message history management. Argues it is the natural successor to prompt engineering for anyone building production agents with Claude or any frontier model.</p>
+      <p class="why"><b>Why it matters:</b> The canonical framework for thinking about context as a finite, manageable resource rather than something that just grows; directly applicable to any team facing context overflow, cost, or coherence issues in their agent pipelines.</p>
+      <div class="row">
+        <span class="chip">context engineering</span>
+        <span class="chip">Anthropic Engineering</span>
+        <a class="src-link" href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Read →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic Engineering: Effective Harnesses for Long-Running Agents</a></h3>
+      <p class="summary">Addresses the open problem of agents maintaining coherent progress across multiple context windows over hours or days. Introduces harness patterns inspired by human engineering workflows — including state-file management alongside git history, explicit context-reset checkpoints, and progress continuity strategies — validated against multi-hour autonomous engineering tasks.</p>
+      <p class="why"><b>Why it matters:</b> Context exhaustion mid-task is the primary failure mode of long-running agentic systems; this provides a battle-tested pattern library from the team that operates Claude at scale on these exact workloads.</p>
+      <div class="row">
+        <span class="chip">harness design · long-context</span>
+        <span class="chip">Anthropic Engineering</span>
+        <a class="src-link" href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Read →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://karpathy.bearblog.dev/sequoia-ascent-2026/">Andrej Karpathy at Sequoia AI Ascent 2026: From Vibe Coding to Agentic Engineering</a></h3>
+      <p class="summary">Karpathy's fireside chat with Sequoia's Stephanie Zhan at the April 2026 Ascent event. Key themes: the practitioner skill is now "judgment + intent specification + task decomposition," not coding; Karpathy describes a personal shift from 80% manual coding to 80% agent delegation; distinguishes "Software 3.0" (LLM-orchestrated workflows) from prior paradigms; introduces the agentic wiki pattern for persistent knowledge accumulation.</p>
+      <p class="why"><b>Why it matters:</b> A canonical mindset-shift piece for mid-2026: reframes what it means to be a senior engineer in an agentic world and gives practitioners concrete vocabulary for discussing the shift with peers and leadership.</p>
+      <div class="row">
+        <span class="chip">practitioner · agentic engineering</span>
+        <span class="chip">Karpathy · Apr 2026</span>
+        <a class="src-link" href="https://karpathy.bearblog.dev/sequoia-ascent-2026/">Read →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Anthropic Engineering: Harness Design for Long-Running Application Development</a></h3>
+      <p class="summary">Deep-dive into the specific harness patterns Anthropic's team uses to push Claude through complete frontend design and full-application-building tasks without human intervention. Covers context-reset strategies, memory management via compaction vs. explicit resets, multi-agent role separation (orchestrator vs. executor), and lessons learned from Claude Sonnet 4.5's context anxiety under extended autonomous operation.</p>
+      <p class="why"><b>Why it matters:</b> Practical, production-tested patterns for anyone trying to run LLM-based development pipelines end-to-end — directly applicable to teams building AI coding assistants, code-generation workflows, or autonomous software engineering agents.</p>
+      <div class="row">
+        <span class="chip">harness · autonomous coding</span>
+        <span class="chip">Anthropic Engineering</span>
+        <a class="src-link" href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Read →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — HN Algolia API (hn.algolia.com) is blocked by this environment's network egress policy; no threads could be retrieved this run.</p>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — Reddit direct fetch blocked (403); web search via <code>site:reddit.com/r/...</code> returned no indexed threads for this window. This is expected on many days.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">DiffusionGemma: 4× Faster Text Generation via Open Diffusion Language Model</a></h3>
+      <p class="summary">Google DeepMind releases DiffusionGemma, a 26B Mixture-of-Experts model (3.8B active parameters) built on the Gemma 4-26B-A4B backbone that generates entire blocks of tokens simultaneously via text diffusion — bypassing autoregressive token-by-token decoding. Achieves 1,000+ tokens/second on H100, 700+ on RTX 5090, fits in 18 GB VRAM quantized. Apache 2.0.</p>
+      <p class="why"><b>Why it matters:</b> DiffusionGemma is the strongest open demonstration yet that text diffusion can match autoregressive quality at a fraction of the latency — a paradigm shift with major implications for local inference, real-time applications, and the long-term architecture of LLM serving stacks.</p>
+      <div class="row">
+        <span class="chip">open model · inference</span>
+        <span class="chip">Google DeepMind · Jun 10</span>
+        <a class="src-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">Blog →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/">Simon Willison: Anthropic Walks Back Policy That Could Have "Sabotaged" AI Researchers</a></h3>
+      <p class="summary">Covering Anthropic's reversal of the undisclosed Fable 5 behavior: the model would silently "limit effectiveness" of requests related to frontier LLM development without notifying users — a restriction with no visibility unlike all other Claude safeguards. Anthropic acknowledged the error: "We made the wrong tradeoff and we apologize." Simon frames this as a precedent-setting moment for model transparency expectations.</p>
+      <p class="why"><b>Why it matters:</b> Establishes that undisclosed behavioral restrictions in frontier models are a community-actionable norm violation — and demonstrates that public pressure can reverse them. Critical reading for anyone building on top of commercial LLM APIs.</p>
+      <div class="row">
+        <span class="chip">policy · transparency</span>
+        <span class="chip">Simon Willison · Jun 11</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/">Read →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/10/datasette-agent/">Simon Willison: Release — datasette-agent 0.2a0</a></h3>
+      <p class="summary">Simon announces an alpha release of datasette-agent, a plugin that brings Claude-powered AI agent capabilities directly into Datasette — enabling natural-language queries, automated data exploration, and agentic workflows against local SQLite databases without leaving the Datasette interface.</p>
+      <p class="why"><b>Why it matters:</b> A practical example of embedding LLM agents into existing data tools rather than building net-new interfaces; the pattern of "agent as a plugin" is increasingly the right abstraction for adding AI to established workflows.</p>
+      <div class="row">
+        <span class="chip">open-source · data tooling</span>
+        <span class="chip">Simon Willison · Jun 10</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/10/datasette-agent/">Read →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-12 01:05 UTC<br>
+    Source issues: arXiv direct fetch 403 (papers sourced via web search + Daily-HuggingFace-AI-Papers tracker); HuggingFace direct fetch 403; HN Algolia API blocked by egress policy; Reddit 403 + zero indexed results from web search.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
