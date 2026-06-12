@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-12</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, June 12, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Ayar Labs joins NVIDIA NVLink Fusion — TeraPHY CPO now part of rack-scale AI stack</a></li>
+      <li><a href="#compute">Japan's QST demonstrates light-driven magnetic memory 1,000&times; faster than electrical switching</a></li>
+      <li><a href="#compute">TrendForce: EML + CW-DFB laser monthly capacity hits 50.7 M units as hyperscalers lock in supply</a></li>
+      <li><a href="#research">Monash University first integrated valleytronic system on a chip — new photonic logic degree of freedom</a></li>
+      <li><a href="#funding">Credo acquires DustPhotonics for up to $1.3 B — SiPh PIC IP portfolios now attracting nine-figure valuations</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://ayarlabs.com/news/ayar-labs-joins-nvidia-nvlink-fusion-ecosystem-to-bring-co-packaged-optics-to-rack-scale-ai-infrastructure/">Ayar Labs Joins NVIDIA NVLink Fusion Ecosystem with TeraPHY Co-Packaged Optics</a></h3>
+      <p>Ayar Labs' TeraPHY&#8482; in-package optical I/O chiplet is now optically and electrically qualified as part of NVIDIA's NVLink Fusion open-ecosystem program, enabling system builders to construct fully optically connected AI racks around NVIDIA's platform. The announcement follows Ayar's $500 M Series E ($3.75 B valuation) and a rack-scale CPO reference design shown at OFC 2026 with Wiwynn. <em>Why it matters:</em> Two major CPO vendors (Lightmatter and Ayar) are now co-certified in NVIDIA's ecosystem within days of each other, cementing 2027&#x2013;2028 as the CPO production ramp window and creating a de-facto standard interconnect stack for AI datacenter builders.</p>
+      <div class="meta">Ayar Labs &middot; 2026-06-02</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.semiconductor-today.com/news_items/2026/jun/trendforce-040626.shtml">TrendForce: Combined EML + CW-DFB Laser Monthly Capacity Hits 50.7 M Units in 2026</a></h3>
+      <p>Suppliers have doubled combined EML and CW-DFB laser diode monthly production capacity to ~50.7 M units in 2026, driven by hyperscalers (NVIDIA, Google, Meta) locking in multi-year supply. Broadcom, Lumentum, and Sumitomo Electric hold ~55% of market capacity; Lumentum demonstrated 400 Gb/s-per-lane EML at OFC 2026 targeting 3.2 Tb/s module architectures. <em>Why it matters:</em> The laser supply chain is being restructured at scale for CPO — but NVIDIA strategic lock-in means late entrants to CPO face potential sourcing bottlenecks through 2027. Vertical integration of the light source is increasingly a competitive moat.</p>
+      <div class="meta">Semiconductor Today / TrendForce &middot; 2026-06-04</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.miragenews.com/light-driven-memory-may-cut-ai-energy-use-1690654/">QST Japan: Light-Driven Magnetic Memory Switches 1,000&times; Faster Than Electrical Methods</a></h3>
+      <p>A team led by Japan's National Institutes for Quantum Science and Technology (QST) has published in Applied Physics Letters a new magnetic memory material where laser light reverses magnetic states roughly 1,000 times faster than conventional electrically driven switching while substantially reducing heat and energy loss. The researchers note it may eventually serve as a photoelectric conversion interface linking optical interconnects to electronic circuits on the same chip platform. <em>Why it matters:</em> For photonic compute architects: this points toward on-chip optical memory elements that match optical interconnect speeds, removing one of the key bottlenecks at the photonic&#x2013;electronic boundary.</p>
+      <div class="meta">Mirage News / Applied Physics Letters &middot; 2026-06-08</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://lightmatter.co/press-release/lightmatter-unveils-guide-dr-industry-first-liquid-cooled-laser-nic-that-quadruples-rack-density/">Lightmatter Guide DR: Industry-First Liquid-Cooled Laser NIC Delivers 51.2 Tb/s per Card<span class="badge">catch-up</span></a></h3>
+      <p>Lightmatter's Guide DR is a Laser Network Interface Card (LNIC) in OCP NIC 3.0 form factor driving up to 51.2 Tb/s of aggregate CPO/NPO scale-up bandwidth per card, and up to 204.8 Tb/s per 1 RU switch tray using four modules — quadrupling conventional external-laser SFP rack density via liquid cooling. Sampling begins Q4 2026. <em>Why it matters:</em> The faceplate-laser bottleneck is being solved at the system level; how and where the light source is packaged and cooled matters as much as the PIC device performance, setting constraints on every co-packaged photonics design roadmap.</p>
+      <div class="meta">Lightmatter &middot; 2026-05-21</div>
+    </article>
+
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today — all tracked PIC/EDA sources (Flexcompute agentic design loop, Keysight GF PDK, gdsfactory) were covered in the previous digest.</p>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://www.sciencedaily.com/releases/2026/06/260601025343.htm">Monash University: First Fully Integrated Valleytronic System on a Chip</a></h3>
+      <p>Researchers at Monash University and international collaborators have demonstrated the first on-chip system that generates, steers, and reads light-based information using the "valley" quantum degree of freedom of atomically thin materials integrated with nanoscale photonic structures — all on a single device. The system operates at room temperature and was published in Nature Photonics. <em>Why it matters:</em> Valleytronics encodes information in a quantum property beyond standard polarization or intensity, opening a potential new degree of freedom for photonic logic. Room-temperature operation is the key enabling milestone for practical integration with conventional PIC stacks.</p>
+      <div class="meta">ScienceDaily / Nature Photonics &middot; 2026-06-01</div>
+    </article>
+
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/04/yaqumo-nkt-photonics-and-hamamatsu-photonics-sign-quantum-photonics-agreement/">Yaqumo, NKT Photonics &amp; Hamamatsu Photonics Form Quantum Photonics Alliance</a></h3>
+      <p>European quantum hardware startup Yaqumo has signed an alliance agreement with NKT Photonics (Denmark, fiber lasers) and Hamamatsu Photonics (Japan, photodetectors) to industrialize cold-atom quantum core components. The collaboration targets standardized, multi-functional integrated optical engine modules combining NKT's high-stability fiber laser technology with Hamamatsu's detection capabilities and Yaqumo's hardware-software co-design. <em>Why it matters:</em> Signals convergence between EU photonics component manufacturers and quantum-hardware startups on shared module standards — the same integration pattern (laser + detector + PIC) relevant to photonic compute.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-04</div>
+    </article>
+
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://siliconangle.com/2026/04/14/credo-acquire-israeli-silicon-photonics-startup-dustphotonics-1-3-billion/">Credo Acquires DustPhotonics for Up to $1.3 B — Silicon Photonics PIC IP Valued at Nine Figures<span class="badge">catch-up</span></a></h3>
+      <p>Credo Technology announced the acquisition of Israeli silicon photonics startup DustPhotonics, which holds a SiPh PIC portfolio spanning 400G/800G/1.6T optical transceivers with a 3.2T roadmap, for up to $1.3 billion (expected close Q2 2026). This is one of the largest SiPh-focused acquisitions on record. <em>Why it matters:</em> PIC IP portfolios targeting high-speed datacenter transceivers are now attracting billion-dollar valuations — a strong signal to integrated-photonics founders and investors about where the market sees durable value in silicon photonics IP.</p>
+      <div class="meta">SiliconANGLE &middot; 2026-04-14</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260428377852/en/OpenLight-Secures-$50-Million-in-Series-A-1-Funding-to-Accelerate-Global-Deployment-of-Next-Generation-Photonics">OpenLight Secures $50 M Series A-1 for Heterogeneous Silicon Photonics Platform<span class="badge">catch-up</span></a></h3>
+      <p>OpenLight closed an oversubscribed $50 M Series A-1 round led by Matter Venture Partners, bringing total funding to $84 M. The company's heterogeneous SiPh platform targets AI infrastructure, automotive LiDAR, medical imaging, and quantum sensing applications. <em>Why it matters:</em> Continued Series A-range capital flow into heterogeneous silicon photonics platforms confirms investor appetite for companies bridging the PIC manufacturing platform gap between Si and III-V materials — directly comparable to Akhetonics' addressable market.</p>
+      <div class="meta">BusinessWire &middot; 2026-04-28</div>
+    </article>
+
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+
+</main>
+<footer>
+  <div>Source issues: optics.org direct fetch 403 (stories surfaced via search); Nature Photonics RSS 403 (items via search); EPIC news page 403; Reddit r/Optics RSS 403 + web search returned no indexed results (not assessed); Cignal AI press releases not crawlable; PIC/EDA section empty — Flexcompute, Keysight GF PDK, and gdsfactory already in exclusion set from prior digest.</div>
+  <div>7 items &middot; generated 2026-06-12 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
