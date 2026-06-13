@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-13</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Saturday, June 13, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://thenextweb.com/news/g7-ai-summit-altman-amodei-hassabis">AI Rivals Altman, Amodei &amp; Hassabis All Heading to G7 Summit in France</a>
+        <span class="why">Altman (OpenAI), Amodei (Anthropic), and Hassabis (DeepMind) will attend the G7 in Évian-les-Bains June 15–17 — the first time all three sit with heads of state to negotiate AI governance directly. Voluntary commitments on youth safety and biosecurity are on the table, coinciding with both Anthropic and OpenAI filing confidential S-1s with the SEC. <span class="src">TNW · Jun 12</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.11470">The Periodic Table of LLM Reasoning: 300-Paper Structured Survey</a>
+        <span class="why">Introduces a periodic-table taxonomy mapping every major LLM reasoning paradigm — CoT, multi-hop, math, code, RL-based, tool-augmented, agentic — against failure modes. The most comprehensive single reference yet for builders trying to pick a reasoning strategy and understand where it will break. <span class="src">arXiv · Jun 12</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/apple/container">apple/container 1.0.0 — Linux Containers as Lightweight VMs on macOS</a>
+        <span class="why">Apple open-sourced its Swift-based OCI container runtime that runs each container in its own lightweight VM (Apple Silicon only). Sub-second startup, hardware isolation, zero idle memory — picked up +3,500 GitHub stars today and spawned the macOS Container Machines HN discussion. <span class="src">GitHub · Jun 9 release, trending Jun 13</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/LMCache/LMCache">LMCache — KV Cache Layer for 15× LLM Inference Throughput</a>
+        <span class="why">Turns the KV cache from a per-request throwaway into a persistent, shareable, cross-engine store. Evaluated at 15× throughput improvement on vLLM with long-context RAG and agentic workloads; now a dependency for Dynamo and the vLLM production stack. 8.6k stars and rapidly growing. <span class="src">GitHub · Jun 2026</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.10917">Role-Agent: Single LLM Bootstraps Itself as Both Agent and Environment</a>
+        <span class="why">Role-Agent lets one LLM simultaneously act as the agent and simulate the world (World-In-Agent), using mismatches between predicted and actual states as a process reward signal for training — no external environment required. Achieves co-evolution of agent policy and world model from scratch. <span class="src">arXiv · Jun 12</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">2</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.MA) — papers published June 12, 2026. Direct arXiv fetch blocked (403); papers sourced via web search and Hugging Face paper search.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11470">The Periodic Table of LLM Reasoning: A Structured Survey of Reasoning Paradigms, Methods, and Failure Modes</a></h3>
+      <p class="summary">Analyzes 300+ recent papers to build a structured taxonomy of LLM reasoning research. Covers Chain-of-Thought, multi-hop, mathematical, commonsense, visual/temporal, code, retrieval-augmented, tool-augmented/agentic, and RL-based reasoning — each mapped to its dominant failure modes.</p>
+      <p class="why"><b>Why it matters:</b> The only survey that organizes the entire reasoning landscape into a navigable reference and pairs each paradigm with its failure profile — essential reading before committing to a reasoning strategy in a production agent.</p>
+      <div class="row">
+        <span class="chip">cs.AI · survey</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11470">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.10917">Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution</a></h3>
+      <p class="summary">A single LLM simultaneously plays the agent (Actor) and simulates the world (World-In-Agent). Predicted post-action states are compared to actual states; the gap drives a process reward signal. The co-evolution of agent policy and environment model improves both without external environment rollouts.</p>
+      <p class="why"><b>Why it matters:</b> Removes dependency on expensive or unavailable external simulators for agent training; the dual-role self-play loop could bootstrap capable agents from minimal real interaction.</p>
+      <div class="row">
+        <span class="chip">cs.AI · agents</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.10917">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11521">Counterexample Guided Learning in the Large using Reasoning Agents</a></h3>
+      <p class="summary">A learner-LLM proposes candidate regular expressions from labeled strings; a verifier returns counterexamples exposing the gap between candidate and target languages. Novel counterexample-guided refinement strategies (regularization, symbolic clusters) close the gap iteratively without human intervention.</p>
+      <p class="why"><b>Why it matters:</b> Shows that LLM agents can participate in classical formal learning loops — counterexample-guided synthesis — opening a path to verifiably correct agentic behavior on structured specification tasks.</p>
+      <div class="row">
+        <span class="chip">cs.LG · formal methods</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11521">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11354">A Zero-Shot Multi-Agent Framework for Human-Building Interaction via Programmatic Reasoning</a></h3>
+      <p class="summary">A hierarchical multi-agent system for building analytics: a "Doorman" agent routes natural-language queries to specialized coding agents that emit executable Python scripts for arithmetic and data retrieval, decoupling understanding from computation. Zero-shot across unseen building systems.</p>
+      <p class="why"><b>Why it matters:</b> Practical multi-agent pattern — semantic routing + code generation specialist — that cleanly handles the precision/flexibility tradeoff in any domain where exact numeric computation matters.</p>
+      <div class="row">
+        <span class="chip">cs.MA · multi-agent</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11354">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.10307">Early-Token Confidence Predicts Reasoning Quality in Multi-Agent LLM Debate</a></h3>
+      <p class="summary">Studies whether intrinsic token-level log-probability signals can predict reasoning quality in multi-agent debate without reference answers. Finds that early-token confidence (first few generated tokens) consistently outperforms full-sequence statistics as a quality signal — the opening generation phase is most heterogeneous and informative.</p>
+      <p class="why"><b>Why it matters:</b> Gives a cheap, reference-free quality signal for open-ended agentic tasks — useful for routing, sampling strategies, and auto-eval in multi-agent systems where ground truth is unavailable.</p>
+      <div class="row">
+        <span class="chip">cs.CL · evaluation</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.10307">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents. apple/container dominates today with +3,500 stars in 24h.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/apple/container">apple/container — OCI-Compatible Linux Containers as Lightweight VMs on macOS</a></h3>
+      <p class="summary">Apple's Swift-based open-source runtime creates a dedicated lightweight virtual machine per container — hardware isolation between containers, sub-second startup, near-zero idle footprint. OCI-image compatible (Docker Hub, any registry). Apple Silicon only; v1.0.0 shipped June 9, 2026.</p>
+      <p class="why"><b>Why it matters:</b> macOS finally gets a native, WSL-equivalent Linux container story with true hardware isolation. Directly unblocks running Linux-native AI inference stacks and GPU-less agent sandboxes on Apple hardware.</p>
+      <div class="row">
+        <span class="chip">Swift · macOS</span>
+        <span class="chip hot">🔥 +3,504 today</span>
+        <span class="chip stars">⭐ 35.1k</span>
+        <a class="src-link" href="https://github.com/apple/container">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/phuryn/pm-skills">phuryn/pm-skills — 100+ Agentic PM Skills for Claude Code &amp; Cowork</a></h3>
+      <p class="summary">A PM skills marketplace: 68 skills and 42 chained workflows spanning discovery, strategy, execution, GTM, and growth, built around proven frameworks (Torres, Cagan). Installable plugins for Claude Code, Cowork, Gemini CLI, Cursor, and Codex. v2.0.0 released June 5, 2026.</p>
+      <p class="why"><b>Why it matters:</b> Template for how to build a domain-specific agent skills library — each skill is a structured prompt with typed inputs, chain steps, and outputs; a reusable pattern for any agentic vertical.</p>
+      <div class="row">
+        <span class="chip">Markdown · agent skills</span>
+        <span class="chip hot">🔥 +827 today</span>
+        <span class="chip stars">⭐ 17k</span>
+        <a class="src-link" href="https://github.com/phuryn/pm-skills">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/LMCache/LMCache">LMCache/LMCache — Fastest KV Cache Layer for LLM Inference</a></h3>
+      <p class="summary">Turns the per-request KV cache into a persistent, cross-engine, shareable store. Supports offloading (prefix reuse across queries) and prefill-decode disaggregation. 15× throughput improvement on vLLM with long-context RAG and agentic workloads; now a dependency for Dynamo and the vLLM production stack.</p>
+      <p class="why"><b>Why it matters:</b> Shared persistent KV cache is the clearest infrastructure win for long-context agents and RAG pipelines — reduces TTFT dramatically and cuts compute cost for repeated context prefixes.</p>
+      <div class="row">
+        <span class="chip">Python · inference</span>
+        <span class="chip stars">⭐ 8.6k</span>
+        <a class="src-link" href="https://github.com/LMCache/LMCache">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/AMAP-ML/roleagent">AMAP-ML/roleagent — Code for Role-Agent (Dual-Role Self-Play Agent Training)</a></h3>
+      <p class="summary">Official implementation for the Role-Agent paper. Includes the World-In-Agent (WIA) module where the LLM predicts future states after each action, and the Agent-In-World (AIW) module. Tested on WildClawBench; shows co-evolution from minimal starting data.</p>
+      <p class="why"><b>Why it matters:</b> Open-source training framework for bootstrapping agents through self-play — immediately usable for teams that want to train domain-specific agents without building a full simulator.</p>
+      <div class="row">
+        <span class="chip">Python · agents</span>
+        <span class="chip">new Jun 2026</span>
+        <a class="src-link" href="https://github.com/AMAP-ML/roleagent">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/refactoringhq/tolaria">refactoringhq/tolaria — Desktop Markdown Knowledge Base Manager</a></h3>
+      <p class="summary">Desktop app (TypeScript) for managing local, plain-markdown knowledge bases. Local-first, no sync lock-in; organizes notes, documents, and personal wikis. 15.7k stars and trending with +369 new stars today.</p>
+      <p class="why"><b>Why it matters:</b> Local knowledge bases are the pairing to personal AI agents — a plain-markdown, open-format store that any LLM can read and write is the foundation for offline agent memory without vendor lock-in.</p>
+      <div class="row">
+        <span class="chip">TypeScript · knowledge</span>
+        <span class="chip hot">🔥 +369 today</span>
+        <span class="chip stars">⭐ 15.7k</span>
+        <a class="src-link" href="https://github.com/refactoringhq/tolaria">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.10917">Role-Agent: Dual-Role Self-Play for Agent Bootstrapping Without External Environments</a></h3>
+      <p class="summary">A single LLM alternates between acting as the agent (generating actions) and simulating the world (predicting resulting states). Alignment between predicted and actual states generates a process reward, enabling policy improvement without external rollout infrastructure. Validated on WildClawBench with Qwen3-Max.</p>
+      <p class="why"><b>Why it matters:</b> Removes the hard dependency on environment APIs for agent training; opens a practical path for teams that want to bootstrap narrow-domain agents from trajectory data alone.</p>
+      <div class="row">
+        <span class="chip">cs.AI · self-play</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.10917">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/phuryn/pm-skills">phuryn/pm-skills — Domain-Specific Agent Skills Marketplace Pattern</a></h3>
+      <p class="summary">100+ agentic PM skills structured as installable plugins: typed inputs, chained sub-tasks, and structured outputs. Each skill encodes a proven framework (OKR, PRD, discovery interview) as a reusable agent workflow. Works with Claude Code, Gemini CLI, Cursor, Codex, and Cowork.</p>
+      <p class="why"><b>Why it matters:</b> Shows the production pattern for a domain-specific skills layer on top of general coding agents — the structured-skill approach outperforms raw prompts by encoding constraints, steps, and output formats into the skill definition itself.</p>
+      <div class="row">
+        <span class="chip">agent skills · plugins</span>
+        <span class="chip stars">⭐ 17k</span>
+        <a class="src-link" href="https://github.com/phuryn/pm-skills">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11354">Zero-Shot Multi-Agent System for Building Interaction: Doorman + Code-Specialist Pattern</a></h3>
+      <p class="summary">Hierarchical design: a Doorman agent handles NL understanding and semantic routing; downstream specialist agents emit executable Python for arithmetic. Decouples language reasoning from computation, achieving zero-shot generalization across unseen building management systems.</p>
+      <p class="why"><b>Why it matters:</b> Practical multi-agent architectural pattern — route to code generation rather than letting the LLM do arithmetic — applicable to any domain requiring precise numeric computation embedded in natural language workflows.</p>
+      <div class="row">
+        <span class="chip">cs.MA · architecture</span>
+        <span class="chip">arXiv · Jun 12</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11354">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures, surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking">Latent Space AINews: Loopcraft — The Art of Stacking Loops</a></h3>
+      <p class="summary">Covers the emerging "loop-stacking" pattern from practitioners including Peter Steinberger, Boris Cherny, and Andrej Karpathy: composing nested agent loops where outer loops set objectives and inner loops handle execution, with each layer having its own feedback signal. Digest of AI engineering activity for June 10–11, published June 12–13.</p>
+      <p class="why"><b>Why it matters:</b> Loop composition is becoming the structural primitive for long-horizon agents — this newsletter crystallizes a pattern emerging independently across multiple practitioner blogs into a named, teachable design.</p>
+      <div class="row">
+        <span class="chip">workflow · agents</span>
+        <span class="chip">Latent Space · Jun 13</span>
+        <a class="src-link" href="https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking">Read →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — front page and new, with comment/point counts where available.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48469658">macOS Container Machines | Hacker News</a></h3>
+      <p class="summary">Discussion of Apple's new Container Machines feature (v1.0.0, announced June 9). Covers how each container gets a dedicated lightweight Linux VM on Apple Silicon, the comparison to WSL, and implications for macOS developer workflows. Thread trending June 12–13.</p>
+      <p class="why"><b>Why it matters:</b> The community is assessing whether apple/container's hardware-isolation model changes macOS's viability as an AI development host — particularly for Docker-incompatible Linux-native inference stacks.</p>
+      <div class="row">
+        <span class="chip">HN · Jun 12</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48469658">HN thread →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48470824">Can macOS be run as a container machine on macOS? | Hacker News</a></h3>
+      <p class="summary">Follow-up Ask HN thread probing the limits of the new Container Machine feature: whether macOS itself can be virtualized, what the security model looks like for nested environments, and how it compares to existing tools like OrbStack and Lima. Active June 12–13.</p>
+      <p class="why"><b>Why it matters:</b> The follow-up questions reveal exactly where the apple/container abstraction is still incomplete — helpful signal for teams evaluating it for sandboxed agent execution.</p>
+      <div class="row">
+        <span class="chip">HN · Jun 13</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48470824">HN thread →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h. Reddit not assessed — HTTP 403 on direct fetch; web search did not surface indexed threads from primary-tier subreddits for June 12–13, 2026.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Interconnects, Latent Space, plus lab blogs and industry news.</p>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/the-rise-of-reasoning-machines">Interconnects: The Rise of Reasoning Machines — Nathan Lambert</a></h3>
+      <p class="summary">Lambert argues that critiques of LLM reasoning grounded in human-centric definitions miss the point: the evidence for reasoning is task-level performance, not low-level behavioral similarity to humans. Pushes back on "LLMs can't really reason" framings as philosophically motivated rather than empirically driven.</p>
+      <p class="why"><b>Why it matters:</b> Sets up the intellectual frame for the next cycle of reasoning model evaluation — a useful counterweight to anthropocentric benchmarks when deciding which reasoning paradigms to invest in.</p>
+      <div class="row">
+        <span class="chip">Interconnects · Jun 12</span>
+        <a class="src-link" href="https://www.interconnects.ai/p/the-rise-of-reasoning-machines">Read →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://thenextweb.com/news/g7-ai-summit-altman-amodei-hassabis">AI Rivals Altman, Amodei &amp; Hassabis All Heading to G7 Summit in France</a></h3>
+      <p class="summary">Sam Altman (OpenAI), Dario Amodei (Anthropic), and Demis Hassabis (Google DeepMind) will attend the G7 in Évian-les-Bains, France, June 15–17. The summit agenda centers on voluntary AI safety commitments (youth safety, biosecurity/biological AI risks) and marks the first face-time between all three lab CEOs and heads of state simultaneously. Both Anthropic and OpenAI filed confidential S-1s with the SEC in the past two weeks ahead of anticipated IPOs.</p>
+      <p class="why"><b>Why it matters:</b> Voluntary G7 AI commitments have historically become the floor for regulatory frameworks — what's agreed this week shapes the compliance baseline for 2027 and beyond.</p>
+      <div class="row">
+        <span class="chip">industry · policy</span>
+        <span class="chip">TNW · Jun 12</span>
+        <a class="src-link" href="https://thenextweb.com/news/g7-ai-summit-altman-amodei-hassabis">Read →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-13 01:05 UTC<br>
+    Source issues: Reddit not assessed (HTTP 403 on direct fetch; web search returned no indexed primary-tier threads for Jun 12–13). arXiv direct fetch blocked (403); papers sourced via web search.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
