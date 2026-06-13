@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-13</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Saturday, June 13, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Penn physicists demonstrate all-optical nonlinear switching via exciton-polaritons at just 4 attojoules &#8212; key bottleneck for photonic AI chips removed</a></li>
+      <li><a href="#compute">China&#x2019;s Prinano mass-produces photonic chips with nanoimprint lithography, bypassing DUV entirely and cutting costs 90%</a></li>
+      <li><a href="#research">NUS silicon photonic QRNG chip self-tests hardware integrity in real time &#8212; first production-scale quantum security device from standard foundry</a></li>
+      <li><a href="#research">Hamamatsu develops world-record 2.0 kW laser diode bar under NEDO project; results to debut at ISLC 2026</a></li>
+      <li><a href="#funding">SEALSQ acquires Swiss Miraex SA and its TFLT PIC platform for quantum networking sovereign stack and LEO satellite QKD</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.sciencedaily.com/releases/2026/05/260518041341.htm">Penn Physicists Achieve All-Optical Nonlinear Switching via Exciton-Polaritons at 4 Attojoules<span class="badge">catch-up</span></a></h3>
+      <p>University of Pennsylvania researchers demonstrated all-optical logic switching using exciton-polaritons &#8212; hybrid light&#x2013;matter quasiparticles formed by strongly coupling photons to electrons in an atomically thin 2D semiconductor &#8212; consuming just ~4 attojoules per switching event. Because photonic AI chips typically must convert optical signals back to electrical at every nonlinear activation step (incurring latency and energy overhead), this approach enables in-situ nonlinear optical computation without electrical conversion. <em>Why it matters:</em> Eliminating the photonic&#x2013;electronic roundtrip at activation functions is the most-cited bottleneck for all-optical AI inference; polariton-based switching at attojoule energies is a credible path around it, though the 2D-material integration challenge with CMOS-compatible PICs remains open.</p>
+      <div class="meta">ScienceDaily / UPenn &middot; 2026-05-18</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.trendforce.com/news/2026/06/10/news-chinas-prinano-claims-8-inch-photonic-chip-mass-production-using-nanoimprint-tech-bypassing-duv-lithography/">China&#x2019;s Prinano Claims 8-Inch Photonic Chip Mass Production via Nanoimprint, Bypassing DUV</a></h3>
+      <p>Hangzhou-based startup Prinano has validated mass production of photonic chips on 8-inch silicon wafers using its proprietary PL-AS vacuum air-cushion nanoimprint lithography (NIL) platform &#8212; physically pressing nanoscale patterns into resist rather than projecting light &#8212; in collaboration with Shenzhen Litra Technology. The company claims sub-10 nm line-width resolution and production costs roughly one-tenth of conventional DUV-based methods. No yield figures or customer shipment data were disclosed. <em>Why it matters:</em> If yield is substantive, NIL-based PIC production would decouple photonic chip manufacturing from scanner-supplier constraints (ASML), potentially disrupting the silicon photonics foundry cost structure for optical comms, LiDAR, and sensing PICs.</p>
+      <div class="meta">TrendForce &middot; 2026-06-10</div>
+    </article>
+
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today &#8212; all tracked PIC/EDA sources were covered in prior digests.</p>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://techxplore.com/news/2026-06-quantum-chip-generates-certified-random.html">NUS: Self-Testing QRNG on Integrated Silicon Photonic Chip Certifies Randomness in Real Time</a></h3>
+      <p>Researchers at the National University of Singapore fabricated a fully integrated silicon photonic quantum random number generator (QRNG) that self-tests its own hardware integrity using a measurement-device-independent (MDI) protocol, eliminating reliance on manufacturer certification. Both signal encoder and homodyne detector are co-integrated on a single 8-inch wafer silicon platform, producing 15.33 Mbits of certifiable randomness per run at room temperature. The work appeared in PRX Quantum. <em>Why it matters:</em> Device-independent security proofs have historically required bulky lab setups; this chip-scale MDI-QRNG opens a path to production-grade quantum security hardware from standard silicon photonics foundries &#8212; directly relevant to post-quantum secure interconnects and data-center key management.</p>
+      <div class="meta">TechXplore / PRX Quantum &middot; 2026-06-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.hamamatsu.com/jp/en/news/announcements/2026/20260609000000.html">Hamamatsu Develops World-Record 2.0 kW Continuous-Wave Laser Diode Bar</a></h3>
+      <p>Hamamatsu Photonics announced the successful development of a 2.0 kW continuous-wave laser diode bar &#8212; claimed as a world record for a single bar &#8212; under a NEDO (New Energy and Industrial Technology Development Organization) Feasibility Study / Frontier Incubation program. Results are slated for presentation at the 30th International Semiconductor Laser Conference (ISLC 2026, Tampere, Finland, 14&#x2013;18 June 2026). Target applications include high-power industrial laser processing and solid-state laser pumping. <em>Why it matters:</em> High-power, high-brightness diode bars directly set the ceiling for laser power available to next-generation co-packaged-optics transceivers and optical amplifiers; pushing the per-bar ceiling enables denser CPO module architectures without added laser count.</p>
+      <div class="meta">Hamamatsu Photonics &middot; 2026-06-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://phys.org/news/2026-06-terahertz-biophotonics-path-applications-biological.html">Waseda &amp; Okayama Review Terahertz Biophotonics Path to Practical Biological Imaging</a></h3>
+      <p>Associate Professor Kazunori Serita (Waseda University) and Special-Appointment Professor Masayoshi Tonouchi (Okayama University) published a comprehensive survey in the Journal of Physics Photonics on the state and roadmap of terahertz biophotonics &#8212; addressing the core limitations of low spatial resolution, water-induced absorption, slow imaging speed, and bulky instrumentation. The paper outlines interdisciplinary strategies combining THz near-field microscopy, AI-assisted signal processing, and integrated THz PIC elements to translate the technology from proof-of-concept to clinical and lab-on-chip applications. <em>Why it matters:</em> THz is increasingly relevant to photonic biosensing and on-chip spectroscopy; this survey provides a structured roadmap for the engineering barriers that PIC-based THz sensors must clear before realistic deployment.</p>
+      <div class="meta">Phys.org / Journal of Physics Photonics &middot; 2026-06-07</div>
+    </article>
+
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <p class="empty">Nothing new today &#8212; EU Photonics Roadmap handover and Photonics Partnership Annual Meeting coverage was included in prior digests.</p>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/06/02/3304827/0/en/SEALSQ-Acquires-Miraex-SA-Cementing-Its-Quantum-Sovereign-Vertical-Stack-and-Quantum-Orbital-Space-Cloud-QOSC.html">SEALSQ Acquires Swiss Miraex SA &#8212; TFLT PIC Platform for Quantum Networking and LEO Satellite QKD</a></h3>
+      <p>SEALSQ Corp completed the acquisition of Miraex SA (EPFL Innovation Park, Ecublens, Switzerland), which developed a proprietary Thin Film Lithium Tantalate (TFLT) Photonic Integrated Circuit platform enabling microwave-to-optical quantum transduction &#8212; converting quantum states of microwave photons onto optical-frequency photons while preserving phase entanglement. The TFLT PIC closes the quantum interconnect layer in SEALSQ&#x2019;s Quantum Sovereign Vertical Stack and is targeted at its Quantum Orbital Space Cloud (QOSC) program deploying quantum-secure communications on WISeSat.Space Low Earth Orbit nanosatellites for defense, finance, and national security. <em>Why it matters:</em> Lithium tantalate PICs offer higher electro-optic coefficients and lower optical loss than TFLN (lithium niobate) for certain quantum transduction regimes; the acquisition signals growing commercial appetite for III&#x2013;V-alternative PIC platforms beyond silicon photonics for quantum networking applications.</p>
+      <div class="meta">GlobeNewswire &middot; 2026-06-02</div>
+    </article>
+
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+
+</main>
+<footer>
+  <div>Source issues: optics.org direct fetch 403 (news surfaced via search); arXiv physics.optics listings 403 (items via search); most photonics vendor sites 403 (Hamamatsu announcement page accessible); Reddit r/Optics RSS 403 + web search returned no indexed results (not assessed); June 12&#x2013;13 photonics news cycle was quiet (Friday/weekend).</div>
+  <div>6 items &middot; generated 2026-06-13 02:14 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
