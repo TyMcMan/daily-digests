@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-14</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, June 14, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 24 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.anthropic.com/news/fable-mythos-access">US Government Orders Anthropic to Suspend Fable 5 &amp; Mythos 5 for All Foreign Nationals</a>
+        <span class="why">Commerce Secretary Lutnick's export-control directive (June 13, 5:21 pm ET) ordered Anthropic to immediately disable Claude Fable 5 and Mythos 5 for every foreign national worldwide — including Anthropic's own staff. Anthropic complied by pulling both models globally, citing inability to filter users in real time. The government's stated rationale: a jailbreak enabling cyberweapon-grade code synthesis. First time US export controls have forced a live frontier AI model offline. <span class="src">Anthropic · Jun 13</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.13473">MaxProof: RL + Generative Verifier Clears Gold-Medal Bar on IMO 2025 and USAMO 2026</a>
+        <span class="why">Population-level test-time scaling with a low-false-positive generative verifier pushes MiniMax-M3 to 35/42 on IMO 2025 and 36/42 on USAMO 2026 — above the human gold-medal threshold on both. The key insight: run a tournament of candidate proofs, filter with the verifier; no per-problem fine-tuning required. A concrete proof that RL + verification can reach human-competition frontier in formal mathematics. <span class="src">arXiv cs.AI · Jun 11</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.13361">Can I Buy Your KV Cache? — A Per-Document Prefill Marketplace for Multi-Agent Deployments</a>
+        <span class="why">Proposes a market where publishers precompute KV caches once and any LLM agent purchases and loads them — eliminating prefill entirely with zero accuracy cost. For high-traffic RAG and multi-agent pipelines where dozens of agents attend the same documents repeatedly, this turns per-request compute into a one-time fixed cost, with a straightforward pricing model. The HN thread generated immediate interest from inference infra teams. <span class="src">arXiv cs.LG · Jun 11</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.13662">EurekAgent: Environment Engineering Is the Bottleneck for Autonomous Scientific Discovery</a>
+        <span class="why">Demonstrates that the limiting factor in agentic science automation is environment design, not agent architecture: a well-engineered metric-driven environment + standard CLI agents already surpasses human-designed baselines on scientific discovery benchmarks with no bespoke training. A design principle that reframes effort for anyone building research automation pipelines. <span class="src">arXiv cs.AI · Jun 11</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.13681">EvoArena + EvoMem: Agents Score Only 39.6% in Evolving Environments — Patch Memory Closes the Gap</a>
+        <span class="why">Most benchmarks test agents on static tasks; EvoArena tests continually updated terminal, software, and social environments. Baseline agents average 39.6% — exposing a systematic robustness gap. EvoMem, storing memory as structured update-history patches rather than flat snapshots, yields consistent improvements on EvoArena and also lifts performance on GAIA (+6.1%) and LoCoMo (+4.8%). <span class="src">arXiv cs.CL · Jun 11</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">4</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">5</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL) — papers in the 2606.13xxx range, submitted June 11–13, 2026. arXiv direct fetch returned 403; papers sourced via web search and confirmed HuggingFace paper pages.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13473">MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling</a></h3>
+      <p class="summary">Combines a low-false-positive generative verifier with tournament selection over candidate formal proofs, then scales via population-level test-time computation. Applied to MiniMax-M3, MaxProof achieves 35/42 on IMO 2025 and 36/42 on USAMO 2026 — clearing the human gold-medal threshold on both competitions simultaneously without per-problem fine-tuning.</p>
+      <p class="why"><b>Why it matters:</b> The first reported system to exceed human gold-medal level on two premier international math competitions in the same evaluation run; the generative-verifier + population-tournament recipe is general and composable with any RL-trained reasoning model.</p>
+      <div class="row">
+        <span class="chip">cs.AI · formal math</span>
+        <span class="chip">arXiv · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13473">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13361">Can I Buy Your KV Cache? A Compute-Once, Serve-Many Prefill Marketplace</a></h3>
+      <p class="summary">Proposes a KV cache marketplace where content publishers precompute document KV caches once, and any downstream LLM agent purchases and loads them at inference time — skipping prefill entirely with zero accuracy cost. The system defines a pricing model that lets agents trade off compute savings against cache freshness for a given document.</p>
+      <p class="why"><b>Why it matters:</b> Multi-agent and RAG deployments re-prefill the same documents hundreds of times per day; this turns that fixed cost into a one-time expenditure and opens a new efficiency layer at the infrastructure level, with natural incentives for publishers of high-traffic documents.</p>
+      <div class="row">
+        <span class="chip">cs.LG · inference</span>
+        <span class="chip">arXiv · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13361">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13681">EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments</a></h3>
+      <p class="summary">Introduces EvoArena, a benchmark suite that models real-world change as progressive update sequences across terminal, software, and social-preference domains. Current SOTA agents average only 39.6% accuracy. The companion EvoMem paradigm records memory as structured update-history patches rather than flat knowledge snapshots, yielding consistent improvements across all EvoArena domains, GAIA, and LoCoMo.</p>
+      <p class="why"><b>Why it matters:</b> Most agent evals assume a static world; EvoArena quantifies the actual gap when environments change — a prerequisite for building agents that don't silently degrade after knowledge cutoffs or configuration drift.</p>
+      <div class="row">
+        <span class="chip">cs.CL · agent eval</span>
+        <span class="chip">arXiv · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13681">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13680">RA-RFT: Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning</a></h3>
+      <p class="summary">From Meta Superintelligence Labs and Rice University. Standard RAG retrieves semantically similar passages — useless when a hard problem needs a structurally analogous solution strategy. RA-RFT trains a gold-relevance distilled retriever to rank by expected reasoning benefit, then fine-tunes the policy via RL with the retrieved analogous demonstrations as context, driving measurable gains under verifiable outcome rewards.</p>
+      <p class="why"><b>Why it matters:</b> Breaks the semantic-similarity assumption in retrieval: two problems can share a reasoning pattern while sounding completely different. RA-RFT operationalises analogical retrieval, applicable to any RL-fine-tuned reasoning model without architectural changes.</p>
+      <div class="row">
+        <span class="chip">cs.CL · reasoning</span>
+        <span class="chip">Meta · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13680">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11164">ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models</a></h3>
+      <p class="summary">Training-free two-level KV cache compression for long-chain-of-thought models: offline layer-wise preallocation driven by a "Reasoning Wave" activation pattern (detected during warm-up), combined with online head-wise dynamic reallocation at decode time. Evaluated on DeepSeek-R1 and AceReason against MATH-500 and AIME 2024 — maintains accuracy at substantially reduced memory.</p>
+      <p class="why"><b>Why it matters:</b> Long CoT traces are the dominant memory consumer in modern inference stacks; ReasonAlloc's training-free approach drops in to existing serving engines without retraining, making high-context reasoning cheaper to serve today.</p>
+      <div class="row">
+        <span class="chip">cs.LG · inference</span>
+        <span class="chip">arXiv · Jun 9</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11164">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13649">Operadic Consistency: A Label-Free Signal for Compositional Reasoning Failures in LLMs</a></h3>
+      <p class="summary">Draws on operad theory: a model that correctly decomposes a multi-hop query should agree between its direct answer and the answer it gets by composing its own stated sub-answers. Operadic consistency (OC) measures this agreement per-question without any reference labels. Evaluated across 12 LLMs (4B–671B) on four multi-hop QA datasets: Pearson r ∈ [0.86, 0.94] with accuracy on every dataset — the only tested signal with r ≥ 0.85 uniformly.</p>
+      <p class="why"><b>Why it matters:</b> A cheap, human-label-free quality signal that predicts when a model's compositional reasoning will fail, usable for routing, dataset filtering, and automated evaluation in production multi-hop agent systems.</p>
+      <div class="row">
+        <span class="chip">cs.CL · evaluation</span>
+        <span class="chip">arXiv · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13649">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily). Agent-skills tooling dominates today — three of the top four trending AI repos are structured workflows for coding agents. apple/container and LMCache already covered Jun 13.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills — Production-Grade Engineering Skills for AI Coding Agents</a></h3>
+      <p class="summary">Twenty structured skill workflows and seven slash commands (define, plan, build, verify, review, ship) packaged as shell-based AGENTS.md-compatible prompts. Designed to work out of the box with Claude Code, Cursor, and any Markdown-accepting coding agent. Includes red-green TDD, dependency analysis, and CI-gate patterns.</p>
+      <p class="why"><b>Why it matters:</b> A curated, production-hardened set of agent skill definitions from Google's Addy Osmani — directly installable and immediately usable for teams trying to move beyond ad-hoc agent prompting toward repeatable engineering workflows.</p>
+      <div class="row">
+        <span class="chip">Shell</span>
+        <span class="chip stars">⭐ 1,514 today · 58.4k total</span>
+        <a class="src-link" href="https://github.com/addyosmani/agent-skills">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/obra/superpowers">obra/superpowers — Agentic Skills Framework &amp; Software Development Methodology</a></h3>
+      <p class="summary">A comprehensive agentic coding methodology built around AGENTS.md-driven workflows, strict YAGNI, and red/green TDD. Includes skill definitions for task decomposition, test-first iteration, and context management designed to keep agents on track during multi-step software development tasks. Emphasises verifiable progress at each step.</p>
+      <p class="why"><b>Why it matters:</b> With 227k total stars and 924 gained today, superpowers is the most widely adopted agentic methodology framework on GitHub — a sign practitioners are converging on structured, test-driven patterns as the default for reliable coding agent workflows.</p>
+      <div class="row">
+        <span class="chip">Shell</span>
+        <span class="chip stars">⭐ 924 today · 226.9k total</span>
+        <a class="src-link" href="https://github.com/obra/superpowers">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">x1xhlol/system-prompts-and-models-of-ai-tools — Reverse-Engineered System Prompts from 30+ AI Tools</a></h3>
+      <p class="summary">A collection of leaked and reverse-engineered system prompts from over 30 AI coding tools including Claude Code, Cursor, Devin, Windsurf, Replit Agent, and GitHub Copilot. Provides the verbatim instruction text each tool uses to configure its underlying model, along with the model identifiers in use.</p>
+      <p class="why"><b>Why it matters:</b> A unique empirical reference for understanding how frontier coding agents are actually instructed — useful for competitive analysis, system prompt design, and understanding why different tools behave differently on the same task.</p>
+      <div class="row">
+        <span class="chip">reference</span>
+        <span class="chip stars">⭐ 109 today · 140.3k total</span>
+        <a class="src-link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/andrewyng/aisuite">andrewyng/aisuite — Simple Unified Interface to Multiple Generative AI Providers</a></h3>
+      <p class="summary">Andrew Ng's lightweight Python library that wraps Anthropic, OpenAI, Google, Groq, AWS Bedrock, and a dozen other providers behind a single consistent API. Swap the model string and the call signature stays the same — enabling quick provider/model comparisons without rewriting inference code.</p>
+      <p class="why"><b>Why it matters:</b> With Anthropic's Fable 5/Mythos 5 suspension affecting all foreign-national users, teams need to swap providers quickly; aisuite's zero-friction abstraction makes model-provider portability a one-line change rather than a refactor.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">⭐ 127 today · 14.1k total</span>
+        <a class="src-link" href="https://github.com/andrewyng/aisuite">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources. Today's focus: agentic science pipelines, tool-call orchestration architecture, and session analytics for coding agents.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13662">EurekAgent: Agent Environment Engineering Is All You Need for Autonomous Scientific Discovery</a></h3>
+      <p class="summary">Tests the hypothesis that the bottleneck in agentic science is environment design, not agent sophistication. A CLI-agent system operating in a carefully engineered metric-driven environment — proposing hypotheses, running experiments, receiving structured feedback — already surpasses human-designed research workflows on standardised discovery benchmarks without any specialised agent training or architecture.</p>
+      <p class="why"><b>Why it matters:</b> Reframes where to invest effort in research automation: instead of designing smarter agents, design better environments with clear metric signals. A directly actionable framework for anyone building LLM-driven experiment pipelines.</p>
+      <div class="row">
+        <span class="chip">cs.AI · agent design</span>
+        <span class="chip">arXiv · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13662">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13663">HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents</a></h3>
+      <p class="summary">Argues that the sequential one-tool-at-a-time paradigm for agentic tool use creates coordination bottlenecks and incoherence across multi-step tasks. HyperTool defines "hyper-tools" — higher-level units that group and orchestrate multiple tool invocations as a coherent action, enabling the agent to reason about tool composition at a higher level of abstraction.</p>
+      <p class="why"><b>Why it matters:</b> As production agents grow more complex (dozens of tools, nested sub-agents), sequential tool chaining breaks down; the hyper-tool abstraction offers a principled way to reason about tool composition and is directly applicable to any agent framework that exposes composable tool definitions.</p>
+      <div class="row">
+        <span class="chip">cs.CL · tool use</span>
+        <span class="chip">arXiv · Jun 11</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13663">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview — Local-First Session Intelligence &amp; Analytics for Coding Agents</a></h3>
+      <p class="summary">A local-first observability tool that captures, indexes, and visualises sessions from Claude Code, Codex, and 20+ other coding agents. Tracks token usage, tool-call patterns, task completion rates, and session timeline — all stored locally without sending data to a third party. Built in Go with a browser-based dashboard.</p>
+      <p class="why"><b>Why it matters:</b> As teams run coding agents at scale, understanding where agents fail, which tools they over-invoke, and how session cost compounds becomes essential for both cost management and capability improvement. agentsview provides the telemetry layer that most agent frameworks currently lack.</p>
+      <div class="row">
+        <span class="chip">Go</span>
+        <span class="chip stars">⭐ 190 today · 2.4k total</span>
+        <a class="src-link" href="https://github.com/kenn-io/agentsview">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://sourcegraph.com/blog/context-engineering">Context Engineering: A Practical Guide for AI Agents (2026) — Sourcegraph</a></h3>
+      <p class="summary">Sourcegraph's definitive 2026 guide to context engineering — the discipline of ensuring an agent receives the right files, tool definitions, conversation history, and retrieved facts at each turn. Covers the four pillars, how context engineering differs from prompt engineering, how to use MCP as a shared intelligence layer, and how to build pipelines that hold up in production across large codebases.</p>
+      <p class="why"><b>Why it matters:</b> Context engineering has emerged as the primary bottleneck in production agentic systems — not model capability. This guide distils the patterns that separate brittle demos from reliable agent deployments, grounded in Sourcegraph's experience serving code intelligence to enterprise teams.</p>
+      <div class="row">
+        <span class="chip">context engineering</span>
+        <span class="chip">Sourcegraph · 2026</span>
+        <a class="src-link" href="https://sourcegraph.com/blog/context-engineering">sourcegraph.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://blog.buildbetter.ai/agents-md-complete-guide-for-engineering-teams-in-2026/">AGENTS.md: Complete Guide for Engineering Teams in 2026 — BuildBetter</a></h3>
+      <p class="summary">A hands-on guide to writing AGENTS.md files — the emerging standard for giving coding agents persistent, structured instructions about codebase conventions, tooling, and task patterns. Covers file structure, skill definition patterns, how to layer agent instructions at repo / team / individual levels, and how AGENTS.md interacts with CLAUDE.md and .cursorrules.</p>
+      <p class="why"><b>Why it matters:</b> As addyosmani/agent-skills and obra/superpowers both use AGENTS.md as their delivery mechanism, this guide explains the underlying standard that all structured agent instruction systems are converging on — essential reading before building or customising your own agent skill library.</p>
+      <div class="row">
+        <span class="chip">agent harness</span>
+        <span class="chip">BuildBetter · 2026</span>
+        <a class="src-link" href="https://blog.buildbetter.ai/agents-md-complete-guide-for-engineering-teams-in-2026/">buildbetter.ai →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — confirmed thread IDs from search results and secondary coverage. Point/comment counts approximate where HN returned 403 to direct fetch.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48511072">Statement on the US Government Directive to Suspend Access to Fable 5 and Mythos 5 | HN</a></h3>
+      <p class="summary">Anthropic's official statement on the June 13 Commerce Department directive requiring immediate suspension of Fable 5 and Mythos 5 for all foreign nationals worldwide. The HN thread quickly became the central community forum for reaction, with practitioners debating the precedent, the "cyberweapon jailbreak" claim's technical validity, and the competitive implications for OpenAI (which GPT-5.5 can reportedly replicate the same capability).</p>
+      <p class="why"><b>Why it matters:</b> First US government use of export controls to force a live frontier AI model offline mid-deployment — the discussion surfaced several practitioner concerns about what compliance requirements mean for the next generation of AI products targeting international markets.</p>
+      <div class="row">
+        <span class="chip hot">🔥 high engagement</span>
+        <span class="chip">Jun 13</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48511072">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48508949">Can I Buy Your KV Cache? | HN</a></h3>
+      <p class="summary">The HN thread for the arXiv paper proposing a per-document KV cache marketplace. The discussion attracted inference engineers exploring practical implementation — which model serving frameworks would need to change, how to handle cache staleness pricing, and whether this maps cleanly onto existing CDN economics. Several comments explored multi-tenant KV sharing security implications.</p>
+      <p class="why"><b>Why it matters:</b> Early practitioner signal on a paper with direct production relevance — the HN conversation identifies the engineering blockers between the paper's concept and real deployment, worth reading alongside the paper itself.</p>
+      <div class="row">
+        <span class="chip hot">🔥 active thread</span>
+        <span class="chip">Jun 13</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48508949">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48473166">AWS Bedrock to Require Sharing Data with Anthropic for Mythos and Future Models | HN</a></h3>
+      <p class="summary">Discussion of AWS Bedrock's updated terms requiring customers using Mythos-class and future Anthropic models to consent to data sharing back to Anthropic for safety monitoring. The thread explored the tension between Anthropic's safety commitments and enterprise data sovereignty, and whether the terms apply retroactively to existing Claude on Bedrock deployments.</p>
+      <p class="why"><b>Why it matters:</b> For enterprise teams running Claude via AWS Bedrock, the data-sharing requirement has direct compliance and data-governance implications — the HN discussion surfaced the key questions legal and infosec teams will need to answer before proceeding with Mythos upgrades.</p>
+      <div class="row">
+        <span class="chip">enterprise · compliance</span>
+        <span class="chip">Jun 11</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48473166">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48478969">Cybersecurity Researchers Aren't Happy About the Guardrails on Anthropic's Fable | HN</a></h3>
+      <p class="summary">Coverage of security researchers' frustration that Fable 5's safety classifier silently degrades or refuses legitimate cybersecurity and offensive-research tasks — particularly vulnerability analysis, exploit writing, and penetration testing tool development. The thread included accounts from professional red-teamers finding Fable 5 less capable than GPT-5.5 or open-weight alternatives for their work.</p>
+      <p class="why"><b>Why it matters:</b> The Fable 5 guardrail friction is now being cited as a competitive differentiator for open-weight models in the cybersecurity space — a concrete example of the capability-safety tradeoff playing out in a professional domain where both matter.</p>
+      <div class="row">
+        <span class="chip">AI safety · security</span>
+        <span class="chip">Jun 11</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48478969">HN →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">Web searches across r/LocalLLaMA, r/MachineLearning, r/ClaudeAI, r/AI_Agents, and r/Singularity returned no verifiable thread URLs with confirmed titles and upvote/comment counts for June 13–14, 2026. The government directive story is trending heavily on Reddit per secondary coverage, but no individual thread URLs could be confirmed from search results. Reddit: not assessed (403 + insufficient indexed results).</p>
+      <div class="row">
+        <span class="chip">search coverage: partial</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs. Dominant story this cycle: the US government directive on Fable 5 and Mythos 5.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/">Statement on the US Government Directive to Suspend Access to Fable 5 and Mythos 5 — Simon Willison</a></h3>
+      <p class="summary">Willison covers the forced suspension of Fable 5 and Mythos 5 following the Commerce Department export control directive issued June 13. He contextualises it as the first time the US government has used export controls to pull a flagship frontier model mid-deployment on national security grounds, and unpacks Anthropic's position that its own review found the jailbreak capability "widely available from other models."</p>
+      <p class="why"><b>Why it matters:</b> Willison provides the clearest technical summary of what the directive actually requires and what Anthropic's stated rationale reveals about the government's underlying threat model — essential reading to understand the regulatory signal beyond the headlines.</p>
+      <div class="row">
+        <span class="chip">simonwillison.net</span>
+        <span class="chip">Jun 13</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety">Claude Fable 5 and New AI Safety Fables — Interconnects (Nathan Lambert)</a></h3>
+      <p class="summary">Lambert analyses the safety architecture of Fable 5 and Mythos 5 — specifically Anthropic's decision to route certain frontier-LLM-development prompts (pretraining pipelines, distributed training infra, ML accelerator design) to a weaker model rather than refuse. He frames this as the emergence of a new genre of "AI safety fables": corporate safety narratives that obscure the actual technical tradeoffs being made under regulatory and reputational pressure.</p>
+      <p class="why"><b>Why it matters:</b> Lambert's framing sharpens the distinction between safety theater and substantive risk reduction — a useful lens for evaluating any AI provider's safety claims, and directly relevant to the government directive that followed two days later.</p>
+      <div class="row">
+        <span class="chip">interconnects.ai</span>
+        <span class="chip">Jun 12</span>
+        <a class="src-link" href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety">interconnects.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-fable-and-mythos-officially">[AINews] Fable and Mythos Officially Too Dangerous to Release — Latent Space</a></h3>
+      <p class="summary">The daily AINews roundup synthesises the US government export control directive forcing Anthropic to suspend Fable 5 and Mythos 5, drawing on primary coverage from Axios, Bloomberg, CNN, NBC, and Fortune. Includes community reaction thread aggregation and analysis of what "export controls on AI models" means practically for international AI deployment going forward.</p>
+      <p class="why"><b>Why it matters:</b> The single best aggregation of all coverage threads and community reactions to the directive — saves reading across a dozen outlets to understand the full picture, including the political context (G7 summit, concurrent SEC S-1 filings by Anthropic and OpenAI).</p>
+      <div class="row">
+        <span class="chip">latent.space</span>
+        <span class="chip">Jun 12–13</span>
+        <a class="src-link" href="https://www.latent.space/p/ainews-fable-and-mythos-officially">latent.space →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/anthropic-public-record">Results from the First Anthropic Public Record — Anthropic</a></h3>
+      <p class="summary">Anthropic published the inaugural wave of its new public opinion survey series: 51,993 Americans surveyed Nov–Dec 2025 (YouGov, Census-weighted). Key findings: 48% name curing cancer/Alzheimer's as their top AI hope; 64% cite AI-induced job loss as their top fear; support for government AI regulation exceeds 70% across party lines. Qualitative research among 81,000 Claude users found educators 2.5–3× more likely to report witnessing AI-driven cognitive atrophy in students.</p>
+      <p class="why"><b>Why it matters:</b> A rare large-scale empirical baseline of US public attitudes toward AI — the data will anchor policy debates for years and directly influences how Anthropic frames its own safety and deployment decisions publicly.</p>
+      <div class="row">
+        <span class="chip">anthropic.com</span>
+        <span class="chip">Jun 12</span>
+        <a class="src-link" href="https://www.anthropic.com/news/anthropic-public-record">anthropic.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/fable-mythos-access">Statement on the US Government Directive to Suspend Access to Fable 5 and Mythos 5 — Anthropic</a></h3>
+      <p class="summary">Anthropic's official statement: Commerce Secretary Lutnick's letter (issued with BIS assistance, June 13, 5:21 pm ET) directed Anthropic to immediately suspend access by all foreign nationals to Fable 5 and Mythos 5 — including Anthropic's own foreign-national employees. Anthropic complied by disabling both models globally. Anthropic disputes the standard, stating the demonstrated capability is "widely available from other models" including OpenAI's GPT-5.5.</p>
+      <p class="why"><b>Why it matters:</b> The primary source for what the directive actually says and Anthropic's formal position — required reading for any product team that builds on Anthropic APIs, as the compliance requirements and precedent will shape international AI deployment decisions industry-wide.</p>
+      <div class="row">
+        <span class="chip">anthropic.com</span>
+        <span class="chip">Jun 13</span>
+        <a class="src-link" href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-14 01:05 UTC<br>
+    Source issues: arXiv list pages returned 403 (papers sourced via web search + HF paper pages); HN Algolia API returned 403 (threads sourced via web search + secondary coverage); HuggingFace /papers returned 403 (upvote counts not available); Reddit 403 + insufficient indexed results (Reddit tab empty-state).
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
