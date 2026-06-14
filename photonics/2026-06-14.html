@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-14</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Sunday, June 14, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Lightmatter joins NVIDIA NVLink Fusion, validating photonic CPO/NPO as a first-class AI scale-up interconnect</a></li>
+      <li><a href="#pic-eda">Flexcompute launches first fully autonomous agentic loop for photonic chip design — proposal to tapeout in hours</a></li>
+      <li><a href="#pic-eda">gdsfactory v9.44.0 released with port orientation fixes and PDK dependency updates</a></li>
+      <li><a href="#europe">EU Photonics Roadmap "Light Driving the Future" delivered to European Commission; Photonics21 Innovation Award to ARQ Quantum Technologies</a></li>
+      <li><a href="#europe">EU Chips Act 2.0 proposed — photonics industry lobbies for dedicated PIC track and long-term pilot-line funding</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://lightmatter.co/press-release/lightmatter-joins-nvidia-nvlink-fusion/">Lightmatter Joins NVIDIA NVLink Fusion Ecosystem with CPO and NPO Products</a><span class="badge">catch-up</span></h3>
+      <p>Lightmatter announced it has joined the NVIDIA NVLink Fusion ecosystem, committing to deliver Co-Packaged Optics (CPO) and Near-Packaged Optics (NPO) products that are electrically and optically compatible with NVIDIA's NVLink Fusion platform. Lightmatter's Passage 3D-stacked silicon photonics engine and Guide VLSP light engine will serve as validated first-class optical components in NVLink-based scale-up fabrics, enabling scale-up domains at thousands of XPUs. <em>Why it matters:</em> the first validated blueprint for integrating photonic interconnects directly into the NVIDIA AI cluster stack — this de-risks adoption for hyperscalers building next-generation optical AI infrastructure.</p>
+      <div class="meta">lightmatter.co &middot; 2026-06-02</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <article class="item">
+      <h3><a href="https://www.prnewswire.com/news-releases/flexcompute-pioneers-agent-driven-loop-for-autonomous-photonic-design-302787556.html">Flexcompute Pioneers Agent-Driven Loop for Autonomous Photonic Chip Design</a><span class="badge">catch-up</span></h3>
+      <p>Flexcompute launched the first fully autonomous agentic design loop for photonic integrated circuits: AI agents propose geometries, invoke Tidy3D FDTD multiphysics simulations, check fabrication constraints against PDKs for 8+ foundries via PhotonForge, and iterate to tapeout-ready layouts — all without human intervention. A Flexagent MCP plugin enables Python-driven control of the loop. <em>Why it matters:</em> the first production-grade closed-loop AI-in-the-loop photonic simulation workflow tied to real foundry PDKs; it compresses weeks of manual design iteration into hours, directly relevant to any team running PIC design on silicon photonics or InP platforms.</p>
+      <div class="meta">prnewswire.com / Flexcompute &middot; 2026-06-01</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gdsfactory/releases">gdsfactory v9.44.0 Released — Port Orientation Fixes and Dependency Updates</a></h3>
+      <p>The open-source PIC layout and EPDA library released v9.44.0 on June 12, incorporating bug fixes for port orientation at component boundaries, dependency updates across ~16 merged PRs, and documentation improvements. The library now supports 42+ PDKs with integrated Ansys, Lumerical, Tidy3D, and MEEP simulation backends, covering GDS, OASIS, STL, and GERBER outputs with built-in DRC and LVS. <em>Why it matters:</em> staying current with gdsfactory releases ensures compatibility with the latest PDK libraries — including SMART Photonics InP and silicon photonics foundry updates — and with simulation-backend integrations that are actively evolving alongside agentic design tools.</p>
+      <div class="meta">github.com/gdsfactory &middot; 2026-06-12</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/articles/volume_37/june_2026/">OPN June 2026: Ronald Hanson on Quantum Networking, Squeezed Phonon Lasers, Holographic Storage</a></h3>
+      <p>The June 2026 issue of Optics &amp; Photonics News leads with an interview with Ronald Hanson (Delft) mapping photonic milestones and remaining engineering gaps on the path to a quantum internet. Additional features cover squeezed phonon lasers, enhanced holographic storage architectures, fibre sensors for soil monitoring, and a record triple-junction solar cell. <em>Why it matters:</em> Hanson's assessment of where quantum photonics is maturing — and where hardware bottlenecks remain — is directly useful for optical compute teams evaluating entanglement-based or quantum-enhanced interconnect research roadmaps, and for positioning against EU FP10 quantum calls.</p>
+      <div class="meta">optica-opn.org &middot; 2026-06</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://optics.org/news/eu-photonics-roadmap-warns-europe-cannot-take-its-technological-lead-for-granted">EU Photonics Roadmap "Light Driving the Future" Handed to European Commission at Annual Meeting</a></h3>
+      <p>At the Photonics Partnership Annual Meeting 2026 in Brussels (June 9–10), the Strategic Research and Innovation Agenda (SRIA) "Light Driving the Future" was formally delivered to the European Commission, with DG CONNECT's Kilian Gross receiving the document. The SRIA covers AI energy demand, non-EU semiconductor supply chain dependence, secure communications, and quantum scaling — and argues Europe cannot take its photonics leadership for granted. The Photonics21 Innovation Award 2026 was also presented, going to ARQ Quantum Technologies (Barcelona) for demonstrating quantum information transmission over existing fibre infrastructure. <em>Why it matters:</em> this document shapes EU R&amp;D priorities and FP10 funding flows for the next decade; alignment with its themes (AI energy efficiency, PICs for datacom, quantum networking) directly improves eligibility for the next round of EU photonics grants.</p>
+      <div class="meta">optics.org / Photonics21 &middot; 2026-06-10</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://pradeepstechpoints.wordpress.com/2026/06/08/eu-chips-act-2-0-and-integrated-photonics-industry/">EU Chips Act 2.0 Proposed — Photonics Industry Lobbies for Dedicated PIC Track</a><span class="badge">catch-up</span></h3>
+      <p>The European Commission proposed Chips Act 2.0 with strengthened supply-chain sovereignty measures in June 2026; simultaneously, the photonics industry is lobbying for a dedicated Photonic Integrated Circuit track within the Act, noting the original Chips Act failed to classify PICs as strategic semiconductors. The case rests on the three EU photonics pilot lines already in place: PIXEurope (€380M), APECS (€726M), and STARLight (€102M). <em>Why it matters:</em> a successful PIC track in Chips Act 2.0 would unlock direct state aid and pilot-line access for volume manufacturing scale-up — for an optical compute startup in the EU, this is the most consequential near-term policy development for accessing subsidised manufacturing capacity.</p>
+      <div class="meta">pradeepstechpoints.wordpress.com &middot; 2026-06-08</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://picmagazine.net/article/124392/SMART_Photonics_advances_InP_PIC_scaling">SMART Photonics Advances InP PIC Scaling Roadmap Toward 6-Inch Pilot Line</a><span class="badge">catch-up</span></h3>
+      <p>SMART Photonics published its roadmap toward large-scale InP PIC manufacturing, emphasising that InP remains the only photonic platform capable of monolithically integrating light generation, modulation, detection, and transmission on a single chip. The 6-inch wafer pilot line at High Tech Campus Eindhoven (PIXEurope, in collaboration with TNO) is targeted for ~2027–28, projecting ~10,000 wafers/year to support millions of chips annually. 50+ validated PDK building blocks developed over a decade of manufacturing are included. <em>Why it matters:</em> accelerating availability of production-grade InP foundry capacity in Europe is critical for optical compute startups pursuing coherent on-chip laser integration strategies that silicon photonics cannot deliver without hybrid bonding.</p>
+      <div class="meta">picmagazine.net &middot; 2026-06-05</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://cignal.ai/2026/05/elsfp-module-market-to-exceed-1-5-billion-by-2030/">Cignal AI: ELSFP Module Market to Exceed $1.5B by 2030; CPO Ports Ramp from 2027</a><span class="badge">catch-up</span></h3>
+      <p>Cignal AI published its CPO and ELSFP Active Insight report, forecasting that the ELSFP (Enhanced Light Source Form Factor Pluggable) module market will exceed $100M in 2026 and grow to over $1.5B annually by 2030 as scale-up applications reach volume production. CPO port deployment will remain small in 2026, with growth starting 2027 and accelerating 2029–30; TSMC, NVIDIA, and Broadcom are driving 200G/lane CPO platforms toward end-2026 readiness. <em>Why it matters:</em> these forecasts provide the most current market-size anchoring for both ELSFP and CPO architectures — the two dominant optical I/O approaches for AI accelerators — directly useful for investor conversations and roadmap alignment at a photonic compute startup.</p>
+      <div class="meta">cignal.ai &middot; 2026-05</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: photondelta.com/news, epic-photonics.com/news, smartphotonics.nl/news, laserfocusworld.com, cignal.ai/press-releases, youtube.com SPIE TV RSS, optica-opn.org RSS, arXiv physics.optics/cs.ET, nature.com RSS — all returned HTTP 403; items sourced via web search where available. No photonics items confirmed specifically dated June 13–14, 2026; most recent primary item is gdsfactory v9.44.0 (June 12). Reddit: not assessed (403 + no indexed results).</div>
+  <div>8 items &middot; generated 2026-06-14 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
