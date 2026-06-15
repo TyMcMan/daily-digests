@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-15</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, June 15, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 22 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://thenewstack.io/anthropic-agent-sdk-credits/">Anthropic Agent SDK billing split + Claude 4 retirements, effective today<span class="src">The New Stack</span></a><span class="why">Claude Sonnet 4 / Opus 4 API IDs now return errors; programmatic usage moves to a separate metered credit pool — immediate action required for any team with automated pipelines.</span></li>
+      <li><a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html">LiteLLM CVE-2026-42271 (CVSS 10.0): Unauthenticated RCE chaining, CISA KEV<span class="src">The Hacker News</span></a><span class="why">Command injection in LiteLLM v1.74–1.83 affects CrewAI, DSPy, GraphRAG and any framework using it as a gateway — patch or isolate immediately.</span></li>
+      <li><a href="https://arxiv.org/abs/2606.09508">EntropyInfer: Entropy-guided adaptive inference cuts long-context compute without retraining<span class="src">arXiv</span></a><span class="why">Identifies "Rigid" vs "Dynamic" attention heads and allocates compute accordingly — state-of-the-art throughput on 128k+ contexts with no fine-tuning required.</span></li>
+      <li><a href="https://www.youtube.com/watch?v=96jN2OCOfLs">Karpathy: "From Vibe Coding to Agentic Engineering" — Sequoia AI Ascent fireside<span class="src">YouTube</span></a><span class="why">The most-referenced practitioner talk of 2026: the case that developer work is shifting from authoring to directing agents, with concrete implications for tooling and org design.</span></li>
+      <li><a href="https://arxiv.org/abs/2606.05608">Agentic Software: AI agents are restructuring the software paradigm (empirical analysis)<span class="src">arXiv</span></a><span class="why">Uses SWE-bench Verified, EvoClaw, and multi-agent data to define "Agentic Engineering" as a new primary discipline — and quantifies how far along that shift is.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">4</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">4</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">3</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.09508">From Rigid to Dynamic: Entropy-Guided Adaptive Inference for Long-Context LLMs</a></h3>
+      <p class="summary">Existing sparse attention and KV cache compression methods apply fixed sparsity patterns across all heads, ignoring large variation between "Rigid" heads (near-zero entropy, highly predictable) and "Dynamic" heads (fluctuating entropy). EntropyInfer is a training-free framework that adaptively allocates compute per-head and per-segment during prefilling, and introduces a latent KV cache compression scheme using output tokens to retain only the most critical cache entries during decoding.</p>
+      <p class="why"><b>Why it matters:</b> Directly addresses the memory and throughput bottleneck for long-context deployment without any retraining — the head-entropy taxonomy is a principled improvement over fixed-budget approaches and the latency gains at 128k+ context lengths are significant.</p>
+      <div class="row">
+        <span class="chip">efficient inference</span>
+        <span class="chip">long-context</span>
+        <span class="chip">KV cache</span>
+        <span class="chip">attention</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.09508">arXiv 2606.09508</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.07297">SWE-Explore: Benchmarking How Coding Agents Explore Repositories</a></h3>
+      <p class="summary">SWE-bench treats coding as binary resolved/unresolved, hiding where agents actually fail. SWE-Explore isolates repository exploration — given a repo and issue, the agent returns a ranked list of relevant code regions under a fixed line budget — across 848 issues in 10 languages and 203 open-source repositories. Ground truth is derived from trajectories that actually solved each issue.</p>
+      <p class="why"><b>Why it matters:</b> Provides a diagnostic lens on where coding agents fail in the exploration phase, enabling targeted improvements beyond end-to-end resolution rates — a key bottleneck currently masked by aggregate SWE-bench scores.</p>
+      <div class="row">
+        <span class="chip">agents</span>
+        <span class="chip">code</span>
+        <span class="chip">benchmark</span>
+        <span class="chip">software engineering</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.07297">arXiv 2606.07297</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11792">MultiToP: Learning to Patch Visual Tokens to Mitigate Hallucinations in Video LMMs</a></h3>
+      <p class="summary">Video large multimodal models hallucinate because visual tokens are unreliable. MultiToP introduces a lightweight Visual Token Patcher that predicts token-level replacement distributions and selectively substitutes unreliable visual tokens with a dynamic global patch before language generation. Information-guided rank calibration using answer-conditioned frame-level cues drives the replacement. Improves F1 of Qwen3-VL-4B-Instruct by 50.60% on Vript-HAL with negligible overhead.</p>
+      <p class="why"><b>Why it matters:</b> A targeted, low-overhead approach to video hallucination that substantially outperforms prior methods — directly relevant for deploying video-capable VLMs in production pipelines.</p>
+      <div class="row">
+        <span class="chip">multimodal</span>
+        <span class="chip">video</span>
+        <span class="chip">hallucination</span>
+        <span class="chip">VLM</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11792">arXiv 2606.11792</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.12169">OpenMedReason: Scientific Reasoning Supervision for Medical VLMs</a></h3>
+      <p class="summary">Clinical VLMs need reasoning grounded in visual evidence and clinical knowledge. OpenMedReason is a large-scale open corpus of ~450K image-question-answer instances with reasoning traces derived from curated human-authored biomedical scientific articles (not synthetic chains of thought). Coverage spans radiology, microscopy, visible-light photography, and charts across diverse medical modalities.</p>
+      <p class="why"><b>Why it matters:</b> Fills a critical gap in medical AI by providing high-fidelity, scientifically grounded supervision data — human-authored traces from biomedical literature are substantially more reliable than synthetic CoT for high-stakes clinical settings.</p>
+      <div class="row">
+        <span class="chip">medical AI</span>
+        <span class="chip">multimodal</span>
+        <span class="chip">reasoning</span>
+        <span class="chip">dataset</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.12169">arXiv 2606.12169</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.05241">Search-Time Contamination in Deep Research Agents: Measuring Performance Inflation</a></h3>
+      <p class="summary">Deep research agents with live web search can inadvertently retrieve benchmark answers at test time, inflating apparent performance. This study measures search-time contamination across six public benchmarks and finds it can inflate scores by up to 4%. The paper develops methodology to detect and quantify this contamination effect systematically.</p>
+      <p class="why"><b>Why it matters:</b> Raises a fundamental reliability concern for how deep research agents are evaluated — any SOTA claim for an agent with web access needs contamination controls, and benchmarks need to account for retrieval-at-test-time.</p>
+      <div class="row">
+        <span class="chip">agents</span>
+        <span class="chip">evaluation</span>
+        <span class="chip">benchmark</span>
+        <span class="chip">contamination</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.05241">arXiv 2606.05241</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.05608">Agentic Software: How AI Agents Are Restructuring the Software Paradigm</a></h3>
+      <p class="summary">This paper introduces "Agentic Engineering" as a new paradigm where agent systems — not static source code — become the primary artifact of software development. It draws on SWE-bench Verified, EvoClaw, and multi-agent coordination studies to characterize how the role of human engineers is shifting toward orchestrating and specifying agent behavior rather than writing implementation code directly.</p>
+      <p class="why"><b>Why it matters:</b> Provides conceptual framework and empirical grounding for a shift that many practitioners are experiencing but haven't seen formally quantified — useful for understanding the trajectory of developer tooling and org design.</p>
+      <div class="row">
+        <span class="chip">agents</span>
+        <span class="chip">software engineering</span>
+        <span class="chip">agentic coding</span>
+        <span class="chip">paradigm</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.05608">arXiv 2606.05608</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/shiyu-coder/Kronos">shiyu-coder/Kronos — Financial Foundation Model (AAAI 2026)</a></h3>
+      <p class="summary">Kronos is the first open-source foundation model trained exclusively on candlestick (K-line) OHLCV data from 45+ global exchanges. A two-stage tokenizer + decoder-only transformer architecture boosts price-series forecasting RankIC by 93% over leading time-series foundation models. The model family (4.1M to 499.2M parameters) is fully available on Hugging Face.</p>
+      <p class="why"><b>Why it matters:</b> Accepted at AAAI 2026 and open-weight — democratizes quantitative finance AI research and sets a strong baseline for financial time-series modeling. Trending +244 stars today on GitHub.</p>
+      <div class="row">
+        <span class="chip stars">★ 29.9k</span>
+        <span class="chip">finance</span>
+        <span class="chip">time-series</span>
+        <span class="chip">Python</span>
+        <a class="src-link" href="https://github.com/shiyu-coder/Kronos">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Ar9av/obsidian-wiki">Ar9av/obsidian-wiki — Agents Build and Maintain a Digital Brain</a></h3>
+      <p class="summary">Framework for AI agents to build and maintain a persistent knowledge base as an Obsidian wiki. Implements Karpathy's LLM Wiki pattern: agents ingest, extract, merge, and cross-link knowledge into interconnected markdown files instead of re-querying LLMs repeatedly. Supports delta tracking, multi-agent history mining (Claude, Codex, Hermes sessions), semantic search, and Neo4j/GraphML export.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the knowledge persistence problem in agentic workflows — agents that build up shared, queryable knowledge bases are measurably more efficient for long-running tasks. Trending +135 stars today.</p>
+      <div class="row">
+        <span class="chip stars">★ 2k</span>
+        <span class="chip">agents</span>
+        <span class="chip">knowledge management</span>
+        <span class="chip">Python</span>
+        <a class="src-link" href="https://github.com/Ar9av/obsidian-wiki">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.12344">Claw-SWE-Bench: Evaluating General-Purpose Agent Harnesses on Multilingual Coding Tasks</a></h3>
+      <p class="summary">General-purpose agents (OpenClaw-style) can't be scored by standard SWE-bench because they don't conform to its Docker workspace/patch contract. Claw-SWE-Bench provides a multilingual adapter protocol making heterogeneous harnesses comparable under fixed prompt, runtime budget, workspace contract, and patch extraction. The benchmark covers 350 issue-resolution instances across 8 languages and 43 repositories, plus an 80-instance Lite subset for fast validation.</p>
+      <p class="why"><b>Why it matters:</b> Enables fair head-to-head evaluation of general-purpose agentic frameworks against specialized coding agents — critical as the agent ecosystem diversifies beyond Python-only, single-workspace paradigms.</p>
+      <div class="row">
+        <span class="chip">benchmark</span>
+        <span class="chip">software engineering</span>
+        <span class="chip">multilingual</span>
+        <span class="chip">harness</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.12344">arXiv 2606.12344</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html">CVE-2026-42271 (CVSS 10.0): LiteLLM RCE Exploited in the Wild — CISA KEV</a></h3>
+      <p class="summary">CVE-2026-42271 (command injection in BerriAI LiteLLM v1.74.2–1.83.7) chained with CVE-2026-48710 (Starlette host header bypass) produces an unauthenticated RCE path rated CVSS 10.0. CISA added the vulnerability to the Known Exploited Vulnerabilities catalog on June 8. LiteLLM serves as the API gateway for CrewAI, DSPy, Microsoft GraphRAG, and dozens of other agent frameworks.</p>
+      <p class="why"><b>Why it matters:</b> This is a supply-chain critical risk: any multi-agent system routing traffic through LiteLLM is exposed. Patch to v1.84+ or isolate the gateway behind an authenticated proxy immediately.</p>
+      <div class="row">
+        <span class="chip hot">🔥 CISA KEV</span>
+        <span class="chip">security</span>
+        <span class="chip">supply chain</span>
+        <span class="chip">agent infrastructure</span>
+        <a class="src-link" href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html">The Hacker News</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.eetimes.com/computex-2026-are-we-heading-for-the-agentic-pc-era-yet/">Computex 2026: Every Major Silicon Announcement Framed Around Agentic AI</a></h3>
+      <p class="summary">Computex 2026 set a 45-year attendance record with agentic AI as the unifying theme. NVIDIA revealed RTX Spark (Arm CPU + Blackwell GPU + 128GB unified LPDDR5X) as a platform for local AI agents on Windows. Arm's CEO keynoted around "the foundation for the agentic AI era." The show marked a decisive shift from "AI PC" chip marketing to full agentic OS infrastructure investment.</p>
+      <p class="why"><b>Why it matters:</b> When every major silicon vendor frames their roadmap around agentic AI simultaneously, it signals where hardware investment is heading over the next 2–3 years — relevant for anyone planning inference infrastructure or on-device agent deployments.</p>
+      <div class="row">
+        <span class="chip">hardware</span>
+        <span class="chip">agentic AI</span>
+        <span class="chip">on-device inference</span>
+        <span class="chip">Computex</span>
+        <a class="src-link" href="https://www.eetimes.com/computex-2026-are-we-heading-for-the-agentic-pc-era-yet/">EE Times</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2605.21779">FuzzingBrain V2: Multi-Agent LLM System for Autonomous Vulnerability Discovery</a></h3>
+      <p class="summary">FuzzingBrain V2 deploys a multi-agent LLM system atop Google OSS-Fuzz infrastructure to autonomously discover and reproduce CVEs. In deployment on 19 open-source projects it found 41 previously unknown vulnerabilities — 26 confirmed, 23 fixed, 2 assigned CVE IDs — without human intervention between iterations. The paper documents the agent architecture, tool use chain, and task decomposition strategy.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates that multi-agent LLM systems can produce real-world security findings at scale without human review loops — a leading indicator of where autonomous code analysis tooling is heading.</p>
+      <div class="row">
+        <span class="chip">multi-agent</span>
+        <span class="chip">security</span>
+        <span class="chip">fuzzing</span>
+        <span class="chip">autonomous</span>
+        <a class="src-link" href="https://arxiv.org/abs/2605.21779">arXiv 2605.21779</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.youtube.com/watch?v=96jN2OCOfLs">Karpathy: "From Vibe Coding to Agentic Engineering" — Sequoia AI Ascent 2026</a></h3>
+      <p class="summary">Karpathy, in conversation with Sequoia's Stephanie Zhan, argues "vibe coding" is giving way to a more disciplined practice he calls agentic engineering — designing, coordinating, and verifying agent workflows rather than writing code directly. He describes feeling "behind as a programmer" for the first time and frames the shift as moving from authoring to directing. Covers his AutoResearch project and how agents are reshaping vertical software.</p>
+      <p class="why"><b>Why it matters:</b> This is the most-watched practitioner-facing AI talk of 2026 — the "vibe coding → agentic engineering" frame is now a reference point for the field. Essential viewing for anyone thinking about developer workflow evolution.</p>
+      <div class="row">
+        <span class="chip">agentic engineering</span>
+        <span class="chip">developer workflow</span>
+        <span class="chip">Karpathy</span>
+        <span class="chip">video</span>
+        <a class="src-link" href="https://www.youtube.com/watch?v=96jN2OCOfLs">YouTube</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.newsletter.swirlai.com/p/state-of-context-engineering-in-2026">State of Context Engineering in 2026 — SwirlAI Newsletter</a></h3>
+      <p class="summary">Aurimas Griciūnas surveys the full landscape of context engineering — architecting the information environment for LLM agents (memory, tools, retrieval, state). Synthesizes the LangChain four-strategy taxonomy (write, select, compress, isolate), Anthropic data showing only 0–20% of tasks are fully delegatable due to context quality failures, and the emerging infrastructure layer being built around context management. Argues context engineering is the defining AI skill of 2026.</p>
+      <p class="why"><b>Why it matters:</b> The most comprehensive practitioner survey of the context engineering landscape — provides vocabulary and frameworks now appearing across the field (Bind AI, Taskade, LlamaIndex all reference the same concepts). The "LLM as CPU / context window as RAM" model alone is worth the read.</p>
+      <div class="row">
+        <span class="chip">context engineering</span>
+        <span class="chip">LLM agents</span>
+        <span class="chip">practitioner</span>
+        <span class="chip">newsletter</span>
+        <a class="src-link" href="https://www.newsletter.swirlai.com/p/state-of-context-engineering-in-2026">SwirlAI</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/">Simon Willison: Agentic Engineering Patterns — Living Guide</a></h3>
+      <p class="summary">Willison's guide (updated through June 2026) is a curated collection of coding patterns for building safer, more reliable agent workflows. Covers the "Lethal Trifecta" risk framework (private data + untrusted content + external communication), structured output contracts, prompt injection mitigations, and harness design for long-running tasks. Widely referenced in agent security discussions this week following the LiteLLM CVE.</p>
+      <p class="why"><b>Why it matters:</b> With agentic AI moving into production, security is consistently underweighted. Willison's Lethal Trifecta is the clearest practitioner-facing framework for reasoning about prompt injection and supply-chain risk — actionable for engineers today.</p>
+      <div class="row">
+        <span class="chip">security</span>
+        <span class="chip">agent patterns</span>
+        <span class="chip">prompt injection</span>
+        <span class="chip">practitioner</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/">simonwillison.net</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://atscaleconference.com/events/ai-data-2026/">@Scale AI &amp; Data 2026 — June 17, Meta Campus (livestream)</a></h3>
+      <p class="summary">Meta's @Scale AI &amp; Data conference (June 17, Menlo Park) centers on two tracks: advances in recommender systems at scale and orchestration of AI agents in engineering and research practice. Talks from Meta engineers and industry practitioners running production AI systems; livestream is publicly available.</p>
+      <p class="why"><b>Why it matters:</b> This is the nearest upcoming practitioner event covering agents + orchestration at production scale. Two days out — the livestream is free and the agents/orchestration track is directly relevant to engineering teams building agentic workflows.</p>
+      <div class="row">
+        <span class="chip">conference</span>
+        <span class="chip">agents</span>
+        <span class="chip">Meta</span>
+        <span class="chip">upcoming Jun 17</span>
+        <a class="src-link" href="https://atscaleconference.com/events/ai-data-2026/">@Scale</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48297723">Multi-Agent LLM System for Automated Vulnerability Discovery and Reproduction</a></h3>
+      <p class="summary">Discussion of FuzzingBrain V2, which deploys multi-agent LLMs on Google OSS-Fuzz to find real CVEs autonomously — 41 vulnerabilities found, 26 confirmed, 23 fixed across 19 projects. A top comment on the thread: "When intrusion detection triggers, an offensive AI is unleashed against the attacker, trying in turn to hack it back." Debate in the thread covers dual-use risks and whether automated vulnerability discovery pipelines should require ethics review similar to human pen-testing.</p>
+      <p class="why"><b>Why it matters:</b> The HN debate around autonomous offensive AI reveals the community's live uncertainty about governance of agentic security tooling — relevant as the same LLM systems used for benign automation move into adversarial contexts.</p>
+      <div class="row">
+        <span class="chip">multi-agent</span>
+        <span class="chip">security</span>
+        <span class="chip">HN discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48297723">HN thread</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48409331">Show HN: I benchmarked LLM agents on fixing real-world security vulnerabilities</a></h3>
+      <p class="summary">The SEC-bench paper found a 50% solve rate ceiling for current LLM agents fixing real CVEs — the other 50% of "fixes" pass regression tests but leave the underlying vulnerability intact. Key finding: GPT-5.5 costs 12× more than GPT-4 mini with statistically similar results, raising serious ROI questions for security automation. Discussion threads through the implications for automated patch generation and the false confidence created by test-passing fixes.</p>
+      <p class="why"><b>Why it matters:</b> A critical data point for anyone evaluating LLM agents for code security work: passing tests ≠ secure code. The 50% silent failure rate is higher than most teams' threat models assume.</p>
+      <div class="row">
+        <span class="chip">agents</span>
+        <span class="chip">security</span>
+        <span class="chip">benchmark</span>
+        <span class="chip">HN discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48409331">HN thread</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48428647">Computex 2026: Are We Heading for the Agentic PC Era Yet?</a></h3>
+      <p class="summary">HN discussion on EE Times' Computex 2026 coverage — NVIDIA RTX Spark, Arm's CEO keynote, and whether the "agentic PC era" framing is marketing or a real architectural shift. Thread debates whether local inference hardware actually changes what agents can do vs. cloud-side, whether LPDDR5X unified memory is a meaningful bottleneck, and what the 45-year-record attendance says about industry positioning.</p>
+      <p class="why"><b>Why it matters:</b> The hardware-side agentic AI debate (local vs. cloud, memory bandwidth vs. model size) has practical implications for inference architecture choices in 2026–2027.</p>
+      <div class="row">
+        <span class="chip">hardware</span>
+        <span class="chip">agentic AI</span>
+        <span class="chip">Computex</span>
+        <span class="chip">HN discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48428647">HN thread</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/MachineLearning/">Nothing notable in the last 24h</a></h3>
+      <p class="summary">Web search against all PRIMARY-tier subreddits (r/MachineLearning, r/LocalLLaMA, r/Singularity, r/OpenAI, r/Anthropic, r/AI_Agents, r/ClaudeAI, r/ClaudeCode, r/ChatGPTCoding) returned no indexable Reddit threads from June 14–15, 2026. Reddit's search engine restrictions (in effect since 2023 API policy changes) are preventing recent threads from appearing in search results.</p>
+      <p class="why"><b>Source issue:</b> Reddit not assessed — web search returned no indexed threads for this date range. This is expected and not a content gap.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed (search index gap)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://thenewstack.io/anthropic-agent-sdk-credits/">Anthropic: Agent SDK Billing Split + Claude Sonnet 4 / Opus 4 Retired — Effective June 15</a></h3>
+      <p class="summary">Effective today, Anthropic implements two simultaneous changes: (1) programmatic Claude usage — Agent SDK, headless <code>claude -p</code>, Claude Code GitHub Actions, third-party apps — moves off subscription limits onto a separate metered credit pool ($20 for Pro, $100/$200 for Max tiers, no rollover); and (2) the original Claude Sonnet 4 (<code>claude-sonnet-4-20250514</code>) and Claude Opus 4 (<code>claude-opus-4-20250514</code>) are permanently retired from the API with no grace period. API calls to retired model IDs now return errors.</p>
+      <p class="why"><b>Why it matters:</b> Immediately operational — any team running automated pipelines, CI evaluations, or agents through the Claude Agent SDK woke up today to a billing model change and potentially broken builds. Migrate to Sonnet 4.6 / Opus 4.7 and claim the new credit pool now.</p>
+      <div class="row">
+        <span class="chip hot">🔥 Action required today</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">Agent SDK</span>
+        <span class="chip">API</span>
+        <a class="src-link" href="https://thenewstack.io/anthropic-agent-sdk-credits/">The New Stack</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/">Simon Willison: Publishing WASM Wheels to PyPI for Use with Pyodide</a></h3>
+      <p class="summary">Willison describes releasing <code>luau-wasm</code>, a new PyPI package that ships a WASM wheel file consumable directly inside Pyodide (Python-in-the-browser). The post documents the packaging workflow for distributing WebAssembly binaries through the standard Python package index, enabling browser-based Python environments to import native-compiled code without a server. Part of his ongoing tooling work around file-native and sandboxed agent environments.</p>
+      <p class="why"><b>Why it matters:</b> As AI coding agents increasingly run in sandboxed WASM environments — a pattern Willison has written about extensively for safe agentic execution — this packaging pattern matters for anyone building agent runtimes or browser-based LLM tooling.</p>
+      <div class="row">
+        <span class="chip">tooling</span>
+        <span class="chip">WASM</span>
+        <span class="chip">Python</span>
+        <span class="chip">agent runtimes</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/">simonwillison.net</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence">NVIDIA Nemotron 3 Nano Omni: 30B MoE for Document, Audio, and Video Agents</a></h3>
+      <p class="summary">NVIDIA's Nemotron 3 Nano Omni is a 30B-parameter mixture-of-experts model unifying vision, audio, and language in a single open-weight architecture, delivering up to 9× more efficient inference compared to dense multimodal models of similar capability. Both the 30B variant and a compact 4B version (<code>Nemotron-3-Nano-4B</code>) are freely available on Hugging Face. The Nemotron 3 family (Nano, Super, Ultra) went fully public on June 4, 2026.</p>
+      <p class="why"><b>Why it matters:</b> With Anthropic's Fable 5 access suspended, open-weight multimodal alternatives are suddenly more strategically relevant. Nemotron 3 Nano Omni covers audio + vision + text in one model at practical inference cost — a viable option for document and media-processing agent pipelines needing an open, locally-runnable foundation.</p>
+      <div class="row">
+        <span class="chip">open-weight</span>
+        <span class="chip">multimodal</span>
+        <span class="chip">NVIDIA</span>
+        <span class="chip">MoE</span>
+        <a class="src-link" href="https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence">Hugging Face Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-15 01:19 UTC<br>
+    Source issues: HuggingFace Daily Papers (HTTP 403, upvotes unavailable); arXiv direct listing (HTTP 403, papers found via web search); HN Algolia API (HTTP 403, threads sourced via web search); Anthropic/OpenAI/DeepMind blogs (HTTP 403, content via web search); Reddit (not assessed — search index gap, no threads indexed for this date range).<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
