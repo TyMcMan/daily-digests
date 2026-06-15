@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-15</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Sunday, June 15, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Oriole/AMD pure-photonic AI network commercial deployment confirmed: 81% core-switch power cut at scale.</a></li>
+      <li><a href="#pic-eda">Keysight ADS + GF SiPh PDK: full EOE co-simulation now available; Flexcompute PhotonForge adds GF stack too.</a></li>
+      <li><a href="#compute">China opens state-backed photonic computing lab (SJTU + Lightelligence, now public on HKEX); Russia demos optical AI processor.</a></li>
+      <li><a href="#funding">Ayar Labs $500M Series E + GF SCALE OCI-compliant CPO: CPO volume production ramp begins 2027.</a></li>
+      <li><a href="#europe">QuiX Quantum extends NL&ndash;DE photonic quantum corridor to Baden-W&uuml;rttemberg.</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://thenextweb.com/news/oriole-photonic-network-amd-aria-data-centre">Oriole Networks + AMD Deploy World's First Commercial Pure-Photonic AI Network</a></h3>
+      <p>UK startup Oriole Networks deployed its PRISM all-optical circuit-switching fabric at AMD's ARIA Scaling Inference Lab — no electronic switches in the data path. The system achieved an 81% reduction in core switch power and near-zero GPU idle time via nanosecond-latency optical circuit switching. The xPU-agnostic design is slated for broader industry rollout in 2027. <em>Why it matters:</em> First commercial-scale proof point that pure photonic switching can land in production at a major AI infrastructure facility — the power and latency numbers set the competitive benchmark for PIC-based compute interconnects.</p>
+      <div class="meta">The Next Web &middot; 2026-06-08</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thenextweb.com/news/china-photonics-lab-ai-chips-us-curbs">China Opens Shanghai Photonic Computing Lab — SJTU + Lightelligence (Now Public on HKEX)</a></h3>
+      <p>The Shanghai Key Laboratory of Integrated Photonic Computing Chips and Systems opened at Shanghai Jiao Tong University as a joint venture with Lightelligence, which listed on the Hong Kong Stock Exchange in April (up ~380% on debut). The lab focuses on photonic chip architectures, SiPh integration, optical components, and AI algorithms — a state-backed response to US chip export controls. <em>Why it matters:</em> Lightelligence is now a public company with substantial capital and a captive R&amp;D facility closing the PIC design-to-fab loop domestically, accelerating a competing photonic compute ecosystem.</p>
+      <div class="meta">The Next Web &middot; 2026-06-11</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://english.news.cn/europe/20260604/daf04f7cc99e4c6f87c60bdd2260cdbb/c.html">Sberbank Unveils Russia's First Optical Computing Processor for AI</a></h3>
+      <p>Russia's Sber unveiled a photonic-integrated-circuit-based optical processor at the St. Petersburg International Economic Forum, claiming &gt;1 billion matrix-multiply operations per second with a roadmap toward 10 GHz optical clock operation. The chip was developed entirely in-house by Sber researchers. <em>Why it matters:</em> Signals broadening of the photonic compute competitive landscape beyond the US/EU/China triad; the 1 GOPS baseline and 10 GHz target provide a public benchmark for comparison against Western and Chinese offerings.</p>
+      <div class="meta">Xinhua (English) &middot; 2026-06-04</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260603246703/en/Keysight-Expands-Photonics-Design-Ecosystem-with-GlobalFoundries-PDK">Keysight ADS Photonic Designer + GlobalFoundries SiPh PDK: Full EOE Co-Simulation</a></h3>
+      <p>Keysight's ADS Photonic Designer now supports GlobalFoundries' CLO silicon photonics PDK, enabling end-to-end electro-optical-electrical (EOE) simulation from PIC schematic through full optical link (eye diagram, TDECQ) without tool-switching. Physics-based models are calibrated to GF's fab process. Available immediately. <em>Why it matters:</em> If your team targets GF's SiPh platform, you can now co-simulate laser driver + modulator + full link in a single ADS environment, eliminating the late-stage surprises that typically emerge at tapeout when switching between simulation domains.</p>
+      <div class="meta">Business Wire / Keysight &middot; 2026-06-03</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.prnewswire.com/news-releases/flexcompute-and-globalfoundries-enable-integrated-design-and-simulation-on-gf-silicon-photonics-platform-302715755.html">Flexcompute PhotonForge Integrates GF SiPh Stack — Companion to Keysight PDK Release</a></h3>
+      <p>Flexcompute integrated GF's full silicon photonics process stack into PhotonForge, its Tidy3D-powered design platform, providing direct access to GF's process stack within the FDTD simulation environment. This pairs with the Keysight ADS PDK release to give designers two complementary paths: physics-level FDTD in PhotonForge and system-level EOE in ADS. <em>Why it matters:</em> Two complementary EDA tools now supporting GF SiPh simultaneously in the same month signals a rapidly maturing ecosystem around this specific foundry node — worth evaluating against your current PDK toolchain if GF is on your process shortlist.</p>
+      <div class="meta">PR Newswire / Flexcompute &middot; 2026-03 (covered in June wave)</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2603.07174">Scalable Optical Neural Network via Nonlocally Coupled Coherent Photonic Processor</a></h3>
+      <p>This paper addresses the quadratic scaling bottleneck of MZI-mesh ONNs by exploiting diffractive nonlocal coupling between optical modes on-chip. Cascaded multiport directional couplers (MDCs) interleaved with phase-shifter arrays implement a unitary converter requiring only 3N phase shifters for an N-dimensional unitary matrix — a dramatic reduction from the O(N²) component count of standard MZI meshes. Demonstrated on a silicon photonic chip. <em>Why it matters:</em> The 3N scaling law is a fundamental architectural improvement for ONN accelerator design that could make large-scale photonic MAC units practically feasible at dimensions previously limited by component count and insertion loss.</p>
+      <div class="meta">arXiv (physics.optics / cs.ET) &middot; arXiv:2603.07174</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://science-technology.news-articles.net/content/2026/06/08/south-korean-photonic-computing-breakthrough-100x-faster-processing.html">South Korean Photonic Computing Demonstration: 100&times; Speed Increase Claimed</a></h3>
+      <p>South Korean researchers demonstrated a photonic computing device that replaces electrons with photons for data processing, claiming a 100&times; speed increase over conventional silicon with drastically reduced thermal output. The device eliminates resistive heating and memory-to-processor bottlenecks by operating at light speed; institutional details are still emerging in public reporting. <em>Why it matters:</em> Adds to the growing body of experimental demonstrations of photonic compute speed advantages, directly relevant to benchmarking integrated photonic accelerator claims — though institutional attribution and peer-review status should be verified before citing in technical contexts.</p>
+      <div class="meta">Science Technology News Articles &middot; 2026-06-08</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://www.laserfocusworld.com/directory/fiber-optic-optoelectronic-components-equipment-systems/optoelectronic-integrated-circuits-oeics/press-release/55383464/photonics21-new-eu-photonics-roadmap-warns-europe-cannot-take-its-technological-lead-for-granted">Photonics21 Annual Meeting: New EU SRIA Handed to European Commission</a></h3>
+      <p>The Photonics Partnership Annual Meeting in Brussels (June 9&ndash;10) formally delivered the new Strategic Research and Innovation Agenda (SRIA) to the European Commission, with a stark warning that Europe's photonics leadership is at risk from global competition. Key priorities: AI energy demands, non-EU semiconductor supply chain dependence, quantum scaling, and secure communications. The Photonics21 Innovation Award went to ARQ Quantum Technologies (Barcelona) for quantum networking over fibre. <em>Why it matters:</em> The SRIA sets the direction for EU Horizon funding and Chips Act 2.0 photonics provisions — directly relevant for Akhetonics' EU funding and grant strategy over the next research cycle.</p>
+      <div class="meta">Laser Focus World / Photonics21 &middot; 2026-06-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.quixquantum.com/news/quix-quantum-joins-quantumbw-and-photonics-bw-to-strengthen-the-photonic-quantum-ecosystem-in-baden-wurttemberg-and-europe">QuiX Quantum Joins QuantumBW + Photonics BW — NL&ndash;DE Photonic Quantum Corridor</a></h3>
+      <p>QuiX Quantum formalized its presence in Baden-W&uuml;rttemberg by joining QuantumBW and Photonics BW, linking the Dutch InP integrated photonics supply chain (Twente/Eindhoven) with German high-tech manufacturing. QuiX also installed its real-time Feed-Forward Control Unit (150 ns latency, dual-FPGA, 32&times;32 I/O routing matrix) in its universal photonic quantum computer at DLR Ulm. <em>Why it matters:</em> This cross-border corridor integrates InP fabrication (NL) with systems integration (DE), creating a new European supply chain node for photonic quantum hardware that mirrors the manufacturing depth needed for PIC-scale volume production.</p>
+      <div class="meta">QuiX Quantum &middot; 2026-06-12</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://ayarlabs.com/news/ayar-labs-closes-500m-series-e-accelerates-volume-production-of-co-packaged-optics/">Ayar Labs Closes $500M Series E — Largest Silicon Photonics Funding Round Ever</a></h3>
+      <p>Ayar Labs closed a $500M Series E (led by Neuberger Berman; backers include Nvidia, TSMC, MediaTek, ARK Invest, QIA; valuation $3.75B) to fund high-volume CPO chiplet production, a new Hsinchu Taiwan facility, and ecosystem partnerships. Volume production targets AI systems shipping in 2027&ndash;2028. <em>Why it matters:</em> The scale of capital — the largest ever in silicon photonics — confirms CPO is now moving from R&amp;D to manufacturing ramp and sets the timeline and valuation benchmark for the photonic I/O market that Akhetonics and peers will compete in over the next two years.</p>
+      <div class="meta">Ayar Labs &middot; 2026-03-03 (ongoing coverage in June)</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://investors.gf.com/news-releases/news-release-details/globalfoundries-accelerates-adoption-co-packaged-optics-advanced">GlobalFoundries SCALE: Industry's First OCI MSA-Compliant CPO Platform</a></h3>
+      <p>GlobalFoundries launched SCALE (Silicon Photonics Co-packaged Advanced Light Engine), the first CPO platform explicitly compliant with the Optical Compute Interconnect (OCI) Multi-Source Agreement. It supports both CWDM and DWDM (8&lambda; and 16&lambda; bi-directional demonstrated natively), targeting AI scale-up fabrics. GF expects CPO revenue to double in 2026 and exceed $1B by 2028. <em>Why it matters:</em> OCI MSA compliance means GF's platform is interoperable with a multi-vendor ecosystem — any PIC designed to OCI specs can leverage GF's fab, directly shaping PDK choices for teams targeting interoperable CPO deployments.</p>
+      <div class="meta">GlobalFoundries &middot; 2026-05 (covered in June)</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://orcacomputing.com/orca-computing-expands-presence-through-digital-realty/">ORCA Computing Deploys Room-Temperature Photonic Quantum System in London Data Center</a></h3>
+      <p>ORCA Computing installed its PT Series room-temperature photonic quantum computers (Time-Bin Interferometer architecture, no dilution refrigerators required) in Digital Realty's London Innovation Lab, enabling enterprises to run hybrid quantum-classical workloads alongside standard GPU racks without infrastructure modification. This is the first deployment of a photonic quantum system inside a tier-1 colocation facility. <em>Why it matters:</em> Room-temperature photonic quantum operation in a standard data center rack is a direct proof point for PIC platform portability; ORCA's TBI approach is architecturally adjacent to linear optical quantum computing paths that PIC startups working on quantum photonics may encounter.</p>
+      <div class="meta">ORCA Computing &middot; 2026-06-12</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: optics.org, Nature Photonics RSS, EPIC, PhotonDelta, Laser Focus World direct fetch, Lightmatter, Ayar Labs blog, SMART Photonics, and Reddit all returned HTTP 403; all intelligence for those sources obtained via web search and secondary reporting. Reddit not assessed (RSS 403 + no indexed search results).</div>
+  <div>12 items &middot; generated 2026-06-15 01:19 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
