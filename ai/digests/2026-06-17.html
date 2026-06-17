@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-17</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, June 17, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://arxiv.org/abs/2606.17030">Qwen-RobotWorld: Generalist embodied world model unifies manipulation, driving &amp; navigation<span class="src">arXiv</span></a><span class="why">Single language-conditioned video world model across 20+ embodiments beats specialist baselines on EWMBench, DreamGen, WorldModelBench — signals a path to universal robot simulation without domain-specific simulators.</span></li>
+      <li><a href="https://openai.com/index/introducing-openai-partner-network/">OpenAI launches $150M Partner Network — 300K certified AI consultants by end of 2026<span class="src">openai.com</span></a><span class="why">The "harness wars" formalize: OpenAI bets the next competitive frontier is implementation expertise, not model capability — Accenture, BCG, McKinsey among launch partners.</span></li>
+      <li><a href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/">DeepMind + Schmidt Sciences announce $10M multi-agent safety research funding call<span class="src">DeepMind</span></a><span class="why">First major institutional funding specifically targeting emergent behavior when large numbers of AI agents from different organizations interact — grants up to $1M, closes August 8.</span></li>
+      <li><a href="https://arxiv.org/abs/2606.13197">ARMOR-MAD: Adaptive routing makes multi-agent debate practical — 65.5% on MATH Level 5<span class="src">arXiv</span></a><span class="why">Pre-debate agreement routing + early stopping cuts wasted compute in multi-agent debate by skipping rounds where agents already converge, without sacrificing accuracy.</span></li>
+      <li><a href="https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance">Nathan Lambert: "Welcome to the AGI era of AI governance" — analysis of the Claude export-control watershed<span class="src">Interconnects</span></a><span class="why">The U.S. government suspending Claude Fable 5/Mythos 5 for foreign nationals marks the moment governments began treating frontier model access as a national-security lever, not just a policy debate.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">2</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.17030">Qwen-RobotWorld: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a></h3>
+      <p class="summary">A generalist embodied world model from Alibaba/Qwen (38 authors) that uses natural language as a unified action interface to predict future visual trajectories across robotic manipulation, autonomous driving, indoor navigation, and human-to-robot transfer. Built on a Double-Stream MMDiT architecture trained on an 8.6M video-text corpus spanning 20+ embodiments and 500+ action categories; achieves #1 on EWMBench, DreamGen Bench, WorldModelBench, and PBench.</p>
+      <p class="why"><b>Why it matters:</b> A single world model replacing separate domain-specific simulators is a major step toward scalable robot policy training — reduces the infrastructure cost of learning manipulation, driving, and navigation policies from a single foundation.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">embodied AI</span>
+        <span class="chip">world models</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.17030">arXiv 2606.17030 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11576">AVIS: Adaptive Test-Time Scaling for Vision-Language Models</a></h3>
+      <p class="summary">AVIS decouples test-time compute scaling for VLMs into two independent axes — Visual Context Scaling (how much visual evidence the LM sees) and Visual Reasoning Scaling (how many search steps are used) — and learns a lightweight policy to adapt both per query, rather than applying the same budget to every input regardless of difficulty.</p>
+      <p class="why"><b>Why it matters:</b> Existing test-time scaling treats all queries equally, wasting compute on easy inputs. AVIS offers a principled per-query budget allocation that cuts inference cost without hurting performance on hard multimodal reasoning tasks.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">test-time scaling</span>
+        <span class="chip">VLMs</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11576">arXiv 2606.11576 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13197">ARMOR-MAD: Adaptive Routing for Heterogeneous Multi-Agent Debate in LLM Reasoning</a></h3>
+      <p class="summary">A training-free framework that treats multi-agent debate as conditional computation: Pre-debate Agreement Routing (PAR) skips debate when agents already agree, Early Agreement Stopping Evaluator (EASE) halts mid-debate on convergence, and Semantic Outlier Detection (SOD) down-weights abnormal final answers. Achieves 65.5% on MATH Level 5, 96.5% on GSM8K, 90.0% on MMLU, 81.5% on MMLU-Pro.</p>
+      <p class="why"><b>Why it matters:</b> Fixed-round multi-agent debate wastes compute and amplifies correlated errors — this adaptive routing makes multi-agent reasoning economically practical for production inference pipelines.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">cs.CL</span>
+        <span class="chip">multi-agent</span>
+        <span class="chip">reasoning</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13197">arXiv 2606.13197 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13316">ReSum: Synergizing LLM Reasoning and Summarization with Reinforcement Learning</a></h3>
+      <p class="summary">An RLVR framework that lets LLMs compress their own reasoning trajectories via self-summarization during rollout, using a summarization-aware adaptive rollout mechanism that contrastively evaluates whether self-summarization benefits the ongoing reasoning. Improves performance by an average of 4% while reducing rollout length by 18.6% on math and code reasoning benchmarks (USTC &amp; Alibaba AMAP).</p>
+      <p class="why"><b>Why it matters:</b> Long-horizon reasoning in RLVR often degrades coherence as the context budget runs out; ReSum is the first approach that teaches models to actively manage their own reasoning length without external scaffolding.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">RLVR</span>
+        <span class="chip">reasoning efficiency</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.13316">arXiv 2606.13316 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.11816">WorldReasoner: Evaluating Whether LLM Agents Forecast Events with Valid Reasoning</a></h3>
+      <p class="summary">A benchmark from Cambridge that evaluates LLM agents on resolved forecasting questions across three axes: outcome quality (probability calibration vs. ground truth), evidence quality (sources pre-dating the forecast), and reasoning quality (causal event graphs vs. hindsight recall). Explicitly tests whether agents reason to their forecasts or merely surface memorized training data.</p>
+      <p class="why"><b>Why it matters:</b> Existing forecasting benchmarks only check final-answer accuracy; WorldReasoner is the first to jointly evaluate the validity of the reasoning chain, evidence, and causal structure — critical for deploying agentic systems in high-stakes real-world settings.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">cs.CL</span>
+        <span class="chip">evaluation</span>
+        <span class="chip">forecasting</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.11816">arXiv 2606.11816 →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/OpenBMB/VoxCPM">OpenBMB/VoxCPM — Tokenizer-Free TTS for Multilingual Speech Generation &amp; Voice Cloning</a></h3>
+      <p class="summary">VoxCPM2 from the OpenBMB group (makers of MiniCPM) is a tokenizer-free text-to-speech architecture supporting multilingual speech generation, creative voice design, and true-to-life voice cloning. Departing from standard TTS pipelines that tokenize audio, it operates directly in continuous acoustic space — enabling richer prosody modeling and cross-lingual transfer.</p>
+      <p class="why"><b>Why it matters:</b> Tokenizer-free TTS is a significant architectural departure relevant to anyone building AI voice interfaces, synthetic media pipelines, or multilingual assistants — reduces the domain gap between written and spoken language representation.</p>
+      <div class="row">
+        <span class="chip stars">★ 30.1k</span>
+        <span class="chip">Python</span>
+        <span class="chip">TTS</span>
+        <span class="chip">speech</span>
+        <a class="src-link" href="https://github.com/OpenBMB/VoxCPM">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/alibaba/zvec">alibaba/zvec — Lightning-Fast In-Process Vector Database</a></h3>
+      <p class="summary">A lightweight, in-process vector database from Alibaba written in C++ — eliminating the network hop to an external vector store. Designed for latency-sensitive RAG pipelines, on-device embedding search, and edge deployments where round-trip to Chroma/Qdrant/Weaviate is unacceptable. Competes with the embedded tiers of LanceDB and Chroma.</p>
+      <p class="why"><b>Why it matters:</b> In-process vector search removes a significant latency source in agentic retrieval loops and makes embedding-based memory practical on constrained hardware — relevant to any production RAG or agent memory system.</p>
+      <div class="row">
+        <span class="chip stars">★ 10.5k</span>
+        <span class="chip">C++</span>
+        <span class="chip">vector DB</span>
+        <span class="chip">RAG</span>
+        <a class="src-link" href="https://github.com/alibaba/zvec">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/microsoft/fara">microsoft/fara — Fara-7B: Efficient Agentic Model for Computer Use</a></h3>
+      <p class="summary">Microsoft's 7B parameter model purpose-built for computer-use tasks — clicking, form-filling, OS navigation, and desktop automation. Designed to fit into resource-constrained deployments where frontier model inference costs are prohibitive for GUI-automation workflows. A smaller-footprint alternative to frontier-model computer-use for RPA and browser-agent pipelines.</p>
+      <p class="why"><b>Why it matters:</b> Computer-use at 7B parameters makes agentic GUI automation deployable on commodity hardware — directly lowers the cost and latency bar for enterprise RPA pipelines and local-run AI assistants.</p>
+      <div class="row">
+        <span class="chip stars">★ 5.8k</span>
+        <span class="chip">Python</span>
+        <span class="chip">computer-use</span>
+        <span class="chip">agents</span>
+        <a class="src-link" href="https://github.com/microsoft/fara">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/">DeepMind + Schmidt Sciences: $10M Multi-Agent AI Safety Research Funding Call</a></h3>
+      <p class="summary">DeepMind, Schmidt Sciences, the Cooperative AI Foundation, ARIA, and Google.org announced a $10M funding call for researchers studying emergent behavior when large numbers of AI agents built by different organizations interact across digital environments. Grants range from $300K (Tier 1) to $300K–$1M (Tier 2); applications close August 8, 2026.</p>
+      <p class="why"><b>Why it matters:</b> The first major institutional research funding targeting collective multi-agent behavior and safety at scale — signals that agent-to-agent interaction risks are being elevated from a theoretical concern to a funded research priority.</p>
+      <div class="row">
+        <span class="chip">multi-agent</span>
+        <span class="chip">safety</span>
+        <span class="chip">funding</span>
+        <a class="src-link" href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/">DeepMind blog →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/Hcompany/holo31">Holo3.1: Fast &amp; Local Computer-Use Agents — Open-Weight Family from H Company</a></h3>
+      <p class="summary">H Company released Holo3.1 (June 2), a family of four computer-use agent models (0.8B, 4B, 9B, 35B-A3B) built on Qwen, extending the previous Holo3 to support browser, desktop, and mobile environments with native function-calling and quantized checkpoints (FP8, NVFP4, Q4 GGUF). Addresses cross-environment generalization failures from the prior generation.</p>
+      <p class="why"><b>Why it matters:</b> A fully open-source, locally runnable alternative to cloud-hosted computer-use agents — makes Fara-7B and Holo3.1 the two viable lightweight options for building GUI-navigating agents without API costs or data-residency concerns.</p>
+      <div class="row">
+        <span class="chip">computer-use</span>
+        <span class="chip">open-weight</span>
+        <span class="chip">agents</span>
+        <span class="chip">catch-up</span>
+        <a class="src-link" href="https://huggingface.co/blog/Hcompany/holo31">Hugging Face blog →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://towardsai.net/p/machine-learning/context-engineering-the-6-techniques-that-actually-matter-in-2026-a-comprehensive-guide">Context Engineering: The 6 Techniques That Actually Matter in 2026</a></h3>
+      <p class="summary">A comprehensive practitioner guide (Towards AI / Divy Yadav) arguing that context engineering — controlling what the model sees — has fully displaced prompt engineering as the core production skill. Covers six concrete techniques: dynamic context selection, context compression, hierarchical layout, retrieval-augmented context, stateful vs. stateless context design, and memory management layers.</p>
+      <p class="why"><b>Why it matters:</b> With multiple Stanford CS224G lectures, Anthropic engineering posts, and newsletters all converging on context engineering this month, this guide is the most comprehensive single reference for practitioners building agentic systems in 2026.</p>
+      <div class="row">
+        <span class="chip">context engineering</span>
+        <span class="chip">practitioner guide</span>
+        <span class="chip">agents</span>
+        <a class="src-link" href="https://towardsai.net/p/machine-learning/context-engineering-the-6-techniques-that-actually-matter-in-2026-a-comprehensive-guide">Towards AI →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.ai.engineer/worldsfair/2026">AI Engineer World's Fair 2026 — June 29–July 2, San Francisco (Moscone West)</a></h3>
+      <p class="summary">The largest technical AI conference in the world returns to San Francisco with 29 tracks, 300 speakers, 100 expo partners, and 6,000+ AI engineers, founders, and VPs. Covers LLMs, agents, evals, RAG, applied AI, and production reliability across simultaneous engineering tracks at Moscone West.</p>
+      <p class="why"><b>Why it matters:</b> The primary near-term source of practitioner talks, agent harness patterns, eval methodologies, and production case studies — recordings from June 29–July 2 will dominate practitioner-workflow content for the next several weeks.</p>
+      <div class="row">
+        <span class="chip">conference</span>
+        <span class="chip">AI engineering</span>
+        <span class="chip">June 29–Jul 2</span>
+        <a class="src-link" href="https://www.ai.engineer/worldsfair/2026">ai.engineer →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48496332">OpenAI's June 2026 Report on Malicious Uses of AI [pdf]</a></h3>
+      <p class="summary">OpenAI released a detailed report documenting Chinese, Russian, and North Korean state-actor use of AI tools for cyberattacks, phishing, disinformation, and influence operations — including specifics on "Agentjacking" (hijacking deployed AI agents for malicious execution). The HN thread generated active discussion across AI security practitioners and policy researchers.</p>
+      <p class="why"><b>Why it matters:</b> As AI agents get deployed in production with real access to credentials, filesystems, and APIs, the security attack surface expands — this report catalogs how adversarial use of AI is evolving and what defenders need to watch for.</p>
+      <div class="row">
+        <span class="chip">AI security</span>
+        <span class="chip">state actors</span>
+        <span class="chip">agentjacking</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48496332">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=47817581">Graphs That Explain the State of AI in 2026 (Stanford AI Index)</a></h3>
+      <p class="summary">The Stanford AI Index 2026 in chart form — covering benchmark saturation (multiple evals now near-perfect for frontier models), training compute trajectories, inference cost curves (92% drop in 18 months), economic impact data, and policy developments. HN discussion focused on what "benchmark saturation" means for capability measurement going forward.</p>
+      <p class="why"><b>Why it matters:</b> The most authoritative annual data snapshot of where AI capabilities, costs, and societal impacts actually stand — essential context for any AI/ML practitioner calibrating their roadmap against the real state of the field.</p>
+      <div class="row">
+        <span class="chip">Stanford AI Index</span>
+        <span class="chip">benchmarks</span>
+        <span class="chip">2026 landscape</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=47817581">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/MachineLearning/">Nothing notable in the last 24h</a></h3>
+      <p class="summary">Web search against all PRIMARY-tier subreddits (r/MachineLearning, r/LocalLLaMA, r/Singularity, r/OpenAI, r/Anthropic, r/AI_Agents, r/ClaudeAI, r/ClaudeCode, r/ChatGPTCoding) returned no indexable Reddit threads from June 16–17, 2026. Reddit's search-engine indexing restrictions continue to limit same-day thread discovery.</p>
+      <p class="why"><b>Source issue:</b> Reddit not assessed — web search returned no indexed threads for this date range. This is expected and not a content gap.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed (search index gap)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/">"They screwed us": Personality clashes sent Anthropic's models offline — Simon Willison</a></h3>
+      <p class="summary">Willison annotates an Axios investigation revealing how internal personality conflicts between U.S. government officials and Anthropic leadership directly led to the June 12 export control directive suspending Claude Fable 5 and Mythos 5 for foreign nationals — including named individuals from Anthropic's Frontier Red Team and their Commerce Department counterparts.</p>
+      <p class="why"><b>Why it matters:</b> The behind-the-scenes reporting shows that frontier AI model access is now hostage to individual relationships between lab executives and government officials — a sobering illustration of how non-technical factors will shape AI access for international users and teams.</p>
+      <div class="row">
+        <span class="chip">AI governance</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">export control</span>
+        <span class="chip">Jun 15</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/">TIL: Cloudflare CAPTCHA Triggered by Ampersand — Debugged with Claude Code + MCP</a></h3>
+      <p class="summary">Willison documents a debugging session where Cloudflare's Managed Challenge was firing on any search query containing an ampersand, and walks through using Claude Code with the Cloudflare MCP server (then the Cloudflare API directly as a fallback) to diagnose and fix the WAF rule. A concrete example of agentic coding tools applied to real infrastructure debugging.</p>
+      <p class="why"><b>Why it matters:</b> Practical workflow demonstration: Claude Code + MCP as a first-line debugging tool for cloud infrastructure, not just software development — shows the model switching from MCP to direct API when the MCP tool hit a scope limitation.</p>
+      <div class="row">
+        <span class="chip">Claude Code</span>
+        <span class="chip">MCP</span>
+        <span class="chip">Cloudflare</span>
+        <span class="chip">Jun 16</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/introducing-openai-partner-network/">Introducing the OpenAI Partner Network — $150M, Three Tiers, 300K Certified Consultants</a></h3>
+      <p class="summary">OpenAI launched its first formal global partner program (June 15), backed by $150M and structured in three tiers (Select, Advanced, Elite) with specializations in Codex, cybersecurity, and AI agents. Launch partners include Accenture, BCG, Bain, McKinsey, and PwC. Targets 300,000 certified AI implementation consultants by end of 2026.</p>
+      <p class="why"><b>Why it matters:</b> Signals OpenAI's strategic shift: the model layer is commoditizing, the next competitive frontier is implementation expertise and enterprise lock-in through certified ecosystem partners — the "harness wars" framing is now explicit strategy, not commentary.</p>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">ecosystem</span>
+        <span class="chip">enterprise AI</span>
+        <span class="chip">Jun 15</span>
+        <a class="src-link" href="https://openai.com/index/introducing-openai-partner-network/">openai.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance">Welcome to the AGI Era of AI Governance — Nathan Lambert, Interconnects</a></h3>
+      <p class="summary">Lambert analyzes the U.S. government's directive forcing Anthropic to suspend global access to Claude Fable 5 and Mythos 5 for foreign nationals, framing it as a watershed moment: governments are now actively treating frontier model access as a national-security instrument, not just a policy debate. Covers the executive branch's legal authority, the "AGI era" implications for AI labs based in the US, and what this means for international AI teams and customers.</p>
+      <p class="why"><b>Why it matters:</b> The clearest analytical framework for understanding the export-control situation and its long-term implications — any team deploying frontier models internationally needs to understand how the AGI governance era will shape model access, deployment geography, and enterprise AI risk going forward.</p>
+      <div class="row">
+        <span class="chip">AI governance</span>
+        <span class="chip">export control</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">Jun 14</span>
+        <a class="src-link" href="https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance">Interconnects →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-17 01:17 UTC<br>
+    Source issues: arXiv &amp; Hugging Face (HTTP 403 — papers sourced via indexed search); HN Algolia API (HTTP 403 — items sourced via search snippets); Simon Willison, Interconnects (HTTP 403 — verified via search); Reddit (HTTP 403 + no indexed results for June 16–17).
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
