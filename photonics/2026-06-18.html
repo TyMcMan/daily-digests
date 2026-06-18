@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-18</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Thursday, June 18, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#funding">Coherent receives $50M CHIPS Act Letter of Intent for AI-grade laser &amp; optical component manufacturing expansion</a></li>
+      <li><a href="#funding">Tower Semiconductor + IQE sign multi-year InP epiwafer supply agreement — supply-chain stability for InP PIC foundries</a></li>
+      <li><a href="#pic-eda">Keysight acquires VPIphotonics — system-level photonic simulation joins Keysight&rsquo;s EDA portfolio (June 16)</a></li>
+      <li><a href="#compute">Nature Comms: 3D programmable optical NN &amp; inverse-designed nanophotonic NN — two photonic compute papers (catch-up)</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41467-026-72316-9">3D Programmable Photonic Neural Network via Reconfigurable Free-Space Diffractive Layers<span class="badge">catch-up</span></a></h3>
+      <p>Researchers demonstrate a fully programmable 3D optical neural network built from stacked reconfigurable diffractive layers, achieving classification accuracy on par with digital counterparts at optical inference speeds. The architecture uses phase-only spatial light modulators as programmable layers, enabling in-situ gradient-free training via optical forward passes. <em>Why it matters:</em> Moving beyond fixed diffractive optical networks to fully reconfigurable 3D stacks is the key step toward general-purpose optical inference accelerators — the result is a direct proof point for the 3D free-space approach (cf. Lumai&rsquo;s Series A) and benchmarks the flexibility gap versus PIC-based optical compute.</p>
+      <div class="meta">Nature Communications &middot; 2026-06 (catch-up)</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41467-026-68648-1">Inverse-Designed Nanophotonic Neural Networks for On-Chip Inference<span class="badge">catch-up</span></a></h3>
+      <p>A Nature Communications paper reports inverse-designed silicon nanophotonic structures that implement neural network inference entirely in passive waveguide geometry — no active phase shifters required. The designs are generated by adjoint optimization and fabricated in standard 220 nm SOI, achieving multi-class classification with femtojoule-per-operation energy. <em>Why it matters:</em> Passive inference networks with no electronics or tunable elements could underpin ultra-low-power edge photonic compute; the SOI-compatible process means any SiPh foundry (GlobalFoundries, imec, SMART) can fabricate these — a benchmark for energy efficiency that PIC-based optical compute startups will need to address.</p>
+      <div class="meta">Nature Communications &middot; 2026-06 (catch-up)</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://www.keysight.com/us/en/about/newsroom/news-releases/2026/0616_pr26-082-keysight-expands-photonic-design-automation-portfolio-with-system-level-simulation.html">Keysight Acquires VPIphotonics — System-Level Photonic Simulation Joins Keysight EDA</a></h3>
+      <p>Keysight Technologies announced the acquisition of VPIphotonics (Berlin), the developer of VPItransmissionMaker and VPIcomponentMaker — the dominant system- and component-level photonic simulation tools used in telecom, datacom, and PIC design. The combined portfolio now spans RF/microwave (Keysight ADS), photonic component simulation (Lumerical, acquired 2020), and end-to-end system-level link simulation (VPI). Terms undisclosed. <em>Why it matters:</em> VPIphotonics&rsquo; tools are the standard for coherent transceiver and PIC link-budget simulation in the EU telecom industry; combined with Lumerical and Keysight&rsquo;s existing PDK partnerships (GlobalFoundries PDK announced June 3), Keysight is consolidating the full photonic EDA stack — relevant for any design flow using VPI tools for link-level co-simulation alongside component-level PIC design.</p>
+      <div class="meta">Keysight Technologies &middot; 2026-06-16</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.08885">Ultra-Low-Loss Si&#8323;N&#8324; Waveguides with Sub-0.1 dB/m Loss via Optimised LPCVD Annealing<span class="badge">catch-up</span></a></h3>
+      <p>This arXiv preprint reports silicon nitride waveguides with propagation loss below 0.1 dB/m at 1550 nm, achieved through a refined LPCVD annealing protocol that minimises N&#8211;H absorption and surface roughness simultaneously. The process is demonstrated on 4-inch wafers with &gt;95% yield across die, and the authors benchmark against state-of-the-art ultralow-loss Si&#8323;N&#8324; platforms. <em>Why it matters:</em> Sub-0.1 dB/m Si&#8323;N&#8324; loss is the threshold for on-chip delay lines, gyroscopes, and narrow-linewidth laser feedback cavities; a yield-compatible LPCVD route removes the barrier to foundry-scale production of ultralow-loss Si&#8323;N&#8324; PICs relevant for LiDAR, sensing, and quantum photonics.</p>
+      <div class="meta">arXiv:2606.08885 &middot; 2026-06 (catch-up)</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260614302301/en/Electro-Optic-Systems-to-Establish-European-C2-AI-Hub-in-France">Electro Optic Systems Establishes European C2/AI Hub in France with €10M Investment</a></h3>
+      <p>Australian-listed Electro Optic Systems (EOS) announced a €10M investment to establish a European command-and-control and AI hub in France, targeting laser-based space situational awareness (SSA), directed energy, and optical communications markets. The French hub will integrate EOS&rsquo;s free-space optical communications terminals and AI-driven tracking systems, leveraging France&rsquo;s dual-use photonics ecosystem and EU defence procurement channels. <em>Why it matters:</em> EOS&rsquo;s move signals growing defence and space demand for precision free-space optical terminals in Europe — a market vertical adjacent to the integrated PIC space-optical communications segment, and a signal of EU defence budget flow into photonics-enabled C2 systems post-2026 NATO commitments.</p>
+      <div class="meta">BusinessWire / EOS &middot; 2026-06-14</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/06/16/3312664/11543/en/Coherent-Announces-a-CHIPS-Letter-of-Intent-for-50-Million-to-Expand-World-Leading-Manufacturing-Facility-for-AI-Infrastructure.html">Coherent Receives $50M CHIPS Act Letter of Intent for AI Laser &amp; Optical Manufacturing</a></h3>
+      <p>Coherent Corp. announced a Letter of Intent (LOI) from the US Commerce Department under the CHIPS and Science Act for up to $50M in direct funding to expand its manufacturing of high-power lasers and optical components for AI data-centre infrastructure. The investment targets Coherent&rsquo;s vertical-cavity surface-emitting laser (VCSEL) and EML production lines, which supply optical transceivers and co-packaged optics modules for hyperscale AI clusters. <em>Why it matters:</em> CHIPS Act money flowing to laser/photonic component manufacturing — not just silicon fabs — confirms that optical interconnect supply chains are now viewed as strategic US infrastructure; the EML focus directly tightens the same InP substrate supply chain highlighted in yesterday&rsquo;s China optical chip analysis.</p>
+      <div class="meta">GlobeNewswire / Coherent &middot; 2026-06-16</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/06/15/3311514/0/en/IQE-and-Tower-Semiconductor-Announce-Multi-year-InP-epiwafer-Supply-Agreement.html">IQE and Tower Semiconductor Sign Multi-Year InP Epiwafer Supply Agreement</a></h3>
+      <p>IQE plc (Cardiff) and Tower Semiconductor announced a multi-year supply agreement under which IQE will provide InP epiwafers for Tower&rsquo;s photonic foundry operations. The deal covers InP-based epitaxial wafers for Tower&rsquo;s TPSCo (Japan) and Texas fabs, which serve datacom and telecom optical transceiver customers. IQE cited the agreement as a key step in securing European epiwafer supply chain capacity for the growing InP PIC market. <em>Why it matters:</em> With InP substrate shortfalls running at 70% for high-end supply (per the China optical chip analysis), a named multi-year epiwafer supply deal between the world&rsquo;s largest III&#8211;V epiwafer supplier and a major photonic foundry is directly relevant supply-chain intelligence for any InP PIC design house or foundry — including SMART Photonics and European InP-on-silicon efforts.</p>
+      <div class="meta">GlobeNewswire / IQE &middot; 2026-06-15</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: arXiv, optics.org, PIC Magazine, Nature Photonics RSS, Lightmatter, Ayar Labs, NextPlatform, Light S&amp;A RSS, Reddit r/Optics &amp; r/Semiconductors all returned HTTP 403 (bot-blocking); direct WebFetch blocked on most sources — intelligence obtained via web search and secondary reporting.</div>
+  <div>7 items &middot; generated 2026-06-18 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
