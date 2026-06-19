@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-19</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, June 19, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li>OVHcloud commercially deploys Quandela <strong>Belenos</strong> 12-qubit photonic quantum system — first photonic QaaS on sovereign European cloud.</li>
+      <li>EPFL SiN chip generates femtosecond pulses rivalling room-sized lab laser systems.</li>
+      <li>PsiQuantum breaks ground on utility-scale silicon-photonic quantum computer site at Moreton Bay, Australia; dedicated Griffith University test lab for photonic chip characterisation now operational.</li>
+      <li>gdsfactory <strong>v9.44.0</strong> released; organic thin-film &#967;<sup>(2)</sup> demonstrated on standard Si photonics platform.</li>
+      <li>arXiv: photonic quantum neural fields for physics-informed ML (2606.18713); PNR detector certification protocol for photonic QC (2606.14365).</li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+  <article class="item">
+    <h3><a href="https://www.optica-opn.org/home/newsroom/2026/june/ultrafast_chip_brings_the_energy/">Ultrafast Chip Brings the Energy: EPFL SiN Femtosecond Laser on a PIC</a></h3>
+    <p>EPFL researchers have demonstrated a silicon nitride photonic chip that generates femtosecond optical pulses with peak powers rivalling bulky laboratory laser systems. The chip integrates anomalous-dispersion SiN waveguides with on-chip nonlinear soliton compression. <em>Why it matters:</em> Ultrashort-pulse generation on a PIC unlocks on-chip time-domain sensing, nonlinear frequency conversion, and coherent LiDAR without external bulk optics — directly relevant to miniaturised photonic compute and sensing front-ends.</p>
+    <div class="meta">optica-opn.org · June 2026</div>
+  </article>
+  <article class="item">
+    <h3><a href="https://quantumcomputingreport.com/ovhcloud-expands-sovereign-qaas-platform-via-quandelas-belenos-photonic-system/">OVHcloud Expands Sovereign QaaS Platform via Quandela's Belenos Photonic System</a></h3>
+    <p>OVHcloud has commercially launched access to Quandela's Belenos 12-qubit photonic quantum computer through its sovereign cloud platform, marking the first commercial deployment of a photonic quantum-computing-as-a-service system on European infrastructure. The Belenos system uses time-multiplexed single-photon qubits and operates at room temperature. <em>Why it matters:</em> Demonstrates photonic QC is production-ready for sovereign cloud; directly relevant to Akhetonics' mapping of the EU quantum-photonic stack.</p>
+    <div class="meta">quantumcomputingreport.com · June 17, 2026</div>
+  </article>
+  <article class="item">
+    <h3><a href="https://thequantuminsider.com/2026/06/17/psiquantum-advances-utility-scale-quantum-computing-project-in-australia/">PsiQuantum Advances Utility-Scale Quantum Computing Project in Australia</a></h3>
+    <p>PsiQuantum has broken ground on its Moreton Bay Central site in Queensland — the planned home for what the company calls the first utility-scale fault-tolerant quantum computer, built on silicon photonic chips fabricated at GlobalFoundries. The announcement follows the opening of a dedicated Test &amp; Validation Lab at Griffith University housing the Poseidon custom cryogenic system for parallel photonic chip characterisation. <em>Why it matters:</em> Silicon photonic chip production at volume scale for QC validates PIC manufacturability at leading-edge CMOS nodes.</p>
+    <div class="meta">thequantuminsider.com · June 17, 2026</div>
+  </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+  <article class="item">
+    <h3><a href="https://gdsfactory.github.io/gdsfactory/">gdsfactory v9.44.0 Released</a></h3>
+    <p>The gdsfactory open-source PIC layout and EPDA library has updated to v9.44.0, continuing its active June 2026 release cadence (up from v9.43.0 in mid-May). The project remains the most widely adopted open-source silicon-photonics EDA tool, with an active ecosystem of packages including gplugins, kfactory, and SAX. <em>Why it matters:</em> Rapid point releases indicate active community development; each version may introduce new component cells, PDK hooks, or agentic design interfaces relevant to Akhetonics' toolchain evaluation.</p>
+    <div class="meta">gdsfactory.github.io · June 2026</div>
+  </article>
+  <article class="item">
+    <h3><a href="https://www.laserfocusworld.com/optics/article/55381360/organic-thin-film-brings-second-order-optical-nonlinear-effects-to-silicon-photonics">Organic Thin Film Brings Second-Order Nonlinear Effects to Silicon Photonics</a></h3>
+    <p>Researchers have deposited a poled organic thin film on a silicon-on-insulator waveguide to enable &#967;<sup>(2)</sup> second-harmonic generation — a nonlinear effect normally absent in centrosymmetric Si. The approach is CMOS-process-compatible and opens a route to on-chip electro-optic modulation and frequency doubling without lithium niobate transfer-printing. <em>Why it matters:</em> A manufacturable path to &#967;<sup>(2)</sup> on standard SiPho platforms could simplify modulator design and PIC-level frequency conversion for integrated optical compute.</p>
+    <div class="meta">laserfocusworld.com · June 2026</div>
+  </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+  <article class="item">
+    <h3><a href="https://arxiv.org/abs/2606.18713">Photonic Quantum Neural Fields for Physics-Informed Scientific Machine Learning <span class="badge">arXiv 2606.18713</span></a></h3>
+    <p>Proposes photonic quantum neural fields — trainable physical representations built from optical phase shifts, linear interference networks, and single-photon measurement — as a native photonic hardware substrate for physics-informed machine learning. Demonstrates the approach on partial differential equation solving tasks with improved parameter efficiency over classical alternatives. <em>Why it matters:</em> Maps ML workloads directly onto photonic circuit primitives, bridging PIC design targets and scientific AI inference applications.</p>
+    <div class="meta">arXiv · June 17, 2026</div>
+  </article>
+  <article class="item">
+    <h3><a href="https://arxiv.org/abs/2606.14365">Certification of the Genuine Resolution of Photon-Number-Resolving Detectors <span class="badge">arXiv 2606.14365</span></a></h3>
+    <p>Introduces an operational framework and scalable protocol for certifying how many photons a PNR detector can genuinely distinguish in a single measurement, using only coherent state probes. Applied to a 28-pixel superconducting nanowire single-photon detector (SNSPD), certifying genuine four-outcome resolution with explicit efficiency requirements. <em>Why it matters:</em> Standardised PNR benchmarking removes a critical uncertainty in photonic quantum circuit characterisation, gate fidelity validation, and threshold-crossing checks.</p>
+    <div class="meta">arXiv · June 12, 2026</div>
+  </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+  <p class="empty">Nothing notable in the last 24 h — EU photonics sources were quiet on 18–19 June. The PhotonDelta Global Photonics Engineering Contest submission window closes today (19 June); results expected in August.</p>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+  <article class="item">
+    <h3><a href="https://www.hpcwire.com/off-the-wire/photonic-inc-announces-final-close-of-200m-funding-round-at-2b-valuation/">Photonic Inc. Closes $200 M+ Round at $2 B Valuation <span class="badge">catch-up · May 12</span></a></h3>
+    <p>Canadian quantum startup Photonic Inc. announced the final close of over $200 M USD ($275 M CAD) led by Planet First Partners, with new investors including BDC, Export Development Canada, Bell Ventures, and returning investors Microsoft and BCI. The company's architecture uses optically-linked silicon spin qubits, with standard telecom photonics for qubit interconnect — giving the round direct relevance to PIC volume demand. Total capital raised now exceeds $350 M USD at a $2 B post-money valuation. <em>Why it matters:</em> Significant capital for silicon photonic interconnect R&amp;D; rival photonic-qubit approach to PsiQuantum and Quandela.</p>
+    <div class="meta">hpcwire.com · May 12, 2026</div>
+  </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+  <article class="item">
+    <h3><a href="https://www.hpcwire.com/off-the-wire/psiquantum-opens-test-validation-lab-at-griffith-university/">PsiQuantum Opens Test &amp; Validation Lab at Griffith University</a></h3>
+    <p>PsiQuantum launched a dedicated Test &amp; Validation Lab at Griffith University's Nathan Campus in Brisbane, housing the custom Poseidon cryogenic system — an ultra-high-cooling-capacity unit with parallel-slotted chambers designed to simultaneously cycle, chill, and characterise multiple independent silicon photonic chips. The facility serves as the central calibration hub for the Omega photonic chipset and integration subsystems. <em>Why it matters:</em> Signals the transition from photonic QC R&amp;D to industrial-scale chip characterisation; a model for dedicated PIC test infrastructure at volume production readiness.</p>
+    <div class="meta">hpcwire.com · May 27, 2026</div>
+  </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: arXiv list pages returned HTTP 403 (web search fallback used); Reddit RSS returned 403 from datacenter IP (no indexed threads found via search). Direct page fetches blocked on several sources; all items sourced via verified web search results.</div>
+  <div>9 items &middot; generated 2026-06-19 03:45 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
