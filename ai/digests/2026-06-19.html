@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-19</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Friday, June 19, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 21 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">GLM-5.2: 744B MoE open-weight model, 1M context, MIT license<span class="src">Z.ai / HF</span></a>
+        <span class="why">Beats Claude Opus 4.7 on coding benchmarks; open weights released June 16 — first frontier-tier open model in weeks.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.16140">VibeThinker-3B: Frontier coding performance at 3B parameters<span class="src">arXiv</span></a>
+        <span class="why">Matches Opus 4.5 on LCBv6 (80.2) via post-training on Qwen2.5-Coder-3B; ~$25-60k training budget shows post-training ROI.</span>
+      </li>
+      <li><a href="https://charity.wtf/2026/06/15/ai-demands-more-engineering-discipline-not-less-xpost/">AI demands more engineering discipline. Not less — Charity Majors<span class="src">charity.wtf</span></a>
+        <span class="why">Argues AI-generated code raises the bar for observability, tests, and feedback loops — not an excuse to skip them.</span>
+      </li>
+      <li><a href="https://news.ycombinator.com/item?id=48196867">Gemini CLI deprecating June 18, 2026 — HN discussion<span class="src">Hacker News</span></a>
+        <span class="why">Google's free-tier CLI exit reshuffles open coding-agent tooling; community migrating to Claude Code and alternatives.</span>
+      </li>
+      <li><a href="https://github.com/Kilo-Org/kilocode">Kilo Code: open-source all-in-one agentic engineering platform<span class="src">GitHub</span></a>
+        <span class="why">1.5M users, Apache-2.0, orchestrator mode routes subtasks across specialist agents; launched auto-model routing this week.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.16140">VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models</a></h3>
+      <p class="summary">A 3.09B-parameter model fine-tuned from Qwen2.5-Coder-3B via diversity-driven RL achieves 80.2 on LCBv6 and 94.3 on AIME 2026, matching Opus 4.5-level coding performance. The post-training pipeline uses high-signal synthetic data with verifiable solutions, multi-path reasoning filtering, two-stage SFT, and checkpoint selection by target accuracy rather than validation loss.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates frontier-tier coding at a ~$25–60k training budget, making strong post-training accessible beyond large labs.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">2026-06-17</span>
+        <span class="chip hot">HF trending</span>
+        <a href="https://arxiv.org/abs/2606.16140" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.16576">Can LLM Agents Infer World Models? Evidence from Agentic Automata Learning</a></h3>
+      <p class="summary">Uses deterministic finite automata (DFA) as a controlled testbed for measuring whether tool-calling LLM agents can uncover hidden environments via membership and equivalence queries. Performance drops sharply with DFA size; reasoning models outperform non-reasoning models, but all struggle with query planning, evidence integration, and hypothesis construction.</p>
+      <p class="why"><b>Why it matters:</b> Exposes a structural gap in reasoning agents beyond surface-level task completion — they fail at systematic world-model inference.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">2026-06-15</span>
+        <a href="https://arxiv.org/abs/2606.16576" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19662">Multimodal LLMs and Physics Visual Tasks: Comparative Analysis of Performance and Costs</a></h3>
+      <p class="summary">Evaluates MLLMs capable of processing text and visual inputs on physics visual tasks, finding performance ranges from 81.5% to 21%. Expensive models do not reliably outperform cheaper alternatives, challenging the cost-capability assumption in multimodal deployments.</p>
+      <p class="why"><b>Why it matters:</b> Provides empirical cost-performance guidance for teams choosing multimodal models for STEM/reasoning workloads.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">cs.CL</span>
+        <span class="chip">2026-06-19</span>
+        <a href="https://arxiv.org/abs/2606.19662" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.12780">ProPlay: Procedural World Models for Self-Evolving LLM Agents</a></h3>
+      <p class="summary">Introduces a procedural world model that lets agents rehearse future procedural paths via "preplay," represented as a procedure graph of successful task trajectories with reliability-weighted edges. Evaluated on τ-Bench, ScienceWorld, and PlanCraft; closes the loop between memory and planning that prior agent methods left open.</p>
+      <p class="why"><b>Why it matters:</b> Self-evolving agents that update their world model from experience — without external supervision — are a prerequisite for robust long-horizon autonomy.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">cs.MA</span>
+        <span class="chip">2026-06-11</span>
+        <a href="https://arxiv.org/abs/2606.12780" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.13598">Reward Modeling for Multi-Agent Orchestration (OrchRM)</a></h3>
+      <p class="summary">Presents OrchRM, a reward model operating at the orchestration level for efficient reward-guided orchestrator training and multi-agent system test-time scaling. Improves training efficiency by up to 10× in token usage and MAS test-time scaling performance by up to 8% in accuracy.</p>
+      <p class="why"><b>Why it matters:</b> Scalable reward signal at the orchestration layer is the missing piece for training multi-agent systems end-to-end.</p>
+      <div class="row">
+        <span class="chip">cs.MA</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">2026-06-11</span>
+        <a href="https://arxiv.org/abs/2606.13598" class="src-link">arxiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/Kilo-Org/kilocode">Kilo-Org/kilocode</a></h3>
+      <p class="summary">Open-source agentic engineering platform for VS Code, JetBrains, and CLI. Orchestrator mode decomposes complex tasks into subtasks and routes each to specialist modes (architect, coder, debugger). Raised $8M seed; 1.5M users. Apache-2.0. Shipped auto-model routing and a REVIEWS.md-aware Code Reviewer mode this week.</p>
+      <p class="why"><b>Why it matters:</b> Model-neutral orchestration with cross-IDE reach makes it a direct open alternative to Cursor and proprietary coding agents.</p>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 1,345 today</span>
+        <span class="chip">Apache-2.0</span>
+        <a href="https://github.com/Kilo-Org/kilocode" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/zai-org/GLM-5">zai-org/GLM-5</a></h3>
+      <p class="summary">Official Z.ai repo for the GLM-5 model family, now featuring GLM-5.2: a 744B MoE model (40B active params) with a 1M-token context window, IndexShare for speculative decoding, and two thinking-effort levels. MIT-licensed open weights released June 16. No published benchmarks at launch — performance claims rest on GLM-5.1 SWE-bench Verified 77.8% and community hands-on testing.</p>
+      <p class="why"><b>Why it matters:</b> First open frontier-tier model since Claude Fable 5 dropped; MIT license means it can be used in commercial products without restriction.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 202 today</span>
+        <span class="chip">MIT</span>
+        <a href="https://github.com/zai-org/GLM-5" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/withastro/flue">withastro/flue</a></h3>
+      <p class="summary">TypeScript agent-harness framework from the Astro team (Fred Schott). Equation: Agent = Model + Harness. Provides headless, programmable agents with sessions, tools, filesystem access, sandbox isolation, and deployment to Node.js, Cloudflare, GitHub Actions, and GitLab CI. Apache-2.0.</p>
+      <p class="why"><b>Why it matters:</b> Runtime-agnostic harness abstracts the scaffolding layer; write once, deploy agents anywhere without rewriting glue code per platform.</p>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 162 today</span>
+        <span class="chip">Apache-2.0</span>
+        <a href="https://github.com/withastro/flue" class="src-link">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/zai-org/glm-52-blog">GLM-5.2 Agent Mode: 1M-Context Open Frontier Model</a></h3>
+      <p class="summary">GLM-5.2's 1M-token context window is specifically designed for coding agent scenarios: full-repository tasks, automated research, performance optimization, and complex debugging without constant summarization and re-fetching. Natively supported on eight coding agents including ZCode, Claude Code, and OpenCode on day one. Two thinking-effort levels let agents trade cost for depth.</p>
+      <p class="why"><b>Why it matters:</b> An open-weight model that a coding agent can use for genuine long-horizon work — at 1/10th the cost of US frontier models — removes a major deployment barrier.</p>
+      <div class="row">
+        <span class="chip">open-weight</span>
+        <span class="chip">1M context</span>
+        <span class="chip">MIT</span>
+        <a href="https://huggingface.co/blog/zai-org/glm-52-blog" class="src-link">HF blog →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://kilo.ai/">Kilo Code: Orchestrated Multi-Agent Engineering Platform</a></h3>
+      <p class="summary">Kilo Code's Orchestrator mode breaks complex tasks into subtasks and routes each to the right specialist mode: architect for planning, coder for implementation, debugger for fixing. Auto Model routing (shipped this week) picks the right model per subtask based on task type and budget tier. Runs across VS Code, JetBrains, and CLI.</p>
+      <p class="why"><b>Why it matters:</b> Auto-routing removes the manual model-selection burden in multi-step agentic workflows — agents should pick their own tools.</p>
+      <div class="row">
+        <span class="chip">orchestration</span>
+        <span class="chip">multi-model</span>
+        <span class="chip">open-source</span>
+        <a href="https://kilo.ai/" class="src-link">kilo.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/withastro/flue">Flue: TypeScript Sandbox Agent Framework</a></h3>
+      <p class="summary">Flue is described as "Claude Code, but 100% headless and programmable" — a runtime-agnostic framework for building autonomous agents with isolated execution environments. Agent = Model + Harness; the harness layer handles sessions, tools, filesystem, sandbox, and deployment targets. Write once, deploy across Node.js, Cloudflare, GitHub Actions, GitLab CI.</p>
+      <p class="why"><b>Why it matters:</b> Harness-first design separates agent logic from deployment infra — the right abstraction for teams building reproducible, auditable agent pipelines.</p>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip">headless</span>
+        <span class="chip">sandbox</span>
+        <a href="https://github.com/withastro/flue" class="src-link">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://charity.wtf/2026/06/15/ai-demands-more-engineering-discipline-not-less-xpost/">AI Demands More Engineering Discipline. Not Less — Charity Majors</a></h3>
+      <p class="summary">Charity Majors argues that since Opus 4.5 can generate "approximately median software engineer" code, the bar for engineering culture — fast feedback loops, observability, tests, CI — rises rather than falls. Only ~5–10% of teams work in short feedback loops; AI tooling makes this more achievable but doesn't replace the discipline. "The knowledge in our heads is unavailable to AI until we encode it into the system."</p>
+      <p class="why"><b>Why it matters:</b> The highest-value AI-coding leverage is in workflow instrumentation, not model quality — a reframe that shifts where teams should invest.</p>
+      <div class="row">
+        <span class="chip">practice</span>
+        <span class="chip">2026-06-15</span>
+        <span class="chip hot">HN top</span>
+        <a href="https://charity.wtf/2026/06/15/ai-demands-more-engineering-discipline-not-less-xpost/" class="src-link">charity.wtf →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://sebastianraschka.com/blog/2026/vibethinker-3b-post-training.html">VibeThinker-3B Post-Training Notes — Sebastian Raschka</a></h3>
+      <p class="summary">Deep-dive on what made VibeThinker-3B work: high-signal synthetic math/code data with verifiable solutions, aggressive filtering of multi-path reasoning samples, two-stage SFT (broad coverage then hard long-reasoning), and checkpoint selection by target accuracy rather than validation loss. Raschka estimates the training run cost $25–60k — "a strong small-model result and a useful post-training write-up."</p>
+      <p class="why"><b>Why it matters:</b> A reproducible recipe for small-model reasoning uplift at a budget accessible to academic labs and well-funded startups.</p>
+      <div class="row">
+        <span class="chip">post-training</span>
+        <span class="chip">small models</span>
+        <span class="chip">2026-06-17</span>
+        <a href="https://sebastianraschka.com/blog/2026/vibethinker-3b-post-training.html" class="src-link">sebastianraschka.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48587383">GLM-5.2 is probably the most powerful text-only open weights LLM</a></h3>
+      <p class="summary">High-engagement thread on GLM-5.2's position in the open-weights landscape — bull case for the 1M context window in production, comparing agentic throughput against DeepSeek V4 Flex and Qwen3-235B. Some skepticism on benchmark credibility given no published evals at launch, but community hands-on testing broadly positive for coding tasks.</p>
+      <p class="why"><b>Why it matters:</b> Community consensus forms the practical benchmark for new open models faster than official evals.</p>
+      <div class="row">
+        <span class="chip">open weights</span>
+        <span class="chip">GLM-5.2</span>
+        <a href="https://news.ycombinator.com/item?id=48587383" class="src-link">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48567759">GLM-5.2 is the new leading open weights model on Artificial Analysis</a></h3>
+      <p class="summary">Discussion of GLM-5.2's position on Artificial Analysis' Intelligence Index: score 51, behind only Fable 5 (60), Opus 4.8 (56), and GPT-5.5 (55) among currently ranked models. Thread explores what "leading open weights" means when scores are self-reported without benchmark transparency.</p>
+      <p class="why"><b>Why it matters:</b> Benchmark leaderboard placement drives adoption; the "no benchmarks" controversy highlights the trust gap between Chinese and Western lab releases.</p>
+      <div class="row">
+        <span class="chip">benchmarks</span>
+        <span class="chip">GLM-5.2</span>
+        <a href="https://news.ycombinator.com/item?id=48567759" class="src-link">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48562111">VibeThinker-3B achieves 80.2 on LCBv6</a></h3>
+      <p class="summary">Thread examining VibeThinker-3B's 80.2 LCBv6 score from a small model. Discussion centers on whether Qwen2.5-Coder-3B contamination explains the benchmark, and on Sebastian Raschka's cost analysis suggesting ~$25–60k training spend. General sentiment: results look real, benchmark community remains appropriately cautious.</p>
+      <p class="why"><b>Why it matters:</b> Tracks the community's confidence calibration on small-model benchmark claims — a useful signal for which results to act on.</p>
+      <div class="row">
+        <span class="chip">small models</span>
+        <span class="chip">VibeThinker</span>
+        <a href="https://news.ycombinator.com/item?id=48562111" class="src-link">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48570948">AI demands more engineering discipline. Not less (Charity Majors)</a></h3>
+      <p class="summary">Heavily discussed post arguing AI-generated code raises rather than lowers the bar for engineering practices — observability, test coverage, fast feedback loops. If 2025 was the year of vibe coding, 2026 is shaping up as the return to discipline. Thread full of engineers sharing experiences of AI-assisted technical debt.</p>
+      <p class="why"><b>Why it matters:</b> Cultural shift from "AI removes the need for process" to "AI requires even better process" is becoming the practitioner consensus.</p>
+      <div class="row">
+        <span class="chip">practice</span>
+        <span class="chip hot">top thread</span>
+        <a href="https://news.ycombinator.com/item?id=48570948" class="src-link">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48196867">Gemini CLI will stop working from June 18, 2026</a></h3>
+      <p class="summary">Google's Gemini CLI free-tier deprecation effective June 18 triggers migration discussion. The community is moving toward Claude Code, OpenCode, Kilo Code, and local alternatives. Background: Google is consolidating CLI tooling into the paid Gemini Developer API tier, affecting thousands of automation scripts and CI workflows built on the free endpoint.</p>
+      <p class="why"><b>Why it matters:</b> Forced migration from a major vendor reshuffles open coding-agent tool adoption and favors open-source harnesses.</p>
+      <div class="row">
+        <span class="chip">Google</span>
+        <span class="chip">tooling</span>
+        <span class="chip">2026-06-18</span>
+        <a href="https://news.ycombinator.com/item?id=48196867" class="src-link">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — search indexing returned no recent Reddit threads for the tracked subreddits. This is expected on quiet days.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/17/glm-52/">GLM-5.2 is probably the most powerful text-only open weights LLM — Simon Willison</a></h3>
+      <p class="summary">Simon Willison's hands-on impressions of GLM-5.2 after release: the 1M context window is the most practically significant feature, GLM-5.2 at 2-bit quantization offers roughly "Opus-in-January" capability locally, and the MIT license is strategically important given ongoing US AI export restrictions affecting Chinese labs.</p>
+      <p class="why"><b>Why it matters:</b> Willison's practical signal on new models carries outsized weight in the developer community — his framing shapes adoption curves.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-06-17</span>
+        <a href="https://simonwillison.net/2026/Jun/17/glm-52/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding">[AINews] GLM-5.2: the top Frontend Coding model in the world — Latent Space</a></h3>
+      <p class="summary">Latent Space AINews issue covering GLM-5.2's release alongside IndexShare for speculative decoding. Notes GLM-5.2 beats all Opus variants at frontend coding in blind tests, and that Z.ai shipped it with no official benchmarks — a deliberate choice to let community evaluation drive trust. Also covers the speculative decoding innovation that makes the 744B MoE more inference-efficient.</p>
+      <p class="why"><b>Why it matters:</b> Latent Space's daily AI news distillation is one of the highest-signal newsletters for tracking model releases and their practical implications.</p>
+      <div class="row">
+        <span class="chip">Latent Space</span>
+        <span class="chip">GLM-5.2</span>
+        <span class="chip">2026-06-17</span>
+        <a href="https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding" class="src-link">latent.space →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://releasebot.io/updates/anthropic/claude-code">Anthropic Claude Code Updates — June 18, 2026</a></h3>
+      <p class="summary">Claude Code's June 18 release fixes mid-stream drops, stuck spinners, WSL2 scrolling issues, subagent transcript and focus bugs, remote task status glitches, and plugin loading performance. Claude Design updates add tighter Claude Code sync, direct canvas editing, and stronger layout controls for design-to-code handoff.</p>
+      <p class="why"><b>Why it matters:</b> Reliability fixes in Claude Code directly impact agentic workflow stability — subagent transcript bugs and remote task status were blocking production use cases.</p>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">Claude Code</span>
+        <span class="chip">2026-06-18</span>
+        <a href="https://releasebot.io/updates/anthropic/claude-code" class="src-link">releasebot.io →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-19 01:04 UTC<br>
+    <span>Source issues: arXiv direct fetch returned HTTP 403 (blocked); papers sourced via web search and HF papers page. HN Algolia API returned 403; HN items sourced via web search. Reddit: not assessed (HTTP 403 + no indexed results from tracked subreddits).</span>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
