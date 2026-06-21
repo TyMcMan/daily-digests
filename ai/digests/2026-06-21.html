@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-21</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, June 21, 2026</div>
+    <div class="meta">Covering the last 48h (catch-up) · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 23 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://arxiv.org/abs/2606.19195">Moebius: 0.2B Inpainting Framework Matching 10B Performance<span class="src">arXiv · 52 HF upvotes</span></a>
+        <span class="why">Local-λ Mix Interaction compresses context into fixed-size matrices — 15× faster than industrial baselines, edge-deployable.</span>
+      </li>
+      <li><a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/">DeepMind AI Control Roadmap: Defense-in-Depth for Production Agents<span class="src">DeepMind Blog</span></a>
+        <span class="why">First detailed public disclosure by a frontier lab of how it operationalizes AI control inside live systems — a model for the industry.</span>
+      </li>
+      <li><a href="https://www.interconnects.ai/p/banning-open-source-ai-would-be-a">Interconnects: Banning Open-Source AI Would Be a Mistake<span class="src">Interconnects AI · June 19</span></a>
+        <span class="why">Lambert + Xu intervene directly in the live DC debate over AI regulation at a moment when Congress is actively considering restrictions.</span>
+      </li>
+      <li><a href="https://openai.com/index/introducing-life-sci-bench/">OpenAI LifeSciBench: AI Scores 28% on Expert Life-Science Research Tasks<span class="src">OpenAI · June 17</span></a>
+        <span class="why">750 expert-authored tasks expose the gap between current AI and genuine scientific reasoning — a key eval for AI-for-Science divisions.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.19605">FAPO: Fully Autonomous Prompt Optimization (+14pp on Agentic Pipelines)<span class="src">arXiv · 13 HF upvotes</span></a>
+        <span class="why">Self-improves entire multi-step LLM pipelines without human input — points toward self-optimizing agentic systems.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">4</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">4</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">3</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">5</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19195">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</a></h3>
+      <p class="summary">Proposes the Local-λ Mix Interaction (LλMI) block — Local-λ and Interactive-λ modules — that compresses spatial contexts and semantic priors into fixed-size linear matrices, cutting a diffusion inpainting model to 0.22B parameters while matching 10B-scale quality. Paired with adaptive multi-granularity knowledge distillation, Moebius achieves over 15× faster inference than industrial-scale baselines.</p>
+      <p class="why"><b>Why it matters:</b> Makes frontier-quality inpainting deployable on edge devices without a quality tradeoff — 0.22B parameters opens up on-device creative AI.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">2026-06-18</span>
+        <span class="chip hot">52 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.19195" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20515">S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</a></h3>
+      <p class="summary">S-Agent is claimed to be the first agentic model purpose-built for spatial intelligence, decomposing 3D/4D tasks into perception-grounding steps then invoking specialized spatial tools at each reasoning step rather than relying on end-to-end inference. Substantially outperforms prior vision-language models on spatial benchmarks by treating spatial reasoning as a tool-augmented chain of thought.</p>
+      <p class="why"><b>Why it matters:</b> Opens a new agentic paradigm for embodied and robotics tasks that need explicit spatial understanding — distinct from generic VLM capabilities.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">cs.CV</span>
+        <span class="chip">2026-06-20</span>
+        <span class="chip hot">26 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.20515" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19419">Playful Agentic Robot Learning (RATs)</a></h3>
+      <p class="summary">Before any downstream task is given, an LLM-based coding agent invents its own manipulation tasks, writes code-as-policy, verifies intermediate progress, diagnoses failures, and distills successes into a persistent reusable skill library — all without gradients or RL. At task-time, accumulated skills transfer to new objectives zero-shot.</p>
+      <p class="why"><b>Why it matters:</b> A scalable, gradient-free path to lifelong robot skill accumulation using only language model inference — relevant to embodied AI and autonomous agent design.</p>
+      <div class="row">
+        <span class="chip">cs.RO</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">2026-06-19</span>
+        <span class="chip hot">24 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.19419" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19531">ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing?</a></h3>
+      <p class="summary">Challenges the assumption that world action models (WAMs) require expensive video generation; builds a WAM family on image-editing foundation models, showing that single next-frame prediction via image editing matches or exceeds full video-rollout WAMs on robotic manipulation benchmarks.</p>
+      <p class="why"><b>Why it matters:</b> Dramatically reduces compute cost for training and deploying action-conditioned world models — a simpler, cheaper path to embodied AI world models.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">cs.RO</span>
+        <span class="chip">2026-06-19</span>
+        <span class="chip hot">23 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.19531" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20517">Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages</a></h3>
+      <p class="summary">Extends the widely-used LiveCodeBench (previously Python-only) to 12 programming languages — C++, Java, Rust, Go, and others — by translating Python algorithmic tasks while preserving contamination controls. Evaluation reveals stark performance drops outside Python even on identical logic, exposing real generalization gaps across frontier models.</p>
+      <p class="why"><b>Why it matters:</b> First rigorous contamination-free coding benchmark for multilingual LLM evaluation — exposes a hidden capability gap in current coding models.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">cs.SE</span>
+        <span class="chip">2026-06-20</span>
+        <span class="chip hot">22 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.20517" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19771">Beyond Entropy: Learning from Token-Level Distributional Deviations for LLM Reasoning</a></h3>
+      <p class="summary">Introduces Independent Combinatorial Tokens (ICT) for RLVR: rather than applying uniform entropy regularization to all tokens, ICT uses Jensen-Shannon divergence to identify "critical branching point" tokens and focuses optimization only there. Theoretical analysis using Shannon and Rényi entropy bounds proves ICT avoids both entropy collapse and entropy explosion during reasoning RL training.</p>
+      <p class="why"><b>Why it matters:</b> Addresses a core instability in the dominant paradigm for training reasoning LLMs post-DeepSeek-R1 — a practical fix for teams doing RLVR post-training.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">2026-06-18</span>
+        <a href="https://arxiv.org/abs/2606.19771" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19605">FAPO: Fully Autonomous Prompt Optimization</a></h3>
+      <p class="summary">FAPO autonomously optimizes entire multi-step LLM pipelines — not just single prompts — by identifying bottleneck steps and rewriting their prompts without human input. Achieves mean gains of +14.1 percentage points over baselines across diverse agentic tasks by targeting the weakest links in complex pipelines.</p>
+      <p class="why"><b>Why it matters:</b> Manual prompt engineering for multi-step pipelines is a major deployment bottleneck; FAPO points toward self-improving agentic systems that tune their own inference chains.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">2026-06-20</span>
+        <span class="chip hot">13 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.19605" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19857">Large Language Models Do Not Always Need Readable Language (BabelTele)</a></h3>
+      <p class="summary">Introduces BabelTele — compact, human-unreadable textual representations that instruction-tuned LLMs can still generate and interpret with near-perfect fidelity, maintaining 99.5% semantic fidelity while compressing text to just 27.9% of original volume. Evaluated via readability diagnostics, model likelihoods, human surveys, and downstream NLP tasks.</p>
+      <p class="why"><b>Why it matters:</b> Reveals LLMs have latent capacity for machine-native communication that could substantially reduce token costs in multi-agent pipelines.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">2026-06-19</span>
+        <a href="https://arxiv.org/abs/2606.19857" class="src-link">arxiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/THUDM/slime">THUDM/slime</a></h3>
+      <p class="summary">LLM post-training framework for RL scaling from Tsinghua University (THUDM) — the same framework that powered GLM-5.2, GLM-5.1, and DeepSeek V3 series. Connects Megatron training with SGLang inference, and supports multi-agent systems, tool use, verifiers, and custom environment interaction. Production-validated at frontier scale.</p>
+      <p class="why"><b>Why it matters:</b> The RL post-training stack behind the week's biggest open model releases is now public — lets smaller labs replicate GLM-scale RL training.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 6,557</span>
+        <span class="chip hot">+175 today</span>
+        <a href="https://github.com/THUDM/slime" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lsdefine/GenericAgent">lsdefine/GenericAgent</a></h3>
+      <p class="summary">Self-evolving autonomous agent (~3K-line seed) that grows a skill tree by crystallizing completed tasks into reusable skills automatically, achieving full system control with 6× less token consumption than comparable agents. Controls browsers (with login sessions), terminal, filesystem, screen vision, keyboard/mouse, and mobile via ADB. Supports Claude, Gemini, Kimi, MiniMax.</p>
+      <p class="why"><b>Why it matters:</b> Uses under 30K context windows vs. 200K–1M for comparable agents — a lean, practical self-evolving agent architecture with real-world compute and cost advantages.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 13,000</span>
+        <span class="chip">cross-platform</span>
+        <a href="https://github.com/lsdefine/GenericAgent" class="src-link">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19419">RATs: Playful Agentic Robot Learning via Gradient-Free Skill Accumulation</a></h3>
+      <p class="summary">Before any downstream task is given, an LLM coding agent invents its own manipulation tasks, writes code-as-policy, verifies progress, diagnoses failures, and distills successes into a persistent skill library — all without gradients. Skills transfer zero-shot to new objectives at task time.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates that gradient-free, experience-driven skill accumulation scales in physical robot settings — a promising harness pattern for open-world autonomous agents.</p>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">2026-06-19</span>
+        <span class="chip hot">24 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.19419" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19605">FAPO: Fully Autonomous Pipeline Prompt Optimization</a></h3>
+      <p class="summary">Autonomously optimizes entire multi-step LLM pipelines by identifying bottleneck steps and rewriting their prompts without human input. Mean +14.1pp gains over baselines across diverse agentic tasks. Targets weakest links in complex inference chains rather than single-prompt tuning.</p>
+      <p class="why"><b>Why it matters:</b> Self-improving agentic systems that tune their own prompt chains are the next frontier in harness design — FAPO provides the first rigorous framework for this.</p>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">2026-06-20</span>
+        <span class="chip hot">13 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2606.19605" class="src-link">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lsdefine/GenericAgent">GenericAgent: Self-Evolving Agent with Persistent Skill Trees</a></h3>
+      <p class="summary">A self-evolving autonomous agent that automatically crystallizes completed tasks into reusable skills, building a personalized skill tree over time. Uses under 30K context windows vs. 200K–1M for comparable agents. Controls real browsers, terminal, filesystem, screen vision, keyboard/mouse, and mobile via ADB.</p>
+      <p class="why"><b>Why it matters:</b> The persistent-skill-tree architecture directly addresses the token inefficiency and statelessness of conventional agentic harnesses.</p>
+      <div class="row">
+        <span class="chip">GitHub</span>
+        <span class="chip stars">★ 13,000</span>
+        <span class="chip">cross-platform</span>
+        <a href="https://github.com/lsdefine/GenericAgent" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48192383">Show HN: Forge — Guardrails Take an 8B Model from 53% to 99% on Agentic Tasks</a></h3>
+      <p class="summary">Open-source reliability layer for self-hosted LLM tool-calling: an 8B model without guardrails scored 53% on agentic tool-calling tasks; Forge lifts that to 99%. Built by Antoine Zambelli (AI Director, Texas Instruments), presented at ACM CAIS 2026. ~206 points on Hacker News.</p>
+      <p class="why"><b>Why it matters:</b> Addresses a critical pain point — small local models failing on multi-step agentic workflows — with a drop-in open-source solution that closes the reliability gap.</p>
+      <div class="row">
+        <span class="chip">Show HN</span>
+        <span class="chip hot">206 pts</span>
+        <span class="chip">open-source</span>
+        <a href="https://news.ycombinator.com/item?id=48192383" class="src-link">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.techtimes.com/articles/318450/20260616/databricks-summit-2026-day-2-agentic-ai-catalog-federation-move-lab-enterprise.htm">Databricks Summit 2026 Day 2: Agentic AI Moves from Lab to Enterprise</a></h3>
+      <p class="summary">Recap of the Databricks Data + AI Summit (Moscone Center, SF, 30,000+ attendees), focusing on the Agent Bricks expansion — now processing 1+ quadrillion tokens/year across 100,000+ agents. Sessions from Anthropic, LangChain, LlamaIndex, Cognition, and OpenAI converged on a shared theme: production agentic infrastructure is maturing faster than expected.</p>
+      <p class="why"><b>Why it matters:</b> The key engineering challenge is shifting to governance, memory management, and spend controls — marking the transition from agentic demo to agentic production.</p>
+      <div class="row">
+        <span class="chip">TechTimes</span>
+        <span class="chip">2026-06-16</span>
+        <span class="chip">conference recap</span>
+        <a href="https://www.techtimes.com/articles/318450/20260616/databricks-summit-2026-day-2-agentic-ai-catalog-federation-move-lab-enterprise.htm" class="src-link">techtimes →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://codeconductor.ai/blog/context-engineering">Context Engineering: A Complete Guide &amp; Why It Matters in 2026</a></h3>
+      <p class="summary">A practitioner guide positioning context engineering — the deliberate design of what data, memory, tools, and structure surrounds a model call — as the successor to prompt engineering. Traces the term to Shopify CEO Tobi Lütke's June 2025 coinage and argues that "designing context architecture" is the highest-leverage skill upgrade for AI engineers in 2026.</p>
+      <p class="why"><b>Why it matters:</b> Consolidates the practitioner consensus that context design (not prompt wording) is where LLM application performance is won or lost at scale.</p>
+      <div class="row">
+        <span class="chip">CodeConductor</span>
+        <span class="chip">2026</span>
+        <span class="chip">practitioner guide</span>
+        <a href="https://codeconductor.ai/blog/context-engineering" class="src-link">codeconductor →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.infoq.com/presentations/context-engineering-data/">Beyond Prompting: Context Engineering and Memory Management for AI Systems at Scale</a></h3>
+      <p class="summary">Adi Polak (15 years in distributed systems) walks through transitioning from stateless prompts to state-aware, context-rich agents using Apache Kafka and Flink for real-time stream processing, dynamic memory tiering, and MCP-based tool orchestration. Addresses practical failure modes — token limit blowouts, cost spikes, latency bottlenecks — when moving agents from prototype to production.</p>
+      <p class="why"><b>Why it matters:</b> Bridges academic patterns and real-world production engineering for context-stateful agents — directly actionable for teams scaling agentic systems.</p>
+      <div class="row">
+        <span class="chip">InfoQ</span>
+        <span class="chip">2026</span>
+        <span class="chip">presentation</span>
+        <a href="https://www.infoq.com/presentations/context-engineering-data/" class="src-link">infoq →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.marktechpost.com/2026/06/14/claude-code-guide-2026-25-features-with-examples-demo/">Claude Code Guide 2026: 25 Features with Examples + Demo</a></h3>
+      <p class="summary">Hands-on walkthrough of Claude Code's current feature set, covering its agentic workflow patterns (sequential, operator, split-and-merge, agent teams, headless) and the Opus 4.8 dynamic workflows that distribute work across hundreds of parallel subagents. Positions the tool as having moved from single-prompt code generation to full autonomous execution loops where the developer reviews the diff.</p>
+      <p class="why"><b>Why it matters:</b> Practical guide to the current production-grade feature surface — useful for teams adopting Claude Code as their primary agentic coding harness.</p>
+      <div class="row">
+        <span class="chip">MarkTechPost</span>
+        <span class="chip">2026-06-14</span>
+        <span class="chip">tutorial</span>
+        <a href="https://www.marktechpost.com/2026/06/14/claude-code-guide-2026-25-features-with-examples-demo/" class="src-link">marktechpost →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48594012">GLM-5.2: The Most Powerful Open Model Yet and the Brutal Reality of Running It <span class="chip hot">update</span></a></h3>
+      <p class="summary">~717 points · ~528 comments (June 20). Follow-up deep-dive on GLM-5.2's self-hosting reality: FP8 weights (~800 GB on disk) need 8× H200 SXM for the 1M-context window. One commenter shipped a non-trivial GTK/Rust/Lua app where "GLM wrote 93%." Covers VRAM headroom, fragmentation, and cost vs. cloud tradeoffs — the highest-engagement GLM-5.2 discussion on HN.</p>
+      <p class="why"><b>Why it matters:</b> Gives the practitioner view on deploying a frontier open model: the hardware bar is high but cloud fallback makes it accessible; the quality is real.</p>
+      <div class="row">
+        <span class="chip hot">717 pts</span>
+        <span class="chip">528 comments</span>
+        <span class="chip">2026-06-20</span>
+        <a href="https://news.ycombinator.com/item?id=48594012" class="src-link">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48518684">GLM 5.2 Is Out <span class="chip hot">update</span></a></h3>
+      <p class="summary">~647 points · ~368 comments (June 19). Launch thread for GLM-5.2: 744B total / ~40B active parameters (MoE), 1M-token context via DeepSeek Sparse Attention, 28.5T pretrain tokens, MIT open weights arriving June 22. Community reception strong; "gratitude to Chinese labs for being open with their work." Bull case: punches above weight on UI/design code; 1M context eliminates file-chunking in production.</p>
+      <p class="why"><b>Why it matters:</b> The community launch thread captures the moment GLM-5.2 arrived — the first open frontier model with 1M context at MIT license.</p>
+      <div class="row">
+        <span class="chip hot">647 pts</span>
+        <span class="chip">368 comments</span>
+        <span class="chip">2026-06-19</span>
+        <a href="https://news.ycombinator.com/item?id=48518684" class="src-link">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48192383">Show HN: Forge — Guardrails Take an 8B Model from 53% to 99% on Agentic Tasks</a></h3>
+      <p class="summary">~206 points. Open-source reliability layer for self-hosted LLM tool-calling. An 8B model without guardrails scored 53% on agentic tool-calling tasks; Forge lifts it to 99%. Built by Antoine Zambelli (AI Director, Texas Instruments), presented at ACM CAIS 2026. Addresses local model reliability failures in multi-step agentic workflows.</p>
+      <p class="why"><b>Why it matters:</b> Practical open-source solution that closes the reliability gap for small local models on agentic tasks — enables local agent deployment without frontier API costs.</p>
+      <div class="row">
+        <span class="chip hot">206 pts</span>
+        <span class="chip">Show HN</span>
+        <span class="chip">open-source</span>
+        <a href="https://news.ycombinator.com/item?id=48192383" class="src-link">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted)">Nothing notable in the last 48h — Reddit blocks automated fetch (HTTP 403); web search returned only topic titles without permalink URLs for this window. No fabricated thread links included.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/banning-open-source-ai-would-be-a">Banning Open Source AI Would Be A Mistake — Lambert &amp; Xu</a></h3>
+      <p class="summary">Nathan Lambert and Kevin Xu co-authored this op-ed — originally pitched to major outlets that declined to publish — arguing that current Washington momentum to regulate AI could inadvertently restrict open-source models. They contend open source is deeply misunderstood in policy circles and that heavy-handed restrictions would be a strategic mistake.</p>
+      <p class="why"><b>Why it matters:</b> A credible intervention in the live DC debate over AI export controls and licensing at a moment when Congress and the White House are actively considering new AI legislation.</p>
+      <div class="row">
+        <span class="chip">Interconnects AI</span>
+        <span class="chip">2026-06-19</span>
+        <span class="chip">policy</span>
+        <a href="https://www.interconnects.ai/p/banning-open-source-ai-would-be-a" class="src-link">interconnects →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/">DeepMind AI Control Roadmap: Securing Internal Systems Against Capable AI Agents</a></h3>
+      <p class="summary">DeepMind published its AI Control Roadmap — a "defense-in-depth" framework for securing its own internal systems against AI agents that may be capable but imperfectly aligned. Goes beyond model-level alignment to add system-level controls. Developed in response to increasingly powerful agents being deployed within Google's own infrastructure.</p>
+      <p class="why"><b>Why it matters:</b> First detailed public disclosure by a frontier lab of how it actually operationalizes AI control inside production systems — a concrete model for the industry to follow.</p>
+      <div class="row">
+        <span class="chip">Google DeepMind</span>
+        <span class="chip">2026-06-18</span>
+        <span class="chip">AI safety</span>
+        <a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/" class="src-link">deepmind →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/18/datasette-apps/">Datasette Apps: Host Custom HTML Applications Inside Datasette</a></h3>
+      <p class="summary">Willison introduces a new Datasette plugin that lets users host self-contained HTML applications directly within Datasette, with an LLM-friendly prompt bundled in the create-app form so AI assistants can write apps knowing the full database schema. Integrates with Datasette Agent to give AI tools the ability to create and edit apps.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates a practical pattern for embedding LLM-assisted code generation into data tools — lowers the barrier for non-developers to build database-driven apps via AI.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-06-18</span>
+        <span class="chip">tools</span>
+        <a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" class="src-link">simonwillison →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/introducing-life-sci-bench/">Introducing LifeSciBench: Expert Life-Science Benchmark for AI Research Assistants</a></h3>
+      <p class="summary">OpenAI released LifeSciBench, a 750-task expert-authored and expert-reviewed benchmark for evaluating how well AI handles real-world life-science research tasks, including experiment design, data interpretation, and literature synthesis. Models currently pass only about 28% of tasks, revealing a large gap between current AI capabilities and genuine scientific reasoning.</p>
+      <p class="why"><b>Why it matters:</b> A rigorous domain-specific yardstick at a moment when OpenAI and Anthropic are both building AI-for-Science divisions — key tool for tracking progress on one of AI's highest-stakes application areas.</p>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">2026-06-17</span>
+        <span class="chip">benchmark</span>
+        <a href="https://openai.com/index/introducing-life-sci-bench/" class="src-link">openai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/state-of-the-blog-mid-2026">State of the Blog — Mid-2026 — Nathan Lambert</a></h3>
+      <p class="summary">Lambert reflects on Interconnects' direction after his career transition away from Ai2, articulating three guiding goals: providing clarity on frontier model evolution, cultivating a diverse open-model ecosystem, and building institutions to sustain both. Frames the newsletter as a platform for substantive independent analysis as the field moves faster than most commentary can track.</p>
+      <p class="why"><b>Why it matters:</b> Signals Lambert's increasing role as an independent voice shaping how practitioners and policymakers understand open-model development, separate from any single lab's interests.</p>
+      <div class="row">
+        <span class="chip">Interconnects AI</span>
+        <span class="chip">2026-06-17</span>
+        <span class="chip">newsletter</span>
+        <a href="https://www.interconnects.ai/p/state-of-the-blog-mid-2026" class="src-link">interconnects →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-48h window (catch-up) · 2026-06-21 01:04 UTC<br>
+    Source issues: Reddit direct fetch blocked (HTTP 403); web search returned no permalink URLs — section empty. GitHub Trending: headroom/codebase-memory-mcp/OpenMontage excluded (already in 2026-06-19 digest). arXiv/HuggingFace direct fetch returned 403; content sourced via web search and HF GitHub tracker.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
