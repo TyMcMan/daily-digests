@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-21</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Sunday, June 21, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Tower + Marvell ship 5M coherent photonic ICs — volume proof for AI data center interconnect.</a></li>
+      <li><a href="#research">Nature: on-chip backpropagation training demonstrated at Bell Labs — landmark photonic ML result.</a></li>
+      <li><a href="#europe">CORNERSTONE: 59% of SiPh firms say their country lacks scale-up infrastructure; 66% cite manufacturing access as primary barrier.</a></li>
+      <li><a href="#compute">TrendForce: CPO/NPO market forecast to exceed $39B by 2030 at 37% CAGR; NPO preferred near-term path.</a></li>
+      <li><a href="#funding">Folio Photonics closes $8M Series A for multi-layer nanophotonic archival storage targeting AI workloads.</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+  <article class="item">
+    <h3><a href="https://www.globenewswire.com/news-release/2026/06/18/3313991/0/en/tower-semiconductor-and-marvell-ship-over-five-million-coherent-photonic-ics.html">Tower Semiconductor &amp; Marvell Ship Over 5 Million Coherent Photonic ICs</a></h3>
+    <p>Tower Semiconductor and Marvell announced a production milestone of 5 million coherent photonic ICs shipped for AI data center interconnect, using Tower's SiPh platform with non-silicon material integration, 3D electronics-optics integration, and V-groove optical packaging. The shipments target high-speed coherent optical links inside AI clusters.</p>
+    <p><em>Why it matters:</em> Five million coherent PICs represents meaningful volume proof — coherent PICs are far harder to manufacture at yield than direct-detect, making this a genuine supply-chain signal that high-performance optical interconnect is entering production scale.</p>
+    <div class="meta">GlobeNewswire &middot; June 18, 2026</div>
+  </article>
+
+  <article class="item">
+    <h3><a href="https://www.trendforce.com/presscenter/news/20260615-13098.html">TrendForce: CPO/NPO Market to Exceed $39B by 2030 at 37% CAGR</a></h3>
+    <p>TrendForce released a forecast that the combined co-packaged optics (CPO) and near-package optics (NPO) market will grow from ~$100M in 2025 to over $39B by 2030. Near-package optics (NPO) is identified as the preferred near-term transition path for hyperscalers. CPO will hold only ~0.5% penetration of AI optical transceiver modules in 2026 but is forecast at 35% by 2030.</p>
+    <p><em>Why it matters:</em> The ramp is steep and back-weighted — NPO as the bridging technology means the supply chain for CPO components needs to be in place now for a 2027–2028 volume ramp. Directly relevant to Akhetonics' market timing and positioning.</p>
+    <div class="meta">TrendForce &middot; June 15, 2026</div>
+  </article>
+
+  <article class="item">
+    <h3><a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261969604-semianalysis-cpo-delay-optical-selloff-tradingkey">SemiAnalysis CPO Delay Report Triggers Optical Stock Selloff; NVIDIA Rebuts<span class="badge">catch-up</span></a></h3>
+    <p>A SemiAnalysis client report titled "Power Outage" claimed NVIDIA's CPO products would not mass-ramp until 2028–2029, triggering single-day drops of 7–17% across optical stocks (AAOI, COHR, LITE, MRVL, CIEN) on June 9. NVIDIA SVP Gilad Shainer publicly rebutted during Computex, stating CPO is already shipping and ramping H2 2026 — the debate continues.</p>
+    <p><em>Why it matters:</em> This is the supply-chain signal vs. noise debate in sharp relief. If NVIDIA's rebuttal holds, optical interconnect volumes accelerate; if SemiAnalysis is right, the CPO ramp timeline slips two years — a pivotal uncertainty for photonic compute roadmaps.</p>
+    <div class="meta">TradingKey / SemiAnalysis &middot; June 9, 2026</div>
+  </article>
+
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+  <article class="item">
+    <h3><a href="https://github.com/gdsfactory/gdsfactory/releases/tag/v9.44.0">gdsfactory v9.44.0 Released<span class="badge">catch-up</span></a></h3>
+    <p>gdsfactory v9.44.0 addresses port orientation bugs for pins aligned with component boundaries, restores curved behavior for small-radius bends, and includes dependency upgrades and AWG component improvements. The project continues its active June 2026 release cadence.</p>
+    <p><em>Why it matters:</em> A focused maintenance release but relevant for layout-correct simulation workflows at mask tapeout; each point release in the active gdsfactory ecosystem can affect PDK compatibility and component library behavior for teams building on this stack.</p>
+    <div class="meta">GitHub / gdsfactory &middot; June 12, 2026</div>
+  </article>
+
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+  <article class="item">
+    <h3><a href="https://arxiv.org/abs/2606.19674">Phase Modulation Design for Testable Photonic Systems and Co-Packaged Optics</a></h3>
+    <p>Agnihotri, Kalla, and Blair (University of Utah) compare thermal vs. carrier-based phase modulation in Mach-Zehnder and microring modulators, covering extinction ratio, tuning efficiency, power draw, and modulation bandwidth, with a PAM-4 SiPh transmitter achieving 25 Gbps as a design target. Co-packaged optics and testability are explicit design constraints throughout.</p>
+    <p><em>Why it matters:</em> Directly actionable for PIC modulator design in CPO contexts — provides a side-by-side comparison of the two dominant modulation approaches under the power and bandwidth constraints that matter for co-packaged AI optics.</p>
+    <div class="meta">arXiv 2606.19674 &middot; June 18, 2026</div>
+  </article>
+
+  <article class="item">
+    <h3><a href="https://www.nature.com/articles/s41586-026-10262-8">Integrated Photonic Neural Network with On-Chip Backpropagation Training (Nature)</a></h3>
+    <p>Ashtiani, Idjadi, and Kim (Nokia Bell Labs) demonstrate end-to-end on-chip gradient-descent backpropagation training on a single photonic chip, with all linear and nonlinear computations on-chip, achieving &gt;90% accuracy on two nonlinear classification tasks without a digital computer in the training loop.</p>
+    <p><em>Why it matters:</em> This is arguably the most significant photonic ML training result to date — eliminating the digital co-processor from training removes a fundamental architectural compromise for on-chip learning and moves fully optical neural network training from concept to demonstrated reality.</p>
+    <div class="meta">Nature vol. 651 &middot; 2026</div>
+  </article>
+
+  <article class="item">
+    <h3><a href="https://arxiv.org/abs/2606.06515">DxPTA: Design Space Exploration for Photonic Transformer Accelerators<span class="badge">catch-up</span></a></h3>
+    <p>Researchers from NYU Abu Dhabi propose DxPTA, a constraint-aware hardware/software co-design methodology for photonic transformer accelerators using coherent optical dataflow. Parameter significance analysis navigates the design space under area, power, and latency budgets, enabling application-level evaluation rather than device-level benchmarking in isolation.</p>
+    <p><em>Why it matters:</em> Prior photonic accelerator papers proposed hardware without application-level constraints, making comparison to electronics unreliable. DxPTA provides the missing framework for evaluating photonic transformer accelerators against real system budgets.</p>
+    <div class="meta">arXiv 2606.06515 &middot; June 2026</div>
+  </article>
+
+  <article class="item">
+    <h3><a href="https://arxiv.org/abs/2606.10253">Multi-Channel Optical Vision Model: Spatial Multiplexing as a Trainable Dimension<span class="badge">catch-up</span></a></h3>
+    <p>Ali Momeni et al. demonstrate that spatial multiplexing in optical neural networks functions not just for parallel throughput but as a trainable representational coordinate, enabling a hybrid optical-electronic vision-language model where the ONN provides visual tokens to a digital transformer decoder.</p>
+    <p><em>Why it matters:</em> Directly relevant to Akhetonics: shows how optical spatial channels can do representational work — not just bandwidth work — in an ONN, opening a path to richer optical feature extraction in photonic inference engines.</p>
+    <div class="meta">arXiv 2606.10253 &middot; June 2026</div>
+  </article>
+
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+  <article class="item">
+    <h3><a href="https://tech.eu/2026/06/19/silicon-photonics-firms-warn-europe-lacks-infrastructure-to-turn-research-into-commercial-success/">CORNERSTONE Survey: 59% of SiPh Firms Say Their Country Lacks Scale-Up Infrastructure</a></h3>
+    <p>A CORNERSTONE Photonics Innovation Centre survey of 500 silicon photonics decision-makers across the UK, US, Netherlands, Germany, and Spain found 59% say their country lacks infrastructure to move from research to commercialization, with 66% citing manufacturing access as the primary barrier. 48% said they could reach commercial revenue 7–12 months earlier with 25% faster prototyping cycles.</p>
+    <p><em>Why it matters:</em> The EU market is structurally underserved for pilot-line and rapid-iteration foundry access — a gap that benefits vertically integrated players and highlights the value of reducing prototype-to-production cycle time, directly relevant to Akhetonics' positioning.</p>
+    <div class="meta">Tech.eu / CORNERSTONE &middot; June 19, 2026</div>
+  </article>
+
+  <article class="item">
+    <h3><a href="https://www.eu-startups.com/2026/04/camgraphic-lands-e211-million-to-tackle-ais-data-bottleneck-in-one-of-italys-largest-deeptech-funding-deals/">CamGraPhIC Receives €211M EU/Italian State Aid for Graphene Photonic Transceivers<span class="badge">catch-up</span></a></h3>
+    <p>The European Commission approved €211M in Italian state aid for CamGraPhIC, a Cambridge University spinout developing graphene-based photonic transceivers consuming 80% less energy than conventional data center transceivers. A pilot manufacturing facility is planned near Milan by 2028.</p>
+    <p><em>Why it matters:</em> Graphene electro-optic modulators are a direct competitor/collaborator technology to SiPh ring modulators and LiNbO3 platforms. The €211M scale signals EU commitment to keeping photonic component manufacturing in Europe — worth tracking the modulator performance claims and fab readiness.</p>
+    <div class="meta">EU-Startups / University of Cambridge &middot; April 2026</div>
+  </article>
+
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+  <article class="item">
+    <h3><a href="https://www.storagenewsletter.com/2026/06/17/folio-photonics-closes-8-million-series-a-financing-to-address/">Folio Photonics Closes $8M Series A for Nanophotonic Archival Storage</a></h3>
+    <p>Folio Photonics closed an $8M Series A co-led by Material Impact and the O.H.I.O. Fund to productize multi-layer nanophotonic archival storage media aimed at hyperscaler AI knowledge retention workloads. The company targets long-term storage of AI-generated data at lower energy cost than conventional magnetic or optical disc.</p>
+    <p><em>Why it matters:</em> An emerging photonic data infrastructure niche: GPUs generate intelligence, Folio retains it. Multi-layer nanophotonic storage is a distinct photonics application area adjacent to compute photonics — signals the broadening of photonic commercialization beyond interconnect and compute.</p>
+    <div class="meta">StorageNewsletter / Material Impact &middot; June 17, 2026</div>
+  </article>
+
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+  <p class="empty">Nothing new in the last 48h — SPIE TV RSS returned no new videos; Reddit RSS returned 403 (web search fallback found no relevant threads in this window).</p>
+  </section>
+
+</main>
+<footer>
+  <div>Source issues: lightmatter.co/news, ayarlabs.com/blog, nextplatform.com, optics.org/news, nature.com RSS feeds, photondelta.com/news, epic-photonics.com/news, laserfocusworld.com, cignal.ai, hs.flexcompute.com/blog, picmagazine.net — all returned HTTP 403 or redirect on direct fetch; findings recovered via web search. Reddit r/Optics and r/Semiconductors RSS returned 403; web search fallback found no relevant threads. Lightmatter NVLink Fusion and Ayar Labs NVLink Fusion items excluded (already in 2026-06-19 digest). Keysight/VPIphotonics acquisition and GF PDK items excluded (already in 2026-06-19 digest).</div>
+  <div>11 items &middot; generated 2026-06-21 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
