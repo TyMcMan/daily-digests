@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-22</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Monday, June 22, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Lightmatter &amp; Ayar Labs join NVIDIA NVLink Fusion — CPO crosses from R&amp;D to production AI infrastructure</a></li>
+      <li><a href="#pic-eda">Keysight acquires VPIphotonics, completing the industry's first end-to-end photonic EDA stack</a></li>
+      <li><a href="#funding">Photonic Inc. raises C$180M — 2026's largest photonic quantum compute fundraise to date</a></li>
+      <li><a href="#compute">Quantum Pulse Ventures QP2.0 cuts qubit error rates 10× via composite waveguide coupler redesign</a></li>
+      <li><a href="#europe">EPIC AGM Berlin: "European Photonics is at a Turning Point" — policy urgency rising</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+<article class="item">
+  <h3><a href="https://lightmatter.co/news/lightmatter-joins-nvidia-nvlink-fusion-ecosystem-to-advance-optical-interconnects-for-ai-infrastructure/">Lightmatter Joins NVIDIA NVLink Fusion Ecosystem with Passage &amp; Guide CPO Products</a><span class="badge">catch-up</span></h3>
+  <p>Lightmatter's Passage (3D-stacked silicon photonics engine) and Guide (VLSP light engine) CPO and NPO products are now validated within NVIDIA's NVLink Fusion scale-up ecosystem, cutting fiber and connector requirements by 50% in large AI clusters. The announcement positions Lightmatter as the first photonic interconnect vendor formally embedded in Nvidia's flagship AI fabric. <em>Why it matters:</em> Silicon photonics CPO is crossing from R&amp;D into production infrastructure procurement — a commercial validation moment with direct implications for Akhetonics' positioning in the optical interconnect supply chain.</p>
+  <div class="meta">Lightmatter &middot; June 3, 2026</div>
+</article>
+<article class="item">
+  <h3><a href="https://www.sdxcentral.com/news/ayar-labs-joins-nvlink-fusion-bringing-co-packaged-optics-to-nvidias-ai-infrastructure/">Ayar Labs TeraPHY Optical Chiplet Validated in NVIDIA NVLink Fusion</a><span class="badge">catch-up</span></h3>
+  <p>Ayar Labs' TeraPHY — the world's first UCIe optical chiplet — has been validated in the NVLink Fusion ecosystem alongside Lightmatter. With $870M total funding and $3.75B valuation post-Series E, Ayar now has a direct commercial pathway into hyperscaler AI clusters. <em>Why it matters:</em> Two photonics CPO vendors simultaneously embedded in Nvidia's NVLink ecosystem marks a tipping point for optical I/O as the default interconnect for frontier AI infrastructure — the die is cast for CPO adoption at scale.</p>
+  <div class="meta">SDxCentral &middot; June 2026</div>
+</article>
+<article class="item">
+  <h3><a href="https://www.nextplatform.com/connect/2026/06/17/quantum-pulse-does-industrial-light-magic-to-deliver-massive-boost-in-qubits/5257989">Quantum Pulse Ventures QP2.0: 10× Qubit Fidelity via Composite Coupler Redesign</a></h3>
+  <p>Israeli startup Quantum Pulse Ventures unveiled QP2.0 at a conference in Edinburgh, featuring a redesigned universal directional coupler using composite waveguides instead of uniform waveguides. The change reduces sensitivity to fabrication variation, delivering a 10× improvement in qubit error rates, 10× cost reduction per photonic quantum computer, and 4× faster quantum routing — without requiring any changes to existing Si, SiN, or thin-film LiNbO₃ fabrication platforms. <em>Why it matters:</em> Demonstrates that waveguide coupler geometry is a primary lever for scaling integrated photonic circuits — directly applicable to PIC design for both classical and quantum optical computing.</p>
+  <div class="meta">The Next Platform &middot; June 17, 2026</div>
+</article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+<article class="item">
+  <h3><a href="https://optics.org/news/keysight-technologies-inc.-has-completed-the-acquisition-of-vpiphotonics">Keysight Completes VPIphotonics Acquisition — First End-to-End Photonic EDA Stack</a></h3>
+  <p>Keysight completed its acquisition of VPIphotonics on June 9, 2026 (announced June 16), adding system-level link simulation (VPIphotonics Design Suite) to its existing RSoft (device-level FDTD/EME) and Photonic Designer (circuit-level) tools. The result is the industry's first integrated E-O-E simulation stack from waveguide physics through optical propagation to transceiver bit-error-rate — eliminating the need to transfer designs between separate tools. <em>Why it matters:</em> This EDA consolidation under one vendor mirrors what happened in electronic EDA in the 1990s; it will reshape vendor relationships, PDK requirements, and interoperability standards for PIC design teams globally over the next 2-3 years.</p>
+  <div class="meta">optics.org &middot; June 16, 2026</div>
+</article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+<p class="empty">Nothing new today.</p>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+<article class="item">
+  <h3><a href="https://epic-photonics.com/events/epic-annual-general-meeting-2026/">EPIC AGM &amp; Summit 2026 Berlin: "European Photonics is at a Turning Point"</a></h3>
+  <p>The European Photonics Industry Consortium held its Annual General Meeting and Summit in Berlin on June 16-17, 2026, featuring an interactive session titled "European Photonics is at a Turning Point." The session reflects sustained concern that Europe risks losing its integrated photonics manufacturing leadership without decisive policy action — a theme that directly echoes the Photonics21 SRIA recently submitted to the European Commission. An EPIC Online Technology Meeting on Laser Processes for the Semiconductor Industry followed on June 22. <em>Why it matters:</em> Policy signals from EPIC directly shape Horizon Europe funding calls — this AGM's tone will influence near-term EU R&amp;D investment in PIC manufacturing and Akhetonics' potential grant landscape.</p>
+  <div class="meta">EPIC Photonics &middot; June 16-17, 2026</div>
+</article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+<article class="item">
+  <h3><a href="https://betakit.com/photonic-says-its-ready-to-commercialize-quantum-with-180-million-fundraise/">Photonic Inc. Raises C$180M — Largest Photonic Quantum Compute Fundraise of 2026</a></h3>
+  <p>Vancouver-based Photonic Inc. closed C$180M (first tranche of a round targeting up to US$250M) to scale its silicon-spin / photonic networking quantum computing platform toward enterprise customers. The company uses photonics as the interconnect layer between quantum processing units, coupling silicon spin qubits via photonic channels for networked multi-QPU architectures. <em>Why it matters:</em> Optical networking and classical photonic compute share fabrication infrastructure — this is the largest photonic quantum compute fundraise of 2026 and a signal that institutional capital is moving into architectures that require photonic I/O at the quantum layer, directly adjacent to Akhetonics' domain.</p>
+  <div class="meta">BetaKit &middot; June 2026</div>
+</article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+<p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: All 18 vetted sources returned HTTP 403 Forbidden for direct fetch; all items retrieved via web search with URL verification from search index. SPIE TV YouTube RSS: no June 19-22 items surfaced in search. Cignal AI press releases: no June 19-22 items found. gdsfactory v9.44.0 and Flexcompute agentic design covered in prior digest.</div>
+  <div>6 items &middot; generated 2026-06-22 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
