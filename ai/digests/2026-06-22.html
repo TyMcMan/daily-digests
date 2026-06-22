@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-22</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Monday, June 22, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 10 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/">Nobel Laureate John Jumper (AlphaFold) Leaves DeepMind for Anthropic<span class="src">TechCrunch · June 20</span></a>
+        <span class="why">The co-creator of AlphaFold and 2024 Nobel Chemistry laureate joins Anthropic's life-sciences AI push — a landmark talent move in the frontier-lab talent war, following Noam Shazeer's exit to OpenAI 48h earlier.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.16993">DreamX-World 1.0: First Open-Source General-Purpose Interactive World Model<span class="src">arXiv · Alibaba AMAP-ML</span></a>
+        <span class="why">MIT-licensed 5B world model supporting camera navigation, scene revisitation, and promptable events — the first fully open-weight interactive world model competitive with proprietary alternatives.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.20493">Contagion Networks: Evaluator Bias Propagates Across Multi-Agent LLM Systems<span class="src">arXiv · June 18</span></a>
+        <span class="why">Cross-agent bias contagion coefficients of 0.157–0.352 expose a fundamental risk in LLM-as-judge multi-agent evaluation pipelines — bias migrates between agents even within the same underlying model.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.16682">Multimodal Evaluator Preference Collapse in Self-Evolving Agents<span class="src">arXiv · June 15</span></a>
+        <span class="why">Single evaluation strategy absorbs 48.4% of weight in multimodal self-evaluation (3.2× text-only collapse) — visual tasks corrupt strategy selection for other modalities via cross-modal contagion.</span>
+      </li>
+      <li><a href="https://github.com/topoteretes/cognee">cognee: Open-Source AI Memory Platform with Knowledge Graph (18k Stars)<span class="src">GitHub Trending</span></a>
+        <span class="why">Self-hosted persistent long-term memory via knowledge graph + vector embeddings for agents — a technically grounded alternative to hosted memory services.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">1</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">3</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">1</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.16993">DreamX-World 1.0: A General-Purpose Interactive World Model</a></h3>
+      <p class="summary">Alibaba AMAP-ML releases a general-purpose interactive text/image-to-video world model supporting camera navigation, scene revisitation, and promptable events across photorealistic, game-style, and stylized domains. Introduces E-PRoPE, a lightweight projective positional encoding for camera-aware attention, trained on a data engine combining Unreal Engine renders, gameplay recordings, and real-world video with recovered camera geometry. Model weights released under MIT license (HuggingFace) and Apache 2.0 (GitHub).</p>
+      <p class="why"><b>Why it matters:</b> First fully open-weight, commercially usable interactive world model — makes general-purpose world modeling accessible without proprietary API access, a GPT-moment for open world models.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">June 15</span>
+        <a class="src-link" href="https://huggingface.co/papers/2606.16993">HuggingFace ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <div class="card">
+      <h3><a href="https://github.com/topoteretes/cognee">topoteretes/cognee</a></h3>
+      <p class="summary">Open-source AI memory platform for agents with persistent long-term memory via knowledge graph. Combines vector embeddings, graph reasoning, and ontology generation to give agents structured memory that survives session boundaries — self-hostable, framework-agnostic, supports MCP.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the statelessness problem in agentic applications with a technically grounded, self-hosted alternative to proprietary memory services — a complete open-source alternative to Mem0.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">⭐ 18,642</span>
+        <span class="chip">+347 today</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/bytedance/deer-flow">bytedance/deer-flow</a></h3>
+      <p class="summary">ByteDance's open-source long-horizon SuperAgent harness that researches, codes, and creates. Supports sandboxed code execution, persistent memory, and skill-based subagents — designed as a production-tested reference architecture for multi-step research and code-generation pipelines.</p>
+      <p class="why"><b>Why it matters:</b> A production-tested reference architecture from a major AI lab for building multi-capability long-horizon agents — useful benchmark for teams designing their own SuperAgent stacks.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">⭐ 72,586</span>
+        <span class="chip">+442 today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20493">Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems</a></h3>
+      <p class="summary">Introduces Contagion Networks, a formal framework measuring how evaluator biases spread across interacting LLM agents. In a controlled 3-agent experiment with DeepSeek-chat — three evaluator bias profiles (structured, balanced, evidence-based) — cross-agent contagion coefficients measure 0.157–0.352, meaning biases systematically migrate between agents within the same underlying model even without explicit information sharing.</p>
+      <p class="why"><b>Why it matters:</b> LLM-as-judge multi-agent evaluation pipelines inherit and amplify evaluator bias — this framework quantifies contagion risk and motivates auditing inter-agent evaluation chains before deploying self-refining agent systems.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">cs.MA</span>
+        <span class="chip">June 18</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.16682">Multimodal Evaluator Preference Collapse: Cross-Modal Contagion in Self-Evolving Agents</a></h3>
+      <p class="summary">Shows that when AI agents use LLMs to self-evaluate outputs in a feedback loop, multimodal settings amplify Evaluator Preference Collapse (EPC) by 3.2× versus text-only: a single evaluation strategy absorbs 48.4% of all weight, while three visual-domain strategies receive only 9.1% combined. Documents "cross-modal contagion" — evaluator preferences acquired on one modality transfer to and corrupt strategy selection on another, measured via a four-phase isolation training paradigm.</p>
+      <p class="why"><b>Why it matters:</b> Self-evolving multimodal agents are systematically biased in ways that compound silently — any production system using self-evaluation for skill or strategy selection needs explicit decontamination between modalities.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">cs.CL</span>
+        <span class="chip">June 15</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <h3><a href="https://www.mindstudio.ai/blog/claude-code-agentic-workflow-patterns">Beyond One-Shot Prompts: 5 Claude Code Agentic Workflow Patterns</a></h3>
+      <p class="summary">A practitioner guide covering the five core Claude Code agentic workflow patterns — sequential, operator, split-and-merge, agent teams, and headless — with guidance on using orchestrators for delegation, code review, and automated pipelines. Includes a full end-to-end walkthrough of a Claude Code + Jira PIV (Plan-Implement-Verify) loop showing how to chain tasks across multiple agents in production.</p>
+      <p class="why"><b>Why it matters:</b> Gives teams a concrete taxonomy for structuring Claude Code agentic pipelines — moves beyond ad-hoc prompting to reusable workflow architectures for coding agents.</p>
+      <div class="row">
+        <span class="chip">Claude Code</span>
+        <span class="chip">Agents</span>
+        <span class="chip">June 17</span>
+        <a class="src-link" href="https://www.mindstudio.ai/blog/claude-code-agentic-workflow-patterns">MindStudio ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48498573">Claude Fable is relentlessly proactive</a></h3>
+      <p class="summary">Community discussion on Anthropic's Claude Fable exhibiting strongly proactive behavior — going beyond task scope to ask root-cause questions, restructure solutions unprompted, and challenge assumptions. Thread splits sharply on whether this is a feature or a liability for agentic workflows where scope creep is costly.</p>
+      <p class="why"><b>Why it matters:</b> Practitioner debate on the emergent behavioral properties of the latest frontier model — directly relevant for teams integrating Claude Fable into production agentic workflows that require bounded task execution.</p>
+      <div class="row">
+        <span class="chip hot">769 pts</span>
+        <span class="chip">657 comments</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48537165">Curl will not accept vulnerability reports during July 2026</a></h3>
+      <p class="summary">Daniel Stenberg announces curl will pause accepting security vulnerability reports for the month of July 2026. HN discussion probes AI-generated bogus vulnerability reports — a problem Stenberg has publicly flagged — as a likely motivating factor, and debates what it means for open-source security maintenance under rising AI-generated noise.</p>
+      <p class="why"><b>Why it matters:</b> A concrete data point on the operational cost of AI-generated security report spam on open-source maintainers — an emerging governance issue as AI-assisted vulnerability finders proliferate.</p>
+      <div class="row">
+        <span class="chip hot">775 pts</span>
+        <span class="chip">313 comments</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48538229">What happened to nerds?</a></h3>
+      <p class="summary">Widely-shared essay arguing that tech industry leaders have shifted from intrinsically motivated tinkerers to power/money-seeking figures. HN thread debates whether AI-era hype culture accelerates or reverses this trend, and what it means for open-source communities, academic research culture, and the long-term trajectory of AI development.</p>
+      <p class="why"><b>Why it matters:</b> An unusually candid community reflection on incentive structures shaping the AI field — useful context for understanding the cultural forces driving (and distorting) current AI research priorities.</p>
+      <div class="row">
+        <span class="chip hot">736 pts</span>
+        <span class="chip">499 comments</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted)">Reddit: not assessed — direct fetch returned HTTP 403 and web search did not surface indexed threads from June 21-22, 2026 for the monitored subreddits (r/MachineLearning, r/LocalLLaMA, r/Anthropic, r/AI_Agents, r/ClaudeCode). Quiet day or search index lag.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/">Nobel Laureate John Jumper (AlphaFold) Leaves DeepMind for Anthropic</a></h3>
+      <p class="summary">John Jumper — 2024 Nobel Chemistry laureate and co-creator of AlphaFold, VP at Google DeepMind for nearly nine years — announced he is joining Anthropic. The move aligns with Anthropic's expanding push into life sciences and computational biology. His departure follows within 48h of Gemini co-lead Noam Shazeer's exit to OpenAI — two landmark talent losses for Google/DeepMind in quick succession.</p>
+      <p class="why"><b>Why it matters:</b> The AlphaFold architect joining Anthropic signals serious frontier-lab investment in AI-for-science as a competitive frontier — and marks a significant escalation of the talent war between leading AI labs.</p>
+      <div class="row">
+        <span class="chip">TechCrunch</span>
+        <span class="chip">June 20</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-22 01:04 UTC<br>
+    Source issues: HN Algolia API + hnrss.org returned HTTP 403; HN threads recovered via web search (point/comment counts approximate). HuggingFace papers page returned HTTP 403; papers identified via search index and GitHub tracker. arXiv listing pages returned HTTP 403; papers found via search. Simon Willison RSS returned HTTP 403; tracked blogs sparse or outside 24h window.
+    <br>AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
