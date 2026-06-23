@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-23</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Tuesday, June 23, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Nokia scales US photonic chip ATP 10× in Pennsylvania — optical module supply chain for AI accelerating</a></li>
+      <li><a href="#pic-eda">A*STAR IME launches Silicon Photonics Packaging Phase II with Corning, NTT, and Fujikura</a></li>
+      <li><a href="#research">NTHU sets room-temperature single-photon brightness record: 2.3B photons/sec from perovskite nanocavity</a></li>
+      <li><a href="#research">Toronto–Ciena lidar captures location, speed, and surface material in a single coherent scan</a></li>
+      <li><a href="#research">Kerr soliton combs in tight-spiral microresonators: thermal model solves key integration hurdle</a></li>
+      <li><a href="#europe">EPIC Laser Processes for Semiconductor Industry meeting (June 22) — ultrafast laser manufacturing in focus</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+<article class="item">
+  <h3><a href="https://www.nokia.com/newsroom/nokia-announces-major-expansion-of-us-semiconductor-advanced-test-and-packaging-in-pennsylvania-to-bolster-ai-growth/">Nokia Scales Photonic Chip Advanced Test &amp; Packaging 10× at Allentown, PA Site</a></h3>
+  <p>Nokia is investing $30M to expand its Allentown, Pennsylvania facility — one of only a handful of US sites providing advanced test and packaging (ATP) of photonic chips into optical modules for AI and telecom infrastructure. Production capacity will increase up to 10× current levels, with commercial capacity expected by end of Q3 2026, and the workforce nearly doubling to over 500 engineering and manufacturing roles. The expansion is backed by $14M in Pennsylvania state aid and CHIPS Act tax credits. <em>Why it matters:</em> Nokia's Allentown site is a rare US node in the photonic chip ATP supply chain; 10× capacity growth here directly expands the pipeline that turns integrated photonic circuits (PICs) into deployable optical modules for AI data centers — a supply chain segment that will be critical for anyone commercializing PIC-based transceivers or compute interconnects.</p>
+  <div class="meta">Nokia Newsroom &middot; June 16, 2026</div>
+</article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+<article class="item">
+  <h3><a href="https://optics.org/news/singapore-team-launches-silicon-photonics-follow-up">A*STAR IME Launches Silicon Photonics Packaging Consortium Phase II</a></h3>
+  <p>Singapore's A*STAR Institute of Microelectronics (IME) is launching the second phase of its Silicon Photonics Packaging consortium, partnering with Corning, Fujikura, Accelink Technologies, NTT, and the Heinrich Hertz Institute in Germany. Phase I established a device library and grating couplers, achieving fiber-chip-fiber insertion loss below 8 dB with under 1.5 dB excess packaging loss using laser welding — a key benchmark for chip-level packaging yield. Phase II targets a broader range of packaging techniques, low-loss coupling modules, and laser diode integration for heterogeneous assembly. <em>Why it matters:</em> Packaging loss is frequently the dominant yield-limiter for PIC commercialisation; a public consortium validating sub-8 dB fiber-chip-fiber loss with industry partners (including a laser welding breakthrough) establishes the baseline that PDK and process tool vendors — including potential Akhetonics partners — will be measured against.</p>
+  <div class="meta">optics.org &middot; June 2026</div>
+</article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+<article class="item">
+  <h3><a href="https://thequantuminsider.com/2026/06/22/nthu-researchers-develop-worlds-brightest-single-photon-source-for-quantum-technologies/">NTHU Sets Room-Temperature Single-Photon Brightness Record: 2.3 Billion Photons/Second</a></h3>
+  <p>Researchers at National Tsing Hua University (NTHU) led by Prof. Hao-Wu Lin integrated perovskite quantum dots with ~100 nm silver nanocubes to create a plasmonic nanocavity single-photon emitter that achieves 2.3 billion photons per second — a global brightness record for room-temperature single-photon sources — with a 435-fold increase in emission rate, ultrafast emission, and non-blinking operation. A zwitterionic ligand coating protects perovskite QDs from alcohol-based silver nanocube solvents, solving a long-standing materials incompatibility problem. Published in Science Advances. <em>Why it matters:</em> Bright, room-temperature single-photon sources are a critical missing piece for chip-scale quantum photonic interconnects and quantum key distribution systems; this result pushes the brightness floor high enough to make realistic on-chip quantum photonic circuit integration significantly more tractable.</p>
+  <div class="meta">The Quantum Insider &middot; June 22, 2026</div>
+</article>
+<article class="item">
+  <h3><a href="https://techxplore.com/news/2026-06-lidar-material-properties.html">Toronto–Ciena Coherent Lidar Captures Location, Velocity, and Surface Material in One Scan</a></h3>
+  <p>Researchers from the University of Toronto and Ciena Corporation have demonstrated a lidar system that simultaneously measures the 3D location, Doppler velocity, and surface material properties of objects in a scene from a single coherent measurement per point, by adapting a standard telecom coherent optical modem and exploiting polarization information. The approach achieves millimeter-accurate distance, velocity, and material sensing using eye-safe laser power and leverages existing CMOS-compatible telecom components. Published in Optica. <em>Why it matters:</em> Multi-modal sensing (range + velocity + material) from a single coherent PIC-based scan eliminates the need for sensor fusion across separate modalities — a direct enabler for highly integrated, low-cost photonic lidar modules built around silicon photonics platforms.</p>
+  <div class="meta">TechXplore / Optica &middot; June 2026</div>
+</article>
+<article class="item">
+  <h3><a href="https://arxiv.org/abs/2606.18067">Kerr Soliton Combs in Ultra-Compact Tight-Spiral Microresonators (arXiv:2606.18067)</a></h3>
+  <p>Researchers demonstrate deterministic, highly stable Kerr soliton comb generation in tight-spiral microresonators with comb spacings as low as 16 GHz — small enough for practical spectroscopy and optical comms applications — and present a comprehensive experimentally-validated thermal model revealing non-trivial thermally-driven instabilities that govern soliton dynamics in ultra-compact resonant structures. Managing these thermally-driven dynamics, which differ substantially from larger free-standing resonators, is identified as the key engineering hurdle for chip-scale soliton comb integration. <em>Why it matters:</em> 16 GHz Kerr combs from an on-chip spiral resonator — compatible with standard silicon photonics fabrication — open a practical pathway to integrated frequency-comb sources for precision LIDAR, spectroscopy, and wavelength-division multiplexing links, all areas central to photonic compute and sensing.</p>
+  <div class="meta">arXiv:2606.18067 [physics.optics] &middot; June 2026</div>
+</article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+<article class="item">
+  <h3><a href="https://epic-photonics.com/events/epic-online-technology-meeting-on-laser-processes-for-the-semiconductor-industry/">EPIC Online Meeting: Laser Processes for the Semiconductor Industry (June 22, 2026)</a></h3>
+  <p>EPIC held its Online Technology Meeting on Laser Processes for the Semiconductor Industry on June 22, 2026, featuring presentations from HoloOr (diffractive beam shaping), RayVen (ultrafast laser applications), 3D Micromac (laser precision manufacturing systems), and Femtum (femtosecond laser products). Topics covered ultrafast and short-pulse laser use in wafer dicing, micro-drilling, patterning, laser annealing, and laser lift-off for advanced semiconductor structures, with emphasis on damage-free processing of multilayer and delicate materials. <em>Why it matters:</em> Ultrafast laser dicing and annealing are increasingly used in PIC and photonic module manufacturing; this meeting captures the current European supplier landscape for laser-based semiconductor processing steps that will be required as photonic foundry volumes scale under PIXEurope and Chips Act investment.</p>
+  <div class="meta">EPIC Photonics &middot; June 22, 2026</div>
+</article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+<p class="empty">Nothing new today.</p>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+<p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: All vetted sources returned HTTP 403 for direct fetch; all items retrieved via web search with URL verification from search index. gdsfactory: no release since v9.44.0 (June 12, covered in prior digest). Cignal AI, SPIE TV RSS, Nature Photonics RSS: no June 22-23 items surfaced. Funding section sparse — no fresh closes confirmed within last 24h.</div>
+  <div>6 items &middot; generated 2026-06-23 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
