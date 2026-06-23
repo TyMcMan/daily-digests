@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-23</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, June 23, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 22 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://openai.com/index/patch-the-planet/">OpenAI Patch the Planet + GPT-5.5-Cyber + Codex Security</a><span class="src">openai.com</span>
+        <span class="why">OpenAI's Daybreak initiative now enlists GPT-5.5-Cyber (85.6% on CyberGym) to find and patch bugs across 30+ open-source projects — the AI-vs-vulnerability arms race turns cooperative.</span>
+      </li>
+      <li><a href="https://www.techtimes.com/articles/318613/20260618/transformer-architect-behind-gemini-jumps-openai-after-google-spent-27b.htm">Noam Shazeer — Transformer co-inventor, Gemini architect — leaves Google for OpenAI</a><span class="src">techtimes</span>
+        <span class="why">Days after John Jumper (AlphaFold) went to Anthropic, Google loses another Nobel-adjacent titan; Shazeer will lead OpenAI's architecture research team.</span>
+      </li>
+      <li><a href="https://github.com/heygen-com/hyperframes">HyperFrames: Write HTML → Render Video, built for AI agents</a><span class="src">github</span>
+        <span class="why">Agents already write HTML; HyperFrames gives them a deterministic MP4 renderer — skills ship for Claude Code, Cursor, and Codex out of the box.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.19135">A Technical Taxonomy of LLM Agent Communication Protocols</a><span class="src">arxiv 2606.19135</span>
+        <span class="why">First principled classification of A2A, MCP, and competing inter-agent messaging standards — gives builders a vocabulary to compare and choose.</span>
+      </li>
+      <li><a href="https://arxiv.org/abs/2606.20227">QMFOL: Benchmarking LLM Reasoning via Quantifiable Monadic First-Order Logic</a><span class="src">arxiv 2606.20227</span>
+        <span class="why">960-configuration formal-logic suite that avoids contamination artifacts; reveals systematic deduction gaps even in frontier models.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">3</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19135">A Technical Taxonomy of LLM Agent Communication Protocols</a></h3>
+      <div class="summary">Classifies the emerging zoo of inter-agent messaging standards — A2A, MCP, AgentConnect, and others — along axes of topology, trust model, payload semantics, and statefulness. Includes a decision tree for protocol selection by use case.</div>
+      <div class="why"><b>Why it matters:</b> As multi-agent pipelines multiply, builders need principled vocabulary to compare protocols rather than adopting whichever framework shipped first.</div>
+      <div class="row">
+        <span class="chip">cs.MA</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">arXiv 2606.19135</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.19135">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20227">QMFOL: Benchmarking LLM Reasoning via Quantifiable Monadic First-Order Logic</a></h3>
+      <div class="summary">Introduces a 960-configuration formal-reasoning benchmark generated from a symbolic grammar, sidestepping data-contamination artifacts. Evaluates frontier models on quantifier scope, negation, and predicate composition — all areas where chain-of-thought models underperform.</div>
+      <div class="why"><b>Why it matters:</b> Exposes systematic logical deduction gaps that standard NLP benchmarks obscure; essential reading for teams deploying reasoning models in high-stakes settings.</div>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">arXiv 2606.20227</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.20227">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20208">Beyond Accuracy: Measuring Logical Compliance of Predictive Models</a></h3>
+      <div class="summary">Proposes a suite of metrics that check whether a classifier's decisions respect hard business rules and domain constraints, not just held-out label accuracy. Demonstrates that high-accuracy models routinely violate logical constraints in regulated domains (finance, healthcare).</div>
+      <div class="why"><b>Why it matters:</b> Directly applicable to production AI in regulated sectors where rule violations carry legal risk regardless of benchmark scores.</div>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">arXiv 2606.20208</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.20208">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.17104">Prefill/Decode-Aware Evaluation of LLM Inference on Emerging AI Accelerators</a></h3>
+      <div class="summary">Accepted to HPAI4S'26 (IEEE IPDPS 2026 workshop). Benchmarks GPUs and five emerging accelerators on the prefill and decode phases separately, finding that no single chip dominates both — accelerator advantages are highly phase- and metric-specific.</div>
+      <div class="why"><b>Why it matters:</b> Informs chip selection for teams building inference-at-scale systems; phase-aware profiling should be standard practice before hardware procurement.</div>
+      <div class="row">
+        <span class="chip">cs.AR</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">HPAI4S @ IEEE IPDPS 2026</span>
+        <span class="chip">arXiv 2606.17104</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.17104">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.17046">Geometric Action Model for Robot Policy Learning</a></h3>
+      <div class="summary">Represents robot actions in a geometric manifold space rather than flat Euclidean coordinates. Achieves stronger generalization on multi-joint manipulation tasks, especially out-of-distribution joint configurations, compared to standard regression baselines.</div>
+      <div class="why"><b>Why it matters:</b> Bridges geometric deep learning with embodied AI control; relevant to teams building physical manipulation agents.</div>
+      <div class="row">
+        <span class="chip">cs.RO</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">arXiv 2606.17046</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.17046">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20072">STAGE: Source-Grounded Data Generation for Text-to-JSON Learning</a></h3>
+      <div class="summary">Proposes a pipeline that generates training pairs for text-to-structured-output tasks by grounding synthetic examples in real source documents. Outperforms template-based augmentation on complex nested JSON schemas.</div>
+      <div class="why"><b>Why it matters:</b> Structured output extraction is a foundation of agentic workflows; STAGE reduces the annotation cost for domain-specific JSON schemas.</div>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">arXiv 2606.20072</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.20072">arxiv.org ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes — Write HTML. Render Video. Built for agents.</a></h3>
+      <div class="summary">Open-source framework (Apache 2.0) that converts HTML + CSS + seekable animations into deterministic MP4s. Compositions are plain HTML files; the CLI is non-interactive by default, making it agent-friendly. Latest release (Jun 20) shipped a full slideshow stack with presenter mode and branching.</div>
+      <div class="why"><b>Why it matters:</b> Agents already write HTML; this gives them a no-cost, scriptable video renderer — skills ship for Claude Code, Cursor, Gemini CLI, and Codex.</div>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 30,007</span>
+        <span class="chip hot">+395 today</span>
+        <a class="src-link" href="https://github.com/heygen-com/hyperframes">github.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/palmier-io/palmier-pro">palmier-io/palmier-pro — macOS video editor built for AI</a></h3>
+      <div class="summary">Native Swift macOS video editor designed from the ground up for AI-assisted editing workflows. Surged +2,463 stars in a single day, the largest single-day gain on GitHub trending today.</div>
+      <div class="why"><b>Why it matters:</b> Signals that AI-native desktop creative tools are finding an eager audience; video editing is becoming a key output surface for agentic pipelines.</div>
+      <div class="row">
+        <span class="chip">Swift</span>
+        <span class="chip stars">★ 7,370</span>
+        <span class="chip hot">+2,463 today</span>
+        <a class="src-link" href="https://github.com/palmier-io/palmier-pro">github.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/jamiepine/voicebox">jamiepine/voicebox — The open-source AI voice studio</a></h3>
+      <div class="summary">Self-hosted studio for AI voice cloning, dictation, and audio creation. Supports custom voice models and is fully open-source. One of the most-starred repos in the voice AI space.</div>
+      <div class="why"><b>Why it matters:</b> Privacy-respecting local voice synthesis is increasingly demanded by enterprise teams; Voicebox gives them a production-ready foundation.</div>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 32,250</span>
+        <span class="chip hot">+529 today</span>
+        <a class="src-link" href="https://github.com/jamiepine/voicebox">github.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/firecrawl/firecrawl">firecrawl/firecrawl — Search, scrape, and interact with the web at scale</a></h3>
+      <div class="summary">API for structured web scraping used widely in agentic research pipelines — returns clean markdown, handles JavaScript rendering, and provides site-map crawling. One of the most-starred web-data tools on GitHub.</div>
+      <div class="why"><b>Why it matters:</b> Reliable web retrieval remains a bottleneck in agent workflows; Firecrawl's API abstracts away headless browser complexity for the entire team.</div>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 137,293</span>
+        <span class="chip hot">+615 today</span>
+        <a class="src-link" href="https://github.com/firecrawl/firecrawl">github.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lyogavin/airllm">lyogavin/airllm — 70B inference on a single 4GB GPU</a></h3>
+      <div class="summary">Loads one transformer layer at a time, computes, then unloads — keeping GPU VRAM usage constant regardless of model size. Allows 70B models to run on consumer hardware; throughput is low (&lt;1 token/s) but enables local research without cloud spend.</div>
+      <div class="why"><b>Why it matters:</b> Democratizes access to frontier-scale open-weight models for researchers with limited hardware; useful for offline/air-gapped deployments.</div>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 21,053</span>
+        <span class="chip hot">+193 today</span>
+        <a class="src-link" href="https://github.com/lyogavin/airllm">github.com ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/patch-the-planet/">OpenAI Patch the Planet + GPT-5.5-Cyber + Codex Security (June 22)</a></h3>
+      <div class="summary">OpenAI expanded its Daybreak cybersecurity initiative with three simultaneous releases: (1) GPT-5.5-Cyber — the full model, now at 85.6% on the CyberGym vulnerability-reproduction benchmark, available to vetted defenders; (2) Codex Security — a vulnerability-scanning plugin for dev workflows; (3) Patch the Planet — a partnership with Trail of Bits and HackerOne to find and fix bugs across 30+ open-source projects including cURL, Go, Python, Sigstore, aiohttp, and NATS Server.</div>
+      <div class="why"><b>Why it matters:</b> First time a major AI lab deployed a full agentic loop — discovery, validation, patch, test — in service of open-source security at scale; sets a template for AI-assisted defensive security.</div>
+      <div class="row">
+        <span class="chip">security agents</span>
+        <span class="chip">OpenAI</span>
+        <span class="chip">June 22 2026</span>
+        <a class="src-link" href="https://openai.com/index/patch-the-planet/">openai.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/">GPT-5.5-Cyber: Scaling Trusted Access for Authorized Cyber Work</a></h3>
+      <div class="summary">OpenAI details how GPT-5.5-Cyber is "more permissive and more capable" than the base GPT-5.5 for authorized security work. The model is gated behind a vetted partner program (Accenture, Akamai, Cisco, Cloudflare, CrowdStrike, IBM, Palo Alto Networks). Scored 85.6% on CyberGym vs 81.8% for standard GPT-5.5.</div>
+      <div class="why"><b>Why it matters:</b> OpenAI's direct answer to Anthropic's Project Glasswing/Mythos; the AI-powered defensive security arms race between the two largest labs is now official and public.</div>
+      <div class="row">
+        <span class="chip">GPT-5.5-Cyber</span>
+        <span class="chip">cybersecurity</span>
+        <span class="chip">OpenAI</span>
+        <a class="src-link" href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/">openai.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/daybreak-securing-the-world/">Daybreak Cyber Partner Program — Launch</a></h3>
+      <div class="summary">The Daybreak initiative now includes a formal partner program with major security vendors. Partners gain access to GPT-5.5-Cyber for authorized offensive-simulation and defensive work. OpenAI frames Daybreak as its long-term platform for AI-powered security, running parallel to Anthropic's Glasswing.</div>
+      <div class="why"><b>Why it matters:</b> Creates a structured ecosystem for AI-assisted security work with accountability controls, potentially normalizing AI in professional red-teaming and vuln-research workflows.</div>
+      <div class="row">
+        <span class="chip">Daybreak</span>
+        <span class="chip">partner program</span>
+        <span class="chip">OpenAI</span>
+        <a class="src-link" href="https://openai.com/index/daybreak-securing-the-world/">openai.com ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/">O'Reilly Radar: The AI Agents Stack, 2026 Edition</a></h3>
+      <div class="summary">O'Reilly's annual state-of-the-stack analysis for AI agents. Key finding: between 2024 and 2026, MCP standardized tool connectivity, reasoning models replaced many multi-step chains with single-call agents, and memory became a first-class architectural primitive. LangGraph leads production deployments; visual builders (Langflow, Dify) are surging for no-code teams.</div>
+      <div class="why"><b>Why it matters:</b> Authoritative practitioner overview of where the stack actually stands — useful for architecture decisions and team onboarding.</div>
+      <div class="row">
+        <span class="chip">O'Reilly</span>
+        <span class="chip">agents</span>
+        <span class="chip">2026</span>
+        <a class="src-link" href="https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/">oreilly.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.developersdigest.tech/blog/what-hacker-news-gets-right-about-ai-coding-agents-2026">What Hacker News Gets Right About AI Coding Agents in 2026</a></h3>
+      <div class="summary">Analysis of HN's shifting consensus on AI coding agents: the core bottleneck in 2026 is no longer code generation speed, but verification capacity. Developers getting real value are orchestrating multiple bounded workflows rather than giving agents large open-ended tasks. Security, audit trails, and human-review integration are the dominant product themes in hiring posts.</div>
+      <div class="why"><b>Why it matters:</b> Good signal on where the practitioner community's skepticism is pointing — verification and governance are the next frontier for AI coding adoption.</div>
+      <div class="row">
+        <span class="chip">Developers Digest</span>
+        <span class="chip">coding agents</span>
+        <span class="chip">HN analysis</span>
+        <a class="src-link" href="https://www.developersdigest.tech/blog/what-hacker-news-gets-right-about-ai-coding-agents-2026">developersdigest.tech ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.digitalapplied.com/blog/context-engineering-agent-reliability-playbook-2026">Context Engineering: Agent Reliability Playbook 2026</a></h3>
+      <div class="summary">Practitioner guide to context management for long-running agents: covers memory tiers (in-context, episodic, semantic), compaction strategies, tool-clearing policies, and retrieval hygiene. Cites Anthropic's internal evaluation showing a 29% reliability lift from context editing alone, rising to 39% with a memory tool.</div>
+      <div class="why"><b>Why it matters:</b> Consolidates the context-engineering literature into an actionable pattern library for teams building production agent harnesses.</div>
+      <div class="row">
+        <span class="chip">Digital Applied</span>
+        <span class="chip">context engineering</span>
+        <span class="chip">agent reliability</span>
+        <a class="src-link" href="https://www.digitalapplied.com/blog/context-engineering-agent-reliability-playbook-2026">digitalapplied.com ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48539078">Anthropic's Safety Superpower | Hacker News</a></h3>
+      <div class="summary">HN discussion on how Anthropic has positioned safety (Project Glasswing, Mythos restricted access, export-control cooperation) as a competitive moat. Comments debate whether voluntary government cooperation sets a dangerous precedent or demonstrates responsible deployment at scale.</div>
+      <div class="why"><b>Why it matters:</b> The thread captures the fracture lines in the AI safety vs. capability debate as Anthropic's position hardens into explicit policy choices.</div>
+      <div class="row">
+        <span class="chip">HN</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">safety</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48539078">news.ycombinator.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48444528">Anthropic's Project Glasswing Update | Hacker News</a></h3>
+      <div class="summary">Discussion of Anthropic's report that Claude Mythos Preview has now identified 10,000+ high/critical-severity vulnerabilities across systemically important software. Commenters debate the ethics of restricted model access, disclosure timelines, and whether OSS maintainers have capacity to absorb the patch volume.</div>
+      <div class="why"><b>Why it matters:</b> Sustained HN engagement on Glasswing reflects broader developer anxiety about AI-accelerated vulnerability discovery outpacing human patching capacity.</div>
+      <div class="row">
+        <span class="chip">HN</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">security</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48444528">news.ycombinator.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48379664">U of T researchers demonstrate AI worm could target any online device | Hacker News</a></h3>
+      <div class="summary">University of Toronto proof-of-concept uses a locally-hosted open-weight LLM to reason through a network, identifying an average of 31.3 vulnerabilities and gaining elevated access on 23.1 hosts per test run. HN thread focuses on the threat model for autonomous AI-driven attacks and the implications for air-gapped and on-premise deployments.</div>
+      <div class="why"><b>Why it matters:</b> Demonstrates that open-weight models lower the barrier to autonomous network exploitation — relevant context for teams evaluating on-premise LLM deployment security.</div>
+      <div class="row">
+        <span class="chip">HN</span>
+        <span class="chip">security</span>
+        <span class="chip">AI worm</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48379664">news.ycombinator.com ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <div class="summary">Reddit: not assessed — HTTP 403 on direct fetch; web search returned no indexed threads from the last 24h for the primary-tier subreddits.</div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.techtimes.com/articles/318613/20260618/transformer-architect-behind-gemini-jumps-openai-after-google-spent-27b.htm">Transformer Architect Behind Gemini Jumps to OpenAI After Google Spent $2.7B</a></h3>
+      <div class="summary">Noam Shazeer — co-author of "Attention Is All You Need" (2017) and recent lead architect of Google's Gemini models — announced June 18 he will join OpenAI as Lead for AI Architecture Research. This follows John Jumper (AlphaFold Nobel) departing for Anthropic, leaving Google with a significant research talent deficit in a week.</div>
+      <div class="why"><b>Why it matters:</b> Two of the most influential AI architects of the last decade moved in a single week; Shazeer will shape the structural foundations of OpenAI's next model generation.</div>
+      <div class="row">
+        <span class="chip">TechTimes</span>
+        <span class="chip">OpenAI</span>
+        <span class="chip">Jun 18 2026</span>
+        <a class="src-link" href="https://www.techtimes.com/articles/318613/20260618/transformer-architect-behind-gemini-jumps-openai-after-google-spent-27b.htm">techtimes.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026">AI News Today June 22 2026: 15 Biggest Stories</a></h3>
+      <div class="summary">Daily roundup covering OpenAI's Patch the Planet + GPT-5.5-Cyber launch, the White House AI executive order implementation timeline, ChatGPT's global market share falling below 50% for the first time (to 46.4% vs Gemini at 27.7% and Claude at 10.3%), and Reflection AI's $150M/month deal for Nvidia GB300 chips at Colossus 2.</div>
+      <div class="why"><b>Why it matters:</b> The market-share milestone is significant — ChatGPT losing plurality in AI assistants after three years of dominance; Claude's 13% paid conversion rate leads the field.</div>
+      <div class="row">
+        <span class="chip">Build Fast with AI</span>
+        <span class="chip">daily roundup</span>
+        <span class="chip">Jun 22 2026</span>
+        <a class="src-link" href="https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026">buildfastwithai.com ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-23 01:04 UTC<br>
+    <span>Source issues: arXiv HTTP 403 on all direct fetches (used web search fallback, paper descriptions partial) · HN front page HTTP 403 (used web search fallback, point/comment counts unavailable) · Hugging Face HTTP 403 · Simon Willison / Interconnects / Latent Space HTTP 403, no confirmed new posts since Jun 18 · Reddit not assessed (HTTP 403 + no indexed search results for Jun 23 threads)</span><br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
