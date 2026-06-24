@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-24</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Wednesday, June 24, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">NVIDIA Spectrum-X Photonics CPO switches — up to 409.6 Tb/s, 4× fewer lasers, 2H 2026 availability</a></li>
+      <li><a href="#funding">HyperLight closes $80M Series C for TFLN Chiplet platform targeting AI data center interconnects</a></li>
+      <li><a href="#research">U-Toronto coherent lidar: simultaneous location, velocity &amp; material in one scan</a></li>
+      <li><a href="#europe">Photonics Spectra Integrated Photonics Summit is live today (virtual, free)</a></li>
+      <li><a href="#funding">Neurophos $110M Series A catch-up — metamaterial OPU direct competitor to MZI/ring designs</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://nvidianews.nvidia.com/news/nvidia-spectrum-x-co-packaged-optics-networking-switches-ai-factories">NVIDIA Announces Spectrum-X Photonics Co-Packaged Optics Networking Switches</a></h3>
+      <p>NVIDIA launched Spectrum-X Photonics CPO Ethernet and Quantum-X InfiniBand switches using silicon photonics integration, built on the Spectrum-6 ASIC platform delivering up to 409.6 Tb/s with 512 ports at 800 Gb/s. The design uses 4× fewer lasers and achieves 3.5× better power efficiency versus traditional pluggable optics; system vendors will offer Spectrum-X Photonics switches in 2H 2026. <em>Why it matters:</em> This is NVIDIA's direct move into CPO at scale — the laser reduction and efficiency gains set the bar that competing photonic interconnect approaches must now meet, and NVIDIA's buying power will accelerate supply-chain industrialization for SiPh CPO platforms across the AI factory market.</p>
+      <div class="meta">nvidianews.nvidia.com &middot; 2026-06-23</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://www.optica.org/about/newsroom/news_releases/2026/new_lidar_system_maps_location_speed_and_material_properties_in_a_single_measurement/">Novel Lidar System Maps Location, Speed, and Material Properties in a Single Measurement</a></h3>
+      <p>University of Toronto and Ciena researchers adapted a coherent optical modem for lidar, enabling simultaneous millimeter-accurate ranging, velocity measurement, and surface material discrimination (metals, plastics, varying roughness) in a single scan using polarimetric full-wavefield coherent lidar. The system targets robotics, autonomous driving, and industrial inspection applications where multi-modal sensing is currently achieved by stacking separate sensors. <em>Why it matters:</em> Coherent lidar combining simultaneous Doppler and polarimetric readout in a compact form factor is directly relevant to PIC-integrated sensing heads — the technique aligns with on-chip coherent photonic architectures being developed for FMCW lidar.</p>
+      <div class="meta">optica.org &middot; 2026-06-22</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://events.photonics.com/Event.aspx?EID=48">Photonics Spectra Integrated Photonics Summit 2026 — Live Today</a></h3>
+      <p>The Photonics Spectra Integrated Photonics Summit is running today and tomorrow (June 24–25, 2026) as a free virtual event, featuring presentations including AIM Photonics' COO on PIC biosensing platforms and multiple industry updates on PIC commercialization from foundries and EDA vendors. This is the primary annual virtual gathering for the integrated photonics industry and typically surfaces pre-announcement product updates and ecosystem snapshots. <em>Why it matters:</em> Live sessions today are a real-time window into the PIC commercialization landscape — monitor for competitive intelligence on foundry roadmaps, packaging approaches, and design automation tooling.</p>
+      <div class="meta">events.photonics.com &middot; 2026-06-24</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260618064171/en/HyperLight-Announces-$80-Million-Series-C-to-Accelerate-TFLN-Deployment-for-AI-Infrastructure">HyperLight Raises $80M Series C to Accelerate TFLN Photonics for AI Infrastructure</a></h3>
+      <p>Harvard spin-out HyperLight closed an $80M Series C led by MediaTek, with UMC Capital, Jabil, Foxconn, EDBI, and Qatar Investment Authority participating, to scale manufacturing of its thin-film lithium niobate (TFLN) Chiplet platform targeting 200G/lane and 400G/lane operations for AI data center interconnects. The round builds on a foundry partnership with UMC and Wavetek announced in March 2026. <em>Why it matters:</em> TFLN is the leading modulator technology for next-generation high-speed optical interconnects; HyperLight's UMC foundry partnership and blue-chip investor base signal that TFLN is crossing from research to production-ready supply chain — directly relevant to modulator technology selection for photonic compute interconnects.</p>
+      <div class="meta">businesswire.com &middot; 2026-06-18</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/neurophos-raises-110m-for-photonic-chips-based-around-metamaterial-modulators">Neurophos Raises $110M Series A for Metamaterial Optical Processing Units</a><span class="badge">catch-up</span></h3>
+      <p>Austin-based Neurophos raised $110M led by Gates Frontier (Bill Gates) with Microsoft M12, Aramco Ventures, and Bosch Ventures for photonic OPU chips using 10,000× miniaturized metamaterial optical modulators, claiming 100× efficiency over GPUs for AI inference, with first evaluation hardware expected in 2026 and commercial systems in 2028. This was the largest recent Series A in photonic compute at time of announcement. <em>Why it matters:</em> Neurophos represents a direct competitor in the optical AI accelerator space with a distinct modulator architecture (metamaterial vs. MZI/ring resonator) — understanding their performance and timeline claims is relevant to competitive positioning, and the Gates/Microsoft backing suggests serious enterprise channel access.</p>
+      <div class="meta">optics.org &middot; 2026-01-22</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Most direct-fetch sources returned HTTP 403 (lightmatter.co, ayarlabs.com, nextplatform.com, optics.org, optica-opn.org RSS, nature.com RSS, photondelta.com, epic-photonics.com, laserfocusworld.com, cignal.ai, picmagazine.net, arxiv.org, hs.flexcompute.com, SPIE YouTube RSS); all items sourced via web search. Reddit r/Optics and r/Semiconductors RSS blocked; web search fallback found no recent indexed threads — Reddit: not assessed.</div>
+  <div>5 items &middot; generated 2026-06-24 01:12 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
