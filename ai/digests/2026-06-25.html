@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-25</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Thursday, June 25, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 24 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI &amp; Broadcom unveil Jalapeño — first in-house LLM inference chip<span class="src">OpenAI</span></a>
+        <span class="why">Custom silicon targeting OpenAI's model + serving roadmap; substantially better perf-per-watt than SOTA; first deployment end-2026.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.24597">Qwen-AgentWorld: Language World Models for General Agents (35B–397B MoE)<span class="src">arXiv</span></a>
+        <span class="why">First world models simulating the full agentic stack (MCP, Terminal, Web, Android, OS) — agents can train and plan in a language simulator instead of real environments.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.24530">NatureBench: Coding agents match published SOTA on only 17.8% of Nature-paper tasks<span class="src">arXiv</span></a>
+        <span class="why">Most rigorous public bar yet for AI on real scientific research — a crucial calibration against AI-for-science hype.</span>
+      </li>
+      <li>
+        <a href="https://huggingface.co/blog/huggingface-hub-release-ci">HuggingFace shifts to weekly releases using AI-assisted CI/CD with one human gate<span class="src">HuggingFace</span></a>
+        <span class="why">Replicable pattern for AI-augmented SDK release engineering — from 4–6 week cycles to weekly with open-weights models and a single human judgment point.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.21428">Does MoE actually help inference on consumer &amp; edge hardware? An empirical study<span class="src">arXiv</span></a>
+        <span class="why">Rigorous benchmark on Apple M2 Pro and Jetson Orin — answers whether the dominant MoE architecture delivers real-world speedups for local deployment.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">6</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.24597">Qwen-AgentWorld: Language World Models for General Agents</a></h3>
+      <div class="summary">Introduces Qwen-AgentWorld — 35B-A3B and 397B-A17B MoE variants that simulate agentic environments across 7 domains (MCP, Search, Terminal, Software Engineering, Android, Web, OS) via long chain-of-thought reasoning. Training: continual pretraining injects state-transition dynamics, SFT activates next-state-prediction thinking, RL with hybrid rubric-and-rule rewards sharpens fidelity. Also releases AgentWorldBench. Models are already public on HuggingFace (Qwen/Qwen-AgentWorld-35B-A3B).</div>
+      <div class="why"><b>Why it matters:</b> First world model covering the full modern agentic stack — enables agents to plan and self-train inside a language simulator rather than real environments, with massive implications for safe, scalable agent development.</div>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">Qwen Team · Alibaba</span>
+        <span class="chip">35B / 397B MoE</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.24597">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.24530">NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?</a></h3>
+      <div class="summary">90 tasks distilled from peer-reviewed Nature-family publications, each in a containerized environment (NatureGym). Evaluates 10 frontier agent configurations under a web-search-disabled protocol; the strongest model surpasses published SOTA on only 17.8% of tasks. Agents succeed primarily via methodological translation (reframing science as supervised prediction) rather than genuine scientific invention.</div>
+      <div class="why"><b>Why it matters:</b> The most rigorous public bar yet for AI on real scientific research. Shows frontier agents still fall far short of autonomous discovery — a crucial calibration for AI labs and enterprise R&amp;D teams betting on coding agents for science.</div>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">Frontis.AI · Horizon Research · Tsinghua</span>
+        <span class="chip">90 tasks · 10 agents</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.24530">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.24888">DiffusionBench: On Holistic Evaluation of Diffusion Transformers</a></h3>
+      <div class="summary">Proposes a holistic benchmark for evaluating diffusion transformers beyond FID — covering image quality, text alignment, diversity, and compositional generation. Submitted June 24, 2026. Targets the FLUX, SD3, and DiT variant landscape where existing evaluations are fragmented across incomparable metrics and datasets.</div>
+      <div class="why"><b>Why it matters:</b> Diffusion transformers dominate image and video generation. A unified benchmark enables fair model comparisons and gives practitioners a single evaluation harness for deployment decisions.</div>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">ANU · Microsoft</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.24888">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.24819">HelpBench: Assessing LLM Ability to Provide Privacy, Safety, and Security Advice</a></h3>
+      <div class="summary">Benchmark from Google evaluating how accurately LLMs provide actionable privacy, safety, and security guidance — areas where incorrect advice causes real user harm. Submitted June 24, 2026. Tests for both factual accuracy and appropriate hedging across consumer-facing help scenarios.</div>
+      <div class="why"><b>Why it matters:</b> LLMs are increasingly used as consumer security advisors. Incorrect or over-hedged guidance in this domain has direct harm potential; this sets the standard for responsible deployment of LLM-powered help systems.</div>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">Google</span>
+        <span class="chip">Privacy · Safety · Security</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.24819">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.21428">Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study</a></h3>
+      <div class="summary">Investigates whether the FLOP advantage of MoE LLMs actually translates to real throughput, memory, and energy gains on consumer/edge silicon. Benchmarks OLMoE-1B-7B (1.3B active of 6.9B total) against three dense baselines on Apple M2 Pro and NVIDIA Jetson Orin Nano 8GB using llama.cpp. Provides the first rigorous empirical answer on modern consumer hardware.</div>
+      <div class="why"><b>Why it matters:</b> MoE is now the dominant large-model architecture (DeepSeek, Qwen, Mixtral), but deployment teams planning edge/on-device inference need to know if FLOP savings hold in practice — this paper delivers that answer.</div>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">Apple M2 Pro · Jetson Orin</span>
+        <span class="chip">llama.cpp · OLMoE</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.21428">arxiv.org →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/stablyai/orca">stablyai/orca — ADE (Agentic Development Environment) for parallel agent fleets</a></h3>
+      <div class="summary">Open-source Agentic Development Environment for working with a fleet of parallel agents. Run any coding agent with your own API subscription. Available on desktop and mobile. Positions itself as the IDE-equivalent for multi-agent workflows — not another single-agent interface.</div>
+      <div class="why"><b>Why it matters:</b> The "ADE" framing — an IDE-equivalent for agent fleets — is gaining traction as a distinct product category. Multi-agent parallelism is moving from research to developer tooling, and Orca is one of the first open-source entries in this space.</div>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 6.8k · +331 today</span>
+        <a class="src-link" href="https://github.com/stablyai/orca">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/google-labs-code/design.md">google-labs-code/design.md — Design system context format for AI coding agents</a></h3>
+      <div class="summary">A format specification by Google Labs enabling AI agents to understand and work with design systems persistently. A structured markdown convention for passing design context — analogous to CLAUDE.md but for design tokens, component libraries, and visual constraints. 17.3k stars with 619 today.</div>
+      <div class="why"><b>Why it matters:</b> Signals that major players are working on interoperability standards for agent context across domains, not just the agents themselves. Complements CLAUDE.md and MCP as the emerging vocabulary for structured agent context.</div>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 17.3k · +619 today</span>
+        <span class="chip">Google Labs</span>
+        <a class="src-link" href="https://github.com/google-labs-code/design.md">github.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/ServiceNow/mosaicleaks">MosaicLeaks: Can Your Research Agent Keep a Secret?</a></h3>
+      <div class="summary">ServiceNow researchers introduce MosaicLeaks — a benchmark and analysis of how agentic research workflows inadvertently leak sensitive information through external queries (web searches, API calls) made by agents operating on private documents or instructions. Proposes evaluation criteria and mitigation strategies for deployment teams.</div>
+      <div class="why"><b>Why it matters:</b> Privacy leakage through agent tool calls is an underappreciated attack surface for production AI systems. Directly actionable for teams deploying research or RAG agents in enterprise settings where data confidentiality is a hard requirement.</div>
+      <div class="row">
+        <span class="chip">HuggingFace Blog</span>
+        <span class="chip">ServiceNow Research</span>
+        <span class="chip">Agent Security</span>
+        <a class="src-link" href="https://huggingface.co/blog/ServiceNow/mosaicleaks">huggingface.co →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.20408">NRT-Bench: Benchmarking Multi-Turn Red-Teaming of LLM Agents in Safety-Critical Control Rooms</a></h3>
+      <div class="summary">Five LLM agents role-play as operators of a simulated nuclear power plant governed by six critical safety functions (CSFs). Adversaries inject messages across four channels in multi-turn sessions; harm is an objective signal (run terminates when a CSF is lost, not LLM-judged). Across four frontier operator models, 8.7–12.1% of adaptive multi-turn attacks succeed in causing a safety violation.</div>
+      <div class="why"><b>Why it matters:</b> First benchmark to use an objective physical-harm signal rather than LLM judges for red-teaming — directly relevant to safety evaluators and anyone deploying LLM agents in industrial or infrastructure settings where subjective harm metrics are insufficient.</div>
+      <div class="row">
+        <span class="chip">cs.AI · Safety</span>
+        <span class="chip">Red-teaming</span>
+        <span class="chip">Industrial LLM Agents</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.20408">arxiv.org →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/huggingface-hub-release-ci">Shipping huggingface_hub Every Week with AI, Open Tools, and a Human in the Loop</a></h3>
+      <div class="summary">The huggingface_hub team describes how they shifted from 4–6 week release cycles to weekly releases via a single GitHub Actions workflow, using open-weights AI models for changelog generation and validation, with a single human decision point retained. The post details tooling, automation design, and the "human at one judgment point" philosophy that makes the pipeline sustainable.</div>
+      <div class="why"><b>Why it matters:</b> A practical, replicable pattern for AI-assisted CI/CD for Python libraries — directly relevant to any team managing a popular SDK. The design principle of keeping exactly one human judgment point is a useful template for AI-augmented release engineering.</div>
+      <div class="row">
+        <span class="chip">HuggingFace Blog</span>
+        <span class="chip">June 23, 2026</span>
+        <span class="chip">CI/CD · Release Engineering</span>
+        <a class="src-link" href="https://huggingface.co/blog/huggingface-hub-release-ci">huggingface.co →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48648039">Claude Tag | Hacker News</a></h3>
+      <div class="summary">Anthropic launched Claude Tag (June 24) — a Slack workspace integration that lets teams @mention Claude in channels, delegate tasks, connect tools/data/codebases, with multiplayer collaboration, context memory, proactive updates, and async task handling. Works with Opus 4.8 for Enterprise and Team customers. HN discussion focused on the tension between model-agnostic agent platforms and Anthropic's own platform ambitions.</div>
+      <div class="why"><b>Why it matters:</b> Anthropic's move deeper into the collaborative workspace layer is a direct play against Microsoft Copilot. The "Claude Tag" brand positions Claude as a persistent team member rather than a chat tool — a key framing shift.</div>
+      <div class="row">
+        <span class="chip">HN</span>
+        <span class="chip">June 24, 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48648039">ycombinator.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48434312">LLMs Are Eroding My Software Engineering Career and I Don't Know What to Do</a></h3>
+      <div class="summary">A backend engineer with 10 years of experience describes how LLMs are systematically commoditizing their professional advantages: specialized domain knowledge, distributed systems debugging, and architectural judgment. Cites Anthropic data showing 80% of merged production code is now Claude-authored, with engineers merging 8× more code/day than in 2024. One of the most-engaged AI career discussions of 2026: 602 points, 551 comments.</div>
+      <div class="why"><b>Why it matters:</b> The specificity — not generic AI fear but named sub-skills being eroded — and the engagement numbers (602pts/551c) mark this as a genuine community inflection point, not ambient noise.</div>
+      <div class="row">
+        <span class="chip hot">🔥 602 pts · 551 comments</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48434312">ycombinator.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48637868">Why Eval Startups Fail (2025)</a></h3>
+      <div class="summary">Thomas Liao's analysis of why independent LLM evaluation companies struggle: (1) talent attrits to higher-leverage roles in model development, (2) customer discovery is hard — targets must be technical enough to use APIs but not so technical they run their own evals, (3) model developers themselves pressure eval companies to hill-climb for their models, rendering evals useless.</div>
+      <div class="why"><b>Why it matters:</b> Structural critique of a startup category that attracted significant VC attention 2023–2025. The conflict-of-interest observation — model developers pressuring their own evaluators — is a notable signal about eval market dynamics.</div>
+      <div class="row">
+        <span class="chip">HN Discussion</span>
+        <span class="chip">Evals · Startups</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48637868">ycombinator.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48605355">LLMs Are Complicated Now</a></h3>
+      <div class="summary">Ian Barber's post walks through how LLM architectures have diverged sharply from the clean repeated-Transformer-block design. Modern models use query grouping, compressed attention, sparse attention, linear attention, and sliding-window attention simultaneously — using Llama 3 vs. Nemotron 3 Ultra as case studies. HN discussion focused on inference framework fragmentation.</div>
+      <div class="why"><b>Why it matters:</b> The diversity of attention mechanisms now required to support the open-weight model zoo is a real engineering burden for frameworks like vLLM and llama.cpp — relevant to anyone building inference infrastructure in 2026.</div>
+      <div class="row">
+        <span class="chip">HN Discussion</span>
+        <span class="chip">Architecture · Inference</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48605355">ycombinator.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48555993">Running Local Models Is Good Now</a></h3>
+      <div class="summary">Article arguing that open-weight local models (Qwen 2.5, Gemma 2, Mistral) have crossed a practical threshold for developer workflows in 2026, enabled by Q4 quantization (25% of full-precision size with minimal quality loss), mature inference tooling, and hardware that caught up. Distinguishes use cases where local models are sufficient vs. where frontier cloud models still dominate.</div>
+      <div class="why"><b>Why it matters:</b> Local LLM practicality is no longer hobbyist territory. The post appearing on HN front page validates that the developer community is actively re-evaluating build-vs-buy decisions for inference in 2026.</div>
+      <div class="row">
+        <span class="chip">HN Discussion</span>
+        <span class="chip">Local Inference</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48555993">ycombinator.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day. Thread-level URLs were not returned by search; subreddit links are the primary URL.</p>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/">r/LocalLLaMA — Anthropic forced to suspend Fable 5 &amp; Mythos 5 by US Gov over jailbreak</a></h3>
+      <div class="summary">Reaction thread to Anthropic's official statement that it received a US government directive to suspend access to Fable 5 and Mythos 5 due to a discovered jailbreak. Anthropic publicly disagreed, stating a narrow jailbreak shouldn't recall a model used by hundreds of millions. The LocalLLaMA community used the event as a rallying point for the necessity of locally-hosted open-weight models.</div>
+      <div class="why"><b>Why it matters:</b> If confirmed, this is a landmark event for AI governance — a government forcing a model takedown over a jailbreak. The community debate around model sovereignty and local alternatives is a major signal.</div>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <span class="chip hot">🔥 Top/Hot</span>
+        <a class="src-link" href="https://www.reddit.com/r/LocalLLaMA/">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/">r/LocalLLaMA — Heretic Grimoire: takedown-resilient, local-first backup system for uncensored models</a></h3>
+      <div class="summary">Announcement and discussion of a new distributed system designed to preserve uncensored local models against takedown pressure. The thread catalyzed broader debate about model censorship, government intervention in AI, and the role of local models as a safeguard for the open-source ecosystem.</div>
+      <div class="why"><b>Why it matters:</b> The Fable 5 shutdown event directly fueled interest in decentralized model preservation. This thread represents the community's practical response — building infrastructure rather than just debating policy.</div>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <span class="chip hot">🔥 Top/Hot</span>
+        <a class="src-link" href="https://www.reddit.com/r/LocalLLaMA/">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/">r/LocalLLaMA — June 2026 model megathread: MiniMax M3, NVIDIA Nemotron 3 Ultra, DeepSeek V4 Pro</a></h3>
+      <div class="summary">Discussion of the major locally-runnable models released in early June 2026. MiniMax M3 (June 1): frontier coding (SWE-Bench Pro 59.0), 1M-token context, native image/video input. NVIDIA Nemotron 3 Ultra (June 4): high-throughput reasoning for long-running agents. DeepSeek V4 Pro rounds out the batch. Community compared hardware requirements and benchmark claims for local deployment.</div>
+      <div class="why"><b>Why it matters:</b> Three frontier-class open-weight models in one month marks a step change in what's locally runnable, with direct implications for cost-controlled agent infrastructure.</div>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <span class="chip">MiniMax · Nemotron · DeepSeek</span>
+        <a class="src-link" href="https://www.reddit.com/r/LocalLLaMA/">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/ClaudeAI/">r/ClaudeAI — Claude Code is the best coding agent in the market and it's not close (~270 upvotes)</a></h3>
+      <div class="summary">High-engagement debate about Claude Code's position as the leading AI coding agent, with a competing thread on r/codex arguing that with the right skills configuration, OpenAI Codex is actually better (468 upvotes). The discussion reflects the rapidly shifting landscape among Claude Code, Codex, Cursor, and other coding agents in mid-2026.</div>
+      <div class="why"><b>Why it matters:</b> Community sentiment on coding agents is a leading indicator of enterprise adoption. The emergence of a credible Codex counter-thread signals genuine competition in a space Claude Code dominated earlier in 2026.</div>
+      <div class="row">
+        <span class="chip">r/ClaudeAI</span>
+        <span class="chip">~270 upvotes</span>
+        <a class="src-link" href="https://www.reddit.com/r/ClaudeAI/">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/OpenAI/">r/OpenAI — GPT-5.5 Thinking is noticeably weaker than GPT-5.2 on scientific reasoning and task focus</a></h3>
+      <div class="summary">Community regression report following GPT-5.5 Thinking's release, with users documenting underperformance vs. GPT-5.2 on scientific reasoning and sustained task focus. Represents a recurring pattern where newer model versions disappoint users who relied on specific reasoning behaviors of prior versions.</div>
+      <div class="why"><b>Why it matters:</b> Version-to-version regression reports are increasingly common and actionable — teams running production pipelines against specific model versions need to track capability drifts, not just overall benchmark trends.</div>
+      <div class="row">
+        <span class="chip">r/OpenAI</span>
+        <span class="chip">GPT-5.5 Regression</span>
+        <a class="src-link" href="https://www.reddit.com/r/OpenAI/">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/MachineLearning/">[D] r/MachineLearning — Benchmark performance often tells me almost nothing about production workflow survival</a></h3>
+      <div class="summary">Discussion thread challenging the gap between academic benchmark scores and real-world production reliability. Community shared examples of models that score well on standard evals but degrade unpredictably under production load, multi-turn interaction, or domain-specific edge cases. Reflects growing practitioner frustration with benchmark gaming in the post-GPT-5 era.</div>
+      <div class="why"><b>Why it matters:</b> This frustration is structural: as benchmarks saturate, the signal moves to production reliability. Teams building on top of frontier models need robust internal evals, not external leaderboards.</div>
+      <div class="row">
+        <span class="chip">r/MachineLearning</span>
+        <span class="chip">Evals · Production</span>
+        <a class="src-link" href="https://www.reddit.com/r/MachineLearning/">reddit.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI and Broadcom Unveil Jalapeño — OpenAI's First In-House LLM Inference Chip</a></h3>
+      <div class="summary">OpenAI and Broadcom announced Jalapeño, OpenAI's first in-house Intelligence Processor — an LLM inference accelerator designed from scratch around OpenAI's model and serving roadmap. Initial testing shows substantially better performance-per-watt than current state-of-the-art, with first deployment targeted by end of 2026. Published June 24, 2026.</div>
+      <div class="why"><b>Why it matters:</b> This is OpenAI's first step into custom silicon — a serious vertical integration play on inference infrastructure. AI builders should track how custom accelerators reshape inference costs and availability, which directly affects API pricing and latency for downstream products.</div>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">June 24, 2026</span>
+        <span class="chip">Custom Silicon · Inference</span>
+        <a class="src-link" href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">openai.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/gpt-5-immunology-mystery/">How GPT-5 Helped Immunologist Derya Unutmaz Solve a 3-Year Mystery</a></h3>
+      <div class="summary">OpenAI case study on how GPT-5 Pro helped immunologist Derya Unutmaz's lab crack a three-year-old puzzle about a rare immune cell type involved in cancer defense. Part of OpenAI's series on GPT-5's early scientific impact. Published June 23, 2026.</div>
+      <div class="why"><b>Why it matters:</b> Domain-specific success stories in life science are useful calibration for AI builders targeting scientific discovery use cases — and for understanding where GPT-5 Pro's reasoning capabilities outperform prior approaches on genuinely hard problems.</div>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">June 23, 2026</span>
+        <span class="chip">GPT-5 · Science</span>
+        <a class="src-link" href="https://openai.com/index/gpt-5-immunology-mystery/">openai.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/">Prompt Injection as Role Confusion</a></h3>
+      <div class="summary">Simon Willison frames prompt injection attacks as a "role confusion" problem — where a model fails to correctly distinguish between instructions from a trusted principal versus injected content from untrusted sources. Argues this framing is more precise and useful for thinking about defenses than the generic "injection" metaphor. Published June 22, 2026.</div>
+      <div class="why"><b>Why it matters:</b> Prompt injection remains one of the most critical unsolved security problems for deployed LLM applications. A cleaner conceptual framing helps builders design more robust trust hierarchies in system prompts, tool schemas, and multi-agent pipelines.</div>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">June 22, 2026</span>
+        <span class="chip">Prompt Injection · Security</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/">simonwillison.net →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-25 01:04 UTC<br>
+    Source issues: arXiv · HuggingFace RSS · lab blogs blocked by egress proxy (all items via web search) · Reddit: thread-level URLs unavailable; subreddit-level links used · litellm CVE article excluded (already in seen-links.log)<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
