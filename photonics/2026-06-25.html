@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-25</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Thursday, June 25, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Alchip + Ayar Labs launch co-packaged optics solution for AI datacenter scale-up</a></li>
+      <li><a href="#funding">Coherent secures $50M CHIPS Act support for world-first 6-inch InP fab in Texas</a></li>
+      <li><a href="#compute">Seeking Alpha: optical interconnects are AI data centers' next bottleneck after GPU supply eases</a></li>
+      <li><a href="#europe">Germany's SPRIND launches Quantum Sensing Initiative to fund EU photonics startups</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.ico-optics.org/alchip-ayar-labs-launch-co-packaged-optics-for-ai-datacenter-scale-up/">Alchip and Ayar Labs Launch Co-Packaged Optics for AI Datacenter Scale-Up</a></h3>
+      <p>Alchip Technologies and Ayar Labs announced a co-packaged optics (CPO) solution targeting AI datacenter scale-up, combining Alchip's ASIC design expertise with Ayar Labs' TeraPHY optical I/O chiplets. The product targets hyperscaler AI clusters requiring high-bandwidth, low-latency chip-to-chip interconnects that pluggable transceivers cannot efficiently support at scale. <em>Why it matters:</em> Alchip is a tier-1 ASIC design house for major AI chipmakers; their CPO design-in with Ayar signals that co-packaged optics is crossing from pilot to production-design engagements, accelerating the CPO supply chain beyond what Ayar's own customer announcements indicate.</p>
+      <div class="meta">ico-optics.org &middot; 2026-06-22</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://seekingalpha.com/news/4606321-ai-data-centers-hit-a-new-bottleneck-optical-interconnects">AI Data Centers Hit a New Bottleneck — Optical Interconnects</a></h3>
+      <p>Seeking Alpha analysis identifies the optical interconnect supply chain — particularly silicon photonics manufacturing capacity and testing — as the next critical constraint for AI data center scaling after GPU supply eased. Names Fabrinet, Credo Technology, MaxLinear, and capital equipment makers (ASML, Lam Research, Tokyo Electron) as most exposed to rising CPO demand. <em>Why it matters:</em> Mainstream financial media recognizing optical interconnects as infrastructure-tier risk — not just a component story — is a key signal that CPO and SiPh have crossed the credibility threshold with institutional capital.</p>
+      <div class="meta">Seeking Alpha &middot; 2026-06-23</div>
+    </article>
+
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gdsfactory/pull/4596">gdsfactory PR #4596: Fix pruning of foreign layers from GDS cells</a></h3>
+      <p>A bugfix merged June 22 resolves an issue where GDS layers not belonging to a target PDK were not being cleanly removed during cell pruning operations, causing potential cross-contamination in multi-PDK workflows. The fix is in PR #4596 (gaoflow), part of ongoing maintenance toward the v9.45 release cycle. <em>Why it matters:</em> Clean layer pruning is foundational for PDK-portable PIC designs — any corruption here propagates silently into DRC/LVS, making this a correctness fix rather than just maintenance.</p>
+      <div class="meta">gdsfactory · GitHub &middot; 2026-06-22</div>
+    </article>
+
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/22/twisting-quantum-potential-into-reality/">Twisting Quantum Potential Into Reality: UTS Researchers Control Single-Photon Emitters in hBN</a></h3>
+      <p>University of Technology Sydney (UTS) researchers and collaborators developed a twist-based method to control quantum light sources in hexagonal boron nitride (hBN), improving the controllability of single-photon emitters at room temperature. The technique adjusts the twist angle between hBN layers to tune emitter properties without cryogenic cooling. <em>Why it matters:</em> Room-temperature single-photon sources in a 2D material compatible with standard nanofabrication are a key building block for chip-scale quantum photonic circuits — progress here reduces one of the major barriers to practical integrated quantum photonics.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-22</div>
+    </article>
+
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/24/sprind-launches-quantum-sensing-initiative-to-back-european-projects-and-startups/">SPRIND Launches Quantum Sensing Initiative to Back European Projects and Startups</a></h3>
+      <p>SPRIND — Germany's Federal Agency for Breakthrough Innovation — launched a Quantum Sensing Initiative to identify, fund, and accelerate quantum sensing projects and startups across Germany and Europe. The initiative is designed to bridge the gap between lab-tested quantum sensing technologies and commercial deployment, with an emphasis on industrial and environmental sensing applications. <em>Why it matters:</em> Quantum sensors increasingly rely on photonic platforms (atom interferometers, NV centers, photon-counting LiDAR); SPRIND-backed projects will likely generate new demand for integrated photonics components and EU-sourced photonic sensing ICs.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-24</div>
+    </article>
+
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/coherent-gets-50m-support-for-sherman-inp-fab-expansion">Coherent Lines Up $50M CHIPS Act Support for Texas InP Fab Expansion</a></h3>
+      <p>The U.S. Commerce Department issued a letter of intent for up to $50M in CHIPS Act funding to Coherent for expansion of its 6-inch indium phosphide (InP) wafer fab in Sherman, Texas — described as the world's first volume-production 6-inch InP facility. Coherent broke ground June 16 with Jensen Huang in attendance; NVIDIA has invested $2B into Coherent and Lumentum combined. <em>Why it matters:</em> InP is the substrate for the lasers and EMLs used in CPO transceivers for AI data centers. Federal CHIPS Act investment into InP manufacturing — rather than just silicon — signals that the U.S. supply chain strategy now explicitly includes the photonic layer of AI infrastructure.</p>
+      <div class="meta">optics.org &middot; 2026-06-22</div>
+    </article>
+
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/22/trump-administration-executive-order-places-quantum-at-center-of-federal-technology-strategy/">Trump Administration Executive Order Places Quantum at Center of Federal Technology Strategy</a></h3>
+      <p>A new U.S. executive order directs a comprehensive federal strategy to accelerate quantum technology development across national security, commercialization, benchmarking, and workforce development. It establishes a federally supported quantum computer program and a performance benchmarking center, with hard compliance deadlines and consequences for federal agencies. A companion EO focuses on protecting U.S. quantum research from foreign adversaries. <em>Why it matters:</em> Quantum photonic hardware (photonic QPUs, quantum interconnects, single-photon detectors) is directly in scope of both orders. Hard federal procurement deadlines create near-term demand signals for photonic quantum component makers.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-22</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://optics.org/press/6162">ClassOne Technology Secures Record Solstice S8 Orders from Applied Optoelectronics</a></h3>
+      <p>ClassOne Technology announced its largest-ever customer order from Applied Optoelectronics (AAOI) for multiple Solstice S8 single-wafer wet processing systems to support optical device production in Houston. AAOI CEO cited the deal as reflecting the industry inflection point toward optical interconnects in AI data centers. <em>Why it matters:</em> Wet processing equipment orders at record volumes are a manufacturing supply-chain signal — AAOI is ramping production of optical components for AI datacenter transceivers, and ClassOne's capacity expansion indicates suppliers are betting on sustained CPO demand through 2027+.</p>
+      <div class="meta">optics.org &middot; 2026-06-23</div>
+    </article>
+
+  </section>
+</main>
+<footer>
+  <div>Source issues: arXiv (physics.optics, cs.ET, quant-ph) · Nature Photonics · Light: Sci &amp; Apps · EPIC · PhotonDelta · Laser Focus World · Cignal AI · YouTube/SPIE TV · Lightmatter · Ayar Labs direct sites · Flexcompute blog · PIC Magazine — all blocked by egress proxy (results via web search only) · HyperLight $80M TFLN excluded (already in seen-links.log from 2026-06-24) · Reddit (r/Optics, r/Semiconductors): not assessed — no search results for June 22–25 window</div>
+  <div>8 items &middot; generated 2026-06-25 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
