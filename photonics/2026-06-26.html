@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-26</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, June 26, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#europe">ASML embeds lithography tools in Europe's first 6-inch InP photonic pilot line at Eindhoven — potential tape-out route for EU photonic compute startups by 2027</a></li>
+      <li><a href="#research">Optica: two-chip photonic SNN eliminates O-E-O conversion bottleneck in nonlinear neural activation</a></li>
+      <li><a href="#funding">Source Photonics approves $1.2B expansion targeting 10× capacity for 800G/1.6T AI server optical modules by Q3 2026</a></li>
+      <li><a href="#compute">TSMC COUPE ramp + multiple optical chip makers expanding simultaneously; China nanoimprint photonics claim worth watching</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://pandaily.com/global-optical-chip-expansion-jun2026">Global Optical Chip Makers Accelerate Capacity Expansion as AI Data Center Demand Surges</a></h3>
+      <p>Pandaily's roundup tracks simultaneous capacity expansion moves: TSMC is targeting COUPE silicon photonics production in H2 2026, Source Photonics is executing a $1.2B Changzhou build-out, and Chinese optical chip makers are racing to close the gap on 800G and 1.6T modules. The article also flags Prinano's claim of DUV-free 8-inch photonic chip production via nanoimprint lithography as a potential cost-disruption wildcard. <em>Why it matters:</em> the nanoimprint photonics claim — if validated — could fundamentally alter the lithography cost structure for silicon photonics and enable foundry access without DUV tools; engineers tracking competitive threats to future SiPho tape-out economics should flag this for follow-up.</p>
+      <div class="meta">pandaily.com · 2026-06-25</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/newsroom/2026/june/a_little_physics_improves_ai_optical_design/">Physics-Informed Neural Networks Cut Photonic Component Design Training Data 10× — QNM-Net (OPN)</a><span class="badge">catch-up</span></h3>
+      <p>Swedish researchers combined quasi-normal mode (QNM) physics with neural networks to design photonic-crystal slabs and free-form metasurfaces, reducing training data requirements by 10× versus standard fully-connected networks. QNM-Net embeds energy conservation and causality constraints from Maxwell's equations directly into the NN architecture, improving both accuracy and generalization on component design tasks. <em>Why it matters:</em> for PIC design engineers using inverse-design or AI-driven layout tools, a physics-informed NN requiring 10× less training data directly reduces the electromagnetic simulation burden at the core of any ML-accelerated PDK component generator — and is relevant to Tidy3D/gdsfactory workflow integration.</p>
+      <div class="meta">optica-opn.org · 2026-06-15</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://www.optica.org/about/newsroom/news_releases/2026/photonic_chips_advance_real-time_learning_in_spiking_neural_systems/">Photonic Chips Advance Real-Time Learning in Spiking Neural Systems — All-Optical Activation (Optica)</a></h3>
+      <p>Optica's news release covers a two-chip photonic neuromorphic system: a 16-channel photonic neuromorphic chip with 272 trainable parameters paired with a DFB laser array incorporating a saturable absorber that performs nonlinear activation entirely in the optical domain, eliminating the O-E conversion step. The system executed reinforcement learning tasks (CartPole balancing, Pendulum swing-up) with all computation remaining photonic. <em>Why it matters:</em> eliminating O-E-O conversion in the nonlinear activation function has been the stubborn design bottleneck in all-optical neural network accelerators; this demonstration using foundry-compatible components shows a concrete path to removing the last electronic bottleneck in optical inference pipelines.</p>
+      <div class="meta">optica.org · 2026-06-25</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.sdxcentral.com/news/light-driven-memory-breakthrough-targets-ai-power-consumption/">Light-Driven Magnetic Memory Could Slash AI Data Center Energy Use — QST / Applied Physics Letters</a><span class="badge">catch-up</span></h3>
+      <p>Japan's QST demonstrated magnetic memory switching via single ultrashort laser pulses — no electric current required — at ~1,000× faster switching speeds than conventional electrically-driven MRAM with lower heat generation. The underlying paper was published in Applied Physics Letters on June 8, 2026. <em>Why it matters:</em> laser-writable non-volatile memory is a potential enabler of O-E-O-free data center architectures, allowing photonic interconnects to write directly into memory without an electrical bridge; currently at materials demonstration stage but the 1,000× speed and photoelectric interface potential make this a priority item to track for future optical compute memory integration.</p>
+      <div class="meta">sdxcentral.com / eurekalert.org · 2026-06-19</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41467-026-71599-2">Deep Neural Network Inference on an Integrated Reconfigurable Photonic Tensor Processor — imec iSiPP50G (Nature Comms)</a><span class="badge">catch-up</span></h3>
+      <p>An imec-led team fabricated a silicon photonic tensor processor on the commercial iSiPP50G process (electro-absorption modulators + photodiodes), achieving 98.1% MNIST and 72.0% CIFAR-10 accuracy on a 9×3 optical crossbar, integrated into a standard 19-inch rack with a PyTorch software interface. <em>Why it matters:</em> iSiPP50G is a commercially accessible foundry node — this provides a reference design for photonic AI inference on silicon photonics that teams can build on or tape out from directly; the PyTorch interface lowers integration friction versus prior custom software stacks, making it the most deployable photonic inference reference to date.</p>
+      <div class="meta">nature.com/ncomms · 2026-06-01</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/asml-partners-in-6-inch-inp-project-in-europe">ASML Partners with TNO on 6-Inch InP Photonic Chip Pilot Line in Eindhoven</a></h3>
+      <p>ASML formally joined TNO's new Photonic Chip Pilot Line at the High Tech Campus in Eindhoven, deploying DUV and i-line scanners for 6-inch indium phosphide wafer production under the EU PIXEurope project. Construction began in early 2026; first production capability is targeted for 2027. This marks the first time ASML has formally embedded its lithography equipment in a non-silicon (photonics) pilot manufacturing line. <em>Why it matters:</em> scaling InP to 6-inch halves per-die cost versus 4-inch at equal yield — the key economic hurdle for making InP-based photonic compute transceivers and modulators competitive with SiPho in high-volume production; EU-subsidized infrastructure under PIXEurope reduces single-company foundry risk for startups needing InP access.</p>
+      <div class="meta">optics.org · 2026-06-25</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.tno.nl/en/newsroom/2026/06/european-photonic-chip-manufacturing/">TNO and ASML Scale Up European Production of Photonic Chips — Official Release</a></h3>
+      <p>TNO's official press release provides technical depth on the ASML partnership: phased lithography deployment, joint R&amp;D on InP process development, and metrology co-innovation targeting commercial InP PIC production on 6-inch wafers for telecom, data center optical interconnects, and sensing applications. The release confirms the EU PIXEurope framework as the umbrella — making this EU-subsidized, multi-partner infrastructure. <em>Why it matters:</em> ASML's process control and metrology know-how applied to InP directly addresses the yield gap that has historically slowed InP PIC commercialization; engineers evaluating InP vs. SiPho vs. TFLN for next-gen optical compute should track this as a potential low-barrier future European tape-out route.</p>
+      <div class="meta">tno.nl · 2026-06-24</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.ledinside.com/news/2026/6/2026_06_23_01">Source Photonics (Dongshan Precision) Approves $1.2B Optical Chip and Module Capacity Expansion</a></h3>
+      <p>Dongshan Precision's subsidiary Source Photonics Holdings approved a $1.2B capacity expansion for optical chips and high-speed modules in Changzhou and other Chinese sites, funded entirely from internal cash flows and targeting 800G and 1.6T AI server interconnect products. Production capacity is projected to increase up to 10× by end of Q3 2026. <em>Why it matters:</em> a 10× capacity expansion of 800G/1.6T optical modules at a major Chinese supplier is material for the global co-packaged optics supply chain — for photonic compute teams designing systems dependent on EMLs, DFB arrays, or silicon photonic transceivers, this is a significant near-term supply relief signal.</p>
+      <div class="meta">ledinside.com / trendforce.com · 2026-06-23</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://www.semiconductor-today.com/news_items/2026/jun/nuburu-250626.shtml">NUBURU Advances $2.2M Blue-Laser Rover Quotation Toward 2026 Revenue Target</a></h3>
+      <p>NUBURU announced a ~$2.2M customer quotation under evaluation for ten 125W blue GaN laser modules per autonomous terrestrial rover (1.25 kW/vehicle), framing the opportunity as progress toward 2026 LaserTech revenue targets. <em>Why it matters:</em> high-power blue GaN diode lasers are relevant to photonic power delivery research and free-space optical link designs where near-IR wavelengths face atmospheric or scattering penalties; NUBURU's progress toward product revenue validates the commercial readiness of this laser class for integrated system design at direct-diode power levels.</p>
+      <div class="meta">semiconductor-today.com · 2026-06-25</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: lightmatter.co, ayarlabs.com, nextplatform.com, thequantuminsider.com, hs.flexcompute.com/blog, picmagazine.net, photondelta.com, epic-photonics.com, laserfocusworld.com, cignal.ai — all HTTP 403 (bot-blocked); content for these sources recovered via web search where available or noted as not assessed. arxiv.org/list/physics.optics and cs.ET — HTTP 403; no papers with confirmed Jun 25–26 submission dates recovered. nature.com/nphoton.rss and /lsa.rss — HTTP 403. gdsfactory — no new release Jun 25–26 (latest v9.44.0 Jun 12). SPIE TV YouTube RSS — not fetched; no new uploads confirmed. reddit.com/r/Optics and /r/Semiconductors — direct RSS fetch blocked; no results via web search fallback.</div>
+  <div>9 items &middot; generated 2026-06-26 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
