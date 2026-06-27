@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-27</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Saturday, June 27, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Q.ANT demonstrates generative AI inference running on photonic hardware at ISC HPC 2026 — first live industry demonstration of LLM computation on a photonic processor</a></li>
+      <li><a href="#research">arXiv 2606.26910: ultralow-loss Si3N4 integrated photonic platform achieves record propagation loss enabling scalable quantum photonic circuits</a></li>
+      <li><a href="#europe">Exosens secures €140M EIB financing for European defense and industrial photonics expansion under EU strategic investment framework</a></li>
+      <li><a href="#research">Light-driven magnetic memory switches 1,000× faster than conventional MRAM with no electric current — laser-writable non-volatile memory for future O-E-O-free data center architectures (catch-up)</a></li>
+      <li><a href="#research">EPFL chip-scale ultrafast laser matches tabletop femtosecond system performance in a 1 cm² silicon photonic footprint (catch-up)</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.manilatimes.net/2026/06/23/tmt-newswire/globenewswire/qant-runs-generative-ai-on-photonic-hardware/2371112">Q.ANT Runs Generative AI on Photonic Hardware at ISC High Performance 2026</a></h3>
+      <p>Q.ANT demonstrated live generative AI inference running on its photonic processor at ISC High Performance 2026, performing LLM matrix-vector multiplication in the optical domain using the company's integrated photonic chip. The demonstration used a quantised language model workload and showed end-to-end output with the photonic compute unit handling the core multiply-accumulate operations. <em>Why it matters:</em> this is the first publicly demonstrated live LLM inference on a photonic processor at a major HPC conference — moving the field from simulation and lab demos to a conference-floor system demonstration; the key remaining questions are throughput, precision, and the overhead of the photonic-electronic interface, which Q.ANT did not fully disclose.</p>
+      <div class="meta">manilatimes.net / globenewswire.com · 2026-06-23</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://github.com/flexcompute/autophotonicdesign">flexcompute/autophotonicdesign — Automated Photonic Component Design with AI-Assisted Inverse Design</a></h3>
+      <p>Flexcompute released autophotonicdesign, an open-source Python library integrating Tidy3D FDTD simulation with AI-assisted inverse design for automated photonic component generation. Supports grating coupler, directional coupler, ring resonator, and MMI splitter design workflows, with a gdsfactory export pipeline for direct GDS-II output. Includes pre-trained surrogate models for common component classes to reduce full-wave simulation calls. <em>Why it matters:</em> combining Tidy3D's simulation accuracy with surrogate-model acceleration and gdsfactory export in a single open-source library closes a major gap in the PIC design automation stack — engineers using the Tidy3D/gdsfactory toolchain can now run AI-guided component optimisation without building the surrogate model pipeline themselves.</p>
+      <div class="meta">github.com/flexcompute · 2026-06-26</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.26910">Ultralow-Loss Silicon Nitride Integrated Photonic Platform for Scalable Quantum Photonic Circuits (arXiv)</a></h3>
+      <p>Researchers demonstrate a Si3N4 photonic platform achieving sub-0.1 dB/m propagation loss — a record for integrated photonic waveguides at telecom wavelengths — using optimised LPCVD deposition and annealing protocols compatible with 200 mm wafer processing. The platform supports multi-photon entanglement generation, integrated single-photon detection interfaces, and dense wavelength-division multiplexing for scalable quantum circuit integration. <em>Why it matters:</em> propagation loss at this level enables multi-metre effective optical paths on-chip, making large-scale quantum photonic circuits with high gate fidelity feasible on a foundry-accessible Si3N4 process — this is a materials milestone for integrated quantum photonics teams using standard CMOS-compatible platforms.</p>
+      <div class="meta">arxiv.org · 2026-06-25</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.eurekalert.org/news-releases/1131699">Light-Driven Magnetic Memory Switches 1,000× Faster Than Conventional MRAM — QST / Applied Physics Letters</a><span class="badge">catch-up</span></h3>
+      <p>Japan's QST demonstrated magnetic memory switching via single ultrashort laser pulses — no electric current required — at approximately 1,000× faster switching speeds than conventional electrically-driven MRAM with lower heat generation per operation. The underlying paper was published in Applied Physics Letters on June 8, 2026. The laser-driven mechanism exploits ultrafast demagnetisation via the inverse Faraday effect, enabling sub-picosecond magnetic state toggling. <em>Why it matters:</em> laser-writable non-volatile memory is a potential enabler of O-E-O-free data center architectures, allowing photonic interconnects to write directly into memory without an electrical bridge; currently at materials demonstration stage but the 1,000× speed advantage and direct photoelectric interface potential make this a priority item to track for future optical compute memory integration.</p>
+      <div class="meta">eurekalert.org / Applied Physics Letters · 2026-06-19</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.sciencedaily.com/releases/2026/06/260604044240.htm">EPFL Chip-Scale Ultrafast Laser Matches Tabletop Femtosecond System Performance</a><span class="badge">catch-up</span></h3>
+      <p>EPFL researchers demonstrated a chip-scale ultrafast laser fabricated on a silicon photonic platform that matches the pulse duration and coherence characteristics of tabletop femtosecond laser systems within a 1 cm² footprint. The device uses a novel nonlinear microresonator design to achieve sub-100 fs pulses with milliwatt-level peak power, sufficient for two-photon microscopy and optical coherence tomography applications. <em>Why it matters:</em> a foundry-compatible chip-scale femtosecond laser removes the largest barrier to integrating ultrafast optics into handheld and implantable medical imaging devices — and creates a path to on-chip nonlinear optical processing (frequency comb generation, LIDAR) without free-space beam paths.</p>
+      <div class="meta">sciencedaily.com / EPFL · 2026-06-04</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/european-investment-bank-backs-exosens-with-%E2%82%AC140m">Exosens Secures €140M European Investment Bank Financing for Photonics Expansion</a></h3>
+      <p>Exosens — a French photonics group specialising in image intensification, low-light sensing, and defense photonic systems — secured a €140M financing facility from the European Investment Bank, earmarked for R&amp;D capacity expansion across its European manufacturing sites and development of next-generation photonic sensor platforms for defense and industrial inspection applications. The EIB facility is structured under the EU strategic autonomy framework. <em>Why it matters:</em> a €140M EIB commitment to a European photonics manufacturer signals continued EU strategic investment in sovereign photonics capacity outside the semiconductor compute narrative — relevant for teams tracking the European photonics supply chain for defense-grade components, low-light sensors, and high-performance imaging modules.</p>
+      <div class="meta">optics.org · 2026-06-25</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.einpresswire.com/article/921794512/silicon-photonics-market-set-for-rapid-expansion-forecast-to-hit-usd-27-35-billion-by-2035">Silicon Photonics Market Forecast: $27.35B by 2035 — AI Data Center Demand Drives CAGR of 26.4%</a></h3>
+      <p>A new market research report projects the global silicon photonics market will reach USD 27.35 billion by 2035, up from approximately USD 3.5 billion in 2025, driven primarily by AI data center optical interconnect demand (800G/1.6T coherent and pluggable transceivers), followed by telecom, medical imaging, and LiDAR. The 26.4% CAGR forecast reflects accelerating co-packaged optics adoption and increasing silicon photonic content per AI server rack. <em>Why it matters:</em> a 26.4% CAGR forecast anchors investment cases for SiPho foundry capacity expansion and startup funding rounds; engineers evaluating platform selection (SiPho vs. InP vs. TFLN) should track these market signals as they directly influence foundry PDK investment priorities and multi-project wafer availability timelines.</p>
+      <div class="meta">einpresswire.com · 2026-06-26</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://www.electronicsmedia.info/2026/06/23/silicon-photonics-test-solutions/">Advantest and OpenLight Partner on Silicon Photonics Test and Characterisation Solutions</a></h3>
+      <p>Advantest announced a partnership with OpenLight (TSMC silicon photonics IP and foundry access provider) to develop integrated test and characterisation solutions for silicon photonic devices, targeting wafer-level and die-level optical and electrical parameter extraction. The partnership covers fibre-coupling test fixtures, automated wavelength sweep testing, and integration with Advantest's ATE platforms for volume production screening of SiPho transceivers and PICs. <em>Why it matters:</em> wafer-level test infrastructure for silicon photonics has historically lagged behind the process itself — production-ready ATE integration from an established semiconductor test equipment maker signals that the SiPho volume manufacturing supply chain is maturing beyond pilot-line scale.</p>
+      <div class="meta">electronicsmedia.info · 2026-06-23</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Reddit / r/Optics and r/Semiconductors: RSS feeds returned HTTP 403; web search fallback yielded no indexable photonics threads for June 26–27. Compute: no additional fresh items beyond Q.ANT in last 24h not already covered in prior digests. arxiv.org/list/physics.optics direct fetch blocked (HTTP 403); papers sourced via web search. lightmatter.co, ayarlabs.com, photondelta.com, epic-photonics.com, laserfocusworld.com — HTTP 403 (bot-blocked).</div>
+  <div>8 items &middot; generated 2026-06-27 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
