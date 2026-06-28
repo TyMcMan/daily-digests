@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-28</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  .muted{color:var(--muted)}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Saturday, June 28, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html">Anthropic Mythos 5 deployed across 100+ US government organizations<span class="src">CNBC</span></a><span class="why">Largest US government AI deployment on record — Mythos 5 cleared security review after a hold, now live at federal and defense orgs.</span></li>
+      <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP Release Candidate: stateless protocol, MCP Apps, and Tasks API<span class="src">MCP Blog</span></a><span class="why">Breaking change for MCP server operators — stateless architecture eliminates server-side session state; new MCP Apps deployment model incoming.</span></li>
+      <li><a href="https://thenextweb.com/news/anthropic-accuses-alibaba-distillation-claude-qwen">Alibaba accused of extracting 28.8M Claude exchanges to distill into Qwen<span class="src">The Next Web</span></a><span class="why">Anthropic alleges the largest-ever ToS distillation attack; resets the scale bar for API abuse detection.</span></li>
+      <li><a href="https://thenextweb.com/news/google-loses-two-gemini-researchers-anthropic">Two senior Google Gemini/DeepMind researchers move to Anthropic<span class="src">The Next Web</span></a><span class="why">Continues a quiet talent shift toward Anthropic; signals where top researchers see the most consequential work happening.</span></li>
+      <li><a href="https://www.techradar.com/ai-platforms-assistants/chatgpt/openai-just-quietly-retired-the-last-of-the-gpt-4-models-and-it-feels-like-the-end-of-an-ai-era">GPT-4.5 silently retired + Codex Remote goes GA on all paid plans<span class="src">TechRadar / OpenAI</span></a><span class="why">Check API integrations: gpt-4.5 is deprecated. Meanwhile Codex Remote is now available to all paid ChatGPT subscribers.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">3</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">6</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.24605">ScaleToT: Billion-Scale User Modeling via LLM Tree-of-Thought</a></h3>
+      <div class="summary">Structured LLM Tree-of-Thought framework for modeling behavioral preferences across billions of users; reports a +6.7% LT30 improvement in a live A/B test at industrial scale.</div>
+      <div class="why"><b>Why it matters:</b> Demonstrates that LLM reasoning trees can replace hand-crafted feature pipelines for large-scale personalization — practical read for anyone building recommendation or ranking systems.</div>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">personalization</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.24605">arxiv.org →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.19787">ORAgentBench: Benchmarking LLM Agents on Operations Research</a></h3>
+      <div class="summary">A new benchmark with 107 tasks covering optimization, scheduling, and combinatorial reasoning for evaluating LLM agents in operations research settings. Tasks span both problem formulation and solver-invocation subtasks.</div>
+      <div class="why"><b>Why it matters:</b> Fills a gap vs. purely code/QA benchmarks — structured evaluation of agents on hard combinatorial problems is overdue as OR use cases become real production targets.</div>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">benchmark</span>
+        <span class="chip">agents</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.19787">arxiv.org →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.23991">Limitations of the Agent Architecture: A Critical Analysis</a></h3>
+      <div class="summary">Systematic critique of current LLM agent architectures, cataloguing failure modes in memory management, multi-step planning, and tool-use reliability under realistic task conditions.</div>
+      <div class="why"><b>Why it matters:</b> Sobering map of the gaps between current agent capabilities and what production deployments actually require — useful for calibrating harness complexity and fallback design.</div>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">cs.MA</span>
+        <span class="chip">agents</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.23991">arxiv.org →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <div class="card">
+      <h3><a href="https://github.com/anomalyco/opencode">anomalyco/opencode — Open-source AI coding agent</a></h3>
+      <div class="summary">Terminal-native TypeScript coding agent that plugs into any LLM backend; positions as an open, inspectable alternative to closed coding agents with full tool-use support.</div>
+      <div class="why"><b>Why it matters:</b> 392 stars today — strong demand signal for open coding agents not locked to a single provider. Useful for teams that want to customize or audit the agent loop.</div>
+      <div class="row">
+        <span class="chip hot">🔥 392⭐ today</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">coding agent</span>
+        <a class="src-link" href="https://github.com/anomalyco/opencode">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/simplex-chat/simplex-chat">simplex-chat/simplex-chat — Private messaging without user IDs</a></h3>
+      <div class="summary">End-to-end encrypted messaging protocol with no user identifiers of any kind; Haskell server core with mobile clients. Surged 1,469 stars today after a privacy-focused announcement.</div>
+      <div class="why"><b>Why it matters:</b> Privacy-first communication infrastructure is increasingly relevant as AI assistants handle sensitive conversations. The no-user-ID architecture is a design reference worth studying.</div>
+      <div class="row">
+        <span class="chip stars">1,469⭐ today</span>
+        <span class="chip">Haskell</span>
+        <span class="chip">privacy</span>
+        <a class="src-link" href="https://github.com/simplex-chat/simplex-chat">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/xbtlin/ai-berkshire">xbtlin/ai-berkshire — AI value investing with LLMs</a></h3>
+      <div class="summary">Python framework that applies Warren Buffett–style value investing analysis using LLMs over financial filings and market data; includes automated screening and report generation.</div>
+      <div class="why"><b>Why it matters:</b> 685 stars today — concrete LLM application for financial research; shows the emerging pattern of wrapping LLM reasoning around domain-specific structured data pipelines.</div>
+      <div class="row">
+        <span class="chip">685⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">finance</span>
+        <span class="chip">LLM application</span>
+        <a class="src-link" href="https://github.com/xbtlin/ai-berkshire">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/hugohe3/ppt-master">hugohe3/ppt-master — AI PowerPoint generator</a></h3>
+      <div class="summary">Python tool that converts text prompts and outlines into fully formatted PowerPoint presentations via LLM; includes slide layout control, speaker notes, and image placeholder generation. 589 stars today.</div>
+      <div class="why"><b>Why it matters:</b> Demand signal for structured document generation — shows the appetite for AI-native office productivity tooling beyond chat interfaces.</div>
+      <div class="row">
+        <span class="chip">589⭐ today</span>
+        <span class="chip">Python</span>
+        <span class="chip">document gen</span>
+        <a class="src-link" href="https://github.com/hugohe3/ppt-master">github.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+    <div class="card">
+      <h3><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP Release Candidate: Stateless Protocol + MCP Apps + Tasks</a></h3>
+      <div class="summary">The MCP RC introduces stateless operation (no server-side session state required), a new MCP Apps deployment model for packaging agent capabilities, and a structured Tasks API for long-running asynchronous agent work.</div>
+      <div class="why"><b>Why it matters:</b> Breaking change for anyone hosting MCP servers — stateless architecture simplifies horizontal scaling but requires redesigning any flow that relied on server-side session context.</div>
+      <div class="row">
+        <span class="chip hot">🔥 breaking change</span>
+        <span class="chip">MCP</span>
+        <span class="chip">protocol</span>
+        <a class="src-link" href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP Blog →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon">Anthropic Fable 5 on Track to Return for External Users</a></h3>
+      <div class="summary">Axios reports Fable 5 is scheduled to resume broad external access after its safety hold; internal and partner-org testing concluded positively. No firm date announced, but return is described as imminent.</div>
+      <div class="why"><b>Why it matters:</b> Fable 5 is Anthropic's current frontier model — its return will reset capability benchmarks and may shift what's achievable in agent harnesses that rely on extended reasoning.</div>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">frontier model</span>
+        <span class="chip">Axios</span>
+        <a class="src-link" href="https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon">axios.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://openai.com/index/work-with-codex-from-anywhere/">Codex Remote: Now GA on All Paid ChatGPT Plans</a></h3>
+      <div class="summary">OpenAI makes Codex Remote generally available to all paid ChatGPT subscribers, enabling cloud-based asynchronous code execution and terminal access with persistent agent sessions from any device.</div>
+      <div class="why"><b>Why it matters:</b> Codex Remote GA puts cloud coding agents in front of millions of users — direct competitive pressure on CLI and IDE-native agent workflows, including Claude Code.</div>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">coding agent</span>
+        <span class="chip">GA</span>
+        <a class="src-link" href="https://openai.com/index/work-with-codex-from-anywhere/">openai.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <h3><a href="https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf">Anthropic 2026 Agentic Coding Trends Report</a></h3>
+      <div class="summary">Anthropic's survey of developer practices with agentic coding tools: adoption rates, workflow patterns, productivity outcomes, and toolchain choices across enterprise teams in 2026.</div>
+      <div class="why"><b>Why it matters:</b> First-party data on how teams actually use Claude Code and agentic workflows at scale — useful calibration for infrastructure, tooling investment, and internal enablement decisions.</div>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">report</span>
+        <span class="chip">agentic coding</span>
+        <a class="src-link" href="https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf">PDF →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://papercopilot.com/paper-list/icml-paper-list/icml-2026-paper-list/">ICML 2026 Accepted Papers: 6,500+ (Seoul)</a></h3>
+      <div class="summary">Full list of accepted papers for ICML 2026 in Seoul — 6,500+ papers spanning ML theory, LLMs, agents, multimodal learning, reinforcement learning, and more, organized and searchable by PaperCopilot.</div>
+      <div class="why"><b>Why it matters:</b> Bookmark for filtering the papers most relevant to your stack before the official proceedings drop; ICML 2026 is one of the largest ML venues yet.</div>
+      <div class="row">
+        <span class="chip">ICML 2026</span>
+        <span class="chip">conference</span>
+        <span class="chip">papers</span>
+        <a class="src-link" href="https://papercopilot.com/paper-list/icml-paper-list/icml-2026-paper-list/">papercopilot.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <p class="muted">Nothing notable in the last 24h — all candidate HN items matched the existing seen-links ceiling (max ID already recorded). Check <a href="https://news.ycombinator.com" style="color:var(--accent)">news.ycombinator.com</a> directly.</p>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <p class="muted">Nothing notable in the last 24h — search returned no indexed Reddit threads for June 27–28, 2026. Check subreddits in <code>ai/reddit-subs.md</code> directly.</p>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna">AI News: OpenAI GPT-5.6 Sol / Terra / Luna Model Family</a></h3>
+      <div class="summary">Latent Space AI News covers the GPT-5.6 model family (Sol, Terra, and Luna variants) with benchmark breakdowns, capability comparisons, and developer API access notes. Sol is positioned as the frontier reasoning tier.</div>
+      <div class="why"><b>Why it matters:</b> GPT-5.6 is the current OpenAI benchmark frontier — understand what you're building on or competing against before setting capability expectations with stakeholders.</div>
+      <div class="row">
+        <span class="chip">Latent Space</span>
+        <span class="chip">newsletter</span>
+        <span class="chip">OpenAI</span>
+        <a class="src-link" href="https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna">latent.space →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://thenextweb.com/news/anthropic-accuses-alibaba-distillation-claude-qwen">Anthropic Accuses Alibaba of Largest-Ever Claude Distillation Attack</a></h3>
+      <div class="summary">Anthropic alleges Alibaba used 28.8 million Claude API exchanges to distill model capabilities into Qwen, in violation of ToS. Alibaba denies the claims. Legal and policy implications remain unresolved.</div>
+      <div class="why"><b>Why it matters:</b> Sets a new scale benchmark for distillation attacks and will accelerate API abuse detection investment across all major providers. Watch for ToS and rate-limit changes.</div>
+      <div class="row">
+        <span class="chip hot">🔥 breaking</span>
+        <span class="chip">The Next Web</span>
+        <span class="chip">security</span>
+        <span class="chip">distillation</span>
+        <a class="src-link" href="https://thenextweb.com/news/anthropic-accuses-alibaba-distillation-claude-qwen">thenextweb.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html">Anthropic Mythos 5 Cleared for 100+ US Government Organizations</a></h3>
+      <div class="summary">CNBC reports Mythos 5 has cleared US government security review and is now deployed across 100+ federal and defense organizations — the largest single US government AI rollout on record.</div>
+      <div class="why"><b>Why it matters:</b> Signals Anthropic's enterprise security posture has matured enough for sensitive government use cases; provides a competitive reference point for enterprise AI procurement decisions.</div>
+      <div class="row">
+        <span class="chip">CNBC</span>
+        <span class="chip">enterprise</span>
+        <span class="chip">government</span>
+        <span class="chip">Anthropic</span>
+        <a class="src-link" href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html">cnbc.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://thenextweb.com/news/google-loses-two-gemini-researchers-anthropic">Two Senior Google Gemini / DeepMind Researchers Join Anthropic</a></h3>
+      <div class="summary">A pair of senior researchers from Google's Gemini and DeepMind teams have moved to Anthropic, continuing a quiet talent shift that has been building through 2026.</div>
+      <div class="why"><b>Why it matters:</b> Talent flows are a leading indicator of where the most interesting research is perceived to happen; reinforces Anthropic's pull on frontier ML talent.</div>
+      <div class="row">
+        <span class="chip">The Next Web</span>
+        <span class="chip">talent</span>
+        <span class="chip">research</span>
+        <a class="src-link" href="https://thenextweb.com/news/google-loses-two-gemini-researchers-anthropic">thenextweb.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.techradar.com/ai-platforms-assistants/chatgpt/openai-just-quietly-retired-the-last-of-the-gpt-4-models-and-it-feels-like-the-end-of-an-ai-era">OpenAI Quietly Retires GPT-4.5 — End of the GPT-4 Era</a></h3>
+      <div class="summary">OpenAI deprecated GPT-4.5 with no announcement, effectively closing out the entire GPT-4 model family. API callers on gpt-4.5 or legacy gpt-4 aliases should migrate to GPT-5-series endpoints now.</div>
+      <div class="why"><b>Why it matters:</b> If any of your integrations call gpt-4.5 or a deprecated gpt-4 alias, they will start failing. Audit your model IDs and update them before your provider deadline.</div>
+      <div class="row">
+        <span class="chip">TechRadar</span>
+        <span class="chip">OpenAI</span>
+        <span class="chip">deprecation</span>
+        <a class="src-link" href="https://www.techradar.com/ai-platforms-assistants/chatgpt/openai-just-quietly-retired-the-last-of-the-gpt-4-models-and-it-feels-like-the-end-of-an-ai-era">techradar.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html">OpenAI IPO Timeline Pushed Back — Unlikely Before Q2 2027</a></h3>
+      <div class="summary">Prediction market data (Kalshi) and CNBC sources suggest OpenAI's IPO is now unlikely before Q2 2027, with governance restructuring cited as the primary blocking factor. An earlier 2026 target is off the table.</div>
+      <div class="why"><b>Why it matters:</b> Affects OpenAI's incentive structure and long-term API pricing stability — relevant context for teams with multi-year platform bets on OpenAI infrastructure.</div>
+      <div class="row">
+        <span class="chip">CNBC</span>
+        <span class="chip">business</span>
+        <span class="chip">OpenAI</span>
+        <span class="chip">IPO</span>
+        <a class="src-link" href="https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html">cnbc.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-28 01:04<br>
+    arXiv: partial coverage (listing pages blocked, abstract pages fetched individually) · HN: Algolia API blocked, all candidates already seen · Reddit: search returned no indexed results for June 27–28<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
