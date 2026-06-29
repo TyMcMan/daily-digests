@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-29</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Monday, June 29, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Quandela silicon photonic QPU demonstrated as production ML accelerator — classification + quantum tomography on one chip</a></li>
+      <li><a href="#compute">GPU-to-photonic-QPU round-trip latency cut 167× (5,000 ms → 30 ms) via FPGA bridge on NVIDIA NVQLink — first defined I/O budget for hybrid photonic-GPU nodes</a></li>
+      <li><a href="#research">arXiv: two phase-stability models (Brownian walk + harmonic oscillator) validated against experiment — addresses key reliability gap for scaling MZI-mesh photonic processors</a></li>
+      <li><a href="#pic-eda">Amorphous-Si on-chip metasurface emits near-vertically (0.88°) at 1310 nm, replacing bulky microlens arrays for CPO chip-to-fiber coupling</a></li>
+      <li><a href="#europe">EPIC runs Do-it-Yourself Active Electro-Optic sprint for European PIC designers (June 29)</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://quantumcomputingreport.com/quandela-demonstrates-photonic-quantum-reservoir-processing-for-advanced-machine-learning-and-single-basis-quantum-tomography/">Quandela Demonstrates Photonic Quantum Reservoir Processing for ML and Single-Basis Quantum Tomography</a></h3>
+      <p>A collaboration between Quandela, the Polish Academy of Sciences, and the University of Warsaw experimentally demonstrated a scalable Quantum Machine Learning architecture on a programmable silicon photonic QPU excited by single-photon states. The hardware-executed Quantum Reservoir Processing network performs both classical ML classification and quantum state tomography using a single fixed measurement basis — breaking the exponential scaling bottleneck for state characterization. <em>Why it matters:</em> Validates silicon-photonic QPU mesh architectures as production-viable ML accelerators tightly coupled to conventional HPC, providing a concrete workload demonstration relevant to heterogeneous photonic-electronic AI pipeline design.</p>
+      <div class="meta">Quantum Computing Report &middot; 2026-06-26</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/23/quandela-validates-low-latency-photonic-qpu-integration-with-nvidia-accelerated-computing/">Quandela Validates Low-Latency Photonic QPU Integration with NVIDIA NVQLink — GPU-QPU Latency 5,000 ms → 30 ms</a></h3>
+      <p>Quandela demonstrated an FPGA-based controller bridge that cuts GPU-to-photonic-QPU round-trip latency from 5,000 ms to approximately 30 ms, using NVIDIA's NVQLink interface within standard HPC node architectures. This is the first validated low-latency integration between a photonic processor and NVIDIA's accelerated computing stack. <em>Why it matters:</em> Establishes a concrete I/O and latency budget for hybrid GPU+photonic QPU nodes — a key missing parameter for co-design of heterogeneous photonic compute fabrics targeting AI data center deployments.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-23</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <article class="item">
+      <h3><a href="https://www.mdpi.com/2304-6732/13/7/621">Amorphous-Silicon Metasurface on SOI for Near-Vertical CPO Chip-to-Fiber Coupling (1310 nm)</a></h3>
+      <p>A new paper in MDPI Photonics describes monolithically integrated amorphous-silicon metasurfaces on SOI at 1310 nm that emit near-vertically (0.88° angle) with a focal length of ~99 µm, replacing bulky external microlens arrays for chip-to-fiber or chip-to-detector coupling in co-packaged optics. The metasurface is fabricated monolithically on standard silicon photonics platforms. <em>Why it matters:</em> Eliminates the mechanical alignment tolerances currently constraining CPO packaging yield and cost — a potential drop-in on-chip optical interface component for PIC designers targeting CPO applications.</p>
+      <div class="meta">MDPI Photonics (peer-reviewed) &middot; 2026-06-27</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.25196">Modeling and Analysis of Phase Instability in Photonic Processors</a></h3>
+      <p>Addresses the critical challenge of phase stability in reconfigurable multimode photonic processors used for quantum and classical optical information processing. Proposes two theoretical models — a Brownian random walk and an oscillating-harmonic phase reconstruction scheme — validated against experimental data on MZI-mesh photonic processors. <em>Why it matters:</em> Phase instability is the primary reliability gap limiting the scaling of photonic compute chips; these validated models provide a design-time framework for building stability guarantees into next-generation photonic processors.</p>
+      <div class="meta">arXiv physics.optics &middot; 2606.25196 &middot; 2026-06-23</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://epic-photonics.com/epic-events/">EPIC Do-it-Yourself Active Electro-Optic (AEO) Sprint — June 29, 2026</a></h3>
+      <p>EPIC ran its "Do-it-Yourself Active Electro-Optic" sprint session today (June 29), part of a series helping PIC designers across Europe rapidly prototype and validate electro-optic device designs in a structured hands-on format. The event is part of EPIC's engineering programme supporting SMEs and startups building on European photonic foundry platforms (InP, SiN, SOI). <em>Why it matters:</em> Practical access to electro-optic design expertise and foundry process context through EPIC's network — relevant for any EU-adjacent team targeting active PIC components.</p>
+      <div class="meta">EPIC (European Photonics Industry Consortium) &middot; 2026-06-29</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Cignal AI press-releases + Active Insight (403); ExoSwan photonics-stocks (403); SPIE TV YouTube RSS (403); optics.org/news (403); Reddit RSS (r/Optics, r/Semiconductors, r/photonics all blocked) and web search returned no indexed threads. Previously reported items excluded: Exosens €140M EIB (seen), HyperLight $80M Series C (seen), TNO/ASML InP pilot line (seen), Laser Focus World Hot List June 26 (seen), Keysight/VPIphotonics acquisition (seen).</div>
+  <div>5 items &middot; generated 2026-06-29 01:18 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
