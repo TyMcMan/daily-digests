@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-06-30</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, June 30, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 17 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://huggingface.co/papers/2606.22873">SingGuard: Policy-Adaptive Multimodal Guardrail with Dynamic Reasoning<span class="src">HF Papers · 29 upvotes</span></a><span class="why">Ingests natural-language safety rules at runtime, switches fast-to-slow reasoning via decoupled RL, tops 35 safety benchmarks including cross-modal joint-risk cases.</span></li>
+      <li><a href="https://huggingface.co/papers/2606.28277">Google Paper Assistant Tool: Agentic AI for Scientific Peer Review<span class="src">HF Papers · Google</span></a><span class="why">PAT verifies proofs, validates experiments, and flags manuscript flaws — piloted at STOC and ICML 2026. Scientific review automation just leveled up.</span></li>
+      <li><a href="https://github.com/msitarzewski/agency-agents">msitarzewski/agency-agents — 1,425 ⭐ today: complete multi-role AI agency framework<span class="src">GitHub Trending</span></a><span class="why">Top AI trending repo with 118k total stars. Packages specialist agent personas (frontend, community, reasoning) into one deployable framework.</span></li>
+      <li><a href="https://huggingface.co/papers/2606.27608">Qwen-Image-2.0-RL: RLHF Post-Training for Image Generation<span class="src">HF Papers · Alibaba</span></a><span class="why">Applies chain-of-thought reward models covering alignment, aesthetics, and portrait fidelity to a diffusion model — first open blueprint for RLHF on image generators.</span></li>
+      <li><a href="https://huggingface.co/papers/2606.27378">Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs<span class="src">HF Papers</span></a><span class="why">Auditing 23 reasoning tasks shows no existing representation satisfies all four axioms; internal LLM representations encode little beyond input. A principled challenge to CoT interpretability claims.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">0</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2606.22873">SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning</a></h3>
+      <div class="summary">A runtime-configurable guardrail that ingests natural-language safety policies at inference time and switches between fast-to-slow reasoning regimes via decoupled RL. Achieves state-of-the-art F1 across 35 safety benchmark datasets including cross-modal joint-risk cases (text + image inputs).</div>
+      <div class="why"><b>Why it matters:</b> Enables policy updates without retraining — update your safety rules in natural language, not model weights. Cross-modal joint-risk coverage addresses a real gap in production multimodal LLM safety stacks.</div>
+      <div class="row">
+        <span class="chip">HF Papers</span>
+        <span class="chip">cs.AI · cs.CV</span>
+        <span class="chip stars">29 HF upvotes</span>
+        <a class="src-link" href="https://huggingface.co/papers/2606.22873">hf.co →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2606.28277">Towards Automating Scientific Review: Google's Paper Assistant Tool</a></h3>
+      <div class="summary">PAT (Paper Assistant Tool) is an agentic framework that ingests full scientific manuscripts to verify theoretical results, validate experiments, and identify flaws — including checking proofs and running statistical tests. Piloted with STOC 2025 and ICML 2026 program committees with highly positive reception.</div>
+      <div class="why"><b>Why it matters:</b> Peer review is a structural bottleneck in science. An agent that checks proofs and experiments at submission time changes the publication pipeline — and its ICML 2026 real-world pilot makes this concrete, not theoretical.</div>
+      <div class="row">
+        <span class="chip">HF Papers</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">Google Research</span>
+        <a class="src-link" href="https://huggingface.co/papers/2606.28277">hf.co →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2606.27608">Qwen-Image-2.0-RL Technical Report</a></h3>
+      <div class="summary">Alibaba's post-training pipeline applies RLHF and on-policy distillation to the Qwen-Image-2.0 diffusion model using composite chain-of-thought reward models covering alignment, aesthetics, portrait fidelity, and instruction-following for text-to-image and editing tasks.</div>
+      <div class="why"><b>Why it matters:</b> RLHF techniques from language models now work on diffusion image generators — this is the open-weights blueprint. Practitioners building image pipelines get a concrete recipe for quality improvement beyond SFT.</div>
+      <div class="row">
+        <span class="chip">HF Papers</span>
+        <span class="chip">cs.CV</span>
+        <span class="chip">Alibaba / Qwen</span>
+        <a class="src-link" href="https://huggingface.co/papers/2606.27608">hf.co →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2606.27378">Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs</a></h3>
+      <div class="summary">Proposes four axioms — Causality, Minimality, Separability, Stability — with benchmark-independent metrics for evaluating LLM reasoning representations. Auditing 23 reasoning tasks finds no existing representation satisfies all four; internal representations encode little beyond input information.</div>
+      <div class="why"><b>Why it matters:</b> A principled, task-agnostic framework to pressure-test CoT interpretability claims. If "chain of thought" fails Causality or Separability, it may be pattern-matching, not reasoning — and this paper gives you the tools to check.</div>
+      <div class="row">
+        <span class="chip">HF Papers</span>
+        <span class="chip">cs.AI · cs.LG</span>
+        <a class="src-link" href="https://huggingface.co/papers/2606.27378">hf.co →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.27359">When Are Likely Answers Right? On Sequence Probability and Correctness in LLMs</a></h3>
+      <div class="summary">Shows that higher sequence probability predicts correctness across prompt-answer pairs within a dataset, but this does not transfer to decoding decisions: increasing probability via hyperparameter changes (temperature, beam width) or sampling methods does not reliably improve accuracy.</div>
+      <div class="why"><b>Why it matters:</b> Directly challenges standard decoding heuristics. If higher-probability decoding doesn't yield more correct answers, many common inference-time scaling intuitions need revisiting.</div>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">cs.CL · cs.LG</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.27359">arxiv.org →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.27679">From Signals to Transfer: Probe-Based Uncertainty Estimation in Large Language Models</a></h3>
+      <div class="summary">A factorized study of probe-based hallucination detection: raw hidden states outperform in-domain, but structured/compressed features are more robust under distribution shift, yielding transferable off-the-shelf probes for open-ended factual generation without task-specific calibration.</div>
+      <div class="why"><b>Why it matters:</b> Transferable hallucination probes are drop-in uncertainty signals across deployments — practical reliability tooling that works without per-task training overhead.</div>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">cs.CL · cs.LG</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.27679">arxiv.org →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.27595">Ko-WideSearch: A Korean Breadth-Search Benchmark for Web Agents</a></h3>
+      <div class="summary">Targets breadth-search (exhaustive set enumeration with per-item attribute tables) rather than depth-search in Korean web agent tasks. Spans 228 tables over 190 entities across 16 categories at three difficulty tiers — addressing a significant gap in web agent evaluation for non-English breadth retrieval.</div>
+      <div class="why"><b>Why it matters:</b> Web agent benchmarks have been almost exclusively English and depth-search. Real enterprise web agents need breadth retrieval with attribute extraction across languages — this benchmark makes that measurable.</div>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">cs.CL · cs.AI</span>
+        <span class="chip">Web Agents</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.27595">arxiv.org →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2606.28128">PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation</a></h3>
+      <div class="summary">Combines physical constraints with learned world models to improve policy robustness and sim-to-real transfer for robotic manipulation. Physics-reinforced simulation anchors learned dynamics to known physical laws, reducing the distributional gap that plagues learned world models.</div>
+      <div class="why"><b>Why it matters:</b> Sim-to-real gap is the primary barrier to reliable robot deployment. Physics-anchored world models are a direct path to more trustworthy policy transfer without additional real-world data collection.</div>
+      <div class="row">
+        <span class="chip">HF Papers</span>
+        <span class="chip">cs.RO · cs.AI</span>
+        <a class="src-link" href="https://huggingface.co/papers/2606.28128">hf.co →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <div class="card">
+      <h3><a href="https://github.com/msitarzewski/agency-agents">msitarzewski/agency-agents</a></h3>
+      <div class="summary">A complete AI agency in one framework — frontend wizards, community managers, whimsy injectors, and reality checkers. Multi-role agent personas with pre-built specializations, composable into agency pipelines.</div>
+      <div class="why"><b>Why it matters:</b> Packages multi-role agent collaboration into a deployable framework — the specialist-persona layer on top of LLM APIs that most teams still build from scratch.</div>
+      <div class="row">
+        <span class="chip hot">🔥 1,425 today</span>
+        <span class="chip stars">118,889 ⭐ total</span>
+        <span class="chip">AI Agents</span>
+        <a class="src-link" href="https://github.com/msitarzewski/agency-agents">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/browser-use/video-use">browser-use/video-use</a></h3>
+      <div class="summary">Edit videos with coding agents — a new sibling project from the browser-use team, extending agent-native browser control patterns into video editing workflows.</div>
+      <div class="why"><b>Why it matters:</b> Extends the browser-use agentic paradigm (~70k stars) to video editing. Shows the "agent-native UI" pattern spreading beyond web browsing into media production.</div>
+      <div class="row">
+        <span class="chip hot">🔥 967 today</span>
+        <span class="chip stars">11,946 ⭐ total</span>
+        <span class="chip">AI Agents · Video</span>
+        <a class="src-link" href="https://github.com/browser-use/video-use">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/topoteretes/cognee">topoteretes/cognee</a></h3>
+      <div class="summary">Open-source AI memory platform for agents with persistent, queryable memory across sessions and tasks. Provides structured memory layers for multi-turn agent workflows without rolling your own.</div>
+      <div class="why"><b>Why it matters:</b> Persistent cross-session memory is one of the last hard open problems for production agents. A structured open-source solution reduces a common reason agent prototypes don't make it to production.</div>
+      <div class="row">
+        <span class="chip hot">🔥 868 today</span>
+        <span class="chip stars">25,670 ⭐ total</span>
+        <span class="chip">Agent Memory</span>
+        <a class="src-link" href="https://github.com/topoteretes/cognee">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/0xNyk/council-of-high-intelligence">0xNyk/council-of-high-intelligence</a></h3>
+      <div class="summary">18 AI personas deliberate your hardest decisions across multiple LLM providers — routes complex decisions through diverse model perspectives and synthesizes a consensus recommendation.</div>
+      <div class="why"><b>Why it matters:</b> Multi-provider deliberation as a reliability technique for high-stakes decisions is an emerging pattern; this packages it accessibly for practitioners who want diverse model ensemble reasoning.</div>
+      <div class="row">
+        <span class="chip hot">🔥 331 today</span>
+        <span class="chip stars">1,900 ⭐ total</span>
+        <span class="chip">Multi-Agent</span>
+        <a class="src-link" href="https://github.com/0xNyk/council-of-high-intelligence">github.com →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/unclecode/crawl4ai">unclecode/crawl4ai</a></h3>
+      <div class="summary">Open-source LLM-friendly web crawler and scraper designed for agent pipelines — outputs structured data directly consumable by LLMs without manual parsing. Handles JavaScript-heavy sites and returns clean, agent-ready content.</div>
+      <div class="why"><b>Why it matters:</b> Web scraping for agents is a solved problem only in theory. crawl4ai's LLM-native output format removes a friction layer that most agent stacks still handle ad-hoc per project.</div>
+      <div class="row">
+        <span class="chip hot">🔥 288 today</span>
+        <span class="chip stars">70,308 ⭐ total</span>
+        <span class="chip">Web Scraping · LLM</span>
+        <a class="src-link" href="https://github.com/unclecode/crawl4ai">github.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+    <div class="card"><p style="color:var(--muted);font-size:13.5px;margin:0">Nothing notable in the last 24h.</p></div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <h3><a href="https://www.ai.engineer/worldsfair/2026">AI Engineer World's Fair 2026 — Day 2 Live (June 30, Moscone West SF)</a></h3>
+      <div class="summary">The AI Engineer World's Fair (June 29–July 2, San Francisco) runs today with 29 parallel tracks and 300+ speakers. Day 2 tracks include Context Engineering, Evals, Agent Reliability, Computer Use, Posttraining &amp; Midtraining, and AI-Native Enterprises. Completely sold out at 6,000+ attendees. Day 2 livestream available via StartupHub.ai.</div>
+      <div class="why"><b>Why it matters:</b> The flagship AI engineering conference dedicates full-day parallel tracks to Context Engineering and Evals — the two hottest practitioner disciplines of 2026. Talks and transcripts will circulate widely this week.</div>
+      <div class="row">
+        <span class="chip">Conference · Live</span>
+        <span class="chip">June 30, 2026</span>
+        <span class="chip">Context Engineering · Evals</span>
+        <a class="src-link" href="https://www.ai.engineer/worldsfair/2026">ai.engineer →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.llamaindex.ai/blog/context-engineering-what-it-is-and-techniques-to-consider">Context Engineering for Agents: LlamaIndex Guide + June 30 Webinar</a></h3>
+      <div class="summary">LlamaIndex's practitioner guide on context engineering covers the four pillars (write, select, compress, isolate) with a same-day companion webinar titled "Grep, Embeddings, or Both?" — a live demo of the retrieval harness LlamaIndex built for production agent pipelines.</div>
+      <div class="why"><b>Why it matters:</b> Today's webinar addresses one of the most common agent-builder decisions: when to use keyword search, vector embeddings, or hybrid retrieval for context injection. Practical and immediately actionable.</div>
+      <div class="row">
+        <span class="chip">LlamaIndex</span>
+        <span class="chip">June 30, 2026 · Webinar</span>
+        <span class="chip">Context Engineering</span>
+        <a class="src-link" href="https://www.llamaindex.ai/blog/context-engineering-what-it-is-and-techniques-to-consider">llamaindex.ai →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card"><p style="color:var(--muted);font-size:13.5px;margin:0">Nothing notable in the last 24h.</p></div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card"><p style="color:var(--muted);font-size:13.5px;margin:0">Nothing notable in the last 24h.</p></div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/29/ornith/">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding</a></h3>
+      <div class="summary">Simon Willison's hands-on review of Ornith-1.0, the first release from DeepReinforce — an MIT-licensed open-weights agentic coding model that self-scaffolds its own agent loop. Tested against a real Datasette codebase with strong results at 103 tokens/second locally.</div>
+      <div class="why"><b>Why it matters:</b> A model that ships its own scaffolding means the agent harness is baked in — reduced integration overhead for coding agent pipelines. MIT-licensed open weights make this immediately explorable.</div>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">June 29, 2026</span>
+        <span class="chip">Agentic Coding · Open Weights</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/29/ornith/">simonwillison.net →</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3><a href="https://openai.com/index/malta-chatgpt-plus-partnership/">OpenAI and Malta Partner to Bring ChatGPT Plus to All Citizens</a></h3>
+      <div class="summary">OpenAI and the Maltese government launched "AI for All," the world's first national program offering citizens free ChatGPT Plus for one year after completing a government AI literacy course.</div>
+      <div class="why"><b>Why it matters:</b> First government-scale ChatGPT Plus deployment — sets a precedent for national AI-literacy programs and signals OpenAI's government partnership playbook expanding beyond enterprise.</div>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">June 29, 2026</span>
+        <span class="chip">Policy · Government</span>
+        <a class="src-link" href="https://openai.com/index/malta-chatgpt-plus-partnership/">openai.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-06-30 01:05 UTC<br>
+    Source issues: HN Algolia API (hn.algolia.com) and news.ycombinator.com blocked by egress proxy — Discussion tab empty; RSS feeds blocked by proxy — blog/newsletter results via web search; Reddit: June 29–30 threads not yet indexed by search engines (not assessed).<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
