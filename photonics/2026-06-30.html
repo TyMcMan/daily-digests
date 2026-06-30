@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-06-30</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Tuesday, June 30, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#research">arXiv: foundry-scale spin-photon interfaces demonstrated for hybrid photonic quantum computing</a></li>
+      <li><a href="#research">NPL achieves record 4&times;10&#8315;&#185;&#8311; laser frequency stability at room temperature</a></li>
+      <li><a href="#research">QuTech crosses above-unity cooperativity in diamond SnV nanophotonic cavity</a></li>
+      <li><a href="#research">Antisite disorder creates anisotropic optical responses in cubic compound semiconductors</a></li>
+      <li><a href="#misc">ETH Zurich &ldquo;Fourier pixel&rdquo; performs light-domain computation without a digital processor [catch-up]</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.27787">Industry-Ready Spin-Photon Interfaces for Hybrid Photonic Quantum Computing</a></h3>
+      <p>A large consortium (Huet, Lam, Pollet, Steindl et al.) demonstrates thousands of monolithic semiconductor quantum-dot spin-photon interface devices fabricated using a standard production-line semiconductor process, achieving the brightness, indistinguishability, and yield metrics required for industrial-scale deployment. These cavity-coupled devices are the key light-matter coupling element for hybrid photonic quantum computers. <em>Why it matters:</em> foundry-compatible manufacture of spin-photon interfaces removes a major barrier to scalable photonic quantum compute — and the yield metrics make this directly relevant to anyone watching upstream supply chain for quantum-optical interconnects.</p>
+      <div class="meta">arXiv &middot; quant-ph / physics.optics &middot; 2026-06-29</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://optics.org/news/16/6/33">Room-Temperature Optical Cavity Achieves Record 4&times;10&#8315;&#185;&#8311; Laser Frequency Stability</a></h3>
+      <p>The UK National Physical Laboratory demonstrated fractional frequency instability of 4&times;10&#8315;&#185;&#8311; and a laser linewidth of 12 mHz FWHM using a 68 cm room-temperature optical reference cavity, matching performance previously requiring cryogenic systems. Published in <em>Optica</em> (Parke et al.); the team also achieved 300 &mu;s optical storage time. <em>Why it matters:</em> ultra-narrow linewidth at room temperature is a direct enabler for coherent photonic matrix-vector operations and precision timing in optical compute nodes — removing the cryogenic overhead from these use cases.</p>
+      <div class="meta">optics.org / Optica &middot; NPL &middot; 2026-06-29</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/29/qutech-diamond-quantum-network-interface/">QuTech Crosses Above-Unity Cooperativity in Diamond Tin-Vacancy Nanophotonic Cavity</a></h3>
+      <p>QuTech demonstrated above-unity coherent cooperativity of tin-vacancy (SnV) colour centres in diamond photonic crystal cavities — the first time this threshold has been crossed for a solid-state emitter at conditions compatible with relaxed cryogenic requirements. A single SnV emitter achieved near-complete control of the optical field; 327 nanophotonic cavities were fabricated and characterised across two chips, validating scalable manufacturing. Published in <em>Physical Review X</em>. <em>Why it matters:</em> the scalable cavity manufacturing result is the key takeaway — it shows a manufacturable path toward on-chip quantum-optical interconnects with high fidelity, directly relevant to photonic quantum networking I/O.</p>
+      <div class="meta">The Quantum Insider / Phys. Rev. X &middot; QuTech &middot; 2026-06-29</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://phys.org/news/2026-06-disorder-optics-compound-semiconductors.html">Antisite Disorder Creates Direction-Dependent Optics in Cubic Compound Semiconductors</a></h3>
+      <p>An international team showed that intrinsic antisite disorder in cubic CuInSnS&#8324; strongly localises excitons, producing anisotropic optical responses even in a nominally cubic crystal, while lattice vibrations remain isotropic. Published in <em>Advanced Optical Materials</em>. <em>Why it matters:</em> understanding how atomic-level compositional disorder drives anisotropic optical behaviour — without affecting phonon symmetry — informs materials quality targets for III-V compound active devices (modulators, detectors) and PIC yield modelling, where exciton-based optical properties are more disorder-sensitive than previously appreciated.</p>
+      <div class="meta">phys.org / Advanced Optical Materials &middot; 2026-06-29</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <article class="item">
+      <h3><a href="https://ethz.ch/en/news-and-events/eth-news/news/2026/06/a-new-type-of-pixel.html">ETH Zurich &ldquo;Fourier Pixel&rdquo;: Bidirectional Light Detection and Emission Without a Digital Processor</a><span class="badge">catch-up</span></h3>
+      <p>ETH Zurich researchers demonstrated a pixel architecture that simultaneously emits and detects light using surface wave interference, enabling real-time image capture and display in a single element without a computer in the processing loop. The pixel measures incident light and responds to it — performing optical computation at the device level. Published in <em>Nature</em>. <em>Why it matters:</em> this is conceptually adjacent to in-situ optical processing for photonic inference — light-domain signal processing without a digital intermediary, at the pixel level, is the same architectural principle that motivates optical matrix units.</p>
+      <div class="meta">ETH Zurich / Nature &middot; 2026-06-26</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Most direct source fetches returned 403 (egress proxy); all content gathered via web search. Lightmatter, Ayar Labs, Next Platform: no new photonics items in Jun 29&ndash;30 window. PhotonDelta, EPIC, SMART Photonics, LioniX: most recent items predate window. Cignal AI: most recent items from May 2026. SPIE TV YouTube RSS: blocked. Reddit r/Optics and r/Semiconductors: RSS blocked; web search returned no indexed Jun 29&ndash;30 threads (not assessed).</div>
+  <div>5 items &middot; generated 2026-06-30 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
