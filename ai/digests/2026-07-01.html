@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-01</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Wednesday, July 1, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 19 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://arxiv.org/abs/2606.30616">Agents-A1: 35B MoE agent matches trillion-parameter performance via horizon scaling <span class="src">[arXiv]</span></a>
+        <span class="why">Three-stage training pipeline produces 45K-token trajectories; beats GPT-5.5 on SEAL-0 and FrontierScience-Olympiad with weights released on HF.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.29537">OSWorld 2.0: SOTA computer-use agents complete only 21% of real long-horizon tasks <span class="src">[arXiv]</span></a>
+        <span class="why">108 workflows averaging 318 tool calls expose that cross-source reasoning and visual-spatial precision remain hard limits; Claude Opus 4.8 leads.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.26959">Shift to Agentic AI: Codex users grew 5× in H1 2026, now spanning knowledge work beyond coding <span class="src">[arXiv]</span></a>
+        <span class="why">First empirical study of agentic AI diffusion from real production logs — documents, data analysis, and communications now major use cases.</span>
+      </li>
+      <li>
+        <a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Simon Willison: shot-scraper video lets agents record storyboard-driven demos of their own work <span class="src">[blog]</span></a>
+        <span class="why">New Playwright-based CLI command accepts a storyboard.yml and produces a video walkthrough — designed so coding agents can self-document without human intervention.</span>
+      </li>
+      <li>
+        <a href="https://hamel.dev/blog/posts/eval-smell/">'It's Hard to Eval' Is a Product Smell — Hamel Husain reframes evaluability as a design requirement <span class="src">[blog]</span></a>
+        <span class="why">If you can't write a quick eval, you probably have an unclear product spec — forces teams to define verifiability at design time, not after launch.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">0</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.30616">Agents-A1: Scaling the Horizon, Not the Parameters — Reaching Trillion-Parameter Performance with a 35B Agent</a></h3>
+      <p class="summary">Introduces Agents-A1, a 35B Mixture-of-Experts agentic model that matches trillion-parameter-scale systems by scaling the <em>agent horizon</em> rather than raw parameter count. A three-stage pipeline — full-domain SFT, domain-specific teacher models, and multi-teacher domain-routed on-policy distillation with salient vocabulary alignment — produces trajectories averaging 45K tokens. Weights released on Hugging Face.</p>
+      <p class="why"><b>Why it matters:</b> Achieves SOTA on SEAL-0 (56.4), FrontierScience-Olympiad (79.0), and IFEval (94.8), competing with GPT-5.5 and Kimi-K2.6 at a fraction of the compute — a credible alternative to expensive parameter scaling for agent builders.</p>
+      <div class="row">
+        <span class="chip hot">34 HF upvotes</span>
+        <span class="chip">cs.AI · cs.CL</span>
+        <span class="chip">June 30, 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.30616">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.23404">ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models</a></h3>
+      <p class="summary">A hierarchical visualization and auditing framework for internal reasoning traces of large reasoning models (LRMs), enabling practitioners to decompose and diagnose where models succeed or fail in multi-step thinking chains. Provides interpretable breakdowns of reasoning steps beyond pass/fail metrics.</p>
+      <p class="why"><b>Why it matters:</b> As LRMs become production staples, interpretability tooling for reasoning traces is urgently needed for debugging, compliance, and trust — ReasoningLens fills a practical gap with a structured audit layer.</p>
+      <div class="row">
+        <span class="chip hot">24 HF upvotes</span>
+        <span class="chip">cs.AI · cs.CL</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.23404">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.29537">OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks</a></h3>
+      <p class="summary">A new benchmark of 108 long-horizon computer-use workflows (median human completion ~1.6 hours, avg ~318 tool calls) across 7 professional domains. At a 500-step budget, no system completes more than 21% of tasks end-to-end; Claude Opus 4.8 leads at 20.6% binary / 54.8% partial. The original OSWorld is now effectively saturated at 83.5%.</p>
+      <p class="why"><b>Why it matters:</b> Resets the computer-use frontier and quantifies remaining gaps — cross-source reasoning, implicit state inference, and visual-spatial precision — indispensable context for teams building or evaluating autonomous agents.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">June 26, 2026</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.29537">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.24143">AsyncOPD: How Stale Can On-Policy Distillation Be?</a></h3>
+      <p class="summary">Studies the staleness problem in asynchronous on-policy distillation (OPD) for LLM post-training. Shows forward KL is robust to stale rollouts while reverse KL is vulnerable; recomputing the advantage at learner time is the best corrective. The resulting AsyncOPD system achieves 1.6–3.8× throughput improvement over synchronous training with matched accuracy.</p>
+      <p class="why"><b>Why it matters:</b> A principled drop-in approach to decouple rollout generation from learner updates in fine-tuning pipelines — a direct throughput win for teams training reasoning models at scale.</p>
+      <div class="row">
+        <span class="chip hot">14 HF upvotes</span>
+        <span class="chip">cs.LG · cs.CL</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.24143">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.30583">AI Premium: Asset Pricing with 380 Trillion Tokens of Realized AI Consumption</a></h3>
+      <p class="summary">Uses 380 trillion tokens of realized AI consumption across 400+ LLMs (OpenRouter, ~2% of global monthly token volume) to construct an "AI Factor." High-AI-beta firms earn significantly higher returns; a value-weighted long-short strategy earns 64.1 basis points per week. First large-scale study linking actual AI usage data to asset pricing.</p>
+      <p class="why"><b>Why it matters:</b> Grounds AI's macroeconomic footprint in behavioral data rather than surveys — relevant for AI teams justifying investment decisions and researchers tracking AI's diffusion into capital markets.</p>
+      <div class="row">
+        <span class="chip">cs.AI · econ</span>
+        <span class="chip">June 29, 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.30583">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.26959">The Shift to Agentic AI: Evidence from Codex</a></h3>
+      <p class="summary">Analyzes large-scale production usage data from OpenAI's Codex agentic platform: active users grew more than 5× in H1 2026, with fastest growth outside the original software-developer audience. Agentic AI is now routinely used for drafting documents, analyzing data, and coordinating communications — not just code.</p>
+      <p class="why"><b>Why it matters:</b> First rigorous empirical evidence of how agentic AI is diffusing across knowledge work, grounded in production logs rather than surveys; changes the framing from "coding assistant" to "knowledge-work platform."</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">OpenAI / Columbia / Wharton</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.26959">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.29887">SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing</a></h3>
+      <p class="summary">A three-level benchmark for in-context safety policy adherence: L0 tests individual-rule understanding, L1 tests rule-dependency resolution, and L2 tests adaptation to novel policy frameworks. Tasks are generated from schemas and validated through cross-model checking, majority voting, and human review.</p>
+      <p class="why"><b>Why it matters:</b> Enterprise deployments increasingly rely on system-prompt policies rather than fine-tuning for safety; SafePyramid provides the first structured evaluation of whether models actually follow complex policy specifications in context.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.CL</span>
+        <span class="chip">June 29, 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.29887">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.28186">Cognitive Episodes in LLM Reasoning Traces Enable Interpretable Human Item Difficulty Prediction</a></h3>
+      <p class="summary">Introduces Epi2Diff, a framework that segments LRM reasoning traces into cognitively grounded "episode" sequences (functional problem-solving states), then predicts human item difficulty via reasoning scale, effort allocation, and state transitions — without expensive human calibration data.</p>
+      <p class="why"><b>Why it matters:</b> Bridges cognitive science and LLM interpretability for educational assessment; reasoning traces as diagnostic signals offer a lower-cost alternative to traditional item-response-theory calibration.</p>
+      <div class="row">
+        <span class="chip">2 HF upvotes</span>
+        <span class="chip">cs.CL · cs.AI · cs.LG</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.28186">arxiv.org →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/can1357/oh-my-pi">can1357/oh-my-pi — AI coding agent for the terminal with hash-anchored edits and multi-provider support</a></h3>
+      <p class="summary">Terminal-native AI coding agent supporting Anthropic, OpenAI, and local models. Features hash-anchored edits (safe concurrent file mutation), an optimized tool harness, LSP integration, Python runtime, browser control, and subagent orchestration. Built with Rust + TypeScript on Bun.</p>
+      <p class="why"><b>Why it matters:</b> A production-grade coding agent harness competitive with Cursor and Claude Code, with an explicit multi-provider design and a well-documented MCP layer — useful for teams running self-hosted or multi-model workflows.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 15,336</span>
+        <span class="chip">TypeScript · Rust</span>
+        <span class="chip">active today</span>
+        <a class="src-link" href="https://github.com/can1357/oh-my-pi">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/onyx-dot-app/onyx">onyx-dot-app/onyx — Open Source AI Platform with advanced RAG and every LLM</a></h3>
+      <p class="summary">Self-hosted AI chat platform with enterprise-grade RAG, vector search, and connectors to 40+ data sources (Confluence, Notion, Google Drive, Slack). Supports every major LLM via a unified API layer. Ships as a Docker Compose stack, actively maintained and updated today.</p>
+      <p class="why"><b>Why it matters:</b> A credible self-hosted alternative to enterprise AI platforms — relevant for teams who need to keep data on-prem while using frontier models for internal knowledge retrieval.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 30,628</span>
+        <span class="chip">Python · Next.js</span>
+        <span class="chip">active today</span>
+        <a class="src-link" href="https://github.com/onyx-dot-app/onyx">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/browseros-ai/BrowserOS">browseros-ai/BrowserOS — Open-source agentic browser alternative to ChatGPT Atlas, Perplexity Comet, and Dia</a></h3>
+      <p class="summary">A Chromium-based browser that integrates LLM agent capabilities natively — browse, search, and act with an AI layer built into the tab lifecycle. Supports Ollama and LM Studio for local-model inference. Targets Linux, macOS, and Windows.</p>
+      <p class="why"><b>Why it matters:</b> Makes the agentic browser paradigm open and self-hostable; valuable for teams building browser-grounded agents or researching human-agent interaction in real browsing environments.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 11,600</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">active today</span>
+        <a class="src-link" href="https://github.com/browseros-ai/BrowserOS">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lemonade-sdk/lemonade">lemonade-sdk/lemonade — Serve optimized LLMs from consumer GPUs and NPUs for local AI apps</a></h3>
+      <p class="summary">Helps users discover and run local AI apps by serving optimized LLMs from their own AMD Radeon GPUs and Ryzen NPUs. Uses ONNX Runtime and Vulkan; exposes an OpenAI-compatible API; ships with an MCP server for integration with coding assistants and agents.</p>
+      <p class="why"><b>Why it matters:</b> Extends the local-inference ecosystem to AMD consumer hardware (NPUs + GPUs) with a clean OpenAI-compatible interface — important for on-device agentic workloads as NPU adoption grows.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 4,719</span>
+        <span class="chip">C++ · Python</span>
+        <span class="chip">AMD · NPU</span>
+        <a class="src-link" href="https://github.com/lemonade-sdk/lemonade">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/usestrix/strix">usestrix/strix — Open-source AI penetration testing tool for automated vulnerability finding and fixing</a></h3>
+      <p class="summary">AI-powered pen-testing platform that automates vulnerability discovery and patching across codebases and infrastructure. Uses agent-driven scanning to identify security issues and propose targeted fixes, with an emphasis on reducing time-to-remediation.</p>
+      <p class="why"><b>Why it matters:</b> Brings agentic AI into the security workflow — automated vuln finding + fix proposals is a direct labor multiplier for security teams and reduces exposure windows between discovery and patch.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 28,127</span>
+        <span class="chip">security · agents</span>
+        <span class="chip">active today</span>
+        <a class="src-link" href="https://github.com/usestrix/strix">github.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/google/adk-python">google/adk-python — Google's open-source Agent Dev Kit: build, evaluate, and deploy sophisticated AI agents</a></h3>
+      <p class="summary">Code-first Python toolkit for building multi-agent systems with flexibility and control. Supports single-agent, parallel, sequential, and loop orchestration patterns; built-in eval framework; integrates with Google Cloud for deployment. Active at 20k+ stars with daily commits.</p>
+      <p class="why"><b>Why it matters:</b> Google's own agent SDK is now a serious option alongside LangGraph and CrewAI — the eval framework and cloud deployment integration are differentiators for production-focused teams.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 20,361</span>
+        <span class="chip">Python</span>
+        <span class="chip">Google · multi-agent</span>
+        <a class="src-link" href="https://github.com/google/adk-python">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/ZaxbyHub/opencode-swarm">ZaxbyHub/opencode-swarm — Architect-centric agentic swarm plugin for OpenCode with hub-and-spoke orchestration</a></h3>
+      <p class="summary">Adds a hub-and-spoke multi-agent swarm layer to OpenCode: an Architect agent decomposes tasks, routes to Subject Matter Expert (SME) agents for domain-specific consultation, then coordinates Code Generation and QA Review agents. Ships with guardrails and MCP integration.</p>
+      <p class="why"><b>Why it matters:</b> Shows how to layer structured agent orchestration on top of an existing coding assistant without rebuilding from scratch — the architect-plus-SME pattern is a reusable blueprint for enterprise coding workflows.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 374</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">swarm · opencode</span>
+        <a class="src-link" href="https://github.com/ZaxbyHub/opencode-swarm">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/vllm-project/vllm-ascend">vllm-project/vllm-ascend — Community-maintained vLLM plugin for Huawei Ascend hardware</a></h3>
+      <p class="summary">Hardware plugin that enables the vLLM inference stack on Ascend NPUs, with support for continuous batching, paged attention, and the standard vLLM serving API. Actively maintained by the community alongside vLLM's core CUDA/ROCm paths.</p>
+      <p class="why"><b>Why it matters:</b> Expands vLLM's reach to Ascend — critical for teams deploying agent inference infrastructure in regions or enterprises where Ascend is the preferred accelerator.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 2,321</span>
+        <span class="chip">C++ · Python</span>
+        <span class="chip">Ascend · inference</span>
+        <a class="src-link" href="https://github.com/vllm-project/vllm-ascend">github.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot-scraper video — Simon Willison</a></h3>
+      <p class="summary">Willison released <code>shot-scraper video</code>, a CLI command that accepts a <code>storyboard.yml</code> file and uses Playwright to record a video walkthrough of a web application. The design is intentionally agent-friendly: the <code>--help</code> output is self-contained enough for a coding agent to use it without additional documentation, similar to a built-in <code>SKILL.md</code>.</p>
+      <p class="why"><b>Why it matters:</b> Closes a real gap in agentic workflows — autonomous agents can now self-document their work with video evidence, directly useful for eval replay, human review of agent actions, and shipping demos without manual recording.</p>
+      <div class="row">
+        <span class="chip">blog</span>
+        <span class="chip">June 30, 2026</span>
+        <span class="chip">Simon Willison</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://hamel.dev/blog/posts/eval-smell/">'It's Hard to Eval' Is a Product Smell — Hamel Husain</a></h3>
+      <p class="summary">Husain argues that the common objection "our product is hard to eval" is itself a signal of product design problems: artifacts that are hard for engineers to verify are typically hard for users to verify too, and users must redo the work from scratch to check correctness. The post reframes evaluability as a core product quality requirement, not a measurement afterthought.</p>
+      <p class="why"><b>Why it matters:</b> Forces AI product teams to define verifiability at the design stage — if you can't write a quick eval for your output, you probably have an unclear product spec. A sharp mindset shift that prevents eval-theatre.</p>
+      <div class="row">
+        <span class="chip">blog</span>
+        <span class="chip">June 29, 2026</span>
+        <span class="chip">Hamel Husain</span>
+        <a class="src-link" href="https://hamel.dev/blog/posts/eval-smell/">hamel.dev →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://explainx.ai/blog/context-prompt-loop-harness-engineering-stack-2026">Context vs Prompt vs Loop vs Harness Engineering — ExplainX.ai</a></h3>
+      <p class="summary">Clarifies four distinct engineering disciplines practitioners frequently conflate: prompt engineering (single-turn instruction design), context engineering (managing the context window), loop engineering (designing the agent's action-observation cycle), and harness engineering (infrastructure for trustworthy autonomous systems). Each has different failure modes, tools, and ownership boundaries.</p>
+      <p class="why"><b>Why it matters:</b> Gives teams a clean vocabulary to split responsibilities across roles and debug failures at the right layer — knowing whether a problem is a context problem vs. a loop problem vs. a harness problem changes the fix entirely.</p>
+      <div class="row">
+        <span class="chip">blog</span>
+        <span class="chip">~June 29, 2026</span>
+        <span class="chip">ExplainX.ai</span>
+        <a class="src-link" href="https://explainx.ai/blog/context-prompt-loop-harness-engineering-stack-2026">explainx.ai →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h.</p>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h.</p>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-01 01:10 UTC<br>
+    <div style="margin-top:4px">Source issues: arXiv and Hugging Face accessed via GitHub index mirror (direct HTTPS blocked by proxy egress policy); Hacker News Algolia API blocked; blog RSS feeds (Simon Willison, Lilian Weng, Latent Space, Interconnects, Sebastian Raschka) blocked — blog/workflow items confirmed via web search metadata; Reddit not assessed (reddit.com blocked from search crawler); GitHub trending page blocked — repos sourced via GitHub MCP API search.</div>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
