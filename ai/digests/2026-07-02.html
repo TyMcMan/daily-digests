@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-02</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Thursday, July 2, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 19 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.anthropic.com/news/claude-sonnet-5">Claude Sonnet 5 launched — most agentic mid-tier model yet, near-Opus 4.8 quality at $2/$10/M tokens <span class="src">[Anthropic]</span></a>
+        <span class="why">Replaces Sonnet 4.6 as the Free/Pro default; introductory pricing through Aug 31. Designed for multi-step autonomous tasks including browser, terminal, and code.</span>
+      </li>
+      <li>
+        <a href="https://www.anthropic.com/news/redeploying-fable-5">Anthropic redeployed Fable 5 globally after U.S. DOC lifted 19-day export restriction <span class="src">[Anthropic]</span></a>
+        <span class="why">Export controls imposed June 12 after a jailbreak found by Amazon researchers are now lifted. Redeployment includes new real-time cybersecurity classifiers blocking offensive cyber tasks.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.30534">Orca: Unified world foundation model trained on 125K hours of video + 160M event annotations <span class="src">[arXiv]</span></a>
+        <span class="why">Replaces per-task prediction heads with a single Next-State-Prediction objective; competitive across text generation, video prediction, and embodied action on a single model.</span>
+      </li>
+      <li>
+        <a href="https://www.anthropic.com/news/claude-science-ai-workbench">Claude Science: AI workbench for scientists integrating 60+ databases with auditable artifacts <span class="src">[Anthropic]</span></a>
+        <span class="why">Covers genomics, proteomics, structural biology, and cheminformatics. Anthropic will fund up to 50 research projects with $30K credits each — applications open through July 15.</span>
+      </li>
+      <li>
+        <a href="https://news.ycombinator.com/item?id=48734373">Claude Code embeds invisible steganographic markers in system prompts, researcher reports <span class="src">[HN]</span></a>
+        <span class="why">Apostrophes and date separators silently swapped based on API base URL and timezone to flag known proxy resellers and distillation pipelines — undisclosed behavior sparks broad transparency debate.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">1</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.30534">Orca: The World is in Your Mind — A Unified World Foundation Model</a></h3>
+      <p class="summary">Beijing Academy of AI's general world foundation model trained on 125K hours of video and 160M event annotations. Replaces isolated next-token/next-frame prediction heads with a unified Next-State-Prediction objective and multimodal readout interfaces for text, image prediction, and embodied action generation.</p>
+      <p class="why"><b>Why it matters:</b> One of the first credible unified world models that scores competitively on text generation, video prediction, and robotics benchmarks simultaneously from a single model — a significant architectural step toward a "world model" for embodied AI and simulation-based agent training.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.CV</span>
+        <span class="chip">BAAI</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.30534">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.23050">Unlimited OCR Works: Welcome the Era of One-Shot Long-Horizon Parsing</a></h3>
+      <p class="summary">Baidu's 3B OCR model introducing Reference Sliding Window Attention (R-SWA): each output token attends to all visual/prompt tokens plus the preceding 128 output tokens. KV cache stays bounded as document length grows to arbitrary size, solving the memory blow-up in multi-page end-to-end OCR.</p>
+      <p class="why"><b>Why it matters:</b> Flat memory curve for arbitrarily long documents is a hard engineering win with immediate production value — deployable for multi-page PDFs and book-length parsing where current approaches require chunking and stitching logic.</p>
+      <div class="row">
+        <span class="chip">cs.CV · cs.CL</span>
+        <span class="chip">Baidu</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.23050">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.23623">dVLA-RL: Reinforcement Learning over Denoising Trajectories for Discrete Diffusion VLA Models</a></h3>
+      <p class="summary">Formulates the denoising process of discrete diffusion Vision-Language-Action models as an MDP and applies RL directly over the denoising steps. Achieves 92.0% average success on RoboTwin 2.0, up from 61.4% with SFT-only baseline — a 30.6 point absolute improvement.</p>
+      <p class="why"><b>Why it matters:</b> Robotics VLA models have been resistant to RL fine-tuning due to their non-autoregressive structure. This paper cracks that open with substantial real-robot benchmark gains, directly extending the post-training playbook to embodied models.</p>
+      <div class="row">
+        <span class="chip">cs.RO · cs.LG</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.23623">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.30626">DOPD: Dual On-Policy Distillation — Diagnosing and Fixing Privilege Illusion</a></h3>
+      <p class="summary">Identifies "privilege illusion" as a core failure mode in on-policy distillation: the training signal conflates the teacher's genuine capability gap with information asymmetry the student can never replicate. DOPD dynamically routes token-level supervision between privileged teacher and privileged student policies based on advantage gap and relative probabilities.</p>
+      <p class="why"><b>Why it matters:</b> On-policy distillation is increasingly central to training small reasoning models; this paper provides both a theoretical failure-mode diagnosis and a validated practical fix, with multi-institution corroboration.</p>
+      <div class="row">
+        <span class="chip">cs.LG · cs.CL</span>
+        <span class="chip">HF Daily Papers</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.30626">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.30319">BrainJanus: A Unified Model for Understanding and Generation across Brain, Vision, and Language</a></h3>
+      <p class="summary">ICML 2026 paper presenting a single model for both decoding brain recordings (fMRI + EEG) into language and images, and encoding language/images into predicted brain signals. Unified architecture spanning brain, vision, and language across both generative and understanding tasks.</p>
+      <p class="why"><b>Why it matters:</b> The first model to handle all six cross-modal directions in a unified architecture — relevant for BCI research, neuroscience-grounded multimodal alignment, and any team working on brain-computer interfaces or neuro-AI.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">ICML 2026</span>
+        <span class="chip">Wanli Ouyang group</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.30319">arxiv.org →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/diegosouzapw/OmniRoute">diegosouzapw/OmniRoute — Free AI Gateway: 236 Providers, 15–95% Token Compression</a></h3>
+      <p class="summary">Single endpoint routing to 236 AI providers (50+ with free tiers), with stacked RTK+Caveman token compression saving 15–95% per call. Released v3.8.42 on June 30; includes 17 routing strategies (cost-optimized, auto-fallback, latency-based). Native integrations for Claude Code, Codex, Cursor, Cline, and Copilot.</p>
+      <p class="why"><b>Why it matters:</b> Practical cost-cutting infrastructure for high-throughput agent pipelines — ~1.6B free tokens/month aggregated across providers is a meaningful budget for builders running multi-model evals or cascaded agents.</p>
+      <div class="row">
+        <span class="chip stars">1,010 stars today</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">v3.8.42 · June 30</span>
+        <a class="src-link" href="https://github.com/diegosouzapw/OmniRoute">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/google/agents-cli">google/agents-cli — Official Google CLI for Creating, Evaluating, and Deploying AI Agents (v1.0.0)</a></h3>
+      <p class="summary">Reached v1.0.0 on July 1, 2026. Scaffolds agent projects, grades evaluations, and deploys agents to Cloud Run via Gemini ADK. Works with Claude Code and Antigravity CLI. CLI + Terraform (HCL) — 78% Python, 13% HCL.</p>
+      <p class="why"><b>Why it matters:</b> Google's official v1.0 toolchain for agent deployment on GCP — signals serious productization of the agent lifecycle (create → eval → deploy) with direct IDE integration. Cross-platform support with Claude Code makes it relevant even outside the GCP ecosystem.</p>
+      <div class="row">
+        <span class="chip stars">586 stars today</span>
+        <span class="chip">Python · HCL</span>
+        <span class="chip">v1.0.0 · July 1, 2026</span>
+        <a class="src-link" href="https://github.com/google/agents-cli">github.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://cognition.com/blog/devin-fusion">Devin Fusion: Hybrid Multi-Model Harness for Coding Agents <span style="font-size:11px;color:var(--hot);margin-left:6px">catch-up</span></a></h3>
+      <p class="summary">Cognition released Devin Fusion, a hybrid-model coding harness that reduces frontier-model inference cost by 35% without degrading output quality. Two key techniques: a "sidekick" pattern where a smaller model runs in parallel handling task delegation and monitoring while the frontier model owns planning and review; and dynamic mid-session routing that escalates back to the smarter model at context-compaction moments.</p>
+      <p class="why"><b>Why it matters:</b> A practical, validated pattern for cost-optimized multi-agent coding systems that avoids the quality failures of naive model routing — directly applicable to any team running agent pipelines with cost pressure.</p>
+      <div class="row">
+        <span class="chip hot">catch-up</span>
+        <span class="chip">Cognition AI</span>
+        <span class="chip">June 29, 2026</span>
+        <a class="src-link" href="https://cognition.com/blog/devin-fusion">cognition.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/aiewf-daily-dispatch-loops">AIEWF Daily Dispatch: Loopcraft — The Art of Stacking Loops</a></h3>
+      <p class="summary">Latent Space Day 2 conference dispatch from the AI Engineer World's Fair. Covers swyx's opening keynote thesis: the core agent algorithm is the innermost loop, and the real leverage in 2026 AI engineering comes from designing outer loops around it — evals, CI gates, human review, and self-improvement PRs. Also covers the Software Factories track and the emerging "Forward Deployed Engineer" role.</p>
+      <p class="why"><b>Why it matters:</b> A vocabulary shift from "prompt engineering" toward loop-system design — frames agent reliability as an infrastructure problem, not a prompt problem. Essential framing for anyone building production agent pipelines.</p>
+      <div class="row">
+        <span class="chip">Latent Space</span>
+        <span class="chip">AIEWF 2026</span>
+        <span class="chip">July 1, 2026</span>
+        <a class="src-link" href="https://www.latent.space/p/aiewf-daily-dispatch-loops">latent.space →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://tessl.io/blog/see-you-at-ai-engineering-worlds-fair-2026/">Tessl at AIEWF: Context Development Lifecycle + Core Loop of Harness Engineering</a></h3>
+      <p class="summary">Tessl presented at AIEWF Day 4 (July 2): Patrick's "Context Development Lifecycle" (CDL) — a framework for versioning and iterating context with the same engineering rigor applied to code, with a continuous feedback loop for improving agent performance. Dru Knox covered "The Core Loop of Harness Engineering." Tessl also unveiled the Tessl Agent, which autonomously scans PRs and session logs for recurring mistakes and opens improvement PRs.</p>
+      <p class="why"><b>Why it matters:</b> The CDL framework operationalizes context as a versioned engineering artifact rather than ad-hoc prompts. Tessl Agent closing the loop automatically (session log → recurring mistake → improvement PR) is one of the first commercial implementations of self-improving agent harnesses.</p>
+      <div class="row">
+        <span class="chip">Tessl</span>
+        <span class="chip">AIEWF Day 4</span>
+        <span class="chip">July 2, 2026</span>
+        <a class="src-link" href="https://tessl.io/blog/see-you-at-ai-engineering-worlds-fair-2026/">tessl.io →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48734373">Claude Code is steganographically marking requests [thereallo.dev]</a></h3>
+      <p class="summary">Researcher found Claude Code embeds invisible markers in system prompts — silently swapping apostrophes and date separators based on the user's API base URL and timezone, apparently targeting known proxy resellers and distillation pipelines. Anthropic has not publicly disclosed this behavior.</p>
+      <p class="why"><b>Why it matters:</b> Critical for anyone running Claude Code through a custom ANTHROPIC_BASE_URL or third-party proxy — your prompts may be being silently modified. The broader HN debate centers on whether undisclosed developer-tooling behavior of this kind is acceptable.</p>
+      <div class="row">
+        <span class="chip hot">July 2, 2026</span>
+        <span class="chip">thereallo.dev</span>
+        <a class="src-link" href="https://thereallo.dev/blog/claude-code-prompt-steganography">article →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48709670">GLM 5.2 beats Claude in our security benchmarks [semgrep.dev]</a></h3>
+      <p class="summary">Semgrep's security research team reports open-weight GLM-5.2 achieves 39% F1 on IDOR vulnerability detection vs. Claude Code's 32%, at roughly 1/6 the per-finding cost. GLM-5.2 also sits #1 on Code Arena (Artificial Analysis). Key caveat: Zhipu disclosed more reward-hacking during training and added a dedicated anti-hacking guard.</p>
+      <p class="why"><b>Why it matters:</b> The sharpest data point yet on open-weight models closing the capability gap on security-specific tasks. Cost and IP-control arguments for self-hosting are growing stronger for specialized use cases.</p>
+      <div class="row">
+        <span class="chip">July 2, 2026</span>
+        <span class="chip">semgrep.dev</span>
+        <a class="src-link" href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/">article →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48708941">I used Claude Code to get a second opinion on my MRI [antoine.fi]</a></h3>
+      <p class="summary">Developer used Opus 4.8 to analyze a shoulder MRI — the model reported an intact tendon while the radiologist found a Grade III partial-thickness tear. HN discussion focused on the comfort of asynchronous, judgment-free AI consults versus the real risk of critical diagnostic divergence.</p>
+      <p class="why"><b>Why it matters:</b> A ground-level failure case for medical AI in the wild, outside controlled benchmarks. Highlights the gap between "impressively helpful in most cases" and "reliably correct for high-stakes decisions."</p>
+      <div class="row">
+        <span class="chip">July 2, 2026</span>
+        <span class="chip">antoine.fi</span>
+        <a class="src-link" href="https://antoine.fi/mri-analysis-using-claude-code-opus">article →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48692058">The gap between open-weight LLMs and closed-source LLMs</a></h3>
+      <p class="summary">Community discussion examining whether open-weight models (GLM-5.2, Qwen-27B) are now close enough to frontier closed-source models for production use. Comments surface concerns that open weights remain "always at risk of discontinuation" and debate whether the "open" label has become meaningless when training data and pipeline details are withheld.</p>
+      <p class="why"><b>Why it matters:</b> Captures the current state of the open vs. closed debate with practical production context — useful for teams making infrastructure and vendor-lock decisions.</p>
+      <div class="row">
+        <span class="chip">July 1, 2026</span>
+        <span class="chip">HN Discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48692058">hn →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48668255">The unbearable cheapness of open-weight models [jamesoclaire.com]</a></h3>
+      <p class="summary">Argues Anthropic and OpenAI face a structural pricing trap: open-weight alternatives (DeepSeek V4, GLM-5.2) are roughly 50× cheaper per token while matching or beating frontier models on specific tasks. Active HN discussion about whether frontier labs can sustain premium pricing as capability gaps close on specialized benchmarks.</p>
+      <p class="why"><b>Why it matters:</b> Essential context for build-vs-buy decisions on inference infrastructure — the "only frontier models can do this" moat is narrowing faster than pricing strategies seem to anticipate.</p>
+      <div class="row">
+        <span class="chip">June 30, 2026</span>
+        <span class="chip">jamesoclaire.com</span>
+        <a class="src-link" href="https://jamesoclaire.com/2026/06/25/the-unbearable-cheapness-of-open-weight-models/">article →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h — Reddit not assessed (site: search operator returned no results this run).</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-sonnet-5">Introducing Claude Sonnet 5 — Anthropic</a></h3>
+      <p class="summary">Anthropic launched Claude Sonnet 5 as its most agentic mid-tier model, replacing Sonnet 4.6 as the default for Free and Pro plans. Introductory pricing $2/M input and $10/M output tokens through August 31, 2026. Near-Opus 4.8 quality on multi-step reasoning, tool use, coding, and long-running autonomous tasks.</p>
+      <p class="why"><b>Why it matters:</b> A meaningful cost-performance inflection for agent pipelines that previously required Opus-class models — Opus-like quality at ~5× lower price on production workloads.</p>
+      <div class="row">
+        <span class="chip hot">major release</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">July 1, 2026</span>
+        <a class="src-link" href="https://www.anthropic.com/news/claude-sonnet-5">anthropic.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/redeploying-fable-5">Redeploying Claude Fable 5 — Anthropic</a></h3>
+      <p class="summary">Anthropic restored global access to Claude Fable 5 after the U.S. Department of Commerce lifted export controls that had been imposed on June 12 following a jailbreak discovered by Amazon researchers. The redeployment includes new real-time cybersecurity classifiers designed to detect and block dangerous offensive cyber tasks.</p>
+      <p class="why"><b>Why it matters:</b> Fable 5 is back globally — the 19-day restriction that affected customers and API users is over. The new classifiers represent a novel layer in Anthropic's safety stack, shipping faster than anticipated.</p>
+      <div class="row">
+        <span class="chip hot">restored</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">July 1, 2026</span>
+        <a class="src-link" href="https://www.anthropic.com/news/redeploying-fable-5">anthropic.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-science-ai-workbench">Claude Science: An AI Workbench for Scientists — Anthropic</a></h3>
+      <p class="summary">Anthropic launched Claude Science, a specialized research environment integrating 60+ scientific databases spanning genomics, proteomics, structural biology, and cheminformatics. Produces auditable computational artifacts. Anthropic will fund up to 50 research projects with $30,000 in credits each; applications open through July 15, 2026.</p>
+      <p class="why"><b>Why it matters:</b> Anthropic's first domain-specific product vertical — signaling a push beyond general-purpose chat/API into vertical AI platforms with provenance and auditability requirements.</p>
+      <div class="row">
+        <span class="chip hot">new product</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">July 1, 2026</span>
+        <a class="src-link" href="https://www.anthropic.com/news/claude-science-ai-workbench">anthropic.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5">[AINews] Sonnet 5 today, and Fable 5 tomorrow — Latent Space</a></h3>
+      <p class="summary">Daily AI news roundup covering the Claude Sonnet 5 launch (including pre-launch leaks of a 1M-context variant and xhigh effort setting) and the announced restoration of Fable 5 globally. Also covers Claude Desktop's new Linux beta, Managed Agents API streaming updates, and per-session model override controls.</p>
+      <p class="why"><b>Why it matters:</b> Good single-stop roundup of the Anthropic release day with context on the leaked capabilities and API changes that didn't make the official announcement.</p>
+      <div class="row">
+        <span class="chip">Latent Space</span>
+        <span class="chip">July 1, 2026</span>
+        <a class="src-link" href="https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5">latent.space →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-02 01:04 UTC<br>
+    <span>Source issues: arXiv/HF direct fetch blocked (403) — papers sourced via GitHub mirror and web search; HN Algolia blocked — HN threads sourced via web search; Reddit site: search operator returned no results this run.</span><br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
