@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-02</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Thursday, July 2, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Optical scale-up bottleneck is now III-V/Si manufacturing yield, not architecture — Tower's SHIP platform in demand from 4 hyperscalers</a></li>
+      <li><a href="#pic-eda">Wave Photonics adds Synopsys OptoCompiler compatibility to its multi-foundry PDK platform (SiPh, SiN, III-V)</a></li>
+      <li><a href="#research">DARPA PICASSO ($35M) officially kicks off July 1 — targets circuit-level PIC architecture for AI, first tapeouts in 7 months</a></li>
+      <li><a href="#funding">IQM Quantum Computers goes public on Nasdaq as IQMX at ~$1.8B valuation, raising €198M</a></li>
+      <li><a href="#funding">Optical transceiver market projected to exceed $112B by 2031 at 30% CAGR — EML chip supply already pre-allocated through 2027</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nextplatform.com/connect/2026/06/30/optical-scale-up-fabrics-are-limited-by-manufacturing-not-architecture/5264399">Optical Scale-Up Fabrics: The Bottleneck Is Now Manufacturing, Not Architecture</a></h3>
+      <p>Four hyperscalers independently requested identical extensions to Tower Semiconductor's SHIP silicon photonics platform at OFC 2026: III-V material integration (InP/GaAs/GaN) alongside the silicon waveguide layer, for gain elements, high-speed modulators, and optical amplifiers that pure silicon cannot provide. The article frames this as the "third era" of photonic integration — heterogeneous multi-material wafer-level fabrication — and argues that architecture is solved; yield at the III-V/Si bond interface is the remaining bottleneck. Current production is on Tower's 200mm lines; 300mm is the next milestone. <em>Why it matters:</em> Wafer-level III-V/SiPh heterogeneous integration, if it yields cleanly, enables monolithic transceivers and on-chip gain — closing the persistent cost/yield drag of separate flip-chip III-V steps for optical compute chiplets and recirculating photonic neural network architectures.</p>
+      <div class="meta">The Next Platform &middot; 2026-06-30</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://www.wavephotonics.com/news/wave-photonics-announces-synopsys-optocompiler-compatibility-for-pdks-hosted-on-its-pdk-management-platform">Wave Photonics Adds Synopsys OptoCompiler Compatibility Across All Hosted PDKs</a></h3>
+      <p>All PDKs on Wave Photonics' PDK Management Platform now interoperate with Synopsys OptoCompiler — the unified EDA platform for electronic/photonic co-design. Coverage spans visible through telecom wavelengths across SiPh, SiN, III-V, and other material systems. PDKs ship with pre-calculated S-parameters enabling circuit simulation in Synopsys OptSim before tape-out. The platform also handles versioning, documentation, and IP access control. <em>Why it matters:</em> Designers working in OptoCompiler can now pull validated, multi-foundry PDKs from a single managed repository rather than maintaining per-foundry integrations manually. For teams working across SiPh and III-V platforms, pre-calculated S-parameters significantly shorten circuit-level validation loops before committing to tape-out.</p>
+      <div class="meta">Wave Photonics &middot; 2026-07-01</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://picmagazine.net/article/123485/DARPA_launches_35M_program_to_scale_photonic_circuits_for_AI_computing">DARPA PICASSO Program ($35M) Officially Begins — PIC System Architecture for AI Computing</a></h3>
+      <p>DARPA's Photonic Integrated Circuit Architectures for Scalable System Objectives (PICASSO) program began contracting July 1, 2026, distributing ~$35M across multiple awards. The program targets holistic circuit- and system-level PIC design for AI workloads, using architectural mitigation strategies analogous to how electronic circuit design compensates for transistor limits — not another materials or device program. Phase 1 tapeouts at photonic foundries are expected within 7 months; system demonstrations by month 18. <em>Why it matters:</em> The most significant US government bet specifically on PIC system architecture. Results (expected late 2026–2027) will inform circuit-level design techniques for scaling photonic computing at a level directly applicable on EU foundry platforms. European teams should monitor PICASSO publications closely.</p>
+      <div class="meta">PIC Magazine / DARPA &middot; 2026-07-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/articles/volume_37/july_august_2026/features/taking_advantage_of_structured_coherence/">OPN Feature: Structured Coherence as an Engineerable Resource for Optical Signal Processing</a></h3>
+      <p>July/August 2026 feature in Optics &amp; Photonics News (CREOL/UCF — Abouraddy, Harling, Shiri, Toussaint) introduces "structured coherence" — partially coherent light spanned by a finite modal basis — and demonstrates that partially coherent sources can outperform coherent light in certain optical signal processing and communications scenarios. Rather than treating partial coherence as noise to suppress, the paper frames it as an engineerable design resource. <em>Why it matters:</em> Photonic neural network and ONN architectures have assumed coherent CW laser sources, adding cost and thermal stability requirements. If partially coherent sources prove viable for linear algebra kernels, it opens the door to cheaper, more thermally robust light sources on photonic AI chips — a potential BOM and integration win.</p>
+      <div class="meta">Optics &amp; Photonics News, Vol. 37 &middot; July 2026</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://epic-photonics.com/events/epic-members-new-product-release-july-2026/">EPIC Members New Product Release — July 2026 (Upcoming July 7)</a></h3>
+      <p>EPIC's monthly member product launch webinar for July features two noteworthy EDA/toolchain releases: Keysight Technologies presenting an end-to-end Electrical-Optical-Electrical co-simulation framework for optical interconnects (bridging SerDes, driver, TIA with waveguide, modulator, detector in a unified workflow); and Wave Photonics presenting its PDK/MPW management platform. Arden Photonics also presents precision geometry measurement tools for specialty fibers. <em>Why it matters:</em> The Keysight EE-OE-EE co-simulation framework addresses one of the most-cited friction points in photonic IC bring-up. The Wave Photonics PDK management platform (announced yesterday, see PIC Design section) will be formally demonstrated to the EU photonics industry community.</p>
+      <div class="meta">EPIC &middot; upcoming 2026-07-07</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/01/iqm-completes-raaq-business-combination/">IQM Quantum Computers Begins Nasdaq Trading as IQMX — €198M Raised at ~$1.8B Valuation</a></h3>
+      <p>Finnish quantum hardware company IQM completed its SPAC merger with Real Asset Acquisition Corp. (RAAQ) and began trading on Nasdaq under ticker IQMX on July 2, 2026, raising approximately €198.7M (~$233M) in net proceeds. IQM operates a vertically integrated model: proprietary chip design tools, an in-house quantum chip fab, an assembly line, and a data centre deployment layer. <em>Why it matters:</em> The most prominent European quantum hardware company to reach public markets. IQM's vertically integrated fab model — from design through system deployment — sets a capital-markets precedent for EU quantum/photonic hardware and signals that the integrated design-through-manufacturing pathway is now investable at scale.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-07-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.electronicsweekly.com/news/business/ai-transforming-optical-receiver-market-2026-07/">AI Boom Drives Optical Transceiver Market Toward $112 Billion by 2031 — Yole Forecast</a></h3>
+      <p>Yole Group released a forecast showing the optical transceiver market is poised to exceed $112 billion by 2031, growing at ~30% CAGR. AI hyperscale build-out is concentrating procurement among fewer qualified suppliers and exposing three critical supply chain bottlenecks: EML laser chips, high-speed DSP ASICs, and photonic integration capacity. Silicon photonics is identified as the dominant cost-reduction platform. NVIDIA has reportedly pre-allocated EML capacity through 2027. <em>Why it matters:</em> The EML sourcing constraint is directly actionable for anyone building transceiver-heavy photonic compute fabric. The 30% CAGR validates the market trajectory; the supply chain data is useful for product roadmap and investor conversations.</p>
+      <div class="meta">Electronics Weekly / Yole Group &middot; 2026-07-01</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://www.optica.org/events/congress/advanced_photonics_congress/">Optica Advanced Photonics Congress — July 26–30, 2026, Long Beach, CA</a></h3>
+      <p>Optica's Advanced Photonics Congress convenes eight co-located topical meetings covering optical signal processing, integrated photonics, nonlinear photonics, optical communications, and related areas. The APC is the primary mid-year venue for integrated photonics research outside of OFC. <em>Why it matters:</em> ArXiv preprints (2607.xxxxx IDs) from APC presenters will surge in the next two to three weeks ahead of the event — late July will be the richest single burst of new photonic compute research this quarter. Worth setting a calendar reminder to monitor arXiv physics.optics and cs.ET around July 20–26.</p>
+      <div class="meta">Optica &middot; event: 2026-07-26 to 2026-07-30</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Direct site fetches blocked (403) for photondelta.com, epic-photonics.com (event pages only), smartphotonics.nl, laserfocusworld.com, cignal.ai, picmagazine.net, optica-opn.org, flexcompute.com — all items sourced via web search. arXiv 2607.* IDs not yet indexed by search engines (Google lag ~1-2 days post-submission). Reddit RSS endpoints returned 403; web search returned no photonics threads. Lightmatter and Ayar Labs pages returned 403, no new July announcements found.</div>
+  <div>8 items &middot; generated 2026-07-02 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
