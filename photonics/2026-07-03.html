@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-03</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, July 3, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Q.ANT runs Stable Diffusion and xLSTM on a native photonic processor — first public generative-AI demo on optical hardware</a></li>
+      <li><a href="#compute">QuiX Quantum unveils Dedalo: fault-tolerant logical qubits on CMOS-compatible SiN PICs</a></li>
+      <li><a href="#pic-eda">Wave Photonics PDK platform gains Synopsys OptoCompiler compatibility across SiPh, SiN &amp; InP</a></li>
+      <li><a href="#research">Tyndall achieves two world-firsts: fully optically powered chip-on-tip endoscope and FLIM micro-camera</a></li>
+      <li><a href="#funding">NIST awards $20M to SRI to establish Quantum Manufacturing Engineering Center — PICs explicitly named</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.hpcwire.com/off-the-wire/q-ant-runs-generative-ai-on-photonic-hardware/">Q.ANT Runs Stable Diffusion and xLSTM on Native Photonic Processor at ISC 2026</a><span class="badge">catch-up</span></h3>
+      <p>At ISC High Performance 2026 in Hamburg, Q.ANT demonstrated a Stable Diffusion-style image model and an xLSTM recurrent network executing on its NPU Gen 2 — the first public demonstration of generative and sequential-forecasting workloads on a photonic processor, claiming up to 30&times; lower energy per matrix multiply than digital equivalents. The NPU 2 uses thin-film lithium niobate PICs where one optical element replaces 100–1,000 transistors for equivalent nonlinear functions. <em>Why it matters:</em> Moving beyond synthetic benchmarks to real generative-AI model execution is the credibility gate the optical-compute sector has needed; it validates that nonlinear photonics is ready for at least a subset of transformer-era workloads.</p>
+      <div class="meta">HPCwire &middot; 2026-06-23</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/30/quix-quantum-unveils-path-to-universal-photonic-quantum-computing-with-logical-qubits/">QuiX Quantum Unveils Dedalo: Fault-Tolerant QC via CMOS-Compatible SiN PICs</a></h3>
+      <p>QuiX Quantum (Netherlands) released technical details of Dedalo, a fault-tolerant photonic quantum computing architecture that tackles the photon-loss problem by encoding logical qubits in a single measurement basis using CMOS-compatible silicon-nitride PICs compatible with room-temperature operation and Measurement-Based Quantum Computing. The modular design is intended to scale and interface with classical HPC clusters. <em>Why it matters:</em> If SiN PICs can host fault-tolerant logical qubits, the same foundry processes used today for optical interconnects and linear-optics accelerators become a direct substrate for hybrid classical-quantum optical compute nodes — a potential convergence point for photonic compute and photonic-QC supply chains.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-06-30</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/06/30/3319790/0/en/Q-C-Technologies-Relocates-Headquarters-to-San-Francisco-in-Proximity-to-World-Class-Engineering-Experts-for-Photonic-Computing-and-Optical-AI-Inference-Initiative.html">Q/C Technologies (QCLS) Relocates HQ to SF, Opens Photonic Lab to Build OPU for AI Inference</a></h3>
+      <p>Publicly traded Q/C Technologies moved its headquarters to San Francisco and is opening a 4,800 sq-ft integrated photonics lab to develop a proprietary Optical Processing Unit (OPU) for AI inference, targeting the energy and throughput bottlenecks of GPU-based inference. The company has hired engineers from IGP Photonics, Neurophos, and IonQ. <em>Why it matters:</em> A NASDAQ-listed company publicly pivoting to silicon-photonic OPU development signals growing investor confidence that optical inference acceleration is moving from research to commercial buildout — watch for procurement and partnership signals.</p>
+      <div class="meta">GlobeNewswire &middot; 2026-06-30</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/01/wave-photonics-announces-synopsys-optocompiler-compatibility-for-pdks-hosted-on-its-pdk-management-platform/">Wave Photonics PDK Platform Now Synopsys OptoCompiler Compatible — SiPh, SiN &amp; InP</a></h3>
+      <p>Wave Photonics announced that all PDKs distributed through its cloud-based PDK Management Platform — covering silicon photonics, SiN, and InP material platforms — are now validated for Synopsys OptoCompiler, the industry's first unified electronic-photonic design environment. CORNERSTONE's open-sourced PDKs are the first available to OptoCompiler users via the platform, with pre-calculated S-parameters enabling circuit simulation pre-tape-out. <em>Why it matters:</em> Reducing PDK setup friction for the dominant commercial EDA flow lowers the barrier for electronic-design teams to evaluate photonic process nodes — directly relevant for co-designing optical compute chiplets with CMOS.</p>
+      <div class="meta">The Quantum Insider / Wave Photonics &middot; 2026-07-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.optica.org/events/webinar/2026/07_july/tutorial_from_wafer_measurements_to_insights_analyzing_cornerstone_silicon_photonics_data_with_nex/">Luceda Photonics Launches Nexus Data Explorer — Demonstrated with CORNERSTONE Silicon Photonics Dataset</a></h3>
+      <p>Luceda Photonics introduced Nexus, a new product line integrating with the Luceda IPKISS design platform to ingest, structure, analyze, and visualize wafer-level measurement data alongside simulation results. The July 2026 tutorial uses a real CORNERSTONE silicon-photonics fab dataset to demonstrate cross-wafer performance analysis. <em>Why it matters:</em> Closing the fab-measurement-to-design feedback loop within a photonic EDA environment accelerates process qualification — a key bottleneck for any team tape-ing out optical compute PICs on a new process node.</p>
+      <div class="meta">Optica / Luceda Photonics &middot; 2026-07-01</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/tyndall-achieves-two-world%E2%80%91firsts-in-miniature-photonics-integration">Tyndall Achieves Two World-Firsts: Fully Optically Powered Chip-on-Tip Endoscope and FLIM Micro-Camera</a></h3>
+      <p>Tyndall National Institute demonstrated (1) the world's first fully optically powered chip-on-tip micro-camera endoscope in a 3 mm catheter, and (2) the first chip-on-tip fluorescence lifetime imaging (FLIM) micro-camera at 4 mm diameter with a 128&times;120 SPAD array — both eliminating all electrical power cabling by routing power over optical fiber alongside signal. <em>Why it matters:</em> The underlying silicon-photonic power-over-fiber and PIC integration techniques are directly transferable to powering disaggregated optical compute elements inside dense server chassis without copper power rails.</p>
+      <div class="meta">optics.org / Tyndall National Institute &middot; 2026-07-02</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.00715">GsOQDC: Open-Source GUI Framework for Optical Quantum Data Center Co-Simulation (arXiv:2607.00715)</a></h3>
+      <p>Elyasi et al. (Bristol / KTH) release GsOQDC, an interactive framework integrating optical-network topology design, distributed quantum-circuit compilation, gate scheduling, and discrete-event simulation into a single GUI for cross-layer performance evaluation of Optical Quantum Data Centers. Accepted at ECOC 2026. <em>Why it matters:</em> As optical interconnects become the backbone of AI data centers, co-designing quantum-classical optical fabrics requires exactly this kind of co-simulation layer — GsOQDC is an early open infrastructure for that convergence.</p>
+      <div class="meta">arXiv cs.ET / quant-ph &middot; 2026-07-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.00574">Near-Perfect On-Chip Single-Photon Source via Ultrastrong Light-Matter Coupling (arXiv:2607.00574)</a></h3>
+      <p>A new preprint proposes a deterministic single-photon source achieving near-unity emission efficiency by exploiting ultrastrong coupling between a two-level emitter and a cavity mode, dramatically suppressing multi-photon leakage compared to weak or strong-coupling regimes, analyzed for compatibility with on-chip photonic cavity architectures. <em>Why it matters:</em> High-purity on-chip single-photon sources are a key enabling component for photonic quantum computing and boson-sampling accelerators; improved efficiency directly reduces resource overhead of linear-optical quantum gates.</p>
+      <div class="meta">arXiv quant-ph / physics.optics &middot; 2026-07-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2606.27612">Hardware Fingerprinting for CPO Silicon Photonics via Photonic-Crystal Density Patterns (arXiv:2606.27612)</a></h3>
+      <p>Biswas et al. (University of Florida) propose embedding 2D photonic-crystal arrays in the density-fill regions of a PIC — otherwise wasted space — to produce device-unique optical spectral fingerprints across visible/NIR wavelengths, verified by FDTD simulation in ANSYS Lumerical. Targets anti-counterfeiting and supply-chain trust for co-packaged-optics silicon photonics. <em>Why it matters:</em> As CPO transceivers enter AI rack-scale deployments at scale, hardware provenance becomes a system-security concern; this technique offers a non-invasive PIC-level identity layer with no extra area cost.</p>
+      <div class="meta">arXiv physics.optics / eess.SP &middot; 2026-06-26</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/european-tech-agencies-unite-to-develop-software-for-photonics">ESRF and DESY Sign MOU for Shared European Photon Science Software Ecosystem</a></h3>
+      <p>The European Synchrotron Radiation Facility (ESRF, Grenoble) and DESY (Hamburg) formalized a strategic MOU to co-develop software for beamline control, data acquisition, data analysis, and scientific computing across both X-ray/synchrotron facilities, explicitly inviting broader European research infrastructure participation. Signed at the 86th ESRF Council meeting. <em>Why it matters:</em> Synchrotron-grade photonics software — covering coherent imaging, wavefront sensing, and real-time photon-stream processing — shares deep technical overlap with the control and measurement software stacks needed for large-scale PIC characterization pipelines.</p>
+      <div class="meta">optics.org / ESRF &middot; 2026-07-01</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/06/29/nist-taps-sri-to-establish-the-quantum-manufacturing-engineering-center-qmec/">NIST Awards $20M to SRI to Establish Quantum Manufacturing Engineering Center — PICs Explicitly Named</a></h3>
+      <p>NIST selected SRI International to establish the Quantum Manufacturing Engineering Center (QMEC) with an initial $20M investment, targeting scalable manufacturing of cryostats, lasers, quantum chips, and integrated photonic circuits (explicitly named), with a three-year horizon to advance quantum-enabling component manufacturability and build a domestic supply chain. <em>Why it matters:</em> NIST explicitly naming integrated photonic circuits as a QMEC manufacturing target signals that photonic chip yield and packaging — not just qubit fidelity — is now a federally prioritized bottleneck, with implications for the same SiN and LiNbO3 foundries serving optical compute.</p>
+      <div class="meta">The Quantum Insider / NIST &middot; 2026-06-29</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://spie.org/conferences-and-exhibitions/optics-and-photonics">SPIE Optics + Photonics 2026 Opens July 5 — SmartPICS Track Live</a></h3>
+      <p>SPIE's Optics + Photonics 2026 (San Diego, July 5–10 for early symposia) includes a dedicated Smart Photonic and Optoelectronic Integrated Circuits (SmartPICS) track covering programmable PICs, photonic AI accelerators, and heterogeneous integration. Conference proceedings and live hardware demonstrations from this event will appear throughout the week. <em>Why it matters:</em> SmartPICS is the single largest annual venue where PIC design, fabrication, and optical-compute research converge — abstracts accepted here typically represent leading-edge unpublished results relevant to optical compute chip design.</p>
+      <div class="meta">SPIE &middot; 2026-07-03</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: lightmatter.co, ayarlabs.com, nextplatform.com, nature.com RSS — HTTP 403 via proxy, not assessed. optics.org, thequantuminsider.com — 403 on direct fetch, content recovered via web search snippets. gdsfactory v9.44.0 already in seen log. Reddit r/Optics &amp; r/Semiconductors RSS: 403; web search returned no recent threads — not assessed. YouTube SPIE TV RSS: blocked; no recent uploads surfaced. Cignal AI: no July 2026 press release found.</div>
+  <div>12 items &middot; generated 2026-07-03 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
