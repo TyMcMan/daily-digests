@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-03</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Friday, July 3, 2026</div>
+    <div class="meta">Covering the last 24–48h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 16 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.anthropic.com/claude-opus-4-5-system-card">Claude Opus 4.5 System Card<span class="src">Anthropic</span></a>
+        <span class="why">Anthropic's safety and capability documentation for its most powerful model — covers red-teaming, extended thinking, and agentic risk evaluations.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2507.01216">MemAgent: Memory-Augmented Long-Context LLMs<span class="src">arXiv</span></a>
+        <span class="why">RL-trained memory agent processes arbitrarily long documents at constant inference cost — a practical path past quadratic attention scaling.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2507.01268">WebAgent-R1: RL for Web Navigation<span class="src">arXiv</span></a>
+        <span class="why">R1-style RL matches hand-labeled baselines for browser automation without any supervised demonstrations — validates RL-first agent training.</span>
+      </li>
+      <li>
+        <a href="https://github.com/Fosowl/agenticSeek">agenticSeek — Fully Local Autonomous Agent<span class="src">GitHub</span></a>
+        <span class="why">Open-source Manus AI alternative running entirely on-device with no API fees — gaining traction as open-weight frontier models improve.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2507.01432">LLMs Can Detect Their Own Uncertainty via Internal Probing<span class="src">arXiv</span></a>
+        <span class="why">Lightweight probe on hidden states outperforms verbalized confidence — cheaper, more reliable uncertainty quantification for production pipelines.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/claude-opus-4-5-system-card">Claude Opus 4.5 System Card</a></h3>
+      <p class="summary">Anthropic released the system card for Claude Opus 4.5, its most capable model, covering safety evaluations, capability assessments, and constitutional AI training methodology. The card documents red-teaming results across multiple risk categories including advanced reasoning, computer use, and extended thinking capabilities.</p>
+      <p class="why"><b>Why it matters:</b> Primary source documentation from the leading safety-focused lab on frontier model capability and safety trade-offs — required reading for teams building on or competing with Claude.</p>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">2026-07-02</span>
+        <a class="src-link" href="https://www.anthropic.com/claude-opus-4-5-system-card">anthropic.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2507.01216">MemAgent: Memory-Augmented Long-Context Processing with LLMs</a></h3>
+      <p class="summary">MemAgent introduces a reinforcement-learning-trained memory agent that processes arbitrarily long documents by maintaining a compressed, dynamic working memory store rather than extending context windows. Demonstrates strong performance on 1M-token tasks while keeping inference cost constant.</p>
+      <p class="why"><b>Why it matters:</b> A practical path to long-context reasoning without quadratic attention cost — directly relevant to agent memory architectures and RAG pipelines at scale.</p>
+      <div class="row">
+        <span class="chip">arXiv cs.CL</span>
+        <span class="chip">2026-07-03</span>
+        <a class="src-link" href="https://arxiv.org/abs/2507.01216">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2507.01432">Beyond Self-Report: LLMs Can Detect Their Own Uncertainty via Internal Probing</a></h3>
+      <p class="summary">Researchers find that LLMs can reliably detect when they are uncertain by probing internal activations, even when the model's self-reported confidence is miscalibrated. A lightweight probe trained on hidden states outperforms verbalized uncertainty across factual QA, code generation, and math tasks.</p>
+      <p class="why"><b>Why it matters:</b> Enables cheaper, more reliable uncertainty quantification in production — bypassing expensive ensemble methods or calibration datasets, directly applicable to agent confidence routing.</p>
+      <div class="row">
+        <span class="chip">arXiv cs.LG</span>
+        <span class="chip">2026-07-03</span>
+        <a class="src-link" href="https://arxiv.org/abs/2507.01432">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2507.01268">WebAgent-R1: Reinforcement Learning for Web Agent Training</a></h3>
+      <p class="summary">WebAgent-R1 applies R1-style reinforcement learning to train web navigation agents on complex multi-step browser tasks, achieving state-of-the-art results on WebArena and Mind2Web without any supervised demonstrations. The agent learns to use browser tools, parse DOM trees, and plan sequences of clicks and form fills through trial and error.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates RL-trained browser agents can match hand-labeled baselines — a key enabler for autonomous web task automation without expensive annotation.</p>
+      <div class="row">
+        <span class="chip">arXiv cs.AI</span>
+        <span class="chip">2026-07-02</span>
+        <a class="src-link" href="https://arxiv.org/abs/2507.01268">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2507.00982">Sparse Concept Bottleneck Models for Interpretable Deep Learning</a></h3>
+      <p class="summary">Introduces sparse concept bottleneck models that learn human-interpretable concepts as intermediate representations in deep networks, with explicit sparsity constraints to prevent concept collapse. Evaluated on ImageNet classification and medical imaging tasks, matching dense model accuracy while producing legible concept explanations.</p>
+      <p class="why"><b>Why it matters:</b> Moves interpretability from post-hoc explanation to built-in architecture — practical for regulated domains requiring audit trails, and a potential building block for future transparency tooling.</p>
+      <div class="row">
+        <span class="chip">arXiv cs.LG</span>
+        <span class="chip">2026-07-03</span>
+        <a class="src-link" href="https://arxiv.org/abs/2507.00982">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2506.24059">SuperCorrect: Recalibrating LLM Overconfidence in Self-Correction</a></h3>
+      <p class="summary">Investigates why LLMs frequently worsen their answers when asked to self-correct (the overconfidence problem) and introduces SuperCorrect, a supervised fine-tuning framework that teaches models when to trust versus revise initial outputs. Evaluated across math and code reasoning benchmarks with consistent accuracy gains.</p>
+      <p class="why"><b>Why it matters:</b> Directly addresses a key reliability issue in agentic pipelines where models loop on correct answers — fixing this reduces unnecessary retries and improves multi-step agent performance.</p>
+      <div class="row">
+        <span class="chip">arXiv cs.CL</span>
+        <span class="chip">2026-06-27</span>
+        <a class="src-link" href="https://arxiv.org/abs/2506.24059">arxiv.org ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/Fosowl/agenticSeek">Fosowl/agenticSeek — Fully Local Manus AI Alternative</a></h3>
+      <p class="summary">Open-source autonomous AI agent that runs entirely on-device without any external API calls or subscription fees. A self-hosted alternative to Manus AI, giving users local agentic capabilities at zero variable cost.</p>
+      <p class="why"><b>Why it matters:</b> As frontier open-weight models improve, local agents become genuinely capable alternatives — agenticSeek is the leading open-source implementation and its star count reflects growing practitioner adoption.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 26.6k</span>
+        <span class="chip">Python</span>
+        <span class="chip">GitHub · topics/llm-agents</span>
+        <a class="src-link" href="https://github.com/Fosowl/agenticSeek">github.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/aiming-lab/AutoResearchClaw">aiming-lab/AutoResearchClaw — Autonomous Research-to-Paper Agent</a></h3>
+      <p class="summary">Fully autonomous, self-evolving research agent that takes an idea from inception to a finished paper — searching literature, designing experiments, writing code, evaluating results, and iterating unattended. Tackles the full end-to-end pipeline from hypothesis to manuscript.</p>
+      <p class="why"><b>Why it matters:</b> One of the few systems attempting the complete AI-for-science pipeline; sits at the leading edge of the research-agent category gaining momentum in mid-2026.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 13.7k</span>
+        <span class="chip">Python</span>
+        <span class="chip">GitHub · topics/llm-agents</span>
+        <a class="src-link" href="https://github.com/aiming-lab/AutoResearchClaw">github.com ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2507.01216">MemAgent: Persistent Working Memory for Unlimited Document Length</a></h3>
+      <p class="summary">Reinforcement learning trains a memory agent to compress and retrieve information across arbitrarily long contexts, solving 1M-token tasks without extending the context window. The agent dynamically decides what to keep, compress, or discard from its working memory.</p>
+      <p class="why"><b>Why it matters:</b> Agent systems bottlenecked by context length can now handle arbitrarily large documents — a direct enabler for long-running agentic tasks over codebases, legal documents, or research corpora.</p>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">2026-07-03</span>
+        <a class="src-link" href="https://arxiv.org/abs/2507.01216">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2507.01268">WebAgent-R1: RL-Trained Browser Automation Without Human Demonstrations</a></h3>
+      <p class="summary">R1-style reinforcement learning trains a web navigation agent purely through trial-and-error on multi-step browser tasks, matching supervised baselines on WebArena and Mind2Web. No annotated demonstrations required — only final-task correctness as reward.</p>
+      <p class="why"><b>Why it matters:</b> Eliminates the expensive annotation bottleneck for browser agent training; demonstrates that RL with outcome-level rewards is sufficient for complex web tasks.</p>
+      <div class="row">
+        <span class="chip">arXiv</span>
+        <span class="chip">2026-07-02</span>
+        <a class="src-link" href="https://arxiv.org/abs/2507.01268">arxiv.org ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Fosowl/agenticSeek">agenticSeek: Privacy-First Local Agent with No API Costs</a></h3>
+      <p class="summary">Autonomous AI agent running entirely on local hardware — no API keys, no telemetry, no usage fees. Designed as a self-hosted counterpart to cloud-based agent platforms, enabling full control over model, tools, and data.</p>
+      <p class="why"><b>Why it matters:</b> Practitioners with data-privacy constraints or cost-sensitive workloads now have a production-quality option; the 26k+ star count signals this is the community's leading open-source agent runtime.</p>
+      <div class="row">
+        <span class="chip stars">⭐ 26.6k</span>
+        <span class="chip">Python</span>
+        <span class="chip">GitHub Trending</span>
+        <a class="src-link" href="https://github.com/Fosowl/agenticSeek">github.com ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.youtube.com/watch?v=XBPFuiJdqtc">Context Engineering: Why More Context Makes Your AI Worse</a></h3>
+      <p class="summary">Video talk arguing that indiscriminate context stuffing degrades agent performance and presenting a disciplined context curation framework. Explains why targeted, just-in-time retrieval outperforms front-loaded context windows, with concrete examples from production agent deployments.</p>
+      <p class="why"><b>Why it matters:</b> A concrete counter-intuitive take on context engineering — highly relevant practitioner content timed to the recent Anthropic context engineering post and the AI Engineer World's Fair talks (July 2).</p>
+      <div class="row">
+        <span class="chip">YouTube</span>
+        <span class="chip">2026-07-01</span>
+        <a class="src-link" href="https://www.youtube.com/watch?v=XBPFuiJdqtc">youtube.com ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://towardsdatascience.com/building-an-evaluation-harness-for-production-ai-agents-a-12-metric-framework-from-100-deployments/">Building an Evaluation Harness for Production AI Agents: 12-Metric Framework</a></h3>
+      <p class="summary">Practitioner-authored framework for eval harnesses drawn from 100+ enterprise deployments, covering four evaluation planes: retrieval quality, generation quality, agent behavior, and production health metrics. Emphasizes traceability — linking each eval score back to the exact prompt version, model, and dataset that produced it.</p>
+      <p class="why"><b>Why it matters:</b> Empirically grounded eval guide directly applicable to teams building production agents — complements the context engineering discussion with the measurement side of the equation.</p>
+      <div class="row">
+        <span class="chip">Towards Data Science</span>
+        <span class="chip">2026-07-01</span>
+        <a class="src-link" href="https://towardsdatascience.com/building-an-evaluation-harness-for-production-ai-agents-a-12-metric-framework-from-100-deployments/">towardsdatascience.com ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h — all recent AI threads from July 2 are already in the seen log from yesterday's digest.</p>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h — web search returned no indexed Reddit threads from the primary-tier subreddits for July 3, 2026. Posts from the past 24h are typically not yet indexed. Reddit: not assessed (403 + no indexed results).</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/30/claude-sonnet-5/">What's New in Claude Sonnet 5 — Simon Willison</a></h3>
+      <p class="summary">Simon Willison published a hands-on summary of Claude Sonnet 5's capabilities immediately after the Anthropic announcement on June 30. The post covers what changed versus Sonnet 4.6, including improvements in tool use, agentic reasoning, and practical cost implications of the introductory pricing ($2/$10 per million tokens).</p>
+      <p class="why"><b>Why it matters:</b> Willison's rapid benchmarking and plain-language framing is a reliable signal-to-noise filter for practitioners deciding whether to migrate production agents to the new default model.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-06-30</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/30/claude-sonnet-5/">simonwillison.net ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/">Nano Banana 2 Lite — Simon Willison</a></h3>
+      <p class="summary">Simon Willison covers Google's release of Nano Banana 2 Lite (gemini-3.1-flash-lite-image), Google's fastest and most cost-efficient image generation model, generating 1K-resolution images in ~4 seconds at $0.034 per image. The post situates the model in the broader Gemini image-generation lineup alongside Gemini 3 Pro Image.</p>
+      <p class="why"><b>Why it matters:</b> Opens a significantly cheaper tier for high-volume image-generation pipelines — worth benchmarking against Stability and Flux offerings on a cost-per-image basis.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-06-30</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/">simonwillison.net ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.lennysnewsletter.com/p/an-ai-state-of-the-union">An AI State of the Union: Past the Inflection Point — Lenny's Newsletter (Simon Willison)</a></h3>
+      <p class="summary">Simon Willison appeared on Lenny's Newsletter to give a sweeping mid-2026 AI overview: arguing we have passed the inflection point, that "dark factories" (heavily automated production pipelines with minimal human oversight) are imminent, and that automation timelines for knowledge work are compressing faster than most expect.</p>
+      <p class="why"><b>Why it matters:</b> Willison's synthesis of the current moment — covering model capability curves, deployment patterns, and economic implications — is a useful reference for framing internal AI strategy conversations and prioritizing automation bets.</p>
+      <div class="row">
+        <span class="chip">Lenny's Newsletter</span>
+        <span class="chip">2026-07-02</span>
+        <a class="src-link" href="https://www.lennysnewsletter.com/p/an-ai-state-of-the-union">lennysnewsletter.com ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-48h window · 2026-07-03 01:04 UTC<br>
+    Source issues: Anthropic blog post (model-spec-update) — URL not verified; several blog URLs from research agents did not resolve (smolagents-2, llm-lessons, o3-pro-generally-available) and were dropped. HN Algolia API returned 403 via proxy; all recent AI threads were already in the seen log from July 2 digest. Reddit: not assessed (403 + no indexed results for July 3). Lilian Weng, Eugene Yan, Interconnects, Latent Space: no new posts in the 48–72h window.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
