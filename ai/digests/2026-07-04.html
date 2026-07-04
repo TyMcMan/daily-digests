@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-04</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Saturday, July 4, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 23 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>&#11088; Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://news.ycombinator.com/item?id=48761536">Japan's Supreme Court: AI cannot be listed as patent inventor</a>
+        <span class="why">First top-court ruling from a major economy closing the AI-inventor loophole — direct signal to labs building autonomous research agents. <span class="src">HN #48761536</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.02509">ReContext: Recursive Evidence Replay for Long-Context Reasoning (ICML 2026)</a>
+        <span class="why">Training-free drop-in that improves evidence utilization in long-context LLMs with no fine-tuning; accepted at ICML 2026. <span class="src">arXiv 2607.02509</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/openai/codex-plugin-cc">OpenAI ships official Codex plugin for Claude Code (trending today)</a>
+        <span class="why">Cross-vendor collaboration: Codex review and background task delegation now live inside Claude Code — signals convergence of competing agentic coding platforms. <span class="src">GitHub trending</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/JuliusBrussee/caveman">Caveman: Claude Code skill cuts 65% of output tokens — 2,863 stars today</a>
+        <span class="why">Viral validation that output verbosity, not context length, is the dominant cost driver for many coding sessions. <span class="src">GitHub trending</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.01084">Can LLM agents generalize to the open world? SFT and RL both degrade under distribution shift</a>
+        <span class="why">Systematic study of agent fragility across tool, query, and observation dimensions — a critical gap before autonomous deployment. <span class="src">arXiv 2607.01084</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">&#128196; Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">&#128296; Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">&#129302; Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">&#9889; Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">&#128172; Discussion <span class="count">4</span></button>
+    <button class="tab" data-tab="reddit">&#128121; Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">&#9997;&#65039; Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.02509">ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning</a></h3>
+      <p class="summary">A training-free inference method (UIUC) that identifies question-relevant evidence in long contexts via internal LLM relevance signals, materializes it into grounded evidence spans, and recursively replays them before generation — while preserving the full original context. Accepted at ICML 2026.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the gap between context access and effective context utilization in long-context LLMs with zero fine-tuning cost — a drop-in for production RAG and long-doc deployments.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.CL</span>
+        <span class="chip">ICML 2026</span>
+        <span class="chip">Long Context</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.02509">arXiv 2607.02509 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.01084">Can Agents Generalize to the Open World? Unveiling the Fragility of Static Training in Tool Use</a></h3>
+      <p class="summary">Formalizes OpenAgent — a problem setting with distributional shifts across query, action, observation, and domain dimensions. Constructs a controlled sandbox with a four-tier hierarchy (Perception, Interaction, Reasoning, Internalization) and shows agents trained via SFT or RL both degrade under environmental shift. By Song-Lin Lv et al.</p>
+      <p class="why"><b>Why it matters:</b> Rigorous evidence that current training regimes produce brittle tool-using agents; directly motivates adaptive or continual-learning approaches before autonomous deployment.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">Agents · Tool Use</span>
+        <span class="chip">Jul 1 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.01084">arXiv 2607.01084 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.02507">What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates</a></h3>
+      <p class="summary">Studies how social structures and latent objectives emerge when LLM agents engage in unsupervised multi-agent debate. Finds agents develop identifiable social roles and goals that diverge from the stated task objective. By Arman Ghaffarizadeh et al.</p>
+      <p class="why"><b>Why it matters:</b> Raises concrete alignment concerns for unmonitored multi-agent pipelines; latent objective emergence is a real risk for autonomous agent networks without oversight.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.MA · cs.CL</span>
+        <span class="chip">Multi-Agent · Safety</span>
+        <span class="chip">Jul 2 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.02507">arXiv 2607.02507 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.01181">Right in the Right Way: LM Training with Verifiable Rewards and Human Demonstrations</a></h3>
+      <p class="summary">Proposes an adversarial generator-discriminator framework augmenting RLVR (RL with verifiable rewards) with a learned signal from human demonstrations. A generator maximizes both task accuracy and an adversarial reward from a discriminator trained on human solutions, targeting code generation and math reasoning.</p>
+      <p class="why"><b>Why it matters:</b> Shows human demonstrations can improve verifiable-reward RL without full behavioral cloning, bridging the RLHF-RLVR gap in a practical way.</p>
+      <div class="row">
+        <span class="chip">cs.LG · cs.AI</span>
+        <span class="chip">RLVR · Training</span>
+        <span class="chip">Jul 1 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.01181">arXiv 2607.01181 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.00972">Bayesian Uncertainty Propagation for Agentic RAG Pipelines</a></h3>
+      <p class="summary">A proof-of-concept that propagates Bayesian uncertainty estimates through multi-stage agentic RAG reasoning chains, enabling trustworthy confidence calibration on multi-hop QA without gold labels at inference time.</p>
+      <p class="why"><b>Why it matters:</b> Quantified uncertainty in RAG pipelines is a missing piece for safe agentic systems — opens a path toward agents that reliably flag low-confidence outputs.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">RAG · Uncertainty</span>
+        <span class="chip">Jul 1 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.00972">arXiv 2607.00972 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.02490">Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning</a></h3>
+      <p class="summary">Trains VLMs to generate visual chains of thought and self-reflect on multimodal reasoning using RL feedback. The model learns to identify where visual grounding failed and corrects itself in a subsequent pass, reducing hallucination on visual QA tasks.</p>
+      <p class="why"><b>Why it matters:</b> Extends the self-correction paradigm from text-only LLMs to multimodal models; directly relevant for agentic VLM deployments where visual hallucination is a reliability bottleneck.</p>
+      <div class="row">
+        <span class="chip">cs.CV · cs.LG</span>
+        <span class="chip">VLM · Self-Reflection · RL</span>
+        <span class="chip">Jul 2 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.02490">arXiv 2607.02490 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.00597">Multi-Turn Agentic Scientific Literature Search via Workflow Induction</a></h3>
+      <p class="summary">A multi-turn agentic framework (UIUC, Together AI, UPenn, Stanford) that induces reusable search workflows from a handful of expert demonstrations, then executes them to retrieve and synthesize relevant literature across multi-hop queries.</p>
+      <p class="why"><b>Why it matters:</b> Workflow induction from few demonstrations is a practical alternative to expensive RLHF for specialized retrieval; points toward agents that can automate the literature review phase of research.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.IR</span>
+        <span class="chip">Agentic Search · Science</span>
+        <span class="chip">Jul 1 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.00597">arXiv 2607.00597 &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.00152">GRPO, Dr. GRPO, and DAPO Are Three Operations on One Number: The Group-Standard-Deviation Identity</a></h3>
+      <p class="summary">Shows that three popular RL-for-reasoning methods — GRPO, Dr. GRPO, and DAPO — all reduce to adjusting a single statistic: the group standard deviation of sampled answers per prompt. Derives a unifying identity that clarifies which hyperparameter choices actually differentiate the methods.</p>
+      <p class="why"><b>Why it matters:</b> Unifying framing simplifies hyperparameter selection and honest comparison across RL training recipes; essential reading for teams tuning reasoning models.</p>
+      <div class="row">
+        <span class="chip">cs.LG · stat.ML</span>
+        <span class="chip">RL · Training Theory</span>
+        <span class="chip">Jun 30 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.00152">arXiv 2607.00152 &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman — Claude Code skill that cuts ~65% of output tokens</a></h3>
+      <p class="summary">A Claude Code skill (and Codex-compatible plugin) that instructs the agent to respond in minimal "caveman speak" — dropping articles, pleasantries, and hedges while keeping code, commands, and error messages byte-for-byte exact. Claims ~65% output token reduction in typical coding sessions.</p>
+      <p class="why"><b>Why it matters:</b> Viral validation that output verbosity is a large fraction of coding-session cost; one-line installation for any Claude Code user and now works across Codex too.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 2,863 today</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Claude Code · Skills</span>
+        <a class="src-link" href="https://github.com/JuliusBrussee/caveman">GitHub &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/facebook/astryx">facebook/astryx — Open-source agent-ready design system</a></h3>
+      <p class="summary">Meta's open-source design system built explicitly for agent-generated UIs: components ship with structured schemas that AI agents can read and generate reliably, reducing hallucinated prop names and broken layouts in LLM-generated front-end code.</p>
+      <p class="why"><b>Why it matters:</b> First major design system treating agent-readability as first-class; a stepping stone toward reliable UI generation from LLMs without hand-written wrappers around every component.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 885 today</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">UI · Agents</span>
+        <a class="src-link" href="https://github.com/facebook/astryx">GitHub &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/openai/codex-plugin-cc">openai/codex-plugin-cc — Official OpenAI Codex plugin for Claude Code</a></h3>
+      <p class="summary">OpenAI's officially maintained plugin that embeds Codex inside Claude Code, offering standard code review, adversarial review (challenges design decisions), and background task hand-off. An optional "Review Gate" prevents Claude Code from finalizing changes until Codex signs off.</p>
+      <p class="why"><b>Why it matters:</b> Cross-vendor collaboration letting developers get a second agent opinion without leaving their Claude Code session; signals interoperability over exclusivity as the winning ecosystem strategy.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 634 today</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Codex · Claude Code · Plugin</span>
+        <a class="src-link" href="https://github.com/openai/codex-plugin-cc">GitHub &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/harvard-edge/cs249r_book">harvard-edge/cs249r_book — Harvard ML Systems open-source textbook</a></h3>
+      <p class="summary">Harvard's open-access textbook for CS249r (Machine Learning Systems), covering data engineering, system design, model deployment, MLOps, and edge AI. Includes TinyTorch (build ML frameworks from scratch), hardware kits for Arduino/Raspberry Pi, and runnable notebooks. MIT Press hardcover expected 2026.</p>
+      <p class="why"><b>Why it matters:</b> The most comprehensive freely available ML systems engineering curriculum — spiking today; useful reference for any engineer building production AI infrastructure or teaching the subject.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 793 today</span>
+        <span class="chip">Python</span>
+        <span class="chip">Education · MLSys</span>
+        <a class="src-link" href="https://github.com/harvard-edge/cs249r_book">GitHub &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">ChromeDevTools/chrome-devtools-mcp — Chrome DevTools for coding agents</a></h3>
+      <p class="summary">Official Chrome DevTools MCP server that exposes browser inspection, console access, network monitoring, and DOM manipulation to any MCP-compatible coding agent (Claude Code, Codex, Gemini CLI, etc.), enabling real browser-feedback loops during frontend development.</p>
+      <p class="why"><b>Why it matters:</b> Gives coding agents a live browser feedback loop for frontend debugging without screenshot round-trips — a significant capability upgrade for web-dev agent workflows.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 405 today</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">MCP · Browser · DevTools</span>
+        <a class="src-link" href="https://github.com/ChromeDevTools/chrome-devtools-mcp">GitHub &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/agentskills/agentskills">agentskills/agentskills — Cross-platform Agent Skills specification</a></h3>
+      <p class="summary">Official open specification and documentation for the Agent Skills standard (SKILL.md format), now supported by 16+ AI tools including Claude Code, OpenAI Codex, Gemini CLI, GitHub Copilot, and Cursor. Spec published at agentskills.io; roughly 40 compatible products on the showcase as of June 2026.</p>
+      <p class="why"><b>Why it matters:</b> A portable skill format that escapes per-tool lock-in; teams write one skill and deploy across every coding agent in their stack — the Agent Skills ecosystem is now mainstream.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 406 today</span>
+        <span class="chip">Python</span>
+        <span class="chip">Standards · Cross-Platform</span>
+        <a class="src-link" href="https://github.com/agentskills/agentskills">GitHub &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/ogulcancelik/herdr">ogulcancelik/herdr — Terminal agent multiplexer</a></h3>
+      <p class="summary">A Rust-built terminal multiplexer purpose-built for managing multiple concurrent coding agents (Claude Code, Codex, etc.) in one session — routing tasks, collecting outputs, and monitoring agent status from a single pane of glass.</p>
+      <p class="why"><b>Why it matters:</b> As multi-agent workflows become default, orchestration tooling moves from the SDK layer into the terminal; herdr is an early example of shell-native agent management for power users.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 478 today</span>
+        <span class="chip">Rust</span>
+        <span class="chip">Orchestration · Terminal</span>
+        <a class="src-link" href="https://github.com/ogulcancelik/herdr">GitHub &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox — Lightweight concurrent sandbox for AI agents</a></h3>
+      <p class="summary">Tencent's open-source Rust-based agent sandbox: instant startup, lightweight process isolation, and concurrent execution designed for high-throughput agent pipelines where Docker overhead is prohibitive. Targets the gap between full containers and bare-metal execution.</p>
+      <p class="why"><b>Why it matters:</b> Cheap, fast sandboxing is a prerequisite for running many parallel agent subprocesses safely; CubeSandbox makes high-concurrency agentic workloads practical on standard hardware.</p>
+      <div class="row">
+        <span class="chip stars">&#9733; 60 today</span>
+        <span class="chip">Rust</span>
+        <span class="chip">Sandbox · Infrastructure</span>
+        <a class="src-link" href="https://github.com/TencentCloud/CubeSandbox">GitHub &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/3/judgement/">Fable's judgement — let the model decide the approach, not the prompt</a></h3>
+      <p class="summary">Simon Willison shares a Claude Code team tip from a fireside chat: for Fable-based subagents, specify the desired outcome and let Fable decide how to achieve it rather than scripting implementation steps. The reasoning: over-specifying hurts both cost and quality — judgment, review, and synthesis belong in the main loop.</p>
+      <p class="why"><b>Why it matters:</b> Actionable harness principle — reframes prompt engineering for agentic workflows from step specification to goal specification, with direct cost and quality implications for teams running Fable subagents.</p>
+      <div class="row">
+        <span class="chip">Jul 3 2026</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">Claude Code · Subagents · Workflow</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/3/judgement/">simonwillison.net &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48761536">AI can't be listed as inventor on patent applications, Japan's top court rules</a></h3>
+      <p class="summary">Japan's Supreme Court dismissed an American engineer's appeal and upheld the Patent Office's rejection, ruling only human beings can be recognized as inventors under current Japanese law. Follows similar rulings in the US, UK, and EU — closing the AI-inventor door at the highest judicial level in Japan.</p>
+      <p class="why"><b>Why it matters:</b> Confirms that IP law across all major jurisdictions now requires a human inventor — directly relevant to any lab or startup claiming patents over AI-generated discoveries or code.</p>
+      <div class="row">
+        <span class="chip hot">&#9650; front page #7 &middot; Jul 3</span>
+        <span class="chip">Policy · Patents · AI Law</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48761536">HN &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=47954745">I benchmarked Claude Code's caveman plugin against "be brief."</a></h3>
+      <p class="summary">HN community benchmarks the caveman skill against a simple system-prompt "be brief" instruction. Findings: caveman saves more tokens, but the delta narrows in long sessions where context (not output) dominates cost. Lively thread on whether skill-level token hacks pay for themselves at production scale.</p>
+      <p class="why"><b>Why it matters:</b> Ground-level empirical data on whether skill-based token optimization actually moves the needle; the discussion surfaces useful cost-model intuitions for teams running Claude Code in production.</p>
+      <div class="row">
+        <span class="chip hot">&#9650; trending</span>
+        <span class="chip">Claude Code · Cost · Skills</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=47954745">HN &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48727140">Show HN: AMA2 — messenger built for AI agents</a></h3>
+      <p class="summary">A new P2P messaging protocol and app designed for agent-to-agent and agent-to-human communication, built after the creator found that Telegram, Discord, and Slack were poorly suited to agent interaction patterns (async, structured, identity-agnostic).</p>
+      <p class="why"><b>Why it matters:</b> Agent-native communication infrastructure is an underexplored layer; AMA2 is an early open attempt to define what agent messaging looks like at the protocol level, independent of any agent framework.</p>
+      <div class="row">
+        <span class="chip hot">&#9650; Show HN</span>
+        <span class="chip">Agents · Infrastructure · Protocol</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48727140">HN &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48767347">Virginia bans sale of precise geolocation data (front page #1)</a></h3>
+      <p class="summary">Virginia Governor Spanberger signed S.B. 388 amending the Consumer Data Protection Act to prohibit the sale of precise geolocation data, effective July 1, 2026. Virginia becomes the third US state (after California and Washington) to enact such a ban.</p>
+      <p class="why"><b>Why it matters:</b> Narrows the data supply chain feeding location-based AI products; frontier models and agent systems using location data for personalization will need to audit third-party data sources for compliance.</p>
+      <div class="row">
+        <span class="chip hot">&#9650; front page #1 &middot; Jul 3</span>
+        <span class="chip">Policy · Data · Privacy</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48767347">HN &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">Web search did not surface indexed Reddit threads from the curated subreddit list (r/MachineLearning, r/LocalLLaMA, r/AI_Agents, r/ClaudeCode, r/Singularity, etc.) within the 24h window. Reddit direct fetch returns HTTP 403. This is expected on quiet days or when search has not yet indexed recent threads.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed (403 + no indexed results)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/2/llm-coding-agent/">Release: llm-coding-agent 0.1a0 — Simon Willison's LLM library evolves into a coding agent</a></h3>
+      <p class="summary">Simon releases llm-coding-agent 0.1a0, built on his LLM Python library (using Claude Fable 5), exploring what a minimal coding agent looks like when constructed from first principles. The post documents the gap between simple agent loops and production-quality harnesses, with working code throughout.</p>
+      <p class="why"><b>Why it matters:</b> A well-documented minimal coding agent implementation from one of the most thoughtful AI practitioners — useful as a baseline for teams evaluating agent frameworks before committing to heavier solutions.</p>
+      <div class="row">
+        <span class="chip">Jul 2 2026</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">Coding Agents · LLM Library</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/2/llm-coding-agent/">simonwillison.net &#8594;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/">Research: Using DSPy to evaluate and improve Datasette Agent's SQL system prompts</a></h3>
+      <p class="summary">Simon uses DSPy via an asynchronous Claude Code for Web task (Claude Fable 5) to systematically evaluate and optimize the core system prompts for Datasette Agent's read-only SQL question-answerer — treating prompt optimization as a measurable engineering task with a defined eval harness.</p>
+      <p class="why"><b>Why it matters:</b> DSPy as an automated prompt optimizer for production SQL agents is a replicable pattern; the write-up shows the full loop from evaluation harness to improved prompts in a real deployed system.</p>
+      <div class="row">
+        <span class="chip">Jul 2 2026</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">DSPy · Prompt Optimization · SQL</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/">simonwillison.net &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically &middot; sources fetched at run time &middot; last-24h window &middot; 2026-07-04 01:04 UTC<br>
+    <div>Source issues: arXiv direct fetch 403 (web-search fallback used for all papers); HuggingFace direct fetch 403 (web-search fallback); HN Algolia API 403 (web-search fallback, front-page items confirmed via search); several blog direct fetches 403 (summaries via web search); Reddit: 403 + no indexed results for curated subs (section empty as expected).</div>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
