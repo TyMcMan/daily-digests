@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-04</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Saturday, July 4, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#research">arXiv 2607.01324: SiC dual-resonator system achieves 88% photon-memory entanglement fidelity across 63 temporal modes</a></li>
+      <li><a href="#research">arXiv 2607.01816: Brillouin slow-light in nanowires stores single photons without gain or loss</a></li>
+      <li><a href="#research">Heriot-Watt micron-precision LiDAR targets non-contact factory inspection of small parts</a></li>
+      <li><a href="#funding">Source Photonics commits $1.2B to expand 800G/1.6T optical chip production</a></li>
+      <li><a href="#misc">SPIE 2027 Prism Award nominations open — photonics products launched Oct 2025–Sep 2026 eligible</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.01324">Integrated Photon-Memory Entanglement via Dual Silicon-Carbide Resonators</a></h3>
+      <p>A silicon-carbide photonic platform uses two microring resonators — one as an entangled photon-pair source, one as a cavity-enhanced atomic-frequency-comb quantum memory — to generate and verify photon-memory entanglement with 88.1 ± 10.6% single-pair visibility across up to 63 temporal modes. <em>Why it matters:</em> demonstrates a manufacturable telecom-band path to co-integrating quantum light sources and on-chip memories on the same PIC.</p>
+      <div class="meta">arxiv.org &middot; 2026-07-01</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.01816">Brillouin Slow-Light in Nanowires Enables Lossless Single-Photon Storage</a></h3>
+      <p>Hashem Zoubi proposes exploiting two counter-propagating pump fields inside a nanoscale waveguide to bring a single-photon signal to near-zero group velocity via stimulated Brillouin scattering, achieving photon storage without the gain or loss penalties that limit conventional buffer approaches. <em>Why it matters:</em> a passive, waveguide-compatible delay mechanism is a key missing component for on-chip quantum photonic circuits.</p>
+      <div class="meta">arxiv.org &middot; 2026-07-02</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.eurekalert.org/news-releases/1134099">Heriot-Watt LiDAR Method Measures Small Objects with Micron Accuracy</a></h3>
+      <p>Derryck T. Reid's group at Heriot-Watt University demonstrated a fully-electronic LiDAR technique that maps aluminium objects with micron-scale precision from 40 cm, combining standard ranging with high-accuracy modes in a single acquisition — no complex optical setups required. <em>Why it matters:</em> opens a route to high-throughput, non-contact photonic metrology for precision parts inspection on factory lines.</p>
+      <div class="meta">eurekalert.org &middot; 2026-07-02</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://silicon-saxony.de/en/e8-2m-for-bio-inspired-laser-technology-from-fusion-bionic">Fusion Bionic (Dresden) Secures €8.2M to Scale DLIP Laser Texturing</a></h3>
+      <p>Dresden-based Fusion Bionic closed an €8.2M package (€5.8M seed round from Stream Capital, TGFS, and MBG, plus €2.4M from industrial projects) to expand its Direct Laser Interference Patterning (DLIP) platform toward mass production, with an initial pilot line focused on anti-soiling laser texturing of solar glass. <em>Why it matters:</em> DLIP is a European-developed photonic surface-structuring technique with emerging industrial applications in solar, automotive, and semiconductor contexts.</p>
+      <div class="meta">silicon-saxony.de &middot; 2026-07-02</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://www.trendforce.com/news/2026/06/23/news-source-photonics-to-expand-optical-chip-and-module-production/">Source Photonics to Invest $1.2B in 800G/1.6T Optical Chip Production</a></h3>
+      <p>Dongshan Precision announced that its subsidiary Source Photonics will invest USD 1.2 billion to significantly expand output of high-end optical chips and high-speed optical modules, targeting 800G and 1.6T AI server interconnect applications. <em>Why it matters:</em> represents major supply-side commitment to meeting the AI data-centre surge in transceiver demand, with knock-on implications for PIC foundry capacity and co-packaged optics supply chains.</p>
+      <div class="meta">trendforce.com &middot; 2026-06-23</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260701642411/en/Photonics-Innovators-Worldwide-Invited-to-Compete-for-SPIE-Prism-Awards">SPIE 2027 Prism Award Nominations Now Open</a></h3>
+      <p>SPIE opened applications for its 2027 Prism Awards, recognising outstanding photonics products that reached market between October 2025 and September 2026; applications close 11 September 2026, and the ceremony is scheduled for 3 February 2027 at Photonics West in San Francisco. <em>Why it matters:</em> the Prism Awards are a leading annual barometer of commercialised photonic innovation across computing, sensing, imaging, and communications.</p>
+      <div class="meta">businesswire.com &middot; 2026-07-01</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: optics.org, laserfocusworld.com, nextplatform.com returned 403 — content obtained via web search. Reddit RSS feeds blocked (403); community signal unavailable this run. arXiv listing pages returned 403; papers discovered via indexed search. Light day — US Independence Day holiday.</div>
+  <div>6 items &middot; generated 2026-07-04 01:31 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
