@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-05</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, July 5, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 22 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html">Fable 5 &amp; Mythos 5 Fully Restored After U.S. Lifts Export Controls</a>
+        <span class="src">CNBC</span>
+        <span class="why">The Commerce Dept. removed the June 12 export restrictions; Fable 5 is live globally on Claude.ai, Claude Code, and API as of July 1 — the incident showed how quickly national-security directives can yank frontier models offline.</span>
+      </li>
+      <li>
+        <a href="https://github.com/alibaba/page-agent">alibaba/page-agent — JavaScript In-Page GUI Agent for Natural-Language Web Control</a>
+        <span class="src">GitHub Trending</span>
+        <span class="why">Ships as an npm package that runs inside the browser DOM, letting any model drive your web app with natural language — no browser farm needed; MCP server bridges it to Claude Code and Cursor.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.02491">G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models</a>
+        <span class="src">arXiv cs.AI</span>
+        <span class="why">Combines neural recurrent reasoning with formal constraint solvers to get the flexibility of LLMs and the guarantees of symbolic methods — a promising hybrid for planning and math agents.</span>
+      </li>
+      <li>
+        <a href="https://deepmind.google/models/gemini-image/flash/">Nano Banana 2 Lite — Google DeepMind Releases Gemini 3.1 Flash Lite Image</a>
+        <span class="src">Google DeepMind</span>
+        <span class="why">Google's fastest and cheapest image-gen model ranks #5 on text-to-image leaderboards at ~4 s/image, priced at $0.034 per 1K-res image — shifts the cost floor for production image pipelines.</span>
+      </li>
+      <li>
+        <a href="https://explainx.ai/blog/loop-engineering-coding-agents-claude-code-guide-2026">Loop Engineering: How to Design Coding Agent Workflows for Claude Code (2026)</a>
+        <span class="src">ExplainX</span>
+        <span class="why">Popularised by Anthropic's Boris Cherny and Google's Addy Osmani, loop engineering — writing the control loop that prompts the agent — has replaced one-shot prompting as the default AI-coding skill in 2026.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">2</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.02491">G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models</a></h3>
+      <p class="summary">Introduces a framework where a learned recurrent reasoning model guides a classical symbolic constraint solver by generating intermediate hints at each solve step. The hybrid achieves stronger combinatorial guarantees than pure neural approaches while retaining the adaptability of LLMs on unseen problem classes.</p>
+      <p class="why"><b>Why it matters:</b> A credible path to neural-symbolic agents that can verify their own solutions — critical for math reasoning and planning tasks where hallucination is unacceptable.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">reasoning</span>
+        <span class="chip">neuro-symbolic</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.02491">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.01308">Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning</a></h3>
+      <p class="summary">Proposes treating KV-cache state as a CRDT (Convergent Replicated Data Type) so that multiple parallel agents can asynchronously merge their intermediate reasoning caches without coordination overhead. Demonstrated on multi-hop QA tasks where agents retrieve different evidence shards.</p>
+      <p class="why"><b>Why it matters:</b> Practical KV-cache sharing across distributed agent fleets would cut inference cost significantly — CRDT framing makes the merge semantics provably consistent.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">multi-agent</span>
+        <span class="chip">KV-cache</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.01308">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.01153">Adversarial Pragmatics for AI Safety Evaluation: A Benchmark for Instruction Conflict, Embedded Commands, and Policy Ambiguity</a></h3>
+      <p class="summary">Introduces a safety benchmark designed around pragmatic adversarial scenarios — instruction conflicts between user and operator, commands embedded inside tool outputs, and deliberately ambiguous policy documents. Tests whether models follow instructions, refuse appropriately, resist prompt injection, or misreport agentic progress.</p>
+      <p class="why"><b>Why it matters:</b> Existing safety benchmarks miss multi-turn agentic attack surfaces; this fills that gap with reproducible tasks post-Fable 5's jailbreak incident.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">safety</span>
+        <span class="chip">benchmark</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.01153">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.01047">Conversable Complexity: Agentic LLM Collectives as Interpretable Substrates</a></h3>
+      <p class="summary">Frames multi-LLM debate and conversation as an interpretability substrate: by externalising reasoning into structured agent dialogue, emergent social structure and latent objectives become legible. Proposes metrics for measuring alignment between stated and revealed goals across agent collectives.</p>
+      <p class="why"><b>Why it matters:</b> Interpretability via structured multi-agent conversation is a pragmatic near-term alternative to mechanistic interpretability — relevant to enterprise audit requirements.</p>
+      <div class="row">
+        <span class="chip">cs.AI</span>
+        <span class="chip">cs.MA</span>
+        <span class="chip">interpretability</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.01047">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.00926">Human-Machine Collaboration on Generative Meta-Learning: Model and Algorithm</a></h3>
+      <p class="summary">Addresses the core few-shot OOD generalisation problem by modelling human feedback as a generative process that conditions the meta-learner at test time. Demonstrates that even sparse preference signals from non-expert annotators substantially close the distribution gap.</p>
+      <p class="why"><b>Why it matters:</b> Human-in-the-loop meta-learning is directly applicable to agent personalisation and domain adaptation without costly fine-tuning.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">meta-learning</span>
+        <span class="chip">HITL</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.00926">arxiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.00531">Active-GRPO: Adaptive Imitation and Self-Improving Reasoning for Molecular Optimization</a></h3>
+      <p class="summary">Extends GRPO (Group Relative Policy Optimisation) with an active-learning selector that dynamically queries high-value molecular candidates during RL training, avoiding reward hacking on low-diversity rollouts. State-of-the-art on multi-objective drug design benchmarks.</p>
+      <p class="why"><b>Why it matters:</b> Active data selection during RL fine-tuning is a transferable technique — the insight applies beyond chemistry to any domain with expensive oracle evaluations.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">RLHF/GRPO</span>
+        <span class="chip">science AI</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.00531">arxiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/alibaba/page-agent">alibaba/page-agent — JavaScript In-Page GUI Agent</a></h3>
+      <p class="summary">An npm package that injects an AI agent directly into a running webpage's DOM, reading the page as plain text and executing natural-language instructions from within. Supports OpenAI, Claude, Qwen, DeepSeek, and Ollama; ships an MCP server so external agents like Claude Code can drive browser sessions.</p>
+      <p class="why"><b>Why it matters:</b> Zero browser-farm setup — one npm install turns any web app into an agent-controllable interface, with instructions staying stable across UI redesigns.</p>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip hot">🔥 742 stars today</span>
+        <span class="chip stars">⭐ 23,121</span>
+        <a class="src-link" href="https://github.com/alibaba/page-agent">github →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Zackriya-Solutions/meetily">Zackriya-Solutions/meetily — Self-Hosted AI Meeting Assistant</a></h3>
+      <p class="summary">Local-first AI meeting assistant with real-time transcription, speaker diarisation, and automatic summarisation. Built in Rust; runs fully on-device with no cloud dependency, storing all meeting data locally.</p>
+      <p class="why"><b>Why it matters:</b> Enterprise appetite for on-prem AI meeting tools is high given data-privacy concerns; the Rust/local-first stack positions this as a credible alternative to Otter and Fireflies.</p>
+      <div class="row">
+        <span class="chip">Rust</span>
+        <span class="chip hot">🔥 718 stars today</span>
+        <span class="chip stars">⭐ 15,286</span>
+        <a class="src-link" href="https://github.com/Zackriya-Solutions/meetily">github →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/asgeirtj/system_prompts_leaks">asgeirtj/system_prompts_leaks — Extracted System Prompts from Major AI Platforms</a></h3>
+      <p class="summary">Curated repository of extracted system prompts from Fable 5, GPT-5, Gemini 3.1, Grok 4, and others — including the 120,000-character Fable 5 prompt that triggered the June export-control incident. Indexed by platform and version.</p>
+      <p class="why"><b>Why it matters:</b> The public record of how frontier labs instruct their models provides a benchmark for harness and system-prompt design; also documents the agent-system architecture Anthropic baked into Fable 5.</p>
+      <div class="row">
+        <span class="chip">JavaScript</span>
+        <span class="chip hot">🔥 471 stars today</span>
+        <span class="chip stars">⭐ 48,927</span>
+        <a class="src-link" href="https://github.com/asgeirtj/system_prompts_leaks">github →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/alirezarezvani/claude-skills">alirezarezvani/claude-skills — Comprehensive Skills for Multiple Coding Agents</a></h3>
+      <p class="summary">A growing collection of reusable Claude Code skills covering code review, deployment, security scanning, and documentation workflows. Python-based and designed to work across Claude Code, Cursor, and other MCP-compatible agents.</p>
+      <p class="why"><b>Why it matters:</b> As skills/harness sharing becomes a community practice, repositories like this accelerate adoption and reveal patterns in how teams structure agent workflows.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip">136 stars today</span>
+        <span class="chip stars">⭐ 20,164</span>
+        <a class="src-link" href="https://github.com/alirezarezvani/claude-skills">github →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://felloai.com/grok-4-5/">Grok 4.5: xAI's 1.5T-Parameter Model Enters Private Beta at SpaceX and Tesla</a></h3>
+      <p class="summary">Built on xAI's V9 foundation (~1.5T parameters, roughly 3× V8-small), Grok 4.5 is in closed beta at SpaceX and Tesla as of June 28. Trained on Cursor coding data; xAI claims parity with Claude Opus but no public benchmarks exist yet. No public release date announced.</p>
+      <p class="why"><b>Why it matters:</b> Internal deployment at SpaceX/Tesla means real agentic coding workloads will stress-test the model before broader release — watch for leaks of benchmark comparisons.</p>
+      <div class="row">
+        <span class="chip">xAI</span>
+        <span class="chip">frontier model</span>
+        <span class="chip">private beta</span>
+        <a class="src-link" href="https://felloai.com/grok-4-5/">felloai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.langchain.com/blog/the-art-of-loop-engineering">The Art of Loop Engineering (LangChain Blog)</a></h3>
+      <p class="summary">LangChain's treatment of loop engineering: a loop is a cron job plus a decision-maker — the model picks the next action each tick rather than following a hardcoded branch. Covers feedback gates (tests, type checks, review steps) as the mechanism that prevents the agent from agreeing with itself.</p>
+      <p class="why"><b>Why it matters:</b> The LangChain framing anchors loop engineering in observable, testable control flows — practical guidance for teams transitioning from one-shot prompts to production harnesses.</p>
+      <div class="row">
+        <span class="chip">harness design</span>
+        <span class="chip">agents</span>
+        <a class="src-link" href="https://www.langchain.com/blog/the-art-of-loop-engineering">langchain →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.aibuilderclub.com/blog/loop-engineering-guide-2026">Loop Engineering Guide 2026 — AI Builder Club (Updated July 2)</a></h3>
+      <p class="summary">Comprehensive guide updated July 2, 2026, covering the discipline of designing the loop an agent runs inside: what actions to take between tool calls, how the agent checks its own work, and how it decides it's finished. Includes concrete patterns for Claude Code, Cursor, and custom harnesses.</p>
+      <p class="why"><b>Why it matters:</b> Practical harness patterns extracted from real production deployments — the "finished-state" detection problem alone saves teams from infinite-loop failures in production.</p>
+      <div class="row">
+        <span class="chip">loop engineering</span>
+        <span class="chip">harness</span>
+        <span class="chip">2026-07-02</span>
+        <a class="src-link" href="https://www.aibuilderclub.com/blog/loop-engineering-guide-2026">aibuilderclub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://explainx.ai/blog/loop-engineering-coding-agents-claude-code-guide-2026">Loop Engineering for Claude Code: A 2026 Practitioner Guide (ExplainX)</a></h3>
+      <p class="summary">Step-by-step guide to replacing one-shot prompting with structured agent loops in Claude Code. Covers loop anatomy (trigger → act → verify → decide), failure modes (infinite agreement, scope creep), and the CLAUDE.md patterns that encode loop rules persistently across sessions.</p>
+      <p class="why"><b>Why it matters:</b> The shift from prompting to loop design is the key skill transition for AI engineers in 2026 — concrete CLAUDE.md templates included.</p>
+      <div class="row">
+        <span class="chip">Claude Code</span>
+        <span class="chip">loop engineering</span>
+        <span class="chip">practitioner</span>
+        <a class="src-link" href="https://explainx.ai/blog/loop-engineering-coding-agents-claude-code-guide-2026">explainx →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://packmind.com/context-engineering-ai-coding/context-engineering-best-practices/">Context Engineering Best Practices for AI-Powered Dev Teams (2026) — Packmind</a></h3>
+      <p class="summary">Defines context engineering as building the right information environment for all agent interactions — systematically, persistently, and at the team level. Covers shared memory stores, repo-level CLAUDE.md, and toolchain conventions that make context reproducible across engineers and sessions.</p>
+      <p class="why"><b>Why it matters:</b> Context engineering at the team level (not just per-prompt) is the production-engineering discipline that turns individual AI productivity into org-wide leverage.</p>
+      <div class="row">
+        <span class="chip">context engineering</span>
+        <span class="chip">team workflows</span>
+        <a class="src-link" href="https://packmind.com/context-engineering-ai-coding/context-engineering-best-practices/">packmind →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.buildfastwithai.com/blogs/best-ai-models-july-2026-ranked">Best AI Models of July 2026: Ranked by Use Case, Benchmarks &amp; Price (BuildFastWithAI)</a></h3>
+      <p class="summary">Comprehensive July 2026 model rankings covering coding, reasoning, image generation, and multimodal tasks. Fable 5 leads coding, Gemini 3.1 Flash dominates speed, and Nano Banana 2 tops budget image gen. Includes per-million-token pricing comparisons across all major providers.</p>
+      <p class="why"><b>Why it matters:</b> With Fable 5 restored and Grok 4.5 in beta, the frontier model landscape shifted again this week — current rankings help teams re-evaluate routing decisions.</p>
+      <div class="row">
+        <span class="chip">model rankings</span>
+        <span class="chip">pricing</span>
+        <span class="chip">July 2026</span>
+        <a class="src-link" href="https://www.buildfastwithai.com/blogs/best-ai-models-july-2026-ranked">buildfastwithai →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48752030">Fable 5 is Back | Hacker News</a></h3>
+      <p class="summary">Community thread responding to Anthropic's announcement that Fable 5 and Mythos 5 access has been restored globally after the Commerce Department lifted June 12 export controls. Top comments discuss the speed of the reversal (~18 days), the cybersecurity-guardrail agreement Anthropic struck with the Trump administration, and what this signals about future model governance.</p>
+      <p class="why"><b>Why it matters:</b> First real test of the export-control-on-AI-models mechanism — the rapid reversal suggests the policy may function more as a negotiating lever than a hard block.</p>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">policy</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48752030">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48740771">Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5 | Hacker News</a></h3>
+      <p class="summary">Earlier HN thread when the CNBC/official announcement broke. Vigorous debate on whether the jailbreak trigger was a plausible national-security rationale, the precedent-setting nature of an export restriction on a software API, and comparison to ITAR/EAR controls for physical goods.</p>
+      <p class="why"><b>Why it matters:</b> The thread is a record of the community's live reaction to a novel regulatory action — useful framing for compliance and policy teams at AI companies.</p>
+      <div class="row">
+        <span class="chip">policy</span>
+        <span class="chip">export controls</span>
+        <span class="chip">Fable 5</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48740771">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">Web search across r/MachineLearning, r/LocalLLaMA, r/Singularity, r/OpenAI, r/ClaudeAI, r/AI_Agents, and r/ClaudeCode returned no indexed threads from July 4–5, 2026. Reddit likely captured discussion of Fable 5's return but search indexing lag prevents surfacing specific threads.</p>
+      <div class="row">
+        <span class="chip">not assessed</span>
+        <span class="chip">403 + indexing lag</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html">Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5 (CNBC)</a></h3>
+      <p class="summary">CNBC's breaking report on the June 30 Commerce Department reversal. Confirms access restored for Fable 5 globally and for Mythos 5 at ~100 US critical-infrastructure organisations that received early clearance June 26. Commerce Secretary Howard Lutnick cited new cybersecurity guardrails negotiated with Anthropic.</p>
+      <p class="why"><b>Why it matters:</b> Definitive reporting on the timeline and conditions of the restoration — important for understanding the regulatory landscape for frontier model deployment internationally.</p>
+      <div class="row">
+        <span class="chip">CNBC</span>
+        <span class="chip">Anthropic</span>
+        <span class="chip">2026-06-30</span>
+        <a class="src-link" href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html">cnbc →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html">Anthropic Restores Claude Fable 5 After U.S. Lifts Jailbreak-Linked Export Controls (The Hacker News)</a></h3>
+      <p class="summary">Security-focused write-up clarifying the jailbreak trigger: Amazon researchers found a technique to bypass Fable 5's safeguards, which the government cited when imposing export restrictions. The article documents the full Fable 5 + Mythos 5 restoration timeline and Anthropic's new monitoring commitments.</p>
+      <p class="why"><b>Why it matters:</b> The jailbreak-to-export-control pipeline is a new threat model for AI labs — the incident establishes a precedent that security vulnerabilities in LLMs can have geopolitical consequences.</p>
+      <div class="row">
+        <span class="chip">The Hacker News</span>
+        <span class="chip">security</span>
+        <span class="chip">2026-07-01</span>
+        <a class="src-link" href="https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html">thehackernews →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://deepmind.google/models/gemini-image/flash/">Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) — Google DeepMind</a></h3>
+      <p class="summary">Official model page for Gemini 3.1 Flash Lite Image, also known as Nano Banana 2 Lite. Delivers 4-second text-to-image generation at $0.034/1K-res image, ranked #5 (Elo 1,255) on text-to-image leaderboards. Pulls from Gemini's world-knowledge base and real-time web search for factually grounded image generation.</p>
+      <p class="why"><b>Why it matters:</b> The price-performance point is significantly lower than Imagen 4 and Flux — worth re-evaluating for high-volume image pipelines where speed matters more than top-end quality.</p>
+      <div class="row">
+        <span class="chip">Google DeepMind</span>
+        <span class="chip">image generation</span>
+        <span class="chip">2026-06-30</span>
+        <a class="src-link" href="https://deepmind.google/models/gemini-image/flash/">deepmind →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026">AI News Today July 4, 2026: 15 Biggest Stories (BuildFastWithAI)</a></h3>
+      <p class="summary">Roundup covering: Grok 4.5 confirmed in private beta at SpaceX/Tesla; a 1.6-trillion-parameter Chinese model trained on domestic chips open-sourced under MIT; Anthropic's draft AI safety framework open for HackerOne review; Palantir CEO Karp criticising frontier-model pricing ($10–30/M tokens) as extractive; and California Gov. Newsom's Claude state-agency deal.</p>
+      <p class="why"><b>Why it matters:</b> Useful daily digest compiling primary-source links — the California state deal and Chinese open-source model are the two stories with broadest downstream impact.</p>
+      <div class="row">
+        <span class="chip">BuildFastWithAI</span>
+        <span class="chip">news roundup</span>
+        <span class="chip">2026-07-04</span>
+        <a class="src-link" href="https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026">buildfastwithai →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-05 01:13 UTC<br>
+    Source issues: arXiv direct fetch returned 403 (used web search); Reddit not assessed (403 + no indexed results July 4–5).
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
