@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-06</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Monday, July 6, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Lightmatter Passage L200/L200X and Ayar Labs TeraPHY in customer chip integration now; hyperscaler deployments scheduled H2 2026</a></li>
+      <li><a href="#research">New arXiv: "Symmetric Grid Rule" for photonic AI accelerators boosts utilization 6&times; and cuts memory access 40% vs linear topologies</a></li>
+      <li><a href="#pic-eda">OpenLight + DoplayDo expand silicon photonics ecosystem with Python-native gdsfactory PDK support</a></li>
+      <li><a href="#europe">PhotonDelta Global Photonics Engineering Contest (computing/sensing focus): finalists revealed at PIC Summit Europe in August</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://nextwavesinsight.com/photonic-compute-production-lightmatter-ayar-labs/">Photonic Compute Hits Production: Lightmatter, Ayar Labs, and CPO Are Now Shipping</a></h3>
+      <p>Lightmatter's Passage L200 (32 Tb/s) and L200X (64 Tb/s) 3D photonic interposer engines are entering customer chip integration in 2026 via GlobalFoundries, ASE, and Amkor. Ayar Labs' TeraPHY optical engine chiplet is qualified in the Wiwynn reference design with hyperscaler production deployments expected H2 2026, following the March 2026 $500M Series E. <em>Why it matters:</em> photonic compute is no longer a roadmap item — qualification is happening in parallel at two independent companies, de-risking the technology for system integrators evaluating optical I/O.</p>
+      <div class="meta">nextwavesinsight.com &middot; July 2026</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://tspasemiconductor.substack.com/p/lightmatter-transforming-ai-infrastructure">Lightmatter: Transforming AI Infrastructure with the Power of 3D Photonics</a></h3>
+      <p>Deep-dive analysis of Lightmatter's photonic supercomputer strategy, distinguishing its 3D stacked optical interposer approach from conventional co-packaged optics (CPO). The Passage product line sits beneath multiple chiplets and carries inter-chiplet traffic optically rather than electrically, targeting both bandwidth and energy-per-bit advantages unavailable to SerDes-based CPO. Covers the fab partnerships and customer integration timeline. <em>Why it matters:</em> clarifies the architectural difference between Lightmatter and CPO approaches — the two are frequently conflated but serve different positions in the interconnect stack.</p>
+      <div class="meta">TSPA Semiconductor (Substack) &middot; 2026</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://openlightphotonics.com/newsroom/openlight-and-doplaydo-expand-silicon-photonics-ecosystem-with-gdsfactory-support">OpenLight and DoplayDo Expand Silicon Photonics Ecosystem with GDSFactory Support</a></h3>
+      <p>OpenLight Photonics and DoplayDo have integrated OpenLight's silicon photonics PDK with the gdsfactory framework, enabling Python-native layout flows for OpenLight's foundry platform. Designers can now use the gdsfactory API — the de facto standard open-source PIC layout tool — to tape out to OpenLight's process without switching EDA environments. <em>Why it matters:</em> GDSFactory is dominant among academic and startup designers; adding OpenLight's PDK directly expands the set of accessible foundries for cost-sensitive photonic compute programs.</p>
+      <div class="meta">OpenLight Photonics &middot; 2026</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://tspasemiconductor.substack.com/p/redefining-pic-design-variability">Redefining PIC Design: Variability-Aware Workflows for High-Yield Silicon Photonics</a></h3>
+      <p>Technical analysis of how design-for-manufacturability (DFM) methods must account for process corner variation to achieve reliable yields in volume silicon photonics production. Covers worst-case and Monte Carlo simulation approaches, corner-aware layout parameter sweeps, and the gap between traditional photonic simulation and what high-yield production actually requires. <em>Why it matters:</em> for photonic compute programs targeting volume deployment, yield-aware design directly controls cost per chip — the analysis maps directly to PIC layout decisions for Mach-Zehnder modulators and ring resonators.</p>
+      <div class="meta">TSPA Semiconductor (Substack) &middot; 2026</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2604.26966">Towards Topology-Aware Very Large-Scale Photonic AI Accelerators</a></h3>
+      <p>Presents a modular scale-out architecture based on 4&times;4 photonic tensor core units and derives the "Symmetric Grid Rule": symmetric 2D grid topologies improve utilization by up to 6&times; while reducing memory access by over 40% compared to linear configurations, after accounting for insertion loss, fanout penalties, and laser power limits. The analysis establishes concrete bounds on single-chip scaling and motivates the modular multi-chip approach. <em>Why it matters:</em> provides the first systematic architectural guidance for scaling photonic matrix processors beyond single-chip implementations — the topology conclusions directly constrain floorplan choices for large photonic AI ASICs.</p>
+      <div class="meta">arXiv 2604.26966 &middot; Jahannia, Amirany, Dalir &middot; Apr 2026</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/pdf/2604.10841">Harnessing Photonics for Machine Intelligence</a></h3>
+      <p>Comprehensive survey mapping photonic device primitives — Mach-Zehnder interferometers, microring resonators, diffractive arrays, phase-change materials — to specific ML workload patterns, covering inference, training, and in-memory computing architectures. Identifies where each modality has a genuine energy or latency advantage over electronics and where the integration overhead erases the gain. <em>Why it matters:</em> rare synthesis of the photonics-ML design space in a single reference — useful for evaluating which photonic modalities are appropriate for which inference patterns in a photonic compute ASIC.</p>
+      <div class="meta">arXiv 2604.10841 &middot; Apr 2026</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/nist-funding-randd-center-to-drive-u.s.-advance-of-quantum-technologies">NIST Funds Quantum Manufacturing Engineering Center (QMEC)</a></h3>
+      <p>NIST awarded SRI International funding to establish the Quantum Manufacturing Engineering Center, focused on scaling quantum-photonic device fabrication to industrial readiness. QMEC will develop metrology standards, process control techniques, and yield-improvement methods for quantum-photonic components. <em>Why it matters:</em> QMEC's metrology and process standards for quantum-photonic fabrication are directly applicable to classical PIC manufacturing quality control — particularly relevant for European and US InP and SiN foundries seeking yield parity with mature CMOS lines.</p>
+      <div class="meta">optics.org &middot; July 2026</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://www.photondelta.com/news/global-photonics-engineering-contest-2026/">PhotonDelta Global Photonics Engineering Contest 2026 — Finalists Announced August</a></h3>
+      <p>PhotonDelta's second annual engineering contest — launched at PIC Summit USA in January — closed submissions in June 2026. The contest targets photonic chip-based applications in computing, imaging, sensing, and wireless. Winners receive up to &euro;2M in investment plus &euro;100K in services; finalists and winners will be announced at PIC Summit Europe in August 2026. LioniX International is among the foundry partners supporting the contest. <em>Why it matters:</em> the computing-applications track signals where the EU photonics ecosystem is directing R&D investment — directly relevant for photonic compute startups considering EU funding pathways and foundry access.</p>
+      <div class="meta">PhotonDelta &middot; July 2026</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://research.contrary.com/company/ayar-labs">Ayar Labs Business Breakdown &amp; Founding Story — Contrary Research</a></h3>
+      <p>Contrary Research's deep dive on Ayar Labs covers the $500M Series E closed March 2026 to fund volume production of the TeraPHY optical engine chiplet, the company's strategy of replacing electrical SerDes between server boards and GPUs, and the Wiwynn reference design status. The report distinguishes Ayar's photonic I/O approach (chiplet-level optical I/O) from Lightmatter's optical interposer approach and models the addressable market as AI cluster interconnect bandwidth demand scales. <em>Why it matters:</em> the most comprehensive public-domain analysis of Ayar's technical and business position post-Series E — useful for sizing the optical I/O competitive landscape alongside Lightmatter.</p>
+      <div class="meta">Contrary Research &middot; 2026</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: arXiv direct fetch 403 (content via web search); optics.org direct fetch 403 (news via web search); Nature Photonics RSS 403; Optica-OPN RSS 403; Reddit r/Optics and r/Semiconductors RSS 403 from datacenter IP + web search returned no indexed threads &rarr; not assessed.</div>
+  <div>9 items &middot; generated 2026-07-06 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
