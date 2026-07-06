@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-06</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Monday, July 6, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.thefai.org/posts/dean-ball-joins-openai-as-head-of-strategic-futures">OpenAI appoints Dean Ball as Head of Strategic Futures</a>
+        <span class="why">Former Trump AI adviser and White House AI Action Plan co-author starts today; team will navigate catastrophic risk, recursive self-improvement, and labor market impacts. <span class="src">openai · Jul 6</span></span>
+      </li>
+      <li>
+        <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a>
+        <span class="why">Simon Willison's real-world case study: Fable autonomously identified 5 release-blocker bugs and resolved them in a single coding session. <span class="src">simonwillison.net · Jul 5</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/pdf/2605.23950">Stop Comparing LLM Agents Without Disclosing the Harness</a>
+        <span class="why">Shows 15–30% benchmark variance across harnesses on the same model — the harness matters as much as the model. <span class="src">arxiv · May 2026</span></span>
+      </li>
+      <li>
+        <a href="https://www.latent.space/p/2026">AIEWF 2026 "Scaling without Slop" — Latent Space retrospective</a>
+        <span class="why">Context engineering canonized as a discipline, evals named the real bottleneck, MCP maturing — key takeaways from the largest AI engineering conference of the year. <span class="src">latent.space · Jul 2026</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/hesreallyhim/awesome-claude-code">hesreallyhim/awesome-claude-code (★48,361)</a>
+        <span class="why">Largest curated resource for Claude Code skills, hooks, CLAUDE.md patterns, and multi-agent harness configurations — 148 stars today. <span class="src">github · trending</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">1</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.15378">Rethinking the Role of Efficient Attention in Hybrid Architectures</a></h3>
+      <p class="summary">Systematic study of efficient attention variants (linear attention, sliding-window, sparse) in hybrid state-space+attention models. Finds that efficiency gains depend critically on the interaction between positional encoding type and attention pattern — na&iuml;ve swaps can degrade quality without reducing compute.</p>
+      <p class="why"><b>Why it matters:</b> As hybrid SSM+attention models proliferate, this provides the first principled analysis of which attention efficiency tricks transfer and which backfire.</p>
+      <div class="row">
+        <span class="chip">arXiv 2606.15378</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">Jun 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2606.15378">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/pdf/2605.23950">Stop Comparing LLM Agents Without Disclosing the Harness</a></h3>
+      <p class="summary">Benchmark evaluation of 8 popular LLM agent frameworks on 3 task suites reveals 15–30% accuracy variance across harnesses for identical underlying models. Tool set, retry policy, memory strategy, and prompt scaffolding each account for significant variance, rendering undisclosed-harness comparisons near-meaningless.</p>
+      <p class="why"><b>Why it matters:</b> Calls for a "harness disclosure" norm in agent benchmarking — akin to model card requirements — that the community has been slow to adopt.</p>
+      <div class="row">
+        <span class="chip">arXiv 2605.23950</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">May 2026</span>
+        <a class="src-link" href="https://arxiv.org/pdf/2605.23950">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/pdf/2605.18747">Code as Agent Harness</a></h3>
+      <p class="summary">Proposes treating executable code — rather than JSON or YAML config — as the canonical representation for agent harnesses, enabling deterministic state management, typed tool dispatch, and auditable execution traces via standard debugging tooling. Demonstrates on software engineering and research automation tasks.</p>
+      <p class="why"><b>Why it matters:</b> Aligns with the emerging practice of code-centric agent design (e.g. Claude Code, CodeAct) and gives a theoretical grounding for the approach.</p>
+      <div class="row">
+        <span class="chip">arXiv 2605.18747</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">May 2026</span>
+        <a class="src-link" href="https://arxiv.org/pdf/2605.18747">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/pdf/2604.04258">Context Engineering: A Practitioner Methodology for Structured Human-AI Collaboration</a></h3>
+      <p class="summary">Formal definition and taxonomy of "context engineering" as the successor to prompt engineering: the deliberate design of everything a model sees at inference time — system prompt, retrieved documents, conversation history, tool definitions, and long-term memory. Introduces a five-skill framework and design patterns for production agentic systems.</p>
+      <p class="why"><b>Why it matters:</b> Provides the canonical academic reference for a practice that AIEWF 2026 and the broader community have already adopted as the central discipline of AI engineering.</p>
+      <div class="row">
+        <span class="chip">arXiv 2604.04258</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">Apr 2026</span>
+        <a class="src-link" href="https://arxiv.org/pdf/2604.04258">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/pdf/2606.07462">Act As a Real Researcher: Benchmarks Evaluating Frontier LLMs in the Research Lifecycle</a></h3>
+      <p class="summary">Multi-stage research benchmark covering literature review, hypothesis generation, experimental design, and report writing. Frontier models (Claude Opus 4.7+) pass early stages competently but fail at autonomous experimental iteration — they generate plausible next-steps but cannot reliably self-correct when experiments fail.</p>
+      <p class="why"><b>Why it matters:</b> Sets a concrete capability frontier for AI research automation and surfaces the specific failure mode — adaptive experimental reasoning — that remains out of reach.</p>
+      <div class="row">
+        <span class="chip">arXiv 2606.07462</span>
+        <span class="chip">cs.AI · cs.CL</span>
+        <span class="chip">Jun 2026</span>
+        <a class="src-link" href="https://arxiv.org/pdf/2606.07462">→ arxiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/hesreallyhim/awesome-claude-code">hesreallyhim/awesome-claude-code</a></h3>
+      <p class="summary">Curated collection of Claude Code resources: custom skills, CLAUDE.md templates, hook patterns, multi-agent harness configurations, and plugin references. Actively maintained community list with 337+ skills catalogued across coding platforms.</p>
+      <p class="why"><b>Why it matters:</b> One-stop index for teams adopting Claude Code as their primary agentic coding environment; covers both solo-developer and enterprise multi-agent setups.</p>
+      <div class="row">
+        <span class="chip stars">★ 48,361</span>
+        <span class="chip hot">+148 today</span>
+        <span class="chip">Python</span>
+        <a class="src-link" href="https://github.com/hesreallyhim/awesome-claude-code">→ github</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/OthmanAdi/planning-with-files">OthmanAdi/planning-with-files</a></h3>
+      <p class="summary">File-based planning system for AI coding agents with multi-agent state management. Uses YAML/Markdown files as the canonical plan representation, enabling multiple parallel agents to coordinate without shared in-memory state. Supports branching, conflict resolution, and audit trails.</p>
+      <p class="why"><b>Why it matters:</b> Solves the shared-state coordination problem in multi-agent coding workflows without requiring a database or message broker.</p>
+      <div class="row">
+        <span class="chip stars">★ 24,712</span>
+        <span class="chip hot">+66 today</span>
+        <span class="chip">Python</span>
+        <a class="src-link" href="https://github.com/OthmanAdi/planning-with-files">→ github</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/gastownhall/gastown">gastownhall/gastown</a></h3>
+      <p class="summary">Multi-agent workspace manager written in Go. Routes tasks across agent pools, manages shared file-system state, and exposes a web UI for monitoring agent activity across multi-repo workspaces. Designed for long-running autonomous coding sessions.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the operational gap between single-agent coding tools and full fleet orchestration — useful for teams running parallel coding agents on large codebases.</p>
+      <div class="row">
+        <span class="chip stars">★ 16,384</span>
+        <span class="chip hot">+51 today</span>
+        <span class="chip">Go</span>
+        <a class="src-link" href="https://github.com/gastownhall/gastown">→ github</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/CoplayDev/unity-mcp">CoplayDev/unity-mcp</a></h3>
+      <p class="summary">MCP server bridging AI assistants (Claude Code and others) to the Unity Editor. Exposes Unity APIs — scene manipulation, asset creation, prefab editing, script generation — as typed MCP tools callable from any MCP-compatible agent.</p>
+      <p class="why"><b>Why it matters:</b> Opens Unity game development to agentic coding workflows; +414 stars today signals strong developer interest in AI-driven 3D content creation.</p>
+      <div class="row">
+        <span class="chip stars">★ 11,925</span>
+        <span class="chip hot">+414 today</span>
+        <span class="chip">C#</span>
+        <a class="src-link" href="https://github.com/CoplayDev/unity-mcp">→ github</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/dotnet/skills">dotnet/skills</a></h3>
+      <p class="summary">Microsoft-maintained repository of typed AI agent skills for .NET/C#, targeting Semantic Kernel-style agent frameworks. Covers file I/O, HTTP API calls, data processing, Azure service integrations, and common orchestration patterns. Officially supported with versioned releases.</p>
+      <p class="why"><b>Why it matters:</b> The first official Microsoft skills library signals that enterprise .NET AI agent adoption is now a first-class product investment, not a community effort.</p>
+      <div class="row">
+        <span class="chip stars">★ 4,042</span>
+        <span class="chip hot">+246 today</span>
+        <span class="chip">C#</span>
+        <a class="src-link" href="https://github.com/dotnet/skills">→ github</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://www.thefai.org/posts/dean-ball-joins-openai-as-head-of-strategic-futures">OpenAI appoints Dean Ball as Head of Strategic Futures (starts today)</a></h3>
+      <p class="summary">Dean Ball — former Senior Policy Adviser at the White House OSTP and co-author of the White House AI Action Plan — joins OpenAI today reporting to CSO Jason Kwon. The Strategic Futures team is mandated to navigate catastrophic risk, recursive self-improvement, labor market impacts, and AI lab–government–society relationships.</p>
+      <p class="why"><b>Why it matters:</b> The first former White House AI official embedded at a frontier lab signals that policy is becoming an operational function, not just lobbying — with direct influence over deployment decisions.</p>
+      <div class="row">
+        <span class="chip">openai · policy</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://www.thefai.org/posts/dean-ball-joins-openai-as-head-of-strategic-futures">→ source</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.cognitiverevolution.ai/dean-ball-on-joining-openai-new-power-centers-frontier-ai-policy-main-character-energy/">Dean Ball on Joining OpenAI: New Power Centers, Frontier AI Policy &amp; "Main Character Energy"</a></h3>
+      <p class="summary">Pre-start interview with Dean Ball on the Cognitive Revolution podcast. Ball describes the first phase of AI governance (late 2022–early 2026) as "easy mode" and warns the next phase will involve "more politics and higher stakes." He frames the Strategic Futures team's role as shaping norms before regulators impose them.</p>
+      <p class="why"><b>Why it matters:</b> Provides the clearest public articulation of how OpenAI intends to position itself in the emerging frontier-model governance landscape — directly relevant to how other labs will respond.</p>
+      <div class="row">
+        <span class="chip">Cognitive Revolution</span>
+        <span class="chip">Jul 2026</span>
+        <a class="src-link" href="https://www.cognitiverevolution.ai/dean-ball-on-joining-openai-new-power-centers-frontier-ai-policy-main-character-energy/">→ podcast/blog</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/pdf/2604.11623">Context Kubernetes: Declarative Orchestration of Enterprise Knowledge for Agentic AI Systems</a></h3>
+      <p class="summary">Proposes a Kubernetes-inspired declarative model for managing agent context at enterprise scale: "context pods" (bounded context windows), "context services" (shared knowledge providers), and "context volumes" (persistent memory). Implements desired-state reconciliation so agents automatically recover from context drift.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the most common failure mode in production multi-agent systems — stale or inconsistent context across agents — with a pattern that integrates with existing Kubernetes infrastructure.</p>
+      <div class="row">
+        <span class="chip">arXiv 2604.11623</span>
+        <span class="chip">cs.AI · agents</span>
+        <span class="chip">Apr 2026</span>
+        <a class="src-link" href="https://arxiv.org/pdf/2604.11623">→ arxiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/2026">Scaling without Slop — Latent Space AIEWF 2026 Retrospective</a></h3>
+      <p class="summary">swyx's post-AIEWF 2026 retrospective covers the conference's central themes: context engineering is now the canonical discipline replacing prompt engineering; evals were named the real engineering bottleneck in almost every track; MCP has reached maturity as an interop standard. Also discusses AI Engineer's expansion to 7 global events in 2026 and the "war on slop" declared at AIE Code.</p>
+      <p class="why"><b>Why it matters:</b> Distills the signal from 300 AIEWF speakers and 29 tracks — the must-read post-conference synthesis for practitioners who couldn't attend all sessions.</p>
+      <div class="row">
+        <span class="chip">Latent Space</span>
+        <span class="chip">Jul 2026</span>
+        <a class="src-link" href="https://www.latent.space/p/2026">→ latent.space</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.arcade.dev/blog/ai-engineer-worlds-fair-2026-running-diary/">AI Engineer World&rsquo;s Fair 2026 — Running Diary</a></h3>
+      <p class="summary">Day-by-day running diary of AIEWF 2026 (June 29–July 2, Moscone West). Day 3 theme: the engineer's role is shifting from "human who uses AI tools" to "architect of systems that run AI autonomously." Covers the harness engineering track (planning loops, context management, verification mechanisms) and Adobe's "agentic sites" experiments with intent-driven page generation.</p>
+      <p class="why"><b>Why it matters:</b> Ground-level account of the talks and hallway conversations most relevant to production AI engineers — complements the official session recordings on @aidotengineer YouTube.</p>
+      <div class="row">
+        <span class="chip">arcade.dev</span>
+        <span class="chip">AIEWF 2026</span>
+        <a class="src-link" href="https://www.arcade.dev/blog/ai-engineer-worlds-fair-2026-running-diary/">→ arcade.dev</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48791708">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25) | HN</a></h3>
+      <p class="summary">Simon Willison's post about delegating the sqlite-utils 4.0 release to Claude Fable landed on HN with active discussion. Community threads cover: whether $149.25 for release-quality Python library work is cheap or expensive; Claude Fable's proactive bug-finding behavior vs previous models; and the emerging norm of LLM-built open-source libraries. Fable identified 5 release-blocker bugs unprompted.</p>
+      <p class="why"><b>Why it matters:</b> The HN discussion surfaces the community's evolving intuitions about cost-per-feature for LLM-assisted development — a live calibration exercise for practitioners setting internal budgets.</p>
+      <div class="row">
+        <span class="chip">HN · item 48791708</span>
+        <span class="chip">Jul 5 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48791708">→ HN thread</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">Web searches using site:reddit.com returned no indexed threads from PRIMARY-tier subreddits (r/MachineLearning, r/LocalLLaMA, r/AI_Agents, r/ClaudeAI) within the July 5–6 window. Reddit content from the last 24h is typically not yet indexed by search engines.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed (403 + no indexed results)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a></h3>
+      <p class="summary">Simon Willison delegated the final push to sqlite-utils 4.0 stable to Claude Fable during its last days on Max subscription. Fable made 4.0rc2: resolved a nested transaction edge case, fixed a migration rollback bug, improved CLI error messages, and added two new API conveniences — identifying all 5 issues as release blockers without being asked. Total cost: $149.25.</p>
+      <p class="why"><b>Why it matters:</b> Real cost and capability data for LLM-built open-source software from a trusted practitioner — more informative than benchmarks for calibrating what Fable-tier models can do unsupervised on a mature codebase.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">Jul 5 2026</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/">→ simonwillison.net</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1">LLM Research Papers: The 2026 List (January to May)</a></h3>
+      <p class="summary">Sebastian Raschka's curated review of the most important LLM research papers from January–May 2026, with explanations of what each paper contributes and why it matters. Covers reasoning models, efficient architectures, alignment methods, and agentic training. Raschka highlights the GRPO/RLVR cluster and context engineering papers as the two most impactful threads.</p>
+      <p class="why"><b>Why it matters:</b> One of the most reliable paper curation signals in the community — useful for catching significant work from the first half of 2026 that may have been missed in the daily feed.</p>
+      <div class="row">
+        <span class="chip">Sebastian Raschka</span>
+        <span class="chip">Jun–Jul 2026</span>
+        <a class="src-link" href="https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1">→ newsletter</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-06 01:05 UTC<br>
+    Source issues: arXiv direct fetch 403 (content via web search); HuggingFace daily papers 403; HN Algolia API 403 (specific threads via web search); Reddit site: searches returned no indexed threads from last 24h.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
