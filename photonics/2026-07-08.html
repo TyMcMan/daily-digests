@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-08</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Tuesday, July 8, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#funding">Pilot Photonics lands €10.4M EIC Accelerator investment to scale CPO integrated laser comb technology</a></li>
+      <li><a href="#europe">IQE secures £1M+ order for advanced III-V laser epiwafers destined for optical interconnects (H1 2027 delivery)</a></li>
+      <li><a href="#research">University of Michigan receives $4M NSF Phase 2 for connectable quantum photonic chips; Phase 3 targets $55M center</a></li>
+      <li><a href="#misc">AOP2026 opens in Lisbon (July 7–10) — integrated photonics and on-chip laser sessions worth tracking for preprints</a></li>
+      <li><a href="#research">Optica OPN: Japanese team achieves 1.9% solid-state UV photon upconversion under ambient sunlight — first at this condition</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <p class="empty">Nothing new today. Lightmatter and Ayar Labs newsrooms returned 403; no July 6–8 press releases confirmed via search. Most recent compute-company news (Ayar Labs/NVIDIA NVLink Fusion, June 3) was covered in the July 6 digest.</p>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today. GDSFactory releases page and DARPA PICASSO entry were covered in a prior digest; Flexcompute/Tidy3D and PIC Magazine returned 403 with no July 6–8 items confirmed via search.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/02/institute-of-optical-science-advances-with-4-million-nsf-quantum-award/">University of Michigan Quantum Photonics: $4M NSF Phase 2 for Connectable Photonic Chips</a></h3>
+      <p>A University of Michigan-led team received a $4M NSF Phase 2 award (building on a $1M pilot) to design field-deployable, connectable quantum photonic chips for precision measurements. If Phase 2 succeeds, Phase 3 targets a $55M NSF quantum center focused on prototyping quantum photonic chips at scale. <em>Why it matters:</em> The chip-to-chip connectivity and modularity challenges addressed here are architecturally analogous to those in classical photonic compute multi-chiplet systems — packaging and interface techniques developed here are worth tracking for CPO crossover.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-07-02</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/newsroom/2026/july/solid-state_harvesting_of_uv/">Solid-State Sunlight-to-UV Photon Upconversion at 1.9% Efficiency (Optica OPN)</a></h3>
+      <p>Japanese researchers demonstrated an organic semiconductor that upconverts 445 nm visible photons to UV via triplet–triplet annihilation at 1.9% efficiency under natural sunlight intensity alone — a first for ambient-light, solid-state operation. Primary targets are solar-driven photocatalysis and indoor UV sources. <em>Why it matters:</em> The triplet–triplet annihilation mechanism is of broader interest for on-chip wavelength conversion research and future UV photonic integration platforms, where efficient solid-state upconversion has been a longstanding challenge.</p>
+      <div class="meta">Optics &amp; Photonics News (Optica) &middot; 2026-07-01</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/iqe-bags-laser-order-hits-cpv-cell-production-milestone">IQE Wins £1M+ Order for Advanced III-V Laser Epiwafers for Optical Interconnects</a></h3>
+      <p>IQE, the Cardiff-based compound semiconductor epiwafer specialist, secured an order exceeding £1M to manufacture advanced III-V laser epitaxial structures for optical interconnect applications, with shipment targeted in H1 2027. <em>Why it matters:</em> IQE is one of the few volume-capable epiwafer suppliers for the laser chiplets that photonic interconnect startups depend on for heterogeneous PIC integration — this order signals sustained capital flowing into the InP/GaAs substrate supply chain that underpins CPO and NPO product development.</p>
+      <div class="meta">Optics.org / IQE &middot; 2026-07-01</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.prnewswire.com/news-releases/pilot-photonics-awarded-10-4-million-from-european-innovation-council-302817001.html">Pilot Photonics Awarded €10.4M EIC Accelerator Investment for CPO Laser Scale-Up</a></h3>
+      <p>Dublin-based Pilot Photonics received a recommended EIC Accelerator blended investment of up to €10.4M to scale its patented photonic chip technology — an integrated comb laser approach generating spectrally pure optical carriers critical for DWDM-based co-packaged optics (CPO) and 5G/6G fronthaul. The funding covers product qualification, high-volume manufacturing ramp, and international expansion. <em>Why it matters:</em> This is one of the largest recent EIC grants specifically targeting CPO photonic integration, putting Ireland's IPIC ecosystem on the CPO supply-chain map and signalling European investor confidence in integrated laser sources as a bottleneck worth funding.</p>
+      <div class="meta">PR Newswire / European Innovation Council &middot; 2026-07-02</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://aop2026.org/">AOP2026: International Conference on Applications of Optics and Photonics Opens in Lisbon (July 7–10)</a></h3>
+      <p>The VII International Conference on Applications of Optics and Photonics (AOP2026) opened July 7 at ISEL Lisbon and runs through July 10, covering silicon photonics, nanophotonics, laser sources, sensing, and more. All accepted papers will be published open-access; extended versions are invited to the European Optical Society's JEOS-RP Topical Issue "Recent Advances on Optics and Photonics 2026." <em>Why it matters:</em> Watch for preprints appearing on arXiv in the coming weeks, particularly from integrated photonics and on-chip laser source sessions — AOP2026 is a leading venue for European PIC research and a useful signal for the EPIC/PhotonDelta ecosystem's research priorities.</p>
+      <div class="meta">AOP2026 / European Optical Society &middot; 2026-07-07</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Most sources returned HTTP 403 from the egress proxy this run — lightmatter.co, ayarlabs.com, nextplatform.com, flexcompute.com, picmagazine.net, arxiv.org listings, nature.com RSS feeds, photondelta.com, laserfocusworld.com, cignal.ai, epic-photonics.com direct (news recovered via search), thequantuminsider.com direct (article recovered via search). Reddit RSS endpoints (r/Optics, r/Semiconductors) blocked by egress policy; web search fallback also returned no verified recent threads. DARPA PICASSO, GDSFactory releases, EPIC June M&amp;A highlights, EPIC laser manufacturing meeting, and Tyndall world-firsts were already in the seen-links log from prior digests.</div>
+  <div>5 items &middot; generated 2026-07-08 01:19 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
