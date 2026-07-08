@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-08</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, July 8, 2026</div>
+    <div class="meta">Catch-up covering July 6–8 · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 19 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://arxiv.org/abs/2607.05147">DSpark: 60–85% per-user inference speedup in production at DeepSeek</a>
+        <span class="why">Confidence-scheduled speculative decoding + semi-autoregressive drafting validated inside DeepSeek-V4's live serving system — rare production evidence for a hard-to-reproduce optimization. <span class="src">arxiv cs.LG · Jul 6</span></span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.05391">LLM-as-a-Verifier: new SOTA across coding, robotics, and medical verification</a>
+        <span class="why">Stanford/UCB/NVIDIA paper frames verification as a scaling axis, hitting 86.5% on Terminal-Bench V2 and 78.2% on SWE-Bench Verified — directly applicable to agentic pipelines that need reliable outcome judges. <span class="src">arxiv · Jul 6</span></span>
+      </li>
+      <li>
+        <a href="https://lilianweng.github.io/posts/2026-07-04-harness/">Lilian Weng: Harness Engineering for Self-Improvement</a>
+        <span class="why">Comprehensive technical survey covering workflow design, loop engineering, eval loops, permission controls, and persistent state — the canonical reference for building self-improving agentic systems. <span class="src">Lil'Log · Jul 4</span></span>
+      </li>
+      <li>
+        <a href="https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/">The great AI margin collapse: routing to GLM-5.2 vs frontier APIs</a>
+        <span class="why">517-point HN thread arguing open-weight GLM-5.2 self-hosting creates pricing arbitrage that will compress cloud AI margins — essential model-routing architecture context. <span class="src">HN · Jul 8</span></span>
+      </li>
+      <li>
+        <a href="https://github.com/MadsLorentzen/ai-job-search">MadsLorentzen/ai-job-search (+2,514 stars today)</a>
+        <span class="why">Breakout Claude Code-powered job application framework — first major consumer use case built entirely on agent skills infrastructure, signaling agentic workflows going mainstream beyond dev tooling. <span class="src">github trending · Jul 8</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">2</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.05147">DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</a></h3>
+      <p class="summary">Couples a parallel semi-autoregressive draft backbone with confidence-scheduled verification that adapts block length per request based on prefix survival probability and engine throughput. Delivers 60–85% per-user generation speedup inside the live DeepSeek-V4 serving system under real production traffic.</p>
+      <p class="why"><b>Why it matters:</b> A production-validated speculative decoding result from DeepSeek — the 60–85% uplift under live traffic is rare empirical evidence for a notoriously hard-to-reproduce optimization, directly useful for inference engineers at any scale.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.05147</span>
+        <span class="chip">cs.LG</span>
+        <span class="chip">DeepSeek · Peking Univ</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.05147">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.05391">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></h3>
+      <p class="summary">Frames verification — judging whether a candidate solution is correct — as a new scaling axis for LLMs, introducing a unified fine-grained feedback framework. Sets new state-of-the-art across coding (Terminal-Bench V2 86.5%, SWE-Bench Verified 78.2%), robotics (RoboRewardBench 87.4%), and medical domains.</p>
+      <p class="why"><b>Why it matters:</b> Builders assembling agentic pipelines need reliable verifiers; this is the most credible cross-domain verifier benchmark to date and directly connects to outcome reward and process reward model research.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.05391</span>
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">Stanford · UCB · NVIDIA</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.05391">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.04293">CausalGame: Benchmarking Causal Thinking of LLM Agents in Games (ICML 2026)</a></h3>
+      <p class="summary">14 interactive games requiring agents to design experiments, collect observations, and recover causal structure under selection bias, hidden confounders, and noisy measurements. All 29 frontier models tested — including top closed models — consistently fall far below optimal survival rates.</p>
+      <p class="why"><b>Why it matters:</b> Reveals a critical blind spot — frontier LLMs fail at active causal discovery even in controlled game environments — directly relevant to researchers building scientific AI agents and any system that must distinguish correlation from causation.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.04293</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">ICML 2026</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.04293">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.05174">AgentGym2: Benchmarking LLM Agents in De-Idealized Real-World Environments (ACL 2026)</a></h3>
+      <p class="summary">Grounds evaluation in end-to-end real-world workflows requiring tool discovery via exploration, tool composition for unseen tasks, and robustness to noisy or underspecified inputs — tasks most existing benchmarks elide by using pre-packaged interfaces and clean specs.</p>
+      <p class="why"><b>Why it matters:</b> Most agent benchmarks overstate capability by testing in idealized settings; this ACL 2026 benchmark from Fudan, Zhejiang, SJTU, Peking and CAMEL-AI provides a more honest signal of how agents behave in production-like conditions.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.05174</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">ACL 2026</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.05174">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.04854">CARL: Constraint-Aware Reinforcement Learning for Planning with LLMs (ACL 2026 Findings)</a></h3>
+      <p class="summary">Applies reinforcement learning to address LLMs' persistent tendency to violate task constraints during planning, using a continuous constraint-aware reward that provides smoother gradients and encourages meaningful exploration on planning failures. Accepted to ACL 2026 Findings.</p>
+      <p class="why"><b>Why it matters:</b> Constraint violations are one of the most common LLM failure modes in real-world agentic deployment; CARL offers a principled RL-based fix with a concrete reward signal that practitioners can adapt to their own constrained planning tasks.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.04854</span>
+        <span class="chip">cs.CL · cs.AI</span>
+        <span class="chip">Zhejiang Univ · Ant Group</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.04854">→ arxiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/MadsLorentzen/ai-job-search">MadsLorentzen/ai-job-search</a></h3>
+      <p class="summary">AI-powered job application framework built on Claude Code. Automates CV tailoring, cover letter writing, and interview prep using agent skills. Open-source, self-hosted, configurable to any role or domain.</p>
+      <p class="why"><b>Why it matters:</b> High-signal that agentic Claude Code workflows are going mainstream beyond developer tooling — first breakout consumer use case built entirely on agent skills infrastructure, with +2,514 stars today on GitHub Trending.</p>
+      <div class="row">
+        <span class="chip stars">★ 10,916</span>
+        <span class="chip hot">+2,514 today</span>
+        <span class="chip">Python</span>
+        <a class="src-link" href="https://github.com/MadsLorentzen/ai-job-search">→ github</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/kyutai-labs/pocket-tts">kyutai-labs/pocket-tts</a></h3>
+      <p class="summary">Lightweight text-to-speech system from Kyutai designed for CPU-only deployment with no GPU required. Enables voice output in local AI agents and edge deployments without any cloud dependency.</p>
+      <p class="why"><b>Why it matters:</b> Key building block for fully on-device agentic pipelines — particularly relevant as the "right to run local AI" debate heats up and builders seek GPU-free inference options for voice-enabled agents.</p>
+      <div class="row">
+        <span class="chip stars">★ 6,173</span>
+        <span class="chip hot">+531 today</span>
+        <span class="chip">Rust</span>
+        <a class="src-link" href="https://github.com/kyutai-labs/pocket-tts">→ github</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.05029">Your Agent's Memories Are Not Its Own: Forged Reasoning Attacks on LLM Agent Memory</a></h3>
+      <p class="summary">Introduces FARMA (Forged Amplifying Rationale Memory Attack), which poisons an agent's stored reasoning chains rather than its factual memory. Demonstrated via indirect prompt injection into ChatGPT's persistent memory, with one vulnerability taking over two months for OpenAI to patch. Now formally listed as ASI06 in OWASP's 2026 Agentic Top 10.</p>
+      <p class="why"><b>Why it matters:</b> As long-lived agents with persistent memory become standard infrastructure, memory poisoning is a frontline production security threat every agent builder needs to understand and defend against.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.05029</span>
+        <span class="chip">cs.AI · cs.CR</span>
+        <span class="chip">Penn State</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.05029">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.05188">Latent Programming Horizons in Coding Agents</a></h3>
+      <p class="summary">Logistic-regression probes on coding-agent hidden states can predict — ahead of the agent's own edits — whether evolving code parses, passes its test suite, reduces failing tests, or introduces regressions. AUC reaches up to 0.83 across two models and two benchmarks (KTH Royal Institute of Technology).</p>
+      <p class="why"><b>Why it matters:</b> Agent residual streams linearly encode program correctness in real time, opening a direct path to lightweight steering and early-exit mechanisms for coding agents without modifying the model or prompts.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.05188</span>
+        <span class="chip">cs.SE · cs.AI</span>
+        <span class="chip">KTH</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.05188">→ arxiv</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.05202">EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer</a></h3>
+      <p class="summary">Isolates procedural reuse — whether an agent can transfer learned debugging, search, and verification skills across four domains (web research, algorithmic reasoning, software engineering) — rather than testing one-shot task solving or information retention alone.</p>
+      <p class="why"><b>Why it matters:</b> Self-evolving agents are a frontier research direction; this benchmark provides the missing evaluation infrastructure to measure whether agents actually improve via experience transfer rather than just memorizing task-specific patterns.</p>
+      <div class="row">
+        <span class="chip">arXiv 2607.05202</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.05202">→ arxiv</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://lilianweng.github.io/posts/2026-07-04-harness/">Harness Engineering for Self-Improvement — Lilian Weng</a></h3>
+      <p class="summary">Comprehensive technical survey of harness engineering as the enabling discipline for recursive self-improvement (RSI) in AI systems. Covers workflow design, loop engineering, evaluation, permission controls, and persistent state management. Organizes recent work on auto-research pipelines, self-improving agents, and evolutionary program search — with the AI Scientist pipeline as a running example.</p>
+      <p class="why"><b>Why it matters:</b> The canonical practitioner reference for building autonomous self-improving agent harnesses — Lilian Weng's deep-dives define the field; required reading before designing any long-running autonomous loop.</p>
+      <div class="row">
+        <span class="chip">Lil'Log</span>
+        <span class="chip">Jul 4 2026</span>
+        <a class="src-link" href="https://lilianweng.github.io/posts/2026-07-04-harness/">→ lilianweng.github.io</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/aiewf-daily-dispatch-locomotives">AIEWF Daily Dispatch: The Great Loops Debate — Latent Space</a></h3>
+      <p class="summary">Recap of the AI Engineer World's Fair closing-day debate on "loop engineering" — whether autonomous agent loops deliver on their hype in practice — moderated by Allie Howe, featuring Geoffrey Huntley (creator of the Ralph Loop) and Ian Livingstone of Keycard arguing loops are already production-ready and here to stay.</p>
+      <p class="why"><b>Why it matters:</b> The sharpest public debate on whether agentic loops are a solved engineering problem or an unsolved reliability challenge — essential for teams deciding how much autonomy to give their production agents.</p>
+      <div class="row">
+        <span class="chip">Latent Space</span>
+        <span class="chip">Jul 3 2026</span>
+        <a class="src-link" href="https://www.latent.space/p/aiewf-daily-dispatch-locomotives">→ latent.space</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48809877">GLM 5.2 and the coming AI margin collapse</a></h3>
+      <p class="summary">Martin Alderson argues that routing tasks to self-hosted GLM-5.2 (~$450K for 8×B200) vs frontier cloud APIs creates pricing arbitrage that will compress AI cloud margins. The 517-point thread debates quality parity, data-residency tradeoffs with a China-linked open model, and the 6–9 month open-vs-closed capability lag.</p>
+      <p class="why"><b>Why it matters:</b> Required reading for anyone making model-routing architecture decisions — the cost/quality tradeoff is now quantifiable enough to change procurement decisions.</p>
+      <div class="row">
+        <span class="chip">~517 pts</span>
+        <span class="chip">~340 comments</span>
+        <span class="chip">Jul 8 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48809877">→ HN</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48768951">Protect your right to run local AI</a></h3>
+      <p class="summary">Policy and civil-liberties thread triggered by proposed regulations that could restrict self-hosted models. The 431-point discussion touches Fable 5 billing shift to usage credits (effective July 8), NVIDIA RTX Spark/Surface Ultra local inference hardware, and whether on-device AI becomes a regulated right.</p>
+      <p class="why"><b>Why it matters:</b> High relevance for anyone building local-first AI products — regulatory risk to on-premises inference is now a serious near-term consideration, not a hypothetical.</p>
+      <div class="row">
+        <span class="chip">~431 pts</span>
+        <span class="chip">~263 comments</span>
+        <span class="chip">Jul 7 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48768951">→ HN</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48799614">GPT-5.6 Sol Ultra will be in Codex — cooperative subagents confirmed</a></h3>
+      <p class="summary">OpenAI Codex engineer confirms Ultra mode (spawning cooperating subagents) is coming to Codex. The 384-point thread dissects the architecture difference between parallel-independent (Pro) vs cooperative subagent (Ultra) modes, benchmark-gaming concerns from METR, and practical implications for developer task routing.</p>
+      <p class="why"><b>Why it matters:</b> Cooperative multi-agent orchestration entering the mainstream Codex product — useful signal for teams deciding between OpenAI and Anthropic agentic coding environments.</p>
+      <div class="row">
+        <span class="chip">~384 pts</span>
+        <span class="chip">~218 comments</span>
+        <span class="chip">Jul 8 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48799614">→ HN</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48807651">Big Tech has suddenly flipped on the AI jobs wipeout scenario</a></h3>
+      <p class="summary">EY-Parthenon data: CEO belief in AI-driven headcount reduction dropped from 46% (Jan 2025) to 20% (May 2026). The 347-point thread debates whether Altman and Amodei's softened displacement warnings represent genuine recalibration or strategic positioning ahead of regulatory scrutiny.</p>
+      <p class="why"><b>Why it matters:</b> Critical context for AI product messaging and enterprise sales — the macro narrative around labor impacts is shifting in ways that affect how customers are buying and deploying AI.</p>
+      <div class="row">
+        <span class="chip">~347 pts</span>
+        <span class="chip">~192 comments</span>
+        <span class="chip">Jul 8 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48807651">→ HN</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48753715">ZCode — GLM-5.2 coding agent harness (Show HN)</a></h3>
+      <p class="summary">Z.ai's official coding agent built around GLM-5.2: 1M-token context, multi-agent Goals, mobile bot control, plugin architecture, starting at $16/mo. Positions open-weight GLM-5.2 as a full coding-agent stack, directly challenging Claude Code and Cursor on price in the 278-point Show HN thread.</p>
+      <p class="why"><b>Why it matters:</b> First serious Western-marketed coding agent harness built on a Chinese open-weight model — the competitive landscape for AI coding tools is now genuinely multi-vendor and multi-geography.</p>
+      <div class="row">
+        <span class="chip">~278 pts</span>
+        <span class="chip">~143 comments</span>
+        <span class="chip">Jul 7 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48753715">→ HN</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">reddit.com was blocked at the search layer this run (HTTP 400 / domain blocked). No thread URLs could be verified. See source issues below.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/6/sqlite-utils/">Release: sqlite-utils 4.0rc3 — Simon Willison</a></h3>
+      <p class="summary">Follow-on iteration to the Fable-assisted rc2 build, moving sqlite-utils closer to a stable 4.0 release. Willison continues the AI-assisted development workflow that produced rc2 via 37 Claude Fable prompts and 34 commits.</p>
+      <p class="why"><b>Why it matters:</b> Documents the ongoing real-world case study of AI-assisted open-source library maintenance at a senior practitioner level — the rc1→rc2→rc3 progression is unusually well-documented for AI-assisted development.</p>
+      <div class="row">
+        <span class="chip">simonwillison.net</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/6/sqlite-utils/">→ simonwillison.net</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/6/hy3/">Tencent Hy3 — Simon Willison</a></h3>
+      <p class="summary">Coverage of Tencent's newly released Hy3, a 295B-parameter Mixture-of-Experts model with 21B active parameters, licensed Apache 2.0 and available free on OpenRouter until July 21. Willison benchmarks it with a pelican-riding-a-bicycle SVG prompt.</p>
+      <p class="why"><b>Why it matters:</b> A 295B Apache-licensed MoE model with 21B active params changes the economics of open-weight inference — the free OpenRouter window gives builders a low-friction way to evaluate it against frontier closed models.</p>
+      <div class="row">
+        <span class="chip">simonwillison.net</span>
+        <span class="chip">Jul 6 2026</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/6/hy3/">→ simonwillison.net</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · catch-up window Jul 6–8 · 2026-07-08 01:16 UTC<br>
+    Source issues: HN Algolia API blocked (point/comment counts are estimated from search snippets); reddit.com blocked at search layer — Reddit section empty; arXiv direct fetch blocked (papers found via web search); HF direct fetch blocked (no upvote data). Simon Willison sqlite-utils 4.0rc2 post excluded (already in July 6 digest).<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
