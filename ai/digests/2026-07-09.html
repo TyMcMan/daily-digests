@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-09</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Wednesday, July 9, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 16 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna/1384931">GPT-5.6 Sol/Terra/Luna launches today — frontier agents at 750 tok/s, GPT-5.5 quality at half cost, and the fastest/cheapest Luna</a><span class="src">OpenAI</span><span class="why">Reshapes agent cost/performance routing for production deployments</span></li>
+      <li><a href="https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/">ICML 2026 Outstanding Papers announced — diffusion LMs dominate, DeepMind honored</a><span class="src">ICML</span><span class="why">Signals which ideas the field considers most significant this research cycle</span></li>
+      <li><a href="https://huggingface.co/tencent/Hy3">Tencent Hy3: 295B Apache 2.0 MoE that rivals models 5× its active size</a><span class="src">Hugging Face</span><span class="why">Rare large permissive-license MoE viable for self-hosted agentic workloads</span></li>
+      <li><a href="https://openai.com/index/introducing-gpt-live/">OpenAI GPT-Live: full-duplex always-listening voice model with silent frontier handoff</a><span class="src">OpenAI</span><span class="why">First production deployment of ambient voice + frontier-model delegation architecture</span></li>
+      <li><a href="https://github.com/microsoft/SkillOpt">Microsoft SkillOpt v0.2.0: nightly offline agent skill self-evolution with dream rollouts</a><span class="src">GitHub</span><span class="why">Skills improve overnight without human intervention — a new category of agent capability</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">4</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">1</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2601.15165">The Flexibility Trap: Rethinking Arbitrary Order in Diffusion Language Models</a></h3>
+      <div class="summary">ICML 2026 Outstanding Paper. Zanlin Ni et al. argue that arbitrary-order generation — a core selling point of diffusion language models — is actually a trap: models trained with arbitrary order underperform those trained with fixed order. They propose JustGRPO as a fix that recovers quality while preserving flexibility.</div>
+      <div class="why"><b>Why it matters:</b> Challenges a foundational design choice in the rapidly growing DLM field; practical guidance for practitioners building on diffusion LM backbones.</div>
+      <div class="row"><span class="chip">ICML 2026 Outstanding Paper</span><span class="chip">Diffusion LMs</span><a class="src-link" href="https://arxiv.org/abs/2601.15165">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/">ICML 2026 Outstanding Paper Awards Announced</a></h3>
+      <div class="summary">ICML 2026 (Seoul, July 6–11) accepted 6,352 papers from 23,918 submissions. Outstanding Papers span diffusion LMs, reasoning, and multimodal alignment. DeepMind and Google teams feature prominently among honorees.</div>
+      <div class="why"><b>Why it matters:</b> The ICML outstanding-paper list is a reliable signal for which ideas the community considers most significant this cycle; useful for prioritizing what to read over the next month.</div>
+      <div class="row"><span class="chip">ICML 2026</span><span class="chip">Conference</span><a class="src-link" href="https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/">blog.icml.cc</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.31567">FLARE-AI: A Framework for Flaw Reporting for AI Models</a></h3>
+      <div class="summary">ICML 2026 poster. MIT/Stanford collaboration with 32 organizations proposes a streamlined AI vulnerability reporting framework that routes a single disclosure to all relevant stakeholders simultaneously — similar to CVE for software. Field-tested with language model red-teamers.</div>
+      <div class="why"><b>Why it matters:</b> AI systems lack the coordinated disclosure infrastructure software has; FLARE-AI is a concrete attempt to fill that gap as AI deployments scale.</div>
+      <div class="row"><span class="chip">AI Safety</span><span class="chip">ICML 2026</span><a class="src-link" href="https://arxiv.org/abs/2606.31567">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://huggingface.co/tencent/Hy3">Tencent Hy3: 295B MoE Model, Apache 2.0</a></h3>
+      <div class="summary">Tencent releases Hunyuan Hy3, a 295B parameter Mixture-of-Experts model with only 21B active parameters per token, 256K context window, strong multilingual and agentic capabilities, and Apache 2.0 license. Internal benchmarks show performance rivaling closed models 5× its active parameter count.</div>
+      <div class="why"><b>Why it matters:</b> Large permissively-licensed MoE models are rare; Hy3's size/performance ratio and open license make it viable for self-hosted agentic workloads.</div>
+      <div class="row"><span class="chip">MoE</span><span class="chip">295B params</span><span class="chip">Apache 2.0</span><a class="src-link" href="https://huggingface.co/tencent/Hy3">huggingface.co</a></div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <div class="card">
+      <h3><a href="https://github.com/iOfficeAI/OfficeCLI">iOfficeAI/OfficeCLI — Office Suite Built for AI Agents</a></h3>
+      <div class="summary">Command-line interface and Python API that lets AI agents read, create, and edit Word, Excel, and PowerPoint files without a desktop install. Handles formatting, formulas, charts, and embedded objects. 1,717 GitHub stars today.</div>
+      <div class="why"><b>Why it matters:</b> Removes a major friction point for enterprise AI agents that need to work with Office documents; the GitHub Trending spike indicates rapid uptake by agentic workflow builders.</div>
+      <div class="row"><span class="chip hot">🔥 1,717 stars today</span><span class="chip">Agents</span><a class="src-link" href="https://github.com/iOfficeAI/OfficeCLI">github.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/bradautomates/claude-video">bradautomates/claude-video — Give Claude Vision Over Videos</a></h3>
+      <div class="summary">Open-source tool that downloads a video, extracts frames at configurable intervals, transcribes the audio, and passes both to Claude as a structured prompt — enabling Claude to answer questions about video content without native video support. 951 stars today.</div>
+      <div class="why"><b>Why it matters:</b> Practical bridge for Claude-based agents that need to process video; frame-extraction + transcription pattern is reusable for any vision-only model.</div>
+      <div class="row"><span class="chip hot">🔥 951 stars today</span><span class="chip">Claude</span><span class="chip">Multimodal</span><a class="src-link" href="https://github.com/bradautomates/claude-video">github.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify — Code &amp; Docs to Knowledge Graphs for AI Coding</a></h3>
+      <div class="summary">YC S26-backed tool that parses codebases (33 languages via AST) and documentation into a queryable knowledge graph, then exposes it to AI coding assistants for context-aware code completion and refactoring. 856 stars today.</div>
+      <div class="why"><b>Why it matters:</b> Structured graph retrieval over ASTs is a more precise context source than vector similarity for coding agents; early signal of a shift from RAG toward graph-structured code context.</div>
+      <div class="row"><span class="chip hot">🔥 856 stars today</span><span class="chip">YC S26</span><span class="chip">Code Agents</span><a class="src-link" href="https://github.com/Graphify-Labs/graphify">github.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jingyaogong/minimind">jingyaogong/minimind — Train a 64M LLM from Scratch in 2 Hours</a></h3>
+      <div class="summary">Minimal, well-documented PyTorch codebase for training a 64M parameter language model end-to-end in under 2 hours on a single GPU. 149 stars today; 53K total stars. Supports pretraining, SFT, RLHF, and MoE variants in a single readable repo.</div>
+      <div class="why"><b>Why it matters:</b> One of the clearest educational resources for understanding the full LLM training pipeline from scratch; high total-star count confirms it's become a go-to reference.</div>
+      <div class="row"><span class="chip stars">⭐ 53K total stars</span><span class="chip">Education</span><span class="chip">Training</span><a class="src-link" href="https://github.com/jingyaogong/minimind">github.com</a></div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+    <div class="card">
+      <h3><a href="https://github.com/microsoft/SkillOpt">microsoft/SkillOpt v0.2.0 — Nightly Agent Skill Self-Evolution</a></h3>
+      <div class="summary">SkillOpt treats agent skills as trainable markdown files and runs a text-space optimizer to improve them without gradient descent. v0.2.0 adds SkillOpt-Sleep: a nightly offline evolution mode with experience replay and "dream rollouts" that synthesizes hypothetical training scenarios. Achieved 52/52 benchmark wins, +23.5 pts avg on GPT-5.5. +275 stars today.</div>
+      <div class="why"><b>Why it matters:</b> Sleep/offline self-improvement is a qualitatively new capability for deployed agents — skills can improve overnight without human intervention or retraining.</div>
+      <div class="row"><span class="chip hot">🔥 +275 stars today</span><span class="chip">Microsoft</span><span class="chip">Self-improvement</span><a class="src-link" href="https://github.com/microsoft/SkillOpt">github.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory">TencentCloud/TencentDB-Agent-Memory — Local Long-Term Memory for AI Agents</a></h3>
+      <div class="summary">Drop-in local memory store for AI agents backed by TencentDB, with zero external API dependencies. Stores episodic, semantic, and procedural memory types; supports query by similarity, recency, and importance. 318 stars today.</div>
+      <div class="why"><b>Why it matters:</b> Persistent memory without an external API is a key requirement for privacy-sensitive and offline agentic applications; the Tencent backing suggests production-grade reliability.</div>
+      <div class="row"><span class="chip">318 stars today</span><span class="chip">Memory</span><span class="chip">Agents</span><a class="src-link" href="https://github.com/TencentCloud/TencentDB-Agent-Memory">github.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/">Microsoft Research: Agent Skills as Trainable Parameters</a></h3>
+      <div class="summary">Microsoft Research blog post introducing the SkillOpt framework in depth: skills are plain markdown files that the optimizer rewrites based on rollout feedback, analogous to gradient descent but in text space. Covers the 52/52 benchmark record, the Sleep extension, and the broader "skills as weights" paradigm.</div>
+      <div class="why"><b>Why it matters:</b> The conceptual framing — skills as weights updated by a text optimizer — is a generalizable pattern for any prompt-driven system, not just SkillOpt.</div>
+      <div class="row"><span class="chip">Microsoft Research</span><span class="chip">Prompt Optimization</span><a class="src-link" href="https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/">microsoft.com</a></div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <h3><a href="https://community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna/1384931">GPT-5.6 Series Launches: Sol (Frontier Agents), Terra (Cost-Efficient), Luna (Fastest)</a></h3>
+      <div class="summary">OpenAI launches three GPT-5.6 variants today. Sol: frontier reasoning/agents at 750 tokens/sec on Cerebras hardware — targeting long-running autonomous workflows. Terra: GPT-5.5 quality at half the cost. Luna: fastest/cheapest, targeting high-volume inference. All three are available in the API immediately.</div>
+      <div class="why"><b>Why it matters:</b> Sol at 750 tok/s changes the economics of long-horizon agentic tasks that were previously too slow or expensive; the three-tier structure mirrors how practitioners already think about routing.</div>
+      <div class="row"><span class="chip hot">🔥 Today</span><span class="chip">OpenAI</span><span class="chip">GPT-5.6</span><a class="src-link" href="https://community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna/1384931">community.openai.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://openai.com/index/introducing-gpt-live/">OpenAI GPT-Live: Full-Duplex Always-Listening Voice Model</a></h3>
+      <div class="summary">GPT-Live is OpenAI's new always-on voice model: full-duplex (speaks and listens simultaneously), offloads complex queries and search to GPT-5.5 behind the scenes, and is designed for hands-free ambient use. Early preview hands-on by Simon Willison found a bug where the model laughed at non-jokes.</div>
+      <div class="why"><b>Why it matters:</b> Ambient voice + frontier-model delegation is the pattern likely to dominate conversational AI interfaces; GPT-Live is the first major production deployment of this architecture.</div>
+      <div class="row"><span class="chip hot">🔥 Today</span><span class="chip">OpenAI</span><span class="chip">Voice</span><a class="src-link" href="https://openai.com/index/introducing-gpt-live/">openai.com</a></div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48639840">HN: "GLM-5.2 is a step change for open agents"</a></h3>
+      <div class="summary">Hacker News thread discussing GLM-5.2's benchmark performance on agentic tasks, with several commenters reporting that switching costs from closed models were lower than expected. Multiple reports of GLM-5.2 reaching near-frontier quality at roughly 1/6 the API cost of GPT-5.5 for structured tool-use tasks.</div>
+      <div class="why"><b>Why it matters:</b> Practitioner cost/quality comparisons on HN are an early signal of real-world model adoption shifts; the "lower switching cost" discussion is relevant for teams currently locked to OpenAI APIs.</div>
+      <div class="row"><span class="chip">Hacker News</span><span class="chip">Open Models</span><a class="src-link" href="https://news.ycombinator.com/item?id=48639840">news.ycombinator.com</a></div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <p class="section-note" style="font-style:italic;">Nothing surfaced today. Reddit blocks automated fetch (HTTP 403); no AI/ML threads from the last 24h were found via web search indexing.</p>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/">Simon Willison: Introducing GPT-Live (Hands-On Notes)</a></h3>
+      <div class="summary">Simon Willison's hands-on preview of GPT-Live covers the full-duplex voice model's architecture, latency, and quirks. He found a reproducible bug where the model laughs at non-jokes — suggesting overfit on human laughter cues. Also notes the clean handoff to GPT-5.5 for complex queries.</div>
+      <div class="why"><b>Why it matters:</b> Willison's write-ups are reliable early-signal sources; his bug finding is a good litmus for how polished the release-day product actually is.</div>
+      <div class="row"><span class="chip">Simon Willison</span><span class="chip">July 8, 2026</span><a class="src-link" href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/">simonwillison.net</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.tencent.com/en-us/articles/2202386.html">Tencent: Hunyuan Hy3 Release — Agent Capabilities &amp; 90% Task Completion</a></h3>
+      <div class="summary">Tencent's official release post for Hy3 details internal production results: 90% task-completion rate in Tencent's own enterprise apps, strong code generation, multilingual support for 100+ languages, and the open Apache 2.0 license. Includes architecture diagrams for the MoE routing and the long-context attention mechanism.</div>
+      <div class="why"><b>Why it matters:</b> The 90% task-completion figure on production agentic workloads — not just benchmarks — is an unusually concrete capability claim; worth tracking against independent evals.</div>
+      <div class="row"><span class="chip">Tencent</span><span class="chip">July 2026</span><a class="src-link" href="https://www.tencent.com/en-us/articles/2202386.html">tencent.com</a></div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-09 03:00 UTC<br>
+    Reddit not assessed (HTTP 403 + no indexed results); arXiv listings blocked (HTTP 403) — papers sourced via web search; most direct fetches returned 403 (arXiv, HuggingFace, lab blogs, Hacker News), all content sourced via WebSearch.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
