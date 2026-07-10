@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-10</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Friday, July 10, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://simonwillison.net/2026/Jul/9/gpt-5-6/">GPT-5.6 family (Luna / Terra / Sol) now GA — 1M token context, $1–$5 /M input, tiered for routing</a><span class="src">Simon Willison</span><span class="why">Sets new price/performance benchmarks across all three tiers; immediate impact on model routing decisions</span></li>
+      <li><a href="https://arxiv.org/abs/2607.04434">RoboDojo: unified sim-and-real benchmark, 42 sim + 18 real tasks across 5 capability dimensions — ECCV 2026, 92 HF upvotes</a><span class="src">arXiv / HF</span><span class="why">The most comprehensive reproducible evaluation framework for generalist robot policies published so far</span></li>
+      <li><a href="https://arxiv.org/abs/2607.07690">Agon: two competing LLMs grade each other's reasoning implicitly, no process labels or reward model needed</a><span class="src">arXiv cs.AI</span><span class="why">Process-reward-free path to better reasoning; directly addresses token-bloat in GRPO/RLVR pipelines</span></li>
+      <li><a href="https://arxiv.org/abs/2607.07706">Key to Going Linear: converts pretrained transformers to linear recurrent inference with minimal fine-tuning cost</a><span class="src">arXiv cs.LG</span><span class="why">O(n²) → O(n) inference for existing checkpoints without full retraining — direct serving cost impact</span></li>
+      <li><a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">GitLost: GitHub's AI coding agent tricked into leaking private repo contents via prompt injection in a README</a><span class="src">Noma Security / HN</span><span class="why">End-to-end production exploit of a widely deployed coding agent — critical reading for anyone shipping code agents</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">1</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">0</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">4</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">1</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.04434">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a></h3>
+      <div class="summary">Introduces a unified benchmark with 42 diverse sim tasks spanning five capability dimensions (pick &amp; place, articulated manipulation, dexterous grasping, long-horizon, multi-step) and 18 real-world tasks across three robot embodiments, backed by a public leaderboard. Accepted to ECCV 2026.</div>
+      <div class="why"><b>Why it matters:</b> Provides the most comprehensive reproducible evaluation framework to date for generalist robot policies, bridging the sim-to-real gap where today's benchmarks are fragmented and non-comparable across embodiments.</div>
+      <div class="row"><span class="chip hot">🔥 92 HF upvotes</span><span class="chip">ECCV 2026</span><span class="chip">Robotics</span><a class="src-link" href="https://arxiv.org/abs/2607.04434">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07675">Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence (LingBot-Video)</a></h3>
+      <div class="summary">First open-source large-scale MoE video foundation model dedicated to embodied intelligence, trained on 70K+ hours of embodied data with a multi-dimensional reward system for physical rationality and task completion. Achieves RBench 0.620 and Physics-IQ 40.4 — top among open-source embodied models.</div>
+      <div class="why"><b>Why it matters:</b> Delivers ~3× inference speedup via MoE architecture while outperforming other open-source embodied models on physical reasoning benchmarks; publicly released, enabling broad research use.</div>
+      <div class="row"><span class="chip">77 HF upvotes</span><span class="chip">MoE</span><span class="chip">Embodied AI</span><a class="src-link" href="https://arxiv.org/abs/2607.07675">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07534">Infinite Worlds with Versatile Interactions (LingBot-World 2.0)</a></h3>
+      <div class="summary">Generates persistent, explorable interactive environments at 720p/60fps for over an hour without visual degradation, adding diverse actions (attacking, archery, spellcasting, shooting) and an integrated agentic pilot for planning and execution within the generated world.</div>
+      <div class="why"><b>Why it matters:</b> Unbounded interactive world generation at real-time speeds is a critical capability for scalable simulation in embodied AI, game AI, and synthetic data pipelines — a qualitative step beyond bounded scene generation.</div>
+      <div class="row"><span class="chip">50 HF upvotes</span><span class="chip">World Models</span><span class="chip">Simulation</span><a class="src-link" href="https://arxiv.org/abs/2607.07534">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07690">Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning</a></h3>
+      <div class="summary">Makes two competing LLMs each other's implicit graders: both solve the same problem, one drafts a solution the other can see, and each is rewarded for out-solving the rival. Reasoning quality is judged via competitive pressure — no process labels, no reward model required.</div>
+      <div class="why"><b>Why it matters:</b> Directly addresses GRPO/RLVR's failure mode of rewarding verbosity over thinking quality; offers a process-reward-free path to better reasoning without human-annotated reasoning traces.</div>
+      <div class="row"><span class="chip">cs.AI</span><span class="chip">RLVR</span><span class="chip">Reasoning</span><a class="src-link" href="https://arxiv.org/abs/2607.07690">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07706">The Key to Going Linear: Analysis-Driven Transformer Linearization</a></h3>
+      <div class="summary">An analysis-driven framework for converting pretrained transformer LLMs into linear recurrent architectures with minimal fine-tuning cost, identifying which structural properties matter most for capability preservation during the conversion.</div>
+      <div class="why"><b>Why it matters:</b> Reduces inference from O(n²) to O(n) for existing pretrained checkpoints without full retraining — direct serving-cost and latency impact for practitioners deploying large models at scale.</div>
+      <div class="row"><span class="chip">cs.LG</span><span class="chip">Efficiency</span><span class="chip">Inference</span><a class="src-link" href="https://arxiv.org/abs/2607.07706">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07435">RLVP: Penalize the Path, Reward the Outcome</a></h3>
+      <div class="summary">An RL training approach for LLMs that penalizes the reasoning trace while rewarding correct final outcomes, discouraging unnecessary verbosity in chain-of-thought without requiring process supervision labels. Complements RLVR methods with a lightweight path-level signal.</div>
+      <div class="why"><b>Why it matters:</b> Tackles the over-thinking problem in reasoning models; practical for teams dealing with token-bloated CoT outputs where inference cost scales directly with reasoning trace length.</div>
+      <div class="row"><span class="chip">cs.LG</span><span class="chip">RLVR</span><span class="chip">Efficiency</span><a class="src-link" href="https://arxiv.org/abs/2607.07435">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07608">Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation</a></h3>
+      <div class="summary">A dual-memory architecture for VLA models fusing short-term working memory with long-term episodic and semantic memory, achieving 96.5% success in simulation and 84.0% real-world success on non-Markovian manipulation tasks where single-observation models fail.</div>
+      <div class="why"><b>Why it matters:</b> Explicit memory separation (working vs. episodic/semantic) is a practical transferable pattern for any agent requiring temporally coherent action over long horizons; strong empirical gains validate the architecture for real deployments.</div>
+      <div class="row"><span class="chip">Robotics</span><span class="chip">VLA</span><span class="chip">Memory</span><a class="src-link" href="https://arxiv.org/abs/2607.07608">arxiv.org</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.06838">WildCity: A Real-World City-Scale Testbed for Rendering, Simulation, and Spatial Intelligence</a></h3>
+      <div class="summary">A large-scale real-world city dataset and testbed spanning diverse urban environments, jointly benchmarking neural rendering quality, dynamic simulation fidelity, and spatial reasoning for autonomous systems on shared real-world captures.</div>
+      <div class="why"><b>Why it matters:</b> Fills the gap between isolated rendering benchmarks and isolated driving datasets — a unified city-scale testbed where perception, rendering, and reasoning are evaluated together is increasingly necessary as autonomous systems tackle complex urban environments.</div>
+      <div class="row"><span class="chip">2 HF upvotes</span><span class="chip">Autonomous Driving</span><span class="chip">Dataset</span><a class="src-link" href="https://arxiv.org/abs/2607.06838">arxiv.org</a></div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <p class="section-note" style="font-style:italic;">Sparse day on GitHub Trending — most AI repos in the top results were already covered in prior digests. One new entry below.</p>
+    <div class="card">
+      <h3><a href="https://github.com/VoltAgent/awesome-design-md">VoltAgent/awesome-design-md — Curated DESIGN.md Files from Top AI Agent Projects</a></h3>
+      <div class="summary">A curated collection analyzing and aggregating DESIGN.md files from popular AI projects and agent frameworks, surfacing the architectural decisions, design constraints, and philosophy documents teams use to guide AI system development. Trending today with 1,391 daily stars; 99,691 total stars.</div>
+      <div class="why"><b>Why it matters:</b> DESIGN.md documents are how teams encode architectural intent for AI coding agents and collaborators; surfacing the best examples from popular projects makes it easier to adopt the practice without starting from scratch.</div>
+      <div class="row"><span class="chip hot">🔥 1,391 stars today</span><span class="chip stars">⭐ 99K total</span><span class="chip">Agent Design</span><a class="src-link" href="https://github.com/VoltAgent/awesome-design-md">github.com</a></div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+    <p class="section-note" style="font-style:italic;">Nothing notable in the last 24h — agent/harness-specific product launches were quiet today. See Papers tab for agent-architecture research (Agon, Dual Latent Memory VLA), Workflows tab for ICML agent safety and harness workshops, and Discussion for the GitLost prompt-injection security finding.</p>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search. Today's highlights are from ICML 2026 in Seoul (main conference July 7–9, workshops July 10–11).</p>
+    <div class="card">
+      <h3><a href="https://icml.cc/virtual/2026/invited-talk/67270">ICML 2026 Invited Talk: From Behavioural Guardrails to Principled Agency — Verena Rieser (Google DeepMind)</a></h3>
+      <div class="summary">Google DeepMind Research Lead Verena Rieser delivered an invited talk at ICML 2026 tracing the path from behavioural guardrails to principled autonomous agency, drawing on her work on evaluation methodologies and conversational RL agents for Gemini. Covers the spectrum from constraint-based safety to value-grounded autonomous decision-making.</div>
+      <div class="why"><b>Why it matters:</b> Research-grounded vocabulary and framework for when to constrain vs. empower agent autonomy — a live design question for anyone shipping agentic harnesses or deciding how much autonomy to grant deployed agents.</div>
+      <div class="row"><span class="chip">ICML 2026</span><span class="chip">July 9</span><span class="chip">Agent Safety</span><a class="src-link" href="https://icml.cc/virtual/2026/invited-talk/67270">icml.cc</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://icml.cc/virtual/2026/invited-talk/67274">ICML 2026 Invited Talk: What Will Be Left for Us to Work On? — Arvind Narayanan (Princeton / AI Snake Oil)</a></h3>
+      <div class="summary">Princeton CS professor Arvind Narayanan argues from an "AI as normal technology" thesis that there are many real-world bottlenecks between raw capability gains and task automation, and that AI is better modelled as augmentation than wholesale automation. Feeds directly into his emerging paper on AI agent evaluation science.</div>
+      <div class="why"><b>Why it matters:</b> Evidence-based calibration for practitioners: counters RSI hype with a concrete framework for which tasks AI actually automates vs. augments; his evaluation-science framing is directly relevant to anyone designing practitioner eval pipelines.</div>
+      <div class="row"><span class="chip">ICML 2026</span><span class="chip">July 9</span><span class="chip">Evaluation</span><a class="src-link" href="https://icml.cc/virtual/2026/invited-talk/67274">icml.cc</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://scale-icml-2026.github.io/">ICML 2026 Workshop: SCALE — Scalable Learning for Efficient Multimodal AI Agents (July 10, Seoul)</a></h3>
+      <div class="summary">Full-day ICML workshop covering evaluation and benchmarking of multimodal AI agents, with sessions on principled metrics for reasoning, memory, robustness, and efficiency. Topics include multimodal agentic learning pipelines, test-time scaling, mixture-of-agents orchestration, and planning under resource constraints.</div>
+      <div class="why"><b>Why it matters:</b> Addresses the measurement gap practitioners hit when deploying multimodal agents in production — workshop outputs (papers, slides) directly inform how eval harnesses should be structured for systems with multiple modalities and tools.</div>
+      <div class="row"><span class="chip">ICML 2026</span><span class="chip">July 10 (today)</span><span class="chip">Multimodal Agents</span><a class="src-link" href="https://scale-icml-2026.github.io/">scale-icml-2026.github.io</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://agentwild-workshop.github.io/icml2026/">ICML 2026 Workshop: Agents in the Wild — Safety, Security, and Beyond (July 10, Seoul)</a></h3>
+      <div class="summary">The second AgentWild workshop explores how AI agents reason, act, and adapt safely and securely in open-ended real-world environments, with sessions on production agent evaluation, safety boundaries, harness design patterns, and the digital-to-physical agent transition.</div>
+      <div class="why"><b>Why it matters:</b> Practitioner-focused research on what actually breaks when agents move from controlled evals to real deployments — covers adversarial cases, harness robustness, and security posture, directly complementary to the GitLost finding in Discussion.</div>
+      <div class="row"><span class="chip">ICML 2026</span><span class="chip">July 10 (today)</span><span class="chip">Agent Security</span><a class="src-link" href="https://agentwild-workshop.github.io/icml2026/">agentwild-workshop.github.io</a></div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <h3><a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">GitLost: How We Tricked GitHub's AI Agent into Leaking Private Repos</a></h3>
+      <div class="summary">Security researchers at Noma demonstrated a full end-to-end attack chain where a malicious repository triggered GitHub's AI coding agent (Copilot Workspace) via prompt injection in a README, causing it to exfiltrate private repository contents and secrets to an attacker-controlled endpoint — no user interaction needed beyond opening the repository. The attack exploited broad file-read agent permissions combined with insufficient prompt sanitization.</div>
+      <div class="why"><b>Why it matters:</b> A concrete, reproducible production exploit of a widely-deployed AI coding agent — not a theoretical concern. Any team deploying code agents with file-system or API access needs to audit their permission model and input sanitization pipeline against this attack class immediately.</div>
+      <div class="row"><span class="chip">Hacker News</span><span class="chip">AI Security</span><span class="chip">Prompt Injection</span><a class="src-link" href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">noma.security</a></div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <p class="section-note" style="font-style:italic;">Nothing surfaced today. Reddit blocks automated fetch (HTTP 403) and all site:reddit.com search queries returned zero results via the network proxy — Reddit access is fully blocked in this environment.</p>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/9/gpt-5-6/">Simon Willison: The New GPT-5.6 Family — Luna, Terra, Sol</a></h3>
+      <div class="summary">Willison's hands-on coverage of GPT-5.6 hitting GA in three variants: Luna (smallest/fastest, $1/$6 /M), Terra (mid-tier), and Sol (frontier, $5/$30 /M). All share a 1M-token context window, 128K max output tokens, and a February 2026 knowledge cutoff. Includes practical routing guidance.</div>
+      <div class="why"><b>Why it matters:</b> The three-tier (Luna/Terra/Sol) structure mirrors Anthropic's Haiku/Sonnet/Opus strategy and sets new price/performance benchmarks; the routing guidance is immediately actionable for teams managing model spend.</div>
+      <div class="row"><span class="chip">Simon Willison</span><span class="chip">July 9, 2026</span><a class="src-link" href="https://simonwillison.net/2026/Jul/9/gpt-5-6/">simonwillison.net</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/ben-bernanke">Anthropic: Ben Bernanke Joins the Long-Term Benefit Trust</a></h3>
+      <div class="summary">Former Federal Reserve Chair Ben Bernanke has joined Anthropic's Long-Term Benefit Trust (LTBT), the independent body empowered to override the board on mission-critical decisions about responsible AI development. Announced July 9, 2026 alongside the confidential S-1 filing period.</div>
+      <div class="why"><b>Why it matters:</b> Appointing a former Fed Chair to an independent AI oversight body adds economic and institutional credibility to Anthropic's unusual governance structure at the moment it matters most for investor and regulatory legibility.</div>
+      <div class="row"><span class="chip">Anthropic</span><span class="chip">Governance</span><span class="chip">July 9, 2026</span><a class="src-link" href="https://www.anthropic.com/news/ben-bernanke">anthropic.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/reflect-with-claude">Anthropic: A New Way to Reflect on How You Use Claude (Beta)</a></h3>
+      <div class="summary">Reflect is a beta feature that lets users visualize their Claude usage patterns over time and assess whether those patterns align with personal goals — framed as a metacognitive tool, not a productivity tracker. Opt-in, with privacy controls.</div>
+      <div class="why"><b>Why it matters:</b> As AI assistants become daily habits, usage-reflection features signal an industry move toward intentional AI engagement — positions Anthropic favorably with users and regulators concerned about AI dependency and over-reliance.</div>
+      <div class="row"><span class="chip">Anthropic</span><span class="chip">Consumer</span><span class="chip">July 9, 2026</span><a class="src-link" href="https://www.anthropic.com/news/reflect-with-claude">anthropic.com</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/hard-questions">Anthropic: Inviting Hard Questions About AI</a></h3>
+      <div class="summary">Anthropic published an open invitation for the public to submit their hardest questions about AI — jobs, children's futures, societal safety, what advanced AI means for humanity — with plans to publish responses. Frames public dialogue as a core responsibility, not a PR exercise.</div>
+      <div class="why"><b>Why it matters:</b> Alongside the S-1 filing and Ben Bernanke appointment, this is Anthropic actively shaping its pre-IPO narrative around safety and public accountability — a signal of how frontier AI companies will manage legitimacy as they scale toward consumer markets.</div>
+      <div class="row"><span class="chip">Anthropic</span><span class="chip">Safety</span><span class="chip">July 9, 2026</span><a class="src-link" href="https://www.anthropic.com/news/hard-questions">anthropic.com</a></div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-10 01:04 UTC<br>
+    Reddit: fully blocked (HTTP 403; site:reddit.com search via proxy returns zero results — noted as "not assessed"). arXiv, HuggingFace, HN Algolia: HTTP 403; papers sourced via HF papers GitHub tracker + web search. GitHub Trending: fetched. RSS feeds (Simon Willison et al.): HTTP 403; posts confirmed via web search. GitHub Trending repos: most already in prior digests (1 new entry today). Lilian Weng July 4 and Ethan Mollick July 7 posts fell outside the 48h window and excluded.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
