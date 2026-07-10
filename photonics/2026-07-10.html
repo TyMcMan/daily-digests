@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-10</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, July 10, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#funding">Defiance launches Europe's first photonics-only UCITS ETF (PHOT) on LSE and Borsa Italiana — mainstream institutional validation of the photonics supply chain</a></li>
+      <li><a href="#funding">Aylight (ETH Zürich) closes €4.5M pre-seed to commercialize chip-scale FM comb laser for AI datacenter WDM interconnects — directly addresses the laser supply crunch</a></li>
+      <li><a href="#funding">CCRAFT raises $7.8M to scale world's first independent TFLN photonic chip foundry to 2,000 wafers/month by 2030</a></li>
+      <li><a href="#research">Light: Sci &amp; App July 2026: LightIN programmable silicon photonic FPGA with 40 reconfigurable unit cells + 3D tensor processing engine at 10–30 GHz</a></li>
+      <li><a href="#compute">QuiX Quantum publishes Dedalo white paper: fault-tolerant photonic quantum architecture co-designed for HPC datacenter integration</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nextplatform.com/compute/2026/07/07/quix-quantum-shows-off-a-photonic-architecture-for-hpc-datacenters/5267793">QuiX Quantum Shows Off a Photonic Architecture for HPC Datacenters (Dedalo)</a></h3>
+      <p>QuiX Quantum published its Dedalo white paper outlining a fault-tolerant photonic quantum architecture combining integrated photonics and discrete-variable qubit encoding at room temperature, explicitly designed to co-locate with classical HPC and supercomputer infrastructure. The company argues that manufacturability, modularity, and energy efficiency must be solved simultaneously rather than sequentially — treating datacenter integration as the central design constraint rather than qubit fidelity alone. <em>Why it matters:</em> The datacenter-integration-first framing is directly relevant to hybrid classical-photonic system design; treating co-location with HPC racks as a hard constraint forces practical tradeoffs that are more useful to photonic compute architects than fidelity-maximizing approaches that ignore deployment context.</p>
+      <div class="meta">The Next Platform &middot; 2026-07-07</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today. gdsfactory, SiEPIC, Flexcompute/Tidy3D, and PIC Magazine returned 403 or had no July 9–10 items confirmed via search.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41377-026-02209-5">LightIN: Silicon-Integrated Photonic FPGA with AI Configuration Framework for Next-Generation AI Clusters</a></h3>
+      <p>Published in <em>Light: Science &amp; Applications</em> (vol. 15, article 165), LightIN is a programmable silicon photonic chip integrating 40 reconfigurable unit cells with over 160 components, supporting on-chip computing, signal switching, and encryption from a single platform with an intelligent software configuration framework. The field-programmable photonic concept — analogous to an electrical FPGA but realised in silicon photonics — is designed to accelerate design-to-tape-out cycles for reconfigurable photonic compute fabrics via standardised, software-driven circuit configuration. <em>Why it matters:</em> Software-configurable photonic hardware is the step between fixed-function PICs and truly programmable optical compute; LightIN's 40-cell integration density and AI-assisted configuration framework are a concrete demonstration of this programmability at research scale.</p>
+      <div class="meta">Light: Science &amp; Applications (Nature) &middot; 2026-07-01</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41377-026-02183-y">Integrated Photonic 3D Tensor Processing Engine Running at 10–30 GHz</a></h3>
+      <p>Also in <em>Light: Science &amp; Applications</em> (vol. 15, article 154), this work demonstrates a 3D tensor processing engine (3D-TPE) based on interleaved time, wavelength, and spatial-domain modulation, experimentally running at 10–30 GHz clock speed and achieving 97.06% accuracy on LiDAR point-cloud classification. Data caching, channel synchronisation, and computation are all realised in the optical domain, substantially reducing DRAM round-trip bottlenecks compared to electronic tensor processors. <em>Why it matters:</em> A full optical datapath for tensor operations — rather than just a matrix-multiply kernel — is a significant architectural step toward photonic AI accelerators that do not just offload one operator but can sustain a complete inference pipeline in the optical domain.</p>
+      <div class="meta">Light: Science &amp; Applications (Nature) &middot; 2026-07-01</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <p class="empty">Nothing new today. PhotonDelta, EPIC, SMART Photonics, and LioniX returned 403 or had no July 9–10 items confirmed via search. Tyndall (optics.org) and Pilot Photonics (optics.org) were covered in prior digests.</p>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/07/09/3324568/0/en/Defiance-Launches-Europe-s-First-Photonics-UCITS-ETF-PHOT.html">Defiance Launches Europe's First Photonics UCITS ETF (PHOT) on LSE and Borsa Italiana</a></h3>
+      <p>Defiance ETFs launched the PHOT UCITS ETF on the London Stock Exchange and Borsa Italiana — Europe's first fund dedicated exclusively to photonic technologies including PICs, optical interposers, transceivers, modulators, and lasers. At 0.69% TER within a $162M UCITS AUM platform, PHOT provides mainstream institutional investors a direct route into the photonic compute and interconnect supply chain without picking individual stocks. <em>Why it matters:</em> An index ETF dedicated to photonics signals mainstream institutional conviction that the sector is entering a durable growth phase; it expands the investor base for photonics suppliers and validates commercial roadmap timelines the industry has been pitching to early-stage venture.</p>
+      <div class="meta">GlobeNewswire / Defiance ETFs &middot; 2026-07-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://tech.eu/2026/07/06/aylight-closes-eur45m-pre-seed-round-to-advance-optical-interconnect-technology/">Aylight Closes €4.5M Pre-Seed to Commercialize Chip-Scale FM Comb Laser for AI WDM Interconnects</a></h3>
+      <p>ETH Zürich spin-out Aylight raised €4.5M co-led by Elaia and Swisscom Ventures to commercialize a chip-scale frequency-modulated comb (FM comb) laser that generates many precisely spaced wavelengths from a single photonic chip, targeting AI datacenter WDM optical interconnects and FMCW sensing. The raise is an explicit response to the laser supply crunch that drove Nvidia's $4B commitment to Coherent and Lumentum in March 2026 — Aylight's approach would make WDM sources chip-integrable rather than module-level discrete assemblies. <em>Why it matters:</em> A compact on-chip multiwavelength source addresses one of the hardest integration challenges in WDM photonic compute interconnects; if manufacturable at volume, it removes a discrete component bottleneck that currently limits scaling of wavelength-division-multiplexed photonic inference fabrics.</p>
+      <div class="meta">tech.eu / Aylight &middot; 2026-07-06</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/02/swiss-ccraft-expands-the-worlds-first-independent-foundry-for-tfln-photonic-chips/">CCRAFT Raises $7.8M to Scale World's First Independent TFLN Photonic Chip Foundry</a></h3>
+      <p>CCRAFT (spun out of CSEM in April 2025) closed a heavily oversubscribed $7.8M seed round led by QBIT Capital to scale its independent thin-film lithium niobate (TFLN) photonic chip foundry in Neuchâtel, Switzerland, targeting 2,000 wafers/month by 2030. TFLN platforms deliver electro-optic bandwidths and half-wave voltages well beyond silicon photonics, making them critical for 800G+ and beyond optical interconnects in AI data infrastructure. <em>Why it matters:</em> As the only independent pure-play TFLN foundry globally, CCRAFT's capacity expansion directly de-risks the TFLN supply chain for photonic compute and quantum hardware teams that cannot access adequate volume through vertically integrated suppliers — a foundry-access gap that constrains the entire TFLN-based interconnect roadmap.</p>
+      <div class="meta">The Quantum Insider / CCRAFT &middot; 2026-07-02</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/09/xanadu-accelerates-us-growth-with-new-york-state-office/">Xanadu Opens US Hub in Albany, NY — Embedding PIC Design Teams in Semiconductor Research Corridor</a></h3>
+      <p>Photonic quantum computing company Xanadu opened a US operations hub in Albany, NY, co-locating hardware design teams with Corning, Applied Materials, DISCO, and EV Group to optimise mass production of on-chip GKP qubits using standard semiconductor lithography lines. The US workforce has grown more than 5× since 2023. <em>Why it matters:</em> Xanadu's playbook — co-locating photonic chip design with established semiconductor foundry partners rather than building captive fabs — is a viable template for scaling photonic chip production beyond prototyping, and the partner list (Corning, Applied Materials) signals which supply-chain relationships matter for PIC volume manufacturing.</p>
+      <div class="meta">The Quantum Insider / Xanadu &middot; 2026-07-09</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/08/new-optical-technique-captures-three-material-properties-in-a-single-measurement/">New Optical Technique Captures Refractive Index, Absorption, and Film Thickness in One Non-Destructive Pass</a></h3>
+      <p>Researchers demonstrated a new optical measurement method capable of extracting refractive index, absorption coefficient, and film thickness simultaneously in a single non-destructive measurement, reducing metrology time in photonic device development cycles. Integrated photonic chips require precise simultaneous control of these parameters across waveguide layers; multi-property optical metrology removes the need for sequential single-property tools. <em>Why it matters:</em> For SiN and TFLN platform development — where layer stack characterisation is a recurring bottleneck in design-to-fab iteration — this technique directly accelerates process qualification and inline yield monitoring by collapsing three separate metrology steps into one.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-07-08</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/02/pasqal-and-aeponyx-launch-a-pic-packaging-center-of-competency-for-sensing-and-quantum-applications-at-c2mi/">Pasqal / Aeponyx Launch PIC Packaging Center of Competency at C2MI, Targeting 500K Modules/Year</a></h3>
+      <p>Pasqal subsidiary Aeponyx partnered with HOP Technologies, Phantom Photonics, and C2MI to launch a PIC Packaging Center of Competency in Bromont, Quebec, backed by $7.9M in government funding, with a roadmap to standardize PIC assembly and packaging processes and scale to 500,000+ PIC modules per year in a later phase using purpose-built Aixemtec packaging equipment. <em>Why it matters:</em> Packaging remains the principal bottleneck between chip-level PIC yield and system-level deployment — this centre attacks that gap by building standardised, high-volume assembly pipelines for quantum-grade photonic chips; standardised PIC packaging processes developed here are transferable to any photonic compute hardware effort bridging chips to fiber-optic or free-space systems at volume.</p>
+      <div class="meta">The Quantum Insider / Aeponyx &middot; 2026-07-02</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: All direct WebFetch calls returned HTTP 403; all content sourced via web search. PhotonDelta, SMART Photonics, LioniX — no July 9–10 items via search. Cignal AI — no July 9–10 press releases. SPIE TV RSS — 403. gdsfactory, Flexcompute/Tidy3D — no new releases July 9–10. Lightmatter, Ayar Labs — no new July 9–10 content. Reddit r/Optics, r/Semiconductors — fully blocked (403), web search fallback returned zero results.</div>
+  <div>10 items &middot; generated 2026-07-10 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
