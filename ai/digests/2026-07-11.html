@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-11</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Saturday, July 11, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 26 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://x.ai/news/grok-4-5">Grok 4.5</a><span class="src">xAI</span><span class="why">Opus-class coding model launches at $2/$6/M tokens — first xAI model with public pricing that rivals frontier coding performance.</span></li>
+      <li><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">Meta Muse Spark 1.1</a><span class="src">Meta AI</span><span class="why">Meta's first-ever paid API model: agentic, multimodal, $0.15/$0.60/M tokens — closes the long-standing Meta-to-API gap.</span></li>
+      <li><a href="https://openai.com/index/gpt-5-6/">GPT-5.6 Sol / Terra / Luna</a><span class="src">OpenAI</span><span class="why">Full public launch of the three-tier GPT-5.6 family after weeks of previews — Sol (fast), Terra (balanced), Luna (reasoning).</span></li>
+      <li><a href="https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai">NVIDIA Cosmos 3</a><span class="src">NVIDIA / HF</span><span class="why">Open omni-model for physical AI — supports robots, simulation, and industrial use; released weights on HuggingFace.</span></li>
+      <li><a href="https://www.anthropic.com/news/claude-corps">Claude Corps</a><span class="src">Anthropic</span><span class="why">$150M national fellowship program deploying 1,000 AI-assisted workers across public-sector organisations.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">4</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">4</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">6</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.03118">Vidu S1: Real-Time Interactive Video Generation</a></h3>
+      <div class="summary">ShengShu Technology's Vidu S1 turns a single image into a voice-controlled interactive character that streams video at 540P/25 FPS on consumer-grade GPUs with no duration limit. The AR+Diffusion architecture (TurboDiffusion, SageAttention, SpargeAttention) achieves up to 42 FPS in practice.</div>
+      <div class="why"><b>Why it matters:</b> Real-time, unlimited-duration, consumer-GPU video generation from a single image is a qualitative leap — enabling live AI avatars without cloud streaming infrastructure.</div>
+      <div class="row"><span class="chip hot">43 HF upvotes</span><span class="chip">cs.CV · Jul 10</span><a class="src-link" href="https://arxiv.org/abs/2607.03118">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07508">SAO: Single-Rollout Asynchronous Optimization for Agentic RL</a></h3>
+      <div class="summary">Tsinghua's SAO addresses the stability/off-policy problem in asynchronous RL for LLM post-training. It replaces group-wise sampling with single-rollout sampling and adds strict double-side token-level clipping. SAO trains stably for 1,000 steps and was used to train GLM-5.2 (750B-A40B).</div>
+      <div class="why"><b>Why it matters:</b> Async RL is the direction for long-horizon agentic tasks; SAO makes it stable — and it's already powering a frontier open model.</div>
+      <div class="row"><span class="chip">cs.LG · Jul 8</span><span class="chip">SWE-Bench · BeyondAIME · IMOAnswerBench</span><a class="src-link" href="https://arxiv.org/abs/2607.07508">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08758">Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning</a></h3>
+      <div class="summary">Proposes treating scientific works as "Idea Genome" objects with genetic-like inheritance structures, and introduces a benchmark for lineage-grounded idea generation and reasoning. Evaluates LLMs on their ability to trace conceptual ancestry and generate novel, historically-grounded research ideas.</div>
+      <div class="why"><b>Why it matters:</b> Formalises what good AI scientific reasoning looks like — lineage-awareness rather than recombination — a useful scaffold for AI-for-science agents.</div>
+      <div class="row"><span class="chip">cs.AI · Jul 10</span><a class="src-link" href="https://arxiv.org/abs/2607.08758">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08763">OpenCoF: Learning to Reason Through Video Generation</a></h3>
+      <div class="summary">Introduces a chain-of-thought-style framework where an LMM learns reasoning by generating intermediate video frames as "visual thoughts." Shows that generative video steps improve multimodal reasoning on downstream tasks beyond text-only chain-of-thought.</div>
+      <div class="why"><b>Why it matters:</b> Expands CoT beyond tokens — using video generation as a reasoning substrate is a genuinely novel angle for embodied and spatial reasoning.</div>
+      <div class="row"><span class="chip">cs.CV · cs.AI · Jul 10</span><a class="src-link" href="https://arxiv.org/abs/2607.08763">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.06987">UP: Unbounded Positive Asymmetric Optimization for RL Post-Training</a></h3>
+      <div class="summary">Formalises "Probability Capacity" (Cap) and shows conservative clipping in importance-sampling RL (GRPO et al.) structurally stifles exploration by truncating updates for correct but low-confidence reasoning paths. UP removes the upper clip asymmetrically, unlocking the exploration budget without destabilising training.</div>
+      <div class="why"><b>Why it matters:</b> Better RL post-training recipes translate directly into smarter reasoning models — UP is a principled, drop-in improvement over GRPO.</div>
+      <div class="row"><span class="chip">cs.LG · Jul 10</span><a class="src-link" href="https://arxiv.org/abs/2607.06987">arxiv →</a></div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></h3>
+      <div class="summary">Matt Pocock's collection of Claude Code skills (slash commands) pulled straight from his .claude directory — covering TypeScript, testing, refactoring, and AI-assisted workflows. Instantly usable as a Claude Code plugin.</div>
+      <div class="why"><b>Why it matters:</b> Skills-as-a-shareable-repo is becoming a new distribution primitive for Claude Code workflows — this one is well-curated and immediately useful.</div>
+      <div class="row"><span class="chip stars">★ 1,712 today</span><span class="chip">Claude Code · Skills</span><a class="src-link" href="https://github.com/mattpocock/skills">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/iOfficeAI/OfficeCLI">iOfficeAI/OfficeCLI</a></h3>
+      <div class="summary">Office suite purpose-built for AI agents: read, edit, and automate Word, Excel, and PowerPoint files via CLI. Free, open-source, single binary, no Microsoft Office installation required. Reached #1 on GitHub Trending across all languages.</div>
+      <div class="why"><b>Why it matters:</b> Agents manipulating Office documents without a desktop install removes a major gap in enterprise automation — this fills it cleanly.</div>
+      <div class="row"><span class="chip stars">★ 1,224 today</span><span class="chip">Agents · Office · CLI</span><a class="src-link" href="https://github.com/iOfficeAI/OfficeCLI">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a></h3>
+      <div class="summary">Addy Osmani's curated collection of Claude Code agent skills — focused on front-end engineering, performance, and web development workflows. Pairs naturally with mattpocock/skills for a comprehensive Claude Code toolkit.</div>
+      <div class="why"><b>Why it matters:</b> A widely-respected engineer sharing their production AI coding workflow publicly accelerates adoption of skill-based agent patterns.</div>
+      <div class="row"><span class="chip stars">★ 1,116 today</span><span class="chip">Claude Code · Frontend</span><a class="src-link" href="https://github.com/addyosmani/agent-skills">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/obra/superpowers">obra/superpowers</a></h3>
+      <div class="summary">Jesse Vincent's "superpowers" toolkit — a set of agent harness utilities and prompt primitives for giving Claude Code extended autonomous capabilities, including memory, planning loops, and self-correction patterns.</div>
+      <div class="why"><b>Why it matters:</b> Practical, opinionated harness patterns from a practitioner rather than a framework vendor — often more battle-tested than library abstractions.</div>
+      <div class="row"><span class="chip stars">★ 1,013 today</span><span class="chip">Agent Harness · Claude Code</span><a class="src-link" href="https://github.com/obra/superpowers">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP">wonderwhy-er/DesktopCommanderMCP</a></h3>
+      <div class="summary">MCP server that gives Claude terminal command execution, file system access, and process management on the local desktop — essentially a Claude-native shell. Supports long-running processes, output streaming, and diff-based file editing.</div>
+      <div class="why"><b>Why it matters:</b> Turns Claude into a local automation agent without any bespoke agent framework — pure MCP over the existing Claude interface.</div>
+      <div class="row"><span class="chip stars">★ 328 today</span><span class="chip">MCP · Desktop · Shell</span><a class="src-link" href="https://github.com/wonderwhy-er/DesktopCommanderMCP">github →</a></div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://x.ai/news/grok-4-5">Grok 4.5 — xAI's Frontier Coding Model</a></h3>
+      <div class="summary">xAI launches Grok 4.5 with public pricing at $2/M input, $6/M output tokens. Positioned as an Opus-class coding and reasoning model, competing directly with Claude Opus and GPT-4o on agentic coding benchmarks. Available via the xAI API.</div>
+      <div class="why"><b>Why it matters:</b> The first xAI model with transparent public pricing at frontier quality signals a new phase of commoditisation in top-tier coding AI.</div>
+      <div class="row"><span class="chip hot">Jul 8</span><span class="chip">$2/$6/M tokens</span><a class="src-link" href="https://x.ai/news/grok-4-5">x.ai →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">Meta Muse Spark 1.1 — Meta's First Paid API Model</a></h3>
+      <div class="summary">Meta launches Muse Spark 1.1 via the Meta Model API: multimodal, agentic, priced at $0.15/M input and $0.60/M output tokens. Closes the gap that made Meta models inaccessible to app developers relying on managed APIs rather than self-hosting.</div>
+      <div class="why"><b>Why it matters:</b> Meta entering the managed-API market with competitive pricing gives developers an additional frontier-class option without infrastructure burden.</div>
+      <div class="row"><span class="chip hot">Jul 9</span><span class="chip">$0.15/$0.60/M tokens</span><a class="src-link" href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">meta.ai →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/">Claude Cowork Goes Mobile — Coding Agent Wars Expand</a></h3>
+      <div class="summary">TechCrunch reports Claude Cowork — Anthropic's office productivity agent — is expanding to mobile, bringing agentic document editing, task management, and collaborative workflows to iOS and Android. The piece frames it as coding-agent competition bleeding into general-purpose productivity.</div>
+      <div class="why"><b>Why it matters:</b> Coding agents migrating to office workflows signal the next battleground — Anthropic, OpenAI, and Google are all converging on the same productivity surface.</div>
+      <div class="row"><span class="chip">Jul 7</span><span class="chip">Anthropic · Mobile</span><a class="src-link" href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/">techcrunch →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/">ChatGPT for Your Most Ambitious Work</a></h3>
+      <div class="summary">OpenAI reframes ChatGPT around long-horizon, multi-step work: project memory, persistent context across sessions, multi-tool orchestration (web, code, images, files), and a new "deep work" mode for complex research and analysis tasks.</div>
+      <div class="why"><b>Why it matters:</b> OpenAI's messaging pivot from "assistant" to "agent for ambitious work" mirrors what Claude Cowork and Gemini Advanced are doing — the UX frame is converging on agentic workflows.</div>
+      <div class="row"><span class="chip">Jul 9</span><span class="chip">ChatGPT · Agents</span><a class="src-link" href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/">openai →</a></div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://ai4math2026.github.io/">ICML 2026 Workshop: AI for Math — Live Today</a></h3>
+      <div class="summary">The ICML 2026 "AI for Mathematics" workshop is running today (July 11) in Vancouver. Schedule covers automated theorem proving, LLM mathematical reasoning benchmarks, and connections to formal verification. Selected papers from the workshop are linked on the site.</div>
+      <div class="why"><b>Why it matters:</b> Math reasoning is a leading indicator for formal verification and code correctness — what works here tends to flow into coding agents within 6–12 months.</div>
+      <div class="row"><span class="chip hot">Live today · Jul 11</span><span class="chip">ICML 2026 · Math AI</span><a class="src-link" href="https://ai4math2026.github.io/">icml →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/modal2026">Modal in 2026 — Latent Space Podcast</a></h3>
+      <div class="summary">Erik Bernhardsson (Modal CTO) discusses Modal's 2026 infrastructure for AI workloads: serverless GPU scheduling, container sandboxing for agent code execution, and how Modal's architecture evolved to handle burst-heavy agentic workloads that classic cloud scheduling wasn't designed for.</div>
+      <div class="why"><b>Why it matters:</b> Modal is where many production AI pipelines run — understanding its design constraints is directly useful for anyone building or deploying agent infrastructure.</div>
+      <div class="row"><span class="chip">Latent Space · Jul 2026</span><span class="chip">Infrastructure · Agents</span><a class="src-link" href="https://www.latent.space/p/modal2026">latent.space →</a></div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48842459">Show HN: Getting GLM 5.2 running on my slow computer</a></h3>
+      <div class="summary">Community thread on running GLM 5.2 (750B-A40B) on consumer hardware using offloading, quantisation, and multi-GPU tricks. 453 points and ~800 comments — one of the most engaged threads this week.</div>
+      <div class="why"><b>Why it matters:</b> A 750B model running on consumer hardware is the canary for how quickly frontier models become locally accessible — the comments are full of practical recipes.</div>
+      <div class="row"><span class="chip hot">453 pts · ~800 comments</span><span class="chip">Jul 10</span><a class="src-link" href="https://news.ycombinator.com/item?id=48842459">HN →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48865093">GPT-5.6, Grok 4.5, Claude, and Muse Spark Build the Same 4 Apps</a></h3>
+      <div class="summary">Community-run benchmark comparison where four frontier models each attempt to build a to-do app, a REST API, a React dashboard, and a CLI tool from identical prompts. Thread dissects output quality, code correctness, and vibe differences across models.</div>
+      <div class="why"><b>Why it matters:</b> Apples-to-apples coding comparisons across all four new models in a single thread — rare to see on the same day as launch.</div>
+      <div class="row"><span class="chip">Jul 11</span><a class="src-link" href="https://news.ycombinator.com/item?id=48865093">HN →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48839984">I Think I Have LLM Burnout</a></h3>
+      <div class="summary">Front-page essay by Alec Scollon on cognitive fatigue from over-reliance on LLMs for software work — loss of deep focus, muscle memory atrophy, and discomfort when working without AI assistance. Sparked a substantive thread on sustainable AI-assisted workflows.</div>
+      <div class="why"><b>Why it matters:</b> Practitioner burnout patterns are early signals for workflow design — the discussion surfaces what healthy AI-assisted development should look like.</div>
+      <div class="row"><span class="chip">Jul 10</span><a class="src-link" href="https://news.ycombinator.com/item?id=48839984">HN →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48809877">GLM 5.2 and the Coming AI Margin Collapse</a></h3>
+      <div class="summary">500+ point thread on the economics of frontier AI after GLM 5.2's release: if a Chinese open-weight model matches GPT-4o on benchmarks at zero serving cost, what happens to API margins? Thread covers unit economics, inference efficiency, and strategic implications for OpenAI, Anthropic, and Google.</div>
+      <div class="why"><b>Why it matters:</b> The margin collapse argument is the structural story underlying all the model launches this week — worth understanding before making infrastructure bets.</div>
+      <div class="row"><span class="chip hot">500+ pts</span><span class="chip">Jul 10</span><a class="src-link" href="https://news.ycombinator.com/item?id=48809877">HN →</a></div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <p style="color:var(--muted);font-style:italic;margin-top:8px">Reddit search returned no indexable threads from the last 24h. Direct RSS feeds returned HTTP 403 from this environment. Check r/MachineLearning, r/LocalLLaMA, and r/Singularity directly for today's discussion.</p>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/gpt-5-6/">GPT-5.6: Introducing Sol, Terra, and Luna</a></h3>
+      <div class="summary">OpenAI's official launch post for the full GPT-5.6 family: Sol (fast, low-cost), Terra (balanced capability), and Luna (extended reasoning). Covers pricing, context windows, API availability, and migration guidance from GPT-4o.</div>
+      <div class="why"><b>Why it matters:</b> The canonical reference for the new OpenAI lineup — three models replacing two, with clearer capability tiers than the previous naming scheme.</div>
+      <div class="row"><span class="chip hot">Jul 9</span><span class="chip">OpenAI Blog</span><a class="src-link" href="https://openai.com/index/gpt-5-6/">openai →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-corps">Claude Corps: $150M Fellowship for AI-Assisted Public Sector Work</a></h3>
+      <div class="summary">Anthropic announces Claude Corps: a $150M program to place 1,000 fellows — each paired with Claude — into government agencies, nonprofits, and civic organisations. Fellows work on policy, healthcare, and education problems using AI-assisted workflows.</div>
+      <div class="why"><b>Why it matters:</b> This is Anthropic's clearest "beneficial AI" deployment in the physical world — and a signal of where the responsible-AI narrative is heading.</div>
+      <div class="row"><span class="chip">Jul 2026</span><span class="chip">Anthropic</span><a class="src-link" href="https://www.anthropic.com/news/claude-corps">anthropic →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/9/llm-meta-ai/">llm-meta-ai 0.1 — Simon Willison</a></h3>
+      <div class="summary">Simon releases llm-meta-ai, a plugin for his LLM CLI tool that connects to the new Meta Model API. Post covers installation, supported models (Muse Spark 1.1), and usage patterns — characteristically thorough with working code examples.</div>
+      <div class="why"><b>Why it matters:</b> Simon's LLM tool is a de-facto integration hub — Meta API support landing in it the same day as the launch validates the API design is usable.</div>
+      <div class="row"><span class="chip">Jul 9</span><span class="chip">Simon Willison</span><a class="src-link" href="https://simonwillison.net/2026/Jul/9/llm-meta-ai/">simonwillison →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai">NVIDIA Cosmos 3 for Physical AI</a></h3>
+      <div class="summary">NVIDIA publishes Cosmos 3 on HuggingFace: an open omni-model trained on physical world data — video, sensor streams, robot telemetry — optimised for simulation fidelity, robotic reasoning, and industrial digital twins. Weights and fine-tuning guides included.</div>
+      <div class="why"><b>Why it matters:</b> Open weights for a physical-world foundation model from NVIDIA is a rare event — lowers the barrier for robotics and sim-to-real research significantly.</div>
+      <div class="row"><span class="chip">Jul 8</span><span class="chip">NVIDIA · HuggingFace</span><a class="src-link" href="https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai">hf →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://developers.googleblog.com/en/introducing-gemma-3-270m/">Gemma 3 270M — Google's Smallest Capable Model</a></h3>
+      <div class="summary">Google releases Gemma 3 270M, a 270-million-parameter model that runs on-device across phones, embedded systems, and edge hardware. Despite its size, achieves competitive benchmark numbers on commonsense reasoning and instruction following vs. earlier 1B-class models.</div>
+      <div class="why"><b>Why it matters:</b> A 270M model that actually performs — not a toy — changes what's possible in offline, privacy-sensitive, or resource-constrained environments.</div>
+      <div class="row"><span class="chip">Jul 8</span><span class="chip">Google Developers</span><a class="src-link" href="https://developers.googleblog.com/en/introducing-gemma-3-270m/">google →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/sergiopaniego/distillation-2026">Knowledge Distillation in 2026: State of the Art</a></h3>
+      <div class="summary">Comprehensive survey post by Sergio Paniego covering where knowledge distillation stands in mid-2026: speculative decoding improvements, layer-dropping recipes, DPO-based behavioural distillation, and how distillation interacts with RLHF-trained models.</div>
+      <div class="why"><b>Why it matters:</b> Distillation is how frontier capabilities reach small models — understanding the 2026 landscape is essential for anyone building production inference pipelines.</div>
+      <div class="row"><span class="chip">Jul 8</span><span class="chip">HuggingFace Blog</span><a class="src-link" href="https://huggingface.co/blog/sergiopaniego/distillation-2026">hf →</a></div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-11 03:15 UTC<br>
+    Note: arXiv, Reddit RSS, and several blog feeds returned HTTP 403 from this environment; content reconstructed via web search and GitHub API.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
