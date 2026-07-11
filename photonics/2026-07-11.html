@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-11</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Saturday, July 11, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">TSMC COUPE photonic ramp enters 2026 production</a> — the infrastructure signal the industry has been waiting for.</li>
+      <li><a href="#research">MBQC on a silicon-photonic chip</a> — 4-qubit graph states at &gt;75% fidelity, Grover's algorithm on-chip.</li>
+      <li><a href="#research">Physics-informed neural nets for optical simulation</a> — hybrid modeling bridges the accuracy-efficiency gap.</li>
+      <li><a href="#pic-eda">GDSFactory+ 1.8.18</a> — new PyPI release with updated PDK automation and layout verification.</li>
+      <li><a href="#misc">KAUST laser-fingerprint authentication</a> — unique laser signatures replace hardware security keys for device ID.</li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://247wallst.com/investing/2026/07/10/tsmcs-photonic-ramp-could-be-the-quiet-catalyst-in-ai-chips/">TSMC's Photonic Ramp Could Be the Quiet Catalyst in AI Chips</a></h3>
+      <p>TSMC's COUPE (Compact Universal Photonic Engine) platform is entering mass production in 2026, integrating photonic and electrical dies via SoIC-X stacking on a CoWoS interposer. The package achieves 5–10× power efficiency improvement over conventional electrical I/O and 10–20× lower latency, with co-integrated HBM and logic for AI inference. The 247 Wall St analysis frames this as an underappreciated inflection for AI chip economics. <em>Why it matters:</em> TSMC COUPE shipping in volume makes silicon photonics a mainstream AI infrastructure component, not a research bet — with direct implications for Lightmatter, Ayar Labs, and InP foundry demand.</p>
+      <div class="meta">247 Wall St &middot; 2026-07-10</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency/">Scaling AI Factories with Co-Packaged Optics</a><span class="badge">catch-up</span></h3>
+      <p>NVIDIA's developer blog provides engineering details on Spectrum-X CPO networking switches: how co-packaged optics eliminates the pluggable transceiver penalty, reduces I/O power from ~15 pJ/bit to ~2 pJ/bit, and enables AI factory scale-up beyond the limits of copper interconnects. Covers the optical engine architecture, signal integrity tradeoffs, and integration with NVLink Fusion. <em>Why it matters:</em> The engineering breakdown (not the press release) is the relevant read for anyone designing optical I/O into AI cluster interconnects — much more actionable than the announcement post already covered.</p>
+      <div class="meta">NVIDIA Developer Blog &middot; 2026-06-02</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://pypi.org/project/gdsfactoryplus/">GDSFactory+ 1.8.18 Released on PyPI</a></h3>
+      <p>GDSFactory+ (the commercial extension to the open-source gdsfactory library) version 1.8.18 is now on PyPI. The release includes updated PDK automation for major foundries, improved DRC/LVS integration, and new layout verification hooks for wafer-scale simulation workflows. Compatible with gdsfactory v9.43.x. <em>Why it matters:</em> GDSFactory+ is the primary path from open-source PIC layout to production-ready PDK tapeout — keeping up with releases matters for teams building on the gdsfactory ecosystem.</p>
+      <div class="meta">PyPI / GDSFactory+ &middot; 2026-07-06</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.07890">Measurement-Based Quantum Computing on a Photonic Chip</a></h3>
+      <p>Huster, Hohmann, Edelmann, and Barz (Stuttgart) demonstrate MBQC on an integrated silicon photonic chip generating photonic graph states with up to four qubits. They achieve fidelities of 83.5 ± 1.8% for four-photon star graph states and 75.6 ± 1.1% for linear graph states. The chip implements MBQC-based single- and two-qubit gates and runs Grover's search and Deutsch–Jozsa on-chip via adaptive measurements. <em>Why it matters:</em> MBQC on silicon photonics avoids the need for deterministic photon-photon interactions — this result shows the platform is viable for computation, not just state generation, with commercially compatible processes.</p>
+      <div class="meta">arXiv 2607.07890 · quant-ph · 2026-07-08</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.07274">Physics-Informed Data-Driven Modeling for Optical Communications and Computing</a></h3>
+      <p>Teofilovic, Zibar, Da Ros et al. (DTU) compare three modeling paradigms — white-box (physics), black-box (data-driven), and hybrid physics-informed — across benchmark use cases including optical amplifiers, directly modulated lasers, and interferometer meshes used in photonic neural networks. Physics-informed models consistently outperform pure data-driven approaches on data efficiency and generalizability, while remaining faster than full physics simulation. <em>Why it matters:</em> Interferometer mesh digital twins are foundational for inverse-designing optical neural networks and MZI-based compute PICs — knowing which modeling approach to use at which scale is directly applicable to PIC EDA tooling.</p>
+      <div class="meta">arXiv 2607.07274 · physics.optics · 2026-07-08</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/pilot-photonics-picks-up-%E2%82%AC10.4m-in-eic-support">Pilot Photonics Picks Up €10.4M in EIC Support</a><span class="badge">catch-up</span></h3>
+      <p>Optics.org covers the European Innovation Council's €10.4M Accelerator investment in Dublin-based Pilot Photonics, which makes photonic chips for generating ultra-pure wireless signals used in AI data centres, 5G/6G, and satellite communications. The funding supports product qualification, high-volume manufacture ramp, and team expansion. <em>Why it matters:</em> Pilot Photonics' laser chip technology addresses signal purity for next-generation radio and optical systems — EIC backing at this scale signals EU confidence in photonic RF signal generation as a strategic technology.</p>
+      <div class="meta">optics.org &middot; 2026-07-07</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">No new photonics funding or market announcements found today that haven't been covered in prior digests. Check EPIC news and Cignal AI for weekly market signals.</p>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://www.theengineer.co.uk/content/news/laser-fingerprints-provide-rapid-device-authentication">Laser Fingerprints Provide Rapid Device Authentication</a></h3>
+      <p>KAUST researchers have demonstrated that the unique optical fingerprints of semiconductor lasers — arising from manufacturing-process variations in cavity geometry, gain medium, and mirror reflectivity — can be used as unclonable device identifiers. Combined with an AI classifier, the system authenticates devices in milliseconds without cryptographic keys or shared secrets. The technique works on standard laser diodes with no hardware modification. <em>Why it matters:</em> PUF (physically unclonable function) authentication using laser signatures is directly applicable to secure PIC-based sensing and communication modules — a potential new design primitive for photonic security ICs.</p>
+      <div class="meta">The Engineer / KAUST &middot; 2026-07-10</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Note: 18 of 22 primary photonics sources returned HTTP 403 from this environment; content reconstructed via web search and arXiv direct fetch.</div>
+  <div>7 items &middot; generated 2026-07-11 03:15 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
