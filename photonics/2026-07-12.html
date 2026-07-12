@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-12</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Sunday, July 12, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">NVLink Fusion formally co-opts photonics — Ayar Labs, Lightmatter &amp; Marvell join NVIDIA's AI scale-up fabric</a></li>
+      <li><a href="#europe">EU Chips Act 2.0 draft adds integrated photonics as a strategic technology, opening state-aid pathways for InP/SiN/SiPh foundries</a></li>
+      <li><a href="#research">KAUST: AI-authenticated laser-chaos PICs demonstrated as hardware roots-of-trust at data-center scale</a></li>
+      <li><a href="#research">Penrose-wave amplification demonstrated in a table-top resonator; team targets photonic chip applications next</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://spectrum.ieee.org/nvlink-fusion-optics">NVLink Fusion Photonics Partners: Ayar Labs, Lightmatter &amp; Marvell Formally Enter NVIDIA's AI Scale-Up Fabric</a></h3>
+      <p>IEEE Spectrum analysis of how NVIDIA's NVLink Fusion partner ecosystem has expanded to formally include photonics companies — Ayar Labs (co-packaged optical I/O), Lightmatter (photonic interconnects), and Marvell Technologies — making CPO a first-class citizen of AI scale-up networking alongside electrical interconnects. The program is described as "photonics-friendly," allowing both electrical and optical approaches to evolve in parallel without forcing an immediate architecture commitment from customers. <em>Why it matters:</em> CPO/photonic interconnect is now architecturally embedded in the dominant AI infrastructure platform — this is the ecosystem-level validation that accelerates the entire photonic interconnect supply chain.</p>
+      <div class="meta">IEEE Spectrum &middot; 2026-07-10</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://phys.org/news/2026-07-synthetic-rotation-black-hole-energy.html">Penrose-Wave Amplification Demonstrated in Lab-Scale Resonator; Photonic Chip Integration Targeted Next</a></h3>
+      <p>CUNY ASRC researchers built a ring-shaped network of electronic resonators that simulates ultrafast rotation without physical movement, demonstrating Penrose–Zel'dovich wave amplification — an effect from black hole physics — in a table-top electromagnetic system. Waves with the correct rotational signature extracted energy from the synthetic rotation field and were amplified. The team explicitly identifies scaling to photonic and quantum-optical frequencies as the next step, citing implications for novel photonic resonator designs, quantum optical signal processing, and next-generation photonic chip architectures. <em>Why it matters:</em> A new physical amplification mechanism validated in hardware, with the research group already pointing at photonic chip integration — relevant for unconventional resonator and oscillator design in PICs.</p>
+      <div class="meta">phys.org (Nature) &middot; 2026-07-12</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.technology.org/2026/07/11/researchers-develop-new-way-for-devices-to-prove-their-identity-online/">KAUST: AI-Authenticated Laser-Chaos PICs for Hardware Security at AI Infrastructure Scale</a></h3>
+      <p>A KAUST Integrated Photonics Lab team published in Nature Electronics a system using laser chaos — optoelectronic physical unclonable functions (PUFs) — to generate unique per-device fingerprints, authenticated in real time by an AI model with ultra-low latency and minimal energy consumption. The paper, "Chaos-based scalable optoelectronic physical unclonable functions with AI-driven dynamic authentication," targets large-scale IoT, cloud, and AI infrastructure. <em>Why it matters:</em> Laser-based PICs as hardware roots-of-trust for AI data-center fabrics — a convergence of photonic integration and hardware security that is directly relevant to high-density optical compute infrastructure where per-node authentication at line rate is required.</p>
+      <div class="meta">Technology.org (Nature Electronics) &middot; 2026-07-11</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://bits-chips.com/article/eu-chips-act-2-0-draft-drops-front-end-manufacturing-priority/">EU Chips Act 2.0 Draft Formally Adds Integrated Photonics as a Strategic Technology</a></h3>
+      <p>The European Commission's Chips Act 2.0 proposal formally adds integrated photonics as a key enabling semiconductor technology, broadening state-aid eligibility beyond front-end silicon fabs to cover specialty manufacturing, equipment, and materials — including InP, SiN, and SiPh platforms. The revision also drops the previous act's hard focus on leading-edge front-end fabs (sub-2nm CMOS), opening funding pathways for European photonics foundries for the first time under the Chips Act framework. <em>Why it matters:</em> A structural policy unlock for the European photonics industry — SMART Photonics, LioniX International, PhotonDelta ecosystem companies, and new entrants can now access Chips Act state-support mechanisms, changing the competitive dynamics for EU photonic compute manufacturing.</p>
+      <div class="meta">Bits&amp;Chips &middot; 2026-07-08</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://sg.finance.yahoo.com/news/silicon-photonics-lpo-lro-npo-114100963.html">Silicon Photonics 2027–2037 Market Report: CPO/NPO the Central Packaging Story; Photonic QC Attracted $2.1B in 2025</a></h3>
+      <p>A comprehensive market and technology assessment covering silicon photonics, linear-drive pluggable/receive optics (LPO/LRO), and co/near-packaged optics (CPO/NPO) through 2037 was released, noting 1.6 Tbit/s transceivers reached commercial availability in 2026 with 3.2T sampling expected in 2027. The report identifies photonic quantum computing as a newly commercial segment that attracted approximately $2.1 billion in private capital in 2025, surpassing superconducting qubit systems in annual fundraising. <em>Why it matters:</em> CPO and NPO are framed as the central packaging story for AI data center interconnects this decade — the investment data confirms that photonic quantum compute has crossed from research to commercial market, validating the broader photonic technology stack.</p>
+      <div class="meta">Future Markets Inc. / Yahoo Finance &middot; 2026-07-09</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/11/why-quantum-computing-needs-national-ecosystems-to-scale/">Why Quantum Computing Needs Strong National Ecosystems to Scale</a></h3>
+      <p>Quantum Machines CTO Yonathan Cohen argues that hardware advances alone cannot scale quantum computing — national ecosystems encompassing talent pipelines, shared infrastructure, foundry supply chains, and policy support are the critical missing layer, drawing on discussions at the Quantum San Diego Convening and growing European sovereign-quantum programs. PIC-based quantum processors, the primary platform for near-term photonic quantum computing, require exactly this type of foundry and packaging ecosystem. <em>Why it matters:</em> The supply-chain dependencies being described mirror those in photonic compute more broadly — understanding where ecosystem leverage points are helps inform build-vs-partner decisions at the infrastructure layer for companies like Akhetonics operating in the same supply chain.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-07-11</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: COMPUTE item (IEEE Spectrum NVLink Fusion) from web search — URL not directly fetched due to proxy. PIC/EDA section empty (no new content July 11–12). Direct page fetches blocked by egress proxy; all items via web search. Reddit not assessed (RSS 403; web search returned no indexed photonics threads). No new content confirmed from Lightmatter, Ayar Labs, The Next Platform, optics.org, or Flexcompute for July 11–12 weekend period.</div>
+  <div>6 items &middot; generated 2026-07-12 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
