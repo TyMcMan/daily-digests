@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-12</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, July 12, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 24 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html">Apple Sues OpenAI, Alleging It Stole Trade Secrets</a><span class="src">CNBC / HN 1354↑</span><span class="why">High-stakes IP litigation over agentic model development — could reshape how frontier AI labs collaborate with hardware and software partners industry-wide.</span></li>
+      <li><a href="https://www.latent.space/p/ainews-spacexai-launches-grok-45">SpaceXAI Launches Grok 4.5 — Opus-Class at $2/$6/M Tokens</a><span class="src">Latent Space</span><span class="why">Top agentic tool-use scores on the Artificial Analysis index at a fraction of Claude Opus 4.8 pricing — changes the cost calculus for high-volume sequential agent loops.</span></li>
+      <li><a href="https://www.anthropic.com/news/reflect-with-claude">Anthropic Launches Claude Reflect — AI Usage Intelligence Dashboard</a><span class="src">Anthropic</span><span class="why">Spotify-Wrapped-style analytics for Claude Pro/Max — first major lab to ship AI-usage self-reflection tooling as a product differentiator.</span></li>
+      <li><a href="https://arxiv.org/abs/2607.08716">Remember When It Matters: Proactive Memory Agent (Meta AI, +8.3 pp on Terminal-Bench)</a><span class="src">arXiv</span><span class="why">Plug-in module that fixes behavioral-state decay in long agent trajectories without touching base-model weights — drop-in improvement for any unmodified agent.</span></li>
+      <li><a href="https://lilianweng.github.io/posts/2026-07-04-harness/">Lilian Weng: Harness Engineering for Self-Improvement — 35-Paper Survey</a><span class="src">Lil'Log</span><span class="why">Frames the agent runtime as a first-class RSI optimization target alongside weight updates — the clearest conceptual foundation yet for what harness engineering actually is.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">4</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">6</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08768">UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks</a></h3>
+      <div class="summary">First capability-driven benchmark for proactive LLM/MLLM agents, decomposing 400 bilingual tasks across five dimensions: Skill Usage, Exploration, Long-Context Reasoning, Multimodal Understanding, and Cross-Platform Coordination. Agents run live in Docker containers with step-by-step checkpoints; a closed-loop design using an executor, hidden supervisor, and user agent prevents grading-criteria leakage.</div>
+      <div class="why"><b>Why it matters:</b> Existing benchmarks use static sandboxes — UniClawBench's live-environment, closed-loop design enables clean root-cause diagnosis of agent failure modes in realistic conditions.</div>
+      <div class="row"><span class="chip hot">22 HF upvotes</span><span class="chip">cs.AI · Jul 12</span><a class="src-link" href="https://arxiv.org/abs/2607.08768">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08716">Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents</a></h3>
+      <div class="summary">Meta AI paper addressing "behavioral state decay" — where task-critical information (prior attempts, open subgoals, constraints) gets buried in long agent trajectories and stops influencing decisions. A plug-and-play proactive memory module monitors the trajectory and injects structured memory-grounded reminders only when needed, delivering +8.3 pp on Terminal-Bench 2.0 and +6.8 pp on τ²-Bench across both weak and strong base agents.</div>
+      <div class="why"><b>Why it matters:</b> Drop-in module for any unmodified base agent — no weight changes, no prompt rewrites; directly improves reliability of long-horizon agentic task completion.</div>
+      <div class="row"><span class="chip">cs.LG · Jul 12</span><span class="chip">Meta AI</span><a class="src-link" href="https://arxiv.org/abs/2607.08716">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08770">LongE2V: Event-based Video Reconstruction, Prediction &amp; Interpolation with Diffusion Models</a></h3>
+      <div class="summary">Unified video diffusion framework (SIGGRAPH 2026) that simultaneously handles reconstruction of asynchronous event-camera streams, future-frame prediction, and temporal interpolation in a single model. Adapts video diffusion priors to the sparse, high-dynamic-range data of event cameras, enabling high-quality synthesis in extreme lighting or fast-motion conditions where standard cameras fail.</div>
+      <div class="why"><b>Why it matters:</b> Event cameras are central to robotics and autonomous systems — unifying reconstruction, prediction, and interpolation in one diffusion model removes a significant engineering burden.</div>
+      <div class="row"><span class="chip hot">20 HF upvotes</span><span class="chip">cs.CV · SIGGRAPH 2026</span><a class="src-link" href="https://arxiv.org/abs/2607.08770">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07953">Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing</a></h3>
+      <div class="summary">Systematic empirical and theoretical analysis of linear attention for LLMs — covering kernel approximations, gating, and recurrent formulations. Key contribution: cross-layer routing strategies showing that interleaving full and linear attention at ratios of 3:1–6:1 achieves near-Transformer recall quality at a fraction of KV-cache memory cost.</div>
+      <div class="why"><b>Why it matters:</b> Empirically-grounded guidance on where to economize on attention without hurting recall — actionable for production model architects building long-context efficient models.</div>
+      <div class="row"><span class="chip hot">13 HF upvotes</span><span class="chip">cs.LG · Jul 12</span><a class="src-link" href="https://arxiv.org/abs/2607.07953">arxiv →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08741">ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation</a></h3>
+      <div class="summary">Combines autoregressive generation (temporal coherence) with diffusion models (stochastic quality sampling) using a hybrid motion representation, enabling real-time interactive controllable full-body digital human animation. Accepted at ACM SIGGRAPH 2026 (Transactions on Graphics), spanning vision, graphics, ML, and robotics.</div>
+      <div class="why"><b>Why it matters:</b> Hybrid AR+Diffusion is the emerging consensus architecture for high-quality real-time generative animation — ARDY provides the empirical foundation and SIGGRAPH-level validation.</div>
+      <div class="row"><span class="chip">cs.CV · SIGGRAPH 2026</span><a class="src-link" href="https://arxiv.org/abs/2607.08741">arxiv →</a></div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/google-labs-code/stitch-skills">google-labs-code/stitch-skills</a></h3>
+      <div class="summary">Official collection of Agent Skills designed to work with Google's Stitch MCP server, covering a wide range of assistant use cases in TypeScript. New entry on GitHub Trending with 340 stars today.</div>
+      <div class="why"><b>Why it matters:</b> Google's first-party skills library signals Stitch as a serious MCP platform — and these skills are designed to be interoperable across MCP clients, not locked to Google's tooling.</div>
+      <div class="row"><span class="chip stars">★ 340 today</span><span class="chip">TypeScript · MCP · Agent Skills</span><a class="src-link" href="https://github.com/google-labs-code/stitch-skills">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/davila7/claude-code-templates">davila7/claude-code-templates</a></h3>
+      <div class="summary">CLI tool for configuring and monitoring Claude Code — provides project template scaffolding, CLAUDE.md generators, and runtime configuration helpers. 232 stars today, 29k total.</div>
+      <div class="why"><b>Why it matters:</b> Reduces the setup friction for new Claude Code projects and gives teams a shared baseline configuration without manual scaffolding — fills a genuine gap in the Claude Code DX.</div>
+      <div class="row"><span class="chip stars">★ 232 today · 29k total</span><span class="chip">Python · Claude Code · CLI</span><a class="src-link" href="https://github.com/davila7/claude-code-templates">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/microsoft/agent-governance-toolkit">microsoft/agent-governance-toolkit</a></h3>
+      <div class="summary">Microsoft open-source toolkit for policy enforcement and sandboxing of autonomous AI agents — provides guardrails, configurable permission boundaries, and audit logging for enterprise agent deployments. 4.8k stars.</div>
+      <div class="why"><b>Why it matters:</b> Enterprise agent governance is a gap between demo and production — a Microsoft-backed, open toolkit with a shared API makes it easier to build compliant agentic systems without reinventing the safety layer.</div>
+      <div class="row"><span class="chip stars">★ 4.8k</span><span class="chip">Python · Agent Safety · Enterprise</span><a class="src-link" href="https://github.com/microsoft/agent-governance-toolkit">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">Shubhamsaboo/awesome-llm-apps</a></h3>
+      <div class="summary">Curated, runnable collection of 100+ LLM agent and RAG applications — covers voice agents, document QA, coding agents, multi-agent systems, and more. 549 stars today, 118k total; actively maintained with recent additions.</div>
+      <div class="why"><b>Why it matters:</b> The fastest path from concept to working prototype across almost any LLM app pattern — the combination of breadth and runnability makes it the best single reference for applied LLM engineers.</div>
+      <div class="row"><span class="chip stars">★ 549 today · 118k total</span><span class="chip">Python · LLM Apps · RAG</span><a class="src-link" href="https://github.com/Shubhamsaboo/awesome-llm-apps">github →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/huggingface/speech-to-speech">huggingface/speech-to-speech</a></h3>
+      <div class="summary">HuggingFace's framework for building local voice agents with open-source models — end-to-end speech-in, speech-out pipelines with real-time streaming. 94 stars today, 6k total.</div>
+      <div class="why"><b>Why it matters:</b> Local, open-source voice agents are the missing piece for privacy-sensitive deployments — this bundles STT, LLM inference, and TTS into one coherent stack that runs without cloud calls.</div>
+      <div class="row"><span class="chip stars">★ 94 today · 6k total</span><span class="chip">Python · Voice · Open-Source</span><a class="src-link" href="https://github.com/huggingface/speech-to-speech">github →</a></div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://lilianweng.github.io/posts/2026-07-04-harness/">Harness Engineering for Self-Improvement</a> <span style="font-size:11px;color:var(--muted);font-weight:400">[catch-up · Jul 4]</span></h3>
+      <div class="summary">Lilian Weng (OpenAI) surveys 35+ papers on harness engineering as a self-improvement lever — covering ACE, Meta-Harnesses, Automated Design of Agentic Systems (ADAS), and Self-Harness (a propose-evaluate-accept loop where agents iteratively improve their own harnesses via weakness mining). The central argument: the agent runtime — planning, tool dispatch, context management, artifact storage, evaluation — is an optimization target in its own right, distinct from weight updates.</div>
+      <div class="why"><b>Why it matters:</b> The clearest framing yet of harness engineering as a first-class research area — required reading for anyone building multi-step agents who wants a principled vocabulary for what they're actually doing.</div>
+      <div class="row"><span class="chip">Lil'Log · Jul 4</span><a class="src-link" href="https://lilianweng.github.io/posts/2026-07-04-harness/">blog →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://asanify.com/blog/news/ai-agent-training-environments-july-10-2026/">Bespoke Labs Raises $40M for AI Agent Training Environments</a></h3>
+      <div class="summary">Bespoke Labs closed a $40M round to build simulated workplace training environments — complete codebases, ticket queues, logs, and chat channels where agents practice long-horizon tasks before production. ClawBench data contextualizes the gap: the best current agents complete only ~33% of everyday web tasks on live sites, making safe pre-production training infrastructure a prerequisite for reliability.</div>
+      <div class="why"><b>Why it matters:</b> Safe agent training environments are the missing infrastructure layer between demo and production reliability — this positions pre-production agent training as a distinct market segment.</div>
+      <div class="row"><span class="chip">Jul 10</span><a class="src-link" href="https://asanify.com/blog/news/ai-agent-training-environments-july-10-2026/">source →</a></div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://asanify.com/blog/news/agentic-workflow-automation-july-11-2026/">Agentic Workflow Automation Goes to Production: ChatGPT Work</a></h3>
+      <div class="summary">Analysis of OpenAI's July 9 ChatGPT Work launch — an agent that takes a goal, gathers context from connected apps and files, plans steps, and completes multi-step tasks autonomously without per-step human oversight. A 2026 Korn Ferry talent survey found 73% of talent leaders rank critical thinking as their top human-hire skill, with AI skill only fifth — reflecting that judgment over agent outputs is now the scarce human capability.</div>
+      <div class="why"><b>Why it matters:</b> ChatGPT Work extends agentic automation from developer-only territory to end-user workflows — the mainstream inflection point that changes how non-technical teams think about AI delegation.</div>
+      <div class="row"><span class="chip">Jul 11</span><a class="src-link" href="https://asanify.com/blog/news/agentic-workflow-automation-july-11-2026/">source →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.langchain.com/blog/the-rise-of-context-engineering">The Rise of Context Engineering</a> <span style="font-size:11px;color:var(--muted);font-weight:400">[catch-up · Jun 30]</span></h3>
+      <div class="summary">LangChain CEO Harrison Chase formally defines context engineering as "building dynamic systems to provide the right information and tools in the right format such that the LLM can plausibly accomplish the task," arguing it is the defining skill for AI engineers in 2026 moving from single prompts to complex agentic systems. Positions context engineering as the central separating factor between reliable production agents and brittle demos.</div>
+      <div class="why"><b>Why it matters:</b> A clean, practitioner-facing definition from a key infrastructure builder — gives agent teams shared vocabulary for what they're actually optimizing beyond model selection.</div>
+      <div class="row"><span class="chip">LangChain · Jun 30</span><a class="src-link" href="https://www.langchain.com/blog/the-rise-of-context-engineering">blog →</a></div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48865019">Apple Sues OpenAI, Alleging It Stole Trade Secrets</a></h3>
+      <div class="summary">Apple filed suit against OpenAI in the Northern District of California alleging misappropriation of trade secrets related to AI model development — reportedly centered on former Apple employees who joined OpenAI and allegedly transferred proprietary AI training data and model architectures. The lawsuit was the #1 HN story on July 11 with 1,354 points and 735 comments.</div>
+      <div class="why"><b>Why it matters:</b> The first major tech-giant IP lawsuit directly targeting a frontier AI lab's training practices — outcome will set precedent for personnel transitions and data provenance across the industry.</div>
+      <div class="row"><span class="chip hot">1354 pts · 735 comments</span><a class="src-link" href="https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html">story →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48847552">Hy3</a></h3>
+      <div class="summary">Tencent released Hy3, the latest generation of its Hunyuan language model family, positioned as a strong performer in Chinese and multilingual reasoning tasks. The HN thread generated significant discussion around Tencent's growing technical capability relative to other frontier Chinese labs and the cost dynamics of the emerging Hunyuan API.</div>
+      <div class="why"><b>Why it matters:</b> Tencent entering top-tier model performance alongside Alibaba Qwen, DeepSeek, and Moonshot deepens competitive pressure on frontier Western labs on both cost and capability dimensions.</div>
+      <div class="row"><span class="chip hot">557 pts · 117 comments</span><a class="src-link" href="https://hy.tencent.com/research/hy3">story →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48832212">Mistral's Robostral Navigate: State-of-the-Art Robotics Navigation Model</a></h3>
+      <div class="summary">Mistral AI announced Robostral Navigate, a foundation model for robotic navigation targeting warehouse and industrial robotics use cases. The model extends Mistral's capabilities beyond text into embodied AI and is positioned as state-of-the-art on navigation benchmarks — making Mistral the first European frontier lab to release a robotics-specific foundation model.</div>
+      <div class="why"><b>Why it matters:</b> Embodied AI is entering the general-purpose model race — Mistral's EU-based positioning matters for robotics companies that need sovereign or compliant AI supply chains.</div>
+      <div class="row"><span class="chip hot">400+ pts</span><a class="src-link" href="https://mistral.ai/news/robostral-navigate/">story →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48834924">Show HN: Microsoft Releases Flint, a Visualization Language for AI Agents</a></h3>
+      <div class="summary">Microsoft open-sourced Flint, a declarative chart/visualization specification language designed for AI agents to render and interpret structured data outputs without emitting raw HTML/CSS or charting-library JSON. 88 points and 32 comments on HN; shows strong interest from the agent-tooling community.</div>
+      <div class="why"><b>Why it matters:</b> A standard agent-native visualization format reduces friction in agentic reporting and data analysis workflows — if Flint gains adoption, it becomes a new interop layer between agents and human-readable outputs.</div>
+      <div class="row"><span class="chip hot">88 pts · 32 comments</span><a class="src-link" href="https://github.com/microsoft/flint-chart">story →</a></div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card"><p style="color:var(--muted);margin:0">Nothing notable in the last 24h — web search returned HTTP 400 on site:reddit.com queries; no indexed recent threads surfaced.</p></div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/reflect-with-claude">A New Way to Reflect on How You Use Claude</a></h3>
+      <div class="summary">Anthropic launched Claude Reflect in beta — a Spotify-Wrapped-style usage dashboard in Settings showing top topics, peak usage hours, and activity patterns over 1, 3, 6, or 12 months. Users can set quiet hours or break reminders; available to Free, Pro, and Max users with Memory on.</div>
+      <div class="why"><b>Why it matters:</b> First frontier lab to ship AI-usage self-reflection tooling — signals that sustainable user relationships, not just engagement maximization, are becoming a product differentiation axis.</div>
+      <div class="row"><span class="chip">Anthropic · Jul 9</span><a class="src-link" href="https://www.anthropic.com/news/reflect-with-claude">blog →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-spacexai-launches-grok-45">AINews: SpaceXAI Launches Grok 4.5 — First Opus-Class Model Post Cursor Acquisition</a></h3>
+      <div class="summary">SpaceXAI publicly launched Grok 4.5 at $2/$6 per million input/output tokens — roughly 4× better token efficiency on SWE-bench Pro tasks vs. comparable frontier models. It ranked #4 on the Artificial Analysis Intelligence Index but scored the highest agentic tool-use results of any model on the board.</div>
+      <div class="why"><b>Why it matters:</b> The most cost-effective option for high-volume sequential tool-call workflows — first serious Opus-class competition on pricing, not just capability.</div>
+      <div class="row"><span class="chip">Latent Space · Jul 9</span><a class="src-link" href="https://www.latent.space/p/ainews-spacexai-launches-grok-45">newsletter →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna">AINews: OpenAI Launches GPT-5.6 Sol/Terra/Luna — Codex Becomes ChatGPT Superapp</a></h3>
+      <div class="summary">The July 10 AINews covers the full public GA rollout of GPT-5.6 across ChatGPT, Codex, and the API — ending the 13-day government-coordinated preview — and documents Codex merging into a revamped ChatGPT desktop "superapp" with built-in browser and computer control. API pricing: Sol $5/$30, Terra $2.50/$15, Luna $1/$6 per million tokens, 90% cache-read discounts retained.</div>
+      <div class="why"><b>Why it matters:</b> The public pricing structure of all three tiers is now finalized — gives AI product teams the complete cost model to slot GPT-5.6 into their stack.</div>
+      <div class="row"><span class="chip">Latent Space · Jul 10</span><a class="src-link" href="https://www.latent.space/p/ainews-openai-launches-gpt-56-solterraluna">newsletter →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/9/muse-spark-1-1/">Introducing Muse Spark 1.1</a></h3>
+      <div class="summary">Simon Willison comments on Meta's Muse Spark 1.1 — the first Spark-family model to ship with an API — which Meta claims shows major improvements in agentic tool calling and computer use. Contextualizes Spark 1.1 relative to Meta's broader model-API push and the significance of Meta offering developer access via a first-party API.</div>
+      <div class="why"><b>Why it matters:</b> Meta having a first-party API changes the open-source-vs-API equation — Spark 1.1's agentic tool-calling performance makes it a serious option for teams avoiding OpenAI/Anthropic lock-in.</div>
+      <div class="row"><span class="chip">Simon Willison · Jul 9</span><a class="src-link" href="https://simonwillison.net/2026/Jul/9/muse-spark-1-1/">blog →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://sebastianraschka.com/blog/2026/gpt-5-6-configurations.html">GPT-5.6 Has 72 Possible Configurations — What's a Good Default?</a></h3>
+      <div class="summary">Sebastian Raschka maps GPT-5.6's three model sizes (Sol, Terra, Luna) against six reasoning-effort levels (Light through Ultra), yielding 72 configurations, and analyzes how each trades off training-time vs. inference-time compute. Provides practical guidance on sensible defaults for coding agents, research tasks, and rapid prototyping use cases.</div>
+      <div class="why"><b>Why it matters:</b> Configuration choice is now a first-order cost and latency decision for GPT-5.6 users — Raschka's framework makes the 72-combination space tractable for engineering teams.</div>
+      <div class="row"><span class="chip">Sebastian Raschka · Jul 9</span><a class="src-link" href="https://sebastianraschka.com/blog/2026/gpt-5-6-configurations.html">blog →</a></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/torch-attention-profile">Profiling in PyTorch (Part 3): Attention Is All You Profile</a></h3>
+      <div class="summary">Third installment of HuggingFace's PyTorch profiling series: how to benchmark each SDPA backend (math, flash, efficient, cuDNN) independently and read how they appear in profiler traces, using the Transformer attention operation as the case study. Backend choice has significant throughput implications only visible through proper tracing.</div>
+      <div class="why"><b>Why it matters:</b> Practical guide for ML engineers optimizing attention-heavy workloads — understanding how backends appear in traces is the prerequisite for making informed optimization decisions under real production load.</div>
+      <div class="row"><span class="chip">HuggingFace · Jul 10</span><a class="src-link" href="https://huggingface.co/blog/torch-attention-profile">blog →</a></div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-12 01:04<br>
+    Source issues: Reddit not assessed (search tool HTTP 400 on site:reddit.com; no indexed threads surfaced) · Direct page fetches partially blocked by egress proxy; discovery via web search and GitHub CDN · HN Algolia API blocked by proxy (threads identified via web search)<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
