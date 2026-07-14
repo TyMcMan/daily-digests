@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-14</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, July 14, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 20 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://arxiv.org/abs/2607.09600">Agora: Auction-Based Task Allocation for LLM Agent Reasoning<span class="src">arXiv · cs.AI</span></a>
+        <span class="why">Incentive-compatible auction mechanism routes each reasoning step to the most competent expert model or tool, cutting cost-quality trade-offs across five benchmarks over single-model and routing baselines.</span>
+      </li>
+      <li>
+        <a href="https://github.com/github/spec-kit">github/spec-kit — Spec-Driven Development Toolkit<span class="src">GitHub · 543 stars today</span></a>
+        <span class="why">GitHub's own toolkit for structured machine-readable specs that AI coding agents can reason over and validate against — a principled approach to grounding agentic code generation.</span>
+      </li>
+      <li>
+        <a href="https://huggingface.co/papers/2607.09415">Self-Guided Test-Time Training for Long-Context LLMs<span class="src">arXiv · cs.CL</span></a>
+        <span class="why">Selects only high signal-to-noise tokens for test-time adaptation, dramatically improving LLM performance on long-context benchmarks without expensive full-context fine-tuning.</span>
+      </li>
+      <li>
+        <a href="https://www.anthropic.com/research/claude-values-models-languages">How Claude's Values Vary by Model and Language<span class="src">Anthropic Research</span></a>
+        <span class="why">Anthropic maps 339 high-level values across model versions and 12 languages, revealing systematic variation in honesty, caution, and transparency — critical signal for multilingual deployments.</span>
+      </li>
+      <li>
+        <a href="https://highlearningrate.substack.com/p/your-agent-changed-under-the-model">Your Agent Changed Under the Model Name<span class="src">High Learning Rate</span></a>
+        <span class="why">Silent platform updates shift agent behavior without changing the model ID — recommends full harness config versioning (prompt, context policy, routing, tools) for every eval and production trace.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">7</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2607.09415">Self-Guided Test-Time Training for Long-Context LLMs</a></h3>
+      <p class="summary">Proposes S-TTT, which selects only high signal-to-noise tokens from a long context for test-time adaptation, dramatically improving LLM performance on long-context tasks without expensive full-context fine-tuning. Authors: Xinyu Zhu, Zhe Xu, Xiaohan Wei et al.</p>
+      <p class="why"><b>Why it matters:</b> Token-selective test-time adaptation cuts the cost of tuning large models for long-document reasoning — directly practical for RAG and agentic pipelines that must process many retrieved chunks.</p>
+      <div class="row">
+        <span class="chip">cs.CL · long-context</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://huggingface.co/papers/2607.09415" class="src-link">HF Papers →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08393">Towards Mechanistically Understanding Why Memorized Knowledge Fails to Generalize in LLM Finetuning</a></h3>
+      <p class="summary">Identifies a "knowledge–circuit misalignment" in LLM finetuning: newly memorized facts are stored in early layers but not routed to middle reasoning circuits, with a self-patching intervention recovering 58–75% of lost generalization. Authors: Lu Dai, Ziyang Rao, Yili Wang et al.</p>
+      <p class="why"><b>Why it matters:</b> Explains why fine-tuned models answer direct recall prompts but fail at reasoning with the same facts — a core pain point for domain-specific SFT and the path to fixing it.</p>
+      <div class="row">
+        <span class="chip">cs.CL · fine-tuning</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://arxiv.org/abs/2607.08393" class="src-link">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/papers/2607.09024">Video Generation Models are General-Purpose Vision Learners</a></h3>
+      <p class="summary">Introduces GenCeption, a perception model built atop a pre-trained text-to-video diffusion backbone that generalizes across diverse vision tasks via text instruction steering, without task-specific heads. Authors: Letian Wang, Chuhan Zhang, Rishabh Kabra et al.</p>
+      <p class="why"><b>Why it matters:</b> Video generative models as universal visual feature extractors reduce the need for task-specific vision encoders — an architectural simplification for multimodal agent perception stacks.</p>
+      <div class="row">
+        <span class="chip">cs.CV · multimodal</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://huggingface.co/papers/2607.09024" class="src-link">HF Papers →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.09600">Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation</a></h3>
+      <p class="summary">Introduces an incentive-compatible auction mechanism that dynamically routes each reasoning step to the most competent expert model or tool, improving cost-quality trade-offs across five benchmarks over single-model and routing baselines. Authors: Kaiji Zhou, Ales Leonardis, Yue Feng et al.</p>
+      <p class="why"><b>Why it matters:</b> Economically grounded routing for multi-agent pipelines — moves beyond static dispatch logic toward adaptive per-step allocation that balances cost and quality.</p>
+      <div class="row">
+        <span class="chip">cs.AI · multi-agent</span>
+        <span class="chip">2026-07-14</span>
+        <a href="https://arxiv.org/abs/2607.09600" class="src-link">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.09287">Super-Tuning: From Activation-Aware Pruning to Sparse Fine-Tuning</a></h3>
+      <p class="summary">Reuses Wanda-style activation-weighted magnitude pruning scores to select a small sparse trainable support for PEFT, with a hybrid LoRA variant (Supra) matching a fixed parameter budget at lower cost. Authors: Ivan Ilin, Philip Zmushko, Peter Richtárik et al.</p>
+      <p class="why"><b>Why it matters:</b> Bridges structured pruning and parameter-efficient fine-tuning — a path to simultaneously compressing and adapting models without separate steps.</p>
+      <div class="row">
+        <span class="chip">cs.LG · PEFT · pruning</span>
+        <span class="chip">2026-07-14</span>
+        <a href="https://arxiv.org/abs/2607.09287" class="src-link">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08691">ProjAgent: Procedural Similarity Retrieval for Repository-Level Code Generation</a></h3>
+      <p class="summary">Retrieves functionally similar code implementations using procedural patterns (operational steps) rather than lexical or structural similarity, improving the quality of few-shot examples for repository-level code generation. Authors: QiHong Chen, Aaron Imani, Iftekhar Ahmed et al.</p>
+      <p class="why"><b>Why it matters:</b> Better retrieval of semantically similar code examples directly improves agentic coding tools that work across large codebases — a practical upgrade for repo-level agents.</p>
+      <div class="row">
+        <span class="chip">cs.CL · code · retrieval</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://arxiv.org/abs/2607.08691" class="src-link">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/github/spec-kit">github/spec-kit — Spec-Driven Development Toolkit</a></h3>
+      <p class="summary">GitHub's official toolkit for getting started with Spec-Driven Development: structured, machine-readable specifications that AI coding agents can reason over, plan from, and use to validate their own output against human intent.</p>
+      <p class="why"><b>Why it matters:</b> GitHub's own bet on structured specs as the primary interface between human requirements and AI coding agents — establishes an opinionated methodology for grounding agentic code generation.</p>
+      <div class="row">
+        <span class="chip hot">🔥 543 stars today</span>
+        <span class="chip">Python</span>
+        <span class="chip">GitHub Official</span>
+        <a href="https://github.com/github/spec-kit" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/virattt/ai-hedge-fund">virattt/ai-hedge-fund — AI Hedge Fund Team</a></h3>
+      <p class="summary">Multi-agent LLM framework simulating a hedge fund team: specialized agents for market research, risk management, portfolio optimization, and trade execution with configurable investment strategies.</p>
+      <p class="why"><b>Why it matters:</b> Concrete example of multi-agent specialization with role-based handoffs and risk-aware decision-making — these patterns transfer to any high-stakes agentic workflow.</p>
+      <div class="row">
+        <span class="chip hot">🔥 330 stars today</span>
+        <span class="chip">Python</span>
+        <a href="https://github.com/virattt/ai-hedge-fund" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/coreyhaines31/marketingskills">coreyhaines31/marketingskills — Marketing Skills for Claude Code &amp; Agents</a></h3>
+      <p class="summary">A library of marketing-domain skills for Claude Code and AI agents: SEO analysis, ad copy generation, campaign planning, competitor research, and content calendar automation packaged as reusable agent capabilities.</p>
+      <p class="why"><b>Why it matters:</b> The skills-for-agents ecosystem is maturing — modular, domain-specific capabilities plugged into general-purpose agents mirrors the pattern MCP established for tools.</p>
+      <div class="row">
+        <span class="chip hot">🔥 299 stars today</span>
+        <span class="chip">JavaScript</span>
+        <a href="https://github.com/coreyhaines31/marketingskills" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/simonlin1212/TradingAgents-astock">simonlin1212/TradingAgents-astock — Multi-Agent LLM Trading for A-Shares</a></h3>
+      <p class="summary">Adaptation of TauricResearch's TradingAgents framework for the Chinese A-share equity market, adding localized data feeds, regulatory constraints, and Mandarin-language prompt tuning for the Chinese market context.</p>
+      <p class="why"><b>Why it matters:</b> Domain-specific agent frameworks require more than translation — localized data pipelines, regulatory constraints, and language-specific prompting are first-class engineering concerns.</p>
+      <div class="row">
+        <span class="chip">179 stars today</span>
+        <span class="chip">Python</span>
+        <a href="https://github.com/simonlin1212/TradingAgents-astock" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/p-e-w/heretic">p-e-w/heretic — Automatic Censorship Removal for LLMs</a></h3>
+      <p class="summary">A fully automatic tool that removes content restrictions from language models at inference time, targeting deployments where safety filters interfere with legitimate research or technical use cases without requiring model access or weight modification.</p>
+      <p class="why"><b>Why it matters:</b> Security researchers and red teamers should track this pattern — automatic inference-time jailbreaking informs where model-level guardrails are insufficient and where system-level controls are required.</p>
+      <div class="row">
+        <span class="chip">79 stars today</span>
+        <span class="chip">Python</span>
+        <span class="chip">safety · red team</span>
+        <a href="https://github.com/p-e-w/heretic" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/moeru-ai/airi">moeru-ai/airi — Self-Hosted AI Companion with Voice &amp; Gaming</a></h3>
+      <p class="summary">Open-source self-hosted AI companion featuring real-time voice chat, gaming capabilities, and a character layer — runs local models for full privacy, with a modular plugin architecture for extending behavior.</p>
+      <p class="why"><b>Why it matters:</b> The AI companion vertical is growing rapidly; voice-first, local-inference agents are a live test of edge deployment patterns for latency-sensitive agentic applications.</p>
+      <div class="row">
+        <span class="chip">78 stars today</span>
+        <span class="chip">TypeScript</span>
+        <a href="https://github.com/moeru-ai/airi" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Vexa-ai/vexa">Vexa-ai/vexa — Meeting Transcription API for Google Meet, Teams &amp; Zoom</a></h3>
+      <p class="summary">API-first meeting transcription service with auto-join bots for Google Meet, Microsoft Teams, and Zoom; provides real-time transcripts and structured summaries for downstream agent or automation processing.</p>
+      <p class="why"><b>Why it matters:</b> Structured meeting transcripts are a key input for enterprise AI agents — Vexa provides the data-extraction layer for meeting-aware automation and memory pipelines.</p>
+      <div class="row">
+        <span class="chip">74 stars today</span>
+        <span class="chip">Python</span>
+        <span class="chip">enterprise</span>
+        <a href="https://github.com/Vexa-ai/vexa" class="src-link">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://highlearningrate.substack.com/p/your-agent-changed-under-the-model">Your Agent Changed Under the Model Name</a></h3>
+      <p class="summary">Documents how silent platform-level changes — OpenAI reverting context-size increases, rolling back reasoning-effort experiments — can shift agent behavior without changing the model name or version. Recommends recording the full harness config (prompt bundle, context policy, reasoning effort, routing, tool policy) alongside every eval and production trace.</p>
+      <p class="why"><b>Why it matters:</b> Model version ≠ agent version. Full harness config versioning is a production engineering requirement, not a nice-to-have — evals that don't record this are effectively comparing different systems.</p>
+      <div class="row">
+        <span class="chip">High Learning Rate</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://highlearningrate.substack.com/p/your-agent-changed-under-the-model" class="src-link">Substack →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://highlearningrate.substack.com/p/agent-reliability-compute-economics">Agent Reliability + Compute Economics</a></h3>
+      <p class="summary">Synthesizes findings from the AgenticUQ and LM4Plan workshops: a single success-rate number is insufficient to describe agent quality. Reliability must be measured across inference budget, runtime, and stopping behavior as independent dimensions with their own cost curves.</p>
+      <p class="why"><b>Why it matters:</b> Single-metric accuracy reporting for agents is as misleading as aggregate accuracy for quantized models — multi-dimensional reliability measurement is the emerging standard for agentic evals.</p>
+      <div class="row">
+        <span class="chip">High Learning Rate</span>
+        <span class="chip">2026-07-12</span>
+        <a href="https://highlearningrate.substack.com/p/agent-reliability-compute-economics" class="src-link">Substack →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.antoinebuteau.com/daily-digest-2026-07-12/">Agent-as-a-Judge for Trajectory Evals</a></h3>
+      <p class="summary">Makes the case for replacing LLM-as-a-judge with agent-as-a-judge evaluation setups that trace multi-step trajectories and catch failures hidden inside stuck loops or broken tool calls, citing research showing agent judges match human expert accuracy at lower cost.</p>
+      <p class="why"><b>Why it matters:</b> Single-turn LLM judges systematically miss agentic failure modes — trajectory-aware evaluation is better aligned with how production agents actually fail in the field.</p>
+      <div class="row">
+        <span class="chip">Antoine Buteau</span>
+        <span class="chip">2026-07-12</span>
+        <a href="https://www.antoinebuteau.com/daily-digest-2026-07-12/" class="src-link">Blog →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://jakobnielsenphd.substack.com/p/ux-roundup-20260713">UX Roundup: AI Agents Change Workflows</a></h3>
+      <p class="summary">Cites Harvard Business School and Perplexity research showing AI agents carry higher delegation cost but lower execution cost, concluding that companies must redesign workflows around AI from the ground up rather than bolting agents onto existing processes.</p>
+      <p class="why"><b>Why it matters:</b> Two independent studies back the same conclusion — the right mental model for agentic automation is workflow replacement, not workflow augmentation.</p>
+      <div class="row">
+        <span class="chip">Jakob Nielsen</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://jakobnielsenphd.substack.com/p/ux-roundup-20260713" class="src-link">Substack →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://emergingai.substack.com/p/claude-for-excel-powerpoint-word">Claude for Excel, PowerPoint, Word, and Outlook: Complete Tutorial</a></h3>
+      <p class="summary">Step-by-step walkthrough for wiring Claude into Microsoft Office apps — Excel data analysis, PowerPoint slide generation, Word drafting, and Outlook email automation — as a practical daily-workflow integration guide for enterprise users.</p>
+      <p class="why"><b>Why it matters:</b> Practical Office integration unlocks AI for knowledge workers who live in these tools; a reusable template for enterprise AI rollout playbooks across large organizations.</p>
+      <div class="row">
+        <span class="chip">Emerging AI</span>
+        <span class="chip">2026-07-14</span>
+        <a href="https://emergingai.substack.com/p/claude-for-excel-powerpoint-word" class="src-link">Substack →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card" style="text-align:center;color:var(--muted)">
+      <p>Nothing notable in the last 24h — news.ycombinator.com and hn.algolia.com blocked by egress policy this run; no HN data available.</p>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card" style="text-align:center;color:var(--muted)">
+      <p>Nothing notable in the last 24h — no recent AI threads indexed by search engines across the monitored subreddits.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/12/shot-scraper/">Release: shot-scraper 1.11</a></h3>
+      <p class="summary">Simon Willison released shot-scraper 1.11, a CLI utility for taking screenshots of websites, recording video demos, and scraping sites using JavaScript execution — with new options for scroll-and-capture and improved browser fingerprint handling.</p>
+      <p class="why"><b>Why it matters:</b> Practical tooling update for web scraping and AI-driven content pipelines; shot-scraper is widely used for testing and documenting LLM-generated web interfaces.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-07-12</span>
+        <a href="https://simonwillison.net/2026/Jul/12/shot-scraper/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/research/claude-values-models-languages">How Claude's Values Vary by Model and Language</a></h3>
+      <p class="summary">Anthropic research examining how Claude's expressed values — honesty, caution, transparency — differ across model versions (Sonnet 4.6, Opus 4.6, Opus 4.7) and 12 languages, using dimensionality reduction on a taxonomy of 339 high-level values. Reveals systematic cross-language value variation even in well-aligned models.</p>
+      <p class="why"><b>Why it matters:</b> Multilingual deployments need per-model, per-language alignment audits — this study provides both the methodology and a public benchmark for teams deploying Claude internationally.</p>
+      <div class="row">
+        <span class="chip">Anthropic Research</span>
+        <span class="chip">2026-07-13</span>
+        <a href="https://www.anthropic.com/research/claude-values-models-languages" class="src-link">Anthropic →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-14 01:04<br>
+    HN (news.ycombinator.com, hn.algolia.com): connect_rejected by egress policy — Discussion tab empty. WebFetch blocked (HTTP 403) for most direct sources; content gathered via WebSearch. Reddit: no threads indexed via web search across monitored subreddits.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
