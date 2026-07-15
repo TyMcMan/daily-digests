@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-15</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Wednesday, July 15, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Tower Semiconductor commits $3B to Japan SiPho expansion with METI support — largest single-site silicon photonics manufacturing announcement to date</a></li>
+      <li><a href="#compute">UMC and SILITH deliver first 12-inch silicon photonics mass-production wafers; 1.6T platform qualified by hyperscaler for volume deployment</a></li>
+      <li><a href="#compute">QuiX Quantum unveils Carina — first universal photonic quantum computer in data center rack form factor; core hardware delivered to DLR QCI</a></li>
+      <li><a href="#europe">Thales acquires Exail Technologies for €3.9B, consolidating Europe's leading photonic gyroscope and quantum navigation IP</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/07/14/3326573/0/en/Tower-Semiconductor-with-METI-Support-Announces-Strategic-Capacity-Expansion-in-Japan.html">Tower Semiconductor Announces $3B Japan Silicon Photonics Expansion with METI Support</a></h3>
+      <p>Tower Semiconductor announced a $3 billion dual-track capacity expansion in Japan focused on 300mm silicon photonics and silicon germanium, backed by $1 billion in METI government grants. Track one repurposes the Arai facility for SiPho and advanced packaging output alongside an upgraded Fab 7 in Uozu; track two adds a new 300mm fab adjacent to Fab 7 delivering a multi-fold capacity increase for AI and datacenter optical connectivity. Full production readiness is targeted for late 2027, with Tower projecting $3.6B revenue and $1.2B net profit by 2028. <em>Why it matters:</em> The largest single-site silicon photonics manufacturing commitment announced to date — government-backed SiPho capacity at this scale removes the near-term supply ceiling for AI datacenter optical transceiver demand and firms up global foundry pricing floors.</p>
+      <div class="meta">GlobeNewswire &middot; 2026-07-14</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://focustaiwan.tw/business/202607140015">UMC and SILITH Achieve 1.6T Silicon Photonics Mass Production in Singapore</a></h3>
+      <p>UMC and SILITH delivered the first mass-produced 12-inch silicon photonics wafers from UMC's Singapore fab, bringing SILITH's 1.6T-per-lane platform to high-volume production for AI datacenter optical interconnects in under 18 months from development start. The platform has been customer-qualified by a leading cloud infrastructure operator for volume deployment; a 400G-per-lane pure-silicon extension using high-speed Mach-Zehnder modulators is in development, and UMC plans to open its own SiPho platform to additional customers by 2027. <em>Why it matters:</em> Moving from engineering samples to hyperscaler-qualified volume production on a 12-inch line validates UMC as a credible second-source SiPho foundry, diversifying co-packaged optics supply away from Intel and Tower for hyperscaler CPO procurements.</p>
+      <div class="meta">Focus Taiwan &middot; 2026-07-14</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/14/quix-quantum-announces-photonic-quantum-computing-architecture-for-commercial-deployment/">QuiX Quantum Unveils Carina: First Universal Photonic Quantum Computer in Data Center Form Factor</a></h3>
+      <p>QuiX Quantum introduced Carina, a room-temperature universal photonic quantum computing architecture designed for standard data center racks, encoding quantum states in single photons with eight input and four computational qubits and a roadmap for rapid scaling. Core hardware has already been delivered to Germany's DLR Quantum Computing Initiative, funded by the German Federal Ministry of Research. Carina uses a measurement-based architecture translating gate-model algorithms into adaptive single-qubit measurements, enabling arbitrary gate-based quantum algorithms to run alongside classical HPC and AI workloads. <em>Why it matters:</em> The room-temperature, rack-mountable design removes the cryogenic integration barrier that has kept photonic QC outside production deployments — this is the first commercially positioned universal photonic QC system in a datacenter-compatible form factor.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-07-14</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.03632">OptiClear: Differentiable Curvilinear Design Rule Legalization for Inverse-Designed Photonic Devices</a></h3>
+      <p>Researchers from Arizona State University, RPI, and NVIDIA present OptiClear, a two-engine fabrication-compliance framework for curvilinear inverse-designed photonic layouts: OptiClear-R applies morphological mask processing to iteratively correct violation regions, while OptiClear-D uses differentiable optimization. Together they reduce design-rule violations from thousands to zero in minutes while minimizing optical performance degradation, remaining effective across a broad range of spacing and minimum-width rules. <em>Why it matters:</em> Fabrication compliance is the primary bottleneck blocking inverse-designed PICs from foundry tape-out; a differentiable legalizer that preserves optical performance directly unlocks high-performance inverse-designed devices for production-ready layouts.</p>
+      <div class="meta">arXiv physics.optics &middot; 2026-07-03</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://gdsfactory.com/plus/changelog/">GDSFactory+ v1.8.18 Adds Model Context Protocol Server for AI-Assisted PIC Design</a></h3>
+      <p>GDSFactory+ version 1.8.18 (released July 6) adds a Model Context Protocol server enabling AI assistants to interface directly with GDSFactory+ tools, foundry PDKs, simulation engines, and DRC/LVS verification workflows. The update gives agent-driven design loops programmatic access to the full GDSFactory+ toolchain without custom API wrappers. <em>Why it matters:</em> MCP integration positions GDSFactory+ as a controllable backend for agentic PIC design workflows — the same architectural pattern enabling software coding agents now arrives for photonic chip layout and verification.</p>
+      <div class="meta">GDSFactory+ &middot; 2026-07-06 <span class="badge">catch-up</span></div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://europractice-ic.com/schedules-prices-2026/">Europractice / imec SiPho Passives+ MPW 2026: July Tape-Out Window Now Open</a></h3>
+      <p>Europractice's 2026 MPW schedule for imec's Silicon Photonics Passives+ platform lists a July tape-out deadline for prototyping run 10133, giving fabless designers access to the iSiPP50G-derived passive and active component set — single-mode waveguides, grating couplers, MMIs, ring resonators — via shared-wafer prototyping on imec's 300mm CMOS-compatible line. The same iSiPP process underlies both high-volume commercial SiPh transceivers and the qubit arrays imec is co-developing with Diraq. <em>Why it matters:</em> With the July window open, PIC startups and academic groups can access Europe's highest-volume SiPh foundry at prototype cost — directly relevant for teams designing CPO components, quantum photonic interfaces, or sensing PICs targeting EU supply chains.</p>
+      <div class="meta">Europractice-IC &middot; 2026-07-15</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://www.photonics.com/Articles/Thales-Purchases-Stake-in-Exail-Plans-for-Full/a72392">Thales to Acquire Exail Technologies for €3.9B, Adding Photonics and Quantum Navigation</a></h3>
+      <p>Thales signed a binding agreement to acquire Exail Technologies (formerly Groupe Gorgé) in a two-stage deal valuing the company at €3.9 billion — a 44% premium to the unaffected share price. Exail's portfolio includes photonic fiber-optic gyroscopes, inertial navigation systems, quantum sensor R&D, and optical components used in submarines, aircraft, land vehicles, and missiles; post-merger, Thales gains both fiber-optic and ring-laser gyroscope technologies. Regulatory approval is expected by Q3 2027, with closing in early 2028. <em>Why it matters:</em> The largest acquisition of a photonics/quantum navigation company in Europe signals that defense-grade photonic sensing is a consolidated strategic asset — expect supply chain tightening and pricing pressure on fiber-optic gyroscope components across the sector.</p>
+      <div class="meta">Photonics.com &middot; 2026-07-06 <span class="badge">catch-up</span></div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260709375006/en/nLIGHT-Awarded-$627-Million-Joint-Laser-Weapon-System-JLWS-Contract">nLIGHT Awarded $627M Joint Laser Weapon System Contract by U.S. DoD</a></h3>
+      <p>nLIGHT was selected for a Joint Laser Weapon System agreement with the U.S. Department of Defense, carrying an initial $44 million award and a $627 million total program ceiling, targeting containerized high-energy laser weapons for cruise missile defense. nLIGHT produces high-power fiber-coupled semiconductor laser arrays and beam-combining modules; the company expects to expand its 800-person Camas, WA workforce to meet production requirements. A parallel $34.5M Army contract supports Directed Energy M-SHORAD prototyping on Stryker vehicles. <em>Why it matters:</em> A $627M defense ceiling contract validates high-power photonic semiconductor lasers as a production-scale commodity, pulling forward volume demand for high-brightness pump diodes that ripple through the fiber laser and industrial photonics supply chain.</p>
+      <div class="meta">Business Wire &middot; 2026-07-09 <span class="badge">catch-up</span></div>
+    </article>
+    <article class="item">
+      <h3><a href="https://finance.yahoo.com/technology/ai/articles/magic-leap-accelerates-future-ai-203000306.html">Magic Leap Pivots to Waveguide Supplier, Signs Pegatron Volume Manufacturing Agreement</a></h3>
+      <p>Magic Leap announced a strategic pivot from first-party AR headsets to becoming the waveguide technology supplier and integration partner for the AI glasses ecosystem, signing a volume manufacturing agreement with Pegatron. The company's surface-relief grating diffractive waveguide process requires significantly fewer etching steps than competing architectures, enabling shorter manufacturing cycles and faster design-to-volume iteration without sacrificing optical quality. <em>Why it matters:</em> Over a decade of Magic Leap waveguide IP entering the ODM supply chain lowers the barrier for AI glasses manufacturers and introduces meaningful waveguide competition — increased supply and pricing pressure could accelerate commoditization of AR optics across the sector.</p>
+      <div class="meta">Yahoo Finance / Business Wire &middot; 2026-07-09 <span class="badge">catch-up</span></div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <article class="item">
+      <h3><a href="https://www.interphotonics.org/">Interphotonics 2026 Opens in Bangkok (July 14–16)</a></h3>
+      <p>The 8th International Conference on Photonics Research (Interphotonics 2026) opened July 14 at the Twin Towers Hotel Convention Centre in Bangkok, Thailand, running through July 16. The conference provides a global forum for researchers presenting innovations across photonics sub-fields, with industry exhibits alongside technical sessions. <em>Why it matters:</em> Key regional photonics research event for Southeast Asia and Pacific Rim activity — announcements and papers from this week's sessions will surface in the photonics literature and news cycle over the coming days.</p>
+      <div class="meta">Interphotonics &middot; 2026-07-14</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: All direct source fetches returned HTTP 403 (globenewswire.com, focustaiwan.tw, thequantuminsider.com, arxiv.org, gdsfactory.com, europractice-ic.com, photonics.com, businesswire.com, interphotonics.org); data via web search only.</div>
+  <div>10 items &middot; generated 2026-07-15 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
