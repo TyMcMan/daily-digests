@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-15</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Wednesday, July 15, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://arxiv.org/abs/2607.09024">GenCeption: Video Generation Models are General-Purpose Vision Learners</a><span class="src">arXiv · DeepMind</span>
+        <span class="why">Google DeepMind shows a single text-to-video diffusion backbone, steered by text instructions, reaches SOTA on depth, normals, pose, segmentation, and 3D keypoints simultaneously — a generalist perceptual foundation from video pretraining.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.08964">Long-Horizon-Terminal-Bench: Testing Agents on 46 Multi-Step Terminal Tasks</a><span class="src">arXiv · HF ↑25</span>
+        <span class="why">New benchmark with dense intermediate rewards (not just pass/fail) for coding/science/game agents on hundreds-of-step workflows — fills the most glaring evaluation gap in agentic AI.</span>
+      </li>
+      <li>
+        <a href="https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises">Anthropic Artifacts get public sharing and multiplayer team editing (July 14)</a><span class="src">VentureBeat</span>
+        <span class="why">Claude users can now share Artifacts publicly via link and co-edit a Claude Code Artifact as a team; also buildable via Claude Tag directly from Slack — collaborative AI workflow goes mainstream.</span>
+      </li>
+      <li>
+        <a href="https://www.anthropic.com/research/global-workspace">Anthropic J-lens: A Global Workspace Inside Claude's Mid-Layers</a><span class="src">Anthropic Research</span>
+        <span class="why">A ~25-concept privileged subspace in Claude behaves like a global workspace — the model can report, reason with, and be steered through it — with the J-lens tool open-sourced, offering a new window into model internals for safety and interpretability.</span>
+      </li>
+      <li>
+        <a href="https://news.ycombinator.com/item?id=48883343">George Hotz: "I love LLMs, I hate hype"</a><span class="src">HN · geohot</span>
+        <span class="why">Hotz separates measurable LLM capability (coding agents, video gen, self-driving) from doom/hype narratives, sparking 200+ comment debate on what practitioners should actually track vs. ignore.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">3</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08964">Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading</a></h3>
+      <p class="summary">A 46-task benchmark for terminal-operating agents (experiment reproduction, software engineering, multimodal analysis, interactive games, scientific computing) that decomposes each task into fine-grained subtasks and awards partial credit, rather than binary pass/fail. Existing benchmarks measure only final outcomes; this captures how far an agent progresses through open-ended multi-hundred-step workflows.</p>
+      <p class="why"><b>Why it matters:</b> Dense reward signals for long-horizon agentic tasks are the missing piece for both evaluation and training of next-generation coding/terminal agents.</p>
+      <div class="row">
+        <span class="chip hot">HF ↑25</span>
+        <span class="chip">cs.AI · cs.SE</span>
+        <span class="chip">2026-07-14</span>
+        <a class="src-link" href="https://huggingface.co/papers/2607.08964">HF papers →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.09024">Video Generation Models are General-Purpose Vision Learners (GenCeption)</a></h3>
+      <p class="summary">Letian Wang, Kaiming He, Andrew Zisserman (Google DeepMind) repurpose a pre-trained text-to-video diffusion backbone as a feed-forward perception model, steered by text instructions. GenCeption achieves SOTA on depth estimation, surface normals, camera pose, expression-referring segmentation, and 3D keypoints — matching or beating task-specific models on each, without separate task heads.</p>
+      <p class="why"><b>Why it matters:</b> Large-scale video pretraining provides spatiotemporal priors richer than image-only models; this is strong evidence that video generation is an emerging generalist perceptual foundation for multi-task vision systems.</p>
+      <div class="row">
+        <span class="chip">cs.CV</span>
+        <span class="chip">Google DeepMind</span>
+        <span class="chip">2026-07-14</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.09024">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.09661">PanoWorld: Real-World Panoramic Generation</a></h3>
+      <p class="summary">Insta360 Research Team introduces a generative model for realistic 360° panoramic image synthesis conditioned on real-world scene context, enabling consistent whole-scene panorama generation via a diffusion-based spatial world model. Achieves significantly better spatial coherence than prior stitching-based approaches.</p>
+      <p class="why"><b>Why it matters:</b> High-quality 360° generation opens new paths for robotics, VR/AR, and autonomous navigation data augmentation, and demonstrates generative models as functional world-state representations.</p>
+      <div class="row">
+        <span class="chip hot">HF ↑12</span>
+        <span class="chip">cs.CV</span>
+        <span class="chip">2026-07-14</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.09661">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.06553">From RGB Generation to Dense Field Readout: Pixel-Space Dense Prediction with Text-to-Image Models</a></h3>
+      <p class="summary">Task-specific LoRA adapters and readout projections trained on top of a frozen T2I diffusion backbone perform geometric dense prediction (depth, surface normals, pose) and scalar field prediction (alpha, saliency) directly in pixel space. Achieves competitive performance without specialized architectures, using generation priors as a general feature extractor.</p>
+      <p class="why"><b>Why it matters:</b> A plug-in recipe for adding dense perception heads to existing diffusion models without retraining the backbone — practically useful for teams that already have a generation pipeline.</p>
+      <div class="row">
+        <span class="chip hot">HF ↑13</span>
+        <span class="chip">cs.CV</span>
+        <span class="chip">2026-07-14</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.06553">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.07964">KronQ: LLM Quantization via Kronecker-Factored Hessian</a></h3>
+      <p class="summary">Extends GPTQ-style compensation-based post-training quantization using a Kronecker-factored Hessian approximation combined with rotation-based orthogonal transforms. Accepted to COLM 2026. Yields more accurate second-order weight quantization than GPTQ and related methods, scalable to large models.</p>
+      <p class="why"><b>Why it matters:</b> Post-training quantization is the primary path to deploying frontier models in memory-constrained environments; KronQ offers a practical accuracy improvement for practitioners already using GPTQ-based pipelines.</p>
+      <div class="row">
+        <span class="chip">cs.LG</span>
+        <span class="chip">COLM 2026</span>
+        <span class="chip">2026-07-14</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.07964">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.09415">Self-Guided Test-Time Training for Long-Context LLMs</a></h3>
+      <p class="summary">Identifies that the bottleneck of test-time training (TTT) for long-context tasks is training-data quality, not the adaptation mechanism. Proposes S-TTT (Self-Guided TTT), which selects high-signal-to-noise spans from a long context based on query relevance before adapting model parameters at inference time, dramatically improving both efficiency and accuracy on long-document tasks.</p>
+      <p class="why"><b>Why it matters:</b> Long-context utilization degrades sharply with input length in current LLMs; S-TTT is a query-aware inference-time adaptation technique with no retraining required, directly applicable to RAG and long-document pipelines.</p>
+      <div class="row">
+        <span class="chip">cs.CL</span>
+        <span class="chip">2026-07-14</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.09415">arXiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/cactus-compute/needle">cactus-compute/needle</a></h3>
+      <p class="summary">A 26M-parameter function-calling model distilled from Gemini's tool-calling capability, designed to run on consumer devices — phones, watches, laptops. Uses a Simple Attention Network architecture, hitting ~6,000 tok/s prefill and ~1,200 tok/s decode on local hardware without GPU requirements.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates that function-calling is a retrieval-and-assembly problem that doesn't require a large model, making lightweight tool-use agents viable for edge deployments. Appeared on GitHub Python trending today following an earlier 280-point Show HN.</p>
+      <div class="row">
+        <span class="chip stars">★ 3.1k</span>
+        <span class="chip">Python</span>
+        <span class="chip">edge inference</span>
+        <a class="src-link" href="https://github.com/cactus-compute/needle">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/VoltAgent/awesome-ai-agent-papers">VoltAgent/awesome-ai-agent-papers</a></h3>
+      <p class="summary">A curated, weekly-updated collection of 500+ AI agent research papers published in 2026 from arXiv, covering multi-agent coordination, memory &amp; RAG, tooling &amp; function calling, evaluation &amp; observability, and agent security. Only includes papers from January 2026 onward. Updated via GitHub Actions.</p>
+      <p class="why"><b>Why it matters:</b> The fastest single-repo index of what the 2026 agent research community is publishing — useful for staying current without monitoring dozens of individual arXiv feeds.</p>
+      <div class="row">
+        <span class="chip">2026 papers only</span>
+        <span class="chip">500+ papers</span>
+        <span class="chip">weekly updates</span>
+        <a class="src-link" href="https://github.com/VoltAgent/awesome-ai-agent-papers">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Piebald-AI/claude-code-system-prompts">Piebald-AI/claude-code-system-prompts</a></h3>
+      <p class="summary">All parts of Claude Code's system prompt across 236+ versions, including 27 builtin tool descriptions, sub-agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact, statusline, WebFetch, Bash cmd, security review, agent creation). Updated for each Claude Code release; currently tracks v2.1.210 (July 14, 2026).</p>
+      <p class="why"><b>Why it matters:</b> The most comprehensive public reference for Claude Code internals — invaluable for teams building workflows on top of Claude Code who need to understand exactly what instructions the agent receives and how tools are described to the model.</p>
+      <div class="row">
+        <span class="chip">Claude Code</span>
+        <span class="chip">v2.1.210 · July 14</span>
+        <span class="chip">236 versions tracked</span>
+        <a class="src-link" href="https://github.com/Piebald-AI/claude-code-system-prompts">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/agentscope-ai/QwenPaw">agentscope-ai/QwenPaw 2.0 — Agent OS Architecture</a></h3>
+      <p class="summary">QwenPaw 2.0 (released July 10) is a ground-up rewrite introducing the Agent OS concept: a layered architecture with a Resource/Governance/Sandbox pillar per agent, a protocol-neutral MCP/A2A/ACP Driver Layer, Loop Engineering (composable approval-gated agent loop templates), Scroll Context (every turn persisted with on-demand recall, nothing summarized away), and ReMe v0.4.0 long-term memory with usage-aware search. Supports macOS/Linux/Windows with an optional full-screen Terminal UI.</p>
+      <p class="why"><b>Why it matters:</b> The most fully specified open-source "Agent OS" architecture to date — explicit governance, per-call policy gates, and indexed memory that persists across sessions, addressing the core pain points of production agent deployment.</p>
+      <div class="row">
+        <span class="chip">AgentScope 2.0</span>
+        <span class="chip">Agent OS</span>
+        <span class="chip">July 10, 2026</span>
+        <a class="src-link" href="https://github.com/agentscope-ai/QwenPaw">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises">Anthropic: Artifacts get public sharing and multiplayer team editing</a></h3>
+      <p class="summary">Launched July 14, 2026: Claude users can now share Artifacts publicly via a permanent link, and teams can co-edit a single Claude Code Artifact simultaneously — live shared dashboards and interactive workspaces. Artifacts can also be created and edited via Claude Tag directly from Slack, without opening the Claude interface. Positions Claude as a collaborative AI work surface rather than a single-user chat tool.</p>
+      <p class="why"><b>Why it matters:</b> Multiplayer Artifacts + Slack integration makes Claude Code a team-native tool for building shared AI-powered dashboards and workspaces — a major step toward replacing ad-hoc AI scripts with structured, sharable outputs in enterprise workflows.</p>
+      <div class="row">
+        <span class="chip">Anthropic · July 14</span>
+        <span class="chip">Claude Code</span>
+        <span class="chip">multiplayer</span>
+        <a class="src-link" href="https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises">VentureBeat →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://hugobowne.substack.com/p/next-level-ai-evals-for-2026">Next Level AI Evals for 2026</a></h3>
+      <p class="summary">Hugo Bowne-Anderson argues that the key mental shift for production AI evals in 2026 is from binary pass/fail unit-test thinking to statistical success-rate distributions — because production AI systems are non-deterministic. The post advocates treating datasets, prompts, and evaluation policies as versioned CI/CD assets, with LLM-as-a-judge covering ~80% of evaluation load while human review is reserved for calibration and compliance edge cases.</p>
+      <p class="why"><b>Why it matters:</b> Concrete framework for teams moving from "does it work" to "how reliably does it work at scale" — the evaluation discipline that separates demo-quality agents from production-grade ones.</p>
+      <div class="row">
+        <span class="chip">evals</span>
+        <span class="chip">LLM-as-judge</span>
+        <span class="chip">practitioner</span>
+        <a class="src-link" href="https://hugobowne.substack.com/p/next-level-ai-evals-for-2026">Substack →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://neo4j.com/videos/nodes-ai-2026-build-intelligent-ai-agents-with-context-engineering/">NODES AI 2026: "Build Intelligent AI Agents With Context Engineering"</a></h3>
+      <p class="summary">Michael Hunger's conference talk (Neo4j NODES AI 2026) demonstrates selective context preparation for agentic workflows, emphasizing that context engineering — curating exactly which information enters the context window before each inference call — rather than model scale, is the real production performance frontier. Features graph-based knowledge retrieval as a mechanism to control context quality.</p>
+      <p class="why"><b>Why it matters:</b> Practical, vendor-neutral walkthrough of context engineering patterns from a conference talk — directly applicable for practitioners building agent harnesses who need to control token usage and response quality.</p>
+      <div class="row">
+        <span class="chip">context engineering</span>
+        <span class="chip">NODES AI 2026</span>
+        <span class="chip">talk</span>
+        <a class="src-link" href="https://neo4j.com/videos/nodes-ai-2026-build-intelligent-ai-agents-with-context-engineering/">Neo4j →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48883343">I love LLMs, I hate hype (George Hotz / geohot)</a></h3>
+      <p class="summary">George Hotz published a July 12 blog post separating what LLMs measurably do well (coding agents, video generation, self-driving support, robotics) from what he calls "doom/hype FUD narratives." He argues the real productivity gains are documented and concrete, while much public discourse inflates both the risk and the progress. Hit the HN front page July 14–15 and generated 200+ comments focused on concrete metrics — context utilization rates, inference cost curves, hallucination benchmarks.</p>
+      <p class="why"><b>Discussion angle:</b> A prominent hardware/AI practitioner taking a calibrated empirical stance on LLM capabilities generated sharp debate between AI safety researchers and engineering practitioners over what counts as evidence.</p>
+      <div class="row">
+        <span class="chip">~294 points</span>
+        <span class="chip">200+ comments</span>
+        <a class="src-link" href="https://geohot.github.io/blog/jekyll/update/2026/07/12/i-love-llms.html">blog post →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48882554">Automation Without Understanding</a></h3>
+      <p class="summary">An essay (arxiv:2607.06377) arguing that as AI systems now produce research-level mathematics — including the May 2026 AI disproof of an Erdős conjecture — the US is simultaneously weakening the human pipeline capable of verifying and understanding such results. The Lean formalization required taking two deep theorems as unproven hypotheses because no one had encoded them in Lean. HN comments included first-hand accounts of agentic coding systems running unsupervised for weeks, raising the "verification without understanding" concern for software pipelines too.</p>
+      <p class="why"><b>Discussion angle:</b> Whether we can trust AI-generated results we can't verify ourselves — a deepening concern as agents produce research outputs, proofs, and code at a scale that outstrips human review capacity.</p>
+      <div class="row">
+        <span class="chip">active · July 14</span>
+        <span class="chip">safety</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.06377">essay →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48884984">Ask HN: What Are You Working On? (July 2026)</a></h3>
+      <p class="summary">The July 2026 monthly "What Are You Working On?" thread is active as of July 15. The current cohort reflects a real shift in what practitioners are actually building: heavy concentration on AI agent infrastructure (controlled loops, approval gates, audit trails), trust &amp; safety tooling for agentic systems, hybrid builders shipping full-stack products with AI-generated backends, and MEV/DeFi systems augmented with LLM reasoning. Contrasts with press coverage which still focuses disproportionately on frontier model benchmarks.</p>
+      <p class="why"><b>Discussion angle:</b> A ground-level snapshot of what working engineers are building in mid-2026 — signal on where real adoption is vs. where hype is.</p>
+      <div class="row">
+        <span class="chip">monthly thread</span>
+        <span class="chip">July 15, 2026</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48884984">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary" style="color:var(--muted)">Web searches across r/MachineLearning, r/LocalLLaMA, r/Artificial, r/Singularity, r/OpenAI, r/Anthropic, r/ClaudeAI, r/AI_Agents, and r/ClaudeCode returned no threads from July 14–15 in search indices. Reddit posts from the current day are rarely indexed within 24h.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/research/global-workspace">A global workspace in language models — Anthropic Research (J-lens / J-space)</a></h3>
+      <p class="summary">Anthropic's 16-author interpretability study (announced July 6) describes the J-lens, a Jacobian-based technique that identifies a small privileged internal subspace (~25 active concepts, ~6–7% of representational variance) in Claude that satisfies five functional properties of conscious access: verbal report, reasoning, multi-step holding, steerability, and early signal before final output. They call it J-space. Swapping one concept's J-lens vector for another changes Claude's answer to match. Companion code is open-sourced at github.com/anthropics/jacobian-lens; external commentary from global-workspace researchers Dehaene and Naccache is included.</p>
+      <p class="why"><b>Why it matters:</b> The first principled geometric handle on what Claude internally "attends to" — directly relevant for detecting hidden goals, testing/fabrication detection, and alignment research.</p>
+      <div class="row">
+        <span class="chip">Anthropic · interpretability</span>
+        <span class="chip">July 6, 2026</span>
+        <a class="src-link" href="https://github.com/anthropics/jacobian-lens">code →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.forbes.com/sites/johnwerner/2026/07/12/anthropic-illuminates-llm-j-space-with-j-lens/">Anthropic Illuminates LLM J-Space With J-Lens (Forbes)</a></h3>
+      <p class="summary">Forbes coverage of the global-workspace / J-lens paper, including reactions from AI safety researchers and a summary of the steerability experiments where researchers redirected Claude's internal attention to alter outputs. The piece contextualizes the finding within the broader interpretability field and discusses implications for AI oversight — including the paper's demonstration that J-space can flag when Claude privately notices it is being tested.</p>
+      <p class="why"><b>Why it matters:</b> Readable overview of the Anthropic J-lens interpretability work with safety researcher commentary — good entry point before diving into the full research paper.</p>
+      <div class="row">
+        <span class="chip">Forbes</span>
+        <span class="chip">July 12, 2026</span>
+        <a class="src-link" href="https://www.forbes.com/sites/johnwerner/2026/07/12/anthropic-illuminates-llm-j-space-with-j-lens/">Forbes →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-15 01:05 UTC<br>
+    Source issues: arXiv, Hugging Face, GitHub, HN direct fetches blocked by egress proxy — all sourced via web search. Blog RSS feeds (Lilian Weng, Eugene Yan, Sebastian Raschka, Latent Space, Simon Willison atom) blocked or no new posts in 24h window. Reddit: no indexed results in last 24h (expected). Several context-engineering items already in seen-links.log — skipped.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
