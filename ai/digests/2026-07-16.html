@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-16</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Thursday, July 16, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 21 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html">Anthropic schedules IPO investor meetings with Goldman, Morgan Stanley, JPMorgan</a><span class="src">CNBC · Bloomberg</span>
+        <span class="why">Anthropic has confidentially filed its IPO prospectus and is now in "testing the waters" mode with major banks — a locked-in October debut would make it the first major AI lab to go public, beating OpenAI to the market.</span>
+      </li>
+      <li>
+        <a href="https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/">OpenAI launches Codex Micro keyboard ($230) — its first hardware product</a><span class="src">TechCrunch</span>
+        <span class="why">A $230 developer keypad with Agent Keys that reflect live agent status, a reasoning-intensity dial, and workflow shortcuts — OpenAI's first physical product, arriving mid Apple-lawsuit and signaling a peripheral ecosystem play around agentic coding.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.12747">Tracing Agentic Failure from the Flow of Success (OAT — ICML 2026)</a><span class="src">arXiv · cs.AI</span>
+        <span class="why">Frames agent-failure attribution as one-class learning using neural controlled differential equations trained exclusively on successful traces — finds error steps at inference without any annotated failure data, directly solving the costliest bottleneck in agentic pipeline debugging.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.12236">Speculate with Memory: Lossless Acceleration for LLM Agents</a><span class="src">arXiv · cs.LG</span>
+        <span class="why">Gives speculative-execution drafters persistent cross-call memory so prediction quality improves with experience — lossless (no output change), cutting inference latency for deployed agentic systems that repeat similar tool sequences.</span>
+      </li>
+      <li>
+        <a href="https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind">Demis Hassabis proposes a FINRA-style independent AI standards body</a><span class="src">Axios · DeepMind CEO</span>
+        <span class="why">First call from a sitting frontier-lab CEO for structured pre-release regulatory clearance: a 30-day review window covering cyber, biological, and deception risks, triggered by Trump's ad hoc Anthropic crackdown — with a target launch before year-end.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">8</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">1</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">5</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12747">Tracing Agentic Failure from the Flow of Success</a></h3>
+      <p class="summary">OAT casts LLM-agent failure attribution as a one-class learning problem using neural controlled differential equations trained exclusively on successful trajectories. At inference time it identifies the exact step where a failing trajectory diverges, without requiring any annotated failure data — making it lightweight and scalable to arbitrary agentic pipelines. Accepted to ICML 2026.</p>
+      <p class="why"><b>Why it matters:</b> Annotating agent failure traces is the current rate-limiting step for improving agentic systems; OAT eliminates that bottleneck with a principled zero-annotation approach.</p>
+      <div class="row">
+        <span class="chip">cs.AI · Agents</span>
+        <span class="chip">ICML 2026</span>
+        <span class="chip">2026-07-15</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12747">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12236">Speculate with Memory: Lossless Acceleration for LLM Agents</a></h3>
+      <p class="summary">Standard speculative execution is stateless — the drafter is discarded after each call. This paper gives the drafter persistent memory across calls so it learns from the agent's history, improving draft quality over time. Crucially, the acceleration is lossless: the output distribution of the target model is unchanged, making it a drop-in optimization for deployed agent pipelines that repeatedly execute similar tool-call sequences.</p>
+      <p class="why"><b>Why it matters:</b> Inference latency is the primary cost in long-horizon agent loops; stateful speculation is a practical, safe, no-output-change path to faster deployment.</p>
+      <div class="row">
+        <span class="chip">cs.LG · cs.CL</span>
+        <span class="chip">Salesforce Research</span>
+        <span class="chip">2026-07-15</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12236">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12764">EvoGraph-R1: Self-Evolving Multimodal Knowledge Hypergraphs for Agentic Retrieval</a></h3>
+      <p class="summary">Reconceptualizes knowledge graphs as dynamic MDP environments: at each step the agent chooses between GraphRetrieve, WebSearch, GraphEdit, or Answer — actions that reshape the hypergraph and generate training feedback for self-evolution. Outperforms static GraphRAG baselines on multimodal QA by integrating new evidence and correcting errors in-context. Accepted to CVPR 2026.</p>
+      <p class="why"><b>Why it matters:</b> Static RAG graphs go stale; EvoGraph-R1 makes the retrieval substrate itself an adaptive agent, closing the loop between retrieval and knowledge curation.</p>
+      <div class="row">
+        <span class="chip">cs.CV · Multimodal</span>
+        <span class="chip">CVPR 2026</span>
+        <span class="chip">2026-07-15</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12764">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12829">Accelerating Masked Diffusion Large Language Models: A Survey of Efficient Inference Techniques</a></h3>
+      <p class="summary">Comprehensive survey of efficient inference methods for masked diffusion language models (MDLMs) — a fast-emerging non-autoregressive alternative to standard LLMs. Covers decoding schedules, confidence-based strategies, KV-cache reuse, and parallel sampling techniques. Accepted to the IJCAI-ECAI 2026 Survey Track, providing the first unified reference as MDLMs move from research curiosity to practical deployment.</p>
+      <p class="why"><b>Why it matters:</b> MDLMs can generate text bidirectionally and in parallel, which AR models cannot; this survey arrives exactly as the field shifts from "can it work?" to "how do we make it fast?"</p>
+      <div class="row">
+        <span class="chip">cs.LG · cs.CL</span>
+        <span class="chip">IJCAI-ECAI 2026</span>
+        <span class="chip">2026-07-15</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12829">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12733">LLMs Can See the Smoke but not the Fire: Evaluating Abductive Reasoning with Elenchos</a></h3>
+      <p class="summary">Elenchos is a benchmark and framework for probing LLM abductive reasoning — inferring the most plausible cause of an observation. Frontier models reliably detect that something is wrong (the "smoke") but fail to identify the specific root cause (the "fire"). This is a critical practical failure mode for agents that must diagnose unexpected states and recover autonomously.</p>
+      <p class="why"><b>Why it matters:</b> Agent debugging and error recovery both require abductive inference; knowing that current models fail this is essential for teams building autonomous recovery loops.</p>
+      <div class="row">
+        <span class="chip">cs.AI · Reasoning</span>
+        <span class="chip">2026-07-15</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12733">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12756">VisCo: Leveraging Large Language Models as Intrinsic Encoders for Visual Token Compression</a></h3>
+      <p class="summary">Instead of training a separate lightweight encoder to select visual tokens to drop, VisCo repurposes the LLM backbone itself to score and compress its own visual token inputs. Eliminates auxiliary-encoder overhead while achieving competitive compression ratios on VQA and captioning benchmarks, directly reducing the quadratic cost of long visual sequences in multimodal LLMs.</p>
+      <p class="why"><b>Why it matters:</b> Long visual contexts are the biggest compute bottleneck in multimodal agents; using the model itself as the compressor avoids adding a separate component with its own training pipeline.</p>
+      <div class="row">
+        <span class="chip">cs.CV · Vision-Language</span>
+        <span class="chip">2026-07-15</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12756">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.11883">Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data</a></h3>
+      <p class="summary">A sequential compression scheme where a teacher selects training samples from the student's own distribution; the compressed representation only encodes disagreements with the teacher rather than the full data, yielding shorter codes with strong MDL/Kolmogorov-complexity theoretical grounding. NYU–CMU collaboration, submitted July 13, 2026.</p>
+      <p class="why"><b>Why it matters:</b> Ties compression theory directly to practical neural net compression, offering a principled alternative to GPTQ-style empirical approaches for model quantization and pruning.</p>
+      <div class="row">
+        <span class="chip">cs.LG · Compression</span>
+        <span class="chip">NYU · CMU</span>
+        <span class="chip">2026-07-13</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.11883">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.11844">Beyond the Single Camera: Agentic Multi-View Reasoning in Sports Video Understanding</a></h3>
+      <p class="summary">Introduces SportMV-Bench, 787 multi-view video bundles and 2,592 QA pairs from official match recordings, spanning Perception-Aware Recognition, Rule-aware Event Interpretation, and Adjudicative Decision Reasoning. Current MLLMs designed for single-view video fail significantly on multi-view inputs requiring cross-view evidence fusion. Microsoft Research Asia + Zhejiang University.</p>
+      <p class="why"><b>Why it matters:</b> Multi-view reasoning is a prerequisite for any embodied or surveillance agent; this benchmark exposes the gap and gives the community a concrete evaluation target.</p>
+      <div class="row">
+        <span class="chip">cs.CV · Multimodal</span>
+        <span class="chip">Microsoft Research Asia</span>
+        <span class="chip">2026-07-13</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.11844">arXiv →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/openinterpreter/openinterpreter">openinterpreter/openinterpreter</a></h3>
+      <p class="summary">A rewritten-in-Rust coding agent for low-cost models — Open Interpreter's latest iteration targets edge and constrained deployments where GPT-4-class API spend is prohibitive. The Rust rewrite delivers significant performance gains over the original Python implementation while preserving the core computer-use model.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates that capable coding agents don't require frontier-model APIs; the Rust rewrite makes it competitive with llama.cpp-class tools for local/edge deployment.</p>
+      <div class="row">
+        <span class="chip stars">★ 65.5k</span>
+        <span class="chip">Rust</span>
+        <span class="chip">+299 today</span>
+        <a class="src-link" href="https://github.com/openinterpreter/openinterpreter">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/K-Dense-AI/scientific-agent-skills">K-Dense-AI/scientific-agent-skills</a></h3>
+      <p class="summary">A library of 140+ ready-to-use scientific agent skills for Claude Code, Codex, Cursor, Pi, Antigravity, and the open Agent Skills standard — covering biology, chemistry, medicine, and drug discovery, with access to 100+ scientific databases. Used by 160,000+ scientists worldwide as of July 2026.</p>
+      <p class="why"><b>Why it matters:</b> Skills libraries for domain-specific work are the next frontier in practical agentic tooling; this is the clearest example of science-sector adoption at scale.</p>
+      <div class="row">
+        <span class="chip">Agent Skills</span>
+        <span class="chip">Python</span>
+        <span class="chip">140+ skills</span>
+        <a class="src-link" href="https://github.com/K-Dense-AI/scientific-agent-skills">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></h3>
+      <p class="summary">Lightweight open-source AI agent framework from HKUDS (Hong Kong University, same group as Vibe-Trading and DeepTutor) covering tool use, conversational workflows, and multi-step task execution. Designed to be embeddable and dependency-light relative to LangChain/AutoGen-class frameworks.</p>
+      <p class="why"><b>Why it matters:</b> The HKUDS group is producing a coherent ecosystem of AI agent tools; nanobot is their foundational agent runtime that underpins the other projects.</p>
+      <div class="row">
+        <span class="chip stars">★ 45k</span>
+        <span class="chip">Python</span>
+        <span class="chip">HKUDS</span>
+        <a class="src-link" href="https://github.com/HKUDS/nanobot">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/HKUDS/DeepTutor">HKUDS/DeepTutor</a></h3>
+      <p class="summary">Lifelong Personalized Tutoring system from HKUDS that uses LLMs to model student knowledge states over time and adaptively sequence learning content. Builds on the group's research into deep reinforcement-based tutoring and has been cited in multiple ICML and NeurIPS 2026 submissions.</p>
+      <p class="why"><b>Why it matters:</b> Personalized adaptive tutoring is one of the highest-value applied AI use cases; this is a production-ready open-source implementation with a long research pedigree.</p>
+      <div class="row">
+        <span class="chip stars">★ 26.3k</span>
+        <span class="chip">Python</span>
+        <span class="chip">+172 today</span>
+        <a class="src-link" href="https://github.com/HKUDS/DeepTutor">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/HenryNdubuaku/maths-cs-ai-compendium">HenryNdubuaku/maths-cs-ai-compendium</a></h3>
+      <p class="summary">A comprehensive, structured compendium of the mathematics, computer science, and AI research engineering knowledge required to work on frontier AI — covering linear algebra, probability, optimization, algorithms, systems, and ML theory with pointers to primary sources. Written in TypeScript with interactive visualizations.</p>
+      <p class="why"><b>Why it matters:</b> One of the highest-quality self-contained study guides for AI research engineering that appeared on trending today; the interactive TypeScript implementation makes it more accessible than most static references.</p>
+      <div class="row">
+        <span class="chip stars">★ 5.9k</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">+725 today</span>
+        <a class="src-link" href="https://github.com/HenryNdubuaku/maths-cs-ai-compendium">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-at-build-2026-announce/">Microsoft Agent Framework 1.0 GA: CodeAct, Foundry Hosted Agents, AutoGen+Semantic Kernel Unified</a></h3>
+      <p class="summary">MAF 1.0 GA ships AutoGen and Semantic Kernel merged into a single framework, with two headline features: CodeAct (the model writes Python that runs in a Hyperlight micro-VM sandbox per call, eliminating the tool-call latency-and-security tradeoff), and Foundry Hosted Agents (scale-to-zero containers with persistent session state and built-in identity + observability). Announced at Microsoft BUILD 2026.</p>
+      <p class="why"><b>Why it matters:</b> CodeAct's sandboxed-Python execution pattern is being adopted as the industry baseline for safe tool execution — its GA in a Microsoft-supported framework cements it as the new standard for enterprise agent architectures.</p>
+      <div class="row">
+        <span class="chip">Microsoft</span>
+        <span class="chip">AutoGen · Semantic Kernel</span>
+        <span class="chip">BUILD 2026</span>
+        <a class="src-link" href="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-at-build-2026-announce/">Microsoft blog →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/omnigent-ai/omnigent">Omnigent: Open-Source AI Agent Meta-Harness (Databricks, Apache licensed)</a><span style="font-size:11px;background:#2a313c;color:#7c9cff;padding:2px 8px;border-radius:10px;margin-left:8px;font-weight:600">catch-up</span></h3>
+      <p class="summary">Released July 10, Omnigent sits above individual coding agents — Claude Code, Codex, Cursor, Pi, custom YAML agents — as a meta-harness: swap or combine underlying agents with one-line config changes, enforce security policies via bubblewrap/seatbelt sandboxes, and share live collaborative sessions by link. Built by Databricks and Apache-licensed.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the most immediate pain point as teams scale up agentic coding — agent vendor lock-in and the inability to run policies consistently across multiple harnesses.</p>
+      <div class="row">
+        <span class="chip">Databricks</span>
+        <span class="chip">Apache 2.0</span>
+        <span class="chip">2026-07-10</span>
+        <a class="src-link" href="https://github.com/omnigent-ai/omnigent">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://techwithibrahim.medium.com/top-7-ai-agent-evaluation-frameworks-to-know-in-2026-786828662571">Top 7 AI Agent Evaluation Frameworks to Know in 2026</a></h3>
+      <p class="summary">Structured comparison of DeepEval, Braintrust, Arize Phoenix, OpenAI Evals, RAGAS, LangSmith, and Galileo — covering trajectory checking, CI gating, and production scoring. The key insight across all seven: agent evals must judge multi-step trajectories (did the agent loop, wander, or hallucinate an intermediate tool call?) not just final outputs. Written July 2026 as teams move from eyeball testing to instrumented eval pipelines.</p>
+      <p class="why"><b>Why it matters:</b> Trajectory-based evaluation is the gap most production agent teams are currently hitting; this is the most comprehensive public framework comparison available for the 2026 tooling landscape.</p>
+      <div class="row">
+        <span class="chip">evals · agents</span>
+        <span class="chip">July 2026</span>
+        <a class="src-link" href="https://techwithibrahim.medium.com/top-7-ai-agent-evaluation-frameworks-to-know-in-2026-786828662571">Medium →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary" style="color:var(--muted)">Hacker News sources (news.ycombinator.com, hn.algolia.com, hacker-news.firebaseio.com) are blocked by the session egress proxy policy. No HN data is available for this run.</p>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary" style="color:var(--muted)">Web searches across r/MachineLearning, r/LocalLLaMA, r/Artificial, r/Singularity, r/OpenAI, r/Anthropic, r/ClaudeAI, r/AI_Agents, r/ClaudeCode, r/Grok, r/DeepSeek, and r/VibeCoding returned no indexable threads for July 15–16. Recent Reddit posts are rarely indexed by search engines within the same day.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind">Demis Hassabis Proposes a FINRA-Style Independent AI Standards Body (Axios, July 14)</a></h3>
+      <p class="summary">Google DeepMind CEO Demis Hassabis published a proposal calling for a FINRA-style independent body to review frontier AI models up to 30 days before public release, with mandatory safety tests covering cyber, biological, and deception risks. Triggered by Trump administration's ad hoc crackdown on Anthropic's Fable/Mythos models. Initially voluntary; gains legal authority over time; board majority would be Turing Award winners and credentialed experts. Target: operational before year-end. TechCrunch also covered.</p>
+      <p class="why"><b>Why it matters:</b> The first structured pre-release regulatory clearance proposal from a sitting frontier-lab CEO, with a specific institutional model — changes the framing of the regulation debate from "if" to "how."</p>
+      <div class="row">
+        <span class="chip">DeepMind · Regulation</span>
+        <span class="chip">July 14, 2026</span>
+        <a class="src-link" href="https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/">TechCrunch →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html">Anthropic Plans IPO Investor Meetings — October Debut on Track (CNBC/Bloomberg, July 15)</a></h3>
+      <p class="summary">Anthropic has confidentially filed its IPO prospectus with the SEC and is scheduling preliminary "testing the waters" meetings with Goldman Sachs, Morgan Stanley, and JPMorgan. The company's last private round valued it at $965 billion (May 2026), overtaking OpenAI's $852 billion for the first time. An October listing would beat OpenAI to the public market — both Bloomberg and CNBC confirmed the investor-meeting stage is underway.</p>
+      <p class="why"><b>Why it matters:</b> Entering the investor-meeting phase is the concrete go/no-go signal for an IPO; a $965B-valuation Anthropic going public resets the entire AI-company public-market baseline.</p>
+      <div class="row">
+        <span class="chip">Anthropic · IPO</span>
+        <span class="chip">July 15, 2026</span>
+        <a class="src-link" href="https://www.bloomberg.com/news/articles/2026-07-15/anthropic-is-said-to-plan-ipo-investor-meetings-as-listing-nears">Bloomberg →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/">OpenAI Launches Codex Micro Keyboard ($230) — First Hardware Product (TechCrunch, July 15)</a></h3>
+      <p class="summary">Co-designed with Work Louder, the Codex Micro is a $230 mechanical keypad featuring Agent Keys (light-up status indicators for live agents), Command Keys for Codex shortcuts, a joystick for launching agent workflows, and a dial that adjusts reasoning intensity in real time. Available in clicky and silent variants through OpenAI.com and Work Louder's site. The launch arrived mid-Apple-lawsuit alleging OpenAI improperly leveraged Apple's hardware design language.</p>
+      <p class="why"><b>Why it matters:</b> OpenAI entering hardware signals that AI-native developer peripherals are becoming a distinct product category — the agent-status-indicator model will likely be replicated across competing products.</p>
+      <div class="row">
+        <span class="chip">OpenAI · Hardware</span>
+        <span class="chip">$230</span>
+        <span class="chip">July 15, 2026</span>
+        <a class="src-link" href="https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/">TechCrunch →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/14/github-changeling/">Simon Willison: Commentary on GitHub Changelog (July 14)</a></h3>
+      <p class="summary">Simon Willison flagged a notable entry from the GitHub Changelog in his curated link-blog — Willison only posts items he considers genuinely significant for developers and AI practitioners, making his selection a reliable signal filter for GitHub product news. The post appeared on July 14 with confirmed URL; full content not fetchable in this run due to proxy restrictions on simonwillison.net.</p>
+      <p class="why"><b>Why it matters:</b> Willison's signal-to-noise ratio on developer tooling is exceptionally high; any item he flags merits a direct read.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">GitHub Changelog</span>
+        <span class="chip">July 14, 2026</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/14/github-changeling/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.manton.org/2026/07/15/openai-responds.html">OpenAI Responds to Apple Lawsuit — "Not Aware of Any Evidence This Has Merit" (manton.org, July 15)</a></h3>
+      <p class="summary">OpenAI publicly denied Apple's lawsuit allegations, stating it is "not aware of any evidence that this complaint has merit," while emails reviewed by NBC News appeared to contradict parts of Apple's account of the initial outreach. The legal dispute centers on allegations that OpenAI improperly leveraged Apple's design language in hardware products — the lawsuit landed the same week as OpenAI's Codex Micro keyboard launch. Manton Reece covers the OpenAI response thread.</p>
+      <p class="why"><b>Why it matters:</b> A high-profile Apple–OpenAI IP fight over hardware design arriving mid-keyboard-launch creates real strategic uncertainty for OpenAI's hardware ambitions and signals that the big-tech IP wars are extending into AI peripherals.</p>
+      <div class="row">
+        <span class="chip">OpenAI · Apple</span>
+        <span class="chip">Legal</span>
+        <span class="chip">July 15, 2026</span>
+        <a class="src-link" href="https://www.manton.org/2026/07/15/openai-responds.html">manton.org →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-16 01:05 UTC<br>
+    Source issues: arXiv and HuggingFace direct fetches blocked by egress proxy — papers sourced via web search; HF upvote counts unavailable. Hacker News (hn.algolia.com, news.ycombinator.com) blocked by egress proxy — Discussion tab empty. Blog RSS feeds (simonwillison.net, Lilian Weng, Latent Space, etc.) blocked by proxy — blogs sourced via web search. Reddit: no indexed threads for July 15–16 (expected). SwirlAI context-engineering article and top-5 GitHub trending repos (mattpocock/skills, Graphify-Labs/graphify, Nutlope/hallmark, Shubhamsaboo/awesome-llm-apps, HKUDS/Vibe-Trading) already in seen-links.log — skipped.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
