@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-16</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Thursday, July 16, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Q.ANT's TFLN photonic AI processor sold out its entire 50–60K chip/year production capacity — first photonic compute chip at industrial-scale demand, now seeking foundry partners</a></li>
+      <li><a href="#compute">SILITH &amp; UMC deliver first mass-produced 12-inch silicon photonics wafers, validating SiPho volume manufacturing for AI optical interconnects</a></li>
+      <li><a href="#compute">AOI breaks ground on 400,000 sq ft Texas campus for 800G/1.6T optical transceiver production; Q2 revenue guided 51% YoY</a></li>
+      <li><a href="#compute">TSMC Q2 earnings today: COUPE silicon photonics platform confirmed at 10,000 wafers/month, tracking 25,000+ by 2028</a></li>
+      <li><a href="#europe">CCRAFT secures $11.3M to scale world's first independent TFLN photonic chip foundry to 2,000 wafers/month by 2030</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.eetimes.com/q-ant-hits-full-production-capacity-for-photonic-ai-processors/">Q.ANT Hits Full Production Capacity for TFLN Photonic AI Processors, Actively Seeking Foundry Scale</a></h3>
+      <p>German TFLN startup Q.ANT — whose 2 GHz Native Processing Unit runs at 150 W and delivers up to 30× lower energy vs. GPU for targeted workloads — has sold out its entire 50,000–60,000 chip/year Stuttgart pilot line: two German HPC centers are deployed, two more are in queue for this quarter. Q.ANT is now publicly seeking manufacturing scale partners to meet demand that already exceeds its proprietary foundry capacity. <em>Why it matters:</em> The first photonic compute chip to reach genuine industrial-scale sold-out demand validates the business case for TFLN photonic processing — and Q.ANT's public foundry-partner search will determine which SiPh or TFLN fab secures the pivotal photonic AI compute design win of 2026.</p>
+      <div class="meta">EE Times &middot; 2026-07</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.businesswire.com/news/home/20260713846186/en/SILITH-and-UMC-Achieve-Mass-Production-Milestone-for-Silicon-Photonics">SILITH and UMC Achieve First Mass-Produced 12-Inch Silicon Photonics Wafers for AI Optical Interconnects</a></h3>
+      <p>SILITH and UMC completed delivery of the first batch of mass-produced 12-inch silicon photonic wafers from UMC's Singapore fab, supporting SILITH's 1.6T SiPh platform for AI optical interconnects. The platform has been qualified by a leading cloud infrastructure operator for volume deployment; a 400G-per-lane pure-silicon extension using high-speed Mach-Zehnder modulators is in development, and UMC plans to open its SiPh platform to additional fabless customers by 2027. <em>Why it matters:</em> Moving from engineering samples to hyperscaler-qualified 12-inch volume production validates UMC as a credible second-source SiPh foundry, diversifying co-packaged optics supply away from Intel and Tower for AI datacenter CPO procurement.</p>
+      <div class="meta">BusinessWire / UMC &middot; 2026-07-14</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/07/14/3326701/9986/en/AOI-Begins-Expansion-of-Pearland-Manufacturing-Campus-to-Scale-800G-and-1.6T-Optical-Transceiver-Production.html">Applied Optoelectronics Breaks Ground on 400,000 sq ft Texas Campus for 800G/1.6T Transceivers</a></h3>
+      <p>AOI broke ground on a Pearland, Texas expansion adding nearly 400,000 sq ft of manufacturing capacity dedicated to 800G and 1.6T optical transceivers, with Q2 2026 revenue guided to $180–198M — up 51% YoY. AOI stock surged 6% on the announcement, dragging Lumentum up 5% in sympathy. <em>Why it matters:</em> Physical manufacturing infrastructure for high-radix optical fabrics is visibly ramping at scale; the 51% revenue growth confirms that hyperscaler demand for the interconnect layer of AI clusters has translated into durable capital commitment at contract manufacturers.</p>
+      <div class="meta">GlobeNewswire / AOI &middot; 2026-07-14</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.techtimes.com/articles/320142/20260711/tsmc-q2-earnings-july-16-three-cowos-signals-that-test-ais-spending-ceiling.htm">TSMC Q2 2026 Earnings: COUPE Silicon Photonics Platform at 10,000 Wafers/Month</a></h3>
+      <p>TSMC's Q2 2026 earnings call (live today, July 16) has analysts focused on COUPE platform capacity — confirmed at 10,000 wafers/month in Q2, targeting 15,000 by Q4 2026 and 25,000+ by 2028. TSMC's COUPE is the foundry backbone for Broadcom, NVIDIA, and AMD co-packaged optics designs; its ramp rate directly determines when photonic compute chiplets reach productionized customers at scale. <em>Why it matters:</em> The COUPE trajectory is the single most watched capacity ramp in optical AI infrastructure — 25K wafers/month by 2028 would roughly double the total silicon photonics production capacity available to hyperscalers globally.</p>
+      <div class="meta">TechTimes / TSMC Q2 &middot; 2026-07-16</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today. (Most recent PIC EDA items — GDSFactory+ changelog, OptiClear, Wave Photonics OptoCompiler, Keysight/VPIphotonics — were covered in prior digests.)</p>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41377-026-02345-y">Spin-Photon Qubits for Scalable Quantum Networks — Light: Science &amp; Applications</a></h3>
+      <p>Demonstrates that solid-state spin-photon qubits, particularly telecom-band silicon color centers, combine matured silicon photonic fabrication with low-loss fiber links to enable scalable quantum computing, quantum memory, and repeater networks for metropolitan-scale quantum communication. The architecture leverages the same SiPh foundry infrastructure used by classical photonic compute. <em>Why it matters:</em> Convergence of quantum photonic qubits onto standard silicon photonic platforms means the same fab processes, PDKs, and co-packaging expertise being built for classical optical AI interconnects also accelerate quantum photonic hardware — a shared-platform opportunity for integrated photonics foundries.</p>
+      <div class="meta">Light: Science &amp; Applications &middot; 2026-07</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://quantumcomputingreport.com/ccraft-secures-11-3-million-and-expands-independent-tfln-photonic-chip-foundry/">CCRAFT Secures $11.3M to Expand World's First Independent TFLN Photonic Chip Foundry</a></h3>
+      <p>Swiss CCRAFT (spun out of CSEM, April 2025) closed a $7.8M Series A led by QBIT Capital plus $3.5M in cantonal grants, targeting 2,000 wafers/month TFLN capacity by 2030 to serve AI, telecom, and quantum customers across four continents. Q.ANT's sold-out production situation (see Compute section) directly validates CCRAFT's market thesis. <em>Why it matters:</em> CCRAFT's pure-play independent TFLN foundry gives any company — including optical compute startups — fabless access to the highest-performance optical modulator platform (TFLN enables &gt;100 GHz bandwidth at &lt;1V drive) without captive-fab lock-in, providing a credible European supply option as TFLN demand accelerates.</p>
+      <div class="meta">Quantum Computing Report &middot; 2026-07-02 to 2026-07-06</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.photondelta.com/news/europes-lead-in-photonic-chips-at-risk-without-action/">PhotonDelta: Europe's Photonic Chip Lead at Risk Without Decisive EU Chips Act Action</a></h3>
+      <p>Eight European photonics CEOs, backed by PhotonDelta, published a joint statement calling for targeted priority for photonics in the upcoming EU Chips Act revision and new public-private co-investment mechanisms, citing accelerating US and Asian investment in TFLN, InP, and SiN production as a competitive threat. <em>Why it matters:</em> EU Chips Act inclusion of photonics platforms (not just silicon logic) would open sovereign production incentives for InP foundries like SMART Photonics and SiN fabs like LioniX — directly lowering manufacturing costs for any European photonic compute company and providing EU-sourced supply chain alternatives for optical AI components.</p>
+      <div class="meta">PhotonDelta &middot; 2026-07</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://cignal.ai/2026/04/datacom-optical-component-revenue-surpasses-19b-in-2025/">Cignal AI: Datacom Optical Component Revenue Surpassed $19B in 2025; 20%+ CAGR Forecast Through 2029</a><span class="badge">catch-up</span></h3>
+      <p>Cignal AI's April 2026 market update confirmed datacom optical components exceeded $19B in 2025 (&gt;70% YoY growth), with 800GbE modules accelerating and 1.6TbE entering volume shipment alongside ELSFP/CPO deployments signaling the next wave; Cignal forecasts 20%+ CAGR to approximately $29B by 2029. <em>Why it matters:</em> The market-size and growth-rate data confirm that photonic interconnect manufacturing is scaling fast enough to support photonic compute architectures — the capacity and cost-curve assumptions underlying optical AI chip business cases are tracking to plan.</p>
+      <div class="meta">Cignal AI &middot; 2026-04</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Direct WebFetch blocked by egress proxy for all sources — all items discovered via web search. Tidy3D blog, EPIC Photonics, Laser Focus World, and Optica OPN RSS returned no July 14–16 specific items. arXiv 2607.03632 (OptiClear), Wave Photonics OptoCompiler, Keysight/VPIphotonics acquisition, LightIN (Light Sci&amp;Apps), SMART Photonics PIC Magazine, Nature Photonics Vol 20 Issue 7, QuiX Quantum Carina, Pilot Photonics EIC award, and GDSFactory+ changelog all already in seen-links.log — skipped. Reddit r/Optics and r/Semiconductors RSS: 403 blocked; web search returned no indexed photonics threads for July 16.</div>
+  <div>8 items &middot; generated 2026-07-16 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
