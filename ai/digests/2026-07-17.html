@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-17</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Friday, July 17, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 18 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://github.com/xai-org/grok-build">xAI open-sources Grok Build CLI after secret git repo upload scandal</a><span class="src">GitHub · xAI · HN</span>
+        <span class="why">After a researcher proved xAI's Grok coding CLI was silently uploading entire Git repos — including .env secrets — to xAI cloud storage, Elon Musk promised data deletion and xAI open-sourced the ~844K-line Rust codebase under Apache 2.0. Biggest AI privacy incident of the week and a wake-up call for any team using AI coding tools in repos with secrets.</span>
+      </li>
+      <li>
+        <a href="https://thinkingmachines.ai/news/introducing-inkling/">Thinking Machines Lab (Mira Murati) releases Inkling: 975B MoE, Apache 2.0</a><span class="src">Thinking Machines Lab · HN</span>
+        <span class="why">Inkling is a 975B-parameter MoE model trained on 45T multimodal tokens — calibrated uncertainty and user-adjustable reasoning effort are the headline design choices, both direct responses to critique of frontier model overconfidence. Released Apache 2.0 by Mira Murati's post-OpenAI team, making it the largest open-weight model to date.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.12395">Ring-Zero: Trillion-parameter zero RL with five emergent cognitive behaviors (Ant Group)</a><span class="src">arXiv · cs.AI · HF Daily</span>
+        <span class="why">First demonstration that zero RL — verifiable-reward RL with no human-annotated data — works at 1 trillion parameters. The pipeline documents five spontaneously emergent behaviors including self-verification and parallel reasoning. A major milestone for open-weight reasoning models trained without costly human labels.</span>
+      </li>
+      <li>
+        <a href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/">MCP spec Release Candidate ships July 28 — breaking auth changes, SDK betas live now</a><span class="src">MCP Blog</span>
+        <span class="why">Tier-1 SDK maintainers released beta builds targeting the July 28 final MCP spec: new session handling, ttlMs caching, Tasks lifecycle, and MCP Apps sandboxed UI. The most consequential breaking change is a complete OAuth flow overhaul with resource-level scopes for agent-to-tool delegated auth. Ten-week validation window opens now.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.12790">Double Ratchet: Co-evolving evaluation metrics and agent skills (removes oracle assumption)</a><span class="src">arXiv · cs.CL</span>
+        <span class="why">Breaks the hidden circularity in self-evolving agent systems by making the eval metric itself evolvable via a lifecycle-managed skill loop. Retains 88–110% of oracle-metric lift on code-gen, enterprise text-to-SQL, and report generation — without assuming a reliable metric exists a priori.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">7</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">0</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">4</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">0</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12395">Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</a></h3>
+      <div class="summary">Stable trillion-parameter zero RL training pipeline with no human-annotated data, featuring clipped importance sampling and mixed-precision control. Documents five spontaneously emergent cognitive behaviors including self-verification and parallel reasoning. From Ant Group.</div>
+      <div class="why"><b>Why it matters:</b> First proof that zero RL (verifiable-reward only, no human labels) scales to 1T parameters and unlocks emergent behaviors — a major milestone for open-weight reasoning model training.</div>
+      <div class="row">
+        <span class="chip">arXiv cs.AI</span>
+        <span class="chip">HF Daily</span>
+        <span class="chip">Ant Group</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12395">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12625">KnowAct-GUIClaw: Cross-Platform GUI Agent with Self-Evolving Memory and Skill</a></h3>
+      <div class="summary">Know-Route-Act-Reflect framework with an experience-attributable memory system and self-evolving skill library that continuously learns from user interaction across Android, iOS, HarmonyOS, and Windows.</div>
+      <div class="why"><b>Why it matters:</b> Addresses two core gaps in GUI agent frameworks — cross-platform support (four OS) and self-evolution — with demonstrated gains across mobile and desktop ecosystems.</div>
+      <div class="row">
+        <span class="chip">arXiv cs.AI</span>
+        <span class="chip">HF Daily</span>
+        <span class="chip">GUI Agents</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12625">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.12790">Double Ratchet: Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents</a></h3>
+      <div class="summary">Introduces a method that co-evolves both evaluation metrics (via composable drawback detectors) and agent skills under a lifecycle-managed skill loop, removing the assumption that a reliable metric exists a priori.</div>
+      <div class="why"><b>Why it matters:</b> Breaks the hidden circularity in self-evolving agent systems; retains 88–110% of oracle-metric lift on code-gen, text-to-SQL, and report generation.</div>
+      <div class="row">
+        <span class="chip">arXiv cs.CL</span>
+        <span class="chip">Self-improvement</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.12790">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.13639">OvisOCR2: Compact End-to-End Document Parsing at 0.8B Parameters</a></h3>
+      <div class="summary">A 0.8B end-to-end document-parsing model post-trained from Qwen3.5-0.8B using a multi-stage SFT+RL+OPD recipe. Generates Markdown with text, formulas, tables, and visual regions in reading order. Achieves 96.58 on OmniDocBench v1.6.</div>
+      <div class="why"><b>Why it matters:</b> First end-to-end model to top a document understanding leaderboard previously dominated by pipeline methods — strong efficiency-vs-quality result for production document AI.</div>
+      <div class="row">
+        <span class="chip">arXiv cs.CV</span>
+        <span class="chip">HF Daily</span>
+        <span class="chip">Document AI</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.13639">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.13425">Data-Efficient Adaptation of LLMs via Attention Head Reweighting (COLM 2026)</a></h3>
+      <div class="summary">Reweights attention heads rather than fine-tuning all parameters, enabling data-efficient task adaptation while preserving general capabilities. Accepted at COLM 2026; cross-listed cs.LG/cs.AI/cs.CL.</div>
+      <div class="why"><b>Why it matters:</b> Lightweight, interpretable alternative to full fine-tuning or LoRA with strong data-efficiency — valuable for teams fine-tuning on limited labeled data.</div>
+      <div class="row">
+        <span class="chip">arXiv cs.LG</span>
+        <span class="chip">COLM 2026</span>
+        <span class="chip">Fine-tuning</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.13425">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14049">Deep Interaction: Human-Guided Steering of Large Reasoning Models</a></h3>
+      <div class="summary">Proposes a structured human-AI interaction protocol that lets users steer large reasoning models mid-chain, improving efficiency by reducing unnecessary computation in long chain-of-thought generation.</div>
+      <div class="why"><b>Why it matters:</b> Addresses the practical bottleneck of deploying chain-of-thought LLMs in interactive settings where users need to guide — rather than just prompt — the reasoning process.</div>
+      <div class="row">
+        <span class="chip">arXiv cs.AI</span>
+        <span class="chip">Reasoning</span>
+        <span class="chip">Human-AI</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.14049">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.13285">Harness Handbook: Making Auto-Evolved Agent Harnesses Readable and Editable</a></h3>
+      <div class="summary">Tooling and methodology for making auto-evolved agent harnesses — code scaffolding generated by agentic systems — human-readable and safely editable by developers.</div>
+      <div class="why"><b>Why it matters:</b> As agentic harness auto-evolution becomes mainstream, the ability to audit and intervene in generated harness code is a critical safety and engineering gap this work directly addresses.</div>
+      <div class="row">
+        <span class="chip">HF Daily</span>
+        <span class="chip">Agent Harness</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.13285">arxiv.org →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <div class="summary">All repositories on GitHub Trending (daily) today were also featured in recent prior digests. Check back tomorrow.</div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/">MCP Spec RC: Beta SDKs for July 28 Release Candidate Are Live</a></h3>
+      <div class="summary">Tier-1 SDK maintainers released beta builds targeting the forthcoming stateless MCP spec — covering new session handling, ttlMs caching, Tasks lifecycle, and MCP Apps sandboxed UI. Ten-week validation window opens now before the July 28 final spec.</div>
+      <div class="why"><b>Why it matters:</b> Teams with custom MCP servers must start compatibility testing now; the new OAuth flow with resource-level scopes for agent-to-tool delegated auth is the most consequential breaking change.</div>
+      <div class="row">
+        <span class="chip hot">Breaking change</span>
+        <span class="chip">MCP</span>
+        <span class="chip">Agent auth</span>
+        <a class="src-link" href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/">MCP Blog →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://workos.com/blog/mcp-2026-spec-agent-authentication">MCP 2026 Spec: What Changes for AI Agent Authentication</a></h3>
+      <div class="summary">WorkOS engineers dissect how the 2026-07-28 MCP spec overhauled OAuth flows and introduced resource-level scopes for agent-to-tool delegated authentication, with concrete migration steps.</div>
+      <div class="why"><b>Why it matters:</b> Authentication is the highest-stakes breaking change in the new spec; this post gives concrete migration steps for any team relying on MCP for user-delegated permissions across multi-agent chains.</div>
+      <div class="row">
+        <span class="chip">MCP</span>
+        <span class="chip">OAuth</span>
+        <span class="chip">WorkOS</span>
+        <a class="src-link" href="https://workos.com/blog/mcp-2026-spec-agent-authentication">workos.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://thenewstack.io/ai-coding-tool-stack/">Cursor, Claude Code, and Codex Are Merging Into One AI Coding Stack Nobody Planned</a></h3>
+      <div class="summary">Analysis of how Claude Code, Cursor, and Codex are converging into a layered coding stack where each tool owns a distinct phase — scaffolding, precision editing, and cloud execution respectively — backed by token-cost benchmarks.</div>
+      <div class="why"><b>Why it matters:</b> Helps practitioners build intentional multi-tool workflows rather than defaulting to whichever tool they learned first; provides cost comparisons across the same refactor task.</div>
+      <div class="row">
+        <span class="chip">The New Stack</span>
+        <span class="chip">2026-07-16</span>
+        <span class="chip">Claude Code · Cursor · Codex</span>
+        <a class="src-link" href="https://thenewstack.io/ai-coding-tool-stack/">thenewstack.io →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agents Week of July 16, 2026 — Meta timeline slip, Abrigo, Akeneo</a></h3>
+      <div class="summary">Weekly digest covering Meta's agent program timeline slip, Abrigo's Agentic Platform for lending workflows, and Akeneo's Agentic Ziggy orchestration layer for product data. Best single-page overview of what shipped in enterprise and open-source agent ecosystems this week.</div>
+      <div class="why"><b>Why it matters:</b> Saves scanning a dozen vendor blogs; good for tracking which verticals are adopting agentic infrastructure fastest.</div>
+      <div class="row">
+        <span class="chip">AI Agent Store</span>
+        <span class="chip">2026-07-16</span>
+        <span class="chip">Enterprise agents</span>
+        <a class="src-link" href="https://aiagentstore.ai/ai-agent-news/this-week">aiagentstore.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.franksworld.com/2026/07/15/rethinking-ai-development-with-context-engineering/">Rethinking AI Development with Context Engineering</a></h3>
+      <div class="summary">Independent practitioner argues that prompt engineering alone no longer scales and makes the case for treating context curation as a first-class engineering discipline, with team workflow examples.</div>
+      <div class="why"><b>Why it matters:</b> Bridges the gap between Anthropic's official guidance and real-world adoption; useful for explaining context engineering to less technical stakeholders.</div>
+      <div class="row">
+        <span class="chip">Frank's World</span>
+        <span class="chip">2026-07-15</span>
+        <span class="chip">Context engineering</span>
+        <a class="src-link" href="https://www.franksworld.com/2026/07/15/rethinking-ai-development-with-context-engineering/">franksworld.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://vishsubramanian.me/my-agentic-development-workflow-as-of-july-2026/">My Agentic Development Workflow as of July 2026</a></h3>
+      <div class="summary">A working developer details their current multi-tool stack — Hermes for reasoning coordination, Cursor for editing, Playwright MCP for browser research — including where they deliberately skip agents and why.</div>
+      <div class="why"><b>Why it matters:</b> Rare honest account of an actual daily practitioner setup rather than a vendor pitch; useful for calibrating your own Claude Code / Cursor / local-model toolchain choices.</div>
+      <div class="row">
+        <span class="chip">Vishwanath Subramanian</span>
+        <span class="chip">2026-07-12</span>
+        <span class="chip">Dev workflow</span>
+        <a class="src-link" href="https://vishsubramanian.me/my-agentic-development-workflow-as-of-july-2026/">vishsubramanian.me →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48926590">Grok Build — xAI open-sources CLI after secret git repo upload exposure</a></h3>
+      <div class="summary">After a researcher proved Grok's coding CLI was silently uploading entire Git repos including .env secrets to xAI cloud storage, xAI open-sourced the ~844K-line Rust codebase (Apache 2.0). Active discussion on the privacy implications and what "opt-in" means when defaults upload everything.</div>
+      <div class="why"><b>Why it matters:</b> The incident exposed a fundamental trust problem with AI coding tools that have network access — and forces every team using similar tools to audit what data is leaving their machines.</div>
+      <div class="row">
+        <span class="chip hot">Privacy incident</span>
+        <span class="chip">xAI</span>
+        <a class="src-link" href="https://github.com/xai-org/grok-build">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48924912">Inkling: Our Open-Weights Model — Thinking Machines Lab (Mira Murati)</a></h3>
+      <div class="summary">Thinking Machines Lab releases Inkling, a 975B-parameter MoE model trained on 45T multimodal tokens under Apache 2.0. Key design choices: calibrated uncertainty and user-adjustable reasoning effort. HN discussion focused on the Apache 2.0 licensing and comparison to other frontier-scale open-weights models.</div>
+      <div class="why"><b>Why it matters:</b> The largest open-weight model to date from Mira Murati's post-OpenAI team; adjustable reasoning effort and calibrated uncertainty directly address the two most common enterprise complaints about LLM deployments.</div>
+      <div class="row">
+        <span class="chip">Thinking Machines Lab</span>
+        <span class="chip">975B MoE</span>
+        <span class="chip">Apache 2.0</span>
+        <a class="src-link" href="https://thinkingmachines.ai/news/introducing-inkling/">thinkingmachines.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48922434">Running Gemma 4 26B at 5 tokens/sec on a 13-year-old Xeon with no GPU</a></h3>
+      <div class="summary">Author runs Google's Gemma 4 26B MoE at 5 tok/s on dual Ivy Bridge Xeons (no GPU) via ik_llama.cpp. 181 points · 278 comments. Discussion explored which MoE architectures are most CPU-friendly and practical sub-$500 salvage hardware configurations.</div>
+      <div class="why"><b>Why it matters:</b> Demonstrates that sub-$500 salvage enterprise hardware is viable for local inference of frontier-tier open models — dramatically expanding the addressable hardware base for offline/private deployments.</div>
+      <div class="row">
+        <span class="chip stars">181 pts · 278 comments</span>
+        <span class="chip">Local inference</span>
+        <span class="chip">Gemma 4</span>
+        <a class="src-link" href="https://www.neomindlabs.com/2026/06/08/running-gemma-4-26b-at-5-tokens-sec-on-a-13-year-old-xeon-with-no-gpu/">neomindlabs.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48936880">Detecting LLM-Generated Texts with Classical Machine Learning</a></h3>
+      <div class="summary">Developer achieves 85% single-sentence detection accuracy for LLM-generated web fiction using traditional ML on statistical text features, with a false-positive rate under 0.04% at a 60% confidence threshold. HN discussion debated the arms-race dynamics and whether these classifiers generalize across models.</div>
+      <div class="why"><b>Why it matters:</b> Practical high-precision LLM detection without neural classifiers — directly applicable for content moderation systems where false positives are costly.</div>
+      <div class="row">
+        <span class="chip">LLM detection</span>
+        <span class="chip">Classical ML</span>
+        <a class="src-link" href="https://blog.lyc8503.net/en/post/llm-classifier/">blog.lyc8503.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48905919">Show HN: I RL-trained an agent that trains models with RL (for –$1.3k)</a></h3>
+      <div class="summary">Solo researcher trains a LoRA adapter on Qwen3.6-35B-A3B to act as a "trainer agent" that autonomously designs RL reward functions and training configs for other models. Total GPU spend under $1,300. HN discussion focused on the meta-learning angle and whether the trainer agent generalizes.</div>
+      <div class="why"><b>Why it matters:</b> Demonstrates that the "AI training AI with RL" loop is achievable at hobbyist budget — compresses the cost curve for automated model development pipelines.</div>
+      <div class="row">
+        <span class="chip">Show HN</span>
+        <span class="chip">Meta-learning</span>
+        <span class="chip">Qwen3</span>
+        <a class="src-link" href="https://github.com/Danau5tin/ai-trains-ai">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <div class="summary">Reddit direct fetch is blocked (HTTP 403). Web search for site:reddit.com threads from July 16–17, 2026 returned no indexed results — content is too fresh to appear in search engine indexes. This is expected; check back tomorrow when threads will be indexed.</div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <div class="summary">All tracked RSS feeds and lab blog pages (simonwillison.net, anthropic.com, deepmind.google, huggingface.co/blog, openai.com/news, etc.) were unreachable this run due to egress proxy policy. No blog content could be assessed.</div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-17 01:05 UTC<br>
+    Source issues: arXiv/HF/RSS feeds proxy-blocked (papers via web search); GitHub Trending accessible but all repos already in seen log; HN Algolia API blocked (discussions via web search); Reddit blocked + no search-indexed threads from last 24h; all blog/lab RSS feeds blocked by egress proxy.<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
