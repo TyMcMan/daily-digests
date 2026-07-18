@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-18</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Saturday, July 18, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 21 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems">Kimi K3 — Moonshot's 2.8T open MoE model</a>
+        <span class="src">VentureBeat</span>
+        <span class="why">World's largest open-weight model: 2.8T params, 50B active, 1M context, $3/M tokens — Opus-class performance at Sonnet-class pricing, open weights by July 27.</span>
+      </li>
+      <li>
+        <a href="https://centraljersey.com/2026/07/17/google-gemini-3-5-pro-launch-what-to-expect/">Gemini 3.5 Pro — Google's next flagship targets July 17</a>
+        <span class="src">Central Jersey / TechTimes</span>
+        <span class="why">After scrapping its base model and restarting pretraining, Google DeepMind targets a 2M-token context, Deep Think reasoning mode, and no government-access restriction for the July 17 launch.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.14777">SEED: Self-Evolving On-Policy Distillation for Agentic RL</a>
+        <span class="src">arXiv cs.AI</span>
+        <span class="why">A single policy simultaneously acts in its environment, extracts hindsight skills from completed trajectories, and distills them back into itself — no external teacher needed for continuous agentic self-improvement.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.14935">VideoChat3 — Fully open 4B video MLLM</a>
+        <span class="src">arXiv cs.CV / HF #1</span>
+        <span class="why">First fully open 4B video multimodal LLM covering short clips to live streaming, with I3D-ViT delivering 16× spatiotemporal compression — HuggingFace #1 trending paper.</span>
+      </li>
+      <li>
+        <a href="https://www.macrumors.com/2026/07/17/apple-sends-legal-letters-openai/">Apple targets 40+ former employees now at OpenAI</a>
+        <span class="src">MacRumors / 9to5Mac</span>
+        <span class="why">Legal preservation letters to ~40 ex-Apple engineers escalate the trade-secret lawsuit — with 400+ Apple alumni at OpenAI, the case could reshape AI talent mobility norms.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14935">VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding</a></h3>
+      <p class="summary">A 4B fully open video-centric multimodal LLM that handles the complete spectrum of video tasks: motion understanding, long video, temporal grounding, and live streaming. Introduces Inflated 3D Vision Transformer (I3D-ViT) for 16× spatiotemporal compression and Adaptive Frame Resolution for streaming. Fully open on HuggingFace (HF #1 trending July 17).</p>
+      <p class="why"><b>Why it matters:</b> First fully open video MLLM covering short clips through live streaming at 4B parameters — viable open alternative to closed video-understanding APIs.</p>
+      <div class="row">
+        <span class="chip">cs.CV · cs.MM</span>
+        <span class="chip">Xinhao Li et al.</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.14935">arXiv:2607.14935 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14777">SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning</a></h3>
+      <p class="summary">A framework where one policy checkpoint simultaneously acts in the environment to collect on-policy trajectories, analyzes those trajectories into hindsight skills, and distills the skill-induced behavioral changes back into the policy. Creates a self-improving loop for long-horizon agents without external teacher models (HF #2 trending July 17).</p>
+      <p class="why"><b>Why it matters:</b> Removes the external-teacher requirement for agentic self-improvement, directly enabling continuous autonomous capability improvement in deployed systems.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">Jinyang Wu et al.</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.14777">arXiv:2607.14777 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15257">SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration</a></h3>
+      <p class="summary">Converts fragile implicit search progress into explicit, persistent, shared state for multi-agent systems. Formulates open-domain information seeking as relational schema completion with grounded citations, introducing Search-Oriented Context Management (SOCM) with four components: Frontier Task, Evidence Graph, Coverage Map, and Failure Memory (HF #3 trending July 17).</p>
+      <p class="why"><b>Why it matters:</b> Directly tackles the common failure mode of search agents looping on repetitive dead ends — structured persistent state is a key step toward reliable long-horizon research automation.</p>
+      <div class="row">
+        <span class="chip">cs.IR · cs.AI</span>
+        <span class="chip">Yuyao Zhang et al.</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.15257">arXiv:2607.15257 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15277">Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models</a></h3>
+      <p class="summary">A statistical framework for measuring and improving LLM self-consistency using partition, prompt, and aggregate strategies. Provides principled statistical guarantees on the reliability of LLM outputs across multiple prompting strategies, directly addressing inconsistency and hallucination.</p>
+      <p class="why"><b>Why it matters:</b> Offers formal statistical guarantees on LLM output reliability — directly applicable to reducing hallucination in production pipelines.</p>
+      <div class="row">
+        <span class="chip">cs.CL · cs.LG</span>
+        <span class="chip">Wolf, Buening, Krause, Mendler-Dünner</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.15277">arXiv:2607.15277 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.13683">Self-Evolving Agent Harnesses via Gated Semantic Quality-Diversity</a></h3>
+      <p class="summary">A framework for safety-constrained agentic self-modification: agents autonomously improve their own tooling and execution environments using gated semantic quality-diversity selection, with self-modification confined to a steering adapter and versioned harness around a frozen base model.</p>
+      <p class="why"><b>Why it matters:</b> Safety-guardrailed self-modification of agent harnesses — advances self-improving systems while preserving base model integrity, directly relevant to harness engineering workflows.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.LG</span>
+        <span class="chip">arXiv cs.AI listing</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.13683">arXiv:2607.13683 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.08399">Prompt Compression via Activation Aggregation</a></h3>
+      <p class="summary">Task-relevant information in instruction prompts can be compressed into a single activation vector by taking a learned weighted sum of intermediate-layer activations and re-injecting it at an early layer — replacing the original token sequence with under 2% accuracy drop. Dramatically reduces inference cost for long system prompts.</p>
+      <p class="why"><b>Why it matters:</b> A practical path to compressing long system prompts into single activation vectors — major cost reduction for production deployments with large context windows.</p>
+      <div class="row">
+        <span class="chip">cs.CL · cs.LG</span>
+        <span class="chip">Ardoin, Einsele, Bregu</span>
+        <span class="chip">2026-07 (trending HF)</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.08399">arXiv:2607.08399 →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/PostHog/posthog">PostHog/posthog</a></h3>
+      <p class="summary">Open-source platform for building self-driving products, now featuring AI observability alongside analytics, session replay, feature flags, A/B experiments, and error tracking — all in one stack. Growing traction as the all-in-one developer platform for monitoring LLM applications alongside traditional product analytics.</p>
+      <p class="why"><b>Why it matters:</b> AI observability for LLM apps, feature flags for model rollouts, and experimentation in one self-hosted stack — filling a gap in the AI engineering toolkit.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip hot">+438 ★ today</span>
+        <span class="chip stars">36k total ★</span>
+        <a class="src-link" href="https://github.com/PostHog/posthog">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/github/copilot-sdk">github/copilot-sdk</a></h3>
+      <p class="summary">Multi-platform SDK (Java) for integrating GitHub Copilot Agent into applications and services. Official GitHub SDK enabling developers to embed Copilot AI coding capabilities into their own apps — part of the broader GitHub agentic platform push.</p>
+      <p class="why"><b>Why it matters:</b> Official SDK for Copilot Agent integration signals GitHub is opening its AI coding infrastructure to third-party embedding, potentially shifting the AI IDE ecosystem.</p>
+      <div class="row">
+        <span class="chip">Java</span>
+        <span class="chip hot">+233 ★ today</span>
+        <span class="chip stars">9.8k total ★</span>
+        <a class="src-link" href="https://github.com/github/copilot-sdk">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/tirth8205/code-review-graph">tirth8205/code-review-graph</a></h3>
+      <p class="summary">Local-first code intelligence graph for MCP and CLI that builds a persistent, context-reducing knowledge map of codebases for AI coding assistants. Surfaces code relationships, call graphs, and semantic clusters to reduce context overhead in AI code review workflows.</p>
+      <p class="why"><b>Why it matters:</b> MCP-native persistent codebase graph cuts context waste in AI code review — directly addressses the context-management bottleneck for large-repo coding agents.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip hot">+74 ★ today</span>
+        <span class="chip stars">19.8k total ★</span>
+        <a class="src-link" href="https://github.com/tirth8205/code-review-graph">GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14777">SEED: Self-Evolving On-Policy Distillation for Agentic RL</a></h3>
+      <p class="summary">SEED creates a self-improving loop: the same policy simultaneously collects on-policy trajectories, extracts hindsight skills from completed tasks, and distills those skills back into itself — no separate teacher model needed. Achieves continuous capability improvement for long-horizon agentic tasks.</p>
+      <p class="why"><b>Why it matters:</b> Removes the external supervisor requirement from agentic self-improvement cycles — directly applicable to autonomous coding and research agents that improve through deployment experience.</p>
+      <div class="row">
+        <span class="chip">cs.AI · Agentic RL</span>
+        <span class="chip">Jinyang Wu et al.</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.14777">arXiv:2607.14777 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15257">SearchOS-V1: Multi-Agent Search with Persistent Shared State</a></h3>
+      <p class="summary">SearchOS introduces Search-Oriented Context Management (SOCM) — four shared state components (Frontier Task, Evidence Graph, Coverage Map, Failure Memory) that turn fragile implicit search progress into explicit, recoverable, multi-agent coordination. Addresses the core failure mode of search agents repeating dead ends.</p>
+      <p class="why"><b>Why it matters:</b> Structured persistent state for multi-agent search systems is a transferable architecture pattern for any agent harness that needs to coordinate parallel tool-using workers without redundant effort.</p>
+      <div class="row">
+        <span class="chip">cs.IR · Multi-Agent</span>
+        <span class="chip">Yuyao Zhang et al.</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.15257">arXiv:2607.15257 →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.13683">Self-Evolving Agent Harnesses via Gated Semantic Quality-Diversity</a></h3>
+      <p class="summary">Agents improve their own harness tooling using quality-diversity selection, with self-modification safely confined to a steering adapter and a versioned harness layer around a frozen base model. Provides a safety envelope that prevents runaway self-modification while enabling meaningful capability growth.</p>
+      <p class="why"><b>Why it matters:</b> Proposes a concrete safety architecture for self-modifying harnesses — directly relevant to building agents that can update their own tool definitions and workflows without compromising the underlying model.</p>
+      <div class="row">
+        <span class="chip">cs.AI · Harness Engineering</span>
+        <span class="chip">arXiv cs.AI</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.13683">arXiv:2607.13683 →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/">Kimi K3 and what we can still learn from the pelican benchmark</a></h3>
+      <p class="summary">Simon Willison evaluates Kimi K3 using his private "pelican benchmark" — a set of idiosyncratic factual questions designed to probe LLM grounding and benchmark-gaming. Reflects on what the pelican benchmark reveals about K3's capabilities and why practitioners still benefit from maintaining their own private evals alongside published leaderboard results.</p>
+      <p class="why"><b>Why it matters:</b> Concrete example of the eval-methodology discipline that matters most as frontier open-weight models proliferate — Willison's approach is a replicable template for practitioners building their own model-independent benchmarks.</p>
+      <div class="row">
+        <span class="chip">Eval methodology</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-07-16</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/16/kimi-k3/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://academy.openai.com/">OpenAI Academy: Codex for Everyday Use — 45-min Tutorial</a></h3>
+      <p class="summary">OpenAI Academy published a 45-minute video tutorial on July 17 covering practical daily use of Codex for developers, alongside a 30-minute "Building websites with ChatGPT Sites" companion tutorial. Content targets beginner-to-intermediate practitioners integrating agentic coding tools into routine development workflows rather than advanced orchestration scenarios.</p>
+      <p class="why"><b>Why it matters:</b> Structured on-ramp for mainstream developer adoption of Codex agentic coding — useful calibration point for what "typical developer workflow" looks like with AI coding tools in mid-2026.</p>
+      <div class="row">
+        <span class="chip">Coding workflow</span>
+        <span class="chip">OpenAI Academy</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://academy.openai.com/">OpenAI Academy →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.communitydays.org/event/2026-07-17/ai-agents-bootcamp-washington-dc-2026">AI Agents Bootcamp Washington DC — July 17</a></h3>
+      <p class="summary">Full-day in-person bootcamp (Reston, VA, July 17) for building enterprise AI agents using Microsoft Copilot Studio and Azure AI Foundry. Covers multi-tool coordination, organizational knowledge retrieval, complex task reasoning, business workflow automation, and decision-making with minimal human intervention — deliberately capped group size for personalized guidance.</p>
+      <p class="why"><b>Why it matters:</b> Signals that enterprise AI agent training has reached a structured bootcamp format (Microsoft-ecosystem) — useful reference for what production agent patterns are being taught to enterprise developers in mid-2026.</p>
+      <div class="row">
+        <span class="chip">In-person event</span>
+        <span class="chip">Microsoft / Community Days</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://www.communitydays.org/event/2026-07-17/ai-agents-bootcamp-washington-dc-2026">Community Days →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://www.macrumors.com/2026/07/17/apple-sends-legal-letters-openai/">Apple targets dozens of OpenAI employees with legal letters</a></h3>
+      <p class="summary">Apple sent legal preservation letters to ~40 former employees now at OpenAI, escalating its trade-secret lawsuit alleging coordinated recruitment of key hardware and product engineers. Apple claims 400+ ex-Apple employees now work at OpenAI; the company says the alleged misconduct is broader than a few isolated actors. OpenAI denied the allegations. HN #1 story July 17.</p>
+      <div class="row">
+        <span class="chip">Apple · OpenAI · Legal</span>
+        <span class="chip">MacRumors · 2026-07-17</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48946303">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/discussion/724918">Blatant AI slop just won a $25k DeepMind Kaggle Grand Prize</a></h3>
+      <p class="summary">A submission to DeepMind's $200k "Measuring Progress Toward AGI: Cognitive Abilities" Kaggle competition won a $25k prize despite participant criticism of flawed claims, opaque methodology, and AI-generated content throughout. Generated heated debate about AI benchmark integrity, competition judging standards, and the growing difficulty of distinguishing genuine insight from polished AI-generated output in competitive science.</p>
+      <div class="row">
+        <span class="chip">AI Benchmarks · Evals</span>
+        <span class="chip">Kaggle · 2026-07-17</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48946010">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/07/17/amazon-fixing-bug-that-billed-some-aws-customers-billions-of-dollars/">Amazon fixing bug that showed AWS customers billions in fake charges</a></h3>
+      <p class="summary">A bug in AWS Cost Explorer starting ~7:38 PM PDT July 16 caused massively inflated billing projections — some customers saw trillions of dollars in estimated charges. AWS confirmed the issue was limited to inaccurate forecast data (not actual charges) and paused estimated billing computations while investigating. A sharp reminder that AI-generated billing forecasting systems can amplify errors catastrophically in customer-facing dashboards.</p>
+      <div class="row">
+        <span class="chip">AWS · Infrastructure</span>
+        <span class="chip">TechCrunch · 2026-07-17</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48945681">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://kimi.moonshot.cn/news/kimi-k3">Kimi K3: Open Frontier Intelligence</a></h3>
+      <p class="summary">Moonshot AI's official tech blog post for Kimi K3 — 2.8T total params, 50B active (Stable LatentMoE with 896 experts), 1M-token context, native multimodal, API at $3/M input. Benchmarks place it near Opus 4.8-class quality. Open weights promised by July 27. Strong discussion on HN around the model's agentic coding performance and implications for the open-weight frontier.</p>
+      <div class="row">
+        <span class="chip">Kimi K3 · Open Weights</span>
+        <span class="chip">Moonshot AI · 2026-07-16</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48935342">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/">Kimi K3 and what we can still learn from the pelican benchmark</a></h3>
+      <p class="summary">Simon Willison's post-launch analysis of Kimi K3 using his private factual-grounding benchmark generated substantial HN discussion about what private evals reveal that leaderboards cannot. Comments debate whether the model's benchmark-gaming patterns differ from prior Chinese open-weight releases and how practitioners should calibrate trust in self-reported results from any lab.</p>
+      <div class="row">
+        <span class="chip">Evals · Open weights</span>
+        <span class="chip">simonwillison.net · 2026-07-16</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48947717">HN discussion →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">Web search with site:reddit.com queries across r/MachineLearning, r/LocalLLaMA, r/Artificial, r/ClaudeAI, r/AI_Agents, and r/OpenAI returned no indexable threads for July 17–18, 2026. Active discussions around Kimi K3, Gemini 3.5 Pro, and the AI slop/Kaggle controversy are confirmed to exist from news coverage, but no direct reddit.com thread URLs were surfaced in search results.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed (search returned no thread URLs)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest">[AINews] Kimi K3 2.8T-A50B: Largest Open Model Ever; Opus-Class at Sonnet Pricing</a></h3>
+      <p class="summary">Latent.Space AINews weekday roundup covering Moonshot AI's Kimi K3 launch alongside Thinking Machines' Inkling 975B open-weights release. Positions Kimi K3 as the world's largest open model and benchmarks it at Opus 4.8-class performance at Sonnet 5 pricing. Also covers Gemma 4 updates and the broader July 2026 open-weight model wave — good single-stop summary of the week's model news.</p>
+      <div class="row">
+        <span class="chip">Newsletter</span>
+        <span class="chip">Latent.Space (swyx)</span>
+        <span class="chip">2026-07-16</span>
+        <a class="src-link" href="https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest">latent.space →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/16/inkling/">Inkling — Thinking Machines Lab's 975B open-weights MoE</a></h3>
+      <p class="summary">Simon Willison's coverage of Mira Murati's Thinking Machines Lab releasing Inkling: 975B total params, 41B active, 1M-token context, pretrained on 45T tokens across text/images/audio/video, Apache 2.0. Notes the focus on fine-tuning and customization over benchmark rankings, and availability on Tinker and Hugging Face — a different philosophy from benchmark-driven model development.</p>
+      <div class="row">
+        <span class="chip">Blog</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-07-16</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/16/inkling/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/">llm-cliche-highlighter — browser tool to catch AI prose patterns</a></h3>
+      <p class="summary">Simon Willison releases a browser-based tool at tools.simonwillison.net that highlights sentences matching known LLM clichés (e.g. "In the realm of…", "It's important to note…"). Features chain pattern detection with badge counts and hover explanations. Highlights the growing practitioner toolkit for distinguishing AI-generated from human-authored text.</p>
+      <div class="row">
+        <span class="chip">Tool release</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-07-17</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/16/grok-mermaid/">grok-mermaid — Mermaid diagram to Unicode box art via LLM</a></h3>
+      <p class="summary">New tool from Simon Willison (tools.simonwillison.net/grok-mermaid) that converts Mermaid diagram syntax to Unicode box-art via an LLM call — useful for embedding diagrams in markdown, terminal output, and plain-text contexts where rendered Mermaid isn't available. Demonstrates the maturing ecosystem of small, composable LLM-powered text utilities.</p>
+      <div class="row">
+        <span class="chip">Tool release</span>
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-07-16</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/16/grok-mermaid/">simonwillison.net →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-18 01:05 UTC<br>
+    Source issues: arXiv listing pages returned HTTP 403 (paper data via web search); HN Algolia API blocked (thread IDs confirmed via search); HuggingFace Daily Papers blocked (rankings via search); simonwillison.net RSS blocked (posts via site-search); latent.space RSS blocked (post confirmed via search); interconnects.ai — no new post confirmed in 24h window; sebastianraschka.com — no new post in window; anthropic.com/news — no new post confirmed in window; Reddit site: queries returned no thread URLs for July 17–18.
+    <br>AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
