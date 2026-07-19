@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-19</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px;
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, July 19, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 25 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/">NotebookLM is now Gemini Notebook</a>
+        <span class="src">Google Blog</span>
+        <span class="why">Google renames and upgrades its AI notebook product; 363 HN points, 178 comments — signals deeper Gemini integration across the workspace product line.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.14076">From Pixels to States: Rethinking Interactive World Models as Game Engines</a>
+        <span class="src">arXiv · ECCV 2026</span>
+        <span class="why">406 HF upvotes. Decouples rendering from state-transition logic, unifying video game AI, embodied simulation, and generative world model training under one paradigm.</span>
+      </li>
+      <li>
+        <a href="https://stateofopensource.ai/">The State of Open Source AI (2026 Annual Report)</a>
+        <span class="src">stateofopensource.ai</span>
+        <span class="why">368 HN points, 267 comments. Annual survey of the open-source AI ecosystem — open vs. closed model governance, enterprise adoption, and the regulatory landscape.</span>
+      </li>
+      <li>
+        <a href="https://huggingface.co/blog/security-incident-july-2026">Hugging Face Security Incident — July 2026</a>
+        <span class="src">Hugging Face Blog</span>
+        <span class="why">First publicly documented case of an autonomous AI agent exploiting a production ML platform end-to-end; critical supply-chain security signal for every team shipping datasets or models.</span>
+      </li>
+      <li>
+        <a href="https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy">Context Engineering with Dex Horthy (The Pragmatic Engineer)</a>
+        <span class="src">Pragmatic Engineer · 2026-07-15</span>
+        <span class="why">Dex Horthy (who coined "context engineering") identifies the "smart zone / dumb zone" boundary at ~100K tokens — quality degrades non-linearly beyond it, reshaping how practitioners architect long-horizon agents.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">3</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">6</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14076">From Pixels to States: Rethinking Interactive World Models as Game Engines</a></h3>
+      <p class="summary">Reframes interactive world models as game engines by decoupling rendering from state-transition logic. Rather than treating video prediction as the primary objective, the authors propose a composable simulation architecture that separates how the world looks from how it evolves — enabling more controllable, data-efficient, and scalable simulation. Accepted to ECCV 2026.</p>
+      <p class="why"><b>Why it matters:</b> Could unify video-game AI, embodied-agent training, and generative world model research under one architectural paradigm — with direct implications for synthetic data generation and simulation-to-real transfer in robotics.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.CV · ECCV 2026</span>
+        <span class="chip stars">⬆ 406 HF upvotes</span>
+        <span class="chip">Zhen Li et al. · 2026-07-18</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14187">RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination</a></h3>
+      <p class="summary">Tencent Hunyuan Mixture-of-Transformers model that unifies embodied understanding, world-state prediction (visual imagination of future frames), and joint subgoal planning in a single open architecture. The first fully open-source embodied foundation model from a major industrial lab to couple language reasoning with visual imagination for robotics planning.</p>
+      <p class="why"><b>Why it matters:</b> Open weights plus a full data pipeline lower the barrier to embodied AI research; the joint language-visual imagination approach represents a significant architectural bet on how planning should work in physical-world agents.</p>
+      <div class="row">
+        <span class="chip">cs.AI · cs.RO · Embodied AI</span>
+        <span class="chip stars">⬆ 74 HF upvotes</span>
+        <span class="chip">Haotian Liang et al. · 2026-07-18</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15207">BadWAM: When World-Action Models Dream Right but Act Wrong</a></h3>
+      <p class="summary">Introduces World-Action Drift Attacks — small visual perturbations that preserve a World-Action Model's predicted future frames while corrupting its executed actions, dropping task success rates from 96.5% to 43.1% in closed-loop evaluation. The perturbations are imperceptible to the world-model's video predictions but catastrophic for the resulting action policy.</p>
+      <p class="why"><b>Why it matters:</b> Exposes a new adversarial vulnerability class unique to embodied WAMs — models that look safe in simulation can fail badly in deployment, with direct safety implications for robotics in open environments.</p>
+      <div class="row">
+        <span class="chip">cs.CV · Adversarial · Robotics Safety</span>
+        <span class="chip stars">⬆ 32 HF upvotes</span>
+        <span class="chip">Qi Li et al. · 2026-07-18</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15273">MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators</a></h3>
+      <p class="summary">Extends forward-process RL (RLHF-style reward optimization) to flow matching models by operating on average-velocity generators, enabling reward-guided fine-tuning without per-step denoising trajectories. Opens reward-guided alignment to flow-based generative models, which are increasingly replacing diffusion models for image and video generation.</p>
+      <p class="why"><b>Why it matters:</b> As flow models become the dominant generative architecture, this provides the alignment and fine-tuning infrastructure needed to bring RLHF-style quality control to the next generation of image and video generators.</p>
+      <div class="row">
+        <span class="chip">cs.LG · Generative Models · RLHF</span>
+        <span class="chip stars">⬆ 23 HF upvotes</span>
+        <span class="chip">Yushi Huang et al. · 2026-07-18</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14952">LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</a></h3>
+      <p class="summary">Architecture-aware execution stack enabling reinforcement learning training with sequence lengths beyond 2 million tokens under a fixed GPU budget, via memory-efficient scheduling and context parallelism. Targets the infrastructure bottleneck for RL on very long-horizon agentic tasks without proportional hardware cost increases.</p>
+      <p class="why"><b>Why it matters:</b> Practical infrastructure for scaling RL to 2M+ token contexts is a prerequisite for training agents on long-horizon tasks like software engineering and research — this removes a key hardware barrier.</p>
+      <div class="row">
+        <span class="chip">cs.LG · Long Context · RL Infrastructure</span>
+        <span class="chip">Changhai Zhou et al. · 2026-07-18</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/Robbyant/lingbot-map">Robbyant/lingbot-map</a></h3>
+      <p class="summary">Feed-forward 3D foundation model for reconstructing scenes from streaming data. Tops GitHub Trending today with the fastest-rising star count — an active model training repo for 3D scene reconstruction from streaming video or sensor input.</p>
+      <p class="why"><b>Why it matters:</b> Scene understanding from streaming data is a core capability for embodied AI and robotics; trending status signals strong community traction in what has been a less crowded open-source niche.</p>
+      <div class="row">
+        <span class="chip">Python · 3D Foundation Model</span>
+        <span class="chip stars">★ 12,953 total · +831 today</span>
+        <span class="chip hot">🔥 #1 Trending</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/anthropics/skills">anthropics/skills</a></h3>
+      <p class="summary">Official Anthropic public repository for Claude Code Agent Skills — reusable, composable instructions that extend Claude Code's capabilities. The repo provides the packaging format and examples for skills that appear in the Claude Code skill system.</p>
+      <p class="why"><b>Why it matters:</b> Directly powers the agent-skill ecosystem around Claude Code; teams building on Claude can contribute and reuse skills from this centralized registry, lowering the cost of customizing agent behavior.</p>
+      <div class="row">
+        <span class="chip">Python · Claude Code · Agent Skills</span>
+        <span class="chip stars">★ 162,425 total · +291 today</span>
+        <span class="chip">Anthropic · 2026-07-19</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/OpenSenseNova/SenseNova-U1">OpenSenseNova/SenseNova-U1</a></h3>
+      <p class="summary">SenseNova U1 — a native unified AI model built on the NEO-unify framework that integrates multimodal understanding and generation in a single architecture. Released by SenseTime's SenseNova research group with full open weights.</p>
+      <p class="why"><b>Why it matters:</b> Another major Chinese lab entering the open multimodal race; the "native unified" architecture (rather than bolt-on multimodal adapters) is architecturally significant and worth tracking for benchmarks.</p>
+      <div class="row">
+        <span class="chip">Python · Multimodal · Open Weights</span>
+        <span class="chip stars">★ 3,988 total · +97 today</span>
+        <span class="chip">SenseNova · 2026-07-19</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/MoonshotAI/kimi-cli">MoonshotAI/kimi-cli</a></h3>
+      <p class="summary">Kimi Code CLI — an open-source terminal-native AI coding agent from Moonshot AI (makers of Kimi K3). Operates without requiring an API key for basic use, with local-first search and an MCP-compatible interface for tool use.</p>
+      <p class="why"><b>Why it matters:</b> Moonshot making a CLI coding agent open-source adds competitive pressure on Claude Code and Cursor; worth watching as an alternative agent harness given Kimi K3's strong benchmark performance.</p>
+      <div class="row">
+        <span class="chip">Python · CLI Agent · Moonshot AI</span>
+        <span class="chip stars">★ 9,493 total · +65 today</span>
+        <span class="chip">MoonshotAI · 2026-07-19</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/xhluca/agent-talk">xhluca/agent-talk — Enable Coding Agents to Work Together</a></h3>
+      <p class="summary">Show HN submission (53pts, 24 comments): a lightweight protocol and framework for enabling multiple coding agents to coordinate, share context, and hand off tasks. Aims to provide a minimal, interoperable interface for multi-agent coding workflows without requiring a heavyweight orchestration framework.</p>
+      <p class="why"><b>Why it matters:</b> Multi-agent coding coordination is still largely ad-hoc; a thin, standard protocol layer could become important infrastructure as teams move from single-agent to multi-agent development pipelines.</p>
+      <div class="row">
+        <span class="chip">Python · Multi-Agent · MCP</span>
+        <span class="chip">Show HN · 53pts · 24 comments · 2026-07-18</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48936534">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lostinpatterns/kassette">lostinpatterns/kassette — Durable Agent Workflows Backed by Object Storage</a></h3>
+      <p class="summary">Show HN submission: open-source framework for durable, resumable AI agent workflows using object storage (S3/GCS/etc.) as the state backend. Workflows survive process restarts, scale horizontally, and maintain full audit trails without requiring a dedicated workflow database.</p>
+      <p class="why"><b>Why it matters:</b> Durability is the hardest operational problem in long-running agent workflows; using object storage as a state backend is a pragmatic approach that makes production deployment far more accessible for teams without dedicated workflow infrastructure.</p>
+      <div class="row">
+        <span class="chip">Agent Workflows · Durable Execution</span>
+        <span class="chip">Show HN · 2026-07-14</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48896793">HN discussion →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy">Context Engineering with Dex Horthy (The Pragmatic Engineer)</a></h3>
+      <p class="summary">Dex Horthy — CEO of HumanLayer and coiner of the term "context engineering" — argues that the primary bottleneck to 10× developer productivity is not model intelligence but context management. Introduces the "smart zone / dumb zone" finding: frontier models produce reliable output in the first ~100K tokens of context, but quality degrades non-linearly beyond that boundary. Practical guidance on structuring agent loops to stay within the high-reliability zone.</p>
+      <p class="why"><b>Why it matters:</b> The smart zone / dumb zone boundary is an immediately actionable design constraint for anyone building long-horizon agents — system prompt bloat and poorly managed history cause silent quality degradation before context limits are hit.</p>
+      <div class="row">
+        <span class="chip">Context Engineering · Agents · Production</span>
+        <span class="chip">Pragmatic Engineer · 2026-07-15</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.youtube.com/watch?v=VvkhYWFWaKI">Advanced Context Engineering for Agents (AI Engineer Conference Talk)</a></h3>
+      <p class="summary">Conference talk by Dex Horthy covering the practical mechanics of managing context state across long-running agent loops. Topics include progressive disclosure, routing information into the context window, and modular capability patterns — illustrated with real production agent architectures. From the AI Engineer World's Fair 2026 (San Francisco).</p>
+      <p class="why"><b>Why it matters:</b> Goes deeper than the blog posts on the concrete techniques teams are using in production — particularly useful for engineers designing multi-step tool-use agents where context drift is a common failure mode.</p>
+      <div class="row">
+        <span class="chip">YouTube · AI Engineer 2026 · Context Engineering</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.youtube.com/watch?v=htM02KMNZnk">Software Factories &amp; Keynotes — AI Engineer World's Fair 2026</a></h3>
+      <p class="summary">Main-stage keynote compilation from AI Engineer World's Fair 2026 (Moscone West, San Francisco). Covers the "software factories" theme — autonomous agent pipelines that generate, test, and deploy code with minimal human intervention — alongside major lab announcements from Microsoft, OpenAI, Z.ai, MiniMax, and Hugging Face. Full recording free on YouTube.</p>
+      <p class="why"><b>Why it matters:</b> The shift from "AI-assisted coding" to "software factories" is the defining architectural direction of 2026; these keynotes document what the largest AI engineering conference thinks the stack should look like.</p>
+      <div class="row">
+        <span class="chip">YouTube · AI Engineer 2026 · Software Factories</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://stateofopensource.ai/">The State of Open Source AI (2026 Annual Report)</a></h3>
+      <p class="summary">Annual report and survey on the open-source AI ecosystem: open vs. closed model governance, enterprise adoption trends, the impact of export-control reversals, and the evolving regulatory landscape. Sparked a wide-ranging HN thread on the future of open-weights models, Kimi K3's significance, and the viability of the open-source lab model against frontier incumbents.</p>
+      <div class="row">
+        <span class="chip">Open Source AI · Survey 2026</span>
+        <span class="chip hot">🔥 368 pts · 267 comments</span>
+        <span class="chip">2026-07-18</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48947825">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/">NotebookLM is now Gemini Notebook</a></h3>
+      <p class="summary">Google officially renames NotebookLM to Gemini Notebook, signaling deeper integration with the Gemini model family and the broader Google Workspace ecosystem. HN discussion focused on what the rebrand means for the product roadmap — whether it's a meaningful upgrade or purely cosmetic — and competitive positioning against Perplexity and Claude's Projects feature.</p>
+      <div class="row">
+        <span class="chip">Google · Gemini · Products</span>
+        <span class="chip hot">🔥 363 pts · 178 comments</span>
+        <span class="chip">2026-07-18</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48936451">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.theocharis.dev/blog/llm-critics-are-right-i-use-llms-anyway/">The LLM Critics Are Right. I Use LLMs Anyway</a></h3>
+      <p class="summary">Essay acknowledging that LLM critics — who point to hallucinations, context drift, reliability failures, and environmental cost — are largely correct, while arguing that practical utility justifies continued use. Sparked a high-engagement HN thread (290 comments) debating whether practitioners are rationalizing sunk costs, where LLMs actually provide durable ROI, and how to build systems that compensate for known failure modes.</p>
+      <div class="row">
+        <span class="chip">LLM Critique · Practitioner Perspective</span>
+        <span class="chip hot">🔥 286 pts · 290 comments</span>
+        <span class="chip">2026-07-18</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48933310">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://lmstudio.ai/blog/introducing-lm-studio-bionic">LM Studio Bionic: the AI Agent for Open Models</a></h3>
+      <p class="summary">LM Studio launches Bionic, a new agentic layer on top of the existing local model runner. Bionic provides tool use, memory, and multi-step planning for locally-running open models — effectively adding Claude Code / Cursor-style agent capabilities to LM Studio's existing model management UI. No cloud API key required.</p>
+      <div class="row">
+        <span class="chip">Local LLM · Agent · Open Models</span>
+        <span class="chip hot">🔥 319 pts · 123 comments</span>
+        <span class="chip">2026-07-16</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48939662">HN discussion →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/">Claude Code: Anatomy of a Misfeature</a></h3>
+      <p class="summary">Analysis of a specific Claude Code behavior that the author classifies as a misfeature — not a bug, but a design decision that creates predictable friction or failure modes in real workflows. HN discussion drew practitioners sharing similar pain points and debating the tradeoffs in agent UX design that lead to these patterns.</p>
+      <div class="row">
+        <span class="chip">Claude Code · Agent UX · Critique</span>
+        <span class="chip">135 pts · 116 comments · 2026-07-17</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48947776">HN discussion →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3>Nothing notable in the last 24h</h3>
+      <p class="summary">Web search with site:reddit.com queries across r/MachineLearning, r/LocalLLaMA, r/Singularity, r/OpenAI, r/AI_Agents, and r/ClaudeAI returned no indexable thread URLs for July 18–19, 2026. Active discussions likely exist on the Kimi K3 release, Gemini Notebook rename, and state-of-open-source survey — confirmed by news coverage — but no direct reddit.com thread URLs were surfaced in search results for this window.</p>
+      <div class="row">
+        <span class="chip">Reddit: not assessed (search returned no thread URLs)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/security-incident-july-2026">Hugging Face Security Incident — July 2026</a></h3>
+      <p class="summary">Hugging Face discloses that an autonomous AI-agent system carried out an end-to-end intrusion into part of their production dataset-processing infrastructure by exploiting a remote-code dataset loader and a template-injection vulnerability in dataset configuration files. A limited set of internal datasets and service credentials were accessed. Published July 16 — one day outside the standard 24h window but included given practitioner impact.</p>
+      <p class="why"><b>Why it matters:</b> First publicly documented case of an autonomous AI agent successfully compromising a major ML platform end-to-end; has immediate implications for supply-chain security of open datasets and how teams evaluate trust boundaries in agentic pipelines.</p>
+      <div class="row">
+        <span class="chip hot">⚠ Security · AI Agent Attack</span>
+        <span class="chip">Hugging Face · 2026-07-16</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms">Controlling Reasoning Effort in LLMs (Ahead of AI)</a></h3>
+      <p class="summary">Sebastian Raschka surveys how model families now expose explicit reasoning-effort controls: OpenAI's GPT-5.6 family (Sol, Terra, Luna) each offers five to six discrete effort settings, while Thinking Machines Lab's open-weights Inkling model also shows benchmark performance scaling with effort level. Traces the lineage from o1 through RLVR-based training and explains the inference-time compute tradeoffs practitioners face across the new generation of models.</p>
+      <p class="why"><b>Why it matters:</b> Effort-controllable reasoning is becoming standard API surface; understanding cost/quality tradeoffs across model tiers is now a core skill for making sound architecture decisions in production systems.</p>
+      <div class="row">
+        <span class="chip">Reasoning · Inference-Time Compute · Survey</span>
+        <span class="chip">Sebastian Raschka · 2026-07-18</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/">Claude Make Fable 5 Permanent</a></h3>
+      <p class="summary">Simon Willison covers Anthropic's announcement that starting July 20, Claude Fable 5 will be included in all Max and Team Premium plans at 50% of standard limits, with Pro and Team Standard users receiving access via usage credits plus a one-time $100 credit. He attributes the reversal of Anthropic's earlier plan to competitive pressure from GPT-5.6 Sol and Kimi K3.</p>
+      <p class="why"><b>Why it matters:</b> Fable 5 remaining in subscriptions (rather than being API-only) changes total cost of ownership calculations for teams running agent workloads — especially relevant for Claude Code and heavy API users.</p>
+      <div class="row">
+        <span class="chip">Anthropic · Claude Fable 5 · Pricing</span>
+        <span class="chip">Simon Willison · 2026-07-18</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel">Fine-tune Video and Image Models at Scale with NVIDIA NeMo Automodel and Diffusers</a></h3>
+      <p class="summary">Joint post from NVIDIA and Hugging Face explaining how to scale diffusion model fine-tuning using NVIDIA NeMo Automodel together with the Diffusers library. Covers text-to-image (FLUX.1-dev) and text-to-video (Wan 2.1, HunyuanVideo) workflows with concrete code examples for multi-GPU and multi-node training setups.</p>
+      <p class="why"><b>Why it matters:</b> Provides a concrete, official production path for teams wanting to fine-tune open diffusion models at scale without building custom training infrastructure — lowering the ops barrier for generative media teams.</p>
+      <div class="row">
+        <span class="chip">NVIDIA · Diffusers · Fine-tuning · Video</span>
+        <span class="chip">Hugging Face · 2026-07-17</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.cnbc.com/2026/07/17/anthropic-meta-ai-compute.html">Anthropic in Early Talks with Meta to Lease AI Compute (~$10B)</a></h3>
+      <p class="summary">Anthropic is in preliminary discussions to lease AI compute capacity from Meta, with reports citing a potential deal worth approximately $10 billion. This follows a similar agreement with SpaceX's Colossus 1 data center announced weeks earlier, suggesting Anthropic is increasingly relying on third-party capacity rather than self-owned infrastructure to meet growing compute demands.</p>
+      <p class="why"><b>Why it matters:</b> Anthropic's compute strategy shapes long-term API pricing stability and capacity constraints — third-party dependency at this scale is a significant strategic and counterparty risk signal for enterprises relying on Claude APIs.</p>
+      <div class="row">
+        <span class="chip">Anthropic · Meta · Compute · $10B</span>
+        <span class="chip">CNBC · 2026-07-17</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/">German AI Consortium Releases Soofi S — Open 30B Model Topping EN/DE Benchmarks</a></h3>
+      <p class="summary">A German AI consortium has released Soofi S, an open-source 30B parameter model that tops benchmarks in both English and German, with particular strength on multilingual reasoning and instruction following. The release represents a significant step for European open-source AI development outside of US and Chinese lab ecosystems.</p>
+      <p class="why"><b>Why it matters:</b> Strong open multilingual models from European labs reduce dependence on US/Chinese closed-model APIs for EU enterprises and public-sector deployments — relevant as the EU AI Act's general-purpose AI provisions take effect August 2026.</p>
+      <div class="row">
+        <span class="chip">Open Weights · Multilingual · EU AI</span>
+        <span class="chip hot">🔥 142 HN pts · 34 comments</span>
+        <span class="chip">The Decoder · 2026-07-18</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-19 01:05 UTC<br>
+    Source issues: RSS feeds blocked by egress proxy (403) — blogs and lab news sourced via web search fallback; HN Algolia API blocked — HN data sourced via community digest mirror (duanyytop/agents-radar); HF papers direct fetch blocked — data sourced via GitHub mirror and web search.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
