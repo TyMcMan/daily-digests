@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-20</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Monday, July 20, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 22 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://dev.to/max_quimby/gpt-56-closed-a-30-year-math-gap-nobody-noticed-173b">GPT-5.6 Closed a 30-Year Convex Optimization Gap</a>
+        <span class="src">DEV Community</span>
+        <span class="why">Structured prompt engineering — precise scope, stylistic anchor, step-verification instruction — guided GPT-5.6 Sol to close an open lower-bound problem, independently verified by two groups.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2606.29718">Diagnosing and Mitigating Context Rot in Long-horizon Search</a>
+        <span class="src">arXiv</span>
+        <span class="why">LLMs give up and degrade far earlier than documented context limits; this paper names the failure mode and provides mitigation strategies directly applicable to RAG and agentic pipelines.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.15143">Setup Complete, Now You Are Compromised: AI Coding Agent Supply-Chain Attacks</a>
+        <span class="src">arXiv</span>
+        <span class="why">First systematic evaluation showing ordinary project READMEs and requirements files can compromise production coding agents — nearly every harness-model combo fails on registry-redirection attacks.</span>
+      </li>
+      <li>
+        <a href="https://code.claude.com/docs/en/changelog">Claude Code v2.1.215 — Session Loop Caps &amp; EndConversation Tool</a>
+        <span class="src">Anthropic</span>
+        <span class="why">Addresses the two most critical production harness problems — runaway agent loops and ambiguous task termination — with configurable session caps and a new clean-exit signal.</span>
+      </li>
+      <li>
+        <a href="https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb">NVIDIA Nemotron 3 Embed Ranks #1 on RTEB</a>
+        <span class="src">HuggingFace / NVIDIA</span>
+        <span class="why">Open-weight embedding models (8B and 1B, 32k-token context) close the gap with closed APIs for RAG; NVFP4 variant delivers 2× throughput on Blackwell hardware.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">7</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">5</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">6</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2606.29718">Diagnosing and Mitigating Context Rot in Long-horizon Search</a></h3>
+      <p class="summary">Characterizes "context rot" — a prevalent failure mode where LLMs prematurely give up or express unwarranted uncertainty as context grows — across four open-source flagship models and three benchmarks. Shows that context management techniques and rejection sampling can meaningfully mitigate it.</p>
+      <p class="why"><b>Why it matters:</b> RAG and long-context agent designers need to know that accuracy degrades non-linearly and far earlier than documented context limits suggest; the mitigation strategies are immediately applicable to production search pipelines.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CL</span>
+        <a href="https://arxiv.org/abs/2606.29718" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15143">Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents</a></h3>
+      <p class="summary">First systematic evaluation of supply-chain attacks delivered through ordinary project documentation (READMEs, requirements files, Makefiles) across production coding-agent harnesses. Source-based attacks like registry redirection are missed by nearly every model-harness combination tested.</p>
+      <p class="why"><b>Why it matters:</b> Any team deploying AI coding agents on real codebases should audit their harness configuration — model capability alone does not prevent agents from installing malicious dependencies introduced through project setup files.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CR</span>
+        <a href="https://arxiv.org/abs/2607.15143" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.11881">Metacognition in LLMs: Foundations, Progress, and Opportunities</a></h3>
+      <p class="summary">First comprehensive survey of LLM metacognition, taxonomizing measurement benchmarks, elicitation and improvement techniques, and open problems around self-awareness, uncertainty calibration, and knowing-when-not-to-answer.</p>
+      <p class="why"><b>Why it matters:</b> Self-aware models that reliably signal their own uncertainty are a prerequisite for safe agentic deployment; this survey maps the full methodological landscape and identifies the gaps practitioners need to close.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.AI</span>
+        <a href="https://arxiv.org/abs/2607.11881" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15278">Hierarchical Denoising For Multi-Step Visual Reasoning</a></h3>
+      <p class="summary">Introduces HDR, a hierarchical latent-space denoising framework for video generation models that achieves a 76.2% relative gain on multi-step visual reasoning benchmarks while maintaining streaming latency on par with autoregressive baselines (ICML 2026).</p>
+      <p class="why"><b>Why it matters:</b> Multi-step visual reasoning is a bottleneck for vision-language agents; this ICML-accepted result shows a concrete architectural path to close that gap without sacrificing inference speed.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CV</span>
+        <span class="chip">ICML 2026</span>
+        <a href="https://arxiv.org/abs/2607.15278" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15267">Pretraining Data Can Be Poisoned through Computational Propaganda</a></h3>
+      <p class="summary">Demonstrates that public comment interfaces on ordinary websites constitute a practical, model-access-free vector for poisoning web-crawl pretraining corpora. Introduces HalfLife — a novel analysis estimating how much adversarial content survives curation pipelines.</p>
+      <p class="why"><b>Why it matters:</b> Teams curating web-scale datasets for LLM pretraining must treat public comment sections as an active attack surface; HalfLife gives a concrete auditing tool before the data enters training.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CR</span>
+        <a href="https://arxiv.org/abs/2607.15267" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.10183">Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices</a></h3>
+      <p class="summary">Presents ATSInfer, a hybrid offloading system that schedules at tensor granularity with asynchronous CPU-GPU coordination, achieving up to 1.94× prefill and 3.29× decode throughput versus existing consumer-device LLM inference systems.</p>
+      <p class="why"><b>Why it matters:</b> Enables practical local deployment of large models on laptops and desktops without cloud dependency — directly relevant for privacy-sensitive applications and low-latency on-device inference.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.LG</span>
+        <a href="https://arxiv.org/abs/2607.10183" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15232">In-Place Tokenizer Expansion for Pre-trained LLMs</a></h3>
+      <p class="summary">Proposes a method to expand the vocabulary of a pre-trained LLM in-place — adding new tokens while preserving existing embeddings and weights — avoiding full retraining when adapting to new domains, scripts, or languages.</p>
+      <p class="why"><b>Why it matters:</b> Practitioners adapting base models to specialized domains can add vocabulary without paying the full pretraining compute cost, significantly lowering the bar for domain-specific model customization.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CL</span>
+        <a href="https://arxiv.org/abs/2607.15232" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/bojieli/ai-agent-book">bojieli/ai-agent-book</a></h3>
+      <p class="summary">Open-source companion to "深入理解 AI Agent: 设计原理与工程实践" (Understanding AI Agents: Design Principles and Engineering Practice) — full book text, compiled PDF, and per-chapter code by Li Bojie. Trending #1 overall today.</p>
+      <p class="why"><b>Why it matters:</b> A comprehensive technical reference on AI agent architecture and production engineering, with worked code examples; the 1.7k stars today signal it's filling a gap practitioners were actively searching for.</p>
+      <div class="row">
+        <span class="chip stars">★ 1,734 today</span>
+        <span class="chip">GitHub</span>
+        <a href="https://github.com/bojieli/ai-agent-book" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/KnockOutEZ/wigolo">KnockOutEZ/wigolo</a></h3>
+      <p class="summary">Local-first web research layer for AI coding agents — provides search, fetch, crawl, and research over MCP. Breakout launch: near-zero stars to 595 today. Designed as the default web tool for MCP-connected coding agents.</p>
+      <p class="why"><b>Why it matters:</b> Gives MCP-enabled coding agents a self-hosted, local-first web research capability that avoids closed-API rate limits and privacy concerns in production agent deployments.</p>
+      <div class="row">
+        <span class="chip stars">★ 595 today</span>
+        <span class="chip hot">🔥 launch</span>
+        <span class="chip">MCP</span>
+        <a href="https://github.com/KnockOutEZ/wigolo" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/kvcache-ai/ktransformers">kvcache-ai/ktransformers</a></h3>
+      <p class="summary">Flexible framework for heterogeneous LLM inference and fine-tuning optimizations, focused on CPU+GPU KV-cache efficiency. 18k+ total stars, 360 today — steady traction for on-device inference at scale.</p>
+      <p class="why"><b>Why it matters:</b> KV cache management remains the primary bottleneck for long-context inference on consumer hardware; ktransformers provides a modular research and production harness for testing heterogeneous offloading strategies.</p>
+      <div class="row">
+        <span class="chip stars">★ 360 today</span>
+        <span class="chip">Inference</span>
+        <a href="https://github.com/kvcache-ai/ktransformers" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/1jehuang/jcode">1jehuang/jcode</a></h3>
+      <p class="summary">Coding agent harness — orchestration scaffolding for running and evaluating coding agents. 8.9k total stars, 235 today. Provides structured agent loop management and eval integration for coding benchmark pipelines.</p>
+      <p class="why"><b>Why it matters:</b> As coding agent benchmarking matures, a shared orchestration harness reduces per-team reimplementation overhead; 235 stars today suggests active practitioner interest in standardized eval scaffolding.</p>
+      <div class="row">
+        <span class="chip stars">★ 235 today</span>
+        <span class="chip">Agents</span>
+        <a href="https://github.com/1jehuang/jcode" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/Canner/WrenAI">Canner/WrenAI</a></h3>
+      <p class="summary">GenBI for AI agents: open-source governed text-to-SQL through an open context layer supporting 20+ data sources. Bridges LLM agents with enterprise data warehouses with semantic-layer governance.</p>
+      <p class="why"><b>Why it matters:</b> Data-agent integrations without governance are a compliance risk; WrenAI's semantic layer gives agents controlled, auditable SQL generation — relevant for enterprise deployments where raw database access is disallowed.</p>
+      <div class="row">
+        <span class="chip stars">★ 121 today</span>
+        <span class="chip">Text-to-SQL</span>
+        <a href="https://github.com/Canner/WrenAI" class="src-link">github.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://code.claude.com/docs/en/changelog">Claude Code v2.1.215 — Session Loop Caps, EndConversation Tool, Prompt-Injection Hardening</a></h3>
+      <p class="summary">Ships configurable session-wide loop caps (WebSearch and subagent spawns each default to 200, tunable via env vars), an EndConversation tool for agents to cleanly signal task completion, and progress heartbeats for long-running tasks. Also hardens the Agent tool against indirect prompt injection and adds tighter Bash/PowerShell permission checks.</p>
+      <p class="why"><b>Why it matters:</b> Session-wide caps and EndConversation address the two most common harness engineering failures in production — runaway loops and ambiguous task termination — making this release load-bearing for any team running multi-step Claude Code agents at scale.</p>
+      <div class="row">
+        <span class="chip">Anthropic</span>
+        <span class="chip">2026-07-19</span>
+        <a href="https://code.claude.com/docs/en/changelog" class="src-link">code.claude.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://towardsdatascience.com/your-ai-agent-passed-every-eval-finance-still-killed-it/">Your AI Agent Passed Every Eval. Finance Still Killed It.</a></h3>
+      <p class="summary">Argues that standard agent evaluation frameworks miss the critical 13th metric: cost per successful outcome. An agent can score perfectly on quality, tool-use, and trace evals yet be cancelled when finance determines it costs more per resolved case than the human workflow it replaced. Proposes adding cost-per-outcome as a minimum-viable production gate alongside task completion.</p>
+      <p class="why"><b>Why it matters:</b> Economic viability is now a hard production gate alongside technical quality; practitioners who instrument only correctness from day one will hit a preventable business-case failure, and this piece shows exactly where to add the missing cost attribution hook in the eval harness.</p>
+      <div class="row">
+        <span class="chip">Towards Data Science</span>
+        <span class="chip">2026-07-19</span>
+        <a href="https://towardsdatascience.com/your-ai-agent-passed-every-eval-finance-still-killed-it/" class="src-link">towardsdatascience.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://dev.to/max_quimby/gpt-56-closed-a-30-year-math-gap-nobody-noticed-173b">GPT-5.6 Closed a 30-Year Math Gap. Nobody Noticed.</a></h3>
+      <p class="summary">Documents how a three-part engineered prompt — precise problem statement, a stylistic constraint (prove in the style of Boyd and Vandenberghe), and an instruction to flag any unproven step — guided GPT-5.6 Sol to close a 30-year open lower-bound problem in convex optimization. Two independent groups subsequently verified the key lemma using CAS and a custom SDP solver.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates that structured prompt engineering remains a frontier capability multiplier; the three-part formula (precise scope, stylistic anchor, step-verification instruction) is transferable to formal reasoning and research-assistant pipelines practitioners are building today.</p>
+      <div class="row">
+        <span class="chip">DEV Community</span>
+        <span class="chip">2026-07-18</span>
+        <a href="https://dev.to/max_quimby/gpt-56-closed-a-30-year-math-gap-nobody-noticed-173b" class="src-link">dev.to →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/">AI Mania Is Eviscerating Global Decision-Making</a></h3>
+      <p class="summary">A consultant documents how AI mania is overwhelming large organizations — a C-suite leader who built a $2B company's AI strategy while never having opened ChatGPT, and engineers gaming internal AI-usage leaderboards by directing agents to rewrite production codebases in different languages as a background task. Performative AI adoption, divorced from any technical judgment, is now a systemic pattern.</p>
+      <p class="why"><b>Why it matters:</b> Gives AI engineers concrete language and real examples for navigating top-down mandates that outrun actual tool usage — and signals the cultural backlash that will shape enterprise AI buying cycles over the next 12–18 months.</p>
+      <div class="row">
+        <span class="chip">Ludicity</span>
+        <span class="chip">2026-07-18</span>
+        <a href="https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/" class="src-link">ludic.mataroa.blog →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+    <div class="card">
+      <h3 style="color:var(--muted);font-weight:400">Nothing notable in the last 24h</h3>
+      <p class="summary">HN API (hn.algolia.com) and news.ycombinator.com both returned 403 from the session egress proxy — no HN threads could be collected for this run.</p>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3 style="color:var(--muted);font-weight:400">Nothing notable in the last 24h</h3>
+      <p class="summary">Web search could not surface verifiable reddit.com thread URLs for the monitored subreddits (r/MachineLearning, r/LocalLLaMA, r/OpenAI, r/Anthropic, r/ClaudeAI, r/AI_Agents, r/ClaudeCode) — the site: operator did not return indexed results for threads from the last 48h.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb">NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval</a></h3>
+      <p class="summary">NVIDIA released Nemotron 3 Embed — three checkpoints (8B BF16, 1B BF16, 1B NVFP4) that rank #1 on the Retrieval Embedding Benchmark (RTEB), with the 8B scoring 78.5% and the 1B reducing error rate 27% over its predecessor. All models support 32,768-token inputs, cover 34 languages, and are trained on OpenMDW-1.1.</p>
+      <p class="why"><b>Why it matters:</b> Open SOTA embedding models reduce dependence on closed APIs for RAG; the NVFP4 variant delivers near-parity quality at 2× throughput on Blackwell hardware, directly relevant for cost-sensitive production retrieval at scale.</p>
+      <div class="row">
+        <span class="chip">HuggingFace / NVIDIA</span>
+        <span class="chip">2026-07-17</span>
+        <a href="https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb" class="src-link">huggingface.co →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/unlocking-self-improvement-gpt-red/">GPT-Red: Unlocking Self-Improvement for Robustness</a></h3>
+      <p class="summary">OpenAI describes GPT-Red, an internal automated red-teaming system using adversarial self-play RL to probe models for prompt injection vulnerabilities — achieving 84% attack success rate vs. 13% for human red teamers on the same novel scenarios. Used to harden GPT-5.6 Sol, cutting direct prompt injection failures to one-sixth of the previous robust model.</p>
+      <p class="why"><b>Why it matters:</b> Automated red-teaming with AI-driven self-play is emerging as the practical path to security hardening at model scale; this post signals the shift toward scalable automated alignment feedback loops that will define safety engineering in 2026-2027.</p>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">2026-07-16</span>
+        <a href="https://openai.com/index/unlocking-self-improvement-gpt-red/" class="src-link">openai.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/blog/lightonai/lighton-rerank">One Adapter, Both Modalities: Field Notes from Building a Multimodal Reranker</a></h3>
+      <p class="summary">LightOn shares production field notes on LightOn-rerank, a 2B model that reranks both text passages and scanned document pages using a single LoRA adapter fine-tuned from Qwen3.5-2B. Covers cross-modal architecture decisions and serving lessons from deploying a unified retrieval reranker in production.</p>
+      <p class="why"><b>Why it matters:</b> Multimodal reranking is a critical but underserved component for document-heavy RAG; this open-sourced design pattern avoids maintaining separate text and vision models, lowering inference cost and operational complexity.</p>
+      <div class="row">
+        <span class="chip">HuggingFace / LightOn</span>
+        <span class="chip">2026-07-17</span>
+        <a href="https://huggingface.co/blog/lightonai/lighton-rerank" class="src-link">huggingface.co →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/">Conjecture Machines: AI Agents and the New Validation Bottleneck in Science</a></h3>
+      <p class="summary">DeepMind's policy paper argues that AI agents are becoming "conjecture machines" — making hypotheses cheap and abundant — while physical validation in science remains slow and costly, creating a growing validation bottleneck. Examines the institutional implications as AI-generated research output scales.</p>
+      <p class="why"><b>Why it matters:</b> For practitioners building AI-for-science or research-automation tools, this identifies the systemic unsolved problem — ideation is largely solved, validation is not — and frames the infrastructure investment and policy response that will drive the space over the next several years.</p>
+      <div class="row">
+        <span class="chip">Google DeepMind</span>
+        <span class="chip">2026-07-16</span>
+        <a href="https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" class="src-link">deepmind.google →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://deepmind.google/blog/our-approach-to-bioresilience/">Google DeepMind and Isomorphic Labs Approach to Bioresilience</a></h3>
+      <p class="summary">DeepMind and Isomorphic Labs outline their joint framework for bioresilience — preventing misuse of AI for biological harm while ensuring biosecurity experts and governments retain access. Over the past 12 months they have advanced 15+ partnerships with government bodies and biosecurity organizations.</p>
+      <p class="why"><b>Why it matters:</b> Establishes a concrete operational template for dual-use safety governance in biotech AI — directly relevant for practitioners building regulated AI applications in life sciences or any domain where model misuse carries catastrophic-risk potential.</p>
+      <div class="row">
+        <span class="chip">Google DeepMind</span>
+        <span class="chip">2026-07-16</span>
+        <a href="https://deepmind.google/blog/our-approach-to-bioresilience/" class="src-link">deepmind.google →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://openai.com/index/why-teens-deserve-access-safe-ai/">Why Teens Deserve Access to Safe AI</a></h3>
+      <p class="summary">OpenAI argues that restricting AI access for teens deprives them of a transformative technology at a formative stage — nearly 9 in 10 teen ChatGPT users engage with it for learning or productivity weekly. Accompanies new teen-specific safety guardrails including a trusted-contact notification system for self-harm risk detection.</p>
+      <p class="why"><b>Why it matters:</b> As AI products expand into younger demographics, this signals the regulatory and design expectations being standardized for minor users — relevant for any team building consumer AI with broad age-range exposure.</p>
+      <div class="row">
+        <span class="chip">OpenAI</span>
+        <span class="chip">2026-07-16</span>
+        <a href="https://openai.com/index/why-teens-deserve-access-safe-ai/" class="src-link">openai.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-20 01:05 UTC<br>
+    Source issues: HN API (hn.algolia.com) blocked by egress proxy (403) — 0 HN threads; Reddit web search returned no verifiable thread URLs; arXiv and HuggingFace direct fetch blocked (papers/HF posts sourced via web search).<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
