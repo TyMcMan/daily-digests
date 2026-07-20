@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-20</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Monday, July 20, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Silicon photonics ramps as AI hits the copper wall — optical transceiver market forecast at $26B in 2026</a></li>
+      <li><a href="#compute">China's DISH holographic method cuts 3D optical chip production from hours to seconds</a></li>
+      <li><a href="#compute">UMC ships first mass-produced 1.6T silicon photonics wafers from Singapore 12-inch fab</a></li>
+      <li><a href="#pic-eda">Reality-infused neural networks close simulation-to-fab gap in nanophotonic inverse design</a></li>
+      <li><a href="#funding">Defiance launches Europe's first photonics ETF (PHOT) as sector gains institutional recognition</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.fool.com/investing/2026/07/19/silicon-photonics-investment-is-ramping-fast-as-ai/">Silicon Photonics Investment Ramping Fast as AI Clusters Outgrow Copper Wiring</a></h3>
+      <p>The optical transceiver market is forecast to jump ~60% to $26B in 2026 as AI clusters hit the "copper wall": at blistering AI signaling speeds, passive copper degrades in under a metre, requiring ever-more power to maintain integrity. Silicon photonics is described as a physical necessity — not a choice — for next-generation scale-out. Coherent (Nvidia's $2B partner) and Lumentum (90% YoY revenue growth, &gt;$400M optical circuit-switch backlog) are flagged as primary beneficiaries. <em>Why it matters:</em> Validates the macro tailwind; OCS backlog growth at Lumentum directly tracks buildout of disaggregated AI fabric architectures that photonic-compute startups target.</p>
+      <div class="meta">The Motley Fool &middot; 2026-07-19</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.scmp.com/news/china/science/article/3360856/china-team-cuts-3d-optical-chip-production-time-hours-seconds">China's DISH Method Cuts 3D Optical Chip Production from Hours to Seconds</a></h3>
+      <p>A Chinese research team has developed DISH (Digital Incoherent Synthesis of Holographic light fields), a holographic patterning technique that produces complex multi-layer 3D optical chip structures in seconds rather than the hours required by conventional layer-by-layer methods. The method synthesises multi-layer photonic structures simultaneously using a spatial light modulator-based holographic field, eliminating sequential lithography steps. The team claims DISH is compatible with existing photonics foundry infrastructure. <em>Why it matters:</em> If manufacturable at foundry scale, volumetric 3D PIC integration would unlock interconnect density far beyond planar SiPh limits — directly relevant to optical compute architectures that need extreme I/O density.</p>
+      <div class="meta">South China Morning Post &middot; 2026-07-18</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.laserfocusworld.com/directory/applied-optical-systems/instrumentation-lidar-systems/press-release/55391625/vector-photonics-vector-photonics-develops-new-laser-packaging-speeding-adoption-of-pcsels-in-data-centres-free-space-optical-comms-satellites-and-lidar">Vector Photonics Unveils AMPPS Packaging to Accelerate PCSEL Adoption in AI Data Centers</a></h3>
+      <p>Vector Photonics announced AMPPS (Advanced Modular Photonic Packaging Solution), a packaging technology designed to bring photonic crystal surface-emitting lasers (PCSELs) to the AI data center market at scale. PCSELs deliver superior beam quality, efficiency, and brightness compared to VCSELs — attractive for high-density optical interconnects — but have been limited by costly custom packaging. AMPPS provides a modular, manufacturable assembly path enabling standard high-volume processes to be applied to PCSEL-based optical engines for intra-rack and free-space links. <em>Why it matters:</em> A manufacturable PCSEL packaging route could displace VCSELs in short-reach interconnects within AI clusters, improving energy efficiency at the light-source level for integrated photonic compute architectures.</p>
+      <div class="meta">Laser Focus World &middot; 2026-07-16</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.trendforce.com/news/2026/07/14/news-umc-announces-first-delivery-of-mass-produced-silicon-photonics-wafers-from-singapore-12-inch-fab/">SILITH and UMC Complete First Delivery of Mass-Produced 1.6T Silicon Photonics Wafers</a></h3>
+      <p>SILITH and UMC completed the first delivery of silicon photonics wafers from UMC's 12-inch Singapore fab targeting the 1.6T optical transceiver market. The partnership leverages UMC's CMOS-compatible SiPh process to produce wafers at volume with the bandwidth density required for next-generation AI cluster interconnects, positioning UMC as a high-volume SiPh foundry for AI data center transceiver chipmakers seeking alternatives to leading-edge logic nodes. <em>Why it matters:</em> Volume SiPh production at a second major foundry increases capacity and reduces supply concentration risk — critical context for photonic-compute chipmakers planning foundry partnerships for scaled EO modulator and photodetector integration.</p>
+      <div class="meta">TrendForce &middot; 2026-07-14</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://picmagazine.net/article/124691/Marvell_boosts_photonics_business">Marvell and Tower Semiconductor Ship Over Five Million Coherent Photonic ICs</a></h3>
+      <p>Marvell Technology and Tower Semiconductor have surpassed five million cumulative shipments of coherent photonic integrated circuits, signalling rapid volume ramp of silicon photonics in AI networking infrastructure. Marvell's photonics business is expanding with Tower providing dedicated manufacturing capacity for coherent PICs used in 400G/800G optical transceivers for hyperscale data centers. <em>Why it matters:</em> The five-million milestone underscores the transition of silicon photonics from specialty production to high-volume commodity manufacturing — a supply-chain maturity signal relevant to Akhetonics' component sourcing and competitive landscape.</p>
+      <div class="meta">PIC Magazine &middot; 2026-07-13</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://www.laserfocusworld.com/optics/article/55386501/reality-infused-neural-networks-may-revolutionize-design-of-nanophotonics">Reality-Infused Deep Learning Framework May Revolutionize Nanophotonic Inverse Design</a></h3>
+      <p>Researchers introduced a "reality-infused" deep learning framework for nanophotonic inverse design that embeds experimentally measured fabrication variability directly into the neural network training loop, closing the gap between simulation-predicted and as-fabricated device performance. Conventional simulation-driven inverse design often fails in practice because real devices deviate from idealized models due to etch depth variation, roughness, and material non-uniformity; this approach co-trains on both simulated and measured device data. <em>Why it matters:</em> Inverse design tools that predict manufacturable geometries rather than simulation-optimal ones would be transformative for Akhetonics' PIC design flow — reducing iteration cycles between design and tapeout verification.</p>
+      <div class="meta">Laser Focus World &middot; 2026-07-17</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.06243">Inverse-Designed TFLN Photonic Interfaces Exceed Eigenmode Coupling Limits</a></h3>
+      <p>Researchers report inverse-designed edge-coupling interfaces on the thin-film lithium niobate (TFLN) platform achieving simulated/measured fiber-to-chip insertion losses as low as 1 dB / 3 dB per facet with 1-dB bandwidths exceeding 120 nm — performance unattainable by conventional eigenmode taper designs on TFLN due to its partially etched rib waveguide geometry and non-vertical sidewalls. The couplers require only a single high-resolution lithography step, making them directly insertable into standard TFLN PDK design flows for foundry tapeout. <em>Why it matters:</em> Efficient fiber-chip coupling is a persistent yield and insertion-loss bottleneck for TFLN EO modulator and frequency-converter chips; this result demonstrates a practical, foundry-compatible inverse-design path for one of the hardest TFLN packaging challenges.</p>
+      <div class="meta">arXiv (physics.optics) &middot; 2026-07-07</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/newsroom/2026/july/laser-based_digital_security_system/">Laser-Based Digital Security System Achieves Near-Zero False Positive Rates</a></h3>
+      <p>Researchers demonstrated a photonic physically-unclonable-function (PUF) device that generates cryptographic keys from the unique laser "fingerprint" of each photonic chip — no two chips produce the same speckle pattern. Combining photonics with AI classification delivers near-zero false-positive authentication rates and real-time throughput. <em>Why it matters:</em> As photonic compute chips proliferate in AI infrastructure, on-chip hardware root-of-trust based on optical PUFs becomes directly relevant to supply-chain integrity and hardware attestation — a security surface Akhetonics will face as it scales to production.</p>
+      <div class="meta">Optica OPN &middot; 2026-07-15</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41566-026-01957-5">Integrated Lithium Niobate Electro-Optic Frequency Comb Enables High-Precision FMCW 3D Ranging</a></h3>
+      <p>A Nature Photonics paper demonstrates an integrated LiNbO3 electro-optic frequency comb that simultaneously tracks frequency variation in an FMCW laser and provides the broadband coherent comb teeth needed for high-precision 3D scene ranging. The chip-scale EO comb generates hundreds of phase-locked sidebands from a single CW input with low drive voltage, enabling accurate laser chirp calibration across the full sweep bandwidth. <em>Why it matters:</em> Chip-scale EO combs on LiNbO3 have direct application to optical computing clock distribution and coherent sensing integration — the FMCW LiDAR demonstration validates the EO comb platform's precision for timing-critical photonic systems.</p>
+      <div class="meta">Nature Photonics &middot; 2026-07-09</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/spie-astro-2026-tno-and-demcon-explore-joint-venture-in-optics">TNO and Demcon to Form Joint Venture for Deformable Mirror Commercialization (SPIE Astro 2026)</a></h3>
+      <p>At SPIE Astronomical Telescopes + Instrumentation 2026 (Copenhagen, 5–10 July), Dutch research institute TNO and precision engineering firm Demcon announced plans to form a joint venture commercialising TNO's patented hybrid variable reluctance (HVR) deformable mirror technology. The HVR actuator delivers higher force output than voice-coil alternatives, enabling thicker, more durable mirror shells for adaptive optics in astronomy, optical communication, high-energy laser, and laser fusion applications. <em>Why it matters:</em> A European adaptive-optics manufacturing JV reduces supply-chain dependence on US and Asian sources for precision photonic subsystems — relevant to the EU photonics strategic autonomy push that underpins PhotonDelta and EPIC funding programmes.</p>
+      <div class="meta">Optics.org &middot; 2026-07-15</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://247wallst.com/investing/2026/07/15/applied-optoelectronics-falls-12-coherent-and-lumentum-slide-as-ai-optics-trade-cools/">AOI Falls 12%, Coherent and Lumentum Slide as AI Optics Trade Cools</a></h3>
+      <p>A sector-wide valuation reset hit major AI-photonics names on July 15: Applied Optoelectronics -12%, Lumentum -7%, Coherent down as well, though all three remain large 2026 winners. Fundamentals are intact — Lumentum's optical circuit-switch backlog exceeds $400M and Coherent has co-packaged optics orders deliverable H1 2027. The pullback is read as high-beta rotation, not a demand-signal change for optical compute infrastructure. <em>Why it matters:</em> Provides context on sector valuation volatility; the intact backlog data confirms optical compute demand is real even as the trade cools, and a drawdown of this size can create entry points for photonics hardware partnerships and supplier negotiations.</p>
+      <div class="meta">247 Wall St. &middot; 2026-07-15</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/ouster-raises-190m-in-public-stock-offering">Ouster Raises $190M in Public Stock Offering to Scale Photonic LiDAR Manufacturing</a></h3>
+      <p>LiDAR company Ouster completed a $190 million public stock offering to fund expansion of its photonic chip-based LiDAR technology and manufacturing capacity amid accelerating demand from automotive, robotics, and infrastructure sensing. Ouster's silicon photonics-based digital LiDAR integrates thousands of SPAD detectors and VCSEL emitters on a single chip, enabling cost-efficient solid-state depth sensors. <em>Why it matters:</em> Ouster's capital raise signals continued investor appetite for integrated photonics plays beyond pure interconnect — SPAD/VCSEL SiPh integration is adjacent to the detector and source integration challenges in optical compute chiplets.</p>
+      <div class="meta">Optics.org &middot; 2026-07-07</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://etfexpress.com/2026/07/09/defiance-etfs-launches-europes-first-photonics-etf-phot/">Defiance ETFs Launches PHOT: Europe's First Photonics-Focused UCITS ETF</a></h3>
+      <p>Defiance ETFs listed PHOT, the first photonics-dedicated UCITS ETF available to European retail investors, tracking a basket of companies across silicon photonics, fiber optics, LiDAR, optical communications, and photonic sensing. The fund's launch reflects institutional recognition of photonics as a distinct investable category driven by AI data center buildout, autonomous mobility, and defence applications. <em>Why it matters:</em> A dedicated photonics index ETF increases sector visibility and benchmarking pressure on public photonics companies — and signals that institutional capital is now large enough to justify photonics as a standalone allocation category, which will draw further funding into the space.</p>
+      <div class="meta">ETF Express &middot; 2026-07-09</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/07/16/3328860/0/en/IPG-Photonics-Announces-Binding-Offer-to-Acquire-Lumibird-Medical-Expanding-IPG-s-Medical-Laser-Growth-Platform.html">IPG Photonics Announces Binding Offer to Acquire Lumibird Medical for &#8364;300M</a></h3>
+      <p>IPG Photonics — one of the world's largest high-power laser manufacturers — announced a binding offer to acquire Lumibird Medical (ophthalmology lasers, France) for €300M plus up to €50M earnout tied to 2026–2027 performance. The deal adds ~$1B to IPG's addressable market and creates a scaled medical-laser platform. <em>Why it matters:</em> While not directly photonic-compute, IPG's strategic acquisitions signal continued consolidation among precision laser suppliers that underpin PIC fabrication and active component sourcing — understanding the supplier M&amp;A landscape is relevant for Akhetonics' component roadmap and supplier risk analysis.</p>
+      <div class="meta">GlobeNewswire / IPG Photonics &middot; 2026-07-16</div>
+    </article>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Optica OPN RSS, SPIE TV YouTube RSS, Tyndall, SMART Photonics, LioniX, Cignal AI optAI: all returned HTTP 403 — content sourced via web search fallback. Reddit r/Optics and r/Semiconductors: not assessed (403 + no indexed results from web search).</div>
+  <div>14 items &middot; generated 2026-07-20 01:05 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
