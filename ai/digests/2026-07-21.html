@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-21</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Tuesday, July 21, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 25 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://arxiv.org/abs/2607.16051">Loopie: Looped MoE Transformer Solves the Looping Paradox — IMO &amp; IPhO Gold Without External Tools</a>
+        <span class="src">arXiv</span>
+        <span class="why">A 20B-total/2B-active MoE that finally makes looping compute-efficient, outperforming vanilla Transformers at equal budget — and achieves gold-medal performance on 2025 IMO and IPhO entirely on-model.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.13188">CO2Jump: Concurrent Image Understanding and Generation via Coupled Markov Jump Processes</a>
+        <span class="src">arXiv · Google Research</span>
+        <span class="why">~202 HF upvotes. A single model that understands and edits an image simultaneously in one forward pass — text and image tokens update together, each informing the other's transition rates in real time.</span>
+      </li>
+      <li>
+        <a href="https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation">Kimi K3: The Open-Weights Escalation — 2.8T MoE Ranked #2 Globally, Weights Drop July 27</a>
+        <span class="src">Interconnects · Nathan Lambert</span>
+        <span class="why">Lambert argues K3 should meaningfully raise observers' probability that China can outright lead in AI capabilities — driven by more efficient training, not raw compute. Weights release July 27.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.14530">xHC: Expanded Hyper-Connections — 4% Extra FLOPs for 4-Point Avg Downstream Gain</a>
+        <span class="src">arXiv</span>
+        <span class="why">Sparse residual-stream expansion (k=4 of N=16 updated) with temporal feature augmentation — vanilla models need 1.50× more compute to reach the same loss. A practical architectural win for large pre-training runs.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.15901">DSWorld: A Data Science World Model for Efficient Autonomous Agents</a>
+        <span class="src">arXiv</span>
+        <span class="why">14× training speedup and 3–6× inference speedup by having agents simulate environment transitions internally rather than executing them. Directly lowers the cost of training and deploying agentic data science systems.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">5</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">4</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">0</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">1</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">9</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">4</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.13188">CO2Jump: Concurrent Image Understanding and Generation via Self-Correcting Coupled Markov Jump Processes</a></h3>
+      <p class="summary">Google Research introduces CO2Jump, enabling a single model to understand and edit an image simultaneously in one forward pass. Text and image tokens update together — each modality's transition rates are weighted by cross-modal attention from the other, and a remasking jump retracts tokens when cross-modal evidence reverses. Achieves best joint performance on image understanding, editing, and visual reasoning (maze and nonogram solving).</p>
+      <p class="why"><b>Why it matters:</b> Eliminates the usual understand-then-generate pipeline latency; the coupled update mechanism is a new architectural primitive for any multimodal system that needs to reason and generate jointly.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CV</span>
+        <span class="chip hot">~202 HF upvotes</span>
+        <a href="https://arxiv.org/abs/2607.13188" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.16051">Loop the Loopies! (Loopie): Solving the Looping Paradox with Looped Transformer MoE</a></h3>
+      <p class="summary">Loopie (20B total / 2B active, also a 6B/0.6B variant) is a looped Transformer MoE with a novel post-training pipeline for reasoning. It breaks the long-standing looping paradox — where spending more compute on looping previously underperformed simply scaling parameters — and achieves gold-medal performance at the 2025 IMO and IPhO without any external tools.</p>
+      <p class="why"><b>Why it matters:</b> If looping can be made reliably efficient, it decouples reasoning depth from parameter count — a path toward frontier-level reasoning with much smaller active-parameter models.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.AI</span>
+        <span class="chip">MoE · looped inference</span>
+        <a href="https://arxiv.org/abs/2607.16051" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.14530">xHC: Expanded Hyper-Connections for Transformers</a></h3>
+      <p class="summary">xHC is the first HC-family method to scale residual-stream expansion beyond N=4, using a sparse architecture that updates only k=4 of N=16 streams while reading the full state plus temporal feature augmentation. On 18B and 28B MoE models it delivers a 4.0-point average downstream gain over mHC at only 4% added training FLOPs. Scaling-law experiments show vanilla models need 1.50× more compute to reach the same loss.</p>
+      <p class="why"><b>Why it matters:</b> A practically useful architectural improvement for large-scale pre-training: nearly free compute gains with a simple residual-stream change that works at MoE scale.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.LG</span>
+        <a href="https://github.com/aHapBean/xHC" class="src-link">code →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.16107">Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos</a></h3>
+      <p class="summary">NVIDIA's fully open AV-LLM for reasoning over long, complex real-world videos with joint audio + image understanding. Trained on Audio-Visual-Skills (~7M caption/QA instances emphasizing temporal and cross-modal reasoning). A three-stage curriculum trains from short-range perception to long-horizon multi-event reasoning, with a novel Temporal Audio-Visual Interleaved Chain-of-Thought framework that grounds each reasoning step to timestamps.</p>
+      <p class="why"><b>Why it matters:</b> Addresses the key gap where prior AV-LLMs failed on long video; the open release and timestamp-grounded CoT make it directly useful for video analysis pipelines.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.CV</span>
+        <span class="chip">NVIDIA · open weights</span>
+        <a href="https://arxiv.org/abs/2607.16107" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15901">DSWorld: A Data Science World Model for Efficient Autonomous Agents</a></h3>
+      <p class="summary">Proposes a learned world model for autonomous data science agents, enabling agents to simulate environment transitions internally rather than executing them against real compute. Achieves 14× training speedup and 3–6× inference speedup compared to direct environment interaction, significantly lowering the cost of training and deploying agentic systems for data science tasks.</p>
+      <p class="why"><b>Why it matters:</b> World-model-based planning is an underexplored direction for reducing the token/compute cost of training agentic LLMs — the speedup numbers here are large enough to change what's practical.</p>
+      <div class="row">
+        <span class="chip">arXiv · cs.AI</span>
+        <span class="chip">agents · world model</span>
+        <a href="https://arxiv.org/abs/2607.15901" class="src-link">arxiv.org →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/pydantic/pydantic-ai">pydantic/pydantic-ai</a></h3>
+      <p class="summary">AI Agent Framework, the Pydantic way — type-safe, structured agent construction with validation baked in. Updated July 21, active in the topics/llm listing.</p>
+      <p class="why"><b>Why it matters:</b> Pydantic's schema-driven approach brings the same type safety and validation discipline that tamed Python data models to agent tool call definitions and structured outputs.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 18.7k</span>
+        <a href="https://github.com/pydantic/pydantic-ai" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/AstrBotDevs/AstrBot">AstrBotDevs/AstrBot</a></h3>
+      <p class="summary">AI Agent Assistant and development framework that integrates instant messaging platforms, LLMs, and plugins into a unified pipeline. 37.1k stars; trending on GitHub Python today.</p>
+      <p class="why"><b>Why it matters:</b> A practical glue layer for teams building LLM-powered bots and assistants across multiple messaging backends without rebuilding the integration layer each time.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 37.1k</span>
+        <a href="https://github.com/AstrBotDevs/AstrBot" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/PrefectHQ/fastmcp">PrefectHQ/fastmcp</a></h3>
+      <p class="summary">The fast, Pythonic way to build MCP (Model Context Protocol) servers and clients. Trending in topics/llm; 26.5k stars. Built by the team behind Prefect workflow orchestration.</p>
+      <p class="why"><b>Why it matters:</b> MCP server quality is now a bottleneck for agent harness capability; fastmcp reduces the boilerplate to get a production-grade tool server running, which matters as teams standardize around MCP.</p>
+      <div class="row">
+        <span class="chip">Python</span>
+        <span class="chip stars">★ 26.5k</span>
+        <a href="https://github.com/PrefectHQ/fastmcp" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/superset-sh/superset">superset-sh/superset</a></h3>
+      <p class="summary">Code editor for orchestrating multiple AI agents (Claude, Codex) with integrated terminal capabilities. 12.5k stars; updated today in the topics/llm listing.</p>
+      <p class="why"><b>Why it matters:</b> Multi-agent orchestration from a code editor bridges the gap between writing agent logic and running it — useful for practitioners building complex agent pipelines.</p>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip stars">★ 12.5k</span>
+        <a href="https://github.com/superset-sh/superset" class="src-link">github.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://cobusgreyling.substack.com/p/context-engineering-20">Context Engineering 2.0 — Multi-Turn Agent Memory and Context Window Management</a></h3>
+      <p class="summary">Extends the context engineering framing to cover multi-turn agent memory, context window management across long sessions, and the distinction between harness engineering (operating across context resets) and in-window context curation. Covers how data passes natively into models as contextual inputs vs. requiring manual handoff between systems.</p>
+      <p class="why"><b>Why it matters:</b> The shift from single-turn prompting to multi-session agentic workflows requires a different mental model for context — this piece structures the key design choices practitioners need to make.</p>
+      <div class="row">
+        <span class="chip">Practitioner · Substack</span>
+        <a href="https://cobusgreyling.substack.com/p/context-engineering-20" class="src-link">substack.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://harro.com/2026/07/20/unlocking-enterprise-ai-through-unified-workflows/">Unlocking Enterprise AI Through Unified Workflows</a></h3>
+      <p class="summary">Argues that AI value is only captured when AI is embedded directly into core operational architecture — data passing natively into models as contextual inputs rather than requiring manual copy-paste steps. Recommends narrow-scope, human-approval-first workflow integration with detailed logging as the practical path from AI tool adoption to real productivity gains.</p>
+      <p class="why"><b>Why it matters:</b> The adoption-to-impact gap is real; this piece gives a practical integration template for teams trying to move from "we have Claude" to "Claude is in the workflow."</p>
+      <div class="row">
+        <span class="chip">Practitioner · Jul 20</span>
+        <a href="https://harro.com/2026/07/20/unlocking-enterprise-ai-through-unified-workflows/" class="src-link">harro.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic">Nothing notable in the last 24h.</p>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48957779">GPT-5.6 Used a Prompt to Close a 30-Year Gap in Convex Optimization</a></h3>
+      <p class="summary">Structured prompt engineering — precise scope, stylistic anchor, step-verification instruction — guided GPT-5.6 Sol to close an open lower-bound problem, independently verified by two groups. The HN thread debates what "closing a gap" really means when the model is guided by human prompt design, and whether this represents genuine mathematical discovery.</p>
+      <div class="row">
+        <span class="chip hot">▲ 483 pts</span>
+        <span class="chip">💬 314 comments</span>
+        <a href="https://news.ycombinator.com/item?id=48957779" class="src-link">Hacker News →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uydii0/kimi_k3_beats_claude_fable_and_gpt_56_sol_in/">KIMI K3 Beats Claude Fable and GPT-5.6 Sol in arena.ai!!!</a></h3>
+      <p class="summary">Community excitement as Moonshot AI's Kimi K3 (2.8T param MoE) tops the arena.ai leaderboard over both Claude Fable 5 and GPT-5.6 Sol on certain benchmarks, marking a landmark moment for a Chinese model at frontier tier.</p>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uydii0/kimi_k3_beats_claude_fable_and_gpt_56_sol_in/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uycepz/kimi_k3_achieves_3rd_place_on_artificalanalysis/">Kimi K3 Achieves 3rd Place on ArtificialAnalysis, Beating Claude Opus 4.8</a></h3>
+      <p class="summary">ArtificialAnalysis Intelligence Index shows Kimi K3 placing 3rd globally, ranking #1 in Frontend Code Arena — a landmark for a Chinese open-weight model competing directly with top closed frontier models.</p>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uycepz/kimi_k3_achieves_3rd_place_on_artificalanalysis/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uyb88e/kimi_k3_weights_to_be_released_on_the_27th/">Kimi K3 Weights to Be Released on the 27th</a></h3>
+      <p class="summary">Moonshot AI confirms open weights release July 27 alongside the technical report. Thread debates local inference viability given the 2.8T scale — requiring significant hardware for full deployment.</p>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uyb88e/kimi_k3_weights_to_be_released_on_the_27th/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uyz9n2/bonsai_27b_runs_locally_on_an_iphone_a_27b_model/">Bonsai 27B Runs Locally on an iPhone — a 27B Model in 3.9GB</a></h3>
+      <p class="summary">Binary quantization milestone: a 27B parameter model compressed to 3.9 GB running on-device. Strong reaction in the local inference community around what this means for on-device private AI.</p>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uyz9n2/bonsai_27b_runs_locally_on_an_iphone_a_27b_model/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uyay0w/dflash_makes_qwen36_27b_22x_faster_with_no/">DFlash Makes Qwen3.6 27B 2.2× Faster with No Quality Loss</a></h3>
+      <p class="summary">New speculative decoding technique doubles throughput for the Qwen3.6-27B model with no reported benchmark degradation — significant for teams running open-weight models in production.</p>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uyay0w/dflash_makes_qwen36_27b_22x_faster_with_no/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uy33fw/deepseek_v4_flash_98gb_on_1x_4060ti_cpu_got_300/">DeepSeek V4 Flash (98GB) on 1× 4060Ti + CPU Got 300% Faster This Week [2→7 t/s]</a></h3>
+      <p class="summary">User reports dramatic inference speed gains for the large DeepSeek V4 Flash model on consumer GPU + CPU offload, following recent llama.cpp improvements — effectively tripling usable throughput.</p>
+      <div class="row">
+        <span class="chip">r/LocalLLaMA</span>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1uy33fw/deepseek_v4_flash_98gb_on_1x_4060ti_cpu_got_300/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/ClaudeAI/comments/1uy8iht/letting_claude_run_unattended_for_three_hours/">Letting Claude Run Unattended for Three Hours Changed How I Feel About My Own Job</a></h3>
+      <p class="summary">Personal reflection on agentic Claude usage (background agents / Claude Cowork), sparking a philosophical discussion in r/ClaudeAI about what it means when an AI autonomously completes work engineers would have done themselves.</p>
+      <div class="row">
+        <span class="chip">r/ClaudeAI</span>
+        <a href="https://www.reddit.com/r/ClaudeAI/comments/1uy8iht/letting_claude_run_unattended_for_three_hours/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/singularity/comments/1uypik5/chinese_president_xi_jinping_speaks_at_world_ai/">Chinese President Xi Jinping Speaks at World AI Conference, Reaffirms Commitment to Open Source</a></h3>
+      <p class="summary">Xi's public endorsement of open-source AI at WAIC generating discussion on China's strategic AI posture — framed as both a geopolitical move and a genuine commitment to open development that is reshaping the global model landscape.</p>
+      <div class="row">
+        <span class="chip">r/singularity</span>
+        <a href="https://www.reddit.com/r/singularity/comments/1uypik5/chinese_president_xi_jinping_speaks_at_world_ai/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/singularity/comments/1uvrtl0/another_50_yearold_erdős_problem_falls_to_gpt56/">Another 50+-Year-Old Erdős Problem Falls to GPT-5.6</a></h3>
+      <p class="summary">GPT-5.6 reportedly produces a valid proof for a long-standing combinatorics problem, following similar claims about Fable 5 and math research — thread debates how to attribute credit between model capability and human prompt engineering.</p>
+      <div class="row">
+        <span class="chip">r/singularity</span>
+        <a href="https://www.reddit.com/r/singularity/comments/1uvrtl0/another_50_yearold_erdős_problem_falls_to_gpt56/" class="src-link">reddit.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation">Kimi K3: The Open-Weights Escalation</a></h3>
+      <p class="summary">Lambert's detailed analysis of Moonshot AI's Kimi K3 — a 2.8-trillion-parameter MoE model whose weights are slated for public release July 27 — argues this is the closest open models have come to the frontier since DeepSeek R1. Contends K3 should meaningfully raise observers' probability estimate that China can outright lead in AI capabilities, driven by more efficient training rather than raw compute scaling.</p>
+      <p class="why"><b>Why it matters:</b> This is the most thorough independent assessment of K3's capabilities available; Lambert's framing of it as an "escalation" sets the terms for how the community should think about the open-weights competitive landscape going forward.</p>
+      <div class="row">
+        <span class="chip">Interconnects · Jul 21</span>
+        <a href="https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation" class="src-link">interconnects.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/">Who's Afraid of Chinese Models?</a></h3>
+      <p class="summary">Willison links to Ben Thompson's Stratechery piece arguing that frontier US labs are structurally fine even as Chinese models like Kimi K3 close the capability gap — the real concern is that US export restrictions are ironically forcing American companies to rely on Chinese open-source models for cybersecurity. Thompson's prescription: loosen restrictions on US open-weight alternatives rather than try to block Chinese model distillation.</p>
+      <p class="why"><b>Why it matters:</b> A contrarian read on AI geopolitics that cuts through the zero-sum framing — relevant for teams making model selection decisions that are increasingly entangled with policy risk.</p>
+      <div class="row">
+        <span class="chip">Simon Willison · Jul 20</span>
+        <a href="https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/19/ai-mania/">AI Mania Is Eviscerating Global Decision-Making</a></h3>
+      <p class="summary">Willison links and comments on Nik Suresh's piece arguing that AI obsession has become a substitute for actual strategic thinking inside large organizations — leaders are deploying AI as a reflexive response to competitive pressure rather than as a considered tool. Frames this as institutional decision-making collapse where "what does the AI say" replaces genuine analysis.</p>
+      <p class="why"><b>Why it matters:</b> A useful diagnostic for teams inside organizations where AI adoption is being driven by FOMO rather than strategy — understanding the failure mode is the first step to avoiding it.</p>
+      <div class="row">
+        <span class="chip">Simon Willison · Jul 19</span>
+        <a href="https://simonwillison.net/2026/Jul/19/ai-mania/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/rare-disease-research-grants">Apply for Anthropic's AI for Science Rare Disease Research Grants</a></h3>
+      <p class="summary">Anthropic opens applications within its AI for Science program focused specifically on rare genetic diseases, offering up to $50,000 in Claude credits over six months for tools and evaluations around rare disease mechanisms, variant-of-unknown-significance interpretation, and phenotype-to-disease matching. Applications close August 2, 2026.</p>
+      <p class="why"><b>Why it matters:</b> A concrete funding pathway for researchers applying LLMs to high-stakes biological problems — the focus on VUS interpretation and phenotype matching are particularly well-suited to Claude's reasoning capabilities.</p>
+      <div class="row">
+        <span class="chip">Anthropic · Jul 20</span>
+        <a href="https://www.anthropic.com/news/rare-disease-research-grants" class="src-link">anthropic.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-21 01:19 UTC<br>
+    Source issues: arXiv and HF pages blocked by egress proxy (403); papers found via web search and HF tracker. HN Algolia API returned 403; HN data reconstructed from search/aggregators. RSS feeds returned 403; blog posts found via web search. Reddit: accessed via AINews GitHub aggregator; most recent data Jul 17 (Jul 18–20 weekend gap).<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
