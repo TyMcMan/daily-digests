@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-21</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Tuesday, July 21, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">NVIDIA formalizes CPO across Spectrum-X and Quantum-X switch families, making optical interconnects the AI factory standard through 2028</a></li>
+      <li><a href="#compute">UMC delivers first mass-produced 1.6T silicon photonics wafers from Singapore 12-inch fab; IMEC iSiPP300 to open to broader access in 2027</a></li>
+      <li><a href="#compute">IEEE/Ghent-imec study demonstrates micro-transfer printing as practical III-V and LiNbO3 integration path onto CMOS-compatible SiPh</a></li>
+      <li><a href="#pic-eda">gdsfactory routing strategy overhaul and Zensical docs migration; kfactory v3.0.1 cell-write bug fixed</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/nvidia-reveals-plan-to-scale-ai-factories-with-co-packaged-optics">NVIDIA Reveals Plan to Scale AI Factories with Co-Packaged Optics</a></h3>
+      <p>NVIDIA's Spectrum-X Photonics CPO Ethernet switches will deliver up to 409.6 Tb/s in H2 2026, and the Quantum-X InfiniBand switches move to CPO in the Feynman GPU generation (2028). Both scale-out and scale-up networking paths now have CPO on the roadmap, marking NVIDIA's formal commitment to optical interconnects as the primary medium for next-generation AI infrastructure. <em>Why it matters:</em> When NVIDIA commits to CPO across both IB and Ethernet product lines simultaneously, it closes the "will CPO actually ship?" debate — suppliers, packaging foundries, and AI system designers can now plan around optical interconnect as a given for high-end AI clusters from 2026 onward.</p>
+      <div class="meta">optics.org · 2026-07-20</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.digitimes.com/news/a20260720VL214/photonics-silicon-hbm-competition-chips.html">UMC Delivers First Mass-Produced 1.6T Silicon Photonics Wafers; IMEC iSiPP300 to Open Broader Access in 2027</a></h3>
+      <p>UMC's Singapore 12-inch fab has delivered mass-produced silicon photonics wafers to SILITH Technology at 1.6T data rates — establishing a non-TSMC, high-volume SiPh manufacturing path aimed squarely at AI data center interconnects. Separately, IMEC's iSiPP300 silicon photonics process is set to open its platform to additional customers from 2027, widening the foundry ecosystem for volume SiPh production. <em>Why it matters:</em> TSMC has dominated advanced SiPh capacity; a UMC 12-inch SiPh path at 1.6T gives fabless SiPh designers a strategic second source and lowers supply-chain concentration risk at exactly the moment hyperscaler demand is surging.</p>
+      <div class="meta">Digitimes · 2026-07-20</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/20/ieee-study-highlights-how-micro-transfer-printing-can-lead-to-advanced-silicon-photonics/">IEEE Study: Micro-Transfer Printing Advances Silicon Photonics Heterogeneous Integration</a></h3>
+      <p>Researchers from Ghent University and imec published in IEEE's Journal of Lightwave Technology showing that micro-transfer printing (MTP) can integrate III-V semiconductors and lithium niobate directly onto CMOS-compatible silicon photonics platforms. MTP enables co-integration of on-chip gain materials (needed for integrated lasers) and high-speed modulators without exotic bonding processes that have historically limited heterogeneous SiPh yields. <em>Why it matters:</em> On-chip laser integration and high-speed LiNbO3 modulators are two of SiPh's biggest material integration gaps; MTP as a CMOS-compatible route resolves both simultaneously and could unlock fully integrated photonic compute chiplets without hybrid bonding.</p>
+      <div class="meta">The Quantum Insider · 2026-07-20</div>
+    </article>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gdsfactory/commits/main">gdsfactory: Routing Strategy Overhaul, Docs Migration to Zensical, Component Plot Improvements</a></h3>
+      <p>Active commits July 19–21: PR #4515 replaces old kfactory routing strategies with updated ones (API behavior changes — designers using automated routing should review); PR #4653 migrates the entire documentation system from Jupyter Book to Zensical for cleaner navigation; PR #4655 renders component plots as images rather than static code blocks; PR #4650 adds a benchmarks framework. <em>Why it matters:</em> The routing strategy replacement is the most substantive change — teams using gdsfactory's automated routing should audit their workflows against updated behavior before it appears in a tagged release.</p>
+      <div class="meta">gdsfactory/gdsfactory · 2026-07-19 to 2026-07-21</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/kfactory/releases/tag/v3.0.1">kfactory v3.0.1: Cell-Write Bug Fix for KLayout Backend</a></h3>
+      <p>kfactory (the KLayout-backed cell engine underlying gdsfactory) bumped to v3.0.1 with a targeted fix: the abstract parent of VKCell/DKCell.write was incorrect and could cause silent failures when writing cells through the KLayout backend. Dependency updates to typer and rust-just also included. <em>Why it matters:</em> Designers using the KLayout-native workflow (rather than the legacy GDS backend) should update to avoid potential cell-write edge-case failures — silent write failures are difficult to catch and can corrupt GDS output without obvious error messages.</p>
+      <div class="meta">gdsfactory/kfactory · 2026-07-20</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gdsfactory-paper-spie26">gdsfactory SPIE Optics + Photonics 2026 Paper Repo Updated; Foundry PDKs Synchronized</a></h3>
+      <p>The gdsfactory-paper-spie26 invited paper repo received updates July 18–19 ahead of its August 24 SPIE Optics + Photonics presentation. Simultaneously, three foundry PDK repositories — UBC SiEPIC EBeam, IHP Open Access PDK, and Skywater 130nm — were updated on the same dates, likely synchronized for the conference milestone. <em>Why it matters:</em> PIC designers using any of these open-access process nodes should pull latest PDK commits; the SPIE paper repo also provides a citable reference for gdsfactory's ecosystem state as of mid-2026.</p>
+      <div class="meta">gdsfactory org · 2026-07-18 to 2026-07-19</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.08360">Inverse-Designed Meta Processing Units for Multi-Task Near-Field Photonic Computing</a><span class="badge">catch-up</span></h3>
+      <p>Introduces compact passive matrix operators (9.6 × 4.8 μm footprint) called meta processing units (MPUs), implemented as inverse-designed shallow-etched silicon regions acting as local complex matrix transformations. Demonstrates 92.7% fidelity on 4×4 matrix operations and 83.5%/80.9% dual-task vowel recognition accuracy when paired with active MZI neurons. <em>Why it matters:</em> Compact, general, task-reconfigurable matrix operators have been a missing piece for scaling photonic neural networks — MPUs solve footprint, generality, and reconfigurability simultaneously in a fabrication-compatible form.</p>
+      <div class="meta">arXiv · physics.optics · ~2026-07-10</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2604.22660">FieldCore: Fully Multiplexed Photonic Tensor Computing Across All Five Optical Dimensions</a><span class="badge">catch-up</span></h3>
+      <p>FieldCore simultaneously exploits all five native optical multiplexing dimensions — wavelength, radio-frequency, guided-mode, time, and space — in a single inverse-designed silicon photonic chip, enabling parallelism to scale multiplicatively rather than additively. Experimentally validated on ultra-high-baudrate arithmetic, image convolution, and parallel handwritten-digit recognition. <em>Why it matters:</em> The most complete demonstration of full-field photonic tensor parallelism to date; shows a concrete path to scaling silicon photonic AI accelerators beyond the bandwidth ceilings imposed by single-dimensional multiplexing.</p>
+      <div class="meta">arXiv · physics.optics · 2026-04-24</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2605.13224">On-Chip 1 TOPS Hyperdimensional Photonic Tensor Core Using WDM Silicon Photonic Coherent Crossbar</a><span class="badge">catch-up</span></h3>
+      <p>Demonstrates 0.96 TOPS on a silicon photonic crossbar using combined time-space-wavelength multiplexing (TSWDM), with 56 GHz electroabsorption modulators at 4×30 GBd. Achieves 93.3% classification accuracy on the Iris dataset. <em>Why it matters:</em> Sets a new experimental throughput benchmark for silicon photonic AI accelerators and validates the TSWDM architecture as a credible path to multi-TOPS photonic inference — the first time all three multiplexing dimensions have been combined experimentally at this bandwidth.</p>
+      <div class="meta">arXiv · cs.ET · 2026-05</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2605.14690">Integrated Photonic Computing: Towards High-Dimensional Information Processing</a><span class="badge">catch-up</span></h3>
+      <p>Review article spanning the full stack from low-dimensional (MZI, microring-based) matrix-vector multiplication to high-dimensional (spatial-mode and WDM) architectures. Covers time-wavelength interleaving, hardware-aware training, and algorithm-hardware co-design as practical enablers for integrated photonic computing systems. <em>Why it matters:</em> A structured roadmap linking device physics to system-level design choices — useful as a reference for teams building photonic compute systems who need to navigate the rapidly expanding literature.</p>
+      <div class="meta">arXiv · cs.ET · 2026-05</div>
+    </article>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://www.photondelta.com/news/quix-quantum-announces-carina-the-first-universal-photonic-quantum-computing-architecture-for-commercial-deployment/">QuiX Quantum Launches Carina: First Universal Photonic Quantum Computing Architecture for Commercial Deployment</a><span class="badge">catch-up</span></h3>
+      <p>QuiX Quantum unveiled Carina, a rack-mounted, room-temperature photonic quantum computing architecture built for customer data centers, developed for Germany's DLR Quantum Computing Initiative. The architecture uses optical networking-compatible components and is positioned as a pre-fault-tolerant foundation for quantum PIC manufacturing at scale. <em>Why it matters:</em> The first commercial photonic quantum architecture designed to sit in a standard data center rack — using optical networking-compatible components — is a significant step toward photonic quantum computing entering the same supply chain as classical photonic compute systems.</p>
+      <div class="meta">PhotonDelta · 2026-07-14 to 2026-07-15</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: All direct source fetches returned 403 from egress proxy; all content retrieved via web search. arXiv listing pages (physics.optics, cs.ET, quant-ph) blocked at proxy — most recent indexed papers are ~July 10. Nature Photonics and Light:Sci&amp;App RSS feeds blocked. Lightmatter, Ayar Labs, EPIC: no new content confirmed July 19–21. Reddit r/Optics and r/Semiconductors RSS: 403; web search fallback surfaced no relevant threads in window — Reddit not assessed.</div>
+  <div>11 items &middot; generated 2026-07-21 01:19 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
