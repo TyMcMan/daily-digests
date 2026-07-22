@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-22</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Wednesday, 22 July 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Silicon photonics pitched as the fix for AI interconnect bandwidth walls</a></li>
+      <li><a href="#research">Organic metadevices with real-time pixel-level tunability demonstrated at Stuttgart</a></li>
+      <li><a href="#europe">QinetiQ showcases £20 M Helena laser weapon at Farnborough air show</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://science-technology.news-articles.net/content/2026/07/20/solving-the-ai-interconnect-bottleneck-with-silicon-photonics.html">Solving the AI Interconnect Bottleneck with Silicon Photonics</a><span class="badge">analysis</span></h3>
+      <p>A detailed look at how copper-based interconnects are becoming the binding constraint for large-scale AI clusters, and why silicon photonics — co-packaged optics in particular — is positioned as the bandwidth and power-efficiency solution. The piece covers CPO integration roadmaps, transceiver density, and the energy-per-bit gap versus electrical I/O. <em>Why it matters:</em> Captures the current industry framing around CPO and optical interconnects that is driving procurement and R&D decisions across hyperscalers and PIC foundries alike.</p>
+      <div class="meta">science-technology.news-articles.net · 2026-07-20</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <article class="item">
+      <h3><a href="https://www.nature.com/articles/s41467-026-75757-4">Interactively Addressable Organic Metadevices</a><span class="badge">paper</span></h3>
+      <p>Researchers at the University of Stuttgart demonstrate organic thin-film metadevices in which individual pixels can be addressed and switched in real time, enabling spatial light modulation at the device level. The approach merges organic semiconductor processing with metasurface design, yielding dynamic wavefront control without mechanical parts. <em>Why it matters:</em> Electrically reconfigurable metasurfaces are a key enabling technology for beam-steering, holography, and integrated photonic signal processing; an organic-layer route could lower fabrication costs relative to III-V or MEMS approaches.</p>
+      <div class="meta">Nature Communications · 2026-07-22</div>
+    </article>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://www.army-technology.com/news/fia-2026-qinetiq-open-to-power-foreign-laser-weapons/">QinetiQ Opens Helena High-Energy Laser to Foreign Partners at Farnborough 2026</a><span class="badge">defence</span></h3>
+      <p>QinetiQ used the Farnborough International Airshow to publicly offer the £20 M Helena laser weapon system — already under UK MoD contract — to allied nations. Helena delivers multi-kilowatt continuous-wave output for counter-drone and force-protection roles and has completed live-fire trials. <em>Why it matters:</em> High-energy laser weapons represent one of the highest-volume growth markets for beam-combining fibre and solid-state laser modules, creating near-term demand for EU and UK photonics supply chains.</p>
+      <div class="meta">Army Technology · 2026-07-22</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div style="margin-bottom:.5rem"><b>Source notes:</b> PIC/EDA, Funding, and Misc sections are empty today — no unseen items surfaced from gdsfactory/SiEPIC repos, EPIC, Cignal AI, PhotonDelta, or optics.org after deduplication against seen-links.log. arXiv physics.optics fetch blocked by proxy (HTTP 403); Nature Communications paper discovered via web search. Reddit photonics RSS blocked from this environment.</div>
+  <div>3 items &middot; generated 2026-07-22 03:00 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
