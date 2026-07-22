@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-22</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Wednesday, July 22, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 13 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/">Google releases three new Gemini models — Gemini 3.6 Flash, 3.5 Flash-Lite, Flash Cyber — and teases Gemini 4</a>
+        <span class="src">TechCrunch</span>
+        <span class="why">Three models in one day: 3.6 Flash cuts token usage 17% at lower pricing; Flash Cyber is cybersecurity-specialized (gov-only preview); and Google confirms Gemini 4 pre-training has begun — reshaping the mid-tier agent economics.</span>
+      </li>
+      <li>
+        <a href="https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/">Alibaba previews Qwen 3.8 Max — 2.4T multimodal MoE, "second only to Fable 5," open weights coming</a>
+        <span class="src">MarkTechPost</span>
+        <span class="why">Announced at World AI Conference Shanghai, days after Kimi K3. Text + images + video + documents, 1M context, 10% preview pricing. No independent benchmarks yet, but the open-weight promise could again shift the accessible frontier.</span>
+      </li>
+      <li>
+        <a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/">Simon Willison: Fireside chat with Claude Code team (Cat Wu + Thariq Shihipar) at AI Engineer World's Fair</a>
+        <span class="src">simonwillison.net</span>
+        <span class="why">Rare direct insight from Anthropic's Claude Code team into the agentic architecture design, context management strategy, and how they think about autonomous coding workflows — from the people who built it.</span>
+      </li>
+      <li>
+        <a href="https://compliancehub.wiki/eu-ai-act-article-50-transparency-digital-omnibus-2026/">EU AI Act: GPAI penalty powers and Article 50 transparency activate August 2 — 11 days away</a>
+        <span class="src">ComplianceHub.wiki</span>
+        <span class="why">Hard deadline: AI-interaction disclosure labels, machine-detectable synthetic-content labeling, and deepfake watermarking all become EU law simultaneously. GPAI providers face fines up to €15M or 3% global turnover. No further extension.</span>
+      </li>
+      <li>
+        <a href="https://frontendmasters.com/workshops/harness-engineering/">Frontend Masters: "Build Durable AI Agent Systems" harness-engineering workshop (July 20–24)</a>
+        <span class="src">Frontend Masters</span>
+        <span class="why">Live workshop covering production harness engineering — sandboxed tool execution, permission scoping, durable agent workflow design, and recovery patterns. Runs this week; recording available after.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">0</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">1</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">5</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+    <div class="card">
+      <h3><a href="https://arxiv.org/list/cs.LG/recent">arXiv &amp; Hugging Face — unavailable this run</a></h3>
+      <p class="summary">arXiv.org and huggingface.co are blocked at the proxy egress level (HTTP 403 CONNECT denial). No papers could be fetched or verified this run. Paper counts are 0; links shown are the listing pages for reference only.</p>
+      <p class="why"><b>Source issue:</b> Proxy allowlist needs to include arxiv.org and huggingface.co to restore paper coverage.</p>
+      <div class="row">
+        <span class="chip">proxy-blocked</span>
+        <a href="https://huggingface.co/papers" class="src-link">hf.co/papers →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/ayghri/i-have-adhd">ayghri/i-have-adhd</a></h3>
+      <p class="summary">A curated skill/prompt collection for coding agents focused on stopping them from burying the answer in verbose preamble — directly addresses a common friction point for developers with ADHD working with AI tools. 1,866 stars today; 6,867 total.</p>
+      <p class="why"><b>Why it matters:</b> Highlights a growing category of agent skill files that tune output behavior without touching the model — a lightweight form of harness engineering.</p>
+      <div class="row">
+        <span class="chip hot">★ 1,866 today</span>
+        <span class="chip">agent skills</span>
+        <a href="https://github.com/ayghri/i-have-adhd" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/koala73/worldmonitor">koala73/worldmonitor</a></h3>
+      <p class="summary">Real-time global intelligence dashboard with AI-powered news aggregation and geopolitical monitoring. TypeScript, 1,295 stars today; 65,458 total. Trending at #1 overall on GitHub today.</p>
+      <p class="why"><b>Why it matters:</b> A practical example of AI-assisted live information synthesis at scale — patterns here (source routing, relevance filtering, dedup) are directly applicable to agent memory and context pipelines.</p>
+      <div class="row">
+        <span class="chip">TypeScript</span>
+        <span class="chip hot">★ 1,295 today</span>
+        <a href="https://github.com/koala73/worldmonitor" class="src-link">github.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/earthtojake/text-to-cad">earthtojake/text-to-cad</a></h3>
+      <p class="summary">Agent skill library for CAD, robotics, and hardware design — turns natural-language descriptions into geometry operations via LLM-callable tool functions. JavaScript, 291 stars today; 9,125 total.</p>
+      <p class="why"><b>Why it matters:</b> Extends the agentic coding paradigm into physical design domains; the skill-based decomposition pattern is a reusable template for any domain with structured output requirements.</p>
+      <div class="row">
+        <span class="chip">JavaScript</span>
+        <span class="chip stars">★ 9.1k total</span>
+        <a href="https://github.com/earthtojake/text-to-cad" class="src-link">github.com →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://www.artificialintelligence-news.com/news/googles-gemini-3-6-flash-targets-enterprise-agent-token-costs/">Google's Gemini 3.6 Flash targets enterprise agent token costs</a></h3>
+      <p class="summary">Gemini 3.6 Flash is explicitly designed around agentic workloads: 17% fewer tokens vs 3.5 Flash for equivalent outputs, priced at $1.50/$7.50 per million input/output tokens. Supports long context and multimodal inputs — positioned as the go-to workhorse for high-frequency agent tool calls in enterprise deployments.</p>
+      <p class="why"><b>Why it matters:</b> Token-per-task cost is the primary operating expense for production agent loops. A 17% reduction at lower pricing directly changes the unit economics for always-on agentic systems.</p>
+      <div class="row">
+        <span class="chip">Google · Gemini 3.6</span>
+        <span class="chip">2026-07-21</span>
+        <a href="https://www.artificialintelligence-news.com/news/googles-gemini-3-6-flash-targets-enterprise-agent-token-costs/" class="src-link">ai-news →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://compliancehub.wiki/eu-ai-act-article-50-transparency-digital-omnibus-2026/">EU AI Act August 2: GPAI enforcement + Article 50 transparency — 11-day countdown</a></h3>
+      <p class="summary">August 2, 2026 activates Article 50 (mandatory AI-interaction disclosure, machine-detectable synthetic-content labels, deepfake watermarking) and centralizes GPAI model enforcement under the European AI Office. The Digital Omnibus expands scope to AI systems deployed within the same business group as their GPAI model. Fines: up to €15M or 3% of global turnover. High-risk deadline moved to Dec 2027 but GPAI timeline holds.</p>
+      <p class="why"><b>Why it matters:</b> Any agent deployed in EU contexts must surface AI-interaction disclosures from August 2 — a concrete harness requirement, not a documentation task.</p>
+      <div class="row">
+        <span class="chip">EU AI Act · GPAI</span>
+        <span class="chip hot">deadline: 2026-08-02</span>
+        <a href="https://compliancehub.wiki/eu-ai-act-article-50-transparency-digital-omnibus-2026/" class="src-link">compliancehub.wiki →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://frontendmasters.com/workshops/harness-engineering/">Build Durable AI Agent Systems — Frontend Masters harness-engineering workshop (Jul 20–24)</a></h3>
+      <p class="summary">Live/recorded workshop running this week covering production-grade AI agent harness engineering: sandboxed tool execution, permission scoping, checkpoint/resume patterns for durable workflows, and error-recovery design. Practical sessions with code examples aimed at engineers shipping agents to production.</p>
+      <p class="why"><b>Why it matters:</b> One of the few structured curricula that treats harness engineering — not just prompting — as the primary discipline for reliable agent systems.</p>
+      <div class="row">
+        <span class="chip">harness engineering</span>
+        <span class="chip">Jul 20–24 · live + recorded</span>
+        <a href="https://frontendmasters.com/workshops/harness-engineering/" class="src-link">frontendmasters.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/">Fireside Chat: Cat Wu &amp; Thariq Shihipar (Anthropic Claude Code) at AI Engineer World's Fair</a></h3>
+      <p class="summary">Simon Willison's write-up and notes from a fireside chat with Anthropic's Claude Code leads at the AI Engineer World's Fair. Covers how Claude Code's agentic architecture handles context management, long-horizon task planning, and the design philosophy behind autonomous coding workflows. Includes Willison's own synthesis and takeaways.</p>
+      <p class="why"><b>Why it matters:</b> Inside access to the design thinking behind Claude Code from the team that built it — rare primary-source material for practitioners building on or competing with agentic coding tools.</p>
+      <div class="row">
+        <span class="chip">Claude Code · Anthropic</span>
+        <span class="chip">2026-07-21</span>
+        <a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48883064">Claude Code May–July 2026 weekly limits promotion (HN discussion)</a></h3>
+      <p class="summary">Hacker News thread on Anthropic restricting Fable 5 access to enterprise plans and cutting Claude Code weekly limits by 50% after July 13. Community compares this against OpenAI Codex's decision to include frontier model access in its subscription, with debate over whether Anthropic is optimizing for monetization at the cost of developer goodwill. Note: HN Algolia API is proxy-blocked; thread surfaced via web search, point/comment counts unavailable.</p>
+      <p class="why"><b>Why it matters:</b> Signals a major inflection in how frontier labs monetize agentic coding tools; the limit structure will directly affect teams evaluating Claude Code vs. Codex vs. Cursor for production use.</p>
+      <div class="row">
+        <span class="chip">Hacker News</span>
+        <span class="chip">Claude Code · limits</span>
+        <a href="https://news.ycombinator.com/item?id=48883064" class="src-link">HN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/">Nothing notable in the last 24h</a></h3>
+      <p class="summary">Web search surfaced subreddit-level topics (Gemini 3.6 Flash discussion in r/LocalLLaMA; Qwen 3.8 Max reaction in r/Singularity; Claude Code limits in r/ClaudeCode) but returned no direct thread URLs with real reddit.com/r/*/comments/ links from July 22, 2026. Only links found were subreddit homepages or pre-existing seen threads.</p>
+      <p class="why"><b>Source issue:</b> Reddit crawler blocks prevent search engines from indexing recent threads promptly; real-time thread discovery requires authenticated API access.</p>
+      <div class="row">
+        <span class="chip">not assessed — no URLs found</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/">Google releases three new Gemini models — but no 3.5 Pro (TechCrunch, Jul 21)</a></h3>
+      <p class="summary">Google launched Gemini 3.6 Flash (improved coding + multimodal, 17% token reduction vs 3.5 Flash), 3.5 Flash-Lite (cheapest in class at $0.075/$0.30 per M tokens), and 3.5 Flash Cyber (cybersecurity-tuned, limited government preview). The flagship Gemini 3.5 Pro still has no GA date. Google confirmed Gemini 4 pre-training has started.</p>
+      <p class="why"><b>Why it matters:</b> Three simultaneous model launches signals Google's intent to dominate the cost-efficient tier just as Kimi K3 and Qwen 3.8 compete for the open frontier — and the Gemini 4 announcement resets the roadmap clock.</p>
+      <div class="row">
+        <span class="chip">Google · Gemini</span>
+        <span class="chip">2026-07-21</span>
+        <a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/" class="src-link">TechCrunch →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/">Alibaba previews Qwen 3.8 Max: 2.4T multimodal MoE, "second only to Fable 5" (MarkTechPost, Jul 19)</a></h3>
+      <p class="summary">Unveiled at the World AI Conference in Shanghai, Qwen 3.8 Max is Alibaba's largest model yet — 2.4T total params (sparse MoE, only a fraction active per token), native multimodal (text, images, video, documents), 1M-token context. Live now as Qwen3.8-Max-Preview at 10% standard pricing; open weights promised "soon." Alibaba shipped the claim of near-Fable-5 performance without independent benchmarks.</p>
+      <p class="why"><b>Why it matters:</b> The open-weight promise — arriving days after Kimi K3's release — sustains the open-frontier race. If weights deliver on preview claims, the accessible compute frontier shifts again.</p>
+      <div class="row">
+        <span class="chip">Alibaba · Qwen</span>
+        <span class="chip">2026-07-19</span>
+        <a href="https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/" class="src-link">MarkTechPost →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/19/ai-mania/">AI Mania Is Eviscerating Global Decision-Making (Simon Willison, Jul 19)</a></h3>
+      <p class="summary">Willison argues the pace of AI adoption is outrunning institutions' ability to evaluate trade-offs. He traces examples from healthcare procurement to policy arenas where hype is displacing careful analysis — and calls out the AI industry's responsibility to slow the sales cycle when adoption outpaces understanding. A sober counterpoint to the product-launch drumbeat.</p>
+      <p class="why"><b>Why it matters:</b> One of AI's most reliable practitioners making a systemic-risk argument, not a safety-scare argument — a different kind of warning worth reading before the next deployment decision.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">2026-07-19</span>
+        <a href="https://simonwillison.net/2026/Jul/19/ai-mania/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/">Claude Code uses Bun written in Rust now (Simon Willison, Jul 19)</a></h3>
+      <p class="summary">Willison traces Anthropic's engineering decision to ship Claude Code's runtime on Bun (the JavaScript runtime written in Zig/Rust) — a deliberate performance and startup-latency choice. He walks through the dependency chain and implications for Claude Code's cold-start time, cross-platform binary distribution, and footprint in constrained environments.</p>
+      <p class="why"><b>Why it matters:</b> Practical insight for teams building on or embedding Claude Code; understanding the runtime stack affects how you think about sandboxing, version pinning, and performance budgeting.</p>
+      <div class="row">
+        <span class="chip">Simon Willison</span>
+        <span class="chip">Claude Code · runtime</span>
+        <a href="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/" class="src-link">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/">Gemini 3.6 Flash is now available in GitHub Copilot (GitHub Changelog, Jul 21)</a></h3>
+      <p class="summary">GitHub added Gemini 3.6 Flash to Copilot's model picker alongside the existing roster. Users can switch to it for code suggestions and inline chat directly within their IDE. The integration lands the same day as the model's general release — unusually fast distribution for a non-OpenAI model in Copilot.</p>
+      <p class="why"><b>Why it matters:</b> Copilot's multi-model evolution continues; Gemini 3.6 Flash's token efficiency gains translate to lower per-session cost in long-context coding sessions — relevant if your team is on Copilot billing.</p>
+      <div class="row">
+        <span class="chip">GitHub Copilot · Gemini</span>
+        <span class="chip">2026-07-21</span>
+        <a href="https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/" class="src-link">github.blog →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-22 01:05 UTC<br>
+    Source issues: arXiv.org, huggingface.co, hn.algolia.com, news.ycombinator.com (direct), simonwillison.net RSS, anthropic.com, openai.com, deepmind.google all proxy-blocked (HTTP 403 CONNECT). Papers tab empty; HN thread discovered via web search; blogs covered via search-discovered URLs; Reddit tab empty (no real thread URLs indexed).
+    <br>AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
