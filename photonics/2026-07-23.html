@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-23</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Thursday, July 23, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#pic-eda">gdsfactory v9.46.0 released: kfactory v3 migration, route_bundle consolidation, grid-snapping fix</a></li>
+      <li><a href="#funding">PsiQuantum secures $125M DARPA Stage C agreement for photonic quantum compute validation</a></li>
+      <li><a href="#funding">Photon Queue closes $4M seed for room-temperature photon memory — no cryogenics needed</a></li>
+      <li><a href="#europe">Photonics21 calls for dedicated EU Photonics Partnership as Chips Act 2.0 includes photonics</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <p class="empty">Nothing new today — all sources (Lightmatter, Ayar Labs, Next Platform, Optica OPN, optics.org) returned HTTP 403 or had no items dated July 21–23 via web search.</p>
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gdsfactory/releases/tag/v9.46.0">gdsfactory v9.46.0 — kfactory v3 migration, route_bundle consolidation, grid fix</a></h3>
+      <p>gdsfactory v9.46.0 (July 22, 2026, 05:08 UTC) completes the migration to kfactory v3, replacing all legacy routing strategies with a unified <code>route_bundle</code> API. Key bug fixes: negative <code>bend_s_offset</code> values now work correctly; <code>grid_factor</code> being silently ignored in <code>snap_to_grid</code> is resolved; <code>select_ports</code> performance is improved via precomputed layer filters; <code>via_stack_with_offset</code> bugs are fixed. Documentation has migrated from Jupyter Book to Zensical. <em>Why it matters:</em> The kfactory v3 dependency update requires workflow migration testing for any existing PIC design scripts; the grid-snapping and via_stack fixes directly affect layout accuracy and tapeout verification in high-density designs.</p>
+      <div class="meta">gdsfactory GitHub &middot; 2026-07-22</div>
+    </article>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <p class="empty">Nothing new today — arXiv physics.optics and cs.ET list pages returned HTTP 403; Nature Photonics and Light:S&amp;A RSS feeds returned HTTP 403; no new papers dated July 21–23 on photonic compute topics confirmed via web search. (IEEE micro-transfer printing paper covered in prior run.)</p>
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://photonics21.org/news/">Photonics21 welcomes EU Chips Act 2.0 inclusion of photonics, calls for dedicated European Photonics Partnership<span class="badge">catch-up</span></a></h3>
+      <p>Photonics21 formally welcomed photonics' inclusion in the EU Chips Act 2.0 framework and called for establishment of a dedicated European Photonics Partnership — modeled on the existing Horizon Europe Photonics Partnership — with a Board of Stakeholders election targeted for fall 2026. The move positions photonics alongside advanced silicon logic and compound semiconductors as a strategic EU technology. <em>Why it matters:</em> For Akhetonics, this signals continued and potentially expanded EU public funding instruments (KDT JU calls, EIC Accelerator, strategic procurement) and stronger ecosystem support for integrated photonic hardware across EU foundries.</p>
+      <div class="meta">Photonics21 &middot; 2026-07-17</div>
+    </article>
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://www.psiquantum.com/news-import/psiquantum-will-partner-with-darpa-to-accelerate-path-to-build-the-worlds-first-utility-scale-quantum-computer">PsiQuantum signs $125M DARPA Stage C agreement for photonic quantum compute validation</a></h3>
+      <p>PsiQuantum secured a $125M expanded DARPA agreement under the Quantum Benchmarking Initiative (Stage C — the final, most advanced phase), covering photonic assembly, cryogenic validation, advanced material manufacturing, and algorithmic resource benchmarking for its fault-tolerant photonic quantum computer fabricated in CMOS fabs (GlobalFoundries). DARPA conducted on-site technical reviews and component-level testing throughout 2025. <em>Why it matters:</em> Government validation of silicon-photonics manufacturing processes meeting quantum-grade tolerances is a strong signal for the precision and yield requirements of PIC-based compute hardware at volume — the same foundry stack is relevant to integrated photonic compute more broadly.</p>
+      <div class="meta">PsiQuantum &middot; 2026-07-22</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.hpcwire.com/off-the-wire/photon-queue-raises-oversubscribed-seed-round-to-scale-quantum-memory-systems/">Photon Queue raises $4M oversubscribed seed for room-temperature photon memory</a></h3>
+      <p>Photon Queue (UIUC spinout, founded 2024) closed an oversubscribed $4M seed led by Playground Global to commercialize room-temperature quantum memory that stores and synchronizes single photons using free-space linear optics — no cryogenics, vacuum, or quantum transduction required. Early contracts with Sandia National Laboratories and University of Maryland validate demand across photonic, trapped-ion, and neutral-atom quantum platforms. <em>Why it matters:</em> Photon buffering and synchronization are unsolved but critical challenges in feed-forward optical compute architectures; this company's room-temperature linear-optics approach is the closest to PIC-compatible implementation with proven customer traction.</p>
+      <div class="meta">HPCwire / Photon Queue &middot; 2026-07-21</div>
+    </article>
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today — SPIE TV YouTube RSS returned HTTP 403; no notable photonics repos or video content confirmed in the July 21–23 window.</p>
+  </section>
+</main>
+<footer>
+  <div>Source issues: Lightmatter, Ayar Labs, Next Platform, Optica OPN, optics.org, Tidy3D blog, PIC Magazine, arXiv list pages, Nature Photonics RSS, Light:S&amp;A RSS, PhotonDelta, Laser Focus World, EPIC, Cignal AI — all returned HTTP 403 on direct fetch; web search fallback used; Reddit r/Optics, r/Semiconductors, r/hardware returned no photonics-relevant posts for July 21–23 (noted as not assessed). IEEE micro-transfer printing (hpcwire) excluded as same story covered in prior run (thequantuminsider). Nature Communications metadevice article excluded as already in seen log.</div>
+  <div>4 items &middot; generated 2026-07-23 01:18 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
