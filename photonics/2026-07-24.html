@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-24</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Friday, July 24, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#compute">Northwestern demos quantum entanglement over live busy telecom fiber</a></li>
+      <li><a href="#compute">Quantum Source releases calibration-free single-atom entangled photon source</a></li>
+      <li><a href="#pic-eda">Photon Design integrates HAROLD QD + PICWave for 3D quantum-dot laser simulation</a></li>
+      <li><a href="#europe">PhotonDelta/BOM study maps photonic chips as enablers of Dutch defense systems</a></li>
+      <li><a href="#funding">Photon Queue raises $4M oversubscribed seed for quantum memory hardware</a></li>
+      <li><a href="#funding">Luna Innovations to be acquired by TJC private equity group (catch-up)</a></li>
+    </ul>
+  </section>
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/23/northwestern-university-researchers-demonstrate-quantum-entanglement-over-busy-telecom-fiber/">Northwestern Researchers Demonstrate Quantum Entanglement Over Busy Telecom Fiber</a></h3>
+      <p>Northwestern University researchers have demonstrated quantum entanglement distribution over a standard, actively used metropolitan-area fiber network — coexisting with classical traffic without isolation. The experiment used wavelength multiplexing to share fiber with conventional data channels, showing that quantum networking infrastructure does not require dedicated dark fiber.</p>
+      <p><em>Why it matters:</em> Eliminating the dark-fiber requirement dramatically reduces deployment cost and accelerates the timeline for practical metropolitan quantum networks built on existing telecom infrastructure.</p>
+      <div class="meta">thequantuminsider.com &middot; 2026-07-23</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/16/quantum-source-robust-entangled-photon-source-quantum-networks/"><span class="badge">catch-up</span> Quantum Source: Calibration-Free Single-Atom Entangled Photon Source for Quantum Networks</a></h3>
+      <p>Quantum Source has published results for a single-atom-based entangled photon source that operates without manual calibration. The system generates on-demand high-fidelity entangled photon pairs with sub-nanosecond timing jitter, intended for integration into fiber-based quantum repeater chains and quantum network nodes.</p>
+      <p><em>Why it matters:</em> Calibration-free photon sources are a prerequisite for operationally practical quantum networks — removing the continuous manual alignment burden that has limited deployment of earlier lab systems.</p>
+      <div class="meta">thequantuminsider.com &middot; 2026-07-16</div>
+    </article>
+  </section>
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <article class="item">
+      <h3><a href="https://www.semiconductor-today.com/news_items/2026/may/photondesign-110526.shtml"><span class="badge">catch-up</span> Photon Design Integrates HAROLD QD with PICWave for 3D Quantum-Dot Laser Simulation</a></h3>
+      <p>Photon Design has integrated its HAROLD quantum-dot (QD) gain modeling tool with PICWave, enabling full 3D simulation of QD lasers including carrier dynamics, optical mode profiles, and thermal effects within a single PIC simulation environment. The integration covers both FP and DFB laser geometries.</p>
+      <p><em>Why it matters:</em> Quantum-dot lasers are increasingly used in co-packaged optics and silicon photonics platforms; accurate 3D simulation reduces tape-out risk and shortens the design iteration cycle for QD-based PICs.</p>
+      <div class="meta">semiconductor-today.com &middot; 2026-05-11</div>
+    </article>
+  </section>
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+    <article class="item">
+      <h3><a href="https://ioplus.nl/en/posts/photonic-chips-as-the-edge-of-dutch-defense-systems">Photonic Chips as the Edge of Dutch Defense Systems</a></h3>
+      <p>A study by PhotonDelta and the Netherlands Ministry of Defence maps the role of integrated photonic chips across Dutch defense applications: LIDAR-based sensing, optical signal processing for radar, secure quantum key distribution links, and miniaturized optical gyroscopes for inertial navigation. The report recommends domestic photonics manufacturing capacity as a strategic sovereignty priority.</p>
+      <p><em>Why it matters:</em> Defense demand is emerging as a distinct demand driver for EU integrated photonics — separate from the datacom/AI compute narrative that has dominated recent ecosystem discourse, and one with longer procurement cycles and stricter supply-chain requirements.</p>
+      <div class="meta">ioplus.nl (PhotonDelta) &middot; 2026-07</div>
+    </article>
+  </section>
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/21/photon-queue-raises-4-millionoversubscribed-seed-round/">Photon Queue Raises Oversubscribed $4M Seed Round to Scale Quantum Memory Systems</a></h3>
+      <p>Photon Queue has closed a $4M seed round — described as oversubscribed — to scale production of its quantum memory hardware. The company's system stores and retrieves single photons on demand, a critical component for quantum repeaters and long-distance quantum networking. Investors include quantum-focused hardware VCs.</p>
+      <p><em>Why it matters:</em> Quantum memory is the key bottleneck for extending quantum networks beyond point-to-point links; seed-stage funding at this scale indicates investor confidence that hardware-level solutions are approaching commercial readiness.</p>
+      <div class="meta">thequantuminsider.com &middot; 2026-07-21</div>
+    </article>
+    <article class="item">
+      <h3><a href="https://optics.org/news/luna-set-for-sale-to-private-equity-group-tjc"><span class="badge">catch-up</span> Luna Innovations to Be Acquired by TJC Private Equity Group</a></h3>
+      <p>Luna Innovations, the US-based photonics test and measurement company, has agreed to be acquired by TJC, a private equity firm. Luna's product lines include optical frequency domain reflectometry (OFDR) instruments and distributed sensing solutions for aerospace, defense, and industrial applications. The deal is expected to close in Q3 2026.</p>
+      <p><em>Why it matters:</em> Luna's OFDR technology underpins precision fiber characterization widely used in PIC fabrication and qualification; a PE acquisition signals either consolidation in the photonics T&amp;M market or a repositioning of the asset toward a strategic buyer.</p>
+      <div class="meta">optics.org &middot; 2026-06-25</div>
+    </article>
+  </section>
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+    <p class="empty">Nothing new today.</p>
+  </section>
+</main>
+<footer>
+  <div>&#9888; Source issues: optics.org direct fetch returned 403; Luna Innovations item sourced via web search. Laser Focus World direct fetch 403. Reddit photonics RSS 403; web search fallback quiet. SPIE TV RSS not checked today (no new videos expected mid-week).</div>
+  <div>6 items &middot; generated 2026-07-24 03:00 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  // Navigation is computed at view time from manifest.js — pages are never edited
+  // after creation. If the manifest is missing or malformed, arrows stay disabled
+  // and the page still renders.
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
