@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-25</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Saturday, July 25, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#research">Photonic spiking neural chip achieves 1.39 TOPS/W &amp; 320 ps latency — GPU-class efficiency in light</a></li>
+      <li><a href="#compute">Salience Labs unveils silicon photonic switch targeting AI cluster scale-up interconnects</a></li>
+      <li><a href="#europe">Photonics21 wins EU Chips Act 2.0 recognition — major policy tailwind for European PIC ecosystem</a></li>
+      <li><a href="#funding">Lumentum posts 90% YoY revenue growth as AI demand for CPO laser chips accelerates</a></li>
+      <li><a href="#research">Imperial College demonstrates correlated noise cancellation for large-scale quantum sensors (Nature)</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nextplatform.com/connect/2026/07/22/salience-labs-wants-to-scale-up-ai-with-silicon-photonics-optical-switch/5276643">Salience Labs Wants To Scale Up AI With Silicon Photonics Optical Switch</a></h3>
+      <p>Salience Labs unveiled a silicon photonics-based optical switch targeting AI scale-up interconnects, aiming to replace electrical switching fabrics with photonic routing between GPU clusters. The startup is betting that silicon-photonic switching can deliver the bandwidth density and latency needed for next-generation hyperscale AI training at rack and pod scale. <em>Why it matters:</em> Optical switching remains a key unsolved problem in AI datacenter architecture; a viable photonic switch product would accelerate the move away from copper and electronic packet-switching fabrics, opening integration opportunities for PIC foundries and optical compute vendors.</p>
+      <div class="meta">The Next Platform &middot; 2026-07-22</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://lightmatter.co/event/design-automation-conference-dac-2026/">Lightmatter at DAC 2026: Modeling DWDM CPO Systems at Scale</a></h3>
+      <p>Lightmatter Principal Architect Cathy Huang is presenting "Modeling DWDM CPO Systems at Scale: Photonic-Electronic Co-Simulation for 100+ Tb/s Interconnects" at the Design Automation Conference 2026 (July 26–30, Long Beach). The talk addresses photonic-electronic co-simulation methodology for dense WDM co-packaged optics at datacenter scale. Lightmatter's S-1 IPO filing from April 2026 remains active. <em>Why it matters:</em> Co-simulation frameworks for CPO are a design bottleneck as interconnect bandwidth targets scale to 100+ Tb/s; Lightmatter presenting at DAC signals the field is moving from product demo to EDA-integrated design methodology.</p>
+      <div class="meta">Lightmatter &middot; 2026-07-25 (conference)</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.astutegroup.com/news/memory-shortages/co-packaged-optics-demand-reshapes-ai-chip-supply-chains-in-2026/">Co-Packaged Optics Demand Reshapes AI Chip Supply Chains in 2026</a></h3>
+      <p>Analysis of how CPO demand is restructuring semiconductor manufacturing supply chain priorities: longer planning horizons for packaging capacity, memory procurement, and optical component sourcing. Co-packaged switches are now shipping in 2026 across Broadcom Ethernet and NVIDIA InfiniBand/Ethernet product lines. <em>Why it matters:</em> CPO is no longer a roadmap item — it is in production across major AI platform vendors, making it an active supply chain consideration for any photonic component or interconnect startup planning capacity.</p>
+      <div class="meta">Astute Group &middot; 2026-07</div>
+    </article>
+
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+    <p class="empty">Nothing new today — most recent gdsfactory release (v9.46.0) covered yesterday.</p>
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://www.eurekalert.org/news-releases/1117988">Photonic Chips Advance Real-Time Learning in Spiking Neural Systems</a></h3>
+      <p>Researchers demonstrated a two-chip photonic spiking neural system with a 16-channel neuromorphic chip (272 trainable parameters) achieving 1.39 TOPS/W energy efficiency and 320 ps on-chip latency — GPU-class efficiency — while performing reinforcement learning tasks (CartPole, Pendulum) with less than 2% accuracy drop versus electronic baselines. The system performs purely light-based learning without electronic computation in the loop. <em>Why it matters:</em> 1.39 TOPS/W and 320 ps latency sets a direct performance benchmark for photonic compute chips; these numbers define the competitive bar for energy-efficient on-chip optical inference as Akhetonics and peers develop photonic computing architectures.</p>
+      <div class="meta">EurekAlert / Optica &middot; 2026-07-24</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.laserfocusworld.com/quantum/article/55390716/milestone-reached-on-path-to-large-scale-quantum-sensors">Milestone Reached on Path to Large-Scale Quantum Sensors</a></h3>
+      <p>Imperial College London's Ultracold Strontium Laboratory demonstrated — for the first time under realistic conditions — that comparing two long-baseline atom interferometers effectively cancels experimental noise, a key technique for next-generation detectors like MAGIS-100 at Fermilab. The result, published in Nature, validates the correlated-noise-cancellation principle needed to scale quantum sensors toward dark-matter and gravitational-wave searches. <em>Why it matters:</em> Large-scale atom interferometers depend on phase-stable photonic integrated circuits for laser delivery and readout; this milestone accelerates investment in quantum sensing infrastructure and creates a pull market for precision PIC components.</p>
+      <div class="meta">Laser Focus World &middot; 2026-07-24</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.optica-opn.org/home/newsroom/2026/july/quantum_bath_cleans_up_entanglement/">Quantum Bath Cleans Up Entanglement</a></h3>
+      <p>Researchers showed how to transform continuous-variable entanglement into discrete entanglement by coupling qubits to a quantum bath — a broadband reservoir of correlated photonic states — exploiting an interference effect that forces simultaneous excitation or de-excitation. The technique addresses a key obstacle in using photonic channels for scalable quantum information processing. <em>Why it matters:</em> Converting between continuous-variable and discrete-variable entanglement photonically is foundational for hybrid quantum-classical photonic processors; this result has implications for gate-based quantum PIC architectures.</p>
+      <div class="meta">Optica OPN &middot; 2026-07-22</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://techxplore.com/news/2026-07-highlights-micro-advanced-silicon-photonics.html">Micro-Transfer Printing Advances Heterogeneous Silicon Photonics Integration</a></h3>
+      <p>Research examining how micro-transfer printing techniques can heterogeneously integrate III-V and other components onto silicon photonics platforms, enabling more capable and compact photonic integrated circuits without the yield constraints of monolithic co-integration. The study highlights process compatibility and coupling efficiency across different material systems. <em>Why it matters:</em> Heterogeneous integration via transfer printing is a practical path to combining the best of InP gain, Si routing, and SiN low-loss in a single PIC — directly relevant to multi-material photonic compute chip assembly.</p>
+      <div class="meta">TechXplore &middot; 2026-07</div>
+    </article>
+
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/photonics21-welcomes-chips-act-2.0-inclusion-of-photonics">Photonics21 Welcomes EU Chips Act 2.0 Inclusion of Photonics</a></h3>
+      <p>European industry platform Photonics21 welcomed the European Commission's proposed Chips Act 2.0, which explicitly includes photonics and integrated photonics alongside electronic chips. Photonics21 simultaneously called for a dedicated European Photonics Partnership as a structural funding vehicle, framing photonics as cross-cutting across defence, AI, quantum, and telecom. <em>Why it matters:</em> EU policy recognition in Chips Act 2.0 signals new funding streams and strategic priority status for European photonic chip companies; this is a direct regulatory tailwind for the Dutch/EU PIC ecosystem, accelerating access to foundry capacity grants and R&amp;D co-funding relevant to Akhetonics.</p>
+      <div class="meta">Optics.org / Photonics21 &middot; 2026-07-22</div>
+    </article>
+
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/lumentum-on-high-as-ai-demand-accelerates">Lumentum on High as AI Demand Accelerates — 90% YoY Revenue Growth</a></h3>
+      <p>Lumentum reported fiscal Q3 2026 revenue of $808.4M, up 90% year-over-year, driven by AI infrastructure demand for optical transceivers and laser chips. CEO flagged co-packaged optics and optical circuit switches as the next growth legs, with CPO laser chips on track for meaningful revenue by late 2026 and a multi-hundred-million-dollar purchase order disclosed. <em>Why it matters:</em> Lumentum's results are a leading indicator for the entire photonic component supply chain — 90% growth validates that optical interconnects for AI are scaling rapidly from pilot to volume production.</p>
+      <div class="meta">Optics.org &middot; 2026-07</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://invezz.com/news/2026/07/23/why-analysts-are-backing-optical-networking-stocks-like-lumentum-now/">Why Analysts Are Backing Optical Networking Stocks Like Lumentum Now</a></h3>
+      <p>Buy-side analysis of analyst enthusiasm for optical networking stocks, driven by AI-related demand for optical components, laser chips for co-packaged optics, and optical circuit switches. Highlights Lumentum's strong Q3 FY2026 results and multi-hundred-million CPO order as catalysts; projects CPO and OCS becoming multi-billion dollar markets within five years. <em>Why it matters:</em> Analyst coverage and institutional interest in photonic component stocks signal that the market is pricing in sustained multi-year demand — providing favorable exit environment context for optical compute startups.</p>
+      <div class="meta">Invezz &middot; 2026-07-23</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.prnewswire.com/news-releases/lightpath-technologies-signs-definitive-agreement-to-divest-china-operations-302833231.html">LightPath Technologies Signs Agreement to Divest China Operations ($4.5M)</a></h3>
+      <p>LightPath Technologies signed a definitive equity transfer agreement to sell its Chinese manufacturing subsidiary LightPath (Zhenjiang) Optical Instrumentation Co. for $4.5M to Hengtu Optical Technology, exiting ~$4.5M/year in China-sourced revenue and redirecting toward NDAA-compliant, Western-aligned production for defense and commercial markets. <em>Why it matters:</em> Signals accelerating supply-chain decoupling from Chinese optical component manufacturing; European pure-play foundries such as SMART Photonics and Western InP/SiN sources stand to benefit as customers demand non-China PIC supply chains.</p>
+      <div class="meta">PR Newswire &middot; 2026-07-23</div>
+    </article>
+
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://thequantuminsider.com/2026/07/24/9-quantum-computing-companies-working-with-photonic-technology/">9 Quantum Computing Companies Working With Photonic Technology</a></h3>
+      <p>Roundup of nine companies actively developing photonic quantum computing platforms, covering approaches from boson sampling to universal gate-based photonic systems on silicon-nitride and lithium-niobate PIC platforms. Companies surveyed include PsiQuantum, Xanadu, and QuiX Quantum. <em>Why it matters:</em> Provides a current landscape snapshot of photonic quantum computing commercial activity — useful for tracking competitor and partner activity in the PIC-based quantum compute space adjacent to Akhetonics' optical compute focus.</p>
+      <div class="meta">The Quantum Insider &middot; 2026-07-24</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.laserfocusworld.com/resources/video/55393243/photonics-hot-list-july-24-2026">Photonics Hot List: July 24, 2026 (Laser Focus World weekly roundup)</a></h3>
+      <p>Weekly roundup covering: a chip-based gold metasurface biosensor achieving femtogram-level detection of traumatic brain injury biomarkers in Optical Materials Express; the LightPath China divestiture; the Myrias Optics CRO hire; and Imperial College's first realistic-conditions demonstration of correlated noise cancellation between two atom interferometers. <em>Why it matters:</em> The TBI metasurface biosensor illustrates chip-scale photonic sensing reaching clinical-readiness levels — a demonstration of PIC technology expanding into high-value medical diagnostics markets.</p>
+      <div class="meta">Laser Focus World &middot; 2026-07-24</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="http://www.prnewswire.com/news-releases/neil-anderson-phd-named-chief-revenue-officer-at-myrias-optics-302831431.html">Myrias Optics Names Dr. Neil Anderson as Chief Revenue Officer</a></h3>
+      <p>Myrias Optics appointed Dr. Neil Anderson (ex-Gooch &amp; Housego, Infleqtion, IDEX) as Chief Revenue Officer to commercialize its nanoimprint wafer-level flat optics platform across AI datacenters, AR/VR, advanced imaging, and industrial photonics. The hire signals a shift from R&amp;D to active sales motion for sub-wavelength flat-optic manufacturing at wafer scale. <em>Why it matters:</em> Myrias represents a competing flat-optic integration approach to PICs for datacenter and sensing markets; tracking their commercialization velocity provides competitive intelligence on alternative photonic platform adoption timelines.</p>
+      <div class="meta">PR Newswire &middot; 2026-07-22</div>
+    </article>
+
+  </section>
+</main>
+<footer>
+  <div>Source issues: lightmatter.co/news, ayarlabs.com/blog, nextplatform.com (direct), hs.flexcompute.com/blog, arxiv.org, nature.com, photondelta.com, epic-photonics.com, smartphotonics.nl, cignal.ai — HTTP 403 (proxy blocklist); content recovered via web search. Reddit (r/Optics, r/Semiconductors): not assessed (HTTP 403 + no indexed results in search window).</div>
+  <div>14 items &middot; generated 2026-07-25 01:18 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
