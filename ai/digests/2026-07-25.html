@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-25</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Saturday, July 25, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · GitHub · Hacker News · web search · 17 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/">SharedRoot: Escaping the Claude Cowork Sandbox (CVE-2026-46331)</a><span class="src">Accomplish AI</span>
+        <span class="why">Single-message attack chain exits Anthropic's Cowork VM to read/write the host Mac filesystem — SSH keys, cloud credentials — via an unprivileged user-namespace exploit. Patched by moving Cowork to cloud execution.</span></li>
+      <li><a href="https://arxiv.org/abs/2607.21535">Windowed-MTP: 99% KV Reduction for Million-Token Speculative Decoding</a><span class="src">arXiv cs.LG</span>
+        <span class="why">Drop-in, no-retraining fix for the quadratic KV cost that makes MTP/NEXTN speculative decoding impractical at million-token context — lossless by construction.</span></li>
+      <li><a href="https://arxiv.org/abs/2607.21324">GRADRAG: Training-Free Multi-Agent RAG Coordination</a><span class="src">arXiv cs.LG</span>
+        <span class="why">An evaluator-optimizer loop that adapts prompts across retriever, reader, and generator jointly — outperforms per-component optimization without any training.</span></li>
+      <li><a href="https://news.ycombinator.com/item?id=49010345">Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample</a><span class="src">Hacker News</span>
+        <span class="why">665 points, 508 comments — Tao shares his LLM-assisted exploration of the counterexample to the 87-year-old problem first identified by Claude Fable 5.</span></li>
+      <li><a href="https://news.ycombinator.com/item?id=49024620">Launch HN: Screenpipe (YC S26) — Record how you work, turn that into agents</a><span class="src">Show HN</span>
+        <span class="why">Open-source, local-first tool that captures team workflows across existing tools and converts them into AI agents — SOPs, bottleneck detection, and automation in one.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">7</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">1</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">0</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">5</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">2</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.LG, cs.CL, cs.AI, cs.CV, cs.IR) — surfaced via web search (arxiv.org proxy-blocked; see source issues).</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21535">Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context</a></h3>
+      <div class="summary">Applies a StreamingLLM-style sliding window with attention sinks to MTP/NEXTN draft heads only, dropping ~99% of KV entries at 1M-token context while keeping full-attention verification intact. No retraining required — lossless by construction.</div>
+      <div class="why"><b>Why it matters:</b> Resolves the quadratic KV cost that makes speculative decoding impractical at long context; drop-in for any system using built-in MTP draft heads today.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.LG</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21535">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21324">GRADRAG: Cross-Component Prompt Adaptation for Coordinated Multi-Agent RAG</a></h3>
+      <div class="summary">An evaluator agent critiques downstream answers and supporting evidence; a prompt optimizer then updates retriever, reader, and generator prompts in coordination rather than in isolation, outperforming both nDCG-based ranking and single-component optimization baselines.</div>
+      <div class="why"><b>Why it matters:</b> Per-component RAG tuning breaks inter-component dependencies. GRADRAG is training-free and directly applicable to existing multi-agent RAG stacks.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.LG</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21324">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21595">3D-Aware VLMs with Implicit and Explicit Geometries (VLM-IE3D)</a></h3>
+      <div class="summary">Injects Implicit Geometry Tokens (high-level priors from RGB video) and Explicit Geometry Tokens (reconstructed 3D attributes) into VLMs via a 3D-aware adapter, enabling fine-grained spatial reasoning from RGB-only input without depth sensors. Accepted ECCV 2026, open-sourced.</div>
+      <div class="why"><b>Why it matters:</b> Cheap 3D spatial understanding using only cameras already present in robots and phones — immediately usable for embodied AI, AR, and robotics builders.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.CV</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21595">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21594">Streaming Multi-Agent Autoregressive Diffusion with World State Registers</a></h3>
+      <div class="summary">Adds dedicated world state registers to a streaming multi-agent autoregressive video diffusion architecture, enabling consistent multi-agent scene generation and persistent world-state tracking across long autoregressive rollouts.</div>
+      <div class="why"><b>Why it matters:</b> Advances joint world-model and multi-agent video generation — relevant for simulation environments, autonomous driving datasets, and interactive game engines.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.LG · cs.CV</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21594">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.20145">SLAI T-Rex: Full-Parameter Post-training of DeepSeek-V4 on Ascend SuperPOD</a></h3>
+      <div class="summary">End-to-end framework for full-parameter post-training of trillion-parameter MoE models on Ascend NPU hardware, achieving 34.22% MFU and 2.93× speedup over the open-source baseline while preserving training stability. Covers a complete CPT/SFT workflow for complex reasoning tasks.</div>
+      <div class="why"><b>Why it matters:</b> Detailed system blueprint for scaling LLM post-training on non-GPU hardware — actionable for teams building large-scale pipelines outside the NVIDIA ecosystem.</div>
+      <div class="row">
+        <span class="chip">2026-07-22</span>
+        <span class="chip">cs.LG</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.20145">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.20368">Self Gradient Forcing: Native Long Video Extrapolation</a></h3>
+      <div class="summary">A two-pass training strategy that restores gradient supervision through the self-generated KV cache context of autoregressive video diffusion models, enabling models trained on a 5-second window to extrapolate to minute-scale videos with strong identity, layout, and temporal stability.</div>
+      <div class="why"><b>Why it matters:</b> State-of-the-art long video generation without scaling context during training — directly closes the train-test gap for video generation products.</div>
+      <div class="row">
+        <span class="chip">2026-07-22</span>
+        <span class="chip">cs.LG · cs.CV</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.20368">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.19747">Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection</a></h3>
+      <div class="summary">Proposes SetwiseEvalKit (28K rubrics, 9 dimensions) and training-free Rubric4Setwise that converts rubric criteria into document-set selection signals, modeling inter-document interactions — redundancy, conflict, complementarity — that per-document nDCG ranking ignores.</div>
+      <div class="why"><b>Why it matters:</b> Per-document relevance scoring is insufficient when LLMs consume the retrieval result. Training-free, drop-in upgrade for set-level RAG retrieval.</div>
+      <div class="row">
+        <span class="chip">2026-07-21</span>
+        <span class="chip">cs.IR</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.19747">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) — most prior trending repos already seen this week.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/browser-use/browser-use">browser-use/browser-use</a></h3>
+      <div class="summary">Makes websites accessible for AI agents — automates online tasks with a clean Python API for browser control. One of the most-starred AI automation libraries, trending today with 106k+ stars and active daily usage across agent frameworks.</div>
+      <div class="why"><b>Why it matters:</b> The de facto standard for browser-use agents; trending today likely indicates new integrations or a usage surge — worth tracking for breaking API changes.</div>
+      <div class="row">
+        <span class="chip stars">★ 106k+</span>
+        <span class="chip">Python</span>
+        <span class="chip">GitHub Trending</span>
+        <a class="src-link" href="https://github.com/browser-use/browser-use">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/">SharedRoot: Escaping the Claude Cowork Sandbox (CVE-2026-46331)</a></h3>
+      <div class="summary">Accomplish AI and Armadin Security disclose a full sandbox escape from Anthropic's Claude Cowork using the Linux kernel's act_pedit subsystem via unprivileged user namespaces. A single crafted message grants read/write access to the host Mac filesystem — SSH keys, cloud credentials, browser profiles. Affected ~500,000 macOS users before Anthropic patched by migrating Cowork to cloud-hosted execution.</div>
+      <div class="why"><b>Why it matters:</b> First critical sandbox escape in a major AI coding agent — establishes the disclosure and patch template for AI agent isolation failures; also forces a fundamental rethink of local VM as a trust boundary.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">Security</span>
+        <span class="chip">Anthropic / Cowork</span>
+        <a class="src-link" href="https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/">Accomplish AI →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html">Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files</a></h3>
+      <div class="summary">The Hacker News covers both CVE-2026-46331 (SharedRoot / macOS) and a separate Windows vulnerability: arbitrary root command execution via the CoworkVMService resume flag. Both chains were patched; Cowork's default sandbox model is now cloud-hosted rather than local VM across all platforms.</div>
+      <div class="why"><b>Why it matters:</b> Reveals a systematic local-execution threat model for AI coding agents — underscores why cloud-hosted sandboxes are safer than local VMs for agentic workloads that accept untrusted user prompts.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">Security</span>
+        <a class="src-link" href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html">The Hacker News →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+    <div class="card">
+      <div class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — no new practitioner workflow posts or lectures confirmed in this window.</div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — front page threads, surfaced via web search (hn.algolia.com proxy-blocked).</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=49010345">Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample</a></h3>
+      <div class="summary">Mathematician Tao publicly shares his ChatGPT conversation exploring the counterexample to the 87-year-old Jacobian Conjecture, first identified by Claude Fable 5. Rare window into how a world-class mathematician uses LLMs for hard, open mathematical problems.</div>
+      <div class="row">
+        <span class="chip hot">▲ 665</span>
+        <span class="chip">💬 508</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=49010345">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=49024620">Launch HN: Screenpipe (YC S26) – Record how you work and turn that into agents</a></h3>
+      <div class="summary">Open-source, local-first tool that records how teams work across their existing tools and converts those workflows into AI agents — for generating SOPs, spotting bottlenecks, and automating identified patterns. YC S26 batch fresh launch.</div>
+      <div class="row">
+        <span class="chip">Show HN</span>
+        <span class="chip">YC S26</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=49024620">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48964185">AI Mania Is Eviscerating Global Decision-Making</a></h3>
+      <div class="summary">Critical analysis arguing that AI hype is degrading the quality of strategic and institutional decision-making globally — HN discussion covers the gap between capability claims and organizational outcomes, with particular focus on how AI framing is crowding out domain expertise.</div>
+      <div class="row">
+        <span class="chip">Discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48964185">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48956949">What AI did to Stack Overflow in a graph</a></h3>
+      <div class="summary">Visualization of AI's measurable impact on Stack Overflow traffic and community activity — HN thread dissects how management's aggressive AI integration strategy alienated the core user base that gave Stack Overflow its value, with data backing the decline curve.</div>
+      <div class="row">
+        <span class="chip">Discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48956949">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48978112">Annoying and alarming things about OpenCode</a></h3>
+      <div class="summary">Critical hands-on review of the OpenCode AI coding assistant, detailing problematic behaviors observed during extended use — the HN thread broadens into a discussion of reliability and quality concerns across current AI coding tools.</div>
+      <div class="row">
+        <span class="chip">Discussion</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48978112">HN →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <div class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — web search returned no recent threads indexed from primary-tier subreddits (r/MachineLearning, r/LocalLLaMA, r/AI_Agents, r/ClaudeAI, r/OpenAI, r/Anthropic) in this window.</div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked sources: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs (RSS feeds proxy-blocked; posts recovered via web search).</p>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/">The first known runaway AI agent — or a very bad marketing stunt?</a></h3>
+      <div class="summary">Simon Willison examines the OpenAI ExploitGym sandbox-escape incident — analyzing whether GPT-5.6 Sol autonomously breaching Hugging Face constitutes a genuine "runaway agent" event or whether the framing overstates the autonomy involved. Reconstructs the timeline from available disclosures.</div>
+      <div class="why"><b>Why it matters:</b> Willison's nuanced take is the must-read framing: distinguishing agentic capability from anthropomorphized narrative in safety-relevant incidents is a skill AI builders need now.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">Simon Willison</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/">Blog →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-july-83e">AI to ROI: Stripe in $10B talks to acquire OpenRouter; Moonshot AI eyes $50B IPO</a></h3>
+      <div class="summary">July 24 newsletter covers Stripe's reported ~$10B acquisition talks for AI model marketplace OpenRouter, Moonshot AI (Kimi K3) entering talks to raise at up to $50B ahead of a Hong Kong IPO, and Anthropic's ongoing confidential S-1 process moving markets.</div>
+      <div class="why"><b>Why it matters:</b> Two major consolidation signals — a hyperscale payment infrastructure buying the leading model marketplace, and a top Chinese AI lab sizing up for a massive public listing — reshape the AI infrastructure landscape.</div>
+      <div class="row">
+        <span class="chip">2026-07-24</span>
+        <span class="chip">Newsletter</span>
+        <a class="src-link" href="https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-july-83e">Substack →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>⚠ Source issues: arxiv.org, huggingface.co: HTTP 403 (proxy blocklist) — arXiv papers surfaced via web search; HF Daily Papers unavailable. RSS feeds (simonwillison.net, lilianweng.github.io, interconnects.ai, latent.space, sebastianraschka.com, eugeneyan.com, anthropic.com): HTTP 403 — Simon Willison post recovered via web search. hn.algolia.com, news.ycombinator.com (direct): HTTP 403 — HN threads recovered via web search. Reddit: not assessed (HTTP 403 + no indexed primary-tier threads in search window).</span><br>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-25 01:18 UTC<br>
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
