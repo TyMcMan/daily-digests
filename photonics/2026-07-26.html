@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Daily — 2026-07-26</title>
+<style>
+  :root {
+    --bg: #0c1016; --panel: #131a23; --line: #1f2a37;
+    --text: #d7dee8; --dim: #8294a8; --accent: #4fd6e3; --badge: #2a3b4d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+    padding: 2rem 1rem 1.25rem; border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; background: var(--bg);
+  }
+  .masthead { text-align: center; }
+  .masthead h1 {
+    margin: 0; font-size: 1.35rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .masthead .date { color: var(--dim); font-size: .95rem; margin-top: .15rem; }
+  .nav-arrow {
+    color: var(--accent); text-decoration: none; font-size: 1.6rem; line-height: 1;
+    padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 8px;
+    user-select: none;
+  }
+  .nav-arrow:hover { background: var(--panel); }
+  .nav-arrow.disabled { color: var(--line); pointer-events: none; border-color: transparent; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section { margin-top: 2rem; }
+  h2 {
+    font-size: 1.05rem; color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: .4rem; letter-spacing: .02em;
+  }
+  .tldr { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1.25rem 1rem; margin-top: 1.5rem; }
+  .tldr h2 { border: none; padding-bottom: 0; }
+  .tldr ul { margin: 0; padding-left: 1.2rem; }
+  .tldr li { margin: .35rem 0; }
+  article.item { margin: 1.25rem 0; }
+  article.item h3 { margin: 0 0 .25rem; font-size: 1rem; font-weight: 600; }
+  article.item h3 a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  article.item h3 a:hover { color: var(--accent); }
+  article.item p { margin: .25rem 0; color: var(--text); }
+  article.item p em { color: var(--accent); font-style: normal; font-weight: 600; }
+  .meta { color: var(--dim); font-size: .85rem; }
+  .badge {
+    background: var(--badge); color: var(--accent); font-size: .7rem; font-weight: 600;
+    padding: .1rem .45rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .empty { color: var(--dim); font-style: italic; }
+  footer {
+    max-width: 760px; margin: 0 auto; padding: 1rem 1.25rem 2.5rem;
+    color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <a id="nav-prev" class="nav-arrow disabled" title="Previous day">&#8592;</a>
+  <div class="masthead">
+    <h1>Photonics Daily</h1>
+    <div class="date">Sunday, July 26, 2026</div>
+  </div>
+  <a id="nav-next" class="nav-arrow disabled" title="Next day">&#8594;</a>
+</header>
+<main>
+  <section class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><a href="#funding">Alphabet CapEx doubled YoY → photonics interconnect stocks up 1–1.7% on AI demand pull</a></li>
+      <li><a href="#misc">SILITH &amp; UMC deliver first mass-produced silicon photonic ICs qualified for 1.6Tbps cloud deployment</a></li>
+      <li><a href="#research">Monolithic on-chip optical isolator via laser-annealed Ce:YIG on silicon — CMOS-backend compatible process</a></li>
+      <li><a href="#europe">Photonics21 / Chips Act 2.0: EU consortium calls for ring-fenced Photonics Partnership budget</a></li>
+      <li><a href="#pic-eda">gplugins v2.1.1 released; gdsfactory SAX and MEEP simulation bridge updated</a></li>
+    </ul>
+  </section>
+
+  <section id="compute">
+    <h2>&#9889; Photonic &amp; Optical Compute</h2>
+
+    <article class="item">
+      <h3><a href="https://www.nextplatform.com/compute/2026/07/24/the-money-amd-is-chasing-with-its-rackscale-ai-system-roadmaps/5278510">AMD Rackscale AI Roadmaps: The Integration Timeline CPO Must Beat</a></h3>
+      <p>The Next Platform's deep-dive into AMD's rackscale AI system roadmaps and market sizing through 2030 covers multi-rack scale-up cluster positioning against Nvidia. AMD's timeline defines the bandwidth-per-watt targets and rack integration windows that co-packaged optics (CPO) and near-package optics (NPO) suppliers — Lightmatter, Ayar Labs — must hit to be designed into next-generation HPC and AI cluster deployments. <em>Why it matters:</em> AMD's rackscale plan is the substrate on which photonic interconnect propositions must be validated; knowing the schedule and performance thresholds shapes PIC roadmap priorities.</p>
+      <div class="meta">The Next Platform &middot; 2026-07-24</div>
+    </article>
+
+  </section>
+
+  <section id="pic-eda">
+    <h2>&#128295; PIC Design &amp; EDA</h2>
+
+    <article class="item">
+      <h3><a href="https://github.com/gdsfactory/gplugins/releases">gplugins v2.1.1: SAX and MEEP Simulation Bridge Updated</a></h3>
+      <p>Maintenance release of the GDSFactory simulation plugin hub. Key changes: documentation migrated to Zensical, SAX compatibility window updated to &#8805;0.17,&lt;0.19, generic PDK activated in MPI subprocess for MEEP simulations, and dependency security bumps (tornado, starlette, aiohttp). This keeps the FDTD/EME/S-parameter simulation bridges for GDSFactory current. <em>Why it matters:</em> Teams running cloud MEEP or SAX circuit-model workflows for PIC design should update to maintain solver compatibility.</p>
+      <div class="meta">gdsfactory / gplugins (GitHub) &middot; 2026-07-25</div>
+    </article>
+
+  </section>
+
+  <section id="research">
+    <h2>&#128196; Research &amp; Labs</h2>
+
+    <article class="item">
+      <h3><a href="https://arxiv.org/abs/2607.20964">Monolithic Magneto-Optical Mach-Zehnder Isolator via Laser-Annealed Ce:YIG on Silicon</a></h3>
+      <p>Demonstrates a monolithic on-chip optical isolator built by locally crystallising cerium-substituted yttrium iron garnet (Ce:YIG) inside micron-scale trenches on a silicon waveguide using 915 nm laser annealing — leaving surrounding CMOS circuitry intact. The fabricated device achieves 13.6 dB isolation at 1540 nm (20.4 dB insertion loss on first demonstration) and is claimed compatible with high-throughput wafer-scale manufacturing. <em>Why it matters:</em> On-chip optical isolation is a long-standing silicon photonics integration gap; a CMOS-backend-compatible process could enable co-packaged laser sources and low-reflection PIC layouts directly relevant to photonic compute and optical interconnect designs.</p>
+      <div class="meta">arXiv physics.optics &middot; 2607.20964 &middot; 2026-07-24</div>
+    </article>
+
+  </section>
+
+  <section id="europe">
+    <h2>&#127466;&#127482; EU Photonics &amp; Manufacturing</h2>
+
+    <article class="item">
+      <h3><a href="https://optics.org/news/photonics21-welcomes-chips-act-2.0-inclusion-of-photonics">Photonics21 Welcomes Chips Act 2.0 Photonics Inclusion, Calls for Dedicated Partnership</a><span class="badge">catch-up</span></h3>
+      <p>Photonics21 formally welcomed the European Commission's proposal to explicitly include photonics and integrated photonics in Chips Act 2.0, and called for a ring-fenced budget delivered through a dedicated MoU-based Photonics Partnership under Horizon Europe and the European Competitiveness Fund. The statement covers the full stack: integrated PICs, biophotonics, free-space optical comms, quantum, and photonic computing. A Board of Stakeholders election (37 seats) is scheduled for October–November 2026. <em>Why it matters:</em> Explicit Chips Act 2.0 inclusion is a prerequisite for EU public funding to flow to PIC foundries and design tool developers; this statement sets the negotiating position ahead of the formal legislative process.</p>
+      <div class="meta">optics.org / Photonics21 &middot; 2026-07-22</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.asdnews.com/news/defense/2026/07/21/qinetiq-invests-gbp20m-accelerate-development-manufacture-highenergy-laser-technology">QinetiQ Invests £20M in High-Energy Coherent-Beam-Combination Laser Manufacturing</a></h3>
+      <p>At Farnborough International Airshow, QinetiQ announced £20M investment to scale development and manufacturing of its HELENA coherent beam-combination laser sources for directed-energy weapon programmes (UK DragonFire LDEW with MBDA and Leonardo, targeting Royal Navy ships from 2027). Covers the Malvern and Farnborough sites. <em>Why it matters:</em> Coherent beam-combination at this power scale is cousin technology to the laser array integration challenges relevant to high-power photonic compute and free-space optical interconnects; this investment signals UK commitment to sovereign laser manufacturing at a critical scale.</p>
+      <div class="meta">ASDNews / QinetiQ &middot; 2026-07-21</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://www.globenewswire.com/news-release/2026/07/16/3328860/0/en/ipg-photonics-announces-binding-offer-to-acquire-lumibird-medical-expanding-ipg-s-medical-laser-growth-platform.html">IPG Photonics Makes Binding €300M Offer to Acquire French Laser Firm Lumibird Medical</a><span class="badge">catch-up</span></h3>
+      <p>IPG Photonics made a binding offer to acquire Lumibird Medical (France) for €300M cash plus up to €50M earnout, combining IPG's urology laser portfolio with Lumibird Medical's ophthalmology leadership. Lumibird Medical reported €112M revenue and 21.5% EBITDA margin in 2025; deal closes Q4 2026 pending French Ministry of Economy approval. <em>Why it matters:</em> Signals continued consolidation of European photonics firms into larger global platforms, with implications for EU laser supply chains and the shrinking pool of independent European photonics manufacturers.</p>
+      <div class="meta">GlobeNewswire / IPG Photonics &middot; 2026-07-16</div>
+    </article>
+
+  </section>
+
+  <section id="funding">
+    <h2>&#128176; Funding &amp; Markets</h2>
+
+    <article class="item">
+      <h3><a href="https://finance.yahoo.com/technology/ai/articles/cohr-aaoi-lite-poet-photonic-stocks-join-google-capex-fueled-ai-rally">Photonics Stocks Rally as Alphabet Doubles CapEx to $44.9B in Q2 2026</a></h3>
+      <p>Alphabet reported Q2 2026 CapEx of $44.92B (doubled year-over-year) and raised its full-year 2026 spending forecast by $15B, sending photonic interconnect stocks up 1–1.7% overnight. Coherent (COHR), Lumentum (LITE), POET Technologies, and Applied Optoelectronics (AAOI) all moved on expectations of higher AI-cluster interconnect demand. <em>Why it matters:</em> Directly signals continued pull-through for silicon photonics and optical transceiver suppliers critical to AI compute infrastructure; hyperscaler CapEx is the primary demand driver for CPO and high-bandwidth optical I/O adoption.</p>
+      <div class="meta">Yahoo Finance &middot; 2026-07-24</div>
+    </article>
+
+  </section>
+
+  <section id="misc">
+    <h2>&#129520; Repos, Videos &amp; Adjacent</h2>
+
+    <article class="item">
+      <h3><a href="https://www.umc.com/en/News/press_release/Content/technology_related/20260714">SILITH &amp; UMC Achieve Mass Production Milestone: 1.6Tbps Silicon Photonics from Singapore 12-Inch Fab</a><span class="badge">catch-up</span></h3>
+      <p>SILITH Technology and UMC announced first delivery of mass-produced silicon photonic ICs from UMC's 12-inch Singapore fab, qualified by a leading cloud infrastructure customer for volume deployment of 1.6Tbps optical interconnect platforms. SILITH customers include Innolight and Coherent (key NVIDIA and Google suppliers); UMC's own 12-inch SiPh platform opens to customer design in 2027 with a 400G-per-lane roadmap. <em>Why it matters:</em> This is a landmark transition of silicon photonics from prototyping to industrial-scale volume production, compressing timelines for PIC-based compute interconnects and validating the 12-inch SiPh fab model.</p>
+      <div class="meta">UMC / TrendForce &middot; 2026-07-14</div>
+    </article>
+
+    <article class="item">
+      <h3><a href="https://qz.com/asml-2026-guidance-raised-ai-chip-demand-q2-earnings-071526">ASML Raises 2026 Revenue Guidance to €43–45B, Plans 30% Annual Capacity Expansion</a><span class="badge">catch-up</span></h3>
+      <p>ASML reported Q2 2026 revenue of €9.33B (beat estimate of €8.8B) and raised full-year guidance to €43–45B (up from €36–40B), citing AI-driven demand for both EUV and deep-UV lithography, and announced plans to expand EUV and DUV production capacity by 30% annually for each of the next two years. <em>Why it matters:</em> As the sole supplier of EUV systems used in advanced SiPh and PIC fab nodes, ASML's capacity ramp is a direct constraint or enabler for EU photonics manufacturing scale-up; the guidance raise signals multi-year demand durability underpinning foundry investment decisions.</p>
+      <div class="meta">Quartz / ASML &middot; 2026-07-15</div>
+    </article>
+
+  </section>
+</main>
+<footer>
+  <div>Source issues: lightmatter.co, ayarlabs.com, optica-opn.org, nature.com/nphoton, nature.com/lsa, hs.flexcompute.com, picmagazine.net, photondelta.com, epic-photonics.com, smartphotonics.nl, lionix-international.com, laserfocusworld.com, cignal.ai, exoswan.com all returned HTTP 403 via session egress proxy — data gathered via web search. arXiv direct listing also proxy-blocked; papers found via search. Reddit r/Optics and r/Semiconductors RSS blocked; web search yielded no photonics threads for July 2026 (not assessed). Optica Advanced Photonics Congress opens today (July 26, Long Beach) — expect news flow from conference over next 48h.</div>
+  <div>8 items &middot; generated 2026-07-26 01:04 UTC</div>
+</footer>
+<script src="manifest.js"></script>
+<script>
+(function () {
+  var dates;
+  try { dates = (window.DIGEST_DATES || []).slice().sort(); } catch (e) { return; }
+  var m = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var current = m ? m[1] : null;
+  var i = current ? dates.indexOf(current) : -1;
+  if (i === -1) return;
+  function wire(id, target) {
+    var el = document.getElementById(id);
+    if (!el || !target) return;
+    el.href = target + '.html';
+    el.classList.remove('disabled');
+  }
+  wire('nav-prev', i > 0 ? dates[i - 1] : null);
+  wire('nav-next', i < dates.length - 1 ? dates[i + 1] : null);
+})();
+</script>
+</body>
+</html>
