@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-26</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, July 26, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · RSS blogs · web search · 15 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li><a href="https://www.anthropic.com/news/claude-opus-5">Anthropic Launches Claude Opus 5</a><span class="src">Anthropic</span>
+        <span class="why">Frontier-tier reasoning with 1M-token context and an effort toggle — now default on Max/Pro at unchanged pricing. ARC-AGI 3 scores 3× any prior competing model.</span></li>
+      <li><a href="https://arxiv.org/abs/2607.20734">LLMs Get Lost in Evolving User Intent</a><span class="src">arXiv cs.CL · 18 HF upvotes</span>
+        <span class="why">Models that score well on static tasks show substantial accuracy drops when intent shifts across turns — exposes a core gap in conversational and agentic systems.</span></li>
+      <li><a href="https://arxiv.org/abs/2607.21461">AREX: Recursively Self-Improving Deep Research Agent</a><span class="src">arXiv cs.AI · 14 HF upvotes</span>
+        <span class="why">A discovery-verification loop that audits its own answers constraint-by-constraint and reruns targeted research — a principled architecture for autonomous LLM researchers.</span></li>
+      <li><a href="https://hugobowne.substack.com/p/four-months-inside-a-production-ai">Four Months Inside a Production AI Agent</a><span class="src">Vanishing Gradients · 2026-07-25</span>
+        <span class="why">Rare honest post-mortem: real user diversity forced a full harness rebuild and evals overhaul at Maven Clinic — harness design trumps model choice at scale.</span></li>
+      <li><a href="https://arxiv.org/abs/2605.09635">K12-KGraph: Curriculum-Aligned Knowledge Graph for Educational LLMs</a><span class="src">arXiv cs.AI · 49 HF upvotes</span>
+        <span class="why">The first benchmark that tests pedagogical sequencing — not just factual recall — filling a major gap for teams building educational AI.</span></li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">6</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">1</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">3</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">2</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">0</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">3</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From Hugging Face Daily Papers (July 25, 2026) and arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA), ranked by HF upvotes + relevance. Direct arxiv.org fetch was proxy-blocked; data gathered via web search and community mirrors.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2605.09635">K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs</a></h3>
+      <div class="summary">A knowledge graph extracted from official K-12 People's Education Press textbooks across math, physics, chemistry, and biology — 7 node types (Concept, Skill, Experiment, Exercise, Section, Chapter, Book) and 9 relation types covering prerequisite chains. Goes far beyond factual QA tested by existing benchmarks like C-Eval.</div>
+      <div class="why"><b>Why it matters:</b> Existing educational LLM benchmarks only test factual recall, not curriculum cognition. Teams building educational AI now have a structured benchmark capturing how knowledge is pedagogically sequenced.</div>
+      <div class="row">
+        <span class="chip">2026-05-10</span>
+        <span class="chip">cs.AI</span>
+        <span class="chip stars">49 HF ↑</span>
+        <a class="src-link" href="https://arxiv.org/abs/2605.09635">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.20061">ReferTrack: Referring Then Tracking for Embodied Visual Tracking</a></h3>
+      <div class="summary">A referring-then-tracking paradigm for embodied visual tracking with a single forward-facing camera. The model first selects a target from indexed bounding boxes via natural language grounding, then decodes tracking waypoints conditioned on the image-grounded decision — decoupling identification from motion prediction.</div>
+      <div class="why"><b>Why it matters:</b> Coupling open-vocabulary referring with physical tracking closes a key capability gap for real-world embodied agents that must identify and follow specific targets named in natural language.</div>
+      <div class="row">
+        <span class="chip">2026-07-22</span>
+        <span class="chip">cs.CV · cs.RO</span>
+        <span class="chip stars">19 HF ↑</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.20061">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.20734">LLMs Get Lost in Evolving User Intent</a></h3>
+      <div class="summary">Introduces a framework converting static single-turn tasks into dynamic multi-turn conversations where user intent is incrementally revealed, revised, and redirected. Finds a consistent phenomenon: strong static-setting performance does not transfer — substantial accuracy drops occur across all model families tested when intent evolves across turns.</div>
+      <div class="why"><b>Why it matters:</b> Critical finding for anyone building conversational assistants or agentic systems — today's LLMs fundamentally fail to track shifting user goals across turns, a gap that raw benchmark scores hide entirely.</div>
+      <div class="row">
+        <span class="chip">2026-07-22</span>
+        <span class="chip">cs.CL</span>
+        <span class="chip stars">18 HF ↑</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.20734">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21072">Show, Don't Tell: ProVisE — Evaluating Spatial Cognition via Generative Pixels</a></h3>
+      <div class="summary">ProVisE benchmarks spatial cognition by requiring image-generation models to draw answers to spatial tasks rather than produce text responses. This forces models to demonstrate genuine spatial understanding through rendered images rather than gaming text-based evaluations.</div>
+      <div class="why"><b>Why it matters:</b> Text-based spatial benchmarks can be gamed, but ProVisE's pixel-level grounding reveals true spatial reasoning gaps — opens a new evaluation paradigm for generative model spatial intelligence.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.CV · cs.AI</span>
+        <span class="chip stars">16 HF ↑</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21072">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21553">SANA-Video 2.0: Hybrid Linear Attention for Efficient 720p Video Generation</a></h3>
+      <div class="summary">Extends SANA-Video's linear diffusion transformer with hybrid linear attention plus attention residuals, enabling high-quality 720p video generation on a single consumer GPU. Introduces a constant-memory KV cache for block linear attention, supporting long video generation without quadratic memory growth.</div>
+      <div class="why"><b>Why it matters:</b> Democratizes high-resolution video generation — 720p on a single GPU is a practical threshold for product teams; the hybrid attention design is a reusable architecture advance for any efficient video diffusion work.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.CV · cs.LG</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21553">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21063">QuantiBias: Benchmarking Quantization-Induced Bias in LLMs</a></h3>
+      <div class="summary">Demonstrates that quantizing LLMs causes models to volunteer demographic stereotypes in roughly 24–27% of open-ended answers across all 8 languages tested, across the full quantization ladder. Standard short-form safety evaluations miss this bias entirely — QuantiBias provides a benchmark to catch these issues before release.</div>
+      <div class="why"><b>Why it matters:</b> Critical safety finding for any team deploying quantized LLMs in production: compression routinely undoes alignment work, introducing bias that passes standard safety tests.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.CL · cs.AI</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21063">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) — most prior trending repos already seen this week; one new entry today.</p>
+
+    <div class="card">
+      <h3><a href="https://github.com/Lordog/dive-into-llms">Lordog/dive-into-llms</a></h3>
+      <div class="summary">A hands-on programming tutorial series on large language models — covering architecture, pre-training, fine-tuning, RLHF, and inference optimization with runnable code. Picking up 408 new stars today on an already 45k-star base.</div>
+      <div class="why"><b>Why it matters:</b> Sustained massive demand for practical LLM engineering education as the field matures from research to applied development; the engagement spike suggests a new chapter or curriculum update.</div>
+      <div class="row">
+        <span class="chip stars">★ 45.3k</span>
+        <span class="chip">Python</span>
+        <span class="chip">GitHub Trending</span>
+        <a class="src-link" href="https://github.com/Lordog/dive-into-llms">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21461">AREX: Towards a Recursively Self-Improving Agent for Deep Research</a></h3>
+      <div class="summary">BAAI introduces a family of Recursively Self-Improving (RSI) deep research agents built on a discovery-verification asymmetry: an inner research loop gathers evidence and drafts provisional answers, while an outer self-improvement loop audits answers constraint-by-constraint, identifies unresolved claims, and launches targeted follow-up research. Public model weights released.</div>
+      <div class="why"><b>Why it matters:</b> Proposes a principled architecture for autonomous AI researchers that goes beyond single-pass retrieval — the recursive audit-and-refine loop mirrors how human experts iteratively validate complex claims, and is a template for any agentic research pipeline.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.AI · cs.IR</span>
+        <span class="chip stars">14 HF ↑</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21461">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://hugobowne.substack.com/p/four-months-inside-a-production-ai">Four Months Inside a Production AI Agent: What Real Users Changed</a></h3>
+      <div class="summary">A practitioner case study following Maven Clinic's AI agent from 100% rollout through unexpected user behavior, forced model switches, and a full harness rebuild based on production learnings. Discusses how real-world usage forced the team to overhaul their evals strategy and rewrite core harness assumptions that looked solid in staging.</div>
+      <div class="why"><b>Why it matters:</b> One of the few honest post-mortems from a production AI agent at scale — shows that harness design decisions that work in demos routinely break under real user diversity, making evals and harness iteration more important than model choice.</div>
+      <div class="row">
+        <span class="chip">2026-07-25</span>
+        <span class="chip">Vanishing Gradients / Hugo Bowne-Anderson</span>
+        <a class="src-link" href="https://hugobowne.substack.com/p/four-months-inside-a-production-ai">Substack →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.langchain.com/blog/the-anatomy-of-an-agent-harness">The Anatomy of an Agent Harness</a></h3>
+      <div class="summary">Defines the six essential harness components — orchestration loop, tools, memory, context management, state persistence, error handling/guardrails — and establishes Agent = Model + Harness. An empirical demonstration shows changing only the harness (no model update) moved LangChain's terminal benchmark score from 52.8% to 66.5%, jumping from rank 30 to rank 5.</div>
+      <div class="why"><b>Why it matters:</b> The benchmark result is the clearest evidence yet that two teams using the same model can see a 40-point task-completion gap purely from harness design — making harness architecture the highest-leverage engineering surface for most production teams.</div>
+      <div class="row">
+        <span class="chip">2026-03-10</span>
+        <span class="chip">LangChain Blog</span>
+        <a class="src-link" href="https://www.langchain.com/blog/the-anatomy-of-an-agent-harness">LangChain →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (AI engineering), surfaced via web search.</p>
+
+    <div class="card">
+      <h3><a href="https://hugobowne.substack.com/p/stop-overengineering-your-agent-harness">Stop Overengineering Your Agent Harness</a></h3>
+      <div class="summary">Argues that discourse around harness engineering is dominated by edge cases from complex coding agents (e.g., OpenClaw) that don't apply to most production deployments — teams are over-investing in harness complexity that upcoming model improvements will absorb anyway (the "Kirby effect"). Identifies durable fundamentals practitioners should focus on instead.</div>
+      <div class="why"><b>Why it matters:</b> A grounded corrective to harness engineering hype: most teams need simpler, well-scoped harnesses, not everything the hardest agent benchmarks demand — over-engineering creates maintenance debt that outlasts the problem it solved.</div>
+      <div class="row">
+        <span class="chip">2026-07-21</span>
+        <span class="chip">Vanishing Gradients / Hugo Bowne-Anderson</span>
+        <a class="src-link" href="https://hugobowne.substack.com/p/stop-overengineering-your-agent-harness">Substack →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://bigdataboutique.com/blog/fine-tuning-llms-when-rag-isnt-enough">Fine-Tuning LLMs in 2026: When RAG Isn't Enough (and When It Still Is)</a></h3>
+      <div class="summary">Lays out the decision sequence production teams should follow: Prompt → RAG → Fine-tune → Distill, arguing that fine-tuning's real value is changing the model's default behavior and output format consistency at the weight level — things prompting and retrieval cannot touch. Recommends thin LoRA/QLoRA adapters paired with retrieval as the highest-ROI approach.</div>
+      <div class="why"><b>Why it matters:</b> Closes the most common practitioner misstep — reaching for fine-tuning before exhausting prompt and RAG options — with a concrete sequencing framework and a nuanced position on when adapters compound retrieval rather than replace it.</div>
+      <div class="row">
+        <span class="chip">2026-05</span>
+        <span class="chip">BigData Boutique</span>
+        <a class="src-link" href="https://bigdataboutique.com/blog/fine-tuning-llms-when-rag-isnt-enough">Blog →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — hn.algolia.com was blocked by the session's egress proxy policy; no HN data available.</p>
+    <div class="card">
+      <div class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — hn.algolia.com, news.ycombinator.com, and hacker-news.firebaseio.com all blocked by session egress policy (HTTP 403).</div>
+    </div>
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <div class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — Reddit thread URLs from r/MachineLearning, r/LocalLLaMA, r/Artificial, r/Singularity, r/OpenAI, r/ClaudeAI, and r/AI_Agents were not surfaced by web search despite exhaustive queries (15+ query variations). Reddit: not assessed (403 + no indexed results).</div>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs. Direct RSS fetch was proxy-blocked; data gathered via web search.</p>
+
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-opus-5">Introducing Claude Opus 5</a></h3>
+      <div class="summary">Anthropic launched Claude Opus 5, featuring a 1M-token context window, an adjustable effort toggle (low/medium/high) for cost-vs-capability tradeoffs, and ARC-AGI 3 scores three times higher than any competing model. Priced at $5/$25 per million input/output tokens — same as Opus 4.8 — it is now the default on Claude Max and Pro, with a May 2026 knowledge cutoff.</div>
+      <div class="why"><b>Why it matters:</b> The most significant Claude model release of 2026: frontier-tier performance at unchanged pricing, with the effort toggle directly addressing enterprise cost control needs for long-running agentic workloads.</div>
+      <div class="row">
+        <span class="chip">2026-07-24</span>
+        <span class="chip">Anthropic</span>
+        <a class="src-link" href="https://www.anthropic.com/news/claude-opus-5">Anthropic →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/">Introducing Claude Opus 5 (commentary)</a></h3>
+      <div class="summary">Simon Willison posted a same-day note on the Claude Opus 5 release, acknowledging he was offline when it dropped and had not yet benchmarked it himself. His post is a curated first-alert pointer within his dense stream of AI coverage, with hands-on follow-up notes typically arriving within days.</div>
+      <div class="why"><b>Why it matters:</b> Simon's rapid aggregation flags the release as significant for practitioners; his eventual test notes tend to surface practical gotchas and use-case signals faster than formal reviews.</div>
+      <div class="row">
+        <span class="chip">2026-07-24</span>
+        <span class="chip">Simon Willison</span>
+        <a class="src-link" href="https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/">simonwillison.net →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3">Open Models Recap: Kimi K3, Qwen 3.8, Xi's WAIC Speech, and the Open-Closed Gap</a></h3>
+      <div class="summary">Nathan Lambert and Florian Brand recap the Chinese open-weights escalation: Kimi K3 (2.8T-parameter MoE, weights dropping July 27) and Qwen 3.8 (2.4T, promised open-weight release). The open-to-closed performance gap has compressed from 6–9 months down to roughly 3–5 months, with Xi Jinping's WAIC address signaling state-level backing for open models.</div>
+      <div class="why"><b>Why it matters:</b> Chinese labs are now shipping frontier-scale open-weight models on a monthly cadence, directly threatening the moats of closed-model providers and changing the calculus for teams choosing proprietary vs. open foundations.</div>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">Interconnects · Nathan Lambert</span>
+        <a class="src-link" href="https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3">Interconnects →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-26 01:04 UTC<br>
+    Source issues: HN blocked (hn.algolia.com / news.ycombinator.com / hacker-news.firebaseio.com returned HTTP 403 from session egress policy); direct arxiv.org and RSS feeds proxy-blocked (data gathered via web search and HF community mirrors); Reddit not assessed (HTTP 403 + no indexed thread URLs from web search).
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
