@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>AI Daily Digest — 2026-07-27</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel-2:#1c2230; --border:#2a313c;
+    --text:#e6edf3; --muted:#9aa6b2; --accent:#7c9cff; --accent-2:#a9f0d1;
+    --chip:#21262d; --hot:#ff7b72;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  header.top{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  header.top h1{margin:0;font-size:26px;letter-spacing:-0.4px}
+  header.top .date{color:var(--muted);font-size:14px}
+  header.top .meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .accent{color:var(--accent)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,#171d2b,#12161f);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 8px;margin-bottom:22px}
+  .hero h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent-2)}
+  .hero ol{margin:0;padding-left:20px}
+  .hero li{margin-bottom:10px}
+  .hero li a{color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid transparent}
+  .hero li a:hover{border-bottom-color:var(--accent)}
+  .hero li .why{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:1px}
+  .hero .src{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.6px;margin-left:6px}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border);margin-bottom:18px;position:sticky;top:0;background:var(--bg);padding-top:6px;z-index:5}
+  .tab{background:none;border:none;color:var(--muted);padding:10px 13px;font-size:14px;cursor:pointer;
+    border-radius:8px 8px 0 0;border-bottom:2px solid transparent}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);background:var(--panel)}
+  .count{display:inline-block;min-width:18px;font-size:11px;color:var(--muted);
+    background:var(--chip);border-radius:10px;padding:0 6px;margin-left:5px}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* cards */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;margin-bottom:12px;transition:border-color .15s}
+  .card:hover{border-color:#3a4456}
+  .card h3{margin:0 0 4px;font-size:16px;line-height:1.3}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card .summary{color:#c4cdd6;font-size:13.5px;margin:6px 0}
+  .card .why{color:var(--accent-2);font-size:12.5px;margin:6px 0 0}
+  .card .why b{color:var(--accent-2);font-weight:600}
+  .card .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+  .chip{font-size:11px;color:var(--muted);background:var(--chip);border:1px solid var(--border);
+    border-radius:20px;padding:2px 9px}
+  .chip.hot{color:var(--hot);border-color:#43292b}
+  .chip.stars{color:var(--accent-2)}
+  .src-link{font-size:12px;color:var(--accent);text-decoration:none;margin-left:auto}
+  .src-link:hover{text-decoration:underline}
+  .section-note{color:var(--muted);font-size:12.5px;margin:-4px 0 14px}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--border);padding-top:16px}
+    border-radius:8px;padding:8px 12px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>AI Daily <span class="accent">Digest</span></h1>
+    <div class="date">Sunday, July 27, 2026</div>
+    <div class="meta">Covering the last 24h · arXiv · Hugging Face · GitHub · Hacker News · RSS blogs · web search · 13 items</div>
+  </header>
+
+  <section class="hero">
+    <h2>⭐ Top 5 Today</h2>
+    <ol>
+      <li>
+        <a href="https://huggingface.co/moonshotai/Kimi-K3">Kimi K3 Open Weights Drop: World's First 2.8T-Parameter Open Model Now on HuggingFace</a>
+        <span class="src">[HuggingFace]</span>
+        <span class="why">Moonshot AI releases the largest open-weight model ever — 2.8T params, 1M context, MXFP4 format (~594GB). Comparable to Claude Opus 4.8 on benchmarks, self-hostable on 8× H100s.</span>
+      </li>
+      <li>
+        <a href="https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities">UK + US AI Safety Institutes Publish Joint Kimi K3 Cyber-Capability Assessment</a>
+        <span class="src">[AISI.gov.uk]</span>
+        <span class="why">Joint AISI/CAISI evaluation published the day weights dropped: K3 achieved ACE on 0/41 ExploitBench samples vs ~20/41 for frontier models — though debate rages over whether the 100M-token eval cap under-elicits K3's true capabilities.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.20062">Solar Open 2: 250B MoE Open Model with 1M-Token Context Leads Agentic Benchmarks</a>
+        <span class="src">[arXiv]</span>
+        <span class="why">Upstage's Solar Open 2 is a 250B-parameter (15B active) MoE model with a 1M-token context window via hybrid linear-softmax attention. SOTA on APEX-Agents, MMLU-Pro, and LiveCodeBench among open models.</span>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2607.21217">ICAE-Bench: New Benchmark Tests Coding Agents in Realistic Vibe-Coding Workflows</a>
+        <span class="src">[arXiv]</span>
+        <span class="why">Unlike SWE-bench, ICAE-Bench starts agents from fuzzy, incomplete requirements and forces them to clarify with a simulated User Agent — testing the full interactive agentic loop against real open-source repos with executable ground truth.</span>
+      </li>
+      <li>
+        <a href="https://fontvera.eu/intelligence/eu-ai-act-august-2026-deadline-requirements">EU AI Act Article 50 Transparency Obligations Begin August 2 — Six Days Away</a>
+        <span class="src">[fontvera.eu]</span>
+        <span class="why">LLM-generated content, chatbot interfaces, and emotion-recognition systems deployed in the EU must meet disclosure and logging requirements starting next week. Annex III autonomous-system deadlines were extended to Dec 2027 but Article 50 stands.</span>
+      </li>
+    </ol>
+  </section>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="papers">📄 Papers <span class="count">2</span></button>
+    <button class="tab" data-tab="repos">🛠 Repos <span class="count">3</span></button>
+    <button class="tab" data-tab="agents">🤖 Agents &amp; Harness <span class="count">2</span></button>
+    <button class="tab" data-tab="workflows">⚡ Workflows &amp; Lectures <span class="count">4</span></button>
+    <button class="tab" data-tab="discussion">💬 Discussion <span class="count">2</span></button>
+    <button class="tab" data-tab="reddit">👽 Reddit <span class="count">0</span></button>
+    <button class="tab" data-tab="blogs">✍️ Blogs &amp; Newsletters <span class="count">0</span></button>
+  </nav>
+
+  <!-- PAPERS -->
+  <div class="panel active" data-panel="papers">
+    <p class="section-note">From arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.MA, stat.ML) and Hugging Face Daily Papers, ranked by relevance + HF upvotes.</p>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.20062">Solar Open 2 Technical Report: 250B MoE, 1M-Token Context, Agentic SOTA</a></h3>
+      <p class="summary">Upstage releases Solar Open 2, a 250B-parameter (15B active) hybrid Mixture-of-Experts model designed for long-horizon agentic tasks. A 1M-token context window is achieved via a hybrid attention stack interleaving one softmax attention layer among every three linear-attention layers with no positional encoding. The model initializes from Solar Open 1 to reuse shared weights and leads MMLU-Pro, LiveCodeBench, and the APEX-Agents agentic suite while remaining competitive elsewhere among open models.</p>
+      <p class="why"><b>Why it matters:</b> A 1M-token open-weight model at 250B scale raises the bar for agentic infrastructure. Practitioners can build or fine-tune long-context agents without frontier-model API costs — and the APEX-Agents leadership signals it was built explicitly for production agentic use cases, not benchmark chasing.</p>
+      <div class="row">
+        <span class="chip">2026-07-22</span>
+        <span class="chip">cs.CL · cs.AI</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.20062">arXiv →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2607.21217">ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders</a></h3>
+      <p class="summary">ICAE-Bench (Interactive Coding Agents Evaluation Benchmark) tests coding agents in vibe-coding-style workflows where agents start from fuzzy, incomplete requirements and must interactively clarify with a simulated User Agent before producing working software. Tasks derive from real open-source repositories with executable ground truth; a User Agent Data mechanism lets the simulated user reveal hidden constraints without inventing new requirements. The benchmark co-evaluates planning, requirement clarification, tool use, debugging, and repository-level construction.</p>
+      <p class="why"><b>Why it matters:</b> Current coding benchmarks (SWE-bench, HumanEval, EvoEval) give agents fully specified tasks — unrealistic for real engineering where requirements are always partial. ICAE-Bench is the first to evaluate the full agentic loop including information elicitation, closing a critical gap in how the community measures coding agent capability against real-world deployment conditions.</p>
+      <div class="row">
+        <span class="chip">2026-07-23</span>
+        <span class="chip">cs.AI · cs.SE</span>
+        <a class="src-link" href="https://arxiv.org/abs/2607.21217">arXiv →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REPOS -->
+  <div class="panel" data-panel="repos">
+    <p class="section-note">From GitHub Trending (daily) and topics/llm · topics/agents, plus notable Show-HN launches.</p>
+
+    <div class="card">
+      <h3><a href="https://huggingface.co/moonshotai/Kimi-K3">moonshotai/Kimi-K3 — 2.8T Open Weights: World's First 3T-Class Open Model</a></h3>
+      <p class="summary">Moonshot AI releases Kimi K3 open weights on HuggingFace today (July 27, 00:00 UTC). At 2.8 trillion parameters (50B active) under a Modified MIT license, this is the largest open-weight model ever released. Native MXFP4 format clocks in at ~594GB; community BF16 and GGUF re-quantizations are expected within days. Architecture highlights: Kimi Delta Attention (6.3× faster decoding at 1M-token context), Attention Residuals for training efficiency, and Stable LatentMoE routing. API-served performance is comparable to Claude Opus 4.8 on most benchmarks.</p>
+      <p class="why"><b>Why it matters:</b> Frontier-quality open weights change the distillation, fine-tuning, and self-hosting calculus overnight. Teams with 8× H100s (80GB each) can now run the model directly; smaller teams can use it as a teacher model for distillation. The ~3–5 month gap between open and closed capability frontier — down from 6–9 months a year ago — is now the central geopolitical AI story of 2026.</p>
+      <div class="row">
+        <span class="chip">2026-07-27</span>
+        <span class="chip hot">🔥 Major release</span>
+        <a class="src-link" href="https://huggingface.co/moonshotai/Kimi-K3">HuggingFace →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/VectifyAI/PageIndex">VectifyAI/PageIndex — Vectorless Reasoning-Based RAG Document Index</a></h3>
+      <p class="summary">PageIndex is a document index library for reasoning-based RAG that replaces vector similarity search with model reasoning over a structured document index. Rather than embedding chunks and retrieving by cosine distance, PageIndex has the model reason about which document sections are relevant to a query, achieving higher accuracy on multi-hop and complex queries at the cost of inference compute.</p>
+      <p class="why"><b>Why it matters:</b> Vector-embedding RAG is fast but brittle on complex multi-hop questions where semantic similarity is a poor proxy for relevance. PageIndex challenges the dominant paradigm with a model-native alternative — useful for teams where retrieval precision matters more than latency, such as agentic research pipelines or enterprise knowledge bases.</p>
+      <div class="row">
+        <span class="chip">2026-07-27</span>
+        <span class="chip">Python</span>
+        <span class="chip stars">102 ⭐</span>
+        <a class="src-link" href="https://github.com/VectifyAI/PageIndex">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/virgiliojr94/book-to-skill">virgiliojr94/book-to-skill — Convert Technical Book PDFs into Claude Code Skills</a></h3>
+      <p class="summary">book-to-skill automates the pipeline from a technical book PDF to a callable Claude Code skill that can be invoked inside the coding agent context. The tool chunks the book, structures the content into skill format, and registers it so Claude Code can query the book during work sessions — making dense reference material available without copy-pasting excerpts into prompts.</p>
+      <p class="why"><b>Why it matters:</b> Demonstrates a novel, practical pattern for the growing Claude Code skills ecosystem: instead of building domain knowledge into prompts, teams can package entire books as queryable skills. Particularly useful for specialized domains (EDA tooling docs, photonics handbooks, ML textbooks) where the LLM's training knowledge is incomplete or stale.</p>
+      <div class="row">
+        <span class="chip">2026-07-27</span>
+        <span class="chip">Python</span>
+        <span class="chip stars">417 ⭐</span>
+        <a class="src-link" href="https://github.com/virgiliojr94/book-to-skill">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AGENTS -->
+  <div class="panel" data-panel="agents">
+    <p class="section-note">Agents, multi-agent systems, and harness/context engineering — pulled across all sources.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=49020159">Show HN: Governed Agent — LLM Reads Intent; Rules and Code Execute</a></h3>
+      <p class="summary">A hybrid agent runtime where the LLM handles intent parsing but all execution decisions pass through deterministic rule evaluation and compiled code paths. The architecture is inspired by 2026 ACM CAIS research on governance-by-construction for agentic systems, trading agent flexibility for auditability and compliance suitability. The Show HN discussion drew significant comments around whether deterministic rules can keep pace with the space of possible LLM intents and how to handle edge cases not covered by the rule set.</p>
+      <p class="why"><b>Why it matters:</b> With EU AI Act transparency obligations beginning August 2, agents that combine LLM intelligence for intent understanding with deterministic code for execution are directly positioned for the compliance requirement that high-risk AI system behavior be explainable and auditable. This is a concrete architectural response to the regulatory moment.</p>
+      <div class="row">
+        <span class="chip">2026-07-27</span>
+        <span class="chip">Show HN</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=49020159">HN →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://fontvera.eu/intelligence/eu-ai-act-august-2026-deadline-requirements">EU AI Act Article 50: Transparency Obligations Begin August 2 — Checklist for AI Teams</a></h3>
+      <p class="summary">August 2, 2026 activates EU AI Act Article 50 transparency obligations, conformity assessments for high-risk AI systems, CE marking requirements, and EU AI Office enforcement powers. A political agreement in May extended Annex III autonomous high-risk system deadlines to December 2027 and Annex I (AI in regulated products) to August 2028 — but Article 50 (transparency for LLM-generated content, chatbot disclosure, emotion recognition) is not extended. Systems using an LLM to generate user-facing content must now disclose this fact; chatbots must inform users they are interacting with AI.</p>
+      <p class="why"><b>Why it matters:</b> Any team shipping agent products or LLM-powered features to EU users has six days to verify compliance. The disclosure requirements are concrete and enforced by the EU AI Office from next week. Non-compliance risks formal investigation rather than a grace period — GDPR-style enforcement patterns are expected.</p>
+      <div class="row">
+        <span class="chip">2026-08-02 deadline</span>
+        <span class="chip">EU regulation</span>
+        <a class="src-link" href="https://fontvera.eu/intelligence/eu-ai-act-august-2026-deadline-requirements">fontvera.eu →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WORKFLOWS -->
+  <div class="panel" data-panel="workflows">
+    <p class="section-note">Practitioner workflow content and talks/lectures (Anthropic + AI engineering), surfaced via RSS and web search.</p>
+
+    <div class="card">
+      <h3><a href="https://deepeval.com/blog/llm-as-a-judge">LLM-as-a-Judge in 2026: Evaluation Techniques and Best Practices (DeepEval)</a></h3>
+      <p class="summary">DeepEval's comprehensive guide covers using frontier LLMs as automated evaluators as traditional benchmarks saturate (MMLU/GLUE now at 88%+, forcing teams toward GPQA Diamond and domain-specific evals). The economics case: $5–$50 per human evaluation vs. fractions of a cent at scale with LLM judges. Covers a four-stage production pipeline with automated quality gates and emphasizes traceability — linking scores back to exact prompt/model/dataset versions for reproducibility and debugging.</p>
+      <p class="why"><b>Why it matters:</b> Eval is the weakest link in most production AI systems. As standard leaderboards become meaningless through saturation and benchmark leakage, teams that cannot run high-throughput custom evals are flying blind on real-world performance. This provides the practical playbook for scaling eval from occasional human review to continuous automated quality gates.</p>
+      <div class="row">
+        <span class="chip">2026-07</span>
+        <span class="chip">eval · workflow</span>
+        <a class="src-link" href="https://deepeval.com/blog/llm-as-a-judge">deepeval.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.franksworld.com/2026/07/21/demystifying-agentic-harnesses-powering-the-ai-of-tomorrow/">Demystifying Agentic Harnesses: Powering the AI of Tomorrow (Frank's World)</a></h3>
+      <p class="summary">Published July 21, this post breaks down the five-layer agent harness system: tool orchestration, verification loops, context/memory management, guardrails, and observability. The key finding: LangChain's July 2026 study showed harness-only tuning brought Nemotron 3 Ultra within one point of Opus 4.8 on Deep Agents at approximately one-tenth the cost — making the harness the primary leverage point for cost-performance optimization rather than model selection.</p>
+      <p class="why"><b>Why it matters:</b> The cost-efficiency finding reframes model selection debates: a well-engineered harness around a smaller model can match a frontier model at a fraction of the price. For teams managing AI infrastructure costs, this is a more actionable insight than chasing the latest benchmark SOTA.</p>
+      <div class="row">
+        <span class="chip">2026-07-21</span>
+        <span class="chip">harness · agents</span>
+        <a class="src-link" href="https://www.franksworld.com/2026/07/21/demystifying-agentic-harnesses-powering-the-ai-of-tomorrow/">franksworld.com →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.faros.ai/blog/harness-engineering">Harness Engineering: Making AI Coding Agents Work in 2026 (Faros)</a></h3>
+      <p class="summary">Faros.ai's engineering deep-dive on production-ready agent harness design covers MCP permissions architecture, observability instrumentation, memory patterns (episodic vs. semantic vs. procedural), and orchestration strategies. Positions harness engineering as a distinct engineering discipline from model fine-tuning or prompt crafting, analogous to how DevOps separated from software development. References the growing ai-boost/awesome-harness-engineering GitHub resource as the community knowledge base.</p>
+      <p class="why"><b>Why it matters:</b> As agentic systems move into production, the scaffolding around models — not the models themselves — becomes the primary engineering surface where reliability, cost, and security properties are determined. This provides vocabulary and a concrete checklist for auditing your own harness against production requirements.</p>
+      <div class="row">
+        <span class="chip">2026-07</span>
+        <span class="chip">harness · engineering</span>
+        <a class="src-link" href="https://www.faros.ai/blog/harness-engineering">faros.ai →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://getunblocked.com/blog/claude-code-context-window/">Claude Code Context Window: How It Works and What It Costs in 2026 (Unblocked)</a></h3>
+      <p class="summary">Practical breakdown of Claude's context window mechanics for coding agent deployments. Key finding: system prompt, CLAUDE.md, and a single connected MCP server can consume approximately 20% of a 200K-token window before any user input arrives. Claude Opus 4.8 and Sonnet 5 both offer 1M-token contexts at standard per-token rates (Anthropic removed the long-context surcharge in March 2026). Discusses effective vs. advertised context with citations from NVIDIA, Adobe, and Chroma showing nuanced attention patterns at long contexts.</p>
+      <p class="why"><b>Why it matters:</b> Practitioners using Claude Code or building on the API need to budget context explicitly rather than assuming the window is free real estate. The 20% overhead figure is particularly actionable: teams designing multi-turn agent sessions with multiple MCP tools should plan for substantially less usable context than the headline number suggests.</p>
+      <div class="row">
+        <span class="chip">2026-07</span>
+        <span class="chip">context engineering · Claude Code</span>
+        <a class="src-link" href="https://getunblocked.com/blog/claude-code-context-window/">getunblocked.com →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel" data-panel="discussion">
+    <p class="section-note">Hacker News — Algolia API + front page, with comment/point counts.</p>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=49044492">UK + US AI Safety Institutes: Preliminary Kimi K3 Cyber-Capability Assessment [HN discussion]</a></h3>
+      <p class="summary">Joint AISI (UK) and CAISI (US) published their Kimi K3 evaluation timed to coincide with the weights drop. Headline: K3 achieved arbitrary code execution (ACE) on 0 out of 41 ExploitBench samples, compared to ~20/41 for top frontier models, though it outperformed GLM-5.2. HN discussion centered on two concerns: (1) whether the 100M-token evaluation cap under-elicits K3's true capabilities, given K3 is known to be token-hungry and performs substantially better with longer reasoning chains; (2) the policy implications of a 2.8T cyber-capable model being freely downloadable under a permissive license, making the evaluation effectively a post-hoc disclosure rather than a gate.</p>
+      <p class="why"><b>Why it matters:</b> The evaluation establishes a baseline reference point for K3's offensive cyber potential before the open-weights community begins fine-tuning. The methodology debate (token-cap bias) has direct implications for how safety evaluations of large sparse models should be designed going forward.</p>
+      <div class="row">
+        <span class="chip">2026-07-27</span>
+        <span class="chip">safety · policy</span>
+        <a class="src-link" href="https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities">aisi.gov.uk →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://news.ycombinator.com/item?id=48999291">Kimi K3 Scores Above Claude Fable 5 in Blind Coding Tests — What It Means [HN discussion]</a></h3>
+      <p class="summary">Arena's Frontend Code evaluation placed Kimi K3 at 1,679 points, above Claude Fable 5 in blind developer testing. The HN thread debated benchmark leakage into K3's training data (the model was API-only at launch with weights promised July 27, making data contamination possible), and examined what it means geopolitically that the gap between open Chinese models and the closed Western frontier is now measured in months rather than years. Several developers reported they could not distinguish K3 from Fable on real coding tasks. The thread also discussed the implications of Moonshot's aggressive pricing ($0.30/$3/$15 per million cached/input/output tokens).</p>
+      <p class="why"><b>Why it matters:</b> If the blind coding quality is genuinely competitive with Fable 5 at a fraction of the price — or self-hostable for free — the cost-benefit calculation for frontier-model subscriptions changes materially. The contamination debate also highlights the need for contamination-resistant benchmarks as Chinese labs increasingly target public evaluations.</p>
+      <div class="row">
+        <span class="chip">2026-07-26</span>
+        <span class="chip">open models · geopolitics</span>
+        <a class="src-link" href="https://news.ycombinator.com/item?id=48999291">HN →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REDDIT -->
+  <div class="panel" data-panel="reddit">
+    <p class="section-note">Notable threads from the curated AI subreddit list (see ai/reddit-subs.md), surfaced via web search — Reddit blocks direct/automated fetch (HTTP 403), so coverage depends on what search has indexed in the last day.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — web search did not return indexable Reddit thread URLs for July 26–27, 2026 from the tracked subreddits. Direct RSS fetch blocked (HTTP 403). Reddit coverage is sparse by design; this is expected on quiet search-indexing days.</p>
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="panel" data-panel="blogs">
+    <p class="section-note">New posts from tracked RSS feeds: Simon Willison, Lilian Weng, Eugene Yan, Sebastian Raschka, Interconnects, Latent Space, plus lab blogs.</p>
+    <div class="card">
+      <p class="summary" style="color:var(--muted);font-style:italic;">Nothing notable in the last 24h — all tracked blog authors' July 26–27 posts were either already covered in prior digests or had no new posts in the window. RSS feeds returned HTTP 403 via the session proxy; content was verified via web search. Anthropic's Claude Opus 5 launch (July 24) and associated coverage from Simon Willison, Nathan Lambert, and Latent Space were all covered in the July 24–26 digests.</p>
+    </div>
+  </div>
+
+  <footer>
+    Generated automatically · sources fetched at run time · last-24h window · 2026-07-27 01:05 UTC<br>
+    Source issues: RSS feeds (simonwillison.net, interconnects.ai, latent.space, sebastianraschka, lilianweng, eugeneyan) returned HTTP 403 via proxy — content verified via web search. HN Algolia API returned HTTP 403; threads recovered via web search. HuggingFace Papers direct fetch blocked; papers recovered via secondary aggregators. Reddit direct fetch blocked; no July 26–27 thread URLs recovered via web search.
+    AI Daily Digest
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.querySelector('.panel[data-panel="'+t.dataset.tab+'"]').classList.add('active');
+  }));
+</script>
+</body>
+</html>
